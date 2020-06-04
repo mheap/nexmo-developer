@@ -1,0 +1,36 @@
+<div class="Nxd-profile Vlt-center">
+  <a href="<%= local_assigns['url'] %>">
+    <img src="<%= local_assigns['img_src'] %>" width="200" height="200" alt="<%= local_assigns['name'] %> headshot"/>
+  </a>
+
+  <h3><%= local_assigns['name'] %></h3>
+
+  <p><%= local_assigns['intro'] %></p>
+
+  <% if local_assigns['twitter'] %>
+    <small>
+      <svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker">
+        <use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-twitter" />
+      </svg>
+      <a target="_blank" href="https://twitter.com/<%= local_assigns['twitter'] %>">@<%= local_assigns['twitter'] %></a>
+    </small>
+  <% end %>
+
+  <% if local_assigns['github'] %>
+    <small>
+      <svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker">
+        <use xlink:href="/symbol/volta-icons.svg#Vlt-icon-github" />
+      </svg>
+      <a target="_blank" href="https://github.com/<%= local_assigns['github'] %>"><%= local_assigns['github'] %></a>
+    </small>
+  <% end %>
+
+  <% if local_assigns['location'] %>
+    <small>
+      <svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker">
+        <use xlink:href="/symbol/volta-icons.svg#Vlt-icon-world" />
+      </svg>
+      <%= local_assigns['location'] %>
+    </small>
+  <% end %>
+</div>
