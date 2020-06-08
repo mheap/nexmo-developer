@@ -14,30 +14,21 @@ page:
               text: "We’re assembling a team of developers passionate about building connected applications and inspiring their communities."
             subtitle:
               text: "Embark on a journey of exploration and get access to pre-release products, learn from API experts, improve your technical communication skills, and help support your peers."
-
-  - row:
-    - column:
-      - type: action_button
-        action_button:
-          text: "Apply to be a Voyager"
-          url: "https://airtable.com/shrOGdDIjGXQYclXx"
-          large: true
-          center_button: true
-    - column:
-      - type: action_button
-        action_button:
-          text: "Nominate a Voyager"
-          url: "https://airtable.com/shrI1b8WWx4B85ZSZ"
-          large: true
-          center_button: true
-  - row:
-    - column:
-        - type: line_divider
   - row:
     - column:
       - type: html
         html:
-          content: '<img src="/assets/images/composition_peach_trousers.svg" />'
+          content: |
+            <div class="Vlt-center">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrOGdDIjGXQYclXx">Apply to be a Voyager</a>
+            </div>
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrI1b8WWx4B85ZSZ">Nominate a Voyager</a>
+            </div>
   - row:
     - column:
         - type: line_divider
@@ -117,6 +108,14 @@ page:
     - column:
       - type: html
         html:
+          content: '<img src="/assets/images/composition_peach_trousers.svg" />'
+  - row:
+    - column:
+        - type: line_divider
+  - row:
+    - column:
+      - type: html
+        html:
           content: "<h2>Discover the Vonage Voyagers</h2>"
   - row:
     - column:
@@ -166,19 +165,19 @@ page:
         - type: line_divider
   - row:
     - column:
-      - type: action_button
-        action_button:
-          text: "Apply to be a Voyager"
-          url: "https://airtable.com/shrOGdDIjGXQYclXx"
-          large: true
-          center_button: true
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrOGdDIjGXQYclXx">Apply to be a Voyager</a>
+            </div>
     - column:
-      - type: action_button
-        action_button:
-          text: "Nominate a Voyager"
-          url: "https://airtable.com/shrI1b8WWx4B85ZSZ"
-          large: true
-          center_button: true
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrI1b8WWx4B85ZSZ">Nominate a Voyager</a>
+            </div>
   - row:
     - column:
         - type: line_divider
