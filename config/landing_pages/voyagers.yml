@@ -57,12 +57,12 @@ page:
     - column:
         - type: line_divider
   - row:
-    - width: 1
+    - width: 2
       column:
       - type: html
         html:
-          content: '<img src="/assets/images/blue_spacesuit_standing.svg" />'
-    - width: 3
+          content: '<img src="/assets/images/composition_peach_trousers.svg" />'
+    - width: 2
       column:
       - type: structured_text
         structured_text:
@@ -81,7 +81,7 @@ page:
     - column:
         - type: line_divider
   - row:
-    - width: 3
+    - width: 2
       column:
       - type: structured_text
         structured_text:
@@ -96,19 +96,11 @@ page:
                 * Help other developers on the Vonage Developer Community Slack and other platforms
                 * Support your developer community by letting us know how we can help
               type: large
-    - width: 1
+    - width: 2
       column:
       - type: html
         html:
-          content: '<img src="/assets/images/standing_peach.svg" />'
-  - row:
-    - column:
-        - type: line_divider
-  - row:
-    - column:
-      - type: html
-        html:
-          content: '<img src="/assets/images/composition_peach_trousers.svg" />'
+          content: <div class="Vlt-center"><img width="70%" src="/assets/images/sitting_peach_trousers.svg" /></div>
   - row:
     - column:
         - type: line_divider
