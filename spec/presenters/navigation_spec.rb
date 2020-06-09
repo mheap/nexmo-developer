@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Navigation do
-  let(:folder) { { path: '_documentation/en/concepts' } }
+  let(:folder) { { path: '_documentation/en/getting-started' } }
 
   describe '#options' do
     it 'returns a hash with options based on config files and the folder given' do
