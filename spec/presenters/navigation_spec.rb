@@ -16,7 +16,7 @@ RSpec.describe Navigation do
 
   describe '#path_to_url' do
     it 'strips the root and language from the path' do
-      expect(described_class.new(folder).path_to_url).to eq('concepts')
+      expect(described_class.new(folder).path_to_url).to eq('getting-started')
     end
   end
 end
