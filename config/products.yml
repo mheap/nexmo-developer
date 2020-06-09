@@ -10,6 +10,7 @@ products:
   - concepts
   - conversation
   - dispatch
+  - getting-started
   - messages
   - messaging
   - messaging/sms
