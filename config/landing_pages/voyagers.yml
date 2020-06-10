@@ -7,7 +7,7 @@ page:
     - column:
       - type: html
         html:
-          content: '<div class="Vlt-center"><img width="40%" src="/assets/images/voyagers_logo.png" /></div><br/><br/>'
+          content: '<div class="Vlt-center"><img width="30%" src="/assets/images/voyagers_logo.png" /></div><br/><br/>'
   - row:
     - column:
         - type: header
@@ -16,7 +16,7 @@ page:
               text: "We’re assembling a team of developers passionate about building connected applications and inspiring their communities."
               align: center
             subtitle:
-              text: "Embark on a journey of exploration and get access to pre-release products, learn from API experts, improve your technical communication skills, and help support your peers."
+              text: "Embark on a journey of exploration and get access to pre-release products, learn from API experts, improve your technical communication skills, and support your peers."
               align: center
   - row:
     - column:
