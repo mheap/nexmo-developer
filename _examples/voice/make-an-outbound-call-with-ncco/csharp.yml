@@ -4,17 +4,17 @@ language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
 import_dependencies:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Authentication/FullAuth.cs
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Voice/MakeCallWithNcco.cs
     from_line: 1
-    to_line: 1
+    to_line: 5
 client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Authentication/FullAuth.cs
-    from_line: 17
-    to_line: 23
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Voice/MakeCallWithNcco.cs
+    from_line: 24
+    to_line: 25
 code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Senders/VoiceSender.cs
-    from_line: 41
-    to_line: 60
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Voice/MakeCallWithNcco.cs
+    from_line: 27
+    to_line: 34
 run_command: 'Run using your IDE'
-file_name: VoiceSender.cs
+file_name: MakeCallWithNcco.cs
 unindent: true

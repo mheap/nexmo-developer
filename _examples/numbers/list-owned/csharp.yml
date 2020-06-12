@@ -3,13 +3,17 @@ title: .NET
 language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
+import_dependencies:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Numbers/ListOwnedNumbers.cs
+    from_line: 1
+    to_line: 3
 client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Authentication/BasicAuth.cs
-    from_line: 17
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Numbers/ListOwnedNumbers.cs
+    from_line: 20
     to_line: 21
 code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Senders/NumberSender.cs
-    from_line: 14
-    to_line: 18
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Numbers/ListOwnedNumbers.cs
+    from_line: 23
+    to_line: 29
 run_command: 'Run using your IDE'
-file_name: NumberSender.cs
+file_name: ListOwnedNumbers.cs

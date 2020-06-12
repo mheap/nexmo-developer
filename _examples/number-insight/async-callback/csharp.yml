@@ -9,7 +9,7 @@ import_dependencies:
     to_line: 3
 code:
     source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetWebhookCodeSnippets/Controllers/NumberInsightsController.cs
-    from_line: 13
-    to_line: 25
+    from_line: 12
+    to_line: 24
 run_command: 'Run using your IDE'
 file_name: NumberInsightsController.cs

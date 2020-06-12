@@ -3,14 +3,18 @@ title: .NET
 language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
-code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Controllers/AccountController.cs
-    from_line: 74
-    to_line: 79
+import_dependencies:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Accounts/FetchSecret.cs
+    from_line: 1
+    to_line: 2
 client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Authentication/BasicAuth.cs
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Accounts/FetchSecret.cs
     from_line: 17
-    to_line: 21
+    to_line: 18
+code:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Accounts/FetchSecret.cs
+    from_line: 20
+    to_line: 20
 run_command: 'Run using your IDE'
-file_name: AccountController.cs
+file_name: FetchSecret.cs
 unindent: true

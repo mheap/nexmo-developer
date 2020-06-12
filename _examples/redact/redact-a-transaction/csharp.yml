@@ -3,13 +3,17 @@ title: .NET
 language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
-code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Senders/RedactSender.cs
-    from_line: 21
-    to_line: 21
+import_dependencies:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Redact/RedactTransaction.cs
+    from_line: 1
+    to_line: 3
 client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Authentication/BasicAuth.cs
-    from_line: 17
-    to_line: 21
-file_name: RedactSender.cs
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Redact/RedactTransaction.cs
+    from_line: 21
+    to_line: 22
+code:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Redact/RedactTransaction.cs
+    from_line: 27
+    to_line: 28
+file_name: RedactTransaction.cs
 run_command: 'Run using your IDE'

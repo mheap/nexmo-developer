@@ -3,13 +3,17 @@ title: .NET
 language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
-code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Senders/ApplicationSender.cs
-    from_line: 40
-    to_line: 40
+import_dependencies:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Application/GetApplication.cs
+    from_line: 2
+    to_line: 3
 client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Authentication/BasicAuth.cs
-    from_line: 17
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Application/GetApplication.cs
+    from_line: 18
+    to_line: 19
+code:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Application/GetApplication.cs
+    from_line: 21
     to_line: 21
-file_name: ApplicationSender.cs
+file_name: GetApplication.cs
 run_command: 'Run using your IDE'
