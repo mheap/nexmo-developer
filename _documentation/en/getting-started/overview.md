@@ -42,7 +42,7 @@ The Nexmo CLI is written in Node.js and installed using the Node Package Manager
 ## Experimenting with our APIs
 Ultimately, you’re going to want to build an app in your [chosen programming language](#using-a-rest-api-client-library). But to start with, you might want to make some sample requests to our APIs to check that you have provided the correct parameters and that you are getting back the responses you want.
 If you are familiar with the command-line tool [Curl](https://curl.haxx.se/), you will find Curl snippets for each of our APIs that you can copy, paste and modify.
-However, various GUI tools exist that make this a less painful experience. Once such is [Postman](https://www.postman.com/). Read our guide on [using Postman to work with our APIs](/tools/postman).
+However, various GUI tools exist that make this a less painful experience. A popular one is [Postman](https://www.postman.com/). Read our guide on [using Postman to work with our APIs](/tools/postman).
 
 ## Using a REST API client library
 When you are ready to start building your app, you’ll want to use one of our REST API client libraries instead of coding each request by hand. We have client libraries for the following programming languages:
