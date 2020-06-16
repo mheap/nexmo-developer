@@ -7,7 +7,7 @@ page:
     - column:
       - type: html
         html:
-          content: '<div class="Vlt-center"><img width="30%" src="/assets/images/voyagers_logo.png" /></div><br/><br/>'
+          content: '<div class="Vlt-center"><img width="30%" src="/assets/images/voyagers/logo.png" /></div><br/><br/>'
   - row:
     - column:
         - type: header
@@ -56,7 +56,7 @@ page:
       column:
       - type: html
         html:
-          content: '<img width="90%" src="/assets/images/voyagers_ticket.svg" />'
+          content: '<img width="90%" src="/assets/images/voyagers/ticket.svg" />'
   - row:
     - column:
         - type: line_divider
@@ -65,7 +65,7 @@ page:
       column:
       - type: html
         html:
-          content: '<img src="/assets/images/composition_peach_trousers.svg" />'
+          content: '<img src="/assets/images/voyagers/composition_peach_trousers.svg" />'
     - width: 2
       column:
       - type: structured_text
@@ -104,7 +104,7 @@ page:
       column:
       - type: html
         html:
-          content: <div class="Vlt-center"><img width="70%" src="/assets/images/sitting_peach_trousers.svg" /></div>
+          content: <div class="Vlt-center"><img width="70%" src="/assets/images/voyagers/sitting_peach_trousers.svg" /></div>
   - row:
     - column:
         - type: line_divider
@@ -119,7 +119,7 @@ page:
         headshot:
           name: Vonage Voyager
           url: 'https://www.nexmo.com/blog/author/martyn'
-          img_src: '/assets/images/headshot.png'
+          img_src: '/assets/images/voyagers/headshot.png'
           twitter: 'vonage.voyager'
           intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eu dui vitae fermentum. Nulla facilisi. Vivamus varius nunc at risus pretium, nec pharetra orci dignissim. Etiam hendrerit facilisis mi.
 
@@ -128,14 +128,14 @@ page:
         headshot:
           name: Vonage Voyager
           url: 'https://www.nexmo.com/blog/author/martyn'
-          img_src: '/assets/images/headshot.png'
+          img_src: '/assets/images/voyagers/headshot.png'
           intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eu dui vitae fermentum. Nulla facilisi. Vivamus varius nunc at risus pretium, nec pharetra orci dignissim. Etiam hendrerit facilisis mi.
     - column:
       - type: headshot
         headshot:
           name: Vonage Voyager
           url: 'https://www.nexmo.com/blog/author/martyn'
-          img_src: '/assets/images/headshot.png'
+          img_src: '/assets/images/voyagers/headshot.png'
           twitter: vonage.voyager
           intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eu dui vitae fermentum. Nulla facilisi. Vivamus varius nunc at risus pretium, nec pharetra orci dignissim. Etiam hendrerit facilisis mi.
           location: Germany
@@ -145,7 +145,7 @@ page:
         headshot:
           name: Vonage Voyager
           url: 'https://www.nexmo.com/blog/author/martyn'
-          img_src: '/assets/images/headshot.png'
+          img_src: '/assets/images/voyagers/headshot.png'
           twitter: 'vonage.voyager'
           intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eu dui vitae fermentum. Nulla facilisi. Vivamus varius nunc at risus pretium, nec pharetra orci dignissim. Etiam hendrerit facilisis mi.
   - row:
@@ -194,4 +194,4 @@ page:
       column:
       - type: html
         html:
-          content: '<img width="60%" src="/assets/images/space_probe.svg" />'
+          content: '<img width="60%" src="/assets/images/voyagers/space_probe.svg" />'
