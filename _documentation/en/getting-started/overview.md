@@ -70,7 +70,7 @@ Visit our guide on [testing with Ngrok](https://developer.nexmo.com/tools/ngrok)
 ## What to do next
 Once you have understood the basic concepts and installed the tools you intend to use, you are ready to start building! View the documentation for your chosen API to get started.
 
-If you encounter any difficulties, check out our knowledge base and reach out for assistance if necessary at [help.nexmo.com](https://help.nexmo.com/).
+If you encounter any difficulties, check out our knowledge base and reach out for assistance if necessary at [our support site](https://help.nexmo.com/).
 
 We take pride in our documentation, but are always looking to make it better. So if you find anything that is unclear or lacking the information you require, then please submit feedback for the topic in question. If we’ve done a good job on a particular section then please let us know!
 
