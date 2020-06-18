@@ -75,7 +75,11 @@ Visit our guide on [testing with Ngrok](https://developer.nexmo.com/tools/ngrok)
 
 ## What to do next
 
-Once you have understood the basic concepts and installed the tools you intend to use, you are ready to start building! View the documentation for your chosen API to get started, or try out some of the following simple tasks:
+This guide introduced you to some of the fundamental concepts and tools that you should know about when working with our APIs.
+
+> Learn more in our [Concepts](/concepts/overview) and [Tools](https://developer.nexmo.com/tools) sections.
+
+Once you understand these fundamental concepts and have installed the tools you intend to use, you are ready to start building! View the documentation for your chosen API to get started, or try out some of the following simple tasks:
 
 * SMS API: [Send an SMS](/messaging/sms/code-snippets/send-an-sms)
 * Voice API: [Make an outbound call with an NCCO](/voice/voice-api/code-snippets/make-an-outbound-call-with-ncco)
