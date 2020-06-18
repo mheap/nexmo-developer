@@ -57,8 +57,12 @@ navigation_overrides:
   application:
     svg: 'flow'
     svgColor: 'blue'
-  concepts:
+  getting-started:
     navigation_weight: 0
+    svg: 'mind-map'
+    svgColor: 'red'
+  concepts:
+    navigation_weight: 1
     svg: 'mind-map'
     svgColor: 'red'
   messaging:

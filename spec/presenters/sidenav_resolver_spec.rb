@@ -24,7 +24,7 @@ RSpec.describe SidenavResolver do
 
     context 'with a document path' do
       it 'returns the files under the path' do
-        expect(subject.items.size).to eq(17)
+        expect(subject.items.size).to eq(18)
       end
     end
   end
