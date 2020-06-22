@@ -4,17 +4,17 @@ language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
 import_dependencies:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Verify/CheckVerificationRequest.cs
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Verify/SearchVerificationRequest.cs
     from_line: 1
     to_line: 3
 client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Verify/CheckVerificationRequest.cs
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Verify/SearchVerificationRequest.cs
     from_line: 18
     to_line: 19
 code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Verify/CheckVerificationRequest.cs
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Verify/SearchVerificationRequest.cs
     from_line: 21
     to_line: 22
 run_command: 'Run using your IDE'
-file_name: CheckVerificationRequest.cs
+file_name: SearchVerificationRequest.cs
 unindent: true
