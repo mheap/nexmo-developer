@@ -329,7 +329,7 @@ Field | Example | Description
 `error` | `ERR1: Failed to analyze audio` | Error/status message: `Speech was not enabled` (status) - input action was configured to capture only DTMF input; `Speech overridden by DTMF` (status) - input action was configured to accept both speech/DTMF and user pressed keys; `ERRX: ...` (error) - user speech could not be recognized.
 
 ##### Transcript text
-Name	Description
+Field | Example | Description
 -- | -- | --
 `text` | `sales` | Transcript text representing the words that the user spoke.
 `confidence` | `0.9405097` | The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater likelihood that the recognized words are correct.
