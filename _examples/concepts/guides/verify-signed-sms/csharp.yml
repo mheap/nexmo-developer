@@ -4,9 +4,9 @@ language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
 code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Controllers/SMSController.cs
-    from_line: 140
-    to_line: 159
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetWebhookCodeSnippets/Controllers/SmsController.cs
+    from_line: 40
+    to_line: 58
 run_command: 'Run using your IDE'
-file_name: SMSSender.cs
+file_name: SmsController.cs
 unindent: true

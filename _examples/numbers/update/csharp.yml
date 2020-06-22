@@ -3,13 +3,17 @@ title: .NET
 language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
+import_dependencies:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Numbers/UpdateNumber.cs
+    from_line: 1
+    to_line: 3
 client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Authentication/BasicAuth.cs
-    from_line: 17
-    to_line: 21
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Numbers/UpdateNumber.cs
+    from_line: 27
+    to_line: 28
 code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Controllers/NumbersController.cs
-    from_line: 44
-    to_line: 49
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Numbers/UpdateNumber.cs
+    from_line: 30
+    to_line: 40
 run_command: 'Run using your IDE'
-file_name: NumbersController.cs
+file_name: UpdateNumber.cs

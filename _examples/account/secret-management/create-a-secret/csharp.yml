@@ -3,14 +3,18 @@ title: .NET
 language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
-code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Controllers/AccountController.cs
-    from_line: 58
-    to_line: 63
+import_dependencies:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Accounts/CreateSecret.cs
+    from_line: 1
+    to_line: 3
 client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Authentication/BasicAuth.cs
-    from_line: 17
-    to_line: 21
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Accounts/CreateSecret.cs
+    from_line: 19
+    to_line: 20
+code:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Accounts/CreateSecret.cs
+    from_line: 22
+    to_line: 24
 run_command: 'Run using your IDE'
-file_name: AccountController.cs
+file_name: CreateSecret.cs
 unindent: true
