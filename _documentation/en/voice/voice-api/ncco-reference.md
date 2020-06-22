@@ -311,11 +311,15 @@ The following example shows the parameters sent to `eventUrl` for DTMF input:
 
 ```json
 {
-  "speech": { },
+  "speech": {
+    "error": "Speech was not enabled"
+  },
   "dtmf": {
     "digits": "1234",
-    "timed_out": false
+    "timed_out": true
   },
+  "from": "15551234567",
+  "to": "15557654321",
   "uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
   "conversation_uuid": "bbbbbbbb-cccc-dddd-eeee-0123456789ab",
   "timestamp": "2020-01-01T14:00:00.000Z"
@@ -331,15 +335,15 @@ The following example shows the parameters sent back to the `eventUrl` webhook f
     "results": [
       {
         "confidence": "0.9405097",
-        "text": "Sales"
+        "text": "sales"
       },
       {
         "confidence": "0.70543784",
-        "text": "Sails"
+        "text": "sails"
       },
       {
         "confidence": "0.5949854",
-        "text": "Sale"
+        "text": "sale"
       }
     ]
   },
@@ -347,6 +351,8 @@ The following example shows the parameters sent back to the `eventUrl` webhook f
     "digits": null,
     "timed_out": false
   },
+  "from": "15551234567",
+  "to": "15557654321",  
   "uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
   "conversation_uuid": "bbbbbbbb-cccc-dddd-eeee-0123456789ab",
   "timestamp": "2020-01-01T14:00:00.000Z"
