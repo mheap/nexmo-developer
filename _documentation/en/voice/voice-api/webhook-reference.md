@@ -307,12 +307,34 @@ Field | Example | Description
  -- | -- | --
 `from` | `447700900000` | The number the call came from
 `to` | `447700900000` | The number the call was made to
-`dtmf` | `42` | The buttons pressed by the user
-`speech` | `sales` | The text spoken by the user, a complete example payload shown in [NCCO Reference](/voice/voice-api/ncco-reference#speech-recognition-settings)
-`timed_out` | `true` | Whether the input action timed out: `true` if it did, `false` if not
+`dtmf` | _see below_ | [DTMF capturing results](#dtmf-capturing-results)
+`speech` | _see below_ | [Speech recognition results](#speech-recognition-results)
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
+
+#### DTMF Capturing Results
+
+Field | Example | Description
+ -- | -- | --
+`digits` | `42` | The buttons pressed by the user 
+`timed_out` | `true` | Whether the DTMF input timed out: `true` if it did, `false` if not
+
+#### Speech Recognition Results
+
+Field | Example | Description
+-- | -- | --
+`timeout_reason` | `end_on_silence_timeout` | Indicates if the input ended when user stopped speaking (end_on_silence_timeout), by max duration timeout (max_duration) or if the user didn't say anything (start_timeout)
+`results` | _see below_ | Array of [recognized text objects](#transcript-text)
+`error` | `ERR1: Failed to analyze audio` | Error/status message: `Speech was not enabled` (status) - input action was configured to capture only DTMF input; `Speech overridden by DTMF` (status) - input action was configured to accept both speech/DTMF and user pressed keys; `ERRX: ...` (error) - user speech could not be recognized.
+
+##### Transcript text
+Name	Description
+-- | -- | --
+`text` | `sales` | Transcript text representing the words that the user spoke.
+`confidence` | `0.9405097` | The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater likelihood that the recognized words are correct.
+
+See also complete example payload shown in [NCCO Reference](/voice/voice-api/ncco-reference#speech-recognition-settings)
 
 [Back to event webhooks list](#event-webhook)
 
@@ -360,6 +382,5 @@ The event endpoint will also receive webhooks in the event of an error. This can
 Field | Example | Description
  -- | -- | --
 `reason` | `Syntax error in NCCO. Invalid value type or action.` | Information about the nature of the error
-`error` | `ERR1: Failed to analyze audio` | This field present for automatic speech recognition
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
