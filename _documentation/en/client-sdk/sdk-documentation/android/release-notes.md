@@ -10,25 +10,25 @@ navigation_weight: 0
 
 ### New
 
-- From this version we have splitted our artefacts so custom maven repository have to be added to the project
-
+- We have split our artifacts from this version, so custom maven repository has to be added to the project
 ```groovy
-    //Groovy
-    build.gradle:
-    repositories {
-        …
-        maven {
-            url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
+    //Groovy - build.gradle
+    allprojects {
+        repositories {
+            …
+            maven {
+                url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
+            }
         }
     }
 ```
-
 ```kotlin
-    // Kotlin Gradle script
-    build.gradle.kts:
-    repositories {
-    …
-        maven("https://artifactory.ess-dev.com/artifactory/gradle-dev-local")
+    // Kotlin Gradle script  - build.gradle.kts
+    allprojects {
+        repositories {
+        …
+            maven("https://artifactory.ess-dev.com/artifactory/gradle-dev-local")
+        }
     }
 ```
 
