@@ -1,0 +1,112 @@
+---
+ja: 
+    menu: 
+        message-search: "メッセージ検索"
+        messaging: "メッセージング"
+        voice: "音声"
+        voice-api: "音声用 API"
+        sip: "SIP"
+        account: "アカウント"
+        number-insight: "番号分析"
+        stitch: "Stitch"
+        client-sdk: "Client SDK"
+        conversation: "カンバセーション"
+        user: "ユーザー"
+        member: "メンバー"
+        event: "イベント"
+        leg: "コールレッグ"
+        in-app-messaging: "アプリ内メッセージング"
+        in-app-voice: "アプリ内音声"
+        in-app-video: "アプリ内動画"
+        messages: "メッセージ用 API"
+        dispatch: "配信用 API"
+        reports: "レポート"
+        us-short-codes: "米国の短縮コード"
+        sms: "SMS"
+        mms: "MMS"
+        guides: "ガイド"
+        quickstarts: "クイックスタート"
+        tutorials: "チュートリアル"
+        conversion-api: "コンバージョン用 API"
+        concepts: "基本概念"
+        code-snippets: "コードスニペット"
+        verify: "検証"
+        configure: "構成"
+        contribute: "貢献"
+        structure: "構築"
+        sdk-documentation: "SDK ドキュメント"
+        android: "Android"
+        ios: "iOS"
+        javascript: "JavaScript"
+        javascript-quickstart: "JS クイックスタート"
+        redact: "データ削除"
+        audit: "監査"
+        numbers: "電話番号"
+        secret-management: "シークレットの管理"
+        external-accounts: "外部アカウント用 API"
+        vonage-business-cloud: "Vonage ビジネスクラウド"
+        smart-numbers: "スマート番号"
+        integration-suite: "Vonage 統合スイート"
+        vbc-apis: "VBC 用 API"
+        account-api: "アカウント用 API"
+        extension-api: "拡張機能用 API"
+        reports-api: "レポート用 API"
+        user-api: "ユーザー用 API"
+        call-recording-api: "コール録音用 API"
+        getting-started: "最初のステップ"
+        setup: "設定"
+        configuration: "構成"
+        administration: "管理"
+        tasks: "タスク"
+        application: "アプリケーション"
+        product-lifecycle: "製品ライフサイクル"
+        whatsapp: "WhatsApp"
+        messenger: "Facebook Messenger"
+        viber: "Viber サービスメッセージ"
+        subaccounts: "サブアカウント (ベータ版)"
+        use-cases: "ユースケース"
+    layouts: 
+        partials: 
+            header: 
+                documentation: "ドキュメント"
+                tutorials: "チュートリアル"
+                api-reference: "API 情報"
+                sdks-and-tools: "SDK ＆ ツール"
+                community: "コミュニティ"
+                extend: "拡張オプション"
+                hiring: "求人情報"
+                support: "サポート"
+                sign-in: "サインイン"
+                try-it: "無料トライアル"
+                get_an_api_key: "API キーを取得"
+                start_building: "無料で構築開始"
+    services:
+      code_snippet_renderer:
+        add_instructions_to_file: 'Add the following to `%{file}`:'
+        add_instructions_to_code: 'Add the following to your code:'
+        create_instructions: 'Create a file named `%{filename}` and add the following code:'
+        run_command: >-
+          ## Run your code
+            Save this file to your machine and run it:
+              <pre class='Vlt-prism--dark command-line language-bash Vlt-prism--copy-disabled' data-prompt="$"><code>%{command}</code></pre>
+
+        curl:
+          only_permitted_dependency: The only permitted curl dependency is `jwt`
+          text: >-
+            Execute the following command at your terminal prompt to create the <a href="/concepts/guides/authentication#json-web-tokens-jwt">JWT</a> for authentication:
+        java:
+          add_instructions: 'Add the following to the `main` method of the `%{file}` class:'
+          create_instructions: 'Create a class named `%{file}` and add the following code to the `main` method:'
+          run_command: >-
+            ## Run your code
+              We can use the `application` plugin for Gradle to simplify the running of our application.
+               Update your `build.gradle` with the following:
+
+               ```groovy
+              apply plugin: 'application'
+              mainClassName = project.hasProperty('main') ? project.getProperty('main') : ''
+              ```
+
+              Run the following `gradle` command to execute your application, replacing `%{chomped_package}` with the package containing `%{file}`:
+
+              <pre class="language-bash Vlt-prism--dark command-line Vlt-prism--copy-disabled" data-prompt="$"><code>gradle run -Pmain=%{main}</code></pre>
