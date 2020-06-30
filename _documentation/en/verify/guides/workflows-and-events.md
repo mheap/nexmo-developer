@@ -69,9 +69,9 @@ Send a PIN code by text message, follow up with a second text message if the cod
 Send a PIN code by text message, follow up with a voice call if the code hasn't been verified.
 
 1. Send **SMS** to user with PIN code
-2. Wait for `next_event_wait` seconds *(default wait: 125 seconds)*
+2. Wait for `next_event_wait` seconds *(default wait: 120 seconds)*
 3. Call user and give **TTS** PIN code
-4. Wait for `next_event_wait` seconds *(default wait: 300 seconds)*
+4. Wait for `next_event_wait` seconds *(default wait: 180 seconds)*
 5. Request expires
 
 
