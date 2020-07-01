@@ -54,10 +54,8 @@ Name | Language | Gender | [SSML](/voice/voice-api/guides/customizing-tts) suppo
 `Amy` | `en-GB` | `female` | ✅
 `Brian` | `en-GB` | `male` | ✅
 `Emma` | `en-GB` | `female` | ✅
-`Gwyneth` | `en-GB` | `WLS female` | ✅
-`Geraint` | `en-GB` | `WLS male` | ✅
-`Gwyneth` | `cy-GB` | `WLS female` | ✅
-`Geraint` | `cy-GB` | `WLS male` | ✅
+`Geraint` | `en-GB-WLS` | `male` | ✅
+`Gwyneth` | `cy-GB` | `female` | ✅
 `Raveena` | `en-IN` | `female` | ✅
 `Ivy` | `en-US` | `female` | ✅
 `Matthew` | `en-US` | `male` | ✅

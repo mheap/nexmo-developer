@@ -6,7 +6,7 @@ description: To facilitate our customers' privacy compliance efforts, Vonage pro
 
 # Redact your data
 
-Vonage provides two solutions to cover your compliance and privacy needs. The Auto-redact service and the Redact API allow you to redact sensitive/personal information either automatically or on demand from our platform.
+Vonage provides two solutions to cover your compliance and privacy needs. The Auto-redact service and the Redact API allow you to redact sensitive or personal information either automatically or on demand from our platform.
 
 ## Contents
 
@@ -22,7 +22,7 @@ Vonage provides two solutions to cover your compliance and privacy needs. The Au
    * [Voice API](#voice-api)
    * [Conversations API](#conversations-api)
 * [Right to erasure requests](#right-to-erasure-requests)
-
+* [Technical Support Impact](#technical-support-impact)
 
 ## Concepts
 
@@ -48,7 +48,7 @@ Customers can view the redacted CDRs using either the [Reports API](/api/reports
 
 ### Auto-redact service
 
-Vonage provides the Auto-redact service that automatically redacts PII from our systems without any actions from your side. You can define whether you want redaction to be done immediately (once the message or call has been processed) or with a delay of several days. Supported values are 15 and 30 days. The scope of redaction and the configurable delay depends on which of the Vonage communication APIs you are using. Some communication APIs support Standard Auto-redact while other support Advanced Auto-redact. Standard Auto-redact, like the Free Redact API, cannot redact server logs. It redacts only CDRs. Advanced Auto-redact redacts both the CDRs and the server logs. The detailed description is provided in the following paragraphs.
+Vonage provides the Auto-redact service that automatically redacts PII from our systems without any actions from your side. You can define whether you want redaction to be done immediately (once the message or call has been processed) or with a delay of several days. Supported values are 15, 30, 60, and 90 days. The scope of redaction and the configurable delay depends on which of the Vonage communication APIs you are using. Some communication APIs support Standard Auto-redact while other support Advanced Auto-redact. Standard Auto-redact, like the Free Redact API, cannot redact server logs. It redacts only CDRs. Advanced Auto-redact redacts both the CDRs and the server logs. The detailed description is provided in the following paragraphs.
 
 Please find a relevant pricing for the auto-redact service here: [Vonage Prices](https://www.vonage.com/communications-apis/pricing/).
 
@@ -135,8 +135,9 @@ Note that when a Conversation resource is deleted, it will no longer be availabl
 
 ## Right to erasure requests
 
-Under GDPR (and other privacy laws and regulations), a person may ask you to remove any data being held about them. This could typically happen when someone terminates their relationship with a vendor, for example, the user of a dating app no longer needs the service, and asks the dating app vendor to delete their account and all the information it holds about them.
+Under GDPR (and other privacy laws and regulations), individuals have the right to have personal data erased. Your users may ask you to remove any personal data being held about them. This could typically happen when someone terminates their relationship with a vendor, for example, the user of a dating app no longer needs the service, and asks the dating app vendor to delete their account and all the information it holds about them.
 
+If your user sends you a request to have personal data erased, you can use the Redact API to remove this individual's phone number from all communication records (known as "CDRs") in our system.
 
 ## Subject Access Requests
 
@@ -172,19 +173,17 @@ To learn how to use Reports API please refer to the [Reports API documentation](
 
 ## Technical Support Impact
 
-Please be aware that redaction of identifying data can have a negative impact on our ability to troubleshoot customer-specific service degradations. As part of our commitment to our customers' success, Vonage Support will attempt to provide assistance to all customers wherever possible. Typically diagnosis of an issue would start with attempting to identify a specific problematic API call or communication event relating to this issue, or a pattern of related events (messages or calls).
+Please be aware that redaction of data can have a negative impact on our ability to troubleshoot customer-specific service degradations. As part of our commitment to our customers' success, Vonage Support will attempt to provide assistance to all customers wherever possible. 
 
-If your system does not log the responses you receive from the Vonage API (for instance storing the transaction ID and details in a database table or a text file), or it is difficult to access this response data, it is common to identify the transaction relating to an issue via a related phone number or message text body. Examples could include:
+Redaction performed by the Redact API has limited impact on the Vonage Support because we still have access to the unredacted server logs until they expire (expiration time is approximately 15 days). The same applies to the automatic redaction with delay performed by the Auto-redact service. The biggest impact on the Vonage Support has Advanced Auto-redact configured to perform immediate redaction because it does not leave any unredacted data sources.
+
+Typically, the diagnosis of an issue starts with identifying a specific problematic API call or a communication event relating to the issue, or a pattern of related events (messages or calls). It is common to identify the data records related to the issue using the date of the issue and a phone number or a message text/body. Examples could include:
 
 * The `to` phone number for an outbound SMS to the phone of one of your users.
 * The `from` phone number for an inbound call to your Vonage virtual number.
 
-If you need to redact a phone number because one of your users has asked to delete their account and data, you can use the Redact API to do this as described above. This means that we will remove the phone number from all of our communications records (also known as "CDRs") in our system.
+The side effect of immediate number redaction is that you will not be able to ask Vonage Support to help you by only providing the phone number and the time window. Without having numbers in our data records and logs, we will not be able to use differential analysis and compare failed and successful transactions over time (patterns) to a single number or a range of numbers. Instead, you will need to provide the relevant transaction IDs that were given to you in the API responses. For example, for SMS, this is the `message-id` value. If your system does not log/store the responses you receive from the Vonage APIs or it is difficult to access this response data, you should use either the Reports API or the Customer Dashboard to view your transactional data records in our system, find those related to the issue, and tell us their IDs.
 
-The side effect of this is that if you want to diagnose an issue with one of these communications events, you will not be able to ask us to help by only providing the phone number. Instead, you need to provide the relevant transaction IDs that were been provided in your initial communications API response. For example, for SMS, the `message-id` value. You will therefore need to make sure that if you need to ask for Vonage Support help relating to the transaction, it is essential that you have saved and can find the transaction ID.
+Having the IDs, our Support will usually be able to identify the problem straight away, but in some cases it might take considerable time. For example, if the immediate Advanced auto-redaction of the message body is enabled for SMS and if a Telecommunications Service Provider rejects the SMS because of some local regulations on the contents of the message or some [Unicode formatting](/messaging/sms/code-snippets/send-an-sms-with-unicode) issues, then without knowing the message body, Vonage Support will not be able to pinpoint the problem immediately and may even need to involve the Telecommunications Service Provider in the troubleshooting process.
 
-We would also be unable to detect an issue based on differential analysis  of a pattern of communications to a single number or range of numbers, such as failed versus successful transactions over time.
-
-Keep in mind that if you have already deleted one of your users and their data from your system, it is probably unlikely that you will need to address a complaint from that user that they did not receive a message or they had a problem with a call.
-
-Note that all communications records containing phone numbers are deleted after thirteen months, so we will not be able to help you diagnose an issue with a transaction older than this.
+Note that all transactional data records are deleted after thirteen months, so we will not be able to help you diagnose an issue with a transaction older than this.

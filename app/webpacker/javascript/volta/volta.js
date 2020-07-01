@@ -1,3 +1,5 @@
+import Tooltip from './tooltip.min.js';
+
 /**
  * Copyright (c) 2001-present, Vonage.
  *	
