@@ -1,6 +1,6 @@
 ---
 title: Create the users
-description: In this step you learn how to create the Users that will participate in the Conversation.
+description: In this step you learn how to create the Users that will participate in the Call.
 ---
 
 # Create the Users
@@ -20,4 +20,4 @@ This will return user IDs similar to the following:
 User created: USR-aaaaaaaa-bbbb-cccc-dddd-0123456789ab
 ```
 
-There is no need to remember this user ID because we will use user names (instead of user IDs) to add them to the conversation. 
+There is no need to remember this user ID because we will use JWT token to authenticate users. 

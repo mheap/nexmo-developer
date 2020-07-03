@@ -5,13 +5,13 @@ description: In this step you authenticate your users via the JWTs you created e
 
 # Authenticate Your Users
 
-Your users must be authenticated to be able to participate in the `Conversation`. Login screen (`LoginFragment` and `LoginViewModel` classes) is responsible for authenticating the users.
+Your users must be authenticated to be able to participate in the Call. Login screen (`LoginFragment` and `LoginViewModel` classes) is responsible for authenticating the users.
 
 ```screenshot
-image: public/assets/images/client-sdk/android-app-to-phone/login-screen.png
+image: public/assets/images/client-sdk/android-shared/login-screen-users.png
 ```
 
-> **NOTE:** You perform this authentication using the `JWTs` generated and provided in previous steps.
+> **NOTE:** You perform this authentication using the `JWTs` generated in previous steps.
 
 ## Get NexmoClient instance
 
