@@ -87,7 +87,6 @@ navigation_overrides:
     voice-api:
       guides:
         websockets:
-          label: 'Beta'
         asr:
           label: 'Beta'
   verify:
