@@ -4,7 +4,7 @@ description: You can connect the audio of a call to a websocket to work with it 
 navigation_weight: 7
 ---
 
-# WebSockets [Beta]
+# WebSockets
 
 This guide introduces you to WebSockets and how and why you might want to use them in your Nexmo Voice API applications.
 
