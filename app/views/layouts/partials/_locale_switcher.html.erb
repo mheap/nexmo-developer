@@ -8,6 +8,8 @@
         <span class="Nxd-locale">
           <% if I18n.locale.to_s == 'cn' %>
             简体中文
+          <% elsif I18n.locale.to_s == 'ja' %>
+            日本語
           <% else %>
             English
           <% end %>
@@ -21,6 +23,11 @@
         <div class="Vlt-dropdown__link" data-locale="en" role="link">
           <span class="Vlt-dropdown__label">
             English
+          </span>
+        </div>
+        <div class="Vlt-dropdown__link" data-locale="ja" role="link">
+          <span class="Vlt-dropdown__label">
+            日本語
           </span>
         </div>
         <div class="Vlt-dropdown__link" data-locale="cn" role="link">
