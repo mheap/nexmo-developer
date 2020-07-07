@@ -30,7 +30,7 @@ Nexmo 仮想番号への送信メッセージは [GET] または [POST] リク�
 `timestamp` | `message-timestamp` の [UNIX タイムスタンプ](https://www.unixtimestamp.com/)表示。| 任意 
 `nonce` | リクエストの署名に予測不能の追加要素を加えるランダムな文字列。着信メッセージの署名を計算・検証するには、`nonce` と `timestamp` パラメーターを共有の秘密と併用します。| [署名入り](/concepts/guides/signing-messages)メッセージには必須
 
-### メッセージのタイプが `text` または <code translate="no">unicode</code> の場合 `unicode`
+### メッセージのタイプが `text` または `unicode` の場合
 
 メッセージの `type` が `text` または `unicode` の場合、Web フックエンドポイントへのリクエストに次のプロパティが表示されます。
 
@@ -39,7 +39,7 @@ Nexmo 仮想番号への送信メッセージは [GET] または [POST] リク�
 `text` | 着信メッセージの本文。
 `keyword` | メッセージ本文の最初の単語。通常、短縮コードと併用されます。
 
-### メッセージのタイプが <code translate="no">binary</code> の場合 `binary`
+### メッセージのタイプが `binary` の場合
 
 メッセージの `type` が `binary` の場合、Web フックエンドポイントへのリクエストに次のプロパティが表示されます。
 
