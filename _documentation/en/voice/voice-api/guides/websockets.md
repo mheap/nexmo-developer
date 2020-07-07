@@ -8,7 +8,7 @@ navigation_weight: 7
 
 This guide introduces you to WebSockets and how and why you might want to use them in your Nexmo Voice API applications.
 
-> For sample applications and other resources see  [further reading](#further-reading).
+> For sample applications and other resources see [further reading](#further-reading).
 
 
 ## What is a WebSocket?
@@ -56,9 +56,7 @@ To instruct Nexmo to connect to a WebSocket your application server must return 
                         "line_1": "Apartment 14",
                         "line_2": "123 Example Street",
                         "city": "New York City"
-                    },
-                    "system_roles": [183493, 1038492, 22],
-                    "enable_auditing": false
+                    }
                 }
            }
        ]
@@ -66,17 +64,21 @@ To instruct Nexmo to connect to a WebSocket your application server must return 
 ]
 ```
 
-The `uri` identifies the endpoint of your WebSocket server that Nexmo will connect to.
+The specific data fields for webhooks are the following:
 
-To choose the sampling rate set the `content-type` property to `audio/l16;rate=16000` or `audio/l16;rate=8000` depending on if you need the data at 16kHz or 8kHz. Most real-time transcription services work best with audio at 8kHz.
+Field | Example | Description
+ -- | -- | --
+`uri` | `wss://example.com/socket` | The endpoint of your WebSocket server that Nexmo will connect to
+`content-type` | `audio/l16;rate=16000` | A string representing the audio sampling rate, either `audio/l16;rate=16000` or `audio/l16;rate=8000`. Most real-time transcription services work best with audio at 8kHz.
+`headers` | `{ 'name': 'J Doe', 'age': 40 }` | An object of key/value pairs with additional optional properties to send to your Websocket server, with a maximum length of 512 bytes.
 
-You can send additional optional properties to your WebSocket server by adding key/value pairs to a `headers` property. The maximum length of the `headers` data is 512 bytes.
+You can find all the data fields for an NCCO at the [NCCO Reference Guide](/voice/voice-api/ncco-reference).
 
 ## Handling incoming WebSocket messages
 
 ### First message
 
-The initial message sent on an established WebSocket connection will be text-based and contain a JSON payload, it will have the `event` field set to `websocket:connected` and detail the audio format in `content-type`, along with any other metadata that you have put in the `headers` property of the WebSocket endpoint in your NCCO `connect`. The `headers` property is not present on the JSON payload so the properties are at the top-level of the JSON. For example:
+The initial message sent on an established WebSocket connection will be text-based and contain a JSON payload, it will have the `event` field set to `websocket:connected` and detail the audio format in `content-type`, along with any other metadata that you have put in the `headers` property of the WebSocket endpoint in your NCCO `connect` action. The `headers` property is not present on the JSON payload so the properties are at the top-level of the JSON. For example:
 
 ``` json
 {
@@ -155,12 +157,34 @@ You will receive one event for each keypress and each event will contain only on
 
 You can send audio back into the call by writing binary messages to the WebSocket. The audio must be in the same format as described in the previous section. It is important that each message is 320 or 640 bytes (depending on sample rate) and contains 20ms of audio.
 
-You can send the messages at a faster than real-time rate and they will be buffered for playing at the Nexmo end. So for example, you can send an entire file to the socket in one write, providing the 320/640 byte per message restriction is observed. Nexmo will only buffer 1024 messages which should be enough for around 20 seconds of audio, if your file is longer than this you should implement a delay of 18-19ms between each message, or consider using the [REST API to play an audio file](/voice/voice-api/code-snippets/play-an-audio-stream-into-a-call/).
+You can send the messages at a faster than real-time rate and they will be buffered by our API platform for later playback. So for example, you can send an entire file to the socket in one write, providing the 320/640 byte per message restriction is observed. Nexmo will only buffer 1024 messages which should be enough for around 20 seconds of audio, if your file is longer than this you should implement a delay of 18-19ms between each message, or consider using the [REST API to play an audio file](/voice/voice-api/code-snippets/play-an-audio-stream-into-a-call/).
 
 
-## Websocket fallback options
+## WebSocket Event Callbacks
 
-You can be notified via an event when a connection to a WebSocket cannot be established or if the application terminates the WebSocket connection for any reason.
+Event data is sent to the `eventURL` as with all voice applications. This is a `POST` request by default, but you can specify the request type in the `eventMethod` parameter of the `connect` action.
+
+Event callbacks are documented in the [Webhook Reference Guide](/voice/voice-api/webhook-reference). In the guide you can find all the types of webhooks and the parameters each webhook sends as part of its payload.
+
+Within WebSockets particularly, you can also set custom metadata in your event callback.
+
+### Custom Metadata
+
+WebSockets have the ability to include custom metadata set by the user. Any custom metadata set in the WebSocket will be displayed in the `headers` field in the event callback payload. The `headers` field is also present in every other Voice API callback event as an empty object. The only time it will contain data is when it is set by the user for a WebSocket connection.
+
+A common use case for custom metadata is providing useful information for fallback options. For example, you way want to include the original `from` number in the fallback event. You can set it with the following inside your `connect` NCCO action:
+
+```json
+ "headers": {
+    "original_from": "15551234567"
+}
+```
+
+More examples of using custom metadata inside the `headers` field is found in the following section on fallback options.
+
+### Fallback Options
+
+You can also be notified via an event when a connection to a WebSocket cannot be established or if the application terminates the WebSocket connection for any reason.
 
 To receive this event, you must include the `eventType: synchronous` in your `connect` action:
 
@@ -183,8 +207,6 @@ To receive this event, you must include the `eventType: synchronous` in your `co
   }
 ]
 ```
-
-Our API will send the event object to your webhook at `eventURL`. This is a `POST` request by default, but you can specify the request type in the `eventMethod` parameter of the `connect` action.
 
 You can then return a new NCCO in the response with the required fallback actions. For example, if you cannot establish a connection, you might want to play a message to the caller or transfer the call.
 
