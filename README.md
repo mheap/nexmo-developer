@@ -105,8 +105,8 @@ export NVM_DIR="$HOME/.nvm"
 
 Install the correct versions of ruby and node
 ```
-rbenv install 2.5.7
-rbenv global 2.5.7
+rbenv install 2.5.8
+rbenv global 2.5.8
 gem install bundle
 bundle install
 nvm install 12
