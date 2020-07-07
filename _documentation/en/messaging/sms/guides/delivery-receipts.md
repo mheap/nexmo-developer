@@ -69,7 +69,7 @@ The `status` field in the DLR tells you if your SMS was delivered successfully. 
 | `delivered`  | Message has been delivered  |
 | `buffered` | Message has been buffered for later delivery  |
 | `expired`  | Message was held at downstream carrier's retry scheme and could not be delivered within the expiry time |
-| `undelivered` | Message not delivered |
+| `failed` | Message not delivered |
 | `rejected` | Downstream carrier refuses to deliver message |
 | `unknown`  | No useful information available |
 
