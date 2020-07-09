@@ -12,7 +12,7 @@ introduction:
     inbound <abbr title="Public Switched Telephone Network">PSTN</abbr> call.
 
     ### Completed project
-    If you would like to follow along without building the app yourself, the completed project for this tutorial is available on [Github]() for you to download.
+    If you would like to follow along without building the app yourself, the completed project for this tutorial is available on [Github](https://github.com/nexmo-community/client-sdk-swift-voice-phone-to-app) for you to download.
 
 prerequisites:
 - create-nexmo-account
@@ -42,7 +42,7 @@ conclusion:
 
     # What's next?
 
-    For completeness, the project you've built as part of this tutorial is also available on [Github]().
+    For completeness, the project you've built as part of this tutorial is also available on [Github](https://github.com/nexmo-community/client-sdk-swift-voice-phone-to-app).
 
     And... you can do a lot more with the Client SDK,  see [Client SDK documentation](/client-sdk/overview).
 
