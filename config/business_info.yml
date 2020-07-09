@@ -1,5 +1,62 @@
-name: Nexmo Developer
+name: Vonage API Developer
 subtitle: Nexmo is now Vonage
+base_url: 'https://developer.nexmo.com'
 docs_repo: 'nexmo/nexmo-developer'
-oas_repo: 'nexmo/api-specification'
 oas_url: https://www.github.com/nexmo/api-specification/blob/master/definitions
+assets:
+  header_logo:
+    path: '/images/logos/vbc-logo.svg'
+    alt: 'Vonage API Developer Header'
+  footer_logo:
+    path: '/images/logos/vbc-logo-white.svg'
+    alt: 'Vonage API Developer Footer'
+header:
+  links:
+    sign-up:
+      path: https://dashboard.nexmo.com/sign-up
+      text:
+        - '{ Try it free }'
+        - '< Try it free />'
+        - '{ Get an API key }'
+        - '< Get an API key />'
+        - '{ Start building for free }'
+        - '< Start building for free />'
+  hiring:
+    display: true
+footer:
+  links:
+    status:
+      path: 'https://www.nexmostatus.com/'
+      text: 'API Status'
+    navigation:
+      documentation:
+        - sms: 'https://developer.nexmo.com/messaging/sms/overview'
+        - voice: 'https://developer.nexmo.com/voice/voice-api/overview'
+        - verify: 'https://developer.nexmo.com/verify/overview'
+        - number-insight: 'https://developer.nexmo.com/number-insight/overview'
+        - account: 'https://developer.nexmo.com/account/overview'
+      api-reference:
+        - sms: 'https://developer.nexmo.com/api/sms'
+        - voice: 'https://developer.nexmo.com/api/voice'
+        - verify: 'https://developer.nexmo.com/api/verify'
+        - number-insight: 'https://developer.nexmo.com/api/number-insight'
+        - all-apis: 'https://developer.nexmo.com/api'
+      vonage-api-developer:
+        - community: 'https://developer.nexmo.com/community'
+        - contribute: 'https://developer.nexmo.com/contribute'
+        - legacy-documentation: 'https://developer.nexmo.com/legacy'
+        - team: 'https://developer.nexmo.com/team'
+        - careers: 'https://developer.nexmo.com/careers'
+      get-to-know-us:
+        - vonage-api-platform: 'https://www.vonage.com/communications-apis/'
+        - careers: 'https://www.vonage.com/corporate/careers/'
+        - press: 'https://www.vonage.com/corporate'
+    support:
+      knowledgebase: 'https://help.nexmo.com/'
+      known-issues: 'https://help.nexmo.com/hc/en-us/sections/115004147507'
+    social:
+      linkedin: 'https://www.linkedin.com/company/vonage/'
+      twitter: 'https://twitter.com/vonage'
+      slack: 'https://developer.nexmo.com/slack'
+      github: 'https://github.com/nexmo'
+      stack-overflow: 'http://stackoverflow.com/questions/tagged/nexmo'

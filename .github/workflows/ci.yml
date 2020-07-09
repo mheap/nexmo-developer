@@ -57,28 +57,24 @@ jobs:
     - name: Bundle Install
       env:
         POSTGRES_USERNAME: postgres
+        BUNDLE_RUBYGEMS__PKG__GITHUB__COM: "NexmoDev:${{ secrets.GH_ADMIN_TOKEN }}"
       run: |
         gem update --system 3.0.3 -N
         gem install --no-document bundler
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
-    - name: Run Tests
+    - name: Check spelling
       env:
         POSTGRES_USERNAME: postgres
         DOCS_BASE_PATH: "."
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
       run: |
-        bundle exec rails db:create
-        bundle exec rails db:migrate
-        bundle exec rake spec
-        bundle exec rubocop
-        bundle exec rake ci:verify_pages
-        bundle exec rake ci:verify_navigation
-        bundle exec rake ci:verify_oas_reference
-        bundle exec rake ci:verify_error_urls_resolve
-        bundle exec rake ci:check_word_blocklist
-        bundle exec rake ci:check_ruby_version
-        RAILS_ENV=test bundle exec rake webpacker:compile
         ./node_modules/.bin/mdspell -r -n -a --en-us '_documentation/en/**/*.md' '_partials/*.md' '_partials/**/*.md' '_modals/**/*.md' '_tutorials/**/*.md'
-        yarn test
+    - name: Run rake tasks
+      env:
+        POSTGRES_USERNAME: postgres
+        OAS_PATH: "_open_api/api_specs/definitions"
+        FORCE_COLOR: true
+      run: |
+        RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-ci
