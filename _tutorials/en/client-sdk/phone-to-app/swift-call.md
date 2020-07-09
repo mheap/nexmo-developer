@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     }
 }
 ```
-The `displayIncomingCallAlert` function takes a `NXMCall` as a parameter, with this we can access the members, which are the type `NXMCallMember`, of the call to retreive the phone number of the incoming call. Note in the `UIAlertAction` for answering the call we assign the call to the property from earlier.
+The `displayIncomingCallAlert` function takes a `NXMCall` as a parameter, with this we can access the members, which are the type `NXMCallMember`, of the call to retrieve the phone number of the incoming call. Note in the `UIAlertAction` for answering the call we assign the call to the property from earlier.
 
 To use `displayIncomingCallAlert` you need to use the `NXMClientDelegate` which has a function that will be called when the client receives an incoming `NXMCall`:
 
