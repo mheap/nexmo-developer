@@ -19,7 +19,7 @@ import NexmoClient
 Add a `NXMClient` instance, below the `callButton`:
 
 ```swift
-class ViewController: UIViewController, NXMClientDelegate {
+class ViewController: UIViewController {
     ...
     var callButton = UIButton(type: .roundedRect)
     let client = NXMClient.shared
