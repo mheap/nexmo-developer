@@ -6,7 +6,7 @@ navigation_weight: 0
 
 # In-App Voice Overview
 
-Client SDK allows you to add voice capabilities to your web or native application. You application would then be able to support a variety of use cases such as click to call a support agent, realtime messaging, and voice chat rooms.
+Client SDK allows you to add voice capabilities to your web (JavaScript), Android, or iOS application. You application would then be able to support a variety of use cases such as click to call a support agent, realtime messaging, and voice chat rooms.
 
 Client SDK In-App Voice uses WebRTC and includes all the essentials you need to build a feature-rich voice experience.
 
