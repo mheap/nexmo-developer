@@ -14,7 +14,7 @@ You use Event Based Alerts to send custom messages to your users. Before you use
 
 The workflow for sending Event Based Alerts is:
 
-![Event Based Alerts Workflow](/assets/images/workflow_sending_event_based_alerts.svg)
+![Event Based Alerts Workflow](/images/workflow_sending_event_based_alerts.svg)
 
 1. Send an Event Based Alerts [request](/api/sms/us-short-codes/alerts/sending#request).
 

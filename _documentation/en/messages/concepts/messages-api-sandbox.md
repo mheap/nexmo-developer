@@ -111,7 +111,7 @@ The procedure for approving your number differs slightly depending on the sandbo
 2. Enter your application's **Status** webhook URL. The status webhook is the URL at which you will receive message status updates.
 3. Click the **Save webhooks** button.
 
-![Configure webhooks](/assets/images/messages/config-webhooks.png)
+![Configure webhooks](/images/messages/config-webhooks.png)
 
 ### Webhook Retries
 

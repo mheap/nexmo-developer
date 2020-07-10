@@ -55,10 +55,10 @@ Once you have created a Nexmo Account you will be able to create multiple [Nexmo
 After deploying the demo backend application on the previous step, you will need to:
 
 1. Log in using your *api key* and *api secret*, which you can obtain from [Nexmo Dashboard](https://dashboard.nexmo.com/)
-![Login](/assets/images/client-sdk/contact-center/login.png)
+![Login](/images/client-sdk/contact-center/login.png)
 
 2. Create a new Nexmo Application by typing an application name and clicking *Create*
-![Setup](/assets/images/client-sdk/contact-center/setup.png)
+![Setup](/images/client-sdk/contact-center/setup.png)
 
 > That uses [Nexmo Applications API](/api/application.v2). The demo application sets the required webhooks and exposes them for your ease of use. More on that will be mentioned below.
 
@@ -68,11 +68,11 @@ In order to make and receive calls, you should rent a [Nexmo Number](/numbers/ov
 
 Use our demo backend application, navigate to the **Numbers** tab on the top bar, and search for a number.
 
-![Number search](/assets/images/client-sdk/contact-center/numbers-search.png)
+![Number search](/images/client-sdk/contact-center/numbers-search.png)
 
 After you rented the number, assign it to the Nexmo Application you've created.
 
-![Number assign](/assets/images/client-sdk/contact-center/numbers.png)
+![Number assign](/images/client-sdk/contact-center/numbers.png)
 
 > For more features and number management, read more on [Numbers API](/numbers/overview) or visit the [dashboard](https://dashboard.nexmo.com/buy-numbers).
 
@@ -84,7 +84,7 @@ For the purpose of this guide, you will use two users one with the name `Jane` a
 
 To create users, on the demo backend application interface, on the top menu select **Users** and then **New User**.
 
-![New User](/assets/images/client-sdk/contact-center/users-new.png)
+![New User](/images/client-sdk/contact-center/users-new.png)
 
 Behind the scenes it uses [Conversation API](https://developer.nexmo.com/api/conversation#createUser).
 

@@ -7,7 +7,7 @@ description: Walkthrough the ConversationViewController
 
 The `ConversationViewController` is responsible for displaying the conversation:
 
-![Conversation UI](/assets/images/client-sdk/ios-messaging/conversation-ui.png)
+![Conversation UI](/images/client-sdk/ios-messaging/conversation-ui.png)
 
 The interface consists of three groups of elements:
 

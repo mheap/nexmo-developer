@@ -16,7 +16,7 @@ To make the request:
 3. Complete the "Authorization" tab as described in the preceding step.
 4. In the "Body" tab, select the "none" radio button.
 
-![Request the report status](/assets/images/reports-api/request-status-postman.png)
+![Request the report status](/images/reports-api/request-status-postman.png)
 
 ## Execute the get status request
 

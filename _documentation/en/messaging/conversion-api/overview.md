@@ -24,7 +24,7 @@ When sending us conversion data you must differentiate between your [2FA](/messa
 
 The following diagram shows the Conversion API workflow:
 
-![Conversion API workflow](/assets/images/workflow_conversion_api.svg)
+![Conversion API workflow](/images/workflow_conversion_api.svg)
 
 To send conversion data to Vonage:
 

@@ -20,7 +20,7 @@ You should be familiar with the [main concepts](/account/subaccounts/overview) a
 
 A Partner decides to create a subaccount for each end customer and is therefore able to use distinct API credentials for each of the end customers and see their spending. This is illustrated in the following diagram:
 
-![Subaccounts with shared balance](/assets/images/subaccounts/shared_balance.png)
+![Subaccounts with shared balance](/images/subaccounts/shared_balance.png)
 
 To create a subaccount the following code can be used:
 
@@ -36,7 +36,7 @@ The Partner could not control spending among its end customers because they all 
 
 Each subaccount can be allocated an individual balance, and a credit limit, as show in the following diagram:
 
-![Credit allocation](/assets/images/subaccounts/credit_allocation.png)
+![Credit allocation](/images/subaccounts/credit_allocation.png)
 
 The following code snippet illustrates allocating a specified amount of credit to a subaccount: 
 
@@ -56,13 +56,13 @@ source: '_examples/subaccounts/get-subaccounts'
 
 After some time, the Partner noticed that the end customer 1 (subaccount1) used up all of its credit (40 out of 40) and could not make any more API calls. The Partner had a choice of either waiting for the end customer 1 to pay them (and then in turn making a payment to Nexmo and transferring a corresponding balance to the subaccount) or increasing the end customer’s credit limit immediately so that end customer 1 can continue using the Nexmo API. The Partner decided to allocate additional credit. The Partner has 40 = |-60| - |-20| available credit, and decides to allocate 20 to the subaccount. This is illustrated in the following diagram:
 
-![Additional credit](/assets/images/subaccounts/additional_credit_allocation.png)
+![Additional credit](/images/subaccounts/additional_credit_allocation.png)
 
 ## End of month balance transfers
 
 At the end of the month the Partner received a |-20| + |-50| = €70 invoice from Nexmo (for all spending from all its accounts). End customer 1 (subaccount1) covered 45 out of €50 that it had spent. Thus, the Partner transferred €45 to subaccount1's balance. This is illustrated in the following diagram:
 
-![Additional credit](/assets/images/subaccounts/month_end_balance_transfer.png)
+![Additional credit](/images/subaccounts/month_end_balance_transfer.png)
 
 The following code shows how to transfer balance to a subaccount:
 

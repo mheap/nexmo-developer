@@ -15,7 +15,7 @@ While this tutorial looks specifically at retrieving the details of a voice call
 
 The setup you will have in this tutorial is illustrated in the following diagram:
 
-![Conversation](/assets/images/conversation-api/call-forward-conversation.png)
+![Conversation](/images/conversation-api/call-forward-conversation.png)
 
 ## In this tutorial
 

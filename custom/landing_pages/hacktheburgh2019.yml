@@ -5,7 +5,7 @@ page:
     - column:
       - type: html
         html:
-          content: '<img src="/assets/images/hacktheburgh2019.png" />'
+          content: '<img src="/images/hacktheburgh2019.png" />'
 
   - row:
     - column:

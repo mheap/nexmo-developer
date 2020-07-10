@@ -14,7 +14,7 @@ The Dispatch API provides the mechanism by which to order messages and specify t
 
 The following diagram illustrates the relationship between the Dispatch API and the Messages API:
 
-![Messages and Dispatch Overview](/assets/images/messages-dispatch-overview.png)
+![Messages and Dispatch Overview](/images/messages-dispatch-overview.png)
 
 ## Contents
 

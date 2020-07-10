@@ -4,7 +4,7 @@ description: A package for the Node-RED Flow Based Programming platform
 tags: ["Node-RED","Studio","Visual","Integration"]
 cta: View the Package
 link: https://flows.nodered.org/node/node-red-contrib-nexmo
-image: /assets/images/extend/node-red-icon.png
+image: /images/extend/node-red-icon.png
 published: true
 ---
 

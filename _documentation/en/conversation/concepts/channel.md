@@ -38,4 +38,4 @@ You can send a type of [Media](/conversation/concepts/media) through a Channel. 
 
 The relationship between Media and Channels is illustrated in the following diagram:
 
-![Channels and Media](/assets/images/conversation-api/channels-media.png)
+![Channels and Media](/images/conversation-api/channels-media.png)

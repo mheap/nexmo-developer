@@ -9,7 +9,7 @@ languages:
 
 In this tutorial, you will learn how to record a Voice API call and transcribe it using the Amazon Transcribe API.
 
-![Application Overview](/assets/images/amazon-transcribe-vapi-tutorial.png "Application Overview")
+![Application Overview](/images/amazon-transcribe-vapi-tutorial.png "Application Overview")
 
 ## Prerequisites
 

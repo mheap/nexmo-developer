@@ -12,7 +12,7 @@ With the number of apps on Android and iOS rising it is important for people to 
 
 If your mobile app has a Website you are probably familiar with:
 
-![Mobile app button example](/assets/images/app_store_play_badges.png)
+![Mobile app button example](/images/app_store_play_badges.png)
 
 These buttons make it easy for anyone to navigate to the correct store for their mobile device. However, this flow quickly falls apart if the user is not mobile. What happens when your user is using a desktop computer? By using **Mobile app promotion**, you can quickly convert a browsing user into an active customer by sending them a link to your app via SMS.
 
@@ -145,7 +145,7 @@ If the user is not using a mobile device, display the button for SMS download:
 
 This button looks like:
 
-![Mobile app button example](/assets/images/sms-badge.png)
+![Mobile app button example](/images/sms-badge.png)
 
 ## Collect a name and phone number
 

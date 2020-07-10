@@ -4,7 +4,7 @@ description: A hosted and opensource connector to bridge between Nexmo websocket
 tags: ["Amazon","Lex","AI","Bots"]
 cta: Get this Repo
 link: https://github.com/nexmo/lex-connector
-image: /assets/images/extend/amazon-lex-logo.jpg
+image: /images/extend/amazon-lex-logo.jpg
 published: true
 ---
 
