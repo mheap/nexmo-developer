@@ -20,7 +20,7 @@ Further channels may be supported in the future.
 
 The following diagram illustrates the relationship between the Messages API and the Dispatch API:
 
-![Messages and Dispatch Overview](/assets/images/messages-dispatch-overview.png)
+![Messages and Dispatch Overview](/images/messages-dispatch-overview.png)
 
 Contents
 --------

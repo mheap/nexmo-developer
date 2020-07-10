@@ -25,7 +25,7 @@ page:
       column:
       - type: html
         html:
-          content: '<img src="/assets/images/developer_spotlight_new.png" />'
+          content: '<img src="/images/developer_spotlight/developer_spotlight_new.png" />'
   - row:
     - column:
         - type: line_divider

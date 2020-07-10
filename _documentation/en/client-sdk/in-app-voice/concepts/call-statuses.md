@@ -12,7 +12,7 @@ This topic describes call statuses such as `started`, `ringing`, `answered`, and
 
 Each call goes through a sequence of statuses in its lifecycle. A call may pass from `started` to `ringing` to `answered` to `complete` but there are many different sequences for statuses in a call's lifecycle. Below is a diagram outlining all possible paths:
 
-![Visual diagram of Call statuses. A description of the text is given in the next section.](/assets/images/client-sdk/call-statuses-rtc-diagram.png)
+![Visual diagram of Call statuses. A description of the text is given in the next section.](/images/client-sdk/call-statuses-rtc-diagram.png)
 
 ## Statuses
 

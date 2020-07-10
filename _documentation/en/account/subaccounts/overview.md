@@ -15,7 +15,7 @@ The Subaccounts API allows you to programmatically create and manage subaccounts
 
 The figure below illustrates the relationship between the primary account and the subaccounts created by the Subaccounts API:
 
-![Subaccounts Overview](/assets/images/subaccounts/structure.png)
+![Subaccounts Overview](/images/subaccounts/structure.png)
 
 ## Beta
 
@@ -49,7 +49,7 @@ All Nexmo accounts have an associated account balance. It shows the amount of fu
 
 The amount of credit available to the customer is called a `credit_limit`. Thus, any postpaid account that has a positive balance has `account_balance + |credit_limit|` funds available for spending. A prepaid account has only `account_balance` available for spending.
 
-![Account balance](/assets/images/subaccounts/account_balance.png)
+![Account balance](/images/subaccounts/account_balance.png)
 
 ### Subaccount creation
 
@@ -93,7 +93,7 @@ It means that the primary account can transfer funds to the subaccount, and thes
 
 Example: A postpaid primary account that initially had a zero balance and was given €100 in credit by Nexmo already used 20€ of the provided credit, that is, its balance was €-20. It had still €80 = |-20 - -100| that it could either spend itself or transfer to one of its subaccounts. The postpaid primary account decided to transfer €20 to Subaccount1. The primary account's balance became €-40 after this operation.
 
-![Balance transfer](/assets/images/subaccounts/balance_transfer.png)
+![Balance transfer](/images/subaccounts/balance_transfer.png)
 
 ### Credit allocation
 
@@ -105,7 +105,7 @@ It means that the primary account can allocate part or all of its credit facilit
 
 Example: After spending €20 and transferring another €20 to subaccount1, the postpaid primary account's balance dropped to €-40, and it decided to assign individual balance to Subaccount2 and to allocate €35 out of its remaining credit to it. The primary account had |-100| - |-40| = €60 in credit available for allocation. After the credit allocation operation, the primary account's remaining credit line became €65: |credit_limit| = |-100| - 35 = €65.
 
-![Credit allocation](/assets/images/subaccounts/credit_allocation.png)
+![Credit allocation](/images/subaccounts/credit_allocation.png)
 
 ### Charges and monitoring of spending
 

@@ -12,7 +12,7 @@ navigation_weight: 5
 
 Each of our products has its own OpenAPI specification. The easiest way to find it is from the API reference - at the top of the page you'll find a "Download OpenAPI 3 Definition" button. The API reference pages themselves are generated from these specifications.
 
-<img src="/assets/images/download-openapi3-button.png" alt="Button with label: Download OpenAPI3 Definition" />
+<img src="/images/download-openapi3-button.png" alt="Button with label: Download OpenAPI3 Definition" />
 
 The spec files for each API product are also available [on a GitHub repository](https://github.com/nexmo/api-specification) if you'd like to browse the list directly.
 

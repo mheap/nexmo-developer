@@ -3,7 +3,7 @@ title: Google CCML Integration
 description: An integration between Comms Router and Google's Contact Center APIs adds capabilities to the programmable contact center space.
 tags: ["Google","AI"]
 link: 
-image: /assets/images/extend/google_cloud_icon.png
+image: /images/extend/google_cloud_icon.png
 published: false
 ---
 

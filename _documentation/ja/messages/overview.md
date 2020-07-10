@@ -20,7 +20,7 @@ navigation_weight:  1
 
 下図ではメッセージ用 API と配信用 API の関係が示されています。
 
-![メッセージと配信の概要](/assets/images/messages-dispatch-overview.png)
+![メッセージと配信の概要](/images/messages-dispatch-overview.png)
 
 内容
 ---

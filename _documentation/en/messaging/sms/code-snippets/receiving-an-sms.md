@@ -24,7 +24,7 @@ In the code snippets, the webhook is located at `/webhooks/inbound-sms`. If you 
 
 ```screenshot
 script: app/screenshots/webhook-url-for-inbound-message.js
-image: public/meta/screenshots/smsInboundWebhook.png
+image: public/screenshots/smsInboundWebhook.png
 ```
 
 ## Try it out

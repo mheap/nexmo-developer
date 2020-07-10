@@ -4,7 +4,7 @@ description: Sample of Azure speech transcribing audio from a call in realtime.
 tags: ["Microsoft", "Azure", "Speech to Text","Transcription","Python"]
 cta: Get this Repo
 link: https://github.com/nexmo-community/voice-microsoft-speechtotext
-image: /assets/images/extend/azure-icon.png
+image: /images/extend/azure-icon.png
 published: true
 ---
 

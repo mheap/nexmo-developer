@@ -4,7 +4,7 @@ description: Sample of Google Cloud speech transcribing audio from a call in rea
 tags: ["Google","Speech to Text","Transcription","Node"]
 cta: Get this Repo
 link: https://github.com/nexmo-community/voice-google-speechtotext
-image: /assets/images/extend/google_cloud_icon.png
+image: /images/extend/google_cloud_icon.png
 published: true
 ---
 
