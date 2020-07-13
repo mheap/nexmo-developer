@@ -7,8 +7,8 @@ products:
     dropdown: true
   - 
     name: 'Subaccounts'
-    icon: 'user'
-    icon_colour: 'purple-dark'
+    icon: 'add-user'
+    icon_colour: 'blue'
     path: account/subaccounts
     dropdown: true
   -
@@ -19,14 +19,14 @@ products:
     dropdown: true
   -
     name: 'Audit'
-    icon: 'search'
-    icon_colour: 'purple-dark' 
+    icon: 'file-search'
+    icon_colour: 'blue' 
     path: audit
     dropdown: true
   -
     name: 'Client SDK'
-    icon: 'duplicate'
-    icon_colour: 'purple-dark' 
+    icon: 'queue'
+    icon_colour: 'red' 
     path: client-sdk
     dropdown: true
   -
@@ -55,14 +55,14 @@ products:
     dropdown: true
   -
     name: 'Conversation API'
-    icon: 'queue'
-    icon_colour: 'purple-dark' 
+    icon: 'more-detailed-list'
+    icon_colour: 'red' 
     path: conversation
     dropdown: true
   -
     name: 'Dispatch API'
-    icon: 'message'
-    icon_colour: 'purple-dark' 
+    icon: 'reload'
+    icon_colour: 'green' 
     path: dispatch
     dropdown: true
   -
@@ -73,14 +73,14 @@ products:
     dropdown: false
   -
     name: 'Messages API'
-    icon: 'message'
-    icon_colour: 'purple-dark' 
+    icon: 'chat'
+    icon_colour: 'indigo' 
     path: messages
     dropdown: true
   -
     name: 'SMS API'
     icon: 'message'
-    icon_colour: 'purple-dark' 
+    icon_colour: 'purple' 
     path: messaging/sms
     dropdown: true
   -
@@ -97,8 +97,8 @@ products:
     dropdown: true
   -
     name: 'Number Insight API'
-    icon: 'hash'
-    icon_colour: 'purple-dark' 
+    icon: 'search'
+    icon_colour: 'grey' 
     path: number-insight
     dropdown: true
   -
@@ -115,8 +115,8 @@ products:
     dropdown: true
   -
     name: 'Reports API'
-    icon: 'code'
-    icon_colour: 'purple-dark' 
+    icon: 'report'
+    icon_colour: 'blue' 
     path: reports
     dropdown: true
   -
@@ -140,7 +140,7 @@ products:
   -
     name: 'Voice API'
     icon: 'phone'
-    icon_colour: 'purple-dark' 
+    icon_colour: 'orange' 
     path: voice/voice-api
     dropdown: true
   -
