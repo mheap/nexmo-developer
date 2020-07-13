@@ -5,6 +5,22 @@ container_classes:
 page:
   - row:
     - column:
+      - type: text
+        text:
+          content: |
+            <style>
+              .Vlt-btn--larger {
+                font-size: 1.3em;
+                line-height: 2.6em;
+              }
+              .voyagers-page {
+                .Vlt-list > li {
+                  font-size: 1.6rem;
+                }
+              }
+            </style>
+  - row:
+    - column:
       - type: html
         html:
           content: '<div class="Vlt-center"><img width="30%" src="/images/voyagers/logo.png" /></div><br/><br/>'
