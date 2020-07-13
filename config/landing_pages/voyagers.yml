@@ -7,7 +7,7 @@ page:
     - column:
       - type: html
         html:
-          content: '<div class="Vlt-center"><img width="30%" src="/assets/images/voyagers/logo.png" /></div><br/><br/>'
+          content: '<div class="Vlt-center"><img width="30%" src="/images/voyagers/logo.png" /></div><br/><br/>'
   - row:
     - column:
         - type: header
@@ -56,7 +56,7 @@ page:
       column:
       - type: html
         html:
-          content: '<img width="90%" src="/assets/images/voyagers/ticket.svg" />'
+          content: '<img width="90%" src="/images/voyagers/ticket.svg" />'
   - row:
     - column:
         - type: line_divider
@@ -65,7 +65,7 @@ page:
       column:
       - type: html
         html:
-          content: '<img src="/assets/images/voyagers/composition_peach_trousers.svg" />'
+          content: '<img src="/images/voyagers/composition_peach_trousers.svg" />'
     - width: 2
       column:
       - type: structured_text
@@ -104,7 +104,7 @@ page:
       column:
       - type: html
         html:
-          content: <div class="Vlt-center"><img width="70%" src="/assets/images/voyagers/sitting_peach_trousers.svg" /></div>
+          content: <div class="Vlt-center"><img width="70%" src="/images/voyagers/sitting_peach_trousers.svg" /></div>
   - row:
     - column:
         - type: line_divider
@@ -145,4 +145,4 @@ page:
       column:
       - type: html
         html:
-          content: '<img width="60%" src="/assets/images/voyagers/space_probe.svg" />'
+          content: '<img width="60%" src="/images/voyagers/space_probe.svg" />'
