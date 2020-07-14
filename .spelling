@@ -349,3 +349,8 @@ Podfile
 boolean
 GitHub
 unredacted
+PushKit
+UserNotifications
+APNs
+cer
+Keychain

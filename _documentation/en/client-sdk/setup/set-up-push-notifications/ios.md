@@ -24,7 +24,7 @@ To use push notifications you are required to add the push notification capabili
 
 ![Signing & Capabilities](/meta/client-sdk/push-notifications/signing.png)
 
-Then select add capability and add the *Push Notifications* capablity:
+Then select add capability and add the *Push Notifications* capability:
 
 ![Add push capability](/meta/client-sdk/push-notifications/add-capability.png)
 
