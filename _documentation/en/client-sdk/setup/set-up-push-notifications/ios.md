@@ -16,11 +16,11 @@ This guide will cover how to VoIP push notifications with the Client SDK.
 
 ## Create a push certificate
 
-Apple Push Notifitions service (APNs) uses certificate-based authentication to secure the connections between APNs and Vonage servers. So you will need to create a certificate and upload it to the Vonage Servers.
+Apple Push Notifications service (APNs) uses certificate-based authentication to secure the connections between APNs and Vonage servers. So you will need to create a certificate and upload it to the Vonage Servers.
 
 ### Adding a push notification capability
 
-To use push notificaitons you are required to add the push notification capability to your Xcode project. To do this select your target and select *Signing & Capabilities*:
+To use push notifications you are required to add the push notification capability to your Xcode project. To do this select your target and select *Signing & Capabilities*:
 
 ![Signing & Capabilities](/meta/client-sdk/push-notifications/signing.png)
 
@@ -75,7 +75,7 @@ To integrate VoIP push in your app, follow these steps:
 
 #### 1. Enable VoIP Background Mode for your app
    
-Similar to the proceess for adding the push notifications capability earlier, in Xcode, under *your target*, open *Capabilities* and select *Background Modes*. Once the capability is added tick the "Voice over IP" option:
+Similar to the process for adding the push notifications capability earlier, in Xcode, under *your target*, open *Capabilities* and select *Background Modes*. Once the capability is added tick the "Voice over IP" option:
    
 ![Background modes selected](/meta/client-sdk/push-notifications/background-modes.png)
 
