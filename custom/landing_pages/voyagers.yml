@@ -17,13 +17,21 @@ page:
                 .Vlt-list > li {
                   font-size: 1.6rem;
                 }
+            }
+            @media only screen and (max-width: 767px) {
+              .Voyagers-logo img {
+                width: 100%;
               }
+              .Vlt-btn--larger {
+                width: 240px;
+              }
+            }
             </style>
   - row:
     - column:
       - type: html
         html:
-          content: '<div class="Vlt-center"><img width="30%" src="/images/voyagers/logo.png" /></div><br/><br/>'
+          content: '<div class="Vlt-center Voyagers-logo"><img width="30%" src="/images/voyagers/logo.png" /></div><br/><br/>'
   - row:
     - column:
         - type: header
