@@ -6,6 +6,7 @@ oas_url: https://www.github.com/nexmo/api-specification/blob/master/definitions
 assets:
   header_logo:
     path: '/images/logos/vbc-logo.svg'
+    small_path: '/images/logos/Vonage-lettermark.svg'
     alt: 'Vonage API Developer Header'
   footer_logo:
     path: '/images/logos/vbc-logo-white.svg'
