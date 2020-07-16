@@ -22,11 +22,11 @@ Apple Push Notifications service (APNs) uses certificate-based authentication to
 
 To use push notifications you are required to add the push notification capability to your Xcode project. To do this select your target and select *Signing & Capabilities*:
 
-![Signing & Capabilities](/meta/client-sdk/push-notifications/signing.png)
+![Signing & Capabilities](/images/client-sdk/push-notifications/signing.png)
 
 Then select add capability and add the *Push Notifications* capability:
 
-![Add push capability](/meta/client-sdk/push-notifications/add-capability.png)
+![Add push capability](/images/client-sdk/push-notifications/add-capability.png)
 
 If Xcode is automatically managing the signing of your app it will update the provisioning profile linked to your Bundle Identifier to include the capability.
 
@@ -34,7 +34,7 @@ If Xcode is automatically managing the signing of your app it will update the pr
 
 To generate a push certificate you will need to log in to your Apple developer account and head to the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/certificates/list) page and add a new certificate:
 
-![Add certificate button](/meta/client-sdk/push-notifications/add-certificate.png)
+![Add certificate button](/images/client-sdk/push-notifications/add-certificate.png)
 
 Choose a *VoIP Services Certificate* and continue. You will now need to choose the App ID for the app that you want to add VoIP push notifications to and continue. If your app is not listed you will have to create an App ID. Xcode can do this for you if it automatically if it manages your signing for you, otherwise you can create a new App ID on the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/certificates/list) page under *Identifiers*. Make sure to select the push notifications capability when doing so.
 
@@ -42,7 +42,7 @@ You will be prompted to upload a Certificate Signing Request (CSR). You can foll
  
 To get the push certificate in the format that is needed by the Vonage servers you will need to export it. Locate your VoIP Services certificate in Keychain Access and right-click to export it. Name the export `applecert` and select `.p12` as the format:
 
-![Keychain export](/meta/client-sdk/push-notifications/keychain-export.png)
+![Keychain export](/images/client-sdk/push-notifications/keychain-export.png)
 
 You can find more details about connecting to APNs in [Apple's official documentation](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_certificate-based_connection_to_apns). 
 
@@ -77,7 +77,7 @@ To integrate VoIP push in your app, follow these steps:
    
 Similar to the process for adding the push notifications capability earlier, in Xcode, under *your target*, open *Capabilities* and select *Background Modes*. Once the capability is added tick the "Voice over IP" option:
    
-![Background modes selected](/meta/client-sdk/push-notifications/background-modes.png)
+![Background modes selected](/images/client-sdk/push-notifications/background-modes.png)
 
 #### 2. Import `PushKit`, adopt `PKPushRegistryDelegate`, and sign up to VoIP notifications
 
