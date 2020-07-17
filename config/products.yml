@@ -25,7 +25,7 @@ products:
     dropdown: true
   -
     name: 'Client SDK'
-    icon: 'queue'
+    icon: 'group-2'
     icon_colour: 'red' 
     path: client-sdk
     dropdown: true
@@ -34,19 +34,19 @@ products:
     icon: 'microphone'
     icon_colour: 'purple-dark' 
     path: client-sdk/in-app-voice
-    dropdown: true
+    dropdown: false
   -
     name: 'In-App Video'
     icon: 'video'
     icon_colour: 'purple-dark' 
     path: client-sdk/in-app-video
-    dropdown: true
+    dropdown: false
   -
     name: 'In-App Messaging'
     icon: 'chat'
     icon_colour: 'purple-dark' 
     path: client-sdk/in-app-messaging
-    dropdown: true
+    dropdown: false
   -
     name: 'Concepts'
     icon: 'books'
@@ -127,7 +127,7 @@ products:
     dropdown: true
   -
     name: 'Verify'
-    icon: 'check-circle'
+    icon: 'lock'
     icon_colour: 'purple-dark' 
     path: verify
     dropdown: true
