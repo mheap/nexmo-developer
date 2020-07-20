@@ -22,9 +22,13 @@ Verification is a two-stage process that requires two API calls:
 ![Starting the verification process](/images/verify-request-diag.png)
 
 1. A user registers for your service via your app or web site and provides a phone number.
+  
 2. To confirm that the user has access to the number that they have registered with, your application makes an API call to the [Verification request endpoint](/api/verify#verifyRequest).
+  
 3. The Verify API generates a PIN code, with an associated `request_id`.
+  
     > It is possible to supply your own PIN code in some circumstances, please contact your account manager.
+    
 4. The Verify API then attempts to deliver this PIN to the user. The format (SMS or Text-to-speech (TTS)) and timing of these attempts are defined by your chosen [workflow](verify/guides/workflows-and-event).
     If the user does not revisit your app or website to enter the PIN they have received, the verification request will ultimately time out. Otherwise, you need to verify the number that they entered using by performing a Verification check.
 
