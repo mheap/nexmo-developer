@@ -52,7 +52,7 @@ source: '_examples/verify/send-verification-request'
 
 
 
-## Concepts
+## Guides
 
 ```concept_list
 product: verify
