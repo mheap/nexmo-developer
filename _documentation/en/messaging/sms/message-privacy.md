@@ -18,7 +18,7 @@ This sensitive PII ends up in two places: server logs and transactional records 
 
 The image below shows an example of the flow of Advanced SMS Auto-redact with Vonage.
 
-![Advanced SMS Redaction](/assets/images/messaging/sms/advanced_sms_redaction.png)
+![Advanced SMS Redaction](/images/messaging/sms/advanced_sms_redaction.png)
 
 **Note**: Advanced Auto-redact works only for messages sent using the Vonage SMS API. For messages received using the Vonage SMS API, we can offer the Standard Auto-redact feature. For more information on the Standard Auto-redact please refer to the [Redact API documentation](/redact/overview).
 
@@ -31,7 +31,7 @@ The redaction options available are:
 3. Phone number encryption only.
 4. Message content redaction combined with either redaction or encryption of the phone number.
 
-A key point of Vonage's immediate Advanced Auto-redact is that the message body is not stored in any of the logs or the CDRs. Phone numbers are also immediately encrypted, with an encryption key that Vonage staff do not have access to. Those encrypted numbers get then redacted in the CDRs, which are stored for 13 months, and the server logs, which are stored for between 15 and 30 days after creation. Please refer to the (Redaction page)[https://developer.nexmo.com/redact/overview] for more information.
+A key point of Vonage's immediate Advanced Auto-redact is that the message body is not stored in any of the logs or the CDRs. Phone numbers are also immediately encrypted, with an encryption key that Vonage staff do not have access to. Those encrypted numbers get then redacted in the CDRs, which are stored for 13 months, but not in the server logs. Server logs get automatically deleted after the end of their retention period, which is 15 - 30 days. Please refer to the [Redaction page](https://developer.nexmo.com/redact/overview) for more information.
 
 ## How to set up Auto-redact for your Vonage account
 
