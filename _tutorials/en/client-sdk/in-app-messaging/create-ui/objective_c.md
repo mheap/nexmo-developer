@@ -13,7 +13,7 @@ To be able to log in, you will need to add three elements to the screen:
 
 Open `ViewController.m` and add it programmatically:
 
-```objective-c
+```objective_c
 @interface ViewController ()
 
 @property UIButton *loginAliceButton;

@@ -9,7 +9,7 @@ Earlier you created a conversation in the Nexmo CLI and added the two users to t
 
 Add properties for the conversation and events as well as conformance to the `NXMConversationDelegate` in the interface:
 
-```objective-c
+```objective_c
 @interface ChatViewController () <UITextFieldDelegate, NXMConversationDelegate> 
 ...
 @property NXMConversation *conversation;
@@ -29,7 +29,7 @@ Add a function call to `getConversation` at the end of the `viewDidLoad` functio
 
 Add the functions to get the conversation, events and process those events a the end of the `ChatViewController.m` file:
 
-```objective-c
+```objective_c
 - (void)getConversation {
     [self.client getConversationWithUuid:self.user.conversationId completionHandler:^(NSError * _Nullable error, NXMConversation * _Nullable conversation) {
         self.conversation = conversation;
@@ -100,7 +100,7 @@ Once the events are fetched they are processed by `processEvents`. In `processEv
 
 The application also needs to react to events in a conversation after loading initially so you need to have implement some functions from the `NXMConversationDelegate`. At the end of the `ChatViewController.m` class add:
 
-```objective-c
+```objective_c
 @implementation ViewController
     ...
 

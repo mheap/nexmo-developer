@@ -11,7 +11,7 @@ To be able to chat, you will need to create a new View Controller for the chat i
 
 This will create a new file called `ChatViewController.m`, at the top import `NexmoClient` and `User`:
 
-```objective-c
+```objective_c
 #import "ChatViewController.h"
 #import "User.h"
 #import <NexmoClient/NexmoClient.h>
@@ -24,7 +24,7 @@ The chat interface will need:
 
 Open `ChatViewController.m` and add it programmatically:
 
-```objective-c
+```objective_c
 @implementation ChatViewController
 
 - (void)viewDidLoad {
@@ -84,7 +84,7 @@ In the `viewWillAppear` function an observer is added to the `keyboardDidShowNot
 
 You will need to conform to the `UITextFieldDelegate` to know when the user has finished typing to move the input field to its original position:
 
-```objective-c
+```objective_c
 @interface ChatViewController () <NXMClientDelegate>
 
 ...
@@ -94,7 +94,7 @@ You will need to conform to the `UITextFieldDelegate` to know when the user has 
 
 At the end of the `ChatViewController` class add the `textFieldDidEndEditing` delegate function:
 
-```objective-c
+```objective_c
 @implementation ChatViewController
 
 ...
@@ -108,18 +108,16 @@ At the end of the `ChatViewController` class add the `textFieldDidEndEditing` de
 
 ## Presenting the `ChatViewController`
 
-Now that the chat interface is built you will need to present the view controller from the log in screen you built earlier. You will need information about the logged in user to be passed between the two view controllers, within `ChatViewController.h`: 
+Now that the chat interface is built you will need to present the view controller from the log in screen you built earlier. You will need information about the logged in user to be passed between the two view controllers, within `ChatViewController.h` import the `User` class at the top of the file.
 
-Import the `User` class at the top of the file:
-
-```objective-c
+```objective_c
 #import <UIKit/UIKit.h>
 #import "User.h"
 ```
 
 Add an initializer to the interface:
 
-```objective-c
+```objective_c
 @interface ChatViewController : UIViewController
 
 -(instancetype)initWithUser:(User *)user;
@@ -127,11 +125,9 @@ Add an initializer to the interface:
 @end
 ```
 
-Then in `ChatViewController.m`:
+Then in `ChatViewController.m`, add a user and client property to the interface:
 
-Add a user and client property to the interface:
-
-```objective-c
+```objective_c
 @interface ChatViewController () <UITextFieldDelegate>
 ...
 @property User *user;
@@ -141,7 +137,7 @@ Add a user and client property to the interface:
 
 Implement the initializer:
 
-```objective-c
+```objective_c
 @implementation ChatViewController
 
 - (instancetype)initWithUser:(User *)user {
@@ -157,16 +153,16 @@ Implement the initializer:
 @end
 ```
 
-This defines a custom initializer for the class which has a `User.type` as its parameter, which then gets stored in the local `user` property. Now that we have the user information you use the navigation bar to show who the user will be chatting with, in `viewDidLoad` add:
+This defines a custom initializer for the class which has a `User.type` as its parameter, which then gets stored in the local `user` property. Now that you have the user information, use the navigation bar to show who the user will be chatting with, in `viewDidLoad` add:
 
-```objective-c
+```objective_c
 self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleDone target:self action:@selector(logout)];
 self.title = [NSString stringWithFormat:@"Conversation with %@", self.user.chatPartnerName];
 ```
 
 This will also creates a logout button in the navigation bar, add the `logout` function to the end of `ChatViewController.swift`:
 
-```objective-c 
+```objective_c 
 @implementation ChatViewController
     ...
 - (void)logout {
@@ -178,7 +174,7 @@ This will also creates a logout button in the navigation bar, add the `logout` f
 
 Now you are ready to present the chat interface along with the user information. To do this you will need to edit the `didChangeConnectionStatus` function in the `ViewController.m` file:
 
-```objective-c
+```objective_c
 - (void)client:(NXMClient *)client didChangeConnectionStatus:(NXMConnectionStatus)status reason:(NXMConnectionStatusReason)reason {
     switch (status) {
         case NXMConnectionStatusConnected: {

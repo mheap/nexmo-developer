@@ -9,7 +9,7 @@ In the previous step you learned about conversations and events, sending a messa
 
 To send a message, add the following function to `ChatViewController.m` class:
 
-```objective-c
+```objective_c
 @implementation ViewController
     ...
 
@@ -25,7 +25,7 @@ To send a message, add the following function to `ChatViewController.m` class:
 
 To get the text from the `inputField` you need to add another function provided by the `UITextFieldDelegate`: 
 
-```objective-c
+```objective_c
 @implementation ViewController
     ...
 

@@ -9,7 +9,7 @@ Before you can start a chat, the Client SDK needs to authenticate to the Vonage 
 
 At the top of the file, import `NexmoClient` and `User`:
 
-```objective-c
+```objective_c
 #import "ViewController.h"
 #import "User.h"
 #import <NexmoClient/NexmoClient.h>
@@ -17,7 +17,7 @@ At the top of the file, import `NexmoClient` and `User`:
 
 Add a `NXMClient` instance and `user` property below the `statusLabel`:
 
-```objective-c
+```objective_c
 @interface ViewController ()
     ...
     @property UILabel *statusLabel;
@@ -31,7 +31,7 @@ Add a `NXMClient` instance and `user` property below the `statusLabel`:
 
 For the log in buttons to work, you need to add targets to them which will run a function when they are tapped. In the `ViewController.m` file add:
 
-```objective-c
+```objective_c
 @implementation ViewController
     ...
 
@@ -53,7 +53,7 @@ For the log in buttons to work, you need to add targets to them which will run a
 
 Then link the two functions them to their respective buttons at the end of the `viewDidLoad` function:
 
-```objective-c
+```objective_c
 - (void)viewDidLoad {
     ...
 
@@ -66,7 +66,7 @@ Then link the two functions them to their respective buttons at the end of the `
 
 At the end of `ViewController.m`, add the `login` function needed by the `setUserAs` functions. This function sets the client's delegate and logs in:
 
-```objective-c
+```objective_c
 @implementation ViewController
     ...
 
@@ -80,7 +80,7 @@ At the end of `ViewController.m`, add the `login` function needed by the `setUse
 
 For the delegate to work, you need to have `ViewController` conform to `NXMClientDelegate`. To do this you will need to add the `NXMClientDelegate` to the interface definition for `ViewController.m`:
 
-```objective-c
+```objective_c
 @interface ViewController () <NXMClientDelegate>
 
 ...
@@ -91,7 +91,7 @@ For the delegate to work, you need to have `ViewController` conform to `NXMClien
 
 Then at the end of the file, add the following `NXMClientDelegate` functions:
 
-```objective-c
+```objective_c
 - (void)client:(NXMClient *)client didChangeConnectionStatus:(NXMConnectionStatus)status reason:(NXMConnectionStatusReason)reason {
     switch (status) {
         case NXMConnectionStatusConnected:

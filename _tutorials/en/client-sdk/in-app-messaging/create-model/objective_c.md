@@ -19,7 +19,7 @@ To do this you will create a new User `Class`. From the Xcode menu, select `File
 
 Open `User.h` declare the properties and functions needed to store the user's information:
 
-```objective-c
+```objective_c
 @interface User : NSObject
 
 @property NSString *name;
@@ -38,7 +38,7 @@ Open `User.h` declare the properties and functions needed to store the user's in
 
 To make things easier for later on there are some static properties on the `User` type for the users Alice and Bob. Open `User.m` to implement these alongside the initializer for the class, Replacing `ALICE_USERID`, `ALICE_JWT`, `BOB_USERID`, `BOB_JWT` and `CONVERSATION_ID` with the values you created earlier:
 
-```objective-c
+```objective_c
 @implementation User
 
 - (instancetype)initWithName:(NSString *)name uuid:(NSString *)uuid jwt:(NSString *)jwt chatPartnerName:(NSString *)chatPartnerName
