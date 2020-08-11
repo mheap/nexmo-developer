@@ -209,7 +209,7 @@ You can use the following options to control a *talk* action:
 | `loop` | The number of times `text` is repeated before the Call is closed. The default value is 1. Set to 0 to loop infinitely. | No |
 | `level` | The volume level that the speech is played. This can be any value between `-1` to `1` with `0` being the default.  | No |
 | `language` | The language ([BCP-47](https://tools.ietf.org/html/bcp47) format) for the message you are sending. Default: `en-US`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No |
-| `style` | The vocal style (i.e. vocal range, tessitura and timbre ). Default: `0`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No |
+| `style` | The vocal style (vocal range, tessitura and timbre). Default: `0`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No |
 
 ## Stream
 The `stream` action allows you to send an audio stream to a Conversation
