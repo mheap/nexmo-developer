@@ -7,7 +7,7 @@ description: In this step you create an Xcode project and add the iOS Client SDK
 
 You will be using the iOS Client SDK library inside an Xcode project you'll create next.
 
-## Create an Xcode Project
+## Create an Xcode project
 
 * Open Xcode and, from the menu, select `File` > `New` > `Project...`.
 
@@ -15,7 +15,7 @@ You will be using the iOS Client SDK library inside an Xcode project you'll crea
 
 * For the `Product Name` type in `AppToAppChat`, select the relevant `Team` and `Organisation Identifier`.
 
-* User `Swift` for `Language` and `Storyboard` for `User Interface`. Click `Next`.
+* User `Objective-C` for `Language` and `Storyboard` for `User Interface`. Click `Next`.
 
 * Select the `Desktop` as the place where your project folder will reside. You can select a different location but please make sure to remember it as you'll need to navigate to it soon from the `Terminal`.
 
@@ -93,7 +93,7 @@ Pod installation complete! There is 1 dependency from the Podfile and 1 total po
 [!] Automatically assigning platform `iOS` with version `13.5` on target `AppToAppChat` because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.
 ```
 
-## Open the Workspace
+## Open the workspace
 
 As described in the output above, please use `AppToAppChat.xcworkspace` rather than the initial project from now on. To open it, type the following in the terminal:
 
