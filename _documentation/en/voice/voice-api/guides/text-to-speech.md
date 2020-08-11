@@ -39,7 +39,7 @@ For many languages Vonage offers a choice of voices with different styles. The `
 vocal range, timbre and tessitura of the selected voice. You can experiment with different styles to find the one appropriate
 for your use case. You can choose a specific voice style by using the `style` parameter. By default, the first style (`0`) is used.
 Please note not all the voice styles support [SSML](/voice/voice-api/guides/customizing-tts), 
-see the list of all and SSML enabled styles per each of the supported languages below.
+see the list of all the supported languages and SSML enabled styles below.
 
 NCCO example with specific voice language and style:
 
