@@ -35,8 +35,9 @@ voice for example will not produce good results.
 
 You can set the language code ([BCP-47](https://tools.ietf.org/html/bcp47)) with a `language` parameter in the `talk` command,
 if you do not specify a language then Vonage will default to an `en-US` voice. 
-For many languages Vonage offers a choice of voices with different styles. 
-You can choose a specific voice style by using the `style` parameter. By default, the first style (`0`) is used.
+For many languages Vonage offers a choice of voices with different styles. The `style` parameter maps to features such as 
+vocal range, timbre and tessitura of the selected voice. You can experiment with different styles to find the one appropriate
+for your use case. You can choose a specific voice style by using the `style` parameter. By default, the first style (`0`) is used.
 Please note not all the voice styles support [SSML](/voice/voice-api/guides/customizing-tts), 
 see the list of all and SSML enabled styles per each of the supported languages below.
 
