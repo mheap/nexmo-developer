@@ -7,14 +7,18 @@ description: In this step you will clone the starter project
 
 To make things easier, a starter project is provided for you.
 
-1. Clone this [GitHub repository](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging) (Android Studio `New project from version control` feature can’t be used, because repository contains two projects `kotlin-start` and `kotlin-complted`).
+1. Clone this [GitHub repository](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-app-to-phone) (Android Studio `New project from version control` feature can’t be used, because repository contains two projects `kotlin-start` and `kotlin-complted`).
 
 2. Open the `kotlin-start` project in the Android Studio:
 
    1. Navigate to the menu `File -> Open` 
-   2. Select the `kotlin-start` folder from cloned repository
+   2. Select the `kotlin-start` folder from cloned repository and click `Open`
 
-3. Make the project `Build -> Make Project`, to generate missing classes as shown in the following screenshot:
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/select-kotlin-start-project.png
+```
+
+**3.** Make project `Build -> Make Project`. If `Make Project` button is disabled please wait until Android Studio will finish parsing the project (progress will be displayed in bottom right corner of the Android Studio).
    
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/make-project.png
@@ -40,4 +44,4 @@ All files that will be modified during this tutorial are located in the `app/src
 image: public/screenshots/tutorials/client-sdk/android-app-to-phone/project-files.png
 ```
 
-> **NOTE:** Each view is represented by two classes: `Fragment` that is the thin view and `ViewModel` that handles the view logic.
+> **NOTE:** Each screen is represented by two classes: `Fragment` that is the thin view and `ViewModel` that handles the view logic.

@@ -5,7 +5,7 @@ description: In this step you authenticate your users via the JWTs you created e
 
 # Authenticate your User
 
-Login screen (`LoginFragment` and `LoginViewModel` classes) is responsible for authenticating the users.
+Login screen (`LoginFragment` and `LoginViewModel` classes) is responsible for authenticating the user.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/login-screen-user.png
@@ -20,6 +20,8 @@ You have to retrieve client instance inside `LoginViewModel` class. Usually, it 
 ```kotlin
 private val client = NexmoClient.get()
 ```
+
+Make sure to add missing import again.
 
 ## Login user
 

@@ -16,10 +16,14 @@ image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/log
 2. Open the `kotlin-start` project in the Android Studio:
    
    1. Navigate to the menu `File -> Open` 
-   2. Select the `kotlin-start` folder from cloned repository
+   2. Select the `kotlin-start` folder from cloned repository and click `Open`
 
-3. Make project `Build -> Make Project`
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/select-kotlin-start-project.png
+```
 
+**3.** Make project `Build -> Make Project`. If `Make Project` button is disabled please wait until Android Studio will finish parsing the project (progress will be displayed in bottom right corner of the Android Studio).
+ 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/make-project.png
 ```
@@ -29,6 +33,8 @@ All files that will be modified during this tutorial are located in the `app/src
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/project-files.png
 ```
+
+> **NOTE:** Each screen is represented by two classes: `Fragment` that is the thin view and `ViewModel` that handles the view logic.
 
 Now it's time to fill previously generated `CONVERSATION_ID` and `JWT` tokens.
 
