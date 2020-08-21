@@ -5,9 +5,7 @@ description: In this step you will build the only screen of the app.
 
 # Building the interface
 
-To be able view the connection status of the app you will need to add a `UILabel` element to the screen.
-
-Open `ViewController.swift` and add it programmatically:
+To be able view the connection status of the app you will need to add a `UILabel` element to the screen. Open `ViewController.swift` and add it programmatically.
 
 ```swift
 class ViewController: UIViewController {

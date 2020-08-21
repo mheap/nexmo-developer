@@ -5,8 +5,7 @@ description: In this step you create an Xcode project and add the iOS Client SDK
 
 # Xcode Project & Workspace
 
-You will be using the iOS Client SDK library inside an Xcode project you'll create next:
-
+You will be using the iOS Client SDK library inside an Xcode project you'll create..
 
 ## Create an Xcode Project
 
@@ -29,13 +28,13 @@ You will add the iOS Client SDK library to your project via [CocoaPods](https://
 
 ## Install CocoaPods
 
-* Open the `Terminal` app and navigate to the project folder by typing:
+* Open the `Terminal` app and navigate to the project folder by typing.
 
 ``` shell
 cd ~/Desktop/PhoneToApp
 ```
 
-* Install CocoaPods in your system, if you don't have it already:
+* Install CocoaPods in your system, if you don't have it already.
 
 ``` shell
 sudo gem install cocoapods
@@ -43,7 +42,7 @@ sudo gem install cocoapods
 
 Note: CocoaPods is built with Ruby, available by default on macOS.
 
-* Create a Podfile for your project:
+* Create a Podfile for your project.
 
 ``` shell
 pod init
@@ -51,13 +50,13 @@ pod init
 
 ## Add the iOS Client SDK
 
-* Add the Nexmo iOS Client SDK to the Podfile. To do this, let's open it in `Xcode`:
+* Add the Nexmo iOS Client SDK to the Podfile. To do this, let's open it in `Xcode`.
 
 ``` shell
 open -a Xcode Podfile
 ```
 
-* Update the Podfile as shown below:
+* Update the Podfile as shown below.
 
 ```
 # Uncomment the next line to define a global platform for your project
@@ -73,7 +72,7 @@ target 'PhoneToApp' do
 end
 ```
 
-* Install the library:
+* Install the library.
 
 ``` shell
 pod install
@@ -96,7 +95,7 @@ Pod installation complete! There is 1 dependency from the Podfile and 1 total po
 
 ## Open the Workspace
 
-As described in the output above, please use `PhoneToApp.xcworkspace` rather than the initial project from now on. To open it, type the following in the terminal:
+As described in the output above, please use `PhoneToApp.xcworkspace` rather than the initial project from now on. To open it, type the following in the terminal.
 
 ``` shell
 open PhoneToApp.xcworkspace
