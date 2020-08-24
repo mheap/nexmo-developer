@@ -11,6 +11,6 @@ conversation.getEventsPage(withSize: 10, order: .asc) { (error, page) in
         return
     }
     
-    self.events = page?.events
+    self.eventsPage = page?.events
 }
 ```

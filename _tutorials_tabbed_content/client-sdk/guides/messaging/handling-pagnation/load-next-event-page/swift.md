@@ -4,8 +4,8 @@ language: swift
 ---
 
 ```swift
-if page.hasNextPage() {
-    page.nextPage({ (error, page) in
+if eventsPage.hasNextPage() {
+    eventsPage.nextPage({ (error, page) in
         // handle page events
     })
 }
