@@ -51,7 +51,7 @@ You can configure SMPP access to the Nexmo platform by using one of the followin
 ### Standard configuration
 
 1. Read the [SMPP FAQ](https://help.nexmo.com/hc/en-us/sections/200621223), which contains details about character encoding, DLR formats, concatenated messages, throttle management and other important information.
-2. [Email us](mailto:smpp@nexmo.com) your monthly volume forecast. We will configure our system to enable SMPP access for you and send you a confirmation email with links to further resources.
+2. [Email us](mailto:smpp@vonage.com) your monthly volume forecast. We will configure our system to enable SMPP access for you and send you a confirmation email with links to further resources.
 
 ### Using Kannel
 
@@ -83,12 +83,13 @@ You can use [Kannel](http://www.kannel.org) version 1.4.3 or higher to configure
 
 ## Our SMPP instances
 
-Nexmo hosts three instances of SMPP:
+Nexmo hosts five instances of SMPP:
 
-- `SMPP1/2` - clustered
+- `SMPP1/2` - clustered (NA)
+- `SMPP3/4` - clustered (APAC)
 - `SMPP0` - not clustered
 
-We recommend that you bind to both `SMPP1` and `SMPP2`. Only bind to `SMPP0` if you cannot bind to a clustered setup.
+We recommend that you bind to both `SMPP1` and `SMPP2` or both `SMPP3` and `SMPP4`. Only bind to `SMPP0` if you cannot bind to a clustered setup.
 
 The standalone instance `SMPP0` is for aggregators running legacy infrastructure who cannot maintain simultaneous binds to multiple IP addresses. If you are binding to `SMPP0`, you must implement SMPP redundancy to avoid a higher risk of planned and unplanned downtime.
 

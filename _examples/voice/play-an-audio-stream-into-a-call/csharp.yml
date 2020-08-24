@@ -3,14 +3,18 @@ title: .NET
 language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
+import_dependencies:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Voice/PlayAudioStreamIntoCall.cs
+    from_line: 1
+    to_line: 3
 client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Authentication/FullAuth.cs
-    from_line: 17
-    to_line: 23
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Voice/PlayAudioStreamIntoCall.cs
+    from_line: 19
+    to_line: 20
 code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Senders/VoiceSender.cs
-    from_line: 151
-    to_line: 154
-run_command: 'Run using your IDE'
-file_name: VoiceSender.cs
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetCliCodeSnippets/Voice/PlayAudioStreamIntoCall.cs
+    from_line: 22
+    to_line: 24
+run_command: 'dotnet run'
+file_name: PlayAudioStreamIntoCall.cs
 unindent: true

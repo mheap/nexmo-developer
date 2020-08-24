@@ -3,15 +3,14 @@ title: .NET
 language: dotnet
 dependencies:
     - Nexmo.Csharp.Client
-    - Nancy
-client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Modules/RoutingModule.cs
-    from_line: 29
-    to_line: 54
+import_dependencies:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetWebhookCodeSnippets/Controllers/RecordMessageController.cs
+    from_line: 9
+    to_line: 11
 code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Modules/RoutingModule.cs
-    from_line: 224
-    to_line: 246
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetWebhookCodeSnippets/Controllers/RecordMessageController.cs
+    from_line: 18
+    to_line: 45
 run_command: 'Run using your IDE'
-file_name: RoutingModule.cs
+file_name: RecordMessageController.cs
 unindent: true

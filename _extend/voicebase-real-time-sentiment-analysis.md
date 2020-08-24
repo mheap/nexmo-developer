@@ -4,12 +4,12 @@ description: Nexmo Websocket application using Voicebase to perform real-time tr
 tags: ["Sentiment Analysis", "Transcription", "AI", "Voicebase"]
 cta: Get this Repo
 link: https://github.com/nexmo-community/Nexmo-RTS-Voicebase
-image: /assets/images/extend/voicebase_logo.png
+image: /images/extend/voicebase_logo.png
 published: true
 ---
 
 ## About
-![voicebase](/assets/images/extend/voicebase.png)
+![voicebase](/images/extend/voicebase.png)
 This is a demo of using a Nexmo Websocket to transcribe audio in real-time using Voicebase. To view a live version of the demo, go to [https://nexmo-vb.herokuapp.com/](https://nexmo-vb.herokuapp.com/) and dial the phone number listed on the page. Then, begin speaking, you will see the transcription of the speech at the bottom of the page. On the left, you will see the sentiment of the conversation. When positive words are spoken('happy','joy'..etc), the sentiment line will move higher. When negative words are spoken, this line will decrease. On the right, shows a graph of keywords spoken in the conversation.
 
 ## Resources

@@ -10,4 +10,4 @@ A Leg connects a [User](/conversation/concepts/user) with a [Conversation](/conv
 
 The following diagram shows a [Call](/conversation/concepts/call) with two Legs:
 
-![Conversation](/assets/images/conversation-api/call-forward-conversation.png)
+![Conversation](/images/conversation-api/call-forward-conversation.png)

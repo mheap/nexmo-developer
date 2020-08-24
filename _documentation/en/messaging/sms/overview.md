@@ -1,17 +1,31 @@
 ---
 title: Overview
+description: This documentation provides information on using the Vonage SMS API for sending and receiving text messages. (Nexmo is now Vonage)
 meta_title: Send and receive SMS with the SMS API
 ---
 
 # SMS API
 
-Nexmo's SMS API enables you to send and receive text messages to and from users worldwide, using simple REST APIs.
+Vonage's SMS API enables you to send and receive text messages to and from users worldwide, using simple REST APIs.
 
 * Programmatically send and receive high volumes of SMS globally.
 * Send SMS with low latency and high delivery rates.
 * Receive SMS using local numbers.
 * Scale your applications with familiar web technologies.
 * Pay only for what you use, nothing more.
+* [Auto-redact](/messaging/sms/guides/message-privacy) feature to protect privacy.
+
+## Contents
+
+This topic contains the following information:
+
+* [Getting Started](#getting-started) - Information on how to get started quickly
+* [Troubleshooting](#troubleshooting) - Message object status field and error code information
+* [Concepts](#concepts) - Introductory concepts
+* [Guides](#guides) - Learn how to use the SMS API
+* [Code Snippets](#code-snippets) - Code snippets to help with specific tasks
+* [Use Cases](#use-cases) - Use cases with code examples
+* [Reference](#reference) - REST API documentation
 
 ## Getting Started
 
@@ -32,15 +46,9 @@ Key | Description
 source: '_examples/messaging/sms/send-an-sms'
 ```
 
-## Contents
+## Troubleshooting
 
-The rest of this document contains the following information:
-
-* [Nexmo SMS API Concepts](#concepts) - what you need to know
-* [Guides](#guides) - learn how to use the SMS API
-* [Code Snippets](#code-snippets) - code snippets to help with specific tasks
-* [Use Cases](#use-cases) - detailed use cases with code examples
-* [Reference](#reference) - complete API documentation
+If you have problems when making API calls be sure to check the returned [status field](/messaging/sms/guides/troubleshooting-sms) for specific [error codes](/messaging/sms/guides/troubleshooting-sms#sms-api-error-codes).
 
 ## Concepts
 
@@ -51,7 +59,6 @@ Before using the Nexmo SMS API, familiarize yourself with the following:
 * **[Authentication](/concepts/guides/authentication)** - The SMS API authenticates using your account API key and secret.
 
 * **[Webhooks](/concepts/guides/webhooks)** - The SMS API makes HTTP requests to your application web server so that you can act upon them. For example: inbound SMS and delivery receipts.
-
 
 ## Guides
 
@@ -74,3 +81,5 @@ product: messaging/sms
 ## Reference
 
 * [SMS API Reference](/api/sms)
+* [Response object status field](/messaging/sms/guides/troubleshooting-sms)
+* [Error codes](/messaging/sms/guides/troubleshooting-sms#sms-api-error-codes)

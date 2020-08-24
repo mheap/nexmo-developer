@@ -5,13 +5,13 @@ language: javascript
 
 # Overview
 
-In this guide you learn how to add the Nexmo Client SDK to your client-side JavaScript app.
+In this guide you learn how to add the Client SDK to your client-side JavaScript app.
 
 ## Prerequisites
 
-The Nexmo Client SDK requires [Node.js](https://nodejs.org) and [NPM](https://www.npmjs.com/).
+The Client SDK requires [Node.js](https://nodejs.org) and [NPM](https://www.npmjs.com/).
 
-## To add the Nexmo Client SDK to your project
+## To add the Client SDK to your project
 
 ### Navigate to your app
 
@@ -21,31 +21,13 @@ Open your terminal. If you have an existing app, navigate to its root. Otherwise
 npm init -y
 ```
 
-### Install the Client SDK package
+### Add the Client SDK to your project
 
-Install the Nexmo Client SDK using `npm`:
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/javascript'
+``` 
 
-```
-npm install nexmo-client -s
-```
-
-### Import the Client SDK into your code
-
-If your application is using ES6 module syntax, you can import the client module near the top of your application code:
-
-```
-import NexmoClient from 'nexmo-client';
-```
-
-If your application will run on a single page, you can load the module in your HTML using a script tag:
-
-```
-<script src="./node_modules/nexmo-client/dist/nexmoClient.js"></script>
-```
-
-Be sure to check that the path to `nexmoClient.js` is correct for your project structure.
-
-## Using the Nexmo Client SDK in your app
+## Using the Client SDK in your app
 
 ### Creating Users and JWTs
 
@@ -75,9 +57,21 @@ let nexmo = new NexmoClient()
   .catch(err => console.log(err));
 ```
 
+### Client SDK analytics and usage data
+
+To provide Nexmo with more information to enable us to fix bugs and build features, you can _optionally_ opt-in to our Client SDK analytics and usage data programme.
+
+To enable analytics and data usage reporting, please set the `enabled` parameter of `log_reporter` to `true`. The following code provides an example of this:
+
+```javascript
+new NexmoClient({debug:true, log_reporter: {enabled: true}})
+```
+
+> **NOTE:** This is opt-in only and turned off by default.
+
 ## Conclusion
 
-You added the Nexmo Client SDK to your client-side JavaScript app and logged in to a `NexmoClient` instance, which returned an `Application` object. You can now use `Application.newConversation()` to create a conversation, and then access the functionality of a `Conversation`.
+You added the Client SDK to your client-side JavaScript app and logged in to a `NexmoClient` instance, which returned an `Application` object. You can now use `Application.newConversation()` to create a conversation, and then access the functionality of a `Conversation`.
 
 ## See also
 

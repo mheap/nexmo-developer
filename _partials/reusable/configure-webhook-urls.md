@@ -13,13 +13,13 @@ When an inbound message is received, a callback with message payload is invoked 
 
 ### To configure the webhook URLs
 
-From [Nexmo Dashboard](https://dashboard.nexmo.com) go to [Messages and Dispatch](https://dashboard.nexmo.com/messages/create-application).
+1. If you have already [created an application](/messages/code-snippets/create-an-application), but not yet configured your webhooks, go to [Your Applications](https://dashboard.nexmo.com/applications) and select the application to configure.
 
-> **TIP:** If the Webhook URLs for messages in your Nexmo Account are already in production use and you would like a second one for using the Messages API, please email [support@nexmo.com](mailto:support@nexmo.com) and ask for a sub API Key.
+2. Click **Edit** to modify the application's webhook URLs.
 
-Enter your Webhook URLs in the fields labeled **Status URL** and **Inbound URL**.
+3. In the Messages capabilities section, enter your webhook URLs in the fields labeled **Status URL** and **Inbound URL**.
 
-The values you enter for webhook URLs depends on where your webhook server is located.
+The values you enter for webhook URLs depends on where your webhook server is located. For example:
 
 Webhook | URL
 ---|---
@@ -36,15 +36,23 @@ Messages API does not support inbound SMS message and SMS delivery receipt callb
 
 If you want to test your application locally you can use Ngrok.
 
-See our information on [Using Ngrok for local development](/concepts/guides/testing-with-ngrok)
+See our information on [Using Ngrok for local development](/tools/ngrok)
 
 If using Ngrok in this manner you would use the Ngrok URLs for your webhook URLs:
 
 * `https://abcdef1.ngrok.io/webhooks/inbound-message`
 * `https://abcdef1.ngrok.io/webhooks/message-status`
 
-### Callback queue
+### Webhook queue
 
-Please note that callbacks emanating from Nexmo, such as those on your Message Status webhook URL and Inbound Message URL, are queued by Nexmo on a per-account basis, **not** a per-application basis.
+Please note that webhooks emanating from Nexmo, such as those on your Message Status webhook URL and Inbound Message URL, are queued by Nexmo on a per-message basis.
 
-**NOTE:** To avoid callbacks stalling the callback queue, please ensure that all applications acknowledge callbacks with a 200 response. Further, it is advisable to cease activity on a test application 24 hours before deleting it, or removing webhook configuration, otherwise it could potentially leave callbacks in your callback queue that will not be acknowledged, and therefore result in delays on callbacks destined for your production applications.
+Please ensure that all applications acknowledge webhooks with a 200 response.
+
+### Signed webhooks
+
+In order to validate the origin of your webhooks, you can validate the signature of the webhooks, see instructions [here](https://developer.nexmo.com/messages/concepts/signed-webhooks)
+
+### Webhooks in production use
+
+If the Webhook URLs for messages in your Nexmo Account are already in production use and you would like a second one for using the Messages API, please email [support@nexmo.com](mailto:support@nexmo.com) and ask for a sub API Key.

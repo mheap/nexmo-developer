@@ -1,2 +1,0 @@
-class Redirect < ApplicationRecord
-end

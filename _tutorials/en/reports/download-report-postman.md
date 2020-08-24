@@ -16,7 +16,7 @@ To make the request:
 3. Complete the "Authorization" tab in the same way as before.
 4. In the "Body" tab, select the "none" radio button.
 
-![Download the report](/assets/images/reports-api/download-report-postman.png)
+![Download the report](/images/reports-api/download-report-postman.png)
 
 
 ## Execute the download request
@@ -25,7 +25,7 @@ Click the "Send" button. The response contains unreadable text, because the API 
 
 Click the "Save Response" button in Postman, select the "Save to a file" option and choose a location on your local machine to save the `.zip` file to.
 
-![Save the compressed file locally](/assets/images/reports-api/save-report-zip-postman.png)
+![Save the compressed file locally](/images/reports-api/save-report-zip-postman.png)
 
 Extract the contents of the `.zip` file and open the `.csv` file to view your report.
 

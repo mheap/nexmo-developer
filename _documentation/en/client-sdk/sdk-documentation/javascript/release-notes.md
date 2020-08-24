@@ -6,22 +6,24 @@ navigation_weight: 0
 
 # Release Notes
 
-## Version 6.0.8 - February 27, 2020
+## Version 6.0.10 - May 04, 2020
+
+### Fixes
+
+- Filter IPv6 Candidates from `iceGatherOnlyOneCandidate` SDP offer
+
+## Version 6.0.9 - March 24, 2020
+
+### Fixes
+
+- Fix handler of `rtc:transfer` event to refresh conversation
+
+## Version 6.0.8 - February 28, 2020
 
 ### Fixes
 
 - Fix duplicated webrtc offer sent during IP calling
-
-## 6.0.7
-
-### Fixes
-
-- Fix ANSWERED call status in IP - IP calling
-- Fix docs issues
-
-### Changes
-
-- Improve TypeScript definitions
+- Fix Safari `WebRTC` dependency
 
 ## Version 6.0.7 - January 16, 2020
 

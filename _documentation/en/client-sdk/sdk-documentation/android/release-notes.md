@@ -6,6 +6,125 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 2.6.4 - May 19, 2020
+
+### New
+
+- We have split our artifacts from this version, so custom maven repository has to be added to the project:
+
+```groovy
+    //Groovy - build.gradle
+    allprojects {
+        repositories {
+            …
+            maven {
+                url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
+            }
+        }
+    }
+```
+
+```kotlin
+    // Kotlin Gradle script  - build.gradle.kts
+    allprojects {
+        repositories {
+        …
+            maven("https://artifactory.ess-dev.com/artifactory/gradle-dev-local")
+        }
+    }
+```
+
+### Enhancements
+
+- Improved user-agent SDK version reporting.
+
+## Version 2.6.3 - May 4, 2020
+
+### Fixed
+
+- Changed visibility of `Nexmo.page.isPrevPageExist()` to `public`.
+
+## Version 2.6.2 - April 29, 2020
+
+### Fixed
+
+- Potential `NullPointerException` when processing push notifications during client login.
+
+## Version 2.6.1 - April 22, 2020
+
+### Added
+
+- Expose the interface `NexmoDTMFEventListener` to subscribe for DTMF events on `NexmoConversation`.
+
+## Version 2.6.0 - April 20, 2020
+
+### Added
+
+- Expose connection status `isConnected` in `NexmoClient`.
+
+```java
+    NexmoClient.get().isConnected()
+```
+
+### Fixed
+
+- Avoid invoking `login` multiple times when the user is already connected.
+
+## Version 2.5.1 - April 20, 2020
+
+### Enhancements
+
+- Improved single ICE candidate gathering implementation.
+
+## Version 2.5.0 - March 25, 2020
+
+### Added
+
+- Add `useFirstIceCandidate` parameters to `NexmoClient.Builder`
+
+```java
+    nexmoClient = new NexmoClient.Builder().useFirstIceCandidate(true/false).build(context);
+```
+
+---
+
+## Version 2.4.0 - March 3 , 2020
+
+### Added
+
+- Add filter by state to `getConversationsPage`  in `NexmoClient`.
+
+```java
+    NexmoClient.get().getConversationsPage(50, NexmoPageOrderDesc, "JOINED", new NexmoRequestListener<NexmoConversationsPage>(){
+        void onError(@NonNull NexmoApiError error){
+
+        }
+        void onSuccess(@Nullable NexmoConversationsPage result){
+            //Get the current page conversations -Sync
+            Collection<NexmoConversation> conversations = result.getData()
+            //Get the next page -Async
+            result.getNext(new NexmoRequestListener<NexmoConversationsPage>(){
+                void onError(@NonNull NexmoApiError error){
+
+                }
+                void onSuccess(@Nullable NexmoConversationsPage result){
+
+                }
+            })
+
+            //Get the previous page -Async
+            result.getPrev(new NexmoRequestListener<NexmoConversationsPage>(){
+                void onError(@NonNull NexmoApiError error){
+
+                }
+                void onSuccess(@Nullable NexmoConversationsPage result){
+
+                }
+            })
+        }
+    });
+```
+
 ## Version 2.3.0 - February 11, 2020
 
 ### Added
@@ -13,7 +132,7 @@ navigation_weight: 0
 - Add `updateAsDelivered` and `UpdateAsSeen` to `NexmoAttachmentEvent` and `NexmoTextEvent` as helper method
 to update event locally after `markAsSeen` or `markAsDelivered` has been successful.
 
-```
+```kotlin
   NexmoTextEvent.markAsDelivered(object: NexmoRequestListener<Any>{
        override fun onSuccess(result: Any?) {
        Log.d(TAG, TAG + "onTextEvent.markAsDelivered():onSuccess with: " + result.toString())
@@ -26,11 +145,11 @@ to update event locally after `markAsSeen` or `markAsDelivered` has been success
 
 ### Fixed
 
-- fix `markAsSeen` and `markAsDelivered` for `NexmoTextEvent` and `NexmoAttachmentEvent`
+- Fix `markAsSeen` and `markAsDelivered` for `NexmoTextEvent` and `NexmoAttachmentEvent`
 
 ### Changed
 
-- upgrade dependency libraries please add to your build Gradle
+- Upgrade dependency libraries please add to your build Gradle
 
 ```groovy
 android {
@@ -42,72 +161,17 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-``` 
+```
+
+---
 
 ## Version 2.2.0 - January 31, 2020
 
 ### Added
 
-- Add support for Custom Push Notifications, using `processNexmoPush()` (`processPushNotification()` is deprecated)
+- Add support for Custom Push Notifications, using `processNexmoPush()` ,`processPushNotification()` is deprecated
 
-```
-if (NexmoClient.isNexmoPushNotification(message!!.data)) {
-    val pushListener = object : NexmoPushEventListener {
-            override fun onIncomingCall(nexmoCall: NexmoCall?) {
-                Log.d(TestAppMessagingService.TAG, "$TAG:TestAppMessagingService:onIncomingCall() with: $nexmoCall")
-            }
-            override fun onError(nexmoError: NexmoApiError?) {
-                Log.d(TestAppMessagingService.TAG, "$TAG:TestAppMessagingService:onError() with: $nexmoError")
-            }
-            override fun onNewEvent(event: NexmoEvent?) {
-                Log.d(TestAppMessagingService.TAG, "$TAG:TestAppMessagingService:onNewEvent() with: $event")
-            }
-        }
-    NexmoPushPayload nexmoPushPayload = nexmoClient.processNexmoPush(message!!.data, pushListener)
-    when(nexmoPushPayload.pushTemplate){
-        Default ->
-            // you can use nexmoPushPayload.eventData if needed
-        Custom ->
-            // got nexmo custom push. 😀
-            // you should parse nexmoPushEvent.customData your backend had defined.
-    }
-}
-
-```
-
-- Add `markAsDelivered` method to `NexmoTextEvent` and `NexmoAttachmentEvent`
-
-```
-  NexmoTextEvent.markAsDelivered(object: NexmoRequestListener<Any>{
-       override fun onSuccess(result: Any?) {
-       Log.d(TAG, TAG + "onTextEvent.markAsDelivered():onSuccess with: " + result.toString())
-       }
-       override fun onError(error: NexmoApiError) {
-       Log.d(TAG, TAG + "onTextEvent.markAsDelivered():onError with: " + error)
-        }
-   })
-   ```
-   
- - add `markAsSeen` method to `NexmoTextEvent` and `NexmoAttachmentEvent`
- 
- ```
-  NexmoAttachmentEvent.markAsSeen(object: NexmoRequestListener<Any>{
-       override fun onSuccess(result: Any?) {
-       Log.d(TAG, TAG + "onAttachmentEvent.markAsSeen():onSuccess with: " + result.toString())
-       }
-       override fun onError(error: NexmoApiError) {
-       Log.d(TAG, TAG + "onAttachmentEvent.markAsSeen():onError with: " + error)
-        }
-   })
-   ```
-   
-## Version 2.2.0 - January 31, 2020
-
-### Added
-
-- Add support for Custom Push Notifications, using `processNexmoPush()` (`processPushNotification()` is deprecated)
-
-```
+```kotlin
 if (NexmoClient.isNexmoPushNotification(message!!.data)) {
     val pushListener = object : NexmoPushEventListener {
             override fun onIncomingCall(nexmoCall: NexmoCall?) {
@@ -133,7 +197,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 
 - Add `markAsDelivered()` method to `NexmoTextEvent` and `NexmoAttachmentEvent`
 
-```
+```kotlin
   NexmoTextEvent.markAsDelivered(object: NexmoRequestListener<Any>{
        override fun onSuccess(result: Any?) {
        Log.d(TAG, TAG + "onTextEvent.markAsDelivered():onSuccess with: " + result.toString())
@@ -145,8 +209,8 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
    
  - Add `markAsSeen()` method to `NexmoTextEvent` and `NexmoAttachmentEvent`
- 
- ```
+
+```kotlin
   NexmoAttachmentEvent.markAsSeen(object: NexmoRequestListener<Any>{
        override fun onSuccess(result: Any?) {
        Log.d(TAG, TAG + "onAttachmentEvent.markAsSeen():onSuccess with: " + result.toString())
@@ -157,13 +221,15 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
    })
 ```
 
+---
+
 ## Version 2.1.2 - January 12, 2020
 
 ### Added
-- add annotation of `PermissionRequired` for function that start media: `NexmoClient.call` , `NexmoCall.answer` , `NexmoConvesation.enableMedia`
+- Add annotation of `PermissionRequired` for function that start media: `NexmoClient.call` , `NexmoCall.answer` , `NexmoConvesation.enableMedia`
 
-```
-    class MyActivity MakeCallActivity extends Activity {
+```java
+    class MyAcitivity MakeCallActivity extends Activity {
         @Override public void onCreate(Bundle savedInstanceState){
             //Call requires permission which may be rejected by user: 
             //code should explicitly check to see if permission is available (with 'checkPermission') 
@@ -185,8 +251,8 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
 
 ### Removed
-- remove require for permission `PROCESS_OUTGOING_CALLS` 
-- remove require for permission `READ_PHONE_STATE`
+- Remove require for permission `PROCESS_OUTGOING_CALLS` 
+- Remove require for permission `READ_PHONE_STATE`
 
 ---
 
@@ -196,7 +262,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 
 - Add `clearNexmoEventsListeners` method in `NexmoConversation` to clear all listeners
 
-```
+```java
     class MyActivity extends Activity{
         NexmoConversation myConversation;
         
@@ -221,7 +287,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
 - Add `clearMemberEventListeners` method in `NexmoConversation` to clear all `NexmoMemberEventListener` listeners
 
-```
+```java
     class MyActivity extends Activity{
         NexmoConversation myConversation;
         
@@ -239,7 +305,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
 - Add `clearCustomEventListeners` method in `NexmoConversation` to clear all `NexmoCustomEventListener` listeners
 
-```
+```java
     class MyActivity extends Activity{
         NexmoConversation myConversation;
         
@@ -257,7 +323,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
 - Add `clearLegStatusEventListeners` method in `NexmoConversation` to clear all `NexmoLegStatusEventListener` listeners
 
-```
+```java
     class MyActivity extends Activity{
         NexmoConversation myConversation;
         
@@ -275,7 +341,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
 - Add `clearDTMFEventListeners` method in `NexmoConversation` to clear all `NexmoDTMFEventListener` listeners
 
-```
+```java
     class MyActivity extends Activity{
         NexmoConversation myConversation;
         
@@ -293,7 +359,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
 - Add `clearMessageEventListeners` method in `NexmoConversation` to clear all `NexmoMessageEventListener` listeners
 
-```
+```java
     class MyActivity extends Activity{
         NexmoConversation myConversation;
         
@@ -311,7 +377,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
 - Add `clearNexmoConversationListeners` method in `NexmoConversation` to clear all `NexmoConversationListener` listeners
 
-```
+```java
     class MyActivity extends Activity{
         NexmoConversation myConversation;
         
@@ -329,7 +395,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
 - Add `clearTypingEventListeners` method in `NexmoConversation` to clear all `NexmoTypingEventListener` listeners
 
-```
+```java
     class MyActivity extends Activity{
         NexmoConversation myConversation;
         
@@ -347,7 +413,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ```
 - Add `NexmoMember` parameter to `NexmoMemberEvent` with respect to the `NexmoMember` acted on by: 
 
-```
+```java
     NexmoConversation myConversation;
     myConversation.addMemberEventListener(new NexmoMemberEventListener{
         void onMemberInvited(@NonNull final NexmoMemberEvent event){
@@ -362,7 +428,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ### Fixed
 - dispatch `NexmoAttachmentEvent` with respect to `NexmoConversation`
 
-```
+```java
     NexmoConversation myConversation;
     myConversation.addNexmoMessageEventListener(new NexmoMessageEventListener(){
         
@@ -384,7 +450,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 
 ### Added
 - Add filter by `EventType` in `NexmoConversation.getEvents`
-```
+```java
     NexmoConversation myConversation
     //Get all text event for a specifc conversation
     myConversation.getEvents(10, NexmoPageOrderDesc, "text", new NexmoRequestListener<NexmoEventsPage> {
@@ -421,7 +487,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ### Added
 - Add filter by `EventType` in `NexmoConversation.getEvents`
 
-```
+```java
     NexmoConversation myConversation
     //Get all text event for a specifc conversation
     myConversation.getEvents(10, NexmoPageOrderDesc, "text", new NexmoRequestListener<NexmoEventsPage> {
@@ -458,7 +524,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ### Added
 - Add filter by `EventType` in `NexmoConversation.getEvents`
 
-```
+```java
     NexmoConversation myConversation
     //Get all text event for a specifc conversation
     myConversation.getEvents(10, NexmoPageOrderDesc, "text", new NexmoRequestListener<NexmoEventsPage> {
@@ -489,9 +555,9 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ### Changes
 - Add `iceServerUrls` parameters to `NexmoClient.Builder`
 
-```
+```java
     nexmoClient = new NexmoClient.Builder().iceServerUrls(new String[]{"stun/turn servr url"}).build(context);
-``` 
+```
 
 ### Fixed
 - fix Push Notification incoming call issue
@@ -504,7 +570,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 
 - change signature of `NexmoClient.login()`, remove `NexmoRequestListener<NexmoUser>` parameter:
 
-```
+```java
     nexmoClient = new NexmoClient.Builder().build(context);
     nexmoClient.setConnectionListener(new NexmoConnectionListener() {
           @Override
@@ -523,7 +589,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 
 - change signature of `NexmoPushEventListener.onIncomingCall()`, remove `MemberEvent` parameter:
 
-```
+```java
     override public void onMessageReceived(@Nullable RemoteMessage message) {
     if (NexmoClient.isNexmoPushNotification(message.getData())) {
                 handleNexmoPushForLoggedInUser(message)
@@ -534,7 +600,6 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
         }
         public void onNewEvent(NexmoEvent event){
         }
-
         public void onError(NexmoApiError error){
         }
     })
@@ -561,37 +626,41 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
 ### New
 
 - Add `getConversationsPage` in `NexmoClient`
-```NexmoClient.get().getConversationsPage(50, NexmoPageOrderDesc, new NexmoRequestListener<NexmoConversationsPage>(){
-   void onError(@NonNull NexmoApiError error){
 
-   }
-   void onSuccess(@Nullable NexmoConversationsPage result){
-        //Get the current page conversations -Sync
-        Collection<NexmoConversation> conversations = result.getData()
-        //Get the next page -Async
-        result.getNext(new NexmoRequestListener<NexmoConversationsPage>(){
+```java
+    NexmoClient.get().getConversationsPage(50, NexmoPageOrderDesc, new NexmoRequestListener<NexmoConversationsPage>(){
         void onError(@NonNull NexmoApiError error){
-        
-           }
-           void onSuccess(@Nullable NexmoConversationsPage result){
-            
-           }
-        })
-        
-        //Get the previous page -Async
-        result.getPrev(new NexmoRequestListener<NexmoConversationsPage>(){
-        void onError(@NonNull NexmoApiError error){
-        
-           }
-           void onSuccess(@Nullable NexmoConversationsPage result){
-            
-           }
-        })
-   }
-});
+
+        }
+        void onSuccess(@Nullable NexmoConversationsPage result){
+             //Get the current page conversations -Sync
+             Collection<NexmoConversation> conversations = result.getData()
+             //Get the next page -Async
+             result.getNext(new NexmoRequestListener<NexmoConversationsPage>(){
+             void onError(@NonNull NexmoApiError error){
+
+                }
+                void onSuccess(@Nullable NexmoConversationsPage result){
+
+                }
+             })
+
+             //Get the previous page -Async
+             result.getPrev(new NexmoRequestListener<NexmoConversationsPage>(){
+             void onError(@NonNull NexmoApiError error){
+
+                }
+                void onSuccess(@Nullable NexmoConversationsPage result){
+
+                }
+             })
+        }
+    });
 ```
 - Add `getEventsPage` in `NexmoConversation`
-```    NexmoConversation myConversation;
+
+```java
+    NexmoConversation myConversation;
     ...
     myConversation.getEventsPage(50, NexmoPageOrderDesc, new NexmoRequestListener<NexmoEventsPage>(){
         void onError(@NonNull NexmoApiError error){
@@ -621,7 +690,7 @@ if (NexmoClient.isNexmoPushNotification(message!!.data)) {
             );
         }
     );
-``` 
+```
 ### Removed
 - remove `conversation.getEvents()`
 

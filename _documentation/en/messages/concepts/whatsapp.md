@@ -6,13 +6,17 @@ description: WhatsApp messaging solution for businesses.
 
 # Understanding WhatsApp messaging
 
-> **IMPORTANT:** Please note WhatsApp will deprecate the "fallback" locale method when sending template messages on January 1st 2020. Please ensure that you are using the "deterministic" option in your requests. 
-
 WhatsApp Business Solution messages can only be sent by businesses that have been approved by WhatsApp. This business profile will also have a green verified label to indicate that it is a legitimate business.
 
 The advantage of WhatsApp is that the identifier of users on the platform is their mobile phone number.
 
 > **NOTE:** WhatsApp is in Limited Availability and Nexmo cannot guarantee you will receive a WhatsApp account.
+
+## Using existing WhatsApp Business Number
+
+If you already have a WhatsApp Business Number and would like to use that number with the Vonage Messages API, the [WhatsApp Product](https://www.nexmo.com/products/messages/whatsapp) page has more details about how to get started using WhatsApp with Vonage.
+
+> **NOTE:** Once a WhatsApp number is integrated with the API it cannot be used in the mobile app.
 
 ## Important WhatsApp rules
 
@@ -28,7 +32,7 @@ Message Type | Description
 ---|---
 Text Message | A plain text message. This is the default message type.
 Media Message | A media message. Types are: image, audio, document and video.
-Message Template | Message Templates are created in the WhatsApp Manager. Outside of the Customer Care Window messages sent to a customer must be a Message Template type.
+Message Template | Message Templates are created in the WhatsApp Manager. Outside of the Customer Care Window messages sent to a customer must be a Message Template type. Only templates created in your own namespace will work. Using an template with a namespace outside of your own results in an error code 1022 being returned.
 Media Message Templates | Media message templates expand the content you can send to recipients beyond the standard message template type to include media, headers, and footers using a `components` object.
 Contacts Message | Send a contact list as a message.
 Location Message | Send a location as a message.
@@ -39,11 +43,13 @@ A business can start a conversation with a user and a user can start a conversat
 
 WhatsApp has a core concept of Messages Templates (MTM). These were previously known as Highly Structured Messages (HSM).
 
-> **IMPORTANT:** WhatsApp requires that a message that is sent to a user for the first time, or that is outside the Customer Care Window, is an MTM message. This means the message you first send must contain a suitable template. An example is provided in the following section.
+> **IMPORTANT:** WhatsApp requires that a message that is sent to a user for the first time, or that is outside the Customer Care Window, be an MTM message. WhatsApp also requires that you obtain opt-in from your customers prior to sending them a message, this may be obtained on your website, IVR, or other standard means see [Facebook's docs](https://developers.facebook.com/docs/whatsapp/guides/opt-in/) for more details.
 
 The MTM allows a business to send just the template identifier along with the appropriate parameters instead of the full message content.
 
-> **NOTE:** New templates need to be approved by WhatsApp. Please contact your Nexmo Account Manager to submit the templates. Over time Nexmo will also add generic templates that can be used by all businesses.
+> **NOTE:** New templates need to be approved by WhatsApp. Please contact your Nexmo Account Manager to submit the templates. Only templates created in your own namespace are valid. Using an template with a namespace outside of your own results in an error code 1022 being returned.
+
+> **NOTE:** Templates are subject to a restriction of 60 characters in their header and footer, and 1024 characters in their body.
 
 MTMs are designed to reduce the likelihood of spam to users on WhatsApp.
 
@@ -99,7 +105,7 @@ curl -X POST \
 
 ## WhatsApp deterministic language policy
 
-> **NOTE:** From January 2020 the *deterministic* language policy will be the default and the *fallback* language policy will be deprecated.
+> **NOTE:** WhatsApp deprecated the "fallback" locale method when sending template messages on January 1st 2020. As of April 8, 2020, messages bearing the "fallback" policy will fail with a 1020 error in your message status webhook.
 
 When a message template is sent with the deterministic language policy, the receiving device will query its cache for a *language pack* for the language and locale specified in the message. If not available in the cache, the device will query the server for the required language pack. With the deterministic language policy the target device language and locale settings are ignored. If the language pack specified for the message is not available an error will be logged.
 

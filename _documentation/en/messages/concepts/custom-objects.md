@@ -6,9 +6,9 @@ description: Understanding custom objects
 
 # Custom objects
 
-The Messages API has the concept of a custom object. The custom object allows you to leverage advanced features of the supported native messaging platforms, such as Facebook Messenger, WhatsApp and Viber.
+The Messages API has the concept of a custom object. The custom object allows you to leverage advanced features of the supported messaging platforms, such as Facebook Messenger, WhatsApp and Viber.
 
-The custom object takes a partial section of the native messaging API's request format and sends it directly to that platform.
+The custom object takes a partial section of the underlying messaging platform's API request format, and sends it directly to that platform.
 
 Using WhatsApp by way of example, for the following Messages API call:
 
@@ -193,7 +193,7 @@ The custom object, `CUSTOM_OBJECT`, defined in the original request format is:
   }
 ```
 
-Note that *when using custom objects*, the format for properties such as language code must match that of the target platform. For example, in the WhatsApp native message format, language codes are of the form `en_GB`, not `en-GB`.
+Note that *when using custom objects*, the format for properties such as language code must match that of the target platform. For example, in the underlying WhatsApp message format, language codes are of the form `en_GB`, not `en-GB`.
 
 ## Facebook Messenger Message Templates
 

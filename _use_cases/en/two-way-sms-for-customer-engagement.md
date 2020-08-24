@@ -20,16 +20,16 @@ The workflow for your app is:
 Participant App
 Participant Nexmo
 Participant Phone number
-App->Nexmo: Request to SMS API
-Nexmo-->App: Response from SMS API
+App->>Nexmo: Request to SMS API
+Nexmo-->>App: Response from SMS API
 Note over Nexmo: Request accepted
-Nexmo->Phone number: Send delivery notification SMS
-Phone number->Nexmo: Reply to delivery notification
-Nexmo-->App: Send reply to webhook endpoint
-App->Nexmo: Request to SMS API
-Nexmo-->App: Response from SMS API
+Nexmo->>Phone number: Send delivery notification SMS
+Phone number->>Nexmo: Reply to delivery notification
+Nexmo-->>App: Send reply to webhook endpoint
+App->>Nexmo: Request to SMS API
+Nexmo-->>App: Response from SMS API
 Note over Nexmo: Request accepted
-Nexmo->Phone number: Send acknowledgement in SMS
+Nexmo->>Phone number: Send acknowledgement in SMS
 ```
 
 To do this:
@@ -229,6 +229,6 @@ All the code for this tutorial is available in the [Two-way SMS for customer eng
 
 ## Resources
 
-* [Nexmo Client Library for Ruby](https://github.com/Nexmo/nexmo-ruby)
+* [Ruby Server SDK](https://github.com/Nexmo/nexmo-ruby)
 * [SMS](/sms)
 * [SMS API reference guide](/api/sms)

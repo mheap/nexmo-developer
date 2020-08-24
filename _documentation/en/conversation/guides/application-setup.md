@@ -14,7 +14,7 @@ In order to set up your Conversation API application, you typically need to carr
 
 This process is illustrated in the following diagram:
 
-![Application setup](/assets/images/conversation-api/conv-app-setup.png)
+![Application setup](/images/conversation-api/conv-app-setup.png)
 
 1. [Create a Nexmo Application](/application/overview#creating-applications).
 
@@ -34,7 +34,7 @@ This process is illustrated in the following diagram:
 
     f. Use [Conversation API](/conversation/api-reference) or other Nexmo API capabilities as required. For example, to create conversations, and send events. You can also analyze your user's communication behavior and reach interesting conclusions on how to better engage with them. This step is optional but recommended.
 
-4. Now you can create a client-side application and [integrate the Nexmo Client SDK](/client-sdk/setup/add-sdk-to-your-app/). Using the Client SDK your client app will be able to:
+4. Now you can create a client-side application and [integrate the Client SDK](/client-sdk/setup/add-sdk-to-your-app/). Using the Client SDK your client app will be able to:
 
 * Log in a User
 * Create and join Conversations

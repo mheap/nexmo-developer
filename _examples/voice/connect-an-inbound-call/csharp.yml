@@ -2,16 +2,15 @@
 title: .NET
 language: dotnet
 dependencies:
-    - Nexmo.Csharp.Client
-    - Nancy
-client:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Modules/RoutingModule.cs
-    from_line: 29
-    to_line: 35
+    - Nexmo.Csharp.Client    
+import_dependencies:
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetWebhookCodeSnippets/Controllers/ConnectInboundCallController.cs
+    from_line: 6
+    to_line: 7
 code:
-    source: .repos/nexmo/nexmo-dotnet-code-snippets/NexmoDotnetCodeSnippets/Modules/RoutingModule.cs
-    from_line: 181
-    to_line: 200
+    source: .repos/nexmo/nexmo-dotnet-code-snippets/DotNetWebhookCodeSnippets/Controllers/ConnectInboundCallController.cs
+    from_line: 14
+    to_line: 31
 run_command: 'Run using your IDE'
-file_name: RoutingModule.cs
+file_name: ConnectInboundCallController.cs
 unindent: true

@@ -1,9 +1,9 @@
 ---
-title: Request a report
-description: Submit the initial request to create a report
+title: Create a CSV report using Postman
+description: Creates a CSV format report using the Postman tool
 ---
 
-# Request a report
+# Create a CSV report using Postman
 
 In the Postman workspace, set the HTTP method to `POST` and enter the following URL: `https://api.nexmo.com/v2/reports/`
 
@@ -24,13 +24,13 @@ Select the "Authorization" tab and enter the following values:
 
 > **Note**: You can find your API key and secret in the [developer dashboard](https://dashboard.nexmo.com).
 
-![Create Report](/assets/images/reports-api/create-report-postman.png)
+![Create Report](/images/reports-api/create-report-postman.png)
 
 ## Format the request body
 
 In the "Body" tab select the "raw" radio button and "JSON" from the dropdown list of formats:
 
-![Format the request](/assets/images/reports-api/format-request-body-postman.png)
+![Format the request](/images/reports-api/format-request-body-postman.png)
 
 ## Create the request
 
@@ -40,11 +40,11 @@ In the "Body" tab, enter the request body as shown below, replacing  `NEXMO_API_
 
 ### For an SMS report
 
-![Create SMS report request](/assets/images/reports-api/create-request-body-sms-postman.png)
+![Create SMS report request](/images/reports-api/create-request-body-sms-postman.png)
 
 ### For a Voice report
 
-![Create SMS report request](/assets/images/reports-api/create-request-body-voice-postman.png)
+![Create SMS report request](/images/reports-api/create-request-body-voice-postman.png)
 
 > **Note**: The `product` must be one of `SMS`, `VOICE-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES` or `CONVERSATION`.
 

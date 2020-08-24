@@ -3,7 +3,7 @@
 [![Build Status](https://api.travis-ci.org/Nexmo/nexmo-developer.svg?branch=master)](https://travis-ci.org/Nexmo/nexmo-developer/)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
 
-This repository is the code and content for <https://developer.nexmo.com>, which includes the Nexmo documentation, API reference, SDKs, Tools & Community content. To get a Nexmo account, sign up [for free at nexmo.com][signup].
+This repository is the content for <https://developer.nexmo.com>, which includes the Nexmo documentation, API reference, SDKs, Tools & Community content. To get a Nexmo account, sign up [for free at nexmo.com][signup].
 
 ### [Testing](#testing) &middot; [Running Locally](#running-locally) &middot; [Admin Dashboard](#admin-dashboard) &middot; [Troubleshooting](#troubleshooting) &middot; [Contributing](#contributing) &middot; [License](#license)
 
@@ -12,28 +12,18 @@ This repository is the code and content for <https://developer.nexmo.com>, which
 
 ## Testing
 
-We use [rspec](http://rspec.info/) to test Nexmo Developer.
-
-To run all tests:
-
-```bash
-bundle exec rspec
-```
-
-To generate code coverage, set the `COVERAGE` environment variable when running the tests.
-
-```bash
-COVERAGE=1 bundle exec rspec
-```
-
-This will create a folder named `coverage`. Open `index.html` in this folder to view coverage statistics.
-
 ### Spell Checking
 
 We write the docs in US English and enforce this at build time with a CI check. You can run the check locally using the following command:
 
 ```
 ./node_modules/.bin/mdspell -r -n -a --en-us '_documentation/en/**/*.md' '_partials/*.md' '_partials/**/*.md' '_modals/**/*.md' '_tutorials/**.md'
+```
+
+Or if you're using Docker:
+
+```
+docker-compose exec web ./node_modules/.bin/mdspell -r -n -a --en-us '_documentation/en/**/*.md' '_partials/*.md' '_partials/**/*.md' '_modals/**/*.md' '_tutorials/**.md'
 ```
 
 If there is a word that isn't in the dictionary but is correct to use, add it to the `.spelling` file (there's a lot of exceptions in there, including `Nexmo`!)
@@ -46,7 +36,7 @@ The project can be run on your laptop, either directly or using Docker. These in
 
 Before you start, you need to make sure that you have:
 
-- [Ruby 2.5.7](https://www.ruby-lang.org/en/downloads/) + [bundler](https://bundler.io/)
+- [Ruby 2.5.8](https://www.ruby-lang.org/en/downloads/) + [bundler](https://bundler.io/)
 - [PostgreSQL](https://www.postgresql.org/download/)
 - [Yarn](https://yarnpkg.com/en/docs/install)
 
@@ -89,35 +79,18 @@ cd nexmo-developer
 cp .env.example .env
 ```
 
-Add to `~/.bash_profile` (or equivalent file on your system):
-
+Install the correct versions of ruby
 ```
-eval "$(rbenv init -)"
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-```
-
-Install the correct versions of ruby and node
-```
-rbenv install 2.5.7
-rbenv global 2.5.7
+rbenv install 2.5.8
+rbenv global 2.5.8
 gem install bundle
 bundle install
-nvm install 12
-nvm use 12
-
-yarn install
 ```
 
 Edit the `.env` file as appropriate for your platform.  Then, run the following:
 
-Install project dependencies, run database migrations and start the server
-
 ```
-bundle install
-bin/rails db:setup
-bin/yarn install
-bin/rails s
+bundle exec nexmo-developer --docs=`pwd`
 ```
 
 You should now be able to see the site on http://localhost:3000/
@@ -129,26 +102,23 @@ If you don't want to install Ruby & PostgreSQL then you can use docker to sandbo
 ```
 $ git clone git@github.com:Nexmo/nexmo-developer.git
 $ cd nexmo-developer
-$ cp .env.example .env
 ```
-
-Edit the `.env` file as appropriate for your platform.  Then, start the web server with this command:
 
 ```
 $ docker-compose up
 ```
 
-At this point, open your browser to http://localhost:3000/ ... and wait (it takes about 30 seconds for the first load).
+Once `docker-compose up` has stopped returning output, open a new terminal and run `docker-compose run web bundle exec rake db:migrate`.
 
-To stop the server cleanly run:
+At this point, open your browser to http://localhost:3000/ and you should see the homepage. The first time you click on `Documentation` it might take 5 seconds or so, but any further page loads will be almost instantaneous.
 
-```
-$ docker-compose down
-```
+To stop the server press `ctrl+c`.
+
+> If you get an error that says "We're sorry, but something went wrong." you might need to run the database migrations with `docker-compose run web bundle exec rake db:migrate`
 
 ## Admin dashboard
 
-You can access the admin dashboard by visiting `/admin`. If you've populated data via `rake db:seed` you will have an admin user with the username of `admin@nexmo.com` and password of `development`.
+You can access the admin dashboard by visiting `/admin`. Initially, you will have an admin user with the username of `api.admin@vonage.com` and password of `development`.
 
 The following is an example if you are running Nexmo Developer within a Docker container:
 
@@ -156,15 +126,11 @@ The following is an example if you are running Nexmo Developer within a Docker c
 docker exec -it <container_id> rake db:seed
 ```
 
-New admin users can be created by visiting `/admin/users` or by accessing the rails console and creating a new User like so:
-
-```ruby
-User.create!(email: 'example@example.com', password: 'password', admin: true)
-```
+New admin users can be created by visiting `/admin/users`.
 
 ## Working with submodules
 
-Some of the contents of NDP are brought in via git submodules, such as the Open API Specification (OAS) documents. A submodule is a separate repository used within the main repository (in this case NDP) as a dependency. The main repository holds information about the location of the remote repository and **which commit to reference**. So to make a change within a submodule, you need to commit to the submodule and the main repository and crucially remember to push both sets of changes to GitHub.
+Some of the contents of NDP are brought in via git submodules, such as the OpenAPI Specification (OAS) documents. A submodule is a separate repository used within the main repository (in this case NDP) as a dependency. The main repository holds information about the location of the remote repository and **which commit to reference**. So to make a change within a submodule, you need to commit to the submodule and the main repository and crucially remember to push both sets of changes to GitHub.
 
 Here are some tips for working with submodules:
 
@@ -209,7 +175,7 @@ Make a branch, change into the submodule directory and `git pull` or do whatever
 
 ### Further advice and resources for successful submodule usage
 
-Never `git add .` this is lazy practice anyway but will make bad things happen with submodules.  Try `git add -p` instead. You're welcome.
+Never `git add .` this will make bad things happen with submodules.  Try `git add -p` instead. You're welcome.
 
 If you're not sure what to do, ask for help. It's easier to lend a hand along the way than to rescue it later!
 

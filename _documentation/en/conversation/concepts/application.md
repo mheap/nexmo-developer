@@ -12,7 +12,7 @@ A Nexmo Application can contain a unique set of [Users](/conversation/concepts/u
 
 This container hierarchy is illustrated in the following diagram:
 
-![Nexmo Application](/assets/images/conversation-api/conversation-application.png)
+![Nexmo Application](/images/conversation-api/conversation-application.png)
 
 Notice that the set of Conversations and Users is unique to the Application, so there can be no conflicts.
 

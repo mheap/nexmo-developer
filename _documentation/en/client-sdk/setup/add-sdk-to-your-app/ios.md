@@ -5,7 +5,7 @@ language: ios
 
 # Overview
 
-In this guide you learn how to add the Nexmo Client SDK to your iOS app.
+In this guide you learn how to add the Client SDK to your iOS app.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ To use the Nexmo SDK for iOS, you need to have the following installed:
 
 Open Xcode with your iOS project.
 
-You can either install the Nexmo Client SDK directly, or via CocoaPods.
+You can either install the Client SDK directly, or via CocoaPods.
 
 ### CocoaPods
 
@@ -55,19 +55,21 @@ You can either install the Nexmo Client SDK directly, or via CocoaPods.
 5. In your code, import the `NexmoClient` library:  
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/import'
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/import'
 ```
 
 ### Frameworks
 
-1. Download the Nexmo Client SDK and add it to your project.
+1. Download the Client SDK then drag and drop the `NexmoClient.framework` folder into your project:
+![Project explorer](/images/client-sdk/ios-manual-setup-project.png)
 
-2. Open the `xcworkspace` with Xcode and disable `bitcode` for your target.
+2. Turn on *Embed & Sign* for `NexmoClient.framework` in your target's settings:
+![Embed & sign](/images/client-sdk/ios-manual-setup-signing.png)
 
 3. In your code, import the NexmoClient library:
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/import'
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/import'
 ```
 
 ## Add permissions
@@ -79,19 +81,19 @@ To use the in-app voice features, you need to add audio permissions:
 2. In your code add a request for Audio Permissions:  
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/permissions'
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/permissions'
 ```
 
 `AppDelegate` is the best place to do this.
 
-## Using `NXMClient` in your app
+## Using client in your app
 
 ### Login
 
 Create a `NXMClient` object and login with a `jwt` user token. If necessary, you can read more about [generating the JWT](/client-sdk/concepts/jwt-acl).
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/login'
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/login'
 ```
 
     Note that `self` should implement the `NXMClientDelegate` protocol.  
@@ -102,7 +104,7 @@ source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/login'
 On a successful login, the following delegate method is called with `NXMConnectionStatusConnected`:
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/delegate'
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/delegate'
 ```
 
 ### Get current user info
@@ -110,12 +112,12 @@ source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/delegate'
 After the login succeeds, the logged in user will be available via:
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/user'
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/user'
 ```
 
 ## Conclusion
 
-You added the Nexmo Client SDK to your iOS app, and logged in to a `NXMClient` instance. You can now use the `NXMClient` client in your app, and use the Nexmo Client SDK functionality.
+You added the Client SDK to your iOS app, and logged in to a `NXMClient` instance. You can now use the `NXMClient` client in your app, and use the Client SDK functionality.
 
 ## See also
 

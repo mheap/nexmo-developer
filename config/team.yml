@@ -1,18 +1,7 @@
 current:
   - name: 'Adam Culp'
     email: 'adam.culp@vonage.com'
-    role: 'Developer Advocate'
     twitter: 'adamculp'
-  - name: 'Alex Lakatos'
-    email: 'alex.lakatos@vonage.com'
-    twitter: 'lakatos88'
-  - name: 'Amanda Folson'
-    email: 'amanda.folson@vonage.com'
-    role: 'Developer Relations Manager'
-    twitter: 'AmbassadorAwsum'
-  - name: 'Chen Hui Jing'
-    email: 'huijing.chen@vonage.com'
-    twitter: 'hj_chen'
   - name: 'Kelly Andrews'
     email: 'kelly.andrews@vonage.com'
     twitter: 'kellyjandrews'
@@ -22,23 +11,19 @@ current:
   - name: 'Martyn Davies'
     email: 'martyn.davies@vonage.com'
     twitter: 'martynd'
-    role: 'Developer Relations Manager'
+    role: 'Head of Developer Education'
   - name: 'Michael Heap'
     email: 'michael.heap@vonage.com'
     twitter: 'mheap'
-    role: 'Developer Relations Manager'
+    role: 'Head of Platform Experience'
   - name: 'Nahrin Jalal'
     email: 'nahrin.jalal@vonage.com'
     twitter: 'NahrinJalal'
     role: 'Developer Educator'
   - name: 'Olia Dukova'
-    email: 'olia.dukova@nexmo.com'
+    email: 'olia.dukova@vonage.com'
     twitter: 'oliadukova'
-    role: 'Community Management Lead'
-  - name: 'Phil Leggetter'
-    email: 'phil.leggetter@vonage.com'
-    role: 'Director of Developer Relations'
-    twitter: 'leggetter'
+    role: 'Global Head of Community'
   - name: 'Tony Bedford'
     email: 'tony.bedford@vonage.com'
     role: 'Technical Writer'
@@ -48,19 +33,15 @@ current:
     role: 'Senior Community Manager'
   - name: 'Garann Means'
     email: 'garann.means@vonage.com'
-    role: 'Developer Advocate'
   - name: 'Ben Greenberg'
     email: 'ben.greenberg@vonage.com'
     twitter: 'rabbigreenberg'
-    role: 'Developer Advocate'
   - name: 'Paul Ardeleanu'
     email: 'paul.ardeleanu@vonage.com'
     twitter: 'pardel'
-    role: 'Developer Advocate'
   - name: 'Luke Oliff'
     email: 'luke.oliff@vonage.com'
     twitter: 'mroliff'
-    role: 'Developer Advocate'
   - name: 'Fabian Rodriguez'
     email: 'fabian.rodriguez@vonage.com'
     twitter: 'fabianrbz'
@@ -80,22 +61,42 @@ current:
   - name: 'Steve Lorello'
     email: 'steve.lorello@vonage.com'
     twitter: 'slorello'
-    role: 'Developer Advocate'
   - name: 'Chris Tankersley'
     email: 'chris.tankersley@vonage.com'
     twitter: 'dragonmantank'
-    role: 'Developer Advocate'
   - name: 'Dwane Hemmings'
     email: 'dwane.hemmings@vonage.com'
     twitter: 'dwaneio'
-    role: 'Developer Advocate'
   - name: 'Michael Jolley'
     email: 'michael.jolley@vonage.com'
     twitter: 'michaeljolley'
-    role: 'Developer Advocate'
   - name: 'Nick Iati'
     email: 'nick.iati@vonage.com'
     role: 'Technical Writer'
   - name: 'Kevin Lewis'
     email: 'kevin.lewis@vonage.com'
-    role: 'Developer Advocate'
+  - name: 'Benjamin Aronov'
+    email: 'benjamin.aronov@vonage.com'
+    role: 'Online Community Manager'
+  - name: "Diana Rodriguez"
+    email: "diana.rodriguezmanrique@vonage.com"
+    twitter: "cotufa82"
+  - name: "Greg Holmes"
+    email: "greg.holmes2@vonage.com"
+    role: "Developer Educator"
+    twitter: "greg__holmes"
+  - name: "Igor Wojda"
+    email: "igor.wojda@vonage.com"
+    twitter: "igorwojda"
+  - name: "Yvonne Allen"
+    email: "yvonne.allen@vonage.com"
+    twitter: "yallen011"
+  - name: "Abdul Ajetunmobi"
+    email: "abdul.ajetunmobi@vonage.com"
+    twitter: "abdulajet"
+  - name: "Clarisse Ng"
+    email: "clarisse.ng@vonage.com"
+    role: "Community Manager, APAC"
+  - name: "Avital Tzubeli"
+    email: "avital.tzubeli@vonage.com"
+    role: "Regional Developer Advocate"

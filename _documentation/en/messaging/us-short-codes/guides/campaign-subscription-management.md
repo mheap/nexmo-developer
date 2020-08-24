@@ -12,7 +12,7 @@ You use the *opt-in* API to:
 * Create an opt-out process so a user can [unsubscribe to your campaign](#unsubscribe-to-your-campaign)
 * [Resubscribe](#resubscribe-to-your-campaign) a user to you campaign
 
-![SMS Workflow](/assets/images/workflow_campaign_subscription_management.svg)
+![SMS Workflow](/images/workflow_campaign_subscription_management.svg)
 
 1. Listen to the incoming requests and manage your recipient mailing list accordingly.
 2. Send a request.

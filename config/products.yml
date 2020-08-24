@@ -1,0 +1,151 @@
+products:
+  - 
+    name: 'Account'
+    icon: 'user'
+    icon_colour: 'purple-dark'
+    path: account
+    dropdown: true
+  - 
+    name: 'Subaccounts'
+    icon: 'add-user'
+    icon_colour: 'blue'
+    path: account/subaccounts
+    dropdown: true
+  -
+    name: 'Applications'
+    icon: 'flow'
+    icon_colour: 'purple-dark' 
+    path: application
+    dropdown: true
+  -
+    name: 'Audit'
+    icon: 'file-search'
+    icon_colour: 'blue' 
+    path: audit
+    dropdown: true
+  -
+    name: 'Client SDK'
+    icon: 'group-2'
+    icon_colour: 'red' 
+    path: client-sdk
+    dropdown: true
+  -
+    name: 'In-App Voice'
+    icon: 'microphone'
+    icon_colour: 'purple-dark' 
+    path: client-sdk/in-app-voice
+    dropdown: false
+  -
+    name: 'In-App Video'
+    icon: 'video'
+    icon_colour: 'purple-dark' 
+    path: client-sdk/in-app-video
+    dropdown: false
+  -
+    name: 'In-App Messaging'
+    icon: 'chat'
+    icon_colour: 'purple-dark' 
+    path: client-sdk/in-app-messaging
+    dropdown: false
+  -
+    name: 'Concepts'
+    icon: 'books'
+    icon_colour: 'purple-dark' 
+    path: concepts
+    dropdown: true
+  -
+    name: 'Conversation API'
+    icon: 'more-detailed-list'
+    icon_colour: 'red' 
+    path: conversation
+    dropdown: true
+  -
+    name: 'Dispatch API'
+    icon: 'reload'
+    icon_colour: 'green' 
+    path: dispatch
+    dropdown: true
+  -
+    name: 'Getting Started'
+    icon: 'queue'
+    icon_colour: 'purple-dark'
+    path: 'getting-started'
+    dropdown: false
+  -
+    name: 'Messages API'
+    icon: 'chat'
+    icon_colour: 'indigo' 
+    path: messages
+    dropdown: true
+  -
+    name: 'SMS API'
+    icon: 'message'
+    icon_colour: 'purple' 
+    path: messaging/sms
+    dropdown: true
+  -
+    name: 'Conversion API'
+    icon: 'message'
+    icon_colour: 'purple-dark' 
+    path: messaging/conversion-api
+    dropdown: true
+  -
+    name: 'US Short Codes'
+    icon: 'message'
+    icon_colour: 'purple-dark' 
+    path: messaging/us-short-codes
+    dropdown: true
+  -
+    name: 'Number Insight API'
+    icon: 'search'
+    icon_colour: 'grey' 
+    path: number-insight
+    dropdown: true
+  -
+    name: 'Numbers'
+    icon: 'hash'
+    icon_colour: 'purple-dark'   
+    path: numbers
+    dropdown: true
+  -
+    name: 'Redact API'
+    icon: 'search'
+    icon_colour: 'purple-dark' 
+    path: redact
+    dropdown: true
+  -
+    name: 'Reports API'
+    icon: 'report'
+    icon_colour: 'blue' 
+    path: reports
+    dropdown: true
+  -
+    name: 'Tools'
+    icon: 'code'
+    icon_colour: 'purple-dark' 
+    path: tools
+    dropdown: true
+  -
+    name: 'Verify'
+    icon: 'lock'
+    icon_colour: 'purple-dark' 
+    path: verify
+    dropdown: true
+  -
+    name: 'SIP'
+    icon: 'phone'
+    icon_colour: 'purple-dark' 
+    path: voice/sip
+    dropdown: true
+  -
+    name: 'Voice API'
+    icon: 'phone'
+    icon_colour: 'orange' 
+    path: voice/voice-api
+    dropdown: true
+  -
+    name: 'Vonage Business Cloud'
+    icon: 'telephone'
+    icon_colour: 'purple-dark' 
+    path: vonage-business-cloud
+    dropdown: true

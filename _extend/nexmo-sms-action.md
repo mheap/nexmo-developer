@@ -4,7 +4,7 @@ description: A GitHub Action for sending an SMS.
 tags: ["GitHub","SMS","Action","Continuous Integration"]
 cta: Use GitHub Action
 link: https://github.com/nexmo-community/nexmo-sms-action
-image: /assets/images/extend/github-mark.png
+image: /images/extend/github-mark.png
 published: true
 ---
 

@@ -10,7 +10,7 @@ Nexmo uses webhooks alongside its Voice API to enable your application to intera
 
 * [Answer webhook](#answer-webhook) is sent when a call is answered. This is for both incoming and outgoing calls.
 * [Event webhook](#event-webhook) is sent for all the events that occur during a call. Your application can log, react to or ignore each event type.
-* [Fallback Answer URL](#fallback-answer-url) is used when either the Answer or Event webhook fails or returns an HTTP error status. 
+* [Fallback URL](#fallback-url) is used when either the Answer or Event webhook fails or returns an HTTP error status.
 * [Errors](#errors) are also delivered to the event webhook endpoint if they occur.
 
 For more general information, check out our [webhooks guide](/concepts/guides/webhooks).
@@ -25,8 +25,8 @@ By default, the answer webhook will be a `GET` request but this can be overridde
 
 Field | Example | Description 
  -- | -- | --
-`to` | `442079460000` | The number the call came from (this could be your Nexmo number if the call is started programmatically)
-`from` | `447700900000` | The call the number is to (this could be a Nexmo number or another phone number)
+`to` | `442079460000` | The number that answered the call. (This is the virtual number linked to in your [application](/application/overview).)
+`from` | `447700900000` | The number that called `to`. (This could be a landline or mobile number, or another virtual number if the call was made programmatically.)
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this conversation
 
@@ -74,6 +74,7 @@ The format of the data included depends on which event has occurred:
 * [`busy`](#busy)
 * [`cancelled`](#cancelled)
 * [`unanswered`](#unanswered)
+* [`disconnected`](#disconnected)
 * [`rejected`](#rejected)
 * [`failed`](#failed)
 * [`human/machine`](#human-machine)
@@ -178,6 +179,21 @@ Field | Example | Description
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
 `status` | `unanswered` | Call status
 `direction` | `outbound` | Call direction, this will be `outbound` in this context
+`timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
+
+[Back to event webhooks list](#event-webhook)
+
+### Disconnected
+
+If the WebSocket connection is terminated from the application side for any reason then the disconnected event callback will be sent, if the response contains an NCCO then this will be processed, if no NCCO is present then normal execution will continue.
+
+Field | Example | Description
+-- | -- | --
+`from` | `442079460000` | The number the call came from
+`to` | `447700900000` | The number the call was made to 
+`uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
+`conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
+`status` | `disconnected` | Call status
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
 
 [Back to event webhooks list](#event-webhook)
@@ -289,11 +305,36 @@ This webhook is sent by Nexmo when an NCCO with an action of "input" has finishe
 
 Field | Example | Description
  -- | -- | --
-`dtmf` | `42` | The buttons pressed by the user
-`timed_out` | `true` | Whether the input action timed out: `true` if it did, `false` if not
+`from` | `447700900000` | The number the call came from
+`to` | `447700900000` | The number the call was made to
+`dtmf` | _see below_ | [DTMF capturing results](#dtmf-capturing-results)
+`speech` | _see below_ | [Speech recognition results](#speech-recognition-results)
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
+
+#### DTMF Capturing Results
+
+Field | Example | Description
+ -- | -- | --
+`digits` | `42` | The buttons pressed by the user 
+`timed_out` | `true` | Whether the DTMF input timed out: `true` if it did, `false` if not
+
+#### Speech Recognition Results
+
+Field | Example | Description
+-- | -- | --
+`timeout_reason` | `end_on_silence_timeout` | Indicates if the input ended when user stopped speaking (`end_on_silence_timeout`), by max duration timeout (`max_duration`) or if the user didn't say anything (`start_timeout`)
+`results` | _see below_ | Array of [recognized text objects](#transcript-text)
+`error` | `ERR1: Failed to analyze audio` | Error/status message: `Speech was not enabled` (status) - input action was configured to capture only DTMF input; `Speech overridden by DTMF` (status) - input action was configured to accept both speech/DTMF and user pressed keys; `ERRX: ...` (error) - user speech could not be recognized.
+
+##### Transcript text
+Field | Example | Description
+-- | -- | --
+`text` | `sales` | Transcript text representing the words that the user spoke.
+`confidence` | `0.9405097` | The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater likelihood that the recognized words are correct.
+
+See also complete example payload shown in [NCCO Reference](/voice/voice-api/ncco-reference#speech-recognition-settings)
 
 [Back to event webhooks list](#event-webhook)
 
@@ -310,21 +351,29 @@ Field | Example | Description
 
 [Back to event webhooks list](#event-webhook)
 
-## Fallback Answer URL
+## Fallback URL
 
-The fallback answer webhook is accessed when either the answer webhook or the event webhook, when the event is expected to respond with an NCCO, returns an HTTP error status or is unreachable. The data that is returned from the fallback answer URL is the same as would be received in the original answer URL or event URL.
+The fallback webhook is accessed when either the answer webhook or the event webhook, when the event is expected to respond with an NCCO, returns an HTTP error status or is unreachable. The data that is returned from the fallback URL is the same as would be received in the original answer URL or event URL, with the addition of two new parameters, `reason` and `original_request`:
+
+```
+{
+  "reason": "Connection closed.",
+  "original_request": {
+    "url": "https://api.example.com/webhooks/event",
+    "type": "event"
+  }
+}
+```
 
 If there was a connection closed or reset, timeout or an HTTP status code of `429`, `503` or `504` during the initial NCCO the `answer_url` is attempted twice, then:
 
-1. Go to `fallback_answer_url`
-2. Attempt to reach the fallback URL twice
-3. If no success, then the call is terminated
+1. Attempt to reach the `fallback_answer_url` twice
+2. If no success, then the call is terminated
 
 If there was a connection closed or reset, timeout or an HTTP status code of `429`, `503` or `504` during a call in progress the `event_url` for events that are expected to return an NCCO (e.g. return for an `input` or `notify` action) is attempted twice, then:
 
-1. Go to `fallback_answer_url`
-2. Attempt to reach the fallback URL twice
-3. If no success, continue the call flow
+1. Attempt to reach the `fallback_answer_url` twice
+2. If no success, continue the call flow
 
 ## Errors
 

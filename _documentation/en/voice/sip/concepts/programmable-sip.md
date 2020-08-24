@@ -10,13 +10,13 @@ title: Programmable SIP
 
 Nexmo’s Programmable SIP enables you to integrate your existing SIP Infrastructure with Nexmo’s powerful conversational communications platform. This integration will enable you to easily connect to mobile, landline, SIP and WebRTC endpoints, including browsers and mobile applications. It will also bring Voice API functionality, such as multichannel recording, IVR, Text to Speech, WebSocket connectivity for AI integrations, and the power of contextual conversations to your platform.
 
-![SIP Connect Workflow](/assets/images/workflow_sip_connect.png)
+![SIP Connect Workflow](/images/workflow_sip_connect.png)
 
 ## Nexmo SIP Domains
 
 A _Nexmo SIP Domain_ contains configuration you need to connect to Nexmo SIP endpoints and link to your Nexmo application.
 
-To route a SIP call to your Nexmo application, you need to create a unique Nexmo domain, such as `yourcompany`. The domain name will form the SIP URI, for example `sip:number@yourcompany.sip.nexmo.com`, and any calls routed to that SIP URI will be routed to your application NCCO `answer_url`.
+To route a SIP call to your Nexmo application, you need to create a unique Nexmo domain, such as `yourcompany`. The domain name will form the SIP URI, for example `sip:number@yourcompany.sip-us.nexmo.com`, and any calls routed to that SIP URI will be routed to your application NCCO `answer_url`.
 
 The authentication method will be determined within your configuration of the Nexmo domain. Nexmo will authenticate the request and forward it to your application.
 
@@ -34,7 +34,7 @@ IP addresses of your devices and endpoints can be configured to reach your Nexmo
 
 ## Domain Based Routing
 
-If you require your call to be handled by a specific Nexmo region, then you can specify that by using R-URI with such information in the domain part.
+Calls made to a Programmable SIP domain must be handled at a regional level. You must use a Request URI with a regional domain. Please be aware that a Request URI without a regional component in the domain will fail the call.
 
 The following code will indicate to Nexmo that you want this SIP call to be handled in the EU:
 
@@ -58,7 +58,7 @@ You can specify any additional headers you need when sending a SIP Request. Any 
 
 ## Receiving Calls From Nexmo
 
-You can use the Voice API NCCO connect action to connect a call to your SIP endpoints. The detailed documentation is here.
+You can use the Voice API NCCO connect action to connect a call to your SIP endpoints. The detailed documentation is [here](/voice/voice-api/ncco-reference#connect).
 
 ## SIP Connect
 

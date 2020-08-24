@@ -12,7 +12,7 @@ With the number of apps on Android and iOS rising it is important for people to 
 
 If your mobile app has a Website you are probably familiar with:
 
-![Mobile app button example](/assets/images/app_store_play_badges.png)
+![Mobile app button example](/images/app_store_play_badges.png)
 
 These buttons make it easy for anyone to navigate to the correct store for their mobile device. However, this flow quickly falls apart if the user is not mobile. What happens when your user is using a desktop computer? By using **Mobile app promotion**, you can quickly convert a browsing user into an active customer by sending them a link to your app via SMS.
 
@@ -145,7 +145,7 @@ If the user is not using a mobile device, display the button for SMS download:
 
 This button looks like:
 
-![Mobile app button example](/assets/images/sms-badge.png)
+![Mobile app button example](/images/sms-badge.png)
 
 ## Collect a name and phone number
 
@@ -197,13 +197,13 @@ Participant App
 Participant Nexmo
 Participant Phone number
 Note over App: Initialize library
-App->Nexmo: Request to SMS API
-Nexmo-->App: Response from SMS API
+App->>Nexmo: Request to SMS API
+Nexmo-->>App: Response from SMS API
 Note over Nexmo: Request accepted
-Nexmo->Phone number: Send SMS
+Nexmo->>Phone number: Send SMS
 ```
 
-In this tutorial, to send an SMS you add the [Nexmo REST API client for Ruby](https://github.com/Nexmo/nexmo-ruby) to your app:
+In this tutorial, to send an SMS you add the [Ruby Server SDK](https://github.com/Nexmo/nexmo-ruby) to your app:
 
 **Gemfile**
 
@@ -284,6 +284,6 @@ All the code for this tutorial is available in the [Mobile app invites tutorial 
 
 ## Resources
 
-* [Nexmo Client Library for Ruby](https://github.com/Nexmo/nexmo-ruby)
+* [Ruby Server SDK](https://github.com/Nexmo/nexmo-ruby)
 * [SMS](/sms)
 * [SMS API reference guide](/api/sms)

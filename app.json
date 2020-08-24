@@ -1,21 +1,6 @@
 {
-  "scripts": {
-    "postdeploy": "rake search_terms:algolia:refresh"
-  },
-  "environments": {
-    "test": {
-      "addons":[
-         "heroku-postgresql"
-      ],
-      "scripts": {
-        "test-setup": "rails s -d",
-        "test": "rake test:all"
-      }
-    }
-  },
   "buildpacks": [
     { "url": "https://github.com/Nexmo/heroku-buildpack-git-submodule" },
-    { "url": "heroku/nodejs" },
     { "url": "heroku/ruby" }
   ],
   "env": {
@@ -23,8 +8,14 @@
     "GIT_SSH_KEY": { "required": true },
     "RACK_ENV": { "required": true },
     "RAILS_ENV": { "required": true },
-    "OAS_PATH": "_open_api/api_specs/definitions",
+    "OAS_PATH": "/app/_open_api/api_specs/definitions",
     "DOCS_BASE_PATH": "."
   },
-  "stack": "heroku-18"
+  "stack": "heroku-18",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
