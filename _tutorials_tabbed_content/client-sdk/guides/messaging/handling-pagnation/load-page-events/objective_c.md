@@ -7,7 +7,7 @@ language: objective_c
 [self.conversation getEventsPageWithSize:10 order:NXMPageOrderAsc
  completionHandler:^(NSError * _Nullable error, NXMEventsPage * _Nullable events) {
 
-    self.eventsPage = [NSMutableArray arrayWithArray:events.events];
+    self.events = [NSMutableArray arrayWithArray:events.events];
 
 }];
 ```
