@@ -23,22 +23,22 @@ Your `Info.plist` should look like this:
 
 ## Request permission on application start
 
-Open `AppDelegate.swift` and import the `AVFoundation` library right after where `UIKit` is included:
+Open `AppDelegate.h` and import the `AVFoundation` library right after where `UIKit` is included:
 
-```swift
-import UIKit
-import AVFoundation
+```objective_c
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 ```
 
-Next, call `requestRecordPermission:` inside `application:didFinishLaunchingWithOptions:`:
+Next, call `requestRecordPermission:` inside `application:didFinishLaunchingWithOptions:` within `AppDelegate.m`:
 
-``` swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+```objective_c
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    AVAudioSession.sharedInstance().requestRecordPermission { (granted:Bool) in
-        NSLog("Allow microphone use. Response: %d", granted)
-    }
-    return true
+    [AVAudioSession.sharedInstance requestRecordPermission:^(BOOL granted) {
+        NSLog(@"Allow microphone use. Response: %d", granted);
+    }];
+    return YES;
 }
 ```
 
