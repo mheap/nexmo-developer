@@ -23,13 +23,12 @@ Add a `NXMClient` instance and `user` property below the `statusLabel`.
     @property UILabel *statusLabel;
     @property NXMClient *client;
     @property User *user;
-    
 @end
 ```
 
 ## Button targets
 
-For the log in buttons to work, you need to add targets to them which will run a function when they are tapped. In the `ViewController.m` file add the following.
+For the log in buttons to work, you need to add targets to them which will run a function when they are tapped. In the `ViewController.m` file add:
 
 ```objective_c
 @implementation ViewController
@@ -92,21 +91,25 @@ Then at the end of the file, add the following `NXMClientDelegate` functions.
 
 ```objective_c
 - (void)client:(NXMClient *)client didChangeConnectionStatus:(NXMConnectionStatus)status reason:(NXMConnectionStatusReason)reason {
-    switch (status) {
-        case NXMConnectionStatusConnected:
-            self.statusLabel.text = @"Connected";
-            break;
-        case NXMConnectionStatusConnecting:
-            self.statusLabel.text = @"Connecting";
-            break;
-        case NXMConnectionStatusDisconnected:
-            self.statusLabel.text = @"Disconnected";
-            break;
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        switch (status) {
+            case NXMConnectionStatusConnected:
+                self.statusLabel.text = @"Connected";
+                break;
+            case NXMConnectionStatusConnecting:
+                self.statusLabel.text = @"Connecting";
+                break;
+            case NXMConnectionStatusDisconnected:
+                self.statusLabel.text = @"Disconnected";
+                break;
+        }
+    });
 }
 
 - (void)client:(NXMClient *)client didReceiveError:(NSError *)error {
-    self.statusLabel.text = error.localizedDescription;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.statusLabel.text = error.localizedDescription;
+    });
 }
 ```
 
@@ -116,4 +119,4 @@ An error is shown if encountered and the `statusLabel` is updated with the relev
 
 Press `Cmd + R` to build and run again. If you tap on one of the log in buttons it will log the client in with the respective user:
 
-![Interface connected](/images/client-sdk/ios-messaging/client.png)
+![Interface connected](/images/client-sdk/ios-in-app-voice/client.png)
