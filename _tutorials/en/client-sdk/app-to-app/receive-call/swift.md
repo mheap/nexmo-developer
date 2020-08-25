@@ -77,7 +77,7 @@ class CallViewController: UIViewController {
     @objc private func endCall() {
         call?.hangup()
         self.setHangUpButtonHidden(true)
-        self.setStatusLabelText("")
+        self.setStatusLabelText("Ready to receive call...")
     }
 }
 ```
