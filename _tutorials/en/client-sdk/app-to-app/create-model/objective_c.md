@@ -11,7 +11,7 @@ To be have a conversation you need to store some information about a user:
 * A user's JWT
 * Who they are calling
 
-To do this you will create a new User `Class`. From the Xcode menu, select `File` > `New` > `File...`. Select `Cocoa Touch Class`, name it `User` with a subclass of `NSObject`:
+To do this you will create a new User `Class`. From the Xcode menu, select `File` > `New` > `File...`. Select `Cocoa Touch Class`, name it `User` with a subclass of `NSObject` and `Objective-C` as the selected language:
 
 ![Xcode adding file](/images/client-sdk/ios-messaging/userclass.png)
 

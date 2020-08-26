@@ -9,7 +9,7 @@ Now that the calling interface is built, you can now add the code needed receive
 
 ```objective_c
 - (void)client:(NXMClient *)client didReceiveCall:(NXMCall *)call {
-    [NSNotificationCenter.defaultCenter postNotificationName:@"NXMClient.incommingCall" object:call];
+    [NSNotificationCenter.defaultCenter postNotificationName:@"NXMClient.incomingCall" object:call];
 }
 ```
 
@@ -20,7 +20,7 @@ The `CallViewController` class will be in the foreground and the class handling 
 
 - (void)viewDidLoad {
     ...
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(didReceiveCall:) name:@"NXMClient.incommingCall" object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(didReceiveCall:) name:@"NXMClient.incomingCall" object:nil];
     
     [self.hangUpButton addTarget:self action:@selector(endCall) forControlEvents:UIControlEventTouchUpInside];
 }

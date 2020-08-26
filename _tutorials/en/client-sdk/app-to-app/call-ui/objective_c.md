@@ -5,7 +5,7 @@ description: In this step you will build the second screen of the app.
 
 # Building the call interface
 
-To be able to call, you will need to create a new View Controller for the calling interface. From the Xcode menu, select `File` > `New` > `File...`. Choose a *Cocoa Touch Class*, name it `CallViewController` with a subclass of `UIViewController` and language of `Swift`.
+To be able to call, you will need to create a new View Controller for the calling interface. From the Xcode menu, select `File` > `New` > `File...`. Choose a *Cocoa Touch Class*, name it `CallViewController` with a subclass of `UIViewController` and language of `Objective-C`.
 
 ![Xcode adding file](/images/client-sdk/ios-in-app-voice/callviewcontrollerobjc.png)
 
@@ -22,7 +22,7 @@ The call interface will need:
 * A `UIButton` to end a call
 * A `UILabel` to show status updates
 
-Open `CallViewController.m` and add it programmatically.
+Open `CallViewController.m` and add them programmatically.
 
 ```objective_c
 @interface CallViewController () <NXMCallDelegate>
