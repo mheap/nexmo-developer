@@ -16,7 +16,7 @@ You will be using the iOS Client SDK library inside an Xcode project you'll crea
 
 * For the `Product Name` type in `AppToAppCall`, select the relevant `Team` and `Organisation Identifier`.
 
-* User `Swift` for `Language` and `Storyboard` for `User Interface`. Click `Next`.
+* User `Objective-C` for `Language` and `Storyboard` for `User Interface`. Click `Next`.
 
 * Select the `Desktop` as the place where your project folder will reside. You can select a different location but please make sure to remember it as you'll need to navigate to it soon from the `Terminal`.
 
