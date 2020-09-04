@@ -3,7 +3,7 @@ title: PHP
 language: php
 dependencies:
     - 'slim/slim:^3.8'
-    - 'nexmo/client:^2.2'
+    - 'nexmo/client'
 code:
     source: .repos/nexmo/nexmo-php-code-snippets/sms/receive-with-slim/index.php
     from_line: 9
