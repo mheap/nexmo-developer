@@ -88,6 +88,7 @@ en:
         use-cases: Use Cases
         voyagers: Voyagers
         devtv: Vonage Dev TV
+        hacktoberfest: Hacktoberfest 2020
 
   code_snippets:
     copy_to_clipboard: Copy to Clipboard
