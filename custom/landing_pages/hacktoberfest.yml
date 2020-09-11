@@ -1,0 +1,319 @@
+title: "Hacktoberfest 2020"
+meta_title: "Vonage is thrilled to be a Hacktoberfest 2020 partner. We’re no strangers to Open Source, with our libraries, code snippets and demos all on GitHub. We’re looking forward to supporting participants, sharing our knowledge and chatting about how important and awesome open source contributions can be!"
+page:
+  - row:
+    - column:
+      - type: html
+        html:
+          content: |
+              <br><br><br>
+              <div class="vonage-loves-hack Vlt-black">
+                <img class="title" src="/images/logos/vbc-logo.svg"/>
+                <h1 id="heart" class="vertical-align Vlt-center">❤️</h1>
+                <h1 class="vertical-align Vlt-center">Hacktoberfest</h1>
+              </div>
+              <br><br><br>
+              <img class="Vlt-center" id="hacktoberfest-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599671200/Logo_nstaby.svg" alt="Ocktoberfest 2020">
+              <br><br><br><br>
+              <h2 class="Vlt-black"><b>Hacktoberfest 2020</b></h2>
+              <h5 class="text-blue">
+                Hacktoberfest — brought to you by DigitalOcean in partnership with Dev & Intel — is a month-long celebration of open source software. Maintainers are invited to guide would-be contributors towards issues that will help move the project forward, and contributors get the opportunity to give back to both projects they like and others they've just discovered. No contribution is too small — bug fixes and documentation updates are valid ways of participating.
+              </h5>
+              <br>
+              <h5 class="text-blue">
+                First, sign up on the
+                <a href="https://hacktoberfest.digitalocean.com" target="_blank" class="text-pink">Hacktoberfest site</a>. To qualify for the official limited edition Hacktoberfest shirt, you must register and make four pull requests between October 1-31. Pull requests can be to any public repo on GitHub, not just the ones with issues labeled Hacktoberfest. If a maintainer reports your pull request as spam or spammy behavior, or not in line with the project’s code of conduct, you will be ineligible to participate.
+              </h5>
+              <br>
+              <h5 class="text-blue">
+                Vonage is thrilled to be a Hacktoberfest 2020 partner. We’re no strangers to Open Source, with our libraries, code snippets and demos all on GitHub. We’re looking forward to supporting participants, sharing our knowledge and chatting about how important and awesome open source contributions can be!
+              </h5>
+              <br><br><br>
+
+
+              <h2 class="Vlt-black"><b>How you can contribute</b></h2>
+              <h5 class="text-blue">
+                We invite everyone to participate and contribute to the Vonage projects, regardless of their background and experience. The Vonage projects are on
+                <a href="https://github.com/Vonage" target="_blank" class="text-pink">GitHub</a>
+                 and you are welcome to contribute to any repository.
+              </h5>
+              <br>
+              <h4 class="Vlt-black"><b>Details on suggested repositories for contributions are coming soon!</b></h4>
+
+              <div class="Vlt-table--data hide">
+                <div class="Vlt-table__header">
+                  <div class="Vlt-table__cell"><h3 class="Vlt-black">Project</h3></div>
+                  <div class="Vlt-table__cell"><h3 class="Vlt-black">Keywords</h3></div>
+                  <div class="Vlt-table__cell"><h3 class="Vlt-black">Ideas and links</h3></div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                  </div>
+                  <div class="Vlt-table__cell">
+                  </div>
+                  <div class="Vlt-table__cell">
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                  </div>
+                  <div class="Vlt-table__cell">
+                  </div>
+                  <div class="Vlt-table__cell">
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                  </div>
+                  <div class="Vlt-table__cell">
+                  </div>
+                  <div class="Vlt-table__cell">
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                  </div>
+                  <div class="Vlt-table__cell">
+                  </div>
+                  <div class="Vlt-table__cell">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <h5 class="text-blue">
+                If you have made a valid contribution to one of our repos, you can choose to receive either a $5 Open Collective Gift Card or a pair of Bamboo Vonage Socks! 
+                <br><br>
+                <div class="Vlt-center">
+                  <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrMXMw6Nwd3Rnjn4">Claim your reward!</a>
+                </div>
+              </h5>
+              <br><br><br>
+
+              <h2 class="Vlt-black"><b>Events</b></h2>
+              <h5 class="text-blue">
+                We will be hosting a series of Hacktoberfest online events every Tuesday in October, and welcome developers to join us in supporting open source by contributing changes to Vonage projects.  Register and attend any of our events to earn a Hacktoberfest limited edition swag and more.
+              </h5>
+              <br>
+              <h3 class="Vlt-black"><b>Hacktoberfest Tuesdays</b></h3>
+              <div class="Vlt-grid Vlt-grid--stack-flush">
+                <a href="https://organize.mlh.io/participants/events/4079-hacktoberfest-tuesdays-east-coast-and-more" target="_blank" class="Vlt-col Vlt-col--1of2">
+                  <div class="Vlt-card">
+                    <div class="Vlt-card__content">
+                    <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599655552/Icon_omezug.svg" alt="Hacktoberfest 2020">
+                    <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>East Coast and more</b></h3>
+                    <h4 class="Vlt-center Vlt-white">October 6, 2020</h4>
+                    <h4 class="Vlt-center Vlt-white">6PM - 9PM EDT</h4>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://organize.mlh.io/participants/events/4099-hacktoberfest-tuesdays-asia" target="_blank" class="Vlt-col Vlt-col--1of2">
+                  <div class="Vlt-card">
+                    <div class="Vlt-card__content">
+                    <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599655552/Icon_omezug.svg" alt="Hacktoberfest 2020">
+                    <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Asia</b></h3>
+                    <h4 class="Vlt-center Vlt-white">October 13, 2020</h4>
+                    <h4 class="Vlt-center Vlt-white">6PM - 9PM SGT</h4>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://organize.mlh.io/participants/events/4100-hacktoberfest-tuesdays-israel" target="_blank" class="Vlt-col Vlt-col--1of2">
+                  <div class="Vlt-card">
+                    <div class="Vlt-card__content">
+                    <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599655552/Icon_omezug.svg" alt="Hacktoberfest 2020">
+                    <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Israel</b></h3>
+                    <h4 class="Vlt-center Vlt-white">October 20, 2020</h4>
+                    <h4 class="Vlt-center Vlt-white">6PM - 9PM IDT</h4>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://organize.mlh.io/participants/events/4101-hacktoberfest-tuesdays-london-and-more" target="_blank" class="Vlt-col Vlt-col--1of2">
+                  <div class="Vlt-card">
+                    <div class="Vlt-card__content">
+                    <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599655552/Icon_omezug.svg" alt="Hacktoberfest 2020">
+                    <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>London and more</b></h3>
+                    <h4 class="Vlt-center Vlt-white">October 27, 2020</h4>
+                    <h4 class="Vlt-center Vlt-white">6PM - 9PM BST</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <br><br><br>
+
+              <h2 class="Vlt-black"><b>Video Resources</b></h2>
+              <div class="Vlt-grid Vlt-grid--stack-flush">
+                <iframe class="Vlt-col Vlt-col--1of2" src="https://www.youtube.com/embed/zYJpYMCy6PA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="Vlt-col Vlt-col--1of2" src="https://www.youtube.com/embed/W6ztOG7ncNg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              </div>
+              <br><br><br>
+
+              <h2 class="Vlt-black"><b>Talks</b></h2>
+              <div class="Vlt-grid Vlt-grid--stack-flush">
+                <a href="https://www.digitalocean.com/community/tech_talks/level-up-as-an-open-source-contributor" target="_blank" class="Vlt-col Vlt-col--1of3 talks">
+                  <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599751033/lorna-hacktoberfest_w579fk.png" alt="Hacktoberfest Level Up as asn Open Source Contributer Lorna Mitchell">
+                </a>
+              </div>
+              <br><br><br>
+
+              <h2 class="Vlt-black hide"><b>Resources</b></h2>
+              <ul class="Vlt-list Vlt-list--simple hide">
+                <li>
+                  <a href="#" target="_blank">
+                    <h4 class="text-pink skinny-link">
+                      Hacktoberfest 2020 announcement blogpost
+                    </h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <h4 class="text-pink skinny-link">
+                      Hacktoberfest 2020 announcement blogpost
+                    </h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <h4 class="text-pink skinny-link">
+                      Hacktoberfest 2020 announcement blogpost
+                    </h4>
+                  </a>
+                </li>
+              </ul>
+              <h2 class="Vlt-black hide"><b>FAQ</b></h2>
+              <h5 class="text-blue hide">
+                You can find answers to some Vonage-specific questions below. For Hacktoberfest FAQ, <a href="https://hacktoberfest.digitalocean.com/faq/" target="_blank" class="text-pink">please go here</a>.
+              </h5>
+              <br><br>
+              <h2 class="Vlt-black"><b>Get in touch</b></h2>
+              <ul class="Vlt-list Vlt-list--simple">
+                <li>
+                  <a href="https://discord.gg/hacktoberfest" target="_blank">
+                    <h4 class="text-pink skinny-link">
+                      Hacktoberfest Discord Server
+                    </h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://developer.nexmo.com/community/slack" target="_blank">
+                    <h4 class="text-pink skinny-link">
+                      Vonage Developer Community Slack
+                    </h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/vonage" target="_blank">
+                    <h4 class="text-pink skinny-link">
+                      GitHub
+                    </h4>
+                  </a>
+                </li>
+              </ul>
+              <h2 class="Vlt-black"><b>Follow Us</b></h2>
+              <ul class="Vlt-list Vlt-list--simple">
+                <li>
+                  <a href="https://twitter.com/VonageDev" target="_blank">
+                    <h4 class="text-pink skinny-link">
+                      VonageDev Twitter
+                    </h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nexmo.com/blog" target="_blank">
+                    <h4 class="text-pink skinny-link">
+                      Vonage Blog
+                    </h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitch.tv/vonagedevs" target="_blank">
+                    <h4 class="text-pink skinny-link">
+                      Vonage Twitch
+                    </h4>
+                  </a>
+                </li>
+              </ul>
+
+
+
+  - row:
+    - column:
+      - type: text
+        text:
+          content: |
+            <style>
+              .Nxd-landing-col .Vlt-tabs__header {
+                flex-direction: column;
+                border-bottom: none !important;
+              }
+              .Nxd-landing-col .Vlt-table__header {
+                display: flex;
+                width: 100%;
+              }
+              .Nxd-landing-col .Vlt-table__cell {
+                display: flex;
+                width: 100%;
+                margin: 0px;
+              }
+              .Nxd-landing-col .Vlt-table__row {
+                display: flex;
+              }
+              .Vlt-table__cell{
+                background-color: #FFF !important;
+                border: 1px solid #54575E;
+              }
+              .title{
+                height: 100px !important;
+              }
+              .vertical-align{
+                margin-top: auto;
+                margin-bottom: auto;
+                padding: 0;
+              }
+              .text-blue{
+                color: #54575E;
+              }
+              .display-inline-block{
+                display: inline-block;
+              }
+              .Vlt-card{
+                background-color: #54575E !important;
+                border: 1px solid #871FFF;
+              }
+              .Vlt-card:hover{
+                background-color: #871FFF !important;
+              }
+              .talks:hover{
+                border: 3px solid #871FFF;
+              }
+              .text-pink{
+                color: #871FFF;
+              }
+              .Vlt-list--simple>li:before{
+                color: #FFFFFFF !important;
+                font-size: xx-large;
+              }
+              .skinny-link{
+                font-weight: 100;
+              }
+              #hacktoberfest-logo{
+                max-height: 755px;
+                width: 100%;
+              }
+              #event-logo{
+                max-height: 110px;
+                width: 100%;
+              }
+
+              @media (min-width: 768px){
+                .vonage-loves-hack{
+                  display: flex;
+                  justify-content: center;
+                }
+                #heart{
+                  margin: auto 40px;
+                }
+              }
+              iframe{
+                min-height: 307px;
+              }
+            </style>
