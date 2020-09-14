@@ -11,14 +11,14 @@ Locate the `startAppToAppCall` method within the `MainViewModel` class and fill 
 @SuppressLint("MissingPermission")
 fun startAppToAppCall() {
     lastCalledUserName = otherUserName
-    client.call(otherUserName, NexmoCallHandler.IN_APP, callListener)
+    client.call(otherUserName, NexmoCallHandler.SERVER, callListener)
     loadingMutableLiveData.postValue(true)
 }
 ```
 
-> **NOTE:** we set the `IGNORED_NUMBER` argument, because our number is specified in the NCCO config (Nexmo application answer URL that you configured previously).
+> **NOTE** Only Alice calling Bob scenario will work given used NCCO config.
 
-Now you need to make sure that above method is called after pressing UI button. Open `MainFragment` class and update `startAppToAppCallButton.setOnClickListener` inside `onViewCreated` method:
+Now you need to make sure that above method is called after pressing the button. Open `MainFragment` class and update `startAppToAppCallButton.setOnClickListener` inside `onViewCreated` method:
 
 ```kotlin
 startAppToAppCallButton.setOnClickListener {

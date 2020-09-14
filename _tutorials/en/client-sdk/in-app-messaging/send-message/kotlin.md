@@ -11,19 +11,19 @@ Inside `ChatViewModel` class, locate the `onSendMessage` method and fill its bod
 
 ```kotlin
 fun onSendMessage(message: String) {
-        if (conversation == null) {
-            _errorMessage.postValue("Error: Conversation does not exist")
-            return
+    if (conversation == null) {
+        _errorMessage.postValue("Error: Conversation does not exist")
+        return
+    }
+
+    conversation?.sendText(message, object : NexmoRequestListener<Void> {
+        override fun onSuccess(p0: Void?) {
         }
 
-        conversation?.sendText(message, object : NexmoRequestListener<Void> {
-            override fun onSuccess(p0: Void?) {
-            }
-
-            override fun onError(apiError: NexmoApiError) {
-            }
-        })
-    }
+        override fun onError(apiError: NexmoApiError) {
+        }
+    })
+}
 ```
 
 > **NOTE:** Inside `ChatFragment` class, contains `sendMessageButton listener` that was written for you. This method is called when user click `send` button. If message text exists above `viewModel.onSendMessage()` method is called.

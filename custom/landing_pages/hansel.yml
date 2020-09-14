@@ -72,13 +72,7 @@ page:
             color: "blue-dark"
           url: "https://www.nexmo.com/blog/category/developer?ref=hansel-dr"
   - row:
-    - width: 2
-      column:
-      - type: tutorial
-        tutorial:
-          name: two-factor-authentication-dotnet-verify-api
-    - width: 2
-      column:
+    - column:
       - type: tutorial
         tutorial:
           name: number-insight-api-aspnet

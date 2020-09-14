@@ -10,6 +10,7 @@ Locate the `startAppToAppCall` method within the `MainViewModel` class and fill 
 ```kotlin
 @SuppressLint("MissingPermission")
 fun startAppToPhoneCall() {
+    // Callee number is ignored because it is specified in NCCO config
     client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, callListener)
     loadingMutableLiveData.postValue(true)
 }

@@ -1,27 +1,27 @@
 ---
-title: Show the message history
+title: Fetch conversation events
 description: In this step you display any messages already sent as part of this Conversation
 ---
 
-# Show the message history
+# Fetch conversation events
 
 Right below  `getConversation()` method, let's add a method to retrieve the events:
 
 ```kotlin
-    private fun getConversationEvents(conversation: NexmoConversation) {
-        conversation.getEvents(100, NexmoPageOrder.NexmoMPageOrderAsc, null,
-            object : NexmoRequestListener<NexmoEventsPage> {
-                override fun onSuccess(nexmoEventsPage: NexmoEventsPage?) {
-                    nexmoEventsPage?.pageResponse?.data?.let {
-                        _conversationMessages.postValue(it.toList())
-                    }
+private fun getConversationEvents(conversation: NexmoConversation) {
+    conversation.getEvents(100, NexmoPageOrder.NexmoMPageOrderAsc, null,
+        object : NexmoRequestListener<NexmoEventsPage> {
+            override fun onSuccess(nexmoEventsPage: NexmoEventsPage?) {
+                nexmoEventsPage?.pageResponse?.data?.let {
+                    _conversationMessages.postValue(it.toList())
                 }
+            }
 
-                override fun onError(apiError: NexmoApiError) {
-                    _errorMessage.postValue("Error: Unable to load conversation events ${apiError.message}")
-                }
-            })
-    }
+            override fun onError(apiError: NexmoApiError) {
+                _errorMessage.postValue("Error: Unable to load conversation events ${apiError.message}")
+            }
+        })
+}
 ```
 
 Once the events are retrieved (or an error is returned), we're updating the view (`ChatFragment`) to reflect the new data.

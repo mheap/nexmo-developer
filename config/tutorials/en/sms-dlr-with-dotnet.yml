@@ -1,6 +1,6 @@
 ---
-title: How to Get an SMS Delivery Receipt in ASP .NET MVC
-external_link: https://www.nexmo.com/blog/2017/07/21/get-sms-delivery-receipt-asp-net-mvc-dr/
+title: How to Receive SMS Delivery Receipts with ASP.NET Core MVC
+external_link: https://www.nexmo.com/blog/2020/07/28/how-to-receive-sms-delivery-receipts-with-asp-net-core-mvc-dr
 products:
  - messaging/sms
 description: Delivery receipts allow you to get information about when an SMS is delivered to a user's handset. This tutorial shows how you can receive these delivery receipt notifications in your ASP .NET application.
