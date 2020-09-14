@@ -241,6 +241,9 @@ page:
         text:
           content: |
             <style>
+              .Nxd-landing-row{
+                margin-top: 100px;
+              }
               .Nxd-landing-col .Vlt-tabs__header {
                 flex-direction: column;
                 border-bottom: none !important;
