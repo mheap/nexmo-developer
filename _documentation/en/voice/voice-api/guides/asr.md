@@ -35,7 +35,7 @@ Typically, ASR is used in conjunction with an audio message playing to the user.
     ],
     "eventMethod": "POST",
     "action": "input",
-    "type": [ "speech" ]
+    "type": [ "speech" ],
     "speech": {
       "language": "en-gb",
       "context": [
