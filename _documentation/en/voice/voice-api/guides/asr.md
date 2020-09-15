@@ -22,6 +22,10 @@ Typically, ASR is used in conjunction with an audio message playing to the user.
 [
   {
     "action": "talk",
+    "text": "Hello!"
+  },
+  {
+    "action": "talk",
     "text": "Please tell us, how can we help you today?",
     "bargeIn": true
   },
@@ -31,10 +35,8 @@ Typically, ASR is used in conjunction with an audio message playing to the user.
     ],
     "eventMethod": "POST",
     "action": "input",
+    "type": [ "speech" ]
     "speech": {
-      "uuid": [
-        "aaaaaaaa-bbbb-cccc-dddd-0123456789ab"
-      ],
       "language": "en-gb",
       "context": [
         "support",
@@ -49,9 +51,8 @@ Typically, ASR is used in conjunction with an audio message playing to the user.
 
 The [NCCO Reference Guide](/voice/voice-api/ncco-reference#speech-recognition-settings) contains information on all the possible parameters that can be used in conjunction with the ASR `input` NCCO action.
 
-### Call ID
-
-ASR action (`input` with `speech`) cannot be executed for the whole conversation; it’s performed against the call (leg), so the call identifier should be explicitly specified in the NCCO as the `speech.uuid` parameter.
+### Input Type
+Set `type` as `speech` for speech input only, or `[ "dtmf", "speech" ]` to accept both speech or [DTMF](/voice/voice-api/guides/dtmf).
 
 ### Language
 
@@ -185,6 +186,8 @@ Some hints might be provided using the `context` array parameter to improve reco
 ### Barge In
 
 If the user is calling not for the first time, they may already know the question to be asked, so the user may start speaking even before the audio message finishes. In order to support that, `bargeIn` parameter of the TTS (or `stream` - whatever action is used for the message) should be activated.
+
+> It's recommended to have the very first TTS/audio message, for example, some short initial greeting, with inactivated "barge in" option because of better user experience (so that the user doesn't unintentionally interrupt the message even not starting to hear it) and increasing speech recognition accuracy (since at the very beginning of the call there is a higher probability of background noise affecting the recognition).
 
 ### Event Payload Example
 

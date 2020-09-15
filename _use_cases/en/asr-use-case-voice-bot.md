@@ -105,10 +105,7 @@ app.get('/webhooks/answer', (request, response) => {
       action: 'input',
       eventUrl: [
         `${request.protocol}://${request.get('host')}/webhooks/asr`],
-      speech: {
-        uuid: [request.query.uuid],
-        language: 'en-us'
-      }
+      type: [ "speech" ]
     },
     {
       action: 'talk',
@@ -119,8 +116,6 @@ app.get('/webhooks/answer', (request, response) => {
   response.json(ncco)
 })
 ```
-
-Speech recognition requires specifying the call leg identifier, in order to do that, use the `uuid` you get in the callback request: `request.query.uuid`, which is the identifier of the inbound PSTN leg you want to listen to.
 
 ## Write your event webhook
 

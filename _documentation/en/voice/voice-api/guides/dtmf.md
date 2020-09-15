@@ -30,6 +30,7 @@ You can collect input from your caller by using the `input` action within your N
       "https://api.example.com/callbacks/events"
     ],
     "action": "input",
+    "type": [ "dtmf" ],
     "dtmf": {
       "maxDigits": 1,
       "submitOnHash": true,

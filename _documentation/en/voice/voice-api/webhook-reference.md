@@ -326,7 +326,7 @@ Field | Example | Description
 -- | -- | --
 `timeout_reason` | `end_on_silence_timeout` | Indicates if the input ended when user stopped speaking (`end_on_silence_timeout`), by max duration timeout (`max_duration`) or if the user didn't say anything (`start_timeout`)
 `results` | _see below_ | Array of [recognized text objects](#transcript-text)
-`error` | `ERR1: Failed to analyze audio` | Error/status message: `Speech was not enabled` (status) - input action was configured to capture only DTMF input; `Speech overridden by DTMF` (status) - input action was configured to accept both speech/DTMF and user pressed keys; `ERRX: ...` (error) - user speech could not be recognized.
+`error` | `ERR1: Failed to analyze audio` | Error message.
 
 ##### Transcript text
 Field | Example | Description
