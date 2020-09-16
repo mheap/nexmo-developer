@@ -12,7 +12,6 @@ page:
                 <h1 id="heart" class="vertical-align Vlt-center">❤️</h1>
                 <h1 class="vertical-align Vlt-center">Hacktoberfest</h1>
               </div>
-              <br><br><br>
               <img class="Vlt-center" id="hacktoberfest-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599671200/Logo_nstaby.svg" alt="Ocktoberfest 2020">
               <br><br><br><br>
               <h2 class="Vlt-black"><b>Hacktoberfest 2020</b></h2>
@@ -296,7 +295,7 @@ page:
                 font-weight: 100;
               }
               #hacktoberfest-logo{
-                max-height: 755px;
+                max-height: 500px;
                 width: 100%;
               }
               #event-logo{
