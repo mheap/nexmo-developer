@@ -316,7 +316,7 @@ Option | Description | Required
 `maxDuration` | Controls maximum speech duration (from the moment user starts speaking). The default value is 60 (seconds). The range of possible values is between 1 and 60 seconds. | No
 
 
-The following example shows the parameters sent back to `eventUrl` webhook for DTMF input:
+The following example shows the parameters sent to the `eventUrl` webhook for DTMF input:
 
 ```json
 {
