@@ -187,7 +187,7 @@ Some hints might be provided using the `context` array parameter to improve reco
 
 If the user is calling not for the first time, they may already know the question to be asked, so the user may start speaking even before the audio message finishes. In order to support that, `bargeIn` parameter of the TTS (or `stream` - whatever action is used for the message) should be activated.
 
-> It's recommended to have the very first TTS/audio message, for example, some short initial greeting, with inactivated "barge in" option because of better user experience (so that the user doesn't unintentionally interrupt the message even not starting to hear it) and increasing speech recognition accuracy (since at the very beginning of the call there is a higher probability of background noise affecting the recognition).
+> It is recommended to have the initial TTS/audio message be a short initial greeting without activating the `bargeIn` option to improve the user experience. If `bargeIn` is turned on for the first initial greeting, then the user may inadvertently interrupt it without hearing the prompt at all, since background noise may be interpreted by the application as an active interaction in those first moments.
 
 ### Event Payload Example
 
