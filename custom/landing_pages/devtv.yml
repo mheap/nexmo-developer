@@ -36,11 +36,11 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="22">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="22a">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="22a" role="tab">
                         <b>22</b>
                         <p class="show">Mistakes Were Made</p>
                       </div>
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="22b">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="22b" role="tab">
                         <p class="show">Lauren Learns Things</p>
                       </div>
                     </span>
@@ -55,7 +55,7 @@ page:
                       <b>24</b>
                     </div>
                   </div>
-                  <div class="Vlt-table__cell Vlt-tabs__link" id="25">
+                  <div class="Vlt-table__cell Vlt-tabs__link" id="25" role="tab">
                     <div class="calendar-item">
                       <b>25</b>
                       <p class="show"><span class="Vlt-badge Vlt-badge--green Vlt-badge--transparent">new</span> Build a Thing</p>
@@ -63,7 +63,7 @@ page:
                   </div>
                 </div>
                 <div class="Vlt-table__row">
-                  <div class="Vlt-table__cell Vlt-tabs__link" id="28">
+                  <div class="Vlt-table__cell Vlt-tabs__link" id="28" role="tab">
                     <div class="calendar-item">
                       <b>28</b>
                       <p class="show">Week.init()</p>
@@ -71,11 +71,11 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="29">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="29a">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="29a" role="tab">
                         <b>29</b>
                         <p class="show">Mistakes Were Made</p>
                       </div>
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="29b">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="29b" role="tab">
                         <p class="show">Lauren Learns Things</p>
                       </div>
                     </span>
@@ -104,11 +104,11 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="6">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="6a">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="6a" role="tab">
                         <b>6</b>
                         <p class="show">Mistakes Were Made</p>
                       </div>
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="6b">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="6b" role="tab">
                         <p class="show">Lauren Learns Things</p>
                       </div>
                     </span>
@@ -123,7 +123,7 @@ page:
                       <b>8</b>
                     </div>
                   </div>
-                  <div class="Vlt-table__cell Vlt-tabs__link" id="9">
+                  <div class="Vlt-table__cell Vlt-tabs__link" id="9" role="tab">
                     <div class="calendar-item">
                       <b>9</b>
                       <p class="show">Build A Thing</p>
@@ -156,7 +156,7 @@ page:
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
                         <h5>Adding Screen Sharing to a Video API Screenshare</h5>
-                        Sometimes saying something isn’t enough. You need to be able to share your screen with others. In this episode, we’ll add the ability to share our screen using the Vonage Video API in a VueJS application.
+                        Sometimes saying something isn't enough. You need to be able to share your screen with others. In this episode, we'll add the ability to share our screen using the Vonage Video API in a VueJS application.
                       </p>
                       <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
                         <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
@@ -205,7 +205,7 @@ page:
                         <p class="Vlt-col Vlt-right mobile-justify">19:00 London / 14:00 New York / 11:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
-                        Guests Tessa Mero and Becky Peltz are back! Today we will begin building our application that combines the Cloudinary API and Vonage’s Video API.
+                        Guests Tessa Mero and Becky Peltz are back! Today we will begin building our application that combines the Cloudinary API and Vonage's Video API.
                         <br><br>
                         <a href="https://twitter.com/tessamero" target="_blank">Tessa Mero</a>
                         is a Developer Advocate at Cloudinary. She regularly organizes meetups, such as APIs, Vue.js, JAMStack, and Developer Relations. In the past, she has contributed to a leadership team for the open-source Joomla! Project for 5 years, including the board of directors, leading the production team, as well as evangelizing Joomla as a public speaker. She organized a PHP Conference for 3 years and how organizing an API Conference. She also is an avid career mentor and has helped countless developers become successful. In her free time, she likes to play video games, learn new tech, go camping, and eat KBBQ.
@@ -431,7 +431,7 @@ page:
                         <p class="Vlt-col Vlt-right mobile-justify">16:00 London / 11:00 New York / 08:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
-                        One of the first things you’ll want to add to your multi-party video apps is moderation, including the ability to mute or remove participants in the session. In this episode, we’ll add moderation using the Vonage Video API’s signaling feature.
+                        One of the first things you'll want to add to your multi-party video apps is moderation, including the ability to mute or remove participants in the session. In this episode, we'll add moderation using the Vonage Video API's signaling feature.
                       </p>
                       <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
                         <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
