@@ -161,15 +161,17 @@ page:
           - type: html
             html:
               content: "<h2>Discover the Vonage Voyagers</h2>"
-  # - row:
-      # - column:
-      #     - type: headshot
-      #       headshot:
-      #         name: Vonage Voyager
-      #         url: "https://www.nexmo.com/blog/author/martyn"
-      #         img_src: "/images/voyagers/headshot.png"
-      #         twitter: "vonage.voyager"
-      #         intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eu dui vitae fermentum. Nulla facilisi. Vivamus varius nunc at risus pretium, nec pharetra orci dignissim. Etiam hendrerit facilisis mi.
+  - row:
+      - column:
+          - type: headshot
+            headshot:
+              name: Héctor Zelaya
+              url: "https://www.hectorzelaya.dev/"
+              img_src: "https://fancy-photographer-02022018.s3.amazonaws.com/IMG_20200914_165954.jpg"
+              twitter: "inuxero"
+              intro: Software engineer, hobbyist musician and happy husband. Consultant working on DevOps, programming and technical writing.
+              location: El Salvador
+              github: nuxero
   - row:
       - column:
           - type: line_divider
