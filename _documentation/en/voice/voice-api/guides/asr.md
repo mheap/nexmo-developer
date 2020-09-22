@@ -58,8 +58,8 @@ Set `type` as `speech` for speech input only, or `[ "dtmf", "speech" ]` to accep
 
 The expected language of user speech should be specified as the `language` parameter (`en-US` by default).
 
-| #### Supported languages
-|
+#### Supported languages
+
 | Language | Code
 | ---- | ----
 | Afrikaans (South Africa) | `af-ZA`
