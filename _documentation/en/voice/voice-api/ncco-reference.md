@@ -250,11 +250,12 @@ The following NCCO example shows how to configure an IVR endpoint:
     "eventUrl": [
       "https://example.com/ivr"
     ],
+    "type": [ "dtmf", "speech" ],
     "dtmf": {
       "maxDigits": 1
     },
     "speech": {
-      "uuid": ["aaaaaaaa-bbbb-cccc-dddd-0123456789ab"]
+      "context": [ "sales", "support" ]
     }
   }
 ]
@@ -274,12 +275,13 @@ The following NCCO example shows how to use `bargeIn` to allow a user to interru
     "eventUrl": [
       "https://example.com/ivr"
     ],
+    "type": [ "dtmf", "speech" ],	
     "dtmf": {
       "maxDigits": 1
     },
     "speech": {
-      "uuid": ["aaaaaaaa-bbbb-cccc-dddd-0123456789ab"]
-    }
+      "context": [ "sales", "support" ]
+    }	
   }
 ]
 ```
@@ -288,8 +290,9 @@ The following options can be used to control an `input` action:
 
 Option | Description | Required
 -- | -- | --
-`dtmf` | [DTMF settings](#dtmf-input-settings). Required if `speech` is not provided. Should be specified to enable DTMF input. If all the DTMF input settings will have default values, it should be specified as empty object: `dtmf: { }`. | No
-`speech` | [Speech recognition settings](#speech-recognition-settings). Required if `dtmf` is not provided. Should be specified to enable speech input. | No
+`type` | Acceptable input type, can be set as `[ "dtmf" ]` for DTMF input only, `[ "speech" ]` for ASR only, or `[ "dtmf", "speech" ]` for both. | Yes
+`dtmf` | [DTMF settings](#dtmf-input-settings). | No
+`speech` | [Speech recognition settings](#speech-recognition-settings). | No
 `eventUrl` | Nexmo sends the digits pressed by the callee to this URL 1) after `timeOut` pause in activity or when *#* is pressed for DTMF or 2) after user stops speaking or `30` seconds of speech for speech input.  | No
 `eventMethod` | The HTTP method used to send event information to `event_url` The default value is `POST`.| No
 
@@ -305,7 +308,7 @@ Option | Description | Required
 
 Option | Description | Required
 -- | -- | --
-`uuid` | The unique ID of the Call leg for the user to capture the speech of, defined as an array with a single element. | Yes
+`uuid` | The unique ID of the Call leg for the user to capture the speech of, defined as an array with a single element. The first joined leg of the call by default. | No
 `endOnSilence` | Controls how long the system will wait after user stops speaking to decide the input is completed. The default value is `2` (seconds). The range of possible values is between 1 second and 10 seconds. | No
 `language` | Expected language of the user's speech. Format: BCP-47. Default: `en-US`. [List of supported languages](/voice/voice-api/guides/asr#language). | No
 `context` | Array of hints (strings) to improve recognition quality if certain words are expected from the user. | No
@@ -313,13 +316,11 @@ Option | Description | Required
 `maxDuration` | Controls maximum speech duration (from the moment user starts speaking). The default value is 60 (seconds). The range of possible values is between 1 and 60 seconds. | No
 
 
-The following example shows the parameters sent to `eventUrl` for DTMF input:
+The following example shows the parameters sent to the `eventUrl` webhook for DTMF input:
 
 ```json
 {
-  "speech": {
-    "error": "Speech was not enabled"
-  },
+  "speech": { "results": [ ] },
   "dtmf": {
     "digits": "1234",
     "timed_out": true
@@ -367,36 +368,7 @@ The following example shows the parameters sent back to the `eventUrl` webhook f
 
 ### Input Return Parameters
 
-Input parameters which are returned to the `eventUrl` are:
-
-Name | Description
--- | --
-`uuid` | The unique ID of the Call leg for the user initiating the input.
-`conversation_uuid` | The unique ID for this conversation.
-`dtmf` | [DTMF capturing output](#dtmf-input-return-parameters)
-`speech` | [Speech recognition output](#speech-input-return-parameters)
-
-#### DTMF Input Return Parameters
-
-Name | Description
--- | --
-`timed_out` | Returns `true` if this input timed out based on the value of `timeOut`.
-`digits` | The numbers input by your callee, in order.
-
-#### Speech Input Return Parameters
-
-Name | Description
--- | --
-`timeout_reason` | Indicates if the input ended when user stopped speaking (`end_on_silence_timeout`), by max duration timeout (`max_duration`) or if the user didn't say anything (`start_timeout`)
-`results` | Array of [speech recognition results](#speech-recognition-results)
-
-##### Speech Recognition Results
-
-Name | Description
--- | --
-`text` | Transcript text representing the words that the user spoke.
-`confidence` | The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater likelihood that the recognized words are correct.
-
+See [Webhook Reference](/voice/voice-api/webhook-reference#input) for input parameters which are returned to the `eventUrl`.
 
 ## Notify
 

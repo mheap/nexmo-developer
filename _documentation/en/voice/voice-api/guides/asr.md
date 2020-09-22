@@ -22,6 +22,10 @@ Typically, ASR is used in conjunction with an audio message playing to the user.
 [
   {
     "action": "talk",
+    "text": "Hello!"
+  },
+  {
+    "action": "talk",
     "text": "Please tell us, how can we help you today?",
     "bargeIn": true
   },
@@ -31,10 +35,8 @@ Typically, ASR is used in conjunction with an audio message playing to the user.
     ],
     "eventMethod": "POST",
     "action": "input",
+    "type": [ "speech" ],
     "speech": {
-      "uuid": [
-        "aaaaaaaa-bbbb-cccc-dddd-0123456789ab"
-      ],
       "language": "en-gb",
       "context": [
         "support",
@@ -49,16 +51,15 @@ Typically, ASR is used in conjunction with an audio message playing to the user.
 
 The [NCCO Reference Guide](/voice/voice-api/ncco-reference#speech-recognition-settings) contains information on all the possible parameters that can be used in conjunction with the ASR `input` NCCO action.
 
-### Call ID
-
-ASR action (`input` with `speech`) cannot be executed for the whole conversation; it’s performed against the call (leg), so the call identifier should be explicitly specified in the NCCO as the `speech.uuid` parameter.
+### Input Type
+Set `type` as `speech` for speech input only, or `[ "dtmf", "speech" ]` to accept both speech or [DTMF](/voice/voice-api/guides/dtmf).
 
 ### Language
 
 The expected language of user speech should be specified as the `language` parameter (`en-US` by default).
 
-| #### Supported languages
-|
+#### Supported languages
+
 | Language | Code
 | ---- | ----
 | Afrikaans (South Africa) | `af-ZA`
@@ -185,6 +186,8 @@ Some hints might be provided using the `context` array parameter to improve reco
 ### Barge In
 
 If the user is calling not for the first time, they may already know the question to be asked, so the user may start speaking even before the audio message finishes. In order to support that, `bargeIn` parameter of the TTS (or `stream` - whatever action is used for the message) should be activated.
+
+> It is recommended to have the initial TTS/audio message be a short initial greeting without activating the `bargeIn` option to improve the user experience. If `bargeIn` is turned on for the first initial greeting, then the user may inadvertently interrupt it without hearing the prompt at all, since background noise may be interpreted by the application as an active interaction in those first moments.
 
 ### Event Payload Example
 
