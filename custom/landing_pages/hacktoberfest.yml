@@ -13,7 +13,11 @@ page:
                 <h1 class="vertical-align Vlt-center">Hacktoberfest</h1>
               </div>
               <img class="Vlt-center" id="hacktoberfest-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599671200/Logo_nstaby.svg" alt="Ocktoberfest 2020">
-              <br><br><br><br>
+              <div class="Vlt-grid Nxd-landing-row">
+                <div class="Vlt-col Nxd-landing-col">
+                  <hr class="hr--tall"></hr>
+                </div>
+              </div>
               <h2 class="Vlt-black"><b>Hacktoberfest 2020</b></h2>
               <h5 class="text-grey">
                 Hacktoberfest — brought to you by DigitalOcean in partnership with Dev & Intel — is a month-long celebration of open source software. Maintainers are invited to guide would-be contributors towards issues that will help move the project forward, and contributors get the opportunity to give back to both projects they like and others they've just discovered. No contribution is too small — bug fixes and documentation updates are valid ways of participating.
@@ -27,9 +31,11 @@ page:
               <h5 class="text-grey">
                 Vonage is thrilled to be a Hacktoberfest 2020 partner. We’re no strangers to Open Source, with our libraries, code snippets and demos all on GitHub. We’re looking forward to supporting participants, sharing our knowledge and chatting about how important and awesome open source contributions can be!
               </h5>
-              <br><br><br>
-
-
+              <div class="Vlt-grid Nxd-landing-row">
+                <div class="Vlt-col Nxd-landing-col">
+                  <hr class="hr--tall"></hr>
+                </div>
+              </div>
               <h2 class="Vlt-black"><b>How you can contribute</b></h2>
               <h5 class="text-grey">
                 We invite everyone to participate and contribute to the Vonage projects, regardless of their background and experience. The Vonage projects are on
@@ -37,48 +43,226 @@ page:
                  and you are welcome to contribute to any repository.
               </h5>
               <br>
-              <h4 class="Vlt-black"><b>Details on suggested repositories for contributions are coming soon!</b></h4>
-
-              <div class="Vlt-table--data hide">
+              <div class="Vlt-table--data scrolling">
                 <div class="Vlt-table__header">
-                  <div class="Vlt-table__cell"><h3 class="Vlt-black">Project</h3></div>
-                  <div class="Vlt-table__cell"><h3 class="Vlt-black">Keywords</h3></div>
-                  <div class="Vlt-table__cell"><h3 class="Vlt-black">Ideas and links</h3></div>
+                  <div class="Vlt-table__cell"><h3 class="Vlt-black table-header-mobile ">Project</h3></div>
+                  <div class="Vlt-table__cell"><h3 class="Vlt-black table-header-mobile">Keywords</h3></div>
+                  <div class="Vlt-table__cell"><h3 class="Vlt-black table-header-mobile">Ideas and links</h3></div>
                 </div>
                 <div class="Vlt-table__row">
                   <div class="Vlt-table__cell">
+                    <a href="https://github.com/Nexmo/nexmo-curl-code-snippets" target="_blank" class="text-purple"><b>Nexmo cURL Examples</b></a>
                   </div>
                   <div class="Vlt-table__cell">
+                    <p class="Vlt-black">API, curl, Examples</p>
                   </div>
                   <div class="Vlt-table__cell">
-                  </div>
-                </div>
-                <div class="Vlt-table__row">
-                  <div class="Vlt-table__cell">
-                  </div>
-                  <div class="Vlt-table__cell">
-                  </div>
-                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Improvements to our curl examples are very welcome!</p>
                   </div>
                 </div>
                 <div class="Vlt-table__row">
                   <div class="Vlt-table__cell">
+                    <a href="https://github.com/Nexmo/nexmo-cli" target="_blank" class="text-purple"><b>Nexmo CLI</b></a>
                   </div>
                   <div class="Vlt-table__cell">
+                    <p class="Vlt-black">CLI, JS</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Build the improvements you would like to see!</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/Nexmo/repo-standards" target="_blank" class="text-purple"><b>Nexmo Repository Standards</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">GitHub, Examples</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Share your best practices around repositories.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/nexmo-community/ncco-examples" target="_blank" class="text-purple"><b>Nexmo NCCO Examples</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Voice API, Examples</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Share voice examples.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/Vonage/vonage-go-sdk" target="_blank" class="text-purple"><b>Nexmo Server SDK For Go</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Go, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Brand new library, take it for a spin and fix what you find!</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/Nexmo/nexmo-spring-boot-starter" target="_blank" class="text-purple"><b>Nexmo Spring Boot Starter</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Java, Examples</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Share your best practices around repositories.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-java-sdk" target="_blank" class="text-purple"><b>Vonage Server SDK for Java</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Java, SDK</p>
                   </div>
                   <div class="Vlt-table__cell">
                   </div>
                 </div>
                 <div class="Vlt-table__row">
                   <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-java-code-snippets" target="_blank" class="text-purple"><b>Vonage Quickstart Examples for Java</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Java, Examples, Webhooks</p>
                   </div>
                   <div class="Vlt-table__cell">
                   </div>
+                </div>
+                <div class="Vlt-table__row">
                   <div class="Vlt-table__cell">
+                    <a href="https://github.com/Vonage/vonage-node-sdk" target="_blank" class="text-purple"><b>Vonage Server SDK for Node.js</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">JS, Node, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Version 2 types.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-dotnet-sdk" target="_blank" class="text-purple"><b>Vonage Client Library for .NET</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">.NET, Async</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Add async pattern to internal API library to allo support for async in the library. <a href="https://github.com/Vonage/vonage-dotnet-sdk/issues/126" target="_blank" class="text-purple">The open issue here.</a></p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-dotnet-sdk" target="_blank" class="text-purple"><b>Vonage Client Library for .NET</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">.NET, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Open Issue: <a href="https://github.com/Vonage/vonage-dotnet-sdk/issues/219" target="_blank" class="text-purple">Incorrect direct enumeration in workflow.</a></p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-dotnet-sdk" target="_blank" class="text-purple"><b>Vonage Client Library for .NET</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">.NET, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Open Issue: Need to properly ignore the Status in the Delivery receipt struct. <a href="https://github.com/Vonage/vonage-dotnet-sdk/issues/212" target="_blank" class="text-purple">This causes issues with non-default contract resolvers.</a></p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-php-sdk-core" target="_blank" class="text-purple"><b>Client Library for PHP</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">PHP, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">General work around our PHP SDK.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-php-code-snippets" target="_blank" class="text-purple"><b>Vonage APIs Quickstart Examples for PHP</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">PHP, Examples, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Any additional information we can use to make our code snippets clearer for users.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/Nexmo/php-skeleton-app" target="_blank" class="text-purple"><b>Vonage PHP Skeleton Application</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">PHP, SMS, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Any additional starter functionality for new users testing our API.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/Nexmo/nexmo-laravel" target="_blank" class="text-purple"><b>Nexmo Package for Laravel</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">PHP, Laravel</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Better integration with Laravel, updating to remove deprecated calls.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/Vonage/vonage-ruby-sdk" target="_blank" class="text-purple"><b>Vonage Server SDK for Ruby</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Ruby, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Continue building the static typing into the codebase.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/Nexmo/nexmo-rack" target="_blank" class="text-purple"><b>Nexmo Rack Middleware</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Ruby, Rack, Middleware</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Additional middleware functionality is most welcome!</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/Nexmo/nexmo-rails" target="_blank" class="text-purple"><b>Vonage Rails Gem</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Ruby, Rails</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Is there any additional functionality that would make this more useful? What's missing?</p>
                   </div>
                 </div>
               </div>
-              <br>
+              <div class="Vlt-center width-100 vertical-align mobile-hide">
+                <p class="text-grey mobile-hide">
+                <svg class="Vlt-icon Vlt-icon--small Vlt-grey-darker mobile-hide§"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-arrow-thin-down"></use></svg>  Scroll for more repos</p>
+              </div>
+              <br><br>
+              <h2 class="Vlt-black"><b>Swag</b></h2>
               <h5 class="text-grey">
                 If you have made a valid contribution to one of our repos, you can choose to receive either a $5 Open Collective Gift Card or a pair of Bamboo Vonage Socks! 
                 <br><br>
@@ -86,73 +270,275 @@ page:
                   <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrMXMw6Nwd3Rnjn4">Claim your reward!</a>
                 </div>
               </h5>
-              <br><br><br>
+              <div class="Vlt-grid Nxd-landing-row">
+                <div class="Vlt-col Nxd-landing-col">
+                  <hr class="hr--tall"></hr>
+                </div>
+              </div>
 
-              <h2 class="Vlt-black"><b>Events</b></h2>
+              <h2 class="Vlt-black"><b>Events - Hacktoberfest Tuesdays</b></h2>
               <h5 class="text-grey">
-                We will be hosting a series of Hacktoberfest online events every Tuesday in October, and welcome developers to join us in supporting open source by contributing changes to Vonage projects.  Register and attend any of our events to earn a Hacktoberfest limited edition swag and more.
+                We will be hosting a series of Hacktoberfest online events every Tuesday in October. Join us to learn about open source and how to make your first contribution, watch demos of cool projects and hack together with like-minded developers. Register to attend any of our events now!
               </h5>
               <br>
-              <h3 class="Vlt-black"><b>Hacktoberfest Tuesdays</b></h3>
               <div class="Vlt-grid Vlt-grid--stack-flush">
                 <a href="https://organize.mlh.io/participants/events/4079-hacktoberfest-tuesdays-east-coast-and-more" target="_blank" class="Vlt-col Vlt-col--1of2">
-                  <div class="Vlt-card">
-                    <div class="Vlt-card__content">
-                    <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600335978/Group_1_tfl11z.png" alt="Hacktoberfest 2020">
-                    <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Americas</b></h3>
-                    <h4 class="Vlt-center Vlt-white">October 6, 2020</h4>
-                    <h4 class="Vlt-center Vlt-white">10PM UTC <span class="text-blue">   6PM EDT / 3PM PDT</span></h4>
+                  <div class="Vlt-card event-card">
+                    <div class="Vlt-card__content Vlt-grid">
+                      <div class="Vlt-col Vlt-col--1of3">
+                        <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600335978/Group_1_tfl11z.png" alt="Hacktoberfest 2020">
+                        <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Americas</b></h3>
+                      </div>
+                      <div class="Vlt-col Vlt-col--2of3 card-line card-details">
+                        <h2 class="text-blue mobile-hide"><b>Hacktoberfest<br>Tuesdays</b></h2>
+                        <h3 class="Vlt-white">Tuesday, October 6</h3>
+                        <h4 class="text-blue">Starts at <span class="Vlt-white"> 18:00 EDT / 22:00 UTC</span></h4>
+                      </div>
                     </div>
                   </div>
                 </a>
+
                 <a href="https://organize.mlh.io/participants/events/4099-hacktoberfest-tuesdays-asia" target="_blank" class="Vlt-col Vlt-col--1of2">
-                  <div class="Vlt-card">
-                    <div class="Vlt-card__content">
-                    <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600335978/Group_3_bbji64.png" alt="Hacktoberfest 2020">
-                    <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Asia</b></h3>
-                    <h4 class="Vlt-center Vlt-white">October 13, 2020</h4>
-                    <h4 class="Vlt-center Vlt-white">10AM UTC <span class="text-blue">   6PM SGT</span></h4>
+                  <div class="Vlt-card event-card">
+                    <div class="Vlt-card__content Vlt-grid">
+                      <div class="Vlt-col Vlt-col--1of3">
+                        <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600335978/Group_3_bbji64.png" alt="Hacktoberfest 2020">
+                        <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Asia</b></h3>
+                      </div>
+                      <div class="Vlt-col Vlt-col--2of3 card-line card-details">
+                        <h2 class="text-blue mobile-hide"><b>Hacktoberfest<br>Tuesdays</b></h2>
+                        <h3 class="Vlt-white">Tuesday, October 13</h3>
+                        <h4 class="text-blue">Starts at <span class="Vlt-white">18:00 SGT / 10:00 UTC</span></h4>
+                      </div>
                     </div>
                   </div>
                 </a>
+
                 <a href="https://organize.mlh.io/participants/events/4100-hacktoberfest-tuesdays-israel" target="_blank" class="Vlt-col Vlt-col--1of2">
-                  <div class="Vlt-card">
-                    <div class="Vlt-card__content">
-                    <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600335978/Group_2_jtrbfa.png" alt="Hacktoberfest 2020">
-                    <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Israel</b></h3>
-                    <h4 class="Vlt-center Vlt-white">October 20, 2020</h4>
-                    <h4 class="Vlt-center Vlt-white">3PM UTC <span class="text-blue">    6PM IDT</span></h4>
+                  <div class="Vlt-card event-card">
+                    <div class="Vlt-card__content Vlt-grid">
+                      <div class="Vlt-col Vlt-col--1of3">
+                        <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600335978/Group_2_jtrbfa.png" alt="Hacktoberfest 2020">
+                        <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Israel</b></h3>
+                      </div>
+                      <div class="Vlt-col Vlt-col--2of3 card-line card-details">
+                        <h2 class="text-blue mobile-hide"><b>Hacktoberfest<br>Tuesdays</b></h2>
+                        <h3 class="Vlt-white">Tuesday, October 20</h3>
+                        <h4 class="text-blue">Starts at <span class="Vlt-white"> 18:00 IDT / 15:00 UTC</span></h4>
+                      </div>
                     </div>
                   </div>
                 </a>
+
                 <a href="https://organize.mlh.io/participants/events/4101-hacktoberfest-tuesdays-london-and-more" target="_blank" class="Vlt-col Vlt-col--1of2">
-                  <div class="Vlt-card">
-                    <div class="Vlt-card__content">
-                    <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600335978/Group_i5tibp.png" alt="Hacktoberfest 2020">
-                    <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Europe</b></h3>
-                    <h4 class="Vlt-center Vlt-white">October 27, 2020</h4>
-                    <h4 class="Vlt-center Vlt-white">6PM UTC <span class="text-blue">7PM CET</span></h4>
+                  <div class="Vlt-card event-card">
+                    <div class="Vlt-card__content Vlt-grid">
+                      <div class="Vlt-col Vlt-col--1of3">
+                        <img class="Vlt-center" id="event-logo" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600335978/Group_i5tibp.png" alt="Hacktoberfest 2020">
+                        <h3 class="Vlt-center Vlt-white Vlt-margin--A-top1"><b>Europe</b></h3>
+                      </div>
+                      <div class="Vlt-col Vlt-col--2of3 card-line card-details">
+                        <h2 class="text-blue mobile-hide"><b>Hacktoberfest<br>Tuesdays</b></h2>
+                        <h3 class="Vlt-white">Tuesday, October 27</h3>
+                        <h4 class="text-blue">Starts at <span class="Vlt-white"> 19:00 CET / 18:00 UTC</span></h4>
+                      </div>
                     </div>
                   </div>
                 </a>
               </div>
-              <br><br><br>
+              <div class="Vlt-grid Nxd-landing-row">
+                <div class="Vlt-col Nxd-landing-col">
+                  <hr class="hr--tall"></hr>
+                </div>
+              </div>
 
               <h2 class="Vlt-black"><b>Video Resources</b></h2>
               <div class="Vlt-grid Vlt-grid--stack-flush">
-                <iframe class="Vlt-col Vlt-col--1of2" src="https://www.youtube.com/embed/zYJpYMCy6PA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe class="Vlt-col Vlt-col--1of2" src="https://www.youtube.com/embed/W6ztOG7ncNg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="Vlt-col Vlt-col--1of3" src="https://www.youtube.com/embed/zYJpYMCy6PA" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="Vlt-col Vlt-col--1of3" src="https://www.youtube.com/embed/W6ztOG7ncNg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="Vlt-col Vlt-col--1of3" src="https://www.youtube.com/embed/0be98VXGHh0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
               </div>
-              <br><br><br>
+              <div class="Vlt-grid Nxd-landing-row">
+                <div class="Vlt-col Nxd-landing-col">
+                  <hr class="hr--tall"></hr>
+                </div>
+              </div>
 
-              <h2 class="Vlt-black"><b>Talks</b></h2>
+              <h2 class="Vlt-black"><b>Featured Talks</b></h2>
               <div class="Vlt-grid Vlt-grid--stack-flush">
-                <a href="https://www.digitalocean.com/community/tech_talks/level-up-as-an-open-source-contributor" target="_blank" class="Vlt-col Vlt-col--1of3 talks">
-                  <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599751033/lorna-hacktoberfest_w579fk.png" alt="Hacktoberfest Level Up as asn Open Source Contributer Lorna Mitchell">
+                <a href="https://organize.mlh.io/participants/events/4525-acm-juit-open-source-season-hacktoberfest-meetup" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                  <div class="Vlt-card talk2-card">
+                    <div class="Vlt-card__content Vlt-grid">
+                      <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                        <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600853933/beng3_n3mxpj.jpg" alt="Garann Means"><img>
+                        <h3 class="Vlt-white Vlt-center speaker"><b>Ben Greenberg</b></h3>
+                        <h5 class="Vlt-white Vlt-center italic">Ruby Developer Advocate</h5>
+                      </div>
+                      <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                        <h3 class="Vlt-white Vlt-center">The Benefits of Participating in<br> The Open Source Community</h3>
+                        <h3 class="Vlt-white Vlt-center"><b>Thursday, October 1</b></h3>
+                        <h5 class="Vlt-white Vlt-center">5:30 EDT / 21:30 UTC</h5>
+                      </div>
+                    </div>
+                  </div>
                 </a>
+                <a href="https://www.digitalocean.com/community/tech_talks/level-up-as-an-open-source-contributor" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                  <div class="Vlt-card talk-card">
+                    <div class="Vlt-card__content Vlt-grid">
+                      <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                        <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811773/lorna-mitchel_gphcbt.jpg" alt="Lorna Mitchel"><img>
+                        <h3 class="Vlt-white Vlt-center speaker"><b>Lorna Mitchel</b></h3>
+                        <h5 class="Vlt-white Vlt-center italic">Developer Advocate</h5>
+                      </div>
+                      <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                        <h3 class="Vlt-white Vlt-center">Level Up as an<br>Open Source Contributor</h3>
+                        <h3 class="Vlt-white Vlt-center"><b>Tuesday, October 6</b></h3>
+                        <h5 class="Vlt-white Vlt-center">11:00 EDT / 15:00 UTC</h5>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
               </div>
-              <br><br><br>
+              <br>
+              <div class="Vlt-accordion hide">
+                <button class="Vlt-accordion__trigger"><h2>See All Talks</h2></button>
+                <div class="Vlt-accordion__content">
+                  <div class="Vlt-grid Vlt-grid--stack-flush">
+                    <a href="https://www.digitalocean.com/community/tech_talks/level-up-as-an-open-source-contributor" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                      <div class="Vlt-card talk-card">
+                        <div class="Vlt-card__content Vlt-grid">
+                          <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                            <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811773/lorna-mitchel_gphcbt.jpg" alt="Lorna Mitchel"><img>
+                            <h3 class="Vlt-white Vlt-center speaker"><b>Lorna Mitchel</b></h3>
+                            <h5 class="Vlt-white Vlt-center italic">Developer Advocate</h5>
+                          </div>
+                          <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                            <h3 class="Vlt-white Vlt-center">Level Up as an<br>Open Source Contributor</h3>
+                            <h3 class="Vlt-white Vlt-center"><b>Tuesday, October 6</b></h3>
+                            <h5 class="Vlt-white Vlt-center">11:00 EDT / 15:00 UTC</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="https://organize.mlh.io/participants/events/4087-hacktoberfest-at-tiet" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                      <div class="Vlt-card talk2-card">
+                        <div class="Vlt-card__content Vlt-grid">
+                          <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                            <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811650/Garann_Means_trf17a.jpg" alt="Garann Means"><img>
+                            <h3 class="Vlt-white Vlt-center speaker"><b>Garann Means</b></h3>
+                            <h5 class="Vlt-white Vlt-center italic">JS Developer Advocate</h5>
+                          </div>
+                          <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                            <h3 class="Vlt-white Vlt-center">The Benefits of Participating in The Open Source Community</h3>
+                            <h3 class="Vlt-white Vlt-center"><b>Saturday, October 10</b></h3>
+                            <h5 class="Vlt-white Vlt-center">10:30 IST / 5:00 UTC</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="https://www.digitalocean.com/community/tech_talks/level-up-as-an-open-source-contributor" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                      <div class="Vlt-card talk-card">
+                        <div class="Vlt-card__content Vlt-grid">
+                          <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                            <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811773/lorna-mitchel_gphcbt.jpg" alt="Lorna Mitchel"><img>
+                            <h3 class="Vlt-white Vlt-center speaker"><b>Lorna Mitchel</b></h3>
+                            <h5 class="Vlt-white Vlt-center italic">Developer Advocate</h5>
+                          </div>
+                          <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                            <h3 class="Vlt-white Vlt-center">Level Up as an<br>Open Source Contributor</h3>
+                            <h3 class="Vlt-white Vlt-center"><b>Tuesday, October 6</b></h3>
+                            <h5 class="Vlt-white Vlt-center">11:00 EDT / 15:00 UTC</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="https://organize.mlh.io/participants/events/4087-hacktoberfest-at-tiet" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                      <div class="Vlt-card talk2-card">
+                        <div class="Vlt-card__content Vlt-grid">
+                          <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                            <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811650/Garann_Means_trf17a.jpg" alt="Garann Means"><img>
+                            <h3 class="Vlt-white Vlt-center speaker"><b>Garann Means</b></h3>
+                            <h5 class="Vlt-white Vlt-center italic">JS Developer Advocate</h5>
+                          </div>
+                          <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                            <h3 class="Vlt-white Vlt-center">Level Up as an<br>Open Source Contributor</h3>
+                            <h3 class="Vlt-white Vlt-center"><b>Saturday, October 10</b></h3>
+                            <h5 class="Vlt-white Vlt-center">10:30 IST / 5:00 UTC</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="https://www.digitalocean.com/community/tech_talks/level-up-as-an-open-source-contributor" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                      <div class="Vlt-card talk-card">
+                        <div class="Vlt-card__content Vlt-grid">
+                          <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                            <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811773/lorna-mitchel_gphcbt.jpg" alt="Lorna Mitchel"><img>
+                            <h3 class="Vlt-white Vlt-center speaker"><b>Lorna Mitchel</b></h3>
+                            <h5 class="Vlt-white Vlt-center italic">Developer Advocate</h5>
+                          </div>
+                          <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                            <h3 class="Vlt-white Vlt-center">Level Up as an<br>Open Source Contributor</h3>
+                            <h3 class="Vlt-white Vlt-center"><b>Tuesday, October 6</b></h3>
+                            <h5 class="Vlt-white Vlt-center">11:00 EDT / 15:00 UTC</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="https://organize.mlh.io/participants/events/4087-hacktoberfest-at-tiet" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                      <div class="Vlt-card talk2-card">
+                        <div class="Vlt-card__content Vlt-grid">
+                          <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                            <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811650/Garann_Means_trf17a.jpg" alt="Garann Means"><img>
+                            <h3 class="Vlt-white Vlt-center speaker"><b>Garann Means</b></h3>
+                            <h5 class="Vlt-white Vlt-center italic">JS Developer Advocate</h5>
+                          </div>
+                          <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                            <h3 class="Vlt-white Vlt-center">Level Up as an<br>Open Source Contributor</h3>
+                            <h3 class="Vlt-white Vlt-center"><b>Saturday, October 10</b></h3>
+                            <h5 class="Vlt-white Vlt-center">10:30 IST / 5:00 UTC</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="https://www.digitalocean.com/community/tech_talks/level-up-as-an-open-source-contributor" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                      <div class="Vlt-card talk-card">
+                        <div class="Vlt-card__content Vlt-grid">
+                          <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                            <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811773/lorna-mitchel_gphcbt.jpg" alt="Lorna Mitchel"><img>
+                            <h3 class="Vlt-white Vlt-center speaker"><b>Lorna Mitchel</b></h3>
+                            <h5 class="Vlt-white Vlt-center italic">Developer Advocate</h5>
+                          </div>
+                          <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                            <h3 class="Vlt-white Vlt-center">Level Up as an<br>Open Source Contributor</h3>
+                            <h3 class="Vlt-white Vlt-center"><b>Tuesday, October 6</b></h3>
+                            <h5 class="Vlt-white Vlt-center">11:00 EDT / 15:00 UTC</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="https://organize.mlh.io/participants/events/4087-hacktoberfest-at-tiet" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
+                      <div class="Vlt-card talk2-card">
+                        <div class="Vlt-card__content Vlt-grid">
+                          <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
+                            <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811650/Garann_Means_trf17a.jpg" alt="Garann Means"><img>
+                            <h3 class="Vlt-white Vlt-center speaker"><b>Garann Means</b></h3>
+                            <h5 class="Vlt-white Vlt-center italic">JS Developer Advocate</h5>
+                          </div>
+                          <div class="Vlt-col Vlt-col--2of3 vertical-align">
+                            <h3 class="Vlt-white Vlt-center">Level Up as an<br>Open Source Contributor</h3>
+                            <h3 class="Vlt-white Vlt-center"><b>Saturday, October 10</b></h3>
+                            <h5 class="Vlt-white Vlt-center">10:30 IST / 5:00 UTC</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+
 
               <h2 class="Vlt-black hide"><b>Resources</b></h2>
               <ul class="Vlt-list Vlt-list--simple hide">
@@ -178,62 +564,121 @@ page:
                   </a>
                 </li>
               </ul>
-              <h2 class="Vlt-black hide"><b>FAQ</b></h2>
-              <h5 class="text-grey hide">
-                You can find answers to some Vonage-specific questions below. For Hacktoberfest FAQ, <a href="https://hacktoberfest.digitalocean.com/faq/" target="_blank" class="text-purple">please go here</a>.
+              <h2 class="Vlt-black "><b>FAQ</b></h2>
+              <h5 class="text-grey ">
+                You can find answers to some Vonage-specific questions below. For the official Hacktoberfest FAQ, <a href="https://hacktoberfest.digitalocean.com/faq/" target="_blank" class="text-purple">please see here</a>.
               </h5>
-              <br><br>
-              <h2 class="Vlt-black"><b>Get in touch</b></h2>
-              <ul class="Vlt-list Vlt-list--simple">
-                <li>
-                  <a href="https://discord.gg/hacktoberfest" target="_blank">
-                    <h4 class="text-purple skinny-link">
-                      Hacktoberfest Discord Server
-                    </h4>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://developer.nexmo.com/community/slack" target="_blank">
-                    <h4 class="text-purple skinny-link">
-                      Vonage Developer Community Slack
-                    </h4>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/vonage" target="_blank">
-                    <h4 class="text-purple skinny-link">
-                      GitHub
-                    </h4>
-                  </a>
-                </li>
-              </ul>
-              <h2 class="Vlt-black"><b>Follow Us</b></h2>
-              <ul class="Vlt-list Vlt-list--simple">
-                <li>
-                  <a href="https://twitter.com/VonageDev" target="_blank">
-                    <h4 class="text-purple skinny-link">
-                      VonageDev Twitter
-                    </h4>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.nexmo.com/blog" target="_blank">
-                    <h4 class="text-purple skinny-link">
-                      Vonage Blog
-                    </h4>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.twitch.tv/vonagedevs" target="_blank">
-                    <h4 class="text-purple skinny-link">
-                      Vonage Twitch
-                    </h4>
-                  </a>
-                </li>
-              </ul>
+              <br>
+              <h4>
+                <b>What swag can I earn from Vonage?</b>
+              </h4>
+              <h5 class="text-grey">
+                You can receive either a <a href="https://opencollective.com/gift-cards" target="_blank" class="text-purple">$5 USD Open Collective Gift Card</a> or a pair of Vonage-branded bamboo socks if you have made a valid contribution to one of our repos.
+              </h5>
+              <br>
+              <h4>
+                <b>How do I get the $5 Open Collective Gift Card or Vonage socks?</b>
+              </h4>
+              <h5 class="text-grey">
+                Fill in <a href="https://airtable.com/shrMXMw6Nwd3Rnjn4" target="_blank" class="text-purple">Vonage Hacktoberfest Reward Giveaway Form</a> to claim your reward. <a href="https://nexmo.dev/33Nt6tm" target="_blank" class="text-purple">Terms and Conditions can be found here.</a>
+              </h5>
+              <br>
+              <h4>
+                <b>Do PRs have to be merged to count towards earning Vonage swag?</b>
+              </h4>
+              <h5 class="text-grey">
+                No, so long as your PR is valid according to the rules of Hacktoberfest, your PR will count regardless of whether it has, or will be, merged.
+              </h5>
+              <br>
+              <h4>
+                <b>How will I receive the swag?</b>
+              </h4>
+              <h5 class="text-grey">
+                Winners will be contacted by email and/or mail at the address or email provided with the entry, to confirm the successful reward and the order of the prize. Gift Cards will be sent to the email address submitted on the <a href="https://airtable.com/shrMXMw6Nwd3Rnjn4" target="_blank" class="text-purple">Vonage Hacktoberfest Reward Giveaway Form</a> provided at the time of entry. <a href="https://opencollective.com/gift-cards" target="_blank" class="text-purple">Gift Card Terms</a> may apply. If the socks are chosen as the prize, note that we will start shipping these prizes at the start of November and be aware that shipping time may vary significantly based on your location.
+              </h5>
+              <br>
+              <h4>
+                <b>Where can I find more information about and contribute to Vonage projects?</b>
+              </h4>
+              <h5 class="text-grey">
+                Vonage projects and repositories can be found at:
+                <ul class="Vlt-list Vlt-list--simple">
+                  <br>
+                  <li><a href="https://github.com/Vonage" target="_blank" class="text-purple">https://github.com/Vonage</a></li>
+                  <li><a href="https://github.com/nexmo" target="_blank" class="text-purple">https://github.com/nexmo</a></li>
+                  <li><a href="https://github.com/nexmo-community" target="_blank" class="text-purple">https://github.com/nexmo-community</a></li>
+                  <li><a href="https://github.com/opentok" target="_blank" class="text-purple">https://github.com/opentok</a></li>
+                  <li><a href="https://github.com/opentok-community" target="_blank" class="text-purple">https://github.com/opentok-community</a></li>
+                </ul>
+              </h5>
 
+              <br>
+              <h4>
+                <b>I'm hosting a Hacktoberfest event, are any Vonage speakers available to give a talk?</b>
+              </h4>
+              <h5 class="text-grey">
+                Yes! We'd love to help you with your Hacktoberfest event! A list of speakers is available on the <a href="https://hacktoberfest.digitalocean.com/eventkit#customers" target="_blank" class="text-purple">Hacktoberfest Event Kit</a>. You can also email us at <a href="mailto:team.community@vonage.com" class="text-purple">community[at]vonage.com</a>
+              </h5>
 
-
+              <div class="Vlt-grid Nxd-landing-row">
+                <div class="Vlt-col Nxd-landing-col">
+                  <hr class="hr--tall"></hr>
+                </div>
+              </div>
+              <div class="Vlt-grid">
+                <div class="Vlt-col Vlt-col--1of2">
+                  <h2 class="Vlt-black"><b>Get in touch</b></h2>
+                  <ul class="Vlt-list Vlt-list--simple">
+                    <li>
+                      <a href="https://discord.gg/hacktoberfest" target="_blank">
+                        <h4 class="text-purple skinny-link">
+                          Hacktoberfest Discord Server
+                        </h4>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://developer.nexmo.com/community/slack" target="_blank">
+                        <h4 class="text-purple skinny-link">
+                          Vonage Developer Community Slack
+                        </h4>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/vonage" target="_blank">
+                        <h4 class="text-purple skinny-link">
+                          GitHub
+                        </h4>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="Vlt-col Vlt-col--1of2">
+                  <h2 class="Vlt-black"><b>Follow Us</b></h2>
+                  <ul class="Vlt-list Vlt-list--simple">
+                    <li>
+                      <a href="https://twitter.com/VonageDev" target="_blank">
+                        <h4 class="text-purple skinny-link">
+                          VonageDev Twitter
+                        </h4>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.nexmo.com/blog" target="_blank">
+                        <h4 class="text-purple skinny-link">
+                          Vonage Blog
+                        </h4>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.twitch.tv/vonagedevs" target="_blank">
+                        <h4 class="text-purple skinny-link">
+                          Vonage Twitch
+                        </h4>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
   - row:
     - column:
       - type: text
@@ -258,7 +703,6 @@ page:
               }
               .Vlt-table__cell{
                 background-color: #FFF !important;
-                border: 1px solid #54575E;
               }
               .title{
                 height: 100px !important;
@@ -274,15 +718,15 @@ page:
               .display-inline-block{
                 display: inline-block;
               }
-              .Vlt-card{
-                background-color: #54575E !important;
+              .event-card{
+                background-color: #06253F !important;
                 border: 1px solid #871FFF;
               }
               .Vlt-card:hover{
                 background-color: #871FFF !important;
               }
-              .talks:hover{
-                border: 3px solid #871FFF;
+              .card-line{
+                border-left: 1px solid #FD8DE0;
               }
               .text-purple{
                 color: #871FFF;
@@ -296,6 +740,30 @@ page:
               }
               .skinny-link{
                 font-weight: 100;
+              }
+              .avatar{
+                border-radius: 50%;
+                max-height: 124px;
+              }
+              .speaker{
+                margin-bottom: 0px !important;
+                margin-top: 16px !important;
+              }
+              .italic{
+                font-style: italic;
+              }
+              .talk-card{
+                background-color: rgba(135, 31, 255, 0.7);
+              }
+              .talk2-card{
+                background-color: #94C2DB;
+              }
+              .scrolling{
+                max-height: 8%;
+                overflow: scroll;
+              }
+              .width-100{
+                width: 100%;
               }
               #hacktoberfest-logo{
                 max-height: 500px;
@@ -319,5 +787,27 @@ page:
               }
               iframe{
                 min-height: 307px;
+              }
+              @media (max-width: 380px) {
+                .Vlt-table--data{
+                  margin-left: -48px !important;
+                }
+              }
+              @media (max-width: 640px) {
+                .table-header-mobile{
+                  font-size: 2rem !important;
+                }
+                .Vlt-table__cell{
+                  min-width: 12rem !important;
+                }
+                .card-details{
+                  border-left: none !important;
+                }
+                .mobile-hide{
+                  display: none;
+                }
+                .scrolling{
+                  width: 100vw;
+                }
               }
             </style>
