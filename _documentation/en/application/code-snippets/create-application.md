@@ -14,8 +14,8 @@ You will need to ensure that the following replaceable values are set in the exa
 
 Key | Description
 -- | --
-`NEXMO_API_KEY` | Your Nexmo API key.
-`NEXMO_API_SECRET` | Your Nexmo API secret.
+`VONAGE_API_KEY` | Your Nexmo API key.
+`VONAGE_API_SECRET` | Your Nexmo API secret.
 `APPLICATION_NAME` | The name for your Nexmo Application.
 
 ```code_snippets

@@ -33,11 +33,11 @@ The following replaceable information depends on the library and specific call:
 
 Key |	Description
 -- | --
-`NEXMO_API_KEY` | API key.
-`NEXMO_API_SECRET` | API secret.
-`NEXMO_APPLICATION_PRIVATE_KEY_PATH` |  Private key path.
-`NEXMO_APPLICATION_PRIVATE_KEY` | Private key.
-`NEXMO_APPLICATION_ID` | The Nexmo Application ID.
+`VONAGE_API_KEY` | API key.
+`VONAGE_API_SECRET` | API secret.
+`VONAGE_APPLICATION_PRIVATE_KEY_PATH` |  Private key path.
+`VONAGE_APPLICATION_PRIVATE_KEY` | Private key.
+`VONAGE_APPLICATION_ID` | The Vonage Application ID.
 
 ### Numbers
 
@@ -45,7 +45,7 @@ All phone numbers are in E.164 format.
 
 Key |	Description
 -- | --
-`NEXMO_NUMBER` | Replace with your Nexmo Number. E.g. 447700900000
+`VONAGE_NUMBER` | Replace with your Vonage Number. E.g. 447700900000
 `TO_NUMBER` | Replace with the number you are calling. E.g. 447700900001
 `SECOND_NUMBER` | Replace with number you are forwarding to. E.g. 447700900002
 
