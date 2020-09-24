@@ -56,22 +56,12 @@ Feature  | Reports Synchronous (GET endpoint) | Reports Asynchronous (POST endpo
 
 ## Pricing
 
-> The Reports API Beta is available free of charge for all customers until the 1st of October 2020. After that date, charges will be applied.
+From the **1st of October 2020**, Vonage is introducing two pricing plans for all new Reports API customers. These are shown in the following table:
 
-Charges are applied based on the quantity of requests and the volume of data retrieved as listed in the following table:
-
-Resource | Price
----- | ----
-Pay As You Go (PAYG) report generation | 0.0004€ per CDR
-Unlimited report generation | 450€ per month
-
-### Pricing example (`POST` requests)
-
-Assume you create an SMS report to retrieve one day of data and this report contains 10,000 CDRs, then the total charge for this report will be the following:
-
-```
-Charge = 10,000 * 0.0004€ = 4€
-```
+Plan | Price | Notes
+----|----|----
+Pay As You Go | 0.0004€ per CDR (0.40€ per 1000 CDRs) | Charges are applied based on the volume of data retrieved.
+Unlimited Plan |  450€ per month | You can download as much data as you like, included in the single price.
 
 ### Pricing example (`GET` requests)
 
@@ -82,6 +72,14 @@ Charge = 300 * 0.0004€ = 0.12€
 ```
 
 `GET` Requests (create and get JSON report) can return records either by ID or by a time period they belong to. Search by ID is not time-bounded. Time period search supports ranges of up to 24 hours.
+
+### Pricing example (`POST` requests)
+
+Assume you create an SMS report to retrieve one day of data and this report contains 10,000 CDRs, then the total charge for this report will be the following:
+
+```
+Charge = 10,000 * 0.0004€ = 4€
+```
 
 ## Code Snippets
 
