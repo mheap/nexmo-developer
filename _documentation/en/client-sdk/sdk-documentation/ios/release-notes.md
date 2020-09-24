@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 2.4.0 - 2020-09-24
+
+### Added
+
+- Expose the reason `NXMConnectionStatusReasonTokenExpired` on connection status `NXMConnectionStatusDisconnected` for the `NXMClientDelegate`.
+
 ## 2.3.0 - 2020-08-17
 
 ### Added
