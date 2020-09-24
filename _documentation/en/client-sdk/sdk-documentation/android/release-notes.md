@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 2.7.0 - Sep 24, 2020
+
+### Added
+
+- Expose the reason `NETWORK_ERROR` on connection status `DISCONNECTED` for the listener `onConnectionStatusChange(ConnectionStatus status, ConnectionStatusReason reason)`.
+
 ## Version 2.6.5 - Aug 24, 2020
 
 ### Enhancements
