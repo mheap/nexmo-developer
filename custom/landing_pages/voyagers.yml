@@ -172,6 +172,16 @@ page:
               intro: Software engineer, hobbyist musician and happy husband. Consultant working on DevOps, programming and technical writing.
               location: El Salvador
               github: nuxero
+      - column:
+          - type: headshot
+            headshot:
+              name: Michael Owolabi
+              url: 'https://imichaelowolabi.com/'
+              img_src: 'https://res.cloudinary.com/imichaelowolabi/image/upload/v1597830133/YoungM/Mic_headshot.jpg'
+              twitter: iMichaelOwolabi
+              intro: I am a Software Engineer from Lagos, Nigeria. I also write technical articles in a bid to make learning process easier for others. I love to travel and enjoy adventure when not writing code/articles
+              location: Lagos, Nigeria
+              github: iMichaelOwolabi
   - row:
       - column:
           - type: line_divider
