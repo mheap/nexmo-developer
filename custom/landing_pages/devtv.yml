@@ -355,7 +355,7 @@ page:
                             iOS Developer Advocate
                           </h5>
                           <p class="text-justify">
-                            Igor is a specialist in mobile development. Android is his platform and Kotlin is his language of choice. <br><br>At Vonage, he works closely with external developers using our SDK. His goal is to improve the developer experience by writing high-quality documentation, building sample projects, writing tutorials and polishing the Client SDK API.
+                            Igor Wojda is a passionate engineer with over a decade of software development experience. He is deeply interested in Android application architecture, Kotlin language and he is an active member of the open-source community. Igor is a conference speaker, technical proffer for ‘Kotlin In Action’ book, and author of ‘Android Development with Kotlin’ book. Igor enjoys sharing his passion for coding with other developers. Currently, he is working as Android Developer Advocate at Vonage.
                           </p>
                           <a class="Vlt-purple" href="https://www.nexmo.com/blog/2020/03/11/igor-wojda-joins-the-vonage-developer-relations-team-dr">
                             Read More
@@ -1020,13 +1020,22 @@ page:
                         <p class="Vlt-col Vlt-right mobile-justify">14:00 London / 09:00 New York / 06:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
-                        For the sequel, Paul will host Igor and Abdul to build the Android version of the project we started in the previous episode. What project you ask? "The V-app" of course - a messaging multi-platform application that lets uses chat via text, voice and video. The app will be built on top of the <a href="https://developer.nexmo.com/conversation/overview" target="_blank">Conversation APIs</a> using the Vonage Client SDKs.
-                        <br><br>
-                        Try the <a href="https://developer.nexmo.com/client-sdk/tutorials/in-app-messaging/introduction/kotlin" target="_blank"> Android chat app tutorial </a> before hand and join the stream with your questions!
+                        <h5>The browser is part of the conversation</h5>
+                        With iOS and Android now operational, it’s time to add the browser to the conversation. Paul will joined by Dwane and Michael to build the JavaScript version of the project we started in the previous episode. What project you ask? "The V-app" of course - a messaging multi-platform application that lets uses chat via text, voice and video. The app will be built on top of the Conversation APIs using the Vonage Client SDKs.
                       </p>
+                      <br>
+                      <b>Links:</b>
+                      <a href="https://developer.nexmo.com/conversation/overview" target="_blank">
+                        Vonage Conversation APIs
+                      </a>
+                      <b> - </b>
+                      <a href="https://developer.nexmo.com/client-sdk/tutorials/in-app-messaging/introduction/javascript" target="_blank">
+                        Creating a JavaScript chat app tutorial:
+                      </a>
+                      <br><br>
                       <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
                         <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        Conversation API - Android Client SDK
+                        Conversation APIs - JavaScript Client SDKs
                       </h5>
                     </div>
                     <div class="padding-top-32">
@@ -1056,40 +1065,42 @@ page:
                           </a>
                         </div>
                         <div class="Vlt-col Vlt-col--1of4">
-                          <h4 class="inline-block">About Abdul Ajetunmobi</h4>
-                          <a href="https://twitter.com/abdulajet" target="_blank">
+                          <h4 class="inline-block">About Dwane Hemmings</h4>
+                          <a href="https://twitter.com/lifelongdev" target="_blank">
                             <i class="icon icon-twitter"></i>
                           </a>
-                          <a href="https://github.com/abdulajet" target="_blank">
+                          <a href="https://github.com/conshus" target="_blank">
                             <i class="icon icon-github"></i>
                           </a>
                           <h5>
-                            iOS Developer Advocate
+                            Javascript Developer Advocate
                           </h5>
                           <p class="text-justify">
-                            Abdul is a Developer Advocate for Vonage. He has a background working in consumer products as an iOS Engineer. In his spare time, he enjoys biking, listening to music and mentoring those who are just beginning their journey in tech.
                           </p>
                           </br>
-                          <a class="Vlt-purple" href="https://abdulajet.me/">
-                            AbdulAjet.me
+                          <a class="Vlt-purple" href="https://dwane.io//">
+                            lifelong.dev
                           </a>
                         </div>
                         <div class="Vlt-col Vlt-col--1of4">
-                          <h4 class="inline-block">About Igor Wojda</h4>
-                          <a href="https://twitter.com/igorwojda" target="_blank">
+                          <h4 class="inline-block">About Michael Jolley</h4>
+                          <a href="https://twitter.com/baldbeardbuild" target="_blank">
                             <i class="icon icon-twitter"></i>
                           </a>
-                          <a href="https://github.com/igorwojda" target="_blank">
+                          <a href="https://github.com/MichaelJolley" target="_blank">
                             <i class="icon icon-github"></i>
                           </a>
                           <h5>
-                            iOS Developer Advocate
+                            Developer Advocate
                           </h5>
                           <p class="text-justify">
-                            Igor is a specialist in mobile development. Android is his platform and Kotlin is his language of choice. <br><br>At Vonage, he works closely with external developers using our SDK. His goal is to improve the developer experience by writing high-quality documentation, building sample projects, writing tutorials and polishing the Client SDK API.
+                            Michael is the bald, bearded builder.
+                            <br>
+                            Using his 20 years experience in software development and DevOps, this follicly challenged developer spends his days focused on helping others succeed.
                           </p>
-                          <a class="Vlt-purple" href="https://www.nexmo.com/blog/2020/03/11/igor-wojda-joins-the-vonage-developer-relations-team-dr">
-                            Read More
+                          </br>
+                          <a class="Vlt-purple" href="https://baldbeardedbuilder.com/">
+                             BaldBeardedBuilder.com
                           </a>
                         </div>
                       </div>
@@ -1228,6 +1239,9 @@ page:
                         <h5>
                           Andrioid Developer Advocate
                         </h5>
+                        <p class="text-justify">
+                          Igor Wojda is a passionate engineer with over a decade of software development experience. He is deeply interested in Android application architecture, Kotlin language and he is an active member of the open-source community. Igor is a conference speaker, technical proffer for ‘Kotlin In Action’ book, and author of ‘Android Development with Kotlin’ book. Igor enjoys sharing his passion for coding with other developers. Currently, he is working as Android Developer Advocate at Vonage.
+                        </p>
                     </div>
                   </div>
                 </div>
@@ -1631,7 +1645,7 @@ page:
                 <div class="Vlt-tabs__panel" id="tab-26b" role="tabpanel">
                   <div class="Vlt-grid">
                     <div class="Vlt-col Vlt-col--1of3 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600673534/Twitch_Show_Social_Graphics_7_ovlst5.png" alt="Week.init()">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1601367175/Twitch_Show_Social_Graphics_12_b3vbpv.png" alt="Week.init()">
                     </div>
                     <div class="Vlt-col Vlt-col--2of3">
                       <div class="Vlt-grid">
@@ -1639,23 +1653,22 @@ page:
                         <p class="Vlt-col Vlt-right mobile-justify">13:00 London / 09:00 New York / 06:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
-                        For the sequel, Paul will host Igor and Abdul to build the Android version of the project we started in the previous episode. What project you ask? "The V-app" of course - a messaging multi-platform application that lets uses chat via text, voice and video. The app will be built on top of the <a href="https://developer.nexmo.com/conversation/overview" target="_blank">Conversation APIs</a> using the Vonage Client SDKs.
-                        <br><br>
-                        Try the <a href="https://developer.nexmo.com/client-sdk/tutorials/in-app-messaging/introduction/kotlin" target="_blank"> Android chat app tutorial </a> before hand and join the stream with your questions!
+                        <h5>All Together Now</h5>
+                        TBD
                       </p>
                       <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
                         <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        Conversation API - Android Client SDK
+                        Conversation API - Android Client SDK - iOS Client SDK
                       </h5>
                     </div>
                     <div class="padding-top-32">
-                      <div class="Vlt-col padding-left-0">
-                        <h4>About The Show</h4>
-                        <p class="text-justify">
-                          This series will promote the Conversation APIs within the Client SDKs and beyond. Episodes will cover a wide range of topics such as how to build a native messaging or VOIP applications!
-                        </p>
-                      </div>
                       <div class="Vlt-grid padding-top-32">
+                        <div class="Vlt-col Vlt-col--1of2">
+                          <h4>About The Show</h4>
+                          <p class="text-justify">
+                            This series will promote the Conversation APIs within the Client SDKs and beyond. Episodes will cover a wide range of topics such as how to build a native messaging or VOIP applications!
+                          </p>
+                        </div>
                         <div class="Vlt-col Vlt-col--1of2">
                           <h4 class="inline-block">About Paul Ardeleanu</h4>
                           <a href="https://twitter.com/pardel" target="_blank">
@@ -1672,43 +1685,6 @@ page:
                           </p>
                           <a class="Vlt-purple" href="https://www.pardel.net/">
                             ParDel.community
-                          </a>
-                        </div>
-                        <div class="Vlt-col Vlt-col--1of4">
-                          <h4 class="inline-block">About Abdul Ajetunmobi</h4>
-                          <a href="https://twitter.com/abdulajet" target="_blank">
-                            <i class="icon icon-twitter"></i>
-                          </a>
-                          <a href="https://github.com/abdulajet" target="_blank">
-                            <i class="icon icon-github"></i>
-                          </a>
-                          <h5>
-                            iOS Developer Advocate
-                          </h5>
-                          <p class="text-justify">
-                            Abdul is a Developer Advocate for Vonage. He has a background working in consumer products as an iOS Engineer. In his spare time, he enjoys biking, listening to music and mentoring those who are just beginning their journey in tech.
-                          </p>
-                          </br>
-                          <a class="Vlt-purple" href="https://abdulajet.me/">
-                            AbdulAjet.me
-                          </a>
-                        </div>
-                        <div class="Vlt-col Vlt-col--1of4">
-                          <h4 class="inline-block">About Igor Wojda</h4>
-                          <a href="https://twitter.com/igorwojda" target="_blank">
-                            <i class="icon icon-twitter"></i>
-                          </a>
-                          <a href="https://github.com/igorwojda" target="_blank">
-                            <i class="icon icon-github"></i>
-                          </a>
-                          <h5>
-                            iOS Developer Advocate
-                          </h5>
-                          <p class="text-justify">
-                            Igor is a specialist in mobile development. Android is his platform and Kotlin is his language of choice. <br><br>At Vonage, he works closely with external developers using our SDK. His goal is to improve the developer experience by writing high-quality documentation, building sample projects, writing tutorials and polishing the Client SDK API.
-                          </p>
-                          <a class="Vlt-purple" href="https://www.nexmo.com/blog/2020/03/11/igor-wojda-joins-the-vonage-developer-relations-team-dr">
-                            Read More
                           </a>
                         </div>
                       </div>
