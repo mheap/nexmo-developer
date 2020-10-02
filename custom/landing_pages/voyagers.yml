@@ -182,6 +182,16 @@ page:
               intro: I am a Software Engineer from Lagos, Nigeria. I also write technical articles in a bid to make learning process easier for others. I love to travel and enjoy adventure when not writing code/articles
               location: Lagos, Nigeria
               github: iMichaelOwolabi
+      - column:
+          - type: headshot
+            headshot:
+              name: Mary Jo Staebler
+              url: 'https://www.maryjostaebler.com/'
+              img_src: 'https://www.maryjostaebler.com/wp-content/uploads/other/mary-jo-staebler-web-designer-developer.jpg'
+              twitter: MaryJoStaebler
+              intro: Web Designer & Developer, Twitch Streamer, Coffee Addict.  Create online solutions for business that help them grow.
+              location: USA / Washington
+              github: MaryJoStaebler
   - row:
       - column:
           - type: line_divider
