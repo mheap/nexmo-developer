@@ -5,7 +5,7 @@ description: Add a view that renders a Jinja2 template for the web application
 
 # Add a Send SMS View
 
-Add a view that renders a Jinja2 template for the web application. Create this template at `templates/index.html`:
+Add a view that renders a `Jinja2` template for the web application. Create this template at `templates/index.html`:
 
 ```
 @app.route('/')
