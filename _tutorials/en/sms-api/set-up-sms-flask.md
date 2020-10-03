@@ -5,7 +5,7 @@ description: Create a web application that allows you to send an SMS message.
 
 # Build an SMS Sending Flask App
 
-> The rest of this tutorial will show you how to build a small Flask app with a form for a phone number and an SMS message. When you press “Send SMS” it will post to a second view that will send the SMS using the Vonage SMS API.
+> The rest of this tutorial will show you how to build a small Flask app with a form for a phone number and an SMS message. When you press "Send SMS" it will post to a second view that will send the SMS using the Vonage SMS API.
 
 First, install dependencies. Check out this [sample code](https://github.com/Nexmo/nexmo-python-code-snippets/blob/master/sms/send-an-sms.py) and run `pip install -r requirements.txt`. At the very least, you’ll need to install Flask into your `virtualenv`.
 

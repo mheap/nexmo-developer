@@ -27,6 +27,6 @@ def send_sms():
     return redirect(url_for('index'))
 ```
 
-If your `FLASK_DEBUG` flag is set to true, then your changes should automatically be reloaded into the running server. Refresh your form, fill in your phone number and a message. Make sure the number is in international format without the ‘+’ at the start. Hit “Send SMS” and check your phone.
+If your `FLASK_DEBUG` flag is set to true, then your changes should automatically be reloaded into the running server. Refresh your form, fill in your phone number and a message. Make sure the number is in international format without the '+' at the start. Hit "Send SMS" and check your phone.
 
 If the application did not work, check out the extra lines in the [sample code](https://github.com/Nexmo/nexmo-python-code-snippets/blob/master/sms/send-an-sms.py) in `server.py` and `index.html` that use Flask’s flash message mechanism to report errors to the user.
