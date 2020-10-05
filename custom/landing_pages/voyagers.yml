@@ -185,13 +185,23 @@ page:
       - column:
           - type: headshot
             headshot:
-              name: Victor Steven
-              url: 'https://dev.to/stevensunflash/'
-              img_src: 'https://res.cloudinary.com/chikodi/image/upload/v1601857262/steven_headshot.png'
-              twitter: stevensunflash
-              intro: Software engineer. Technical writer. Prefers working on the backend and building scalable APIs. Love playing basketball. 
-              location: Lagos, Nigeria
-              github: victorsteven
+              name: Mary Jo Staebler
+              url: 'https://www.maryjostaebler.com/'
+              img_src: 'https://www.maryjostaebler.com/wp-content/uploads/other/mary-jo-staebler-web-designer-developer.jpg'
+              twitter: MaryJoStaebler
+              intro: Web Designer & Developer, Twitch Streamer, Coffee Addict.  Create online solutions for business that help them grow.
+              location: USA / Washington
+              github: MaryJoStaebler
+      - column:
+        - type: headshot
+          headshot:
+            name: Victor Steven
+            url: 'https://dev.to/stevensunflash/'
+            img_src: 'https://res.cloudinary.com/chikodi/image/upload/v1601857262/steven_headshot.png'
+            twitter: stevensunflash
+            intro: Software engineer. Technical writer. Prefers working on the backend and building scalable APIs. Love playing basketball. 
+            location: Lagos, Nigeria
+            github: victorsteven
   - row:
       - column:
           - type: line_divider

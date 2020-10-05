@@ -116,6 +116,16 @@ page:
                 </div>
                 <div class="Vlt-table__row">
                   <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-java-sdk" target="_blank" class="text-purple"><b>Vonage Server SDK for Java</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Java, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
                     <a href="https://github.com/Nexmo/nexmo-spring-boot-starter" target="_blank" class="text-purple"><b>Nexmo Spring Boot Starter</b></a>
                   </div>
                   <div class="Vlt-table__cell">
@@ -123,16 +133,6 @@ page:
                   </div>
                   <div class="Vlt-table__cell">
                     <p class="Vlt-black">Share your best practices around repositories.</p>
-                  </div>
-                </div>
-                <div class="Vlt-table__row">
-                  <div class="Vlt-table__cell">
-                    <a href="https://github.com/vonage/vonage-java-sdk" target="_blank" class="text-purple"><b>Vonage Server SDK for Java</b></a>
-                  </div>
-                  <div class="Vlt-table__cell">
-                    <p class="Vlt-black">Java, SDK</p>
-                  </div>
-                  <div class="Vlt-table__cell">
                   </div>
                 </div>
                 <div class="Vlt-table__row">
@@ -231,6 +231,28 @@ page:
                   </div>
                   <div class="Vlt-table__cell">
                     <p class="Vlt-black">Better integration with Laravel, updating to remove deprecated calls.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-python-sdk" target="_blank" class="text-purple"><b>Vonage Server SDK for Python</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Python SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">General work around our Python SDK, Asyncio Support, Better handling for server errors.</p>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell">
+                    <a href="https://github.com/vonage/vonage-python-code-snippets" target="_blank" class="text-purple"><b>Nexmo Code Snippets for Python</b></a>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black">Python, Examples, SDK</p>
+                  </div>
+                  <div class="Vlt-table__cell">
+                    <p class="Vlt-black"></p>
                   </div>
                 </div>
                 <div class="Vlt-table__row">
@@ -375,24 +397,8 @@ page:
                 </div>
               </div>
 
-              <h2 class="Vlt-black"><b>Featured Talks (3)</b></h2>
+              <h2 class="Vlt-black"><b>Featured Talks (2)</b></h2>
               <div class="Vlt-grid Vlt-grid--stack-flush scrolling talks-section">
-                <a href="https://organize.mlh.io/participants/events/4087-hacktoberfest-at-tiet" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
-                  <div class="Vlt-card talk-card">
-                    <div class="Vlt-card__content Vlt-grid">
-                      <div class="Vlt-col Vlt-col--1of3 Vlt-center vertical-align">
-                        <img class="Vlt-center avatar" src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600811650/Garann_Means_trf17a.jpg" alt="Garann Means"><img>
-                        <h3 class="Vlt-white Vlt-center speaker"><b>Garann Means</b></h3>
-                        <h5 class="Vlt-white Vlt-center italic">JS Developer Advocate</h5>
-                      </div>
-                      <div class="Vlt-col Vlt-col--2of3 vertical-align">
-                        <h3 class="Vlt-white Vlt-center">Storming the Gates<br>of Open Source</h3>
-                        <h3 class="Vlt-white Vlt-center"><b>Thursday, October 1</b></h3>
-                        <h5 class="Vlt-white Vlt-center">4:30 IST / 11:00 UTC</h5>
-                      </div>
-                    </div>
-                  </div>
-                </a>
                 <a href="https://organize.mlh.io/participants/events/4525-acm-juit-open-source-season-hacktoberfest-meetup" target="_blank" class="Vlt-col Vlt-col--1of2 talks">
                   <div class="Vlt-card talk2-card">
                     <div class="Vlt-card__content Vlt-grid">
@@ -442,27 +448,29 @@ page:
                   </div>
                 </a>
               </div>
-              <br>
+              <div class="Vlt-grid Nxd-landing-row">
+                <div class="Vlt-col Nxd-landing-col">
+                  <hr class="hr--tall"></hr>
+                </div>
+              </div>
 
-
-
-              <h2 class="Vlt-black hide"><b>Resources</b></h2>
-              <ul class="Vlt-list Vlt-list--simple hide">
+              <h2 class="Vlt-black"><b>Resources</b></h2>
+              <ul class="Vlt-list Vlt-list--simple">
                 <li>
-                  <a href="#" target="_blank">
+                  <a href="https://www.nexmo.com/blog/2020/09/28/vonage-joins-hacktoberfest-2020?utm_source=hacktoberfest&utm_medium=organic&utm_campaign=social_media" target="_blank">
                     <h4 class="text-purple skinny-link">
-                      Hacktoberfest 2020 announcement blogpost
+                      Vonage Joins Hacktoberfest 2020
                     </h4>
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank">
+                  <a href="https://www.nexmo.com/blog/2020/09/29/an-introduction-to-git-dr?utm_source=hacktoberfest&utm_medium=organic&utm_campaign=social_media" target="_blank">
                     <h4 class="text-purple skinny-link">
-                      Hacktoberfest 2020 announcement blogpost
+                      An Introduction To Git
                     </h4>
                   </a>
                 </li>
-                <li>
+                <li class="hide">
                   <a href="#" target="_blank">
                     <h4 class="text-purple skinny-link">
                       Hacktoberfest 2020 announcement blogpost
@@ -470,6 +478,13 @@ page:
                   </a>
                 </li>
               </ul>
+
+              <div class="Vlt-grid Nxd-landing-row">
+                <div class="Vlt-col Nxd-landing-col">
+                  <hr class="hr--tall"></hr>
+                </div>
+              </div>
+
               <h2 class="Vlt-black "><b>FAQ</b></h2>
               <h5 class="text-grey ">
                 You can find answers to some Vonage-specific questions below. For the official Hacktoberfest FAQ, <a href="https://hacktoberfest.digitalocean.com/faq/" target="_blank" class="text-purple">please see here</a>.

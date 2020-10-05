@@ -56,7 +56,7 @@ Feature  | Reports Synchronous (GET endpoint) | Reports Asynchronous (POST endpo
 
 ## Pricing
 
-From the **1st of October 2020**, Vonage is introducing two pricing plans for all new Reports API customers. These are shown in the following table:
+From the **2nd November 2020**, Vonage is introducing two pricing plans for all new Reports API customers. These are shown in the following table:
 
 Plan | Price | Notes
 ----|----|----
