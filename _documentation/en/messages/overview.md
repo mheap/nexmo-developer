@@ -18,19 +18,21 @@ Further channels may be supported in the future.
 
 The following diagram illustrates the relationship between the Messages API and the Dispatch API:
 
-![Messages and Dispatch Overview](/images/messages-dispatch-overview.png)
+![Messages and Dispatch Overview](/images/messages-overview.png)
 
 ## Contents
 
-* [Beta](#beta)
-* [Supported features](#supported-features)
-* [External Accounts API](#external-accounts-api)
-* [Getting started](#getting-started)
-* [Concepts](#concepts)
-* [Code Snippets](#code-snippets)
-* [Tutorials](#tutorials)
-* [Use Cases](#use-cases)
-* [Reference](#reference)
+- [Messages API Overview](#messages-api-overview)
+  - [Contents](#contents)
+  - [Beta](#beta)
+  - [Supported features](#supported-features)
+  - [External Accounts API](#external-accounts-api)
+  - [Getting started](#getting-started)
+  - [Concepts](#concepts)
+  - [Code Snippets](#code-snippets)
+  - [Tutorials](#tutorials)
+  - [Use Cases](#use-cases)
+  - [Reference](#reference)
 
 ## Beta
 
