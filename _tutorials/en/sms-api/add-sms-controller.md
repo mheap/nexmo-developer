@@ -9,9 +9,9 @@ Right-click on the `Controllers` Folder and select add->Controller. Select "Add 
 
 Add using statements for `Vonage.Messaging`, `Vonage.Request`, and `Microsoft.Extensions.Configuration` at the top of this file.
 
-## Dependency Inject IConfiguration
+## Dependency Inject `IConfiguration`
 
-Dependency inject an IConfiguration object via the construcor like so:
+Dependency inject an `IConfiguration` object via the constructor like so:
 
 ```csharp
 public IConfiguration Configuration { get; set; }
