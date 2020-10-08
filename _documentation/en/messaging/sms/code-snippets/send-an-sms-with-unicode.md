@@ -12,8 +12,8 @@ To send an SMS that contains Unicode characters, replace the following variables
 
 Key | Description
 -- | --
-`VONAGE_API_KEY` | You can find this in your Nexmo Dashboard.
-`VONAGE_API_SECRET` | You can find this in your Nexmo Dashboard.
+`VONAGE_API_KEY` | You can find this in your Vonage Dashboard.
+`VONAGE_API_SECRET` | You can find this in your Vonage Dashboard.
 `VONAGE_BRAND_NAME` | The alphanumeric string that represents the name or number of the organization sending the message.
 `TO_NUMBER` | The number you are sending the SMS to, for example `447700900000`.
 

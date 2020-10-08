@@ -14,8 +14,8 @@ You will need to ensure that the following replaceable values are set in the exa
 
 Key | Description
 -- | --
-`VONAGE_API_KEY` | Your Nexmo API key.
-`VONAGE_API_SECRET` | Your Nexmo API secret.
+`VONAGE_API_KEY` | Your Vonage API key.
+`VONAGE_API_SECRET` | Your Vonage API secret.
 `VONAGE_APPLICATION_ID` | The application ID for the Vonage application you want to get.
 
 ```code_snippets
