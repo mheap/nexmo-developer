@@ -7,9 +7,9 @@ description: Add an SMS Controller to the csproj to handle the SMS routes
 
 Right-click on the `Controllers` Folder and select add->Controller. Select "Add Empty MVC Controller" and name it `SmsController`.
 
-Add using statements for `Vonage.Messaging`, `Vonage.Request`, and `Microsoft.Extensions.Configuration` at the top of this file.
+Add `using` statements for `Vonage.Messaging`, `Vonage.Request`, and `Microsoft.Extensions.Configuration` at the top of this file.
 
-## Dependency Inject `IConfiguration`
+## Inject Configuration
 
 Dependency inject an `IConfiguration` object via the constructor like so:
 
@@ -24,7 +24,7 @@ public SmsController(IConfiguration config)
 
 ## Add Send SMS Action
 
-Next add a Send SMS Action to the controller:
+Next, add a Send SMS Action to the controller:
 
 ```csharp
 [HttpPost]

@@ -7,9 +7,7 @@ description: Configure the ASP.NET App with your Vonage Credentials
 
 Open your `appsettings.json` file and add the following two fields to it:
 
-```text
-VONAGE_API_KEY
-VONAGE_API_SECRET
-```
+* VONAGE_API_KEY: Your API key
+* VONAGE_API_SECRET: Your API secret
 
-Add the API key and API secret found in your [Dashboard](https://dashboard.nexmo.com/)
+You can find your API key and secret in the [Dashboard](https://dashboard.nexmo.com/)

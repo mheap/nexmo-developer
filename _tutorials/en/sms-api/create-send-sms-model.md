@@ -5,7 +5,7 @@ description: Build the Model Data that will be used to move the data for the SMS
 
 # Create Send SMS Model
 
-We are going to to be following the typical MVC pattern, so we'll start with the 'M' which stands for Model. In visual studio add a new file to the `Models` folder called `SmsModel.cs`. Add a using statement for `System.ComponentModel.DataAnnotations` to the top of this file and add the following code to it:
+We are going to to be following the typical MVC pattern, so we'll start with the 'M' which stands for Model. In Visual Studio add a new file to the `Models` folder called `SmsModel.cs`. Insert a `using` statement for `System.ComponentModel.DataAnnotations` at the top of this file and add the following code to it:
 
 ```csharp
 [Required(ErrorMessage = "To Number Required", AllowEmptyStrings = false)]

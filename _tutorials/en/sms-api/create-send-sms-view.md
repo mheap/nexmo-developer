@@ -5,7 +5,7 @@ description: Add an MVC View to
 
 # Add a Send SMS View
 
-Add a new folder under `Views` called `Sms`, in there add a file `index.cshtml` and add the following code to it:
+Create a new folder under `Views` called `Sms`. Within `Sms`, add a file called `index.cshtml` that contains the following code:
 
 ```html
 @model SmsModel
