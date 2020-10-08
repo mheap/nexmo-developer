@@ -16,7 +16,7 @@ Key | Description
 -- | --
 `VONAGE_API_KEY` | Your Vonage API key.
 `VONAGE_API_SECRET` | Your Vonage API secret.
-`APPLICATION_NAME` | The name for your Nexmo Application.
+`APPLICATION_NAME` | The name for your Vonage Application.
 
 ```code_snippets
 source: '_examples/application/create-application'

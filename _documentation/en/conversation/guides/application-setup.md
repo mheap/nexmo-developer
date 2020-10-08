@@ -7,7 +7,7 @@ navigation_weight: 1
 
 In order to set up your Conversation API application, you typically need to carry out the following steps:
 
-1. Create a Vonage application
+1. Create a Nexmo application
 2. Rent and assign a Nexmo number
 3. Build a backend service
 4. Create a client-side application (possibly using the Client SDK)

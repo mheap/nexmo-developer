@@ -17,7 +17,7 @@ Please read this information carefully, so you can best use the code snippets.
 1. [Create a Nexmo account](/account/guides/dashboard-management#create-and-configure-a-nexmo-account)
 2. [Rent a Nexmo Number](/numbers/guides/number-management#rent-a-virtual-number)
 3. [Install the Nexmo Command Line tools](/tools)
-4. [Create a Nexmo Application using the command line tools or Dashboard](/concepts/guides/applications#getting-started-with-applications)
+4. [Create a Vonage Application using the command line tools or Dashboard](/concepts/guides/applications#getting-started-with-applications)
 5. [Install the Nexmo Library for your programming language](/tools)
 6. [Set up Ngrok](https://ngrok.com)
 
@@ -71,7 +71,7 @@ The main ones you will meet here are:
 * `/webhooks/recordings` - Nexmo callback POSTs to here. You receive JSON object with recording details.
 * `/webhooks/dtmf` - Nexmo POSTs user DTMF input here in a JSON object.
 
-If you are using Ngrok you will set your webhook URLs in the Nexmo Application object to
+If you are using Ngrok you will set your webhook URLs in the Vonage Application object to
 something like:
 
 * `https://demo.ngrok.io/webhooks/answer`

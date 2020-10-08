@@ -51,7 +51,7 @@ The main ones you will meet here are:
 * `/webhooks/inbound-message` - You will receive a callback here when Nexmo receives a message.
 * `/webhooks/message-status` - You will receive a callback here when Nexmo receives a message status update.
 
-If you are testing locally using [Ngrok](https://ngrok.com) you will set your webhook URLs in the Nexmo Application object using a format similar to the following examples:
+If you are testing locally using [Ngrok](https://ngrok.com) you will set your webhook URLs in the Vonage Application object using a format similar to the following examples:
 
 * `https://demo.ngrok.io/webhooks/inbound-message`
 * `https://demo.ngrok.io/webhooks/message-status`
