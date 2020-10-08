@@ -12,8 +12,8 @@ call) by simply connecting the call into the same named
 conference.
 
 Conference names are scoped at the Vonage Application
-level. For example, NexmoApp1 and NexmoApp2 could both have a
-conference called `nexmo-conference` and there would be no problem.
+level. For example, VonageApp1 and VonageApp2 could both have a
+conference called `vonage-conference` and there would be no problem.
 
 ## Example
 
