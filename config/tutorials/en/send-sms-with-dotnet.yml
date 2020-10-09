@@ -35,9 +35,14 @@ conclusion:
     # What's next?
       You can do a lot more with the SMS API.
 
-      See [SMS API documentation](/messaging/sms/overview).
+      See the [SMS API documentation](/messaging/sms/overview).
 
-      In the meantime for more information on our APIs including:
+You can do a lot more with the SMS API. Find out more:
+
+- [Read the SMS API documentation](https://developer.nexmo.com/messaging/sms/overview)
+- [View the API reference](https://developer.nexmo.com/api/sms)
+- [Receive an SMS](https://developer.nexmo.com/messaging/sms/code-snippets/receiving-an-sms/dotnet)
+- [Get a delivery receipt](https://developer.nexmo.com/messaging/sms/code-snippets/delivery-receipts/dotnet)
 
       - [inbound SMS](https://www.nexmo.com/blog/2020/07/28/how-to-receive-sms-delivery-receipts-with-asp-net-core-mvc-dr/)
 
