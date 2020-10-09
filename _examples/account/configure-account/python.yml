@@ -2,7 +2,7 @@
 title: Python
 language: python
 dependencies:
-    - nexmo
+    - vonage
 code:
     source: .repos/vonage/vonage-python-code-snippets/account/configure-account.py
     from_line: 17
