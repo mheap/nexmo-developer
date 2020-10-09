@@ -2,7 +2,7 @@
 title: PHP
 language: php
 dependencies:
-    - nexmo
+    - vonage
 code:
     source: .repos/vonage/vonage-php-code-snippets/sms/send-unicode-sms.php
     from_line: 9
