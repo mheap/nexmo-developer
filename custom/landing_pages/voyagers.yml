@@ -202,6 +202,16 @@ page:
             intro: Software engineer. Technical writer. Prefers working on the backend and building scalable APIs. Love playing basketball. 
             location: Lagos, Nigeria
             github: victorsteven
+      - column:
+        - type: headshot
+          headshot:
+            name: Gabriel Cruz
+            url: 'https://gmcruz.me'
+            img_src: 'https://i.ibb.co/xD8tLRD/gabriel-sitting-smile.jpg'
+            twitter: gmelodiecruz
+            intro: Computer Science Undergraduate, Technical Writer, Parkour Traceur and a proud member of the LGBT community. Spreading love and compassion in tech.
+            location: Londrina, Brazil
+            github: gmelodie
   - row:
       - column:
           - type: line_divider
