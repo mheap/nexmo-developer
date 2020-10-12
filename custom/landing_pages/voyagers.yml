@@ -17,9 +17,10 @@ page:
                     .Vlt-list > li {
                       font-size: 1.6rem;
                     }
-                    .Nxd-profile {
-                      padding: 1em 0;
-                    }
+                  }
+                }
+                .Nxd-profile {
+                  padding: 1em 0;
                 }
                 @media only screen and (max-width: 767px) {
                   .Voyagers-logo img {
