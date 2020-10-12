@@ -9,23 +9,24 @@ page:
             text:
               content: |
                 <style>
+                  .Nxd-profile {
+                    padding: 1em 0;
+                  }
                   .Vlt-btn--larger {
                     font-size: 1.3em;
                     line-height: 2.6em;
                   }
-                  .voyagers-page {
-                    .Vlt-list > li {
-                      font-size: 1.6rem;
+                  .voyagers-page .Vlt-list > li {
+                    font-size: 1.6rem;
+                  }
+                  @media only screen and (max-width: 767px) {
+                    .Voyagers-logo img {
+                      width: 100%;
                     }
-                }
-                @media only screen and (max-width: 767px) {
-                  .Voyagers-logo img {
-                    width: 100%;
+                    .Vlt-btn--larger {
+                      width: 240px;
+                    }
                   }
-                  .Vlt-btn--larger {
-                    width: 240px;
-                  }
-                }
                 </style>
   - row:
       - column:
