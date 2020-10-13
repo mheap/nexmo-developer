@@ -992,7 +992,7 @@ page:
                 <div class="Vlt-tabs__panel" id="tab-27c" role="tabpanel">
                   <div class="Vlt-grid">
                     <div class="Vlt-col Vlt-col--1of3 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1600671582/Twitch_Show_Social_Graphics_3_i87htl.png" alt="Mistakes Were Made">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1602596814/Twitch_Show_Social_Graphics_19_o1ica7.png" alt="Mistakes Were Made">
                     </div>
                     <div class="Vlt-col Vlt-col--2of3">
                       <div class="Vlt-grid">
@@ -1000,11 +1000,22 @@ page:
                         <p class="Vlt-col Vlt-right mobile-justify">16:00 London / 11:00 New York / 08:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
-                        <h5>TBD</h5>
+                        <h5>Adding AR to WebRTC sessions</h5>
+                        Sometimes you don’t want to display your surroundings in a video session. In this episode, we’ll integrate DeepAR with the Video API to replace our background with an image we choose.
                       </p>
+                      <br>
+                      <b>Links:</b>
+                      <a href="https://tokbox.com/developer/" target="_blank">
+                        Vonage Video API Developer Center
+                      </a>
+                      <b> - </b>
+                      <a href="https://www.deepar.ai/" target="_blank">
+                        Deep AR
+                      </a>
+                      <br><br>
                       <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
                         <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        Vonage Video API
+                        Vonage Video API - WebRTC - VueJS - Augmented-Reality - Javascript
                       </h5>
                     </div>
                     <div class="Vlt-grid padding-top-32">
