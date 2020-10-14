@@ -43,7 +43,7 @@ conclusion:
   content: |
     ## Receive an SMS
 
-    Now that the app is running on `http://localhost:3000` you will be able to send yourself an SMS message through your Vonage number, and it will be received and printed out in your console
+    Now that the app is running on `http://localhost:3000` you will be able to send an SMS message to yourself using your vonage number. After it's delivered a delivery receipt will then be sent to your application, and the delivery receipt will be printed in your console.
 
     ## Whats Next?
 
@@ -51,5 +51,5 @@ conclusion:
 
     - [Read the SMS API documentation](https://developer.nexmo.com/messaging/sms/overview)
     - [View the API reference](https://developer.nexmo.com/api/sms)
-    - [Send an SMS](http://localhost:3000/messaging/sms/tutorials/send-sms-with-dotnet)
+    - [Receive an SMS](/messaging/sms/tutorials/send-sms-with-dotnet)
     - [Get a delivery receipt](https://developer.nexmo.com/messaging/sms/code-snippets/delivery-receipts/dotnet)

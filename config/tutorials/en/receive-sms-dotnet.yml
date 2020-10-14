@@ -45,5 +45,5 @@ conclusion:
 
     - [Read the SMS API documentation](https://developer.nexmo.com/messaging/sms/overview)
     - [View the API reference](https://developer.nexmo.com/api/sms)
-    - [Send an SMS](http://localhost:3000/messaging/sms/tutorials/send-sms-with-dotnet)
+    - [Send an SMS](/messaging/sms/tutorials/send-sms-with-dotnet)
     - [Get a delivery receipt](https://developer.nexmo.com/messaging/sms/code-snippets/delivery-receipts/dotnet)
