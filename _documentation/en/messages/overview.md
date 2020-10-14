@@ -22,17 +22,15 @@ The following diagram illustrates the relationship between the Messages API and 
 
 ## Contents
 
-- [Messages API Overview](#messages-api-overview)
-  - [Contents](#contents)
-  - [Beta](#beta)
-  - [Supported features](#supported-features)
-  - [External Accounts API](#external-accounts-api)
-  - [Getting started](#getting-started)
-  - [Concepts](#concepts)
-  - [Code Snippets](#code-snippets)
-  - [Tutorials](#tutorials)
-  - [Use Cases](#use-cases)
-  - [Reference](#reference)
+* [Beta](#beta)
+* [Supported features](#supported-features)
+* [External Accounts API](#external-accounts-api)
+* [Getting started](#getting-started)
+* [Concepts](#concepts)
+* [Code Snippets](#code-snippets)
+* [Tutorials](#tutorials)
+* [Use Cases](#use-cases)
+* [Reference](#reference)
 
 ## Beta
 
