@@ -1,7 +1,7 @@
 title: How to Receive an SMS Message with ASP.NET Core MVC
 products:
  - messaging/sms
-description: A tutorial to show how your ASP .NET MVC application can use the Nexmo c# library to receive SMS messages from your users and display them in your output window.
+description: A tutorial to show how your ASP .NET MVC application can use the Vonage .NET SDK to receive SMS messages from your users and display them in your output window.
 languages:
  - dotnet
 
