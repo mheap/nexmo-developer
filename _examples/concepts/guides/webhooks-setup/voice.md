@@ -47,3 +47,14 @@ Inside an NCCO, the following action types take a webhook URL for use when that 
 * [connect.eventUrl](/voice/guides/ncco-reference#connect) - set the URL to the webhook endpoint Nexmo calls asynchronously when a conversation changes state for this connect action
 * [input.eventUrl](/voice/guides/ncco-reference#input) - set the URL to the webhook endpoint Nexmo sends the digits pressed by the callee
 * [stream.streamUrl](/voice/guides/ncco-reference#stream) - set an array of URLs pointing to the webhook endpoints hosting the audio file to stream to the Call or Conversation
+
+### Webhook Timeouts
+
+If the answer, event or fallback URL is unreachable for a certain amount of time, or the response reading time exceeds a certain limit, Nexmo will retry the request once. Platform default connection and reading timeouts are as follows:
+Webhook Type | Connect Timeout | Socket Timeout
+-------------|-----------------|----------------
+Answer | 1s | 5s
+Event | 1s | 10s
+Fallback | 1s | 5s
+
+These defaults can be overridden via [Application API](/api/application.v2#updateApplication) call or in the [Dashboard](https://dashboard.nexmo.com/applications) (select the application, then click Edit button and scroll to Voice section):
