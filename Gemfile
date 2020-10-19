@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
-source "https://rubygems.pkg.github.com/nexmo" do
-  gem "station", "0.0.90"
-end
+# source "https://rubygems.pkg.github.com/nexmo" do
+#   gem "station", "0.0.90"
+# end
+
+gem 'station', github: 'nexmo/station', branch: 'translator-pipeline'
