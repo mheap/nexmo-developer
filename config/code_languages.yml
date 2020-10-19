@@ -52,7 +52,7 @@ languages:
     unindent: true
     icon: dotnet
     dependencies:
-      - "Vonage.Csharp.Client"
+      - "Vonage"
   csharp:
     weight: 5
     label: .NET
@@ -60,7 +60,7 @@ languages:
     unindent: true
     icon: dotnet
     dependencies:
-      - "Vonage.Csharp.Client"
+      - "Vonage"
 
   php:
     weight: 6
