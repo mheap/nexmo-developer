@@ -7,18 +7,11 @@ navigation_weight: 1
 
 # Messages API Overview
 
-The Messages API allows you to send and in some cases receive messages over the following communications channels:
+The Messages API allows you to send and in some cases receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp. Further channels may be supported in the future.
 
-* SMS/MMS
-* Facebook Messenger
-* Viber
-* WhatsApp
+The following diagram illustrates how the Vonage Messages API enables you to easily send messages over multiple channels:
 
-Further channels may be supported in the future.
-
-The following diagram illustrates the relationship between the Messages API and the Dispatch API:
-
-![Messages and Dispatch Overview](/images/messages-dispatch-overview.png)
+<img src="/images/messages-overview.png" alt="Messages and Dispatch Overview" style="width: 75%;">
 
 ## Contents
 
@@ -85,8 +78,8 @@ In this example you will need to replace the following variables with actual val
 
 Key | Description
 -- | --
-`NEXMO_API_KEY` | Vonage API key which can be obtained from your [Vonage API Dashboard](https://dashboard.nexmo.com).
-`NEXMO_API_SECRET` | Vonage API secret which can be obtained from your [Vonage API Dashboard](https://dashboard.nexmo.com).
+`VONAGE_API_KEY` | Vonage API key which can be obtained from your [Vonage API Dashboard](https://dashboard.nexmo.com).
+`VONAGE_API_SECRET` | Vonage API secret which can be obtained from your [Vonage API Dashboard](https://dashboard.nexmo.com).
 `FROM_NUMBER` | A phone number you own or some text to identify the sender.
 `TO_NUMBER` | The number of the phone to which the message will be sent.
 

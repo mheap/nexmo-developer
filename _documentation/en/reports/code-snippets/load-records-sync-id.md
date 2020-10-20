@@ -12,11 +12,11 @@ This code snippet shows you how to retrieve a specific record by specifying a **
 
 Variable | Required | Description
 ----|----|----
-`NEXMO_API_KEY` | Yes | Your API key which you can obtain from your [Dashboard](https://dashboard.nexmo.com/sign-in).
-`NEXMO_API_SECRET` | Yes | Your API secret which you can obtain from your [Dashboard](https://dashboard.nexmo.com/sign-in).
+`VONAGE_API_KEY` | Yes | Your API key which you can obtain from your [Dashboard](https://dashboard.nexmo.com/sign-in).
+`VONAGE_API_SECRET` | Yes | Your API secret which you can obtain from your [Dashboard](https://dashboard.nexmo.com/sign-in).
 `ACCOUNT_ID` | Yes | The API key for the target account. Reports generated, or records retrieved, are for this account.
 `REPORT_DIRECTION` | Yes | Either `inbound` or `outbound`
-`REPORT_PRODUCT` | Yes | Specifies the product for which reports and records are obtained. Can be one of `SMS`, `VOICE-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES` or `CONVERSATIONS`.
+`REPORT_PRODUCT` | Yes | Specifies the product for which reports and records are obtained. Can be one of `SMS`, `VOICE-CALL`, `WEBSOCKET-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES`, `CONVERSATIONS`, or `ASR`.
 `ID` | Yes | The UUID of the message or call to retrieve records for.
 
 ```code_snippets

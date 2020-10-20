@@ -30,10 +30,10 @@ When you use the code snippets you copy in your replacements for variables such 
 
 Variable | Description
 ----|----
-`NEXMO_API_KEY` | Your API key which you can obtain from your [Dashboard](https://dashboard.nexmo.com/sign-in).
-`NEXMO_API_SECRET` | Your API secret which you can obtain from your [Dashboard](https://dashboard.nexmo.com/sign-in).
-`ACCOUNT_ID` | The account ID (same as `NEXMO_API_KEY`) for the account you want to generate reports, or retrieve records for.
-`REPORT_PRODUCT` | Specifies the product for which reports and records are obtained. Can be one of `SMS`, `VOICE-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES` or `CONVERSATIONS`.
+`VONAGE_API_KEY` | Your API key which you can obtain from your [Dashboard](https://dashboard.nexmo.com/sign-in).
+`VONAGE_API_SECRET` | Your API secret which you can obtain from your [Dashboard](https://dashboard.nexmo.com/sign-in).
+`ACCOUNT_ID` | The account ID (same as `VONAGE_API_KEY`) for the account you want to generate reports, or retrieve records for.
+`REPORT_PRODUCT` | Specifies the product for which reports and records are obtained. Can be one of `SMS`, `VOICE-CALL`, `WEBSOCKET-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES`, `CONVERSATIONS`, or `ASR`.
 `REQUEST_ID` | When you request creation of report asynchronously, a `request_id` for the report generation is returned.
 `DATE_START` | Date of time window from when you want to start gathering records in ISO-8601 format.
 `DATE_END` | Date of time window from when you want to stop gathering records in ISO-8601 format.
@@ -59,26 +59,26 @@ The dates can use either of the following formats: `yyyy-mm-ddThh:mm:ss[.sss]±h
 This example shows fetching a list of records using a date range:
 
 ```sh
-curl -u "$NEXMO_API_KEY:$NEXMO_API_SECRET" \
+curl -u "$VONAGE_API_KEY:$VONAGE_API_SECRET" \
      "https://api.nexmo.com/v2/reports/records?account_id=abcd1234&product=MESSAGES&direction=outbound&date_start=2020-06-04T00:01:00Z&date_end=2020-06-04T00:02:00Z"
 ```
 
 For dates containing a `+` in a `GET` query, where dates are passed as query parameters, you need to URL encode the dates, for example:
 
 ```sh
-curl -G --data-urlencode date_start="2020-06-04T08:00:00+0000" --data-urlencode date_end="2020-06-04T14:00:00+0000" -u "$NEXMO_API_KEY:$NEXMO_API_SECRET" \
+curl -G --data-urlencode date_start="2020-06-04T08:00:00+0000" --data-urlencode date_end="2020-06-04T14:00:00+0000" -u "$VONAGE_API_KEY:$VONAGE_API_SECRET" \
      "https://api.nexmo.com/v2/reports/records?account_id=abcd1234&product=SMS&direction=outbound"
 ```
 
 ### Product
 
-The API calls Load Records Synchronously and Generate Report Asynchronously require you to specify a product. The `product` parameter specifies the Vonage API product for which reports and records are obtained. `product` can be one of `SMS`, `VOICE-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES` or `CONVERSATIONS`.
+The API calls Load Records Synchronously and Generate Report Asynchronously require you to specify a product. The `product` parameter specifies the Vonage API product for which reports and records are obtained. `product` can be one of `SMS`, `VOICE-CALL`, `WEBSOCKET-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES`, `CONVERSATIONS`, or `ASR`.
 
 The following table shows which API call use `product`:
 
 Parameter | Load records sync | Generate report async | List reports | Get report status | Cancel report | Get report | Notes
 ----|:----:|:----:|:----:|:----:|:----:|:----:|:----:|----
-`product` | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | Required to load records or generate reports. One of `SMS`, `VOICE-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES` or `CONVERSATIONS`.
+`product` | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | Required to load records or generate reports. One of `SMS`, `VOICE-CALL`, `WEBSOCKET-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES`, `CONVERSATIONS`, or `ASR`.
 
 **Table legend:** ✅ = required | ❌ = n/a
 
