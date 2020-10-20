@@ -187,8 +187,8 @@ page:
           - type: headshot
             headshot:
               name: Luis Cuauhtemoc Martinez
-              url: ‘https://luismartinez.dev’
-              img_src: ‘https://images.ctfassets.net/m3k8w4mbzotp/3Ws1VLizC9ijnc0mjKqG9K/f5090a5f851e555e882ccebaa35eff19/0.jpg?w=450&fl=progressive&q=100’
+              url: 'https://luismartinez.dev'
+              img_src: 'https://images.ctfassets.net/m3k8w4mbzotp/3Ws1VLizC9ijnc0mjKqG9K/f5090a5f851e555e882ccebaa35eff19/0.jpg?w=450&fl=progressive&q=100'
               intro: API Developer, CLK 500 enthusiast/owner, and a JavaScript Lover. I spend my time working romotely for Jetson.AI. When I’m out and about you can catch me cruising behind the wheel or on the board!
               location: Los Angeles, California
               github: luiscmartinez
