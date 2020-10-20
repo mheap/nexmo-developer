@@ -222,6 +222,17 @@ page:
             intro: Computer Science Undergraduate, Technical Writer, Parkour Traceur and a proud member of the LGBT community. Spreading love and compassion in tech.
             location: Londrina, Brazil
             github: gmelodie
+      - column:
+        - type: headshot
+          headshot:
+            name: Henry Shepherdson
+            url: 'https://henryshepherdson.com/'
+            img_src: 'https://henryshepherdson.com/wp-content/uploads/2020/10/henry-shepherdson-at-the-butterfly-sanctuary.jpg'
+            intro: Team leader, mentor and tech developer. I value uplifting myself and others. I love // learning, building, creating, teaching, connecting.
+            location: South Africa, Gauteng
+            github: FPMedia
+
+  
   - row:
       - column:
           - type: line_divider
