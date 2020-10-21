@@ -231,8 +231,18 @@ page:
             intro: Team leader, mentor and tech developer. I value uplifting myself and others. I love // learning, building, creating, teaching, connecting.
             location: South Africa, Gauteng
             github: FPMedia
+      - column:
+        - type: headshot
+          headshot:
+            name: Naomi Pentrel
+            url: 'https://naomi.codes/'
+            img_src: 'https://naomi.codes/assets/NaomiPentrel.png'
+            twitter: naomi_pen
+            intro: Senior Communications Engineer at MongoDB, occasional blogger, crocheter, and hacker. Previously engineer at Google, Microsoft, and Bloomberg.
+            location: Netherlands
+            github: npentrel
 
-  
+
   - row:
       - column:
           - type: line_divider
