@@ -1,7 +1,8 @@
-name: Smartling Downloader
+name: Smartling Uploader
 on:
-  schedule:
-    - cron: "0 8 * * *"
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -19,7 +20,6 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-
     steps:
     - uses: actions/checkout@v2
       with:
@@ -62,12 +62,24 @@ jobs:
         gem install --no-document bundler
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
-    - name: Run rake tasks
+  check-changes:
+    runs-on: ubuntu-latest
+    steps:
+    - id: step1
+      name: Check for File Changes
+      uses: nexmo/github-actions/check-docs-changes@check-docs-changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  smartling-upload:
+    runs-on: ubuntu-latest
+    needs: check-changes
+    strategy:
+      matrix: ${{needs.check-changes.outputs.matrix}}
+    steps:
+    - name: Run rake task
       env:
         POSTGRES_USERNAME: postgres
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
       run: |
-        RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-smartling-download
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v3
+        RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-smartling-upload ${{matrix}}
