@@ -8,8 +8,8 @@ navigation_weight: 8
 
 Signed webhooks provide a method for your application to verify a request is coming from Vonage, and its payload has not been tampered with during transit. 
 
-> Voice API Signed webhooks are currently offered as [Developer Preview](/product-lifecycle/dev-preview). The feature can be used in your projects for supported scenarious (see below). The following limitations applicable:
-<ul style='list-style:disc;margin-left:16px;margin-top:16px;'><li style='margin-bottom:16px;'>limited set of events supported,</li>
+> Voice API Signed webhooks are currently offered as [Developer Preview](/product-lifecycle/dev-preview). The feature can be used in your projects for supported scenarios (see below). The following limitations apply:
+<ul style='list-style:disc;margin-left:16px;margin-top:16px;'><li style='margin-bottom:16px;'>a limited set of events supported,</li>
 <li style='margin-bottom:16px;'>activation can be done through Applications API request only,</li></ul>
 see more details below.
 
@@ -19,7 +19,7 @@ Follow these steps to activate signed callbacks for your application.
 
 ### Get Application
 
-Retrieve your application data with [Get an application](/api/application.v2#getApplication) HTTP request using [Postman](/tools/postman) or other HTTP client of your choise:
+Retrieve your application data with [Get an application](/api/application.v2#getApplication) HTTP request using [Postman](/tools/postman) or another HTTP client of your choice:
 
 ```http
 GET https://api.nexmo.com/v2/applications/YOUR_APPLICATION_ID
@@ -60,7 +60,7 @@ Copy the response body:
 }
 ```
 
-### Update Applcation
+### Update Application
 
 Update your application with [Update an application](https://developer.nexmo.com/api/application.v2#updateApplication) HTTP request:
 
