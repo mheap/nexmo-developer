@@ -84,7 +84,7 @@ page:
                     <span class="Vlt-col padding-0">
                       <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="30a" role="tab">
                         <b>30</b>
-                        <p class="show Vlt-badge Vlt-badge--purple Vlt-badge--transparent">HDS: Paul (11am UTC)</p>
+                        <p class="show Vlt-badge Vlt-badge--purple Vlt-badge--transparent">HDS: HACKTOBERFINALE (2pm UTC)</p>
                       </div>
                     </span>
                   </div>
@@ -500,7 +500,7 @@ page:
                     <div class="Vlt-col Vlt-col--2of3">
                       <div class="Vlt-grid">
                         <h4 class="Vlt-col mobile-center">New Stream, Who Dis?</h4>
-                        <p class="Vlt-col Vlt-right mobile-justify">17:00 London / 12:00 New York / 11:00 SF</p>
+                        <p class="Vlt-col Vlt-right mobile-justify">16:00 London / 12:00 New York / 9:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
                         <h5>Exploring Vonage Reports API with Streamlit</h5>
@@ -539,28 +539,23 @@ page:
                 <div class="Vlt-tabs__panel" id="tab-30" role="tabpanel">
                   <div class="Vlt-grid">
                     <div class="Vlt-col Vlt-col--1of2 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1601061024/hacktoberfest/paul-light_1_qpkaw4.png" alt="Hacktoberfest Stream Art">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1603902760/hacktoberfest-finale_1_drulrt.png" alt="Hacktoberfest Stream Art">
                     </div>
                     <div class="Vlt-col Vlt-col--1of2">
-                        <h3 class="Vlt-col padding-left-0 mobile-center">Hacktoberfest Daily Stream</h3>
-                        <h5 class="Vlt-col padding-left-0 mobile-center">12:00 London / 07:00 New York / 04:00 SF</h5>
-                        <br><br>
-                        <h4 class="inline-block">About Paul Ardeleanu</h4>
-                        <a href="https://twitter.com/pardel" target="_blank">
-                          <i class="icon icon-twitter"></i>
-                        </a>
-                        <a href="https://github.com/pardel" target="_blank">
-                          <i class="icon icon-github"></i>
-                        </a>
-                        <h5>
-                          Developer Advocate Manager
-                        </h5>
-                        <p class="text-justify">
-                          Paul is an iOS Developer Advocate at Vonage. A seasoned software engineer, trainer and speaker, he specialised in data-driven solutions on Apple platforms with an emphasis on prototyping, best practices and balance with agility.
-                        </p>
-                        <a class="Vlt-purple" href="https://www.pardel.net/">
-                          ParDel.community
-                        </a>
+                        <h3 class="Vlt-col padding-left-0 mobile-center">FINAL HACKTOBERFEST STREAM!</h3>
+                        <h5 class="Vlt-col padding-left-0 mobile-center">14:00 London / 10:00 New York / 07:00 SF</h5>
+                        <br>
+                        This will be our FINAL live stream during Hacktoberfest!
+                        All of your favorite Vonage Hacktoberfest streamers and teammembers will be there!<br><br>
+                        During the stream, we will share stats, memories and general shenanigans!
+
+                        We want to invite everyone to share their highlights of the past month:<br><br>
+                        * Favorite Hacktoberfest moment<br>
+                        * Best PR you reviewed<br>
+                        * Most creative issue<br>
+                        * Favorite stream<br>
+                        * Silliest moment<br>
+                        * etc.
                     </div>
                   </div>
                 </div>
