@@ -48,7 +48,7 @@ There are two ways to send DTMF tones to a call:
 
 1. For an outbound call made either via [create call](/api/voice#createCall) endpoint, or via a `connect` action, you can set the `dtmfAnswer` parameter within the phone endpoint. This means that when the call is answered, Nexmo will automatically send the defined string of tones.
 
-2. You can also send DTMF digits to a call at any time by making a PUT request to the [REST API](/api/voice#startDTMF), specifying a string of `digits`.
+2. You can also send DTMF digits to a call at any time by making a PUT request to the [REST API](/api/voice#play-dtmf), specifying a string of `digits`.
 
 You can use digits `0-9`, `*`, and `#`. A `p` indicates a pause of 500ms if you need to add a delay in sending the digits.
 
