@@ -2,7 +2,7 @@
 title: Python
 language: python
 dependencies:
-  - nexmo
+  - vonage
 code:
   source: .repos/vonage/vonage-python-code-snippets/sms/send-an-sms-with-unicode.py
   from_line: 21

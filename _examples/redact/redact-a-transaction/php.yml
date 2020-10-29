@@ -2,7 +2,7 @@
 title: PHP
 language: php
 dependencies:
-  - nexmo/client
+  - vonage/client
 file_name: redact.php
 client:
     source: '.repos/vonage/vonage-php-code-snippets/redact/transaction.php'

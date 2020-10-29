@@ -2,7 +2,7 @@
 title: .NET
 language: dotnet
 dependencies:
-    - Nexmo.Csharp.Client
+    - Vonage
 import_dependencies:
     source: .repos/vonage/vonage-dotnet-code-snippets/DotNetCliCodeSnippets/NumberInsights/BasicInsights.cs
     from_line: 1

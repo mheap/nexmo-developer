@@ -1,6 +1,6 @@
 ---
 dependencies:
-    - nexmo
+    - vonage
     - pprint
 code:
     source: .repos/vonage/vonage-python-code-snippets/number-insight/ni-basic.py

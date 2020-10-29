@@ -2,7 +2,7 @@
 title: Python
 language: python
 dependencies:
-    - nexmo
+    - vonage
 client:
     source: .repos/vonage/vonage-python-code-snippets/voice/retrieve-info-for-a-call.py
     from_line: 15
