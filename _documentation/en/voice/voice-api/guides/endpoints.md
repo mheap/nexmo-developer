@@ -8,7 +8,7 @@ navigation_weight: 5
 
 ## Overview
 
-Endpoints are a term used with the Vonage Voice API to describe the different destinations a call could be connected to. Each endpoint type has its own addressing format and other related metadata that can be sent along with the call. The most common type of endpoint used is `phone`, which is for making phone calls to regular phone numbers anywhere in the world. This network of phones is known as the Public Switched Telephone Network (PSTN).
+Endpoints is a term used with the Vonage Voice API to describe the different destinations a call could be connected to. Each endpoint type has its own addressing format and other related metadata that can be sent along with the call. The most common type of endpoint used is `phone`, which is for making phone calls to regular phone numbers anywhere in the world. This network of phones is known as the Public Switched Telephone Network (PSTN).
 
 ## Phone
 
@@ -30,7 +30,7 @@ For more information on the IP addresses used for SIP traffic originating from V
 
 Vonage offers the ability to connect a call to a WebSocket endpoint where the audio of the call is sent and received in real-time over a long-lived HTTP connection.
 
-With websockets Vonage acts as the HTTP client and makes an HTTP request to your web server which should then upgrade that connection to a websocket.
+With websockets, Vonage acts as the HTTP client and makes an HTTP request to your web server which should then upgrade that connection to a websocket.
 
 The endpoint is addressed via a `uri` parameter which should be a standard websocket URL, starting with either `ws://` for plain HTTP or `wss://` for TLS enabled servers. The `Content-Type` parameter can be set to `audio/l16;rate=16000` or `audio/l16;rate=8000`, depending on if you need the data at 16kHz or 8kHz. Most real-time transcription services work best with audio at 8kHz.
 

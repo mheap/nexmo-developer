@@ -25,11 +25,9 @@ If you are unsure how to format the number the Number Insight API can be used to
 
 When making an outbound call from Vonage the CallerID, `from` value needs to be a Vonage Number associated with your account. Any Vonage number associated with your account will work. It does not have to be linked to the application you are using. If you set it to any other value then `from` is set to `unknown`.
 
-
 ### Incoming CallerID
 
 Vonage attempts to present to you the caller ID of the party calling your Vonage application in international format. However, this can occasionally be incorrectly formatted by the originating network. Vonage passes through the number received from the number supplier. You can learn more about inbound caller ID on our [voice features overview](https://help.nexmo.com/hc/en-us/articles/115011761808) page in the Vonage knowledge base.
-
 
 ### Incoming Call Numbers 
 
