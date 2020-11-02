@@ -42,9 +42,9 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="3">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="3a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="3a" role="tab">
                         <b>3</b>
-                        <p class="show">Mistakes Were Made</p>
+                        <p class="show"></p>
                       </div>
                     </span>
                   </div>
