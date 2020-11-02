@@ -61,9 +61,9 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="5">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="5a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="5a" role="tab">
                         <b>5</b>
-                        <p class="show"></p>
+                        <p class="show">New Stream, Who Dis?  </p>
                       </div>
                     </span>
                   </div>
@@ -103,9 +103,9 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="12">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="2a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="2a" role="tab">
                         <b>12</b>
-                        <p class="show"></p>
+                        <p class="show">Lauren Learns Things</p>
                       </div>
                     </span>
                   </div>
@@ -145,9 +145,9 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="19">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="19a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="19a" role="tab">
                         <b>19</b>
-                        <p class="show"></p>
+                        <p class="show">Lauren Learns Things</p>
                       </div>
                     </span>
                   </div>
@@ -332,6 +332,49 @@ page:
                   </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-5" role="tabpanel">
+                  <div class="Vlt-grid">
+                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596477949/16-7-2020_Nahrin_4_hkywr8.png" alt="New Stream, Who Dis?">
+                    </div>
+                    <div class="Vlt-col Vlt-col--2of3">
+                      <div class="Vlt-grid">
+                        <h4 class="Vlt-col mobile-center">New Stream, Who Dis?<br>Episode Title</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">17:00 London / 12:00 New York / 11:00 SF</p>
+                      </div>
+                      <p class="Vlt-col padding-left-0 mobile-justify">
+                        We will be talking about the <a class="Vlt-purple" href="https://www.linkit.nl/en/events/2020-OutSystems-Vonage-LINKIT-Developer-Challenge">2020 Developer Challenge</a>, a low-code hackathon Vonage is sponsoring in partnership with Outsystems and LINKIT.
+                        <br><br>
+                        laurenelee will be joined by <a class="Vlt-purple" href="https://www.linkedin.com/in/rickpfleger">Rick Pfleger</a>: an API Architect from Vonage, <a class="Vlt-purple" href="https://www.linkedin.com/in/ruibarbosa">Rui Barbosa</a>: Senior Developer Advocate from Outsystems, and <a class="Vlt-purple" href="https://www.linkedin.com/in/parma-bhagwandin-76106578/">Parma Bhagwandin</a>: Principal OutSystems Developer.
+                      </p>
+                    </div>
+                    <div class="Vlt-grid padding-top-32">
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4 class="inline-block">About Lauren Lee</h4>
+                        <a href="https://twitter.com/LoLoCoding" target="_blank">
+                          <i class="icon icon-twitter"></i>
+                        </a>
+                        <a href="https://github.com/laurenelee" target="_blank">
+                          <i class="icon icon-github"></i>
+                        </a>
+                        <h5>
+                          Developer Educator Manager
+                        </h5>
+                        <p class="text-justify">
+                          An English teacher turned empathetic software engineer. A curious optimist with a passion for creating accessible content and helping developers level up their skills.
+                        </p>
+                        </br>
+                        <a class="Vlt-purple" href="https://lolocoding.com">
+                          LoLoCoding.com
+                        </a>
+                      </div>
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4>About The Show</h4>
+                        <p class="text-justify">
+                          Weekly, each Tuesday Lauren is joined by a PDX team member who is there to teach her (and the viewers) how to build an app or implement one of our APIs. They may be following along a recent blog post or working through a new demo the Developer Advocate is excited about. The app is always built from scratch and is accessible to all levels of developers, from experts to beginners!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-6" role="tabpanel">
                   <div class="Vlt-grid">
@@ -508,6 +551,49 @@ page:
 
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-12" role="tabpanel">
+                  <div class="Vlt-grid">
+                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1604296159/Twitch_Show_Social_Graphics_24_ymx2qe.png" alt="Lauren Learns Things">
+                    </div>
+                    <div class="Vlt-col Vlt-col--2of3">
+                      <div class="Vlt-grid">
+                        <h4 class="Vlt-col mobile-center">Lauren Learns Things</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">15:00 London / 10:00 New York / 07:00 SF</p>
+                      </div>
+                      <p class="Vlt-col padding-left-0 mobile-justify">TBD</p>
+                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
+                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
+                        Vonage API
+                      </h5>
+                    </div>
+                    <div class="Vlt-grid padding-top-32">
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4>About The Show</h4>
+                        <p class="text-justify">
+                          Weekly, each Tuesday Lauren is joined by a PDX team member who is there to teach her (and the viewers) how to build an app or implement one of our APIs. They may be following along a recent blog post or working through a new demo the Developer Advocate is excited about. The app is always built from scratch and is accessible to all levels of developers, from experts to beginners!
+                        </p>
+                      </div>
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4 class="inline-block">About Lauren Lee</h4>
+                        <a href="https://twitter.com/LoLoCoding" target="_blank">
+                          <i class="icon icon-twitter"></i>
+                        </a>
+                        <a href="https://github.com/laurenelee" target="_blank">
+                          <i class="icon icon-github"></i>
+                        </a>
+                        <h5>
+                          Developer Educator Manager
+                        </h5>
+                        <p class="text-justify">
+                          An English teacher turned empathetic software engineer. A curious optimist with a passion for creating accessible content and helping developers level up their skills.
+                        </p>
+                        </br>
+                        <a class="Vlt-purple" href="https://lolocoding.com">
+                          LoLoCoding.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-13" role="tabpanel">
                 </div>
@@ -640,6 +726,49 @@ page:
                   </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-19" role="tabpanel">
+                  <div class="Vlt-grid">
+                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1604296159/Twitch_Show_Social_Graphics_24_ymx2qe.png" alt="Lauren Learns Things">
+                    </div>
+                    <div class="Vlt-col Vlt-col--2of3">
+                      <div class="Vlt-grid">
+                        <h4 class="Vlt-col mobile-center">Lauren Learns Things</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">15:00 London / 10:00 New York / 07:00 SF</p>
+                      </div>
+                      <p class="Vlt-col padding-left-0 mobile-justify">TBD</p>
+                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
+                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
+                        Vonage API
+                      </h5>
+                    </div>
+                    <div class="Vlt-grid padding-top-32">
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4>About The Show</h4>
+                        <p class="text-justify">
+                          Weekly, each Tuesday Lauren is joined by a PDX team member who is there to teach her (and the viewers) how to build an app or implement one of our APIs. They may be following along a recent blog post or working through a new demo the Developer Advocate is excited about. The app is always built from scratch and is accessible to all levels of developers, from experts to beginners!
+                        </p>
+                      </div>
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4 class="inline-block">About Lauren Lee</h4>
+                        <a href="https://twitter.com/LoLoCoding" target="_blank">
+                          <i class="icon icon-twitter"></i>
+                        </a>
+                        <a href="https://github.com/laurenelee" target="_blank">
+                          <i class="icon icon-github"></i>
+                        </a>
+                        <h5>
+                          Developer Educator Manager
+                        </h5>
+                        <p class="text-justify">
+                          An English teacher turned empathetic software engineer. A curious optimist with a passion for creating accessible content and helping developers level up their skills.
+                        </p>
+                        </br>
+                        <a class="Vlt-purple" href="https://lolocoding.com">
+                          LoLoCoding.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-20" role="tabpanel">
                   <div class="Vlt-grid">
