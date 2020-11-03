@@ -10,8 +10,7 @@ Signed webhooks provide a method for your application to verify a request is com
 
 > Voice API Signed webhooks are currently offered as [Developer Preview](/product-lifecycle/dev-preview). The feature can be used in your projects for supported scenarios (see below). The following limitations apply:
 <ul style='list-style:disc;margin-left:16px;margin-top:16px;'><li style='margin-bottom:16px;'>a limited set of events supported,</li>
-<li style='margin-bottom:16px;'>activation can be done through Applications API request only,</li></ul>
-see more details below.
+<li style='margin-bottom:16px;'>activation can be done through Applications API request only.</li></ul>
 
 ## Activation
 
