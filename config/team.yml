@@ -103,3 +103,7 @@ current:
   - name: "Filippos Kyprianou"
     email: "filippos.kyprianou@vonage.com"
     role: "Startup Community Manager"
+  - name: "Mark Lewin"
+    email: "mark.lewin@vonage.com"
+    role: "Technical Writer"
+    twitter: "devtechwriter"    
