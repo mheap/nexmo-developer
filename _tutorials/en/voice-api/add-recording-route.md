@@ -5,7 +5,9 @@ description: Handle Recording event from Vonage
 
 # Add Recording Route
 
-After the call is finished recording, Vonage will send you a webhook containing the URL at which the recording can be retrieved. To retrieve the recording you'll use the `GetRecording` API, and just the recording to your disk for demonstration purposes.
+After the call has finished recording, Vonage will send a request to the webhook URL you configured in the `record` action in your NCCO. This request will contain the URL from which you can download the audio file.
+
+In this tutorial, you'll use the `GetRecording` API to download the recording to your local machine:
 
 ```csharp
 [HttpPost("/webhooks/recording")]
