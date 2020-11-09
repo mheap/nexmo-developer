@@ -34,9 +34,9 @@ page:
                 <div class="Vlt-table__row">
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="2">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="2a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="2a" role="tab">
                         <b>2</b>
-                        <p class="show"></p>
+                        <p class="show">Week.init()</p>
                       </div>
                     </span>
                   </div>
@@ -79,9 +79,9 @@ page:
                 <div class="Vlt-table__row">
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="9">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="2a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="2a" role="tab">
                         <b>9</b>
-                        <p class="show"></p>
+                        <p class="show">Week.init()</p>
                       </div>
                     </span>
                   </div>
@@ -121,9 +121,9 @@ page:
                 <div class="Vlt-table__row">
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="16">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="2a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="2a" role="tab">
                         <b>16</b>
-                        <p class="show"></p>
+                        <p class="show">Week.init()</p>
                       </div>
                     </span>
                   </div>
@@ -173,6 +173,47 @@ page:
 
 
                 <div class="Vlt-tabs__panel" id="tab-2" role="tabpanel">
+                  <div class="Vlt-grid">
+                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599463202/Week.init_twitter_gt26mi.png" alt="Week.init()">
+                    </div>
+                    <div class="Vlt-col Vlt-col--2of3">
+                      <div class="Vlt-grid">
+                        <h4 class="Vlt-col mobile-center">Week.init()</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">14:00 London / 09:00 New York / 06:00 SF</p>
+                      </div>
+                      <p class="Vlt-col padding-left-0 mobile-justify">
+                        <h5>Back-end to the future (part 2) </h5>
+                        <p>We're continuing to build a NodeJS backend for our application. Paul is joined by Dwane and Michael to continue building an API back-end for our V-app clients.</p>
+                      </p>
+                    </div>
+                    <div class="Vlt-grid padding-top-32">
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4>About The Show</h4>
+                        <p class="text-justify">
+                          This series will promote the Conversation APIs within the Client SDKs and beyond. Episodes will cover a wide range of topics such as how to build a native messaging or VOIP applications!
+                        </p>
+                      </div>
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4 class="inline-block">About Paul Ardeleanu</h4>
+                        <a href="https://twitter.com/pardel" target="_blank">
+                          <i class="icon icon-twitter"></i>
+                        </a>
+                        <a href="https://github.com/pardel" target="_blank">
+                          <i class="icon icon-github"></i>
+                        </a>
+                        <h5>
+                          Developer Advocate Manager
+                        </h5>
+                        <p class="text-justify">
+                          Paul is an iOS Developer Advocate at Nexmo. A seasoned software engineer, trainer and speaker, he specialised in data-driven solutions on Apple platforms with an emphasis on prototyping, best practices and balance with agility.
+                        </p>
+                        <a class="Vlt-purple" href="https://www.pardel.net/">
+                          pardel.net
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-3" role="tabpanel">
                   <div class="Vlt-grid">
@@ -440,6 +481,47 @@ page:
                   </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-9" role="tabpanel">
+                  <div class="Vlt-grid">
+                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599463202/Week.init_twitter_gt26mi.png" alt="Week.init()">
+                    </div>
+                    <div class="Vlt-col Vlt-col--2of3">
+                      <div class="Vlt-grid">
+                        <h4 class="Vlt-col mobile-center">Week.init()</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">14:00 London / 09:00 New York / 06:00 SF</p>
+                      </div>
+                      <p class="Vlt-col padding-left-0 mobile-justify">
+                        <h5>Back-end to the future (part 3)</h5>
+                        <p>We're continuing to build a NodeJS backend for our application. Paul is joined by Dwane and Michael to continue building an API back-end for our V-app clients.</p>
+                      </p>
+                    </div>
+                    <div class="Vlt-grid padding-top-32">
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4>About The Show</h4>
+                        <p class="text-justify">
+                          This series will promote the Conversation APIs within the Client SDKs and beyond. Episodes will cover a wide range of topics such as how to build a native messaging or VOIP applications!
+                        </p>
+                      </div>
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4 class="inline-block">About Paul Ardeleanu</h4>
+                        <a href="https://twitter.com/pardel" target="_blank">
+                          <i class="icon icon-twitter"></i>
+                        </a>
+                        <a href="https://github.com/pardel" target="_blank">
+                          <i class="icon icon-github"></i>
+                        </a>
+                        <h5>
+                          Developer Advocate Manager
+                        </h5>
+                        <p class="text-justify">
+                          Paul is an iOS Developer Advocate at Nexmo. A seasoned software engineer, trainer and speaker, he specialised in data-driven solutions on Apple platforms with an emphasis on prototyping, best practices and balance with agility.
+                        </p>
+                        <a class="Vlt-purple" href="https://www.pardel.net/">
+                          pardel.net
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-10" role="tabpanel">
                   <div class="Vlt-grid">
@@ -598,6 +680,47 @@ page:
                 <div class="Vlt-tabs__panel" id="tab-13" role="tabpanel">
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-16" role="tabpanel">
+                  <div class="Vlt-grid">
+                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599463202/Week.init_twitter_gt26mi.png" alt="Week.init()">
+                    </div>
+                    <div class="Vlt-col Vlt-col--2of3">
+                      <div class="Vlt-grid">
+                        <h4 class="Vlt-col mobile-center">Week.init()</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">14:00 London / 09:00 New York / 06:00 SF</p>
+                      </div>
+                      <p class="Vlt-col padding-left-0 mobile-justify">
+                        <h5>Back-end to the future (part 4)</h5>
+                        <p>We're continuing to build a NodeJS backend for our application. Paul is joined by Dwane and Michael to continue building an API back-end for our V-app clients.</p>
+                      </p>
+                    </div>
+                    <div class="Vlt-grid padding-top-32">
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4>About The Show</h4>
+                        <p class="text-justify">
+                          This series will promote the Conversation APIs within the Client SDKs and beyond. Episodes will cover a wide range of topics such as how to build a native messaging or VOIP applications!
+                        </p>
+                      </div>
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4 class="inline-block">About Paul Ardeleanu</h4>
+                        <a href="https://twitter.com/pardel" target="_blank">
+                          <i class="icon icon-twitter"></i>
+                        </a>
+                        <a href="https://github.com/pardel" target="_blank">
+                          <i class="icon icon-github"></i>
+                        </a>
+                        <h5>
+                          Developer Advocate Manager
+                        </h5>
+                        <p class="text-justify">
+                          Paul is an iOS Developer Advocate at Nexmo. A seasoned software engineer, trainer and speaker, he specialised in data-driven solutions on Apple platforms with an emphasis on prototyping, best practices and balance with agility.
+                        </p>
+                        <a class="Vlt-purple" href="https://www.pardel.net/">
+                          pardel.net
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-17" role="tabpanel">
                   <div class="Vlt-grid">
