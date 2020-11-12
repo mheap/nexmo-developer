@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 6.0.17 - November 12, 2020
+
+### Fixes
+
+- Update Session id after reconnection
+
 ## Version 6.0.16 - October 12, 2020
 
 ### Fixes
