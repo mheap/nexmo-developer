@@ -8,6 +8,7 @@
     "GIT_SSH_KEY": { "required": true },
     "RACK_ENV": { "required": true },
     "RAILS_ENV": { "required": true },
+    "DATABASE_URL": { "required": true },
     "OAS_PATH": "/app/_open_api/api_specs/definitions",
     "DOCS_BASE_PATH": "."
   },
