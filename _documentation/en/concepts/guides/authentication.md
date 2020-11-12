@@ -58,7 +58,7 @@ An example of authentication query parameters would be as follows:
 
 The request may also need other query parameters and these can be added in any order.
 
-### Header-based API Key and Secret Authentication
+### Basic Authentication
 
 A number of newer Vonage APIs require authentication to be done using an API key and secret sent Base64 encoded in the `Authorization` header.
 
@@ -90,6 +90,7 @@ Details on how to encode Base64 strings in a variety of programming languages ca
 * Swift: [Base64 Encode and Decode in Swift](http://iosdevelopertips.com/swift-code/base64-encode-decode-swift.html) from iOS Developer Tips
 
 ### Secret Rotation
+
 It is possible to have two API secrets to be used against one API key at the same time. This way you can create a second API secret and test it before revoking the existing API secret in your production network. The API secret rotation procedure consists of the following steps:
 
 1. Create a second API secret in your [account settings](https://dashboard.nexmo.com/settings) or by using  the [secret rotation API](/api/account/secret-management).
@@ -97,9 +98,9 @@ It is possible to have two API secrets to be used against one API key at the sam
 3. Test that there are no connectivity issues and roll out the API secret update across the remaining servers
 4. Delete the replaced API secret
 
-## JSON Web Tokens (JWT)
+## JWTs
 
-JSON Web Tokens (JWT) are a compact, URL-safe means of representing claims to be transferred between two parties.
+JSON Web Tokens (JWTs) are a compact, URL-safe means of representing claims to be transferred between two parties.
 
 JWTs are used by the Voice API to authenticate your requests. The [Vonage libraries](/tools) and Nexmo CLI handle JWT generation using a unique Vonage Voice Application ID and a Private Key.
 
@@ -121,6 +122,10 @@ Name | Description | Required
 `exp` | The UNIX timestamp at UTC + 0 indicating the moment the JWT is no longer valid. A minimum value of 30 seconds from the time the JWT is generated. A maximum value of 24 hours from the time the JWT is generated. A default value of 15 minutes from the time the JWT is generated. | ❌
 
 If you are not using a Vonage library you should refer to [RFC 7519](https://tools.ietf.org/html/rfc7519) to implement JWT.
+
+### Using the Vonage API online tool to generate a JWT
+
+You can generate a JWT using our [online tool](/jwt).
 
 ### Using the Nexmo CLI to generate JWTs
 

@@ -38,9 +38,13 @@ Once you have an account, you can log into the [Developer Dashboard](/account/gu
 
 ## Using the Nexmo CLI
 
-You can optionally perform many of the Dashboard tasks from the command line, using the Nexmo CLI.
-This is often quicker and also allows you to script these operations.
+You can optionally perform many of the Dashboard tasks from the command line, using the Nexmo CLI. This is often quicker and also allows you to script these operations.
+
 The Nexmo CLI is written in Node.js and installed using the Node Package Manager (`npm`). The `README` in the [Nexmo CLI GitHub repo](https://github.com/Nexmo/nexmo-cli) shows you how to install and work with the Nexmo CLI.
+
+## Authentication
+
+When using the Vonage APIs your requests need to be [authenticated](/concepts/authentication). Typically this is done using [Basic Authentication](/concepts/authentication#basic-authentication) or [JWTs](/concepts/authentication#jwts). You can generate a suitable JWT using the Nexmo CLI, or our [online tool](/jwt).
 
 ## Experimenting with our APIs
 
