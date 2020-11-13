@@ -32,51 +32,9 @@ page:
 
 
                 <div class="Vlt-table__row">
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="9">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="2a" role="tab">
-                        <b>9</b>
-                        <p class="show">Week.init()</p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="10">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="10a" role="tab">
-                        <b>10</b>
-                        <p class="show">Mistakes Were Made</p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="11">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="11a" role="tab">
-                        <b>11</b>
-                        <p class="show">Developer Drop-In</p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="12">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="2a" role="tab">
-                        <b>12</b>
-                        <p class="show">Lauren Learns Things</p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="13">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="2a" role="tab">
-                        <b>13</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                </div>
-                <div class="Vlt-table__row">
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="16">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="2a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="16a" role="tab">
                         <b>16</b>
                         <p class="show">Week.init()</p>
                       </div>
@@ -84,7 +42,7 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="17">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="3a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="17a" role="tab">
                         <b>17</b>
                         <p class="show">Mistakes Were Made</p>
                       </div>
@@ -96,7 +54,7 @@ page:
                         <b>18</b>
                         <p class="show">The Low-Code Hour</p>
                       </div>
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="4b" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="18b" role="tab">
                         <p class="show">Vonage Gems</p>
                       </div>
                     </span>
@@ -111,9 +69,9 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="20">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="20a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="20a" role="tab">
                         <b>20</b>
-                        <p class="show">Build A Thing</p>
+                        <p class="show"></p>
                       </div>
                     </span>
                   </div>
@@ -215,206 +173,6 @@ page:
 
 
 
-                <div class="Vlt-tabs__panel" id="tab-9" role="tabpanel">
-                  <div class="Vlt-grid">
-                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599463202/Week.init_twitter_gt26mi.png" alt="Week.init()">
-                    </div>
-                    <div class="Vlt-col Vlt-col--2of3">
-                      <div class="Vlt-grid">
-                        <h4 class="Vlt-col mobile-center">Week.init()</h4>
-                        <p class="Vlt-col Vlt-right mobile-justify">14:00 London / 09:00 New York / 06:00 SF</p>
-                      </div>
-                      <p class="Vlt-col padding-left-0 mobile-justify">
-                        <h5>Back-end to the future (part 3)</h5>
-                        <p>We're continuing to build a NodeJS backend for our application. Paul is joined by Dwane and Michael to continue building an API back-end for our V-app clients.</p>
-                      </p>
-                    </div>
-                    <div class="Vlt-grid padding-top-32">
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4>About The Show</h4>
-                        <p class="text-justify">
-                          This series will promote the Conversation APIs within the Client SDKs and beyond. Episodes will cover a wide range of topics such as how to build a native messaging or VOIP applications!
-                        </p>
-                      </div>
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4 class="inline-block">About Paul Ardeleanu</h4>
-                        <a href="https://twitter.com/pardel" target="_blank">
-                          <i class="icon icon-twitter"></i>
-                        </a>
-                        <a href="https://github.com/pardel" target="_blank">
-                          <i class="icon icon-github"></i>
-                        </a>
-                        <h5>
-                          Developer Advocate Manager
-                        </h5>
-                        <p class="text-justify">
-                          Paul is an iOS Developer Advocate at Nexmo. A seasoned software engineer, trainer and speaker, he specialised in data-driven solutions on Apple platforms with an emphasis on prototyping, best practices and balance with agility.
-                        </p>
-                        <a class="Vlt-purple" href="https://www.pardel.net/">
-                          pardel.net
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-10" role="tabpanel">
-                  <div class="Vlt-grid">
-                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1603107499/Twitch_Show_Social_Graphics_20_z48hev.png" alt="Mistakes Were Made">
-                    </div>
-                    <div class="Vlt-col Vlt-col--2of3">
-                      <div class="Vlt-grid">
-                        <h4 class="Vlt-col mobile-center">Mistakes Were Made</h4>
-                        <p class="Vlt-col Vlt-right mobile-justify">16:00 London / 11:00 New York / 08:00 SF</p>
-                      </div>
-                      <p class="Vlt-col padding-left-0 mobile-justify">
-                        <h5>Adding AR to WebRTC sessions</h5>
-                          Ever want to be a superhero? How about a live-action emoji? Let’s add augmented reality filters to our Video API sessions so we can be Batman.
-                      </p>
-                      <br>
-                      <b>Links:</b>
-                      <a href="https://tokbox.com/developer/" target="_blank">
-                        Vonage Video API Developer Center
-                      </a>
-                      <b> - </b>
-                      <a href="https://www.deepar.ai/" target="_blank">
-                        Deep AR
-                      </a>
-                      <br><br>
-                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
-                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        Vonage Video API - webrtc - opentok - vuejs - augmented-reality - filters
-                      </h5>
-                    </div>
-                    <div class="Vlt-grid padding-top-32">
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4>About The Show</h4>
-                        <p class="text-justify">
-                          Every week, Michael repeats the cycle of 'make, mistake, make' as he attempts to learn, build & teach something new.
-                        </p>
-                      </div>
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4 class="inline-block">About Michael Jolley</h4>
-                        <a href="https://twitter.com/baldbeardbuild" target="_blank">
-                          <i class="icon icon-twitter"></i>
-                        </a>
-                        <a href="https://github.com/MichaelJolley" target="_blank">
-                          <i class="icon icon-github"></i>
-                        </a>
-                        <h5>
-                          Developer Advocate
-                        </h5>
-                        <p class="text-justify">
-                          Michael is the bald, bearded builder.
-                          <br>
-                          Using his 20 years experience in software development and DevOps, this follicly challenged developer spends his days focused on helping others succeed.
-                        </p>
-                        </br>
-                        <a class="Vlt-purple" href="https://baldbeardedbuilder.com/">
-                           BaldBeardedBuilder.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-11" role="tabpanel">
-                  <div class="Vlt-grid">
-                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596477949/Developer_Drop-In_Lorna_1_2_lkqquz.png" alt="Developer Drop-In">
-                    </div>
-                    <div class="Vlt-col Vlt-col--2of3">
-                      <div class="Vlt-grid">
-                        <h4 class="Vlt-col mobile-center">Developer Drop-In</h4>
-                        <p class="Vlt-col Vlt-right mobile-justify">15:00 London / 10:00 New York / 09:00 SF</p>
-                      </div>
-                      <p class="Vlt-col padding-left-0 mobile-justify">
-                        <h5>Voice API Tips and Tricks</h5>
-                        Vonage Voice API is a world of possibilities. There are API endpoints, call objects you can create and send, basically everything you can think of - and sometimes that's too much choice. In this session we'll take some of your use cases and questions, and show how to put together applications, events and webhooks that let you abuild the applications you are dreaming of.
-                      </p>
-                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
-                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        Vonage Voice API - API - Code - Voice - Telephone - Fun
-                      </h5>
-                    </div>
-                    <div class="Vlt-grid padding-top-32">
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4>About The Show</h4>
-                        <p class="text-justify">
-                          Bi-weekly, on Wednesdays, Developer Drop-In is a chance for developers to get their questions answered live on stream and meet the people who build the libraries and sample apps they know and love. Lorna is the host, often joined by other team members. She takes questions from the audience and builds something as a more detailed answer to questions the team receives on StackOverflow or the community slack.
-                        </p>
-                      </div>
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4 class="inline-block">About Lorna Mitchell</h4>
-                        <a href="https://twitter.com/lornajane" target="_blank">
-                          <i class="icon icon-twitter"></i>
-                        </a>
-                        <a href="https://github.com/lornajane" target="_blank">
-                          <i class="icon icon-github"></i>
-                        </a>
-                        <h5>
-                          Senior Developer Advocate
-                        </h5>
-                        <p class="text-justify">
-                          Lorna is a software engineer with an incurable blogging habit. She works on the Developer Relations team at Nexmo and tries to tame words and code in equal measure.
-                        </p>
-                        </br>
-                        <a class="Vlt-purple" href="https://lornajane.net">
-                          https://lornajane.net
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-12" role="tabpanel">
-                  <div class="Vlt-grid">
-                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1604296159/Twitch_Show_Social_Graphics_24_ymx2qe.png" alt="Lauren Learns Things">
-                    </div>
-                    <div class="Vlt-col Vlt-col--2of3">
-                      <div class="Vlt-grid">
-                        <h4 class="Vlt-col mobile-center">Lauren Learns Things</h4>
-                        <p class="Vlt-col Vlt-right mobile-justify">15:30 London / 10:30 New York / 07:30 SF</p>
-                      </div>
-                      <p class="Vlt-col padding-left-0 mobile-justify">
-                        Lauren Carter will join as the Messages API PM
-                      </p>
-                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
-                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        Vonage Messages API
-                      </h5>
-                    </div>
-                    <div class="Vlt-grid padding-top-32">
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4>About The Show</h4>
-                        <p class="text-justify">
-                          Weekly, each Tuesday Lauren is joined by a PDX team member who is there to teach her (and the viewers) how to build an app or implement one of our APIs. They may be following along a recent blog post or working through a new demo the Developer Advocate is excited about. The app is always built from scratch and is accessible to all levels of developers, from experts to beginners!
-                        </p>
-                      </div>
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4 class="inline-block">About Lauren Lee</h4>
-                        <a href="https://twitter.com/LoLoCoding" target="_blank">
-                          <i class="icon icon-twitter"></i>
-                        </a>
-                        <a href="https://github.com/laurenelee" target="_blank">
-                          <i class="icon icon-github"></i>
-                        </a>
-                        <h5>
-                          Developer Educator Manager
-                        </h5>
-                        <p class="text-justify">
-                          An English teacher turned empathetic software engineer. A curious optimist with a passion for creating accessible content and helping developers level up their skills.
-                        </p>
-                        </br>
-                        <a class="Vlt-purple" href="https://lolocoding.com">
-                          LoLoCoding.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-13" role="tabpanel">
-                </div>
                 <div class="Vlt-tabs__panel" id="tab-16" role="tabpanel">
                   <div class="Vlt-grid">
                     <div class="Vlt-col Vlt-col--1of3 padding-left-0">
@@ -426,12 +184,12 @@ page:
                         <p class="Vlt-col Vlt-right mobile-justify">14:00 London / 09:00 New York / 06:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
-                        <h5>iOS integrating APIs</h5>
+                        <h5>Back-end to the future</h5>
                         <p></p>
                       </p>
                       <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
                         <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        iOS - Swift - Vonage APIs
+                          Vonage APIs
                       </h5>
                     </div>
                     <div class="Vlt-grid padding-top-32">
@@ -688,67 +446,7 @@ page:
                   </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-20" role="tabpanel">
-                  <div class="Vlt-grid">
-                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599559866/Twitter_Post_-_1_24_trssdl.png" alt="Build a Thing with Kevin Lewis">
-                    </div>
-                    <div class="Vlt-col Vlt-col--2of3">
-                      <div class="Vlt-grid">
-                        <h4 class="Vlt-col mobile-center">Build a Thing with Kevin Lewis: Week 5</h4>
-                        <p class="Vlt-col Vlt-right mobile-justify">18:00 London / 13:00 New York / 10:00 SF</p>
-                      </div>
-                      <p class="Vlt-col padding-left-0 mobile-justify">
-                        Join Kevin Lewis, Developer Advocate at Vonage, as he builds a new project from scratch over several weeks. Kevin is currently building a serverless video conferencing application using Netlify Functions, MongoDB, Vue.js and the Vonage Video API. In this episode, Kevin will take user requests for features to add!
-                        <br><br
-                        <b>Links:</b>
-                        <a href="https://github.com/nexmo-community/build-a-thing-video-conferencing" target="_blank">
-                          Companion Repo
-                        </a>
-                        <b> - </b>
-                        <a href="https://www.netlify.com/products/functions" target="_blank">
-                          Netlify Functions
-                        </a>
-                        <b> - </b>
-                        <a href="https://tokbox.com/developer/sdks/node/" target="_blank">
-                          Vonage Video API Docs
-                        </a>
-                        <br>
-                        <a href="https://dev.to/_phzn/accessing-mongodb-atlas-from-netlify-functions-1h70" target="_blank">
-                          Accessing MongoDB Atlas from Netlify Function
-                        </a>
-                      </p>
-                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
-                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        JavaScript - Node.js - HTML - CSS - Vonage Video API - Serverless - Netlify - MongoDB - Vue.js
-                      </h5>
-                    </div>
-                    <div class="Vlt-grid padding-top-32">
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4>About The Show</h4>
-                        <p class="text-justify">
-                          Join Kevin Lewis, Developer Advocate at Vonage, as he builds a new project from scratch over 5 weeks.
-                          <br>
-                          <br>
-                          Kevin is currently building a serverless video conferencing application using Netlify Functions, MongoDB, Vue.js and the Vonage Video API.
-                        </p>
-                      </div>
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4 class="inline-block">About Kevin Lewis</h4>
-                        <a href="https://twitter.com/_phzn" target="_blank">
-                          <i class="icon icon-twitter"></i>
-                        </a>
-                        <a href="https://github.com/phazonoverload" target="_blank">
-                          <i class="icon icon-github"></i>
-                        </a>
-                        <h5>
-                          Developer Advocate
-                        </h5>
-                        <p class="text-justify">
-                          Kevin Lewis is a Developer Advocate for Vonage, where his role is to support the local tech community in London. He’s an experienced events organiser, boardgamer and dad to a cute little dog called Moo. He’s also the lead organizer for You Got This - a network of events on the core skills needed for a happy, healthy work life.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  20
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-23" role="tabpanel">
                   <div class="Vlt-grid">
@@ -761,12 +459,12 @@ page:
                         <p class="Vlt-col Vlt-right mobile-justify">14:00 London / 09:00 New York / 06:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
-                        <h5>Android Integration APIs</h5>
+                        <h5>iOS Integrating APIs</h5>
                         <p></p>
                       </p>
                       <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
                         <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        Android - Kotlin - Vonage APIs
+                        Swift - iOS - Vonage APIs
                       </h5>
                     </div>
                     <div class="Vlt-grid padding-top-32">
@@ -922,11 +620,11 @@ page:
                         <p class="Vlt-col Vlt-right mobile-justify">14:00 London / 09:00 New York / 06:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
-                        <h5>JS integration APIs</h5>
+                        <h5>Android integration APIs</h5>
                         <p>
                           <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
                             <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                            JavaScript - Vonage APIs
+                            Android - Kotlin - Vonage APIs
                           </h5>
                         </p>
                       </p>
