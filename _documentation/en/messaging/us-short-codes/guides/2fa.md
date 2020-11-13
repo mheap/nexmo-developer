@@ -4,6 +4,10 @@ title: 2FA
 
 # Two-factor Authentication API
 
+> **Action Needed For Vonage Customers Using US Shared Short Codes**
+>
+> **Effective immediately, Vonage will no longer accept new programs for Shared Short Codes for A2P messaging.** T-Mobile and AT&T’s new code of conduct prohibits the use of shared originators, therefore, existing Shared Short Code traffic must be migrated by March 1, 2021. To help you with this transition, please use the Vonage [guide to alternatives](https://help.nexmo.com/hc/en-us/articles/360050905592).  Please [contact us](mailto:support@nexmo.com) to migrate to a new solution.
+
 You can use Two-factor Authentication API to prove a user's identity. Provision a US Short Code with a standard or custom template that specifies the custom parameters for two-factor authentication (2FA) messages. These APIs support 2FA for the US and Canada.
 
 Two-factor authentication (also known as 2FA) provides user identification by combining two different components. In this case, a phone number associated with your user and a PIN. Before you use this API you have to [set up a preapproved Short Code for 2FA](/numbers/guides/enable-2fa).

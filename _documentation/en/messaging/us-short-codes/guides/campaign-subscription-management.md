@@ -5,6 +5,10 @@ description: Create an opt-in and opt-out process for recipients of your campaig
 
 # Campaign Subscription Management
 
+> **Action Needed For Vonage Customers Using US Shared Short Codes**
+>
+>**Effective immediately, Vonage will no longer accept new programs for Shared Short Codes for A2P messaging.** T-Mobile and AT&T’s new code of conduct prohibits the use of shared originators, therefore, existing Shared Short Code traffic must be migrated by March 1, 2021. To help you with this transition, please use the Vonage [guide to alternatives](https://help.nexmo.com/hc/en-us/articles/360050905592).  Please [contact us](mailto:support@nexmo.com) to migrate to a new solution.
+
 Messaging activities fall under the regulatory guidelines of several groups, depending on the nation in which you send the messages. For more information see [Preapproved US Short Codes compliance requirements](https://help.nexmo.com/hc/en-us/articles/204015403-Preapproved-US-Short-Codes-compliance-requirements)
 
 You use the *opt-in* API to:

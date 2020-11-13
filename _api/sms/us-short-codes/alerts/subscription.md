@@ -6,6 +6,10 @@ api: Alerts API - Subscribing
 
 # Alerts - Subscribing API Reference
 
+> **Action Needed For Vonage Customers Using US Shared Short Codes**
+>
+> **Effective immediately, Vonage will no longer accept new programs for Shared Short Codes for A2P messaging.** T-Mobile and AT&T’s new code of conduct prohibits the use of shared originators, therefore, existing Shared Short Code traffic must be migrated by March 1, 2021. To help you with this transition, please use the Vonage [guide to alternatives](https://help.nexmo.com/hc/en-us/articles/360050905592).  Please [contact us](mailto:support@nexmo.com) to migrate to a new solution.
+
 This defines the API for Campaign Subscription Management:
 
 * [Request](#request) - request the list of phone numbers opted out from your campaign, or remove a phone number from the list

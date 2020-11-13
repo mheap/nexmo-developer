@@ -4,6 +4,10 @@ title: Alerts
 
 # Alerts
 
+> **Action Needed For Vonage Customers Using US Shared Short Codes**
+>
+> **Effective immediately, Vonage will no longer accept new programs for Shared Short Codes for A2P messaging.** T-Mobile and AT&T’s new code of conduct prohibits the use of shared originators, therefore, existing Shared Short Code traffic must be migrated by March 1, 2021. To help you with this transition, please use the Vonage [guide to alternatives](https://help.nexmo.com/hc/en-us/articles/360050905592).  Please [contact us](mailto:support@nexmo.com) to migrate to a new solution.
+
 You use Event Based Alerts to communicate with people using Event Based Alerts. Provision a US Short Code with a standard or custom template that specifies the custom parameters for Alert messages.
 
 > Note: quality of delivery (QoD) statistics are based on delivery receipts (DLR). For the US we only receive intermediate and not handset DLRs. This means Dashboard analytics cannot show QoD statistics for short codes.
