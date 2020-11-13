@@ -369,7 +369,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    station (0.0.96)
+    station (0.0.97)
       activeadmin (~> 2.7)
       activesupport (~> 6.0)
       algoliasearch (= 1.27.5)
@@ -457,7 +457,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  station (= 0.0.96)!
+  station (= 0.0.97)!
 
 BUNDLED WITH
    2.1.4
