@@ -1,6 +1,6 @@
 ---
 dependencies:
-    - nexmo@beta
+    - nexmo
 code:
     source: .repos/vonage/vonage-node-code-snippets/dispatch/send-failover-facebook-sms.js
     from_line: 14

@@ -1,6 +1,6 @@
 ---
 dependencies:
-    - nexmo@beta
+    - nexmo
 code:
     source: .repos/vonage/vonage-node-code-snippets/messages/viber/send-text.js
     from_line: 12

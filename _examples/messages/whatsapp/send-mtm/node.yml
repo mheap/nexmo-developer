@@ -1,6 +1,6 @@
 ---
 dependencies:
-    - nexmo@beta
+    - nexmo
 code:
     source: .repos/vonage/vonage-node-code-snippets/messages/whatsapp/send-template.js
     from_line: 15
