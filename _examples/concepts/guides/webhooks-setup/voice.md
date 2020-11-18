@@ -50,7 +50,7 @@ Inside an NCCO, the following action types take a webhook URL for use when that 
 
 ### Webhook Timeouts
 
-If the answer, event or fallback URL is unreachable for a certain amount of time, or the response reading time exceeds a certain limit, Vonage will retry the request once. Platform default connection and reading timeouts are as follows:
+If the answer, event or fallback URL is unreachable for a certain amount of time, or the response time exceeds a certain limit, Vonage will retry the request once. Platform default connection and reading timeouts are as follows:
 
 Webhook Type | Connect Timeout | Socket Timeout
 -------------|-----------------|----------------
@@ -58,6 +58,6 @@ Answer | 1 second | 5 seconds
 Event | 1 second | 10 seconds
 Fallback | 1 second | 5 seconds
 
-These defaults can be overridden via [Application API](/api/application.v2#updateApplication) call or in the [Dashboard](https://dashboard.nexmo.com/applications) - select the application, then click **Edit** button and scroll to Capabilities / Voice section:
+These defaults can be overridden via an [Application API](/api/application.v2#updateApplication) call or in the [Dashboard](https://dashboard.nexmo.com/applications) by selecting the application, then clicking the **Edit** button and scrolling to the Capabilities / Voice section:
 
 ![Voice Webhook Timetous](/images/concepts/guides/db_voice_webhook_timeouts.png)
