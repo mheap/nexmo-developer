@@ -67,7 +67,8 @@ jobs:
     steps:
     - id: step1
       name: Check for File Changes
-      uses: nexmo/github-actions/check-docs-changes@check-docs-changes
+      run: "arr=( $(git log --since=15.days --name-only --oneline --diff-filter=AMR --pretty=format: master _documentation/en _tutorials/en _use_cases/en | uniq | awk 'NF') )"
+      shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   smartling-upload:
@@ -82,4 +83,4 @@ jobs:
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
       run: |
-        RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-smartling-upload ${{matrix}}
+        RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-smartling-upload 15 ${{matrix}}
