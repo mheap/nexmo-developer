@@ -67,7 +67,7 @@ jobs:
     steps:
     - id: step1
       name: Check for File Changes
-      run: "arr=( $(git log --since=15.days --name-only --oneline --diff-filter=AMR --pretty=format: master _documentation/en _tutorials/en _use_cases/en | uniq | awk 'NF') )"
+      run: "arr=( $(git log --since=15.days --name-only --oneline --diff-filter=AMR --pretty=format: master _documentation/en _tutorials/en _use_cases/en | uniq | awk 'NF' | paste -d \",\" -s) )"
       shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
