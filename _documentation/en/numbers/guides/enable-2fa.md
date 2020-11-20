@@ -6,9 +6,13 @@ navigation_weight: 2
 
 # Enable Two-Factor Authentication
 
-[Two-factor authentication](/concepts/guides/glossary#2fa) (2FA) gives you confidence that the number your customer provides you with belongs to them. If you are sending SMS to customers in the US, you can use a [short code](/concepts/guides/glossary#short-code) for this. A customer verifies their number by responding directly to the short code or via your web application. Nexmo's [Two-Factor Authentication API](/api/sms/us-short-codes/2fa) provides this capability. 
+> **Action Needed For Vonage Customers Using US Shared Short Codes**
+>
+> **Effective immediately, Vonage will no longer accept new programs for Shared Short Codes for A2P messaging.** T-Mobile and AT&T’s new code of conduct prohibits the use of shared originators, therefore, existing Shared Short Code traffic must be migrated by March 1, 2021. To help you with this transition, please use the Vonage [guide to alternatives](https://help.nexmo.com/hc/en-us/articles/360050905592).  Please [contact us](mailto:support@nexmo.com) to migrate to a new solution.
 
-> These instructions assume that you are using a shared short code. Nexmo also offers dedicated short codes specific to your organization. Find out more about short codes [here](https://help.nexmo.com/hc/en-us/articles/115013144287-Short-codes-Features-Overview).
+[Two-factor authentication](/concepts/guides/glossary#2fa) (2FA) gives you confidence that the number your customer provides you with belongs to them. If you are sending SMS to customers in the US, you can use a [short code](/concepts/guides/glossary#short-code) for this. A customer verifies their number by responding directly to the short code or via your web application. Vonage's [Two-Factor Authentication API](/api/sms/us-short-codes/2fa) provides this capability.
+
+> These instructions assume that you are using a shared short code. Vonage also offers dedicated short codes specific to your organization. Find out more about short codes [here](https://help.nexmo.com/hc/en-us/articles/115013144287-Short-codes-Features-Overview).
 
 To configure a shared US short code for 2FA:
 
@@ -17,11 +21,11 @@ To configure a shared US short code for 2FA:
 3. Click the **add a shared short code** link.
 4. Click the **Add a short code for two factor authentication** button.
 5. Configure your message and company name.
-6. Click **Update**. Nexmo will process your application. Approval can take up to five business days.
+6. Click **Update**. Vonage will process your application. Approval can take up to five business days.
 
 ## Mandatory requirements for short codes
 
-When you use a preapproved US short code from Nexmo, you **MUST** display the following information on your site's opt-in page:
+When you use a preapproved US short code from Vonage, you **MUST** display the following information on your site's opt-in page:
 
   * Frequency: How often users of your service can expect to receive messages from you
   * How to opt out: Send a `STOP` SMS to your short code.

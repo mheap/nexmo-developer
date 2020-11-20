@@ -3,7 +3,7 @@ title: PHP
 language: php
 dependencies:
     - 'slim/slim:^3.8'
-    - 'nexmo/client'
+    - 'vonage/client'
 code:
     source: .repos/vonage/vonage-php-code-snippets/sms/receive-delivery-receipt-slim/index.php
     from_line: 9

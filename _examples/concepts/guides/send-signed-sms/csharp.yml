@@ -2,7 +2,7 @@
 title: .NET
 language: dotnet
 dependencies:
-    - Nexmo.Csharp.Client
+    - Vonage
 client:
     source: .repos/vonage/vonage-dotnet-code-snippets/DotNetCliCodeSnippets/Messaging/SendSignedSms.cs
     from_line: 18

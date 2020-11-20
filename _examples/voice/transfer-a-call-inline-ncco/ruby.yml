@@ -2,7 +2,7 @@
 title: Ruby
 language: ruby
 dependencies:
-    - nexmo
+    - vonage
 code:
     source: .repos/vonage/vonage-ruby-code-snippets/voice/transfer-a-call-ncco.rb
     from_line: 16

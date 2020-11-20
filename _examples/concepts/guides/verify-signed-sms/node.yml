@@ -2,7 +2,7 @@
 dependencies:
     - express
     - body-parser
-    - nexmo
+    - vonage
 code:
     source: .repos/vonage/vonage-node-code-snippets/sms/verify-signed-sms-express.js
     from_line: 15
