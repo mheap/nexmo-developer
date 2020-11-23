@@ -1,7 +1,7 @@
 ---
 title: Overview
 meta_title: Conversion API
-description:  The Conversion API allows you to tell Vonage about the reliability of your 2FA communications. Sending conversion data back to Vonage enables faster and more reliable delivery of your messages. (Nexmo is now Vonage)
+description:  The Conversion API allows you to tell Vonage about the reliability of your 2FA communications. Sending conversion data back to Vonage enables faster and more reliable delivery of your messages.
 ---
 
 # Conversion API
@@ -24,7 +24,7 @@ When sending us conversion data you must differentiate between your [2FA](/messa
 
 The following diagram shows the Conversion API workflow:
 
-![Conversion API workflow](/images/workflow_conversion_api.svg)
+![Conversion API workflow](/images/messaging/conversion/conversion_api_workflow.png)
 
 To send conversion data to Vonage:
 

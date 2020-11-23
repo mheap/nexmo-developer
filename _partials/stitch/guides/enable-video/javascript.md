@@ -3,7 +3,7 @@ title: JavaScript
 language: javascript
 ---
 
-# Getting Started with the Nexmo In-App Video
+# Getting Started with the Vonage Client SDK In-App Video
 
 In this getting started guide we'll cover adding video events to the Conversation we created in the [simple conversation with audio](/client-sdk/in-app-voice/guides/enable-audio/javascript) getting started guide. We'll deal with video and media stream events, the ones that come via the conversation, and the ones we send to the conversation.
 
@@ -28,7 +28,7 @@ _Note: The steps within this section can all be done dynamically via server-side
 The conversation we've been using in the other quick start guides was not video enables, so let's go ahead and create a new conversation that supports video:
 
 ```bash
-$ nexmo conversation:create display_name="Nexmo Video Chat" properties='{"video":"true"}'
+$ nexmo conversation:create display_name="Vonage Video Chat" properties='{"video":"true"}'
 ```
 
 The output of the above command will be something like this:
@@ -48,7 +48,7 @@ $ nexmo member:add YOUR_VIDEO_CONVERSATION_ID action=join channel='{"type":"app"
 $ nexmo member:add YOUR_VIDEO_CONVERSATION_ID action=join channel='{"type":"app"}' user_id=ALICE_USER_ID
 ```
 
-The output of these commands will confirm that the user has been added to the "Nexmo Video Chat" conversation:
+The output of these commands will confirm that the user has been added to the "Vonage Video Chat" conversation:
 
 ```bash
 Member added: MEM-aaaaaaaa-bbbb-cccc-dddd-0123456789ab

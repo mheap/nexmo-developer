@@ -1,7 +1,7 @@
 ---
 dependencies:
     - 'slim/slim:^3.8'
-    - 'nexmo/client'
+    - 'vonage/client'
 client:
     source: .repos/vonage/vonage-php-code-snippets/voice/trigger-notify-action/index.php
     from_line: 7

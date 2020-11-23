@@ -1,5 +1,6 @@
 ---
 title: Postman
+description: Information about using Vonage APIs with the Postman HTTP client.
 ---
 
 # Postman
@@ -16,7 +17,7 @@ Postman has support for the OpenAPI documents that we publish with all our APIs.
 
 > If you're new to OpenAPI, we have a [Guide to OpenAPI](/concepts/guides/openapi) just for you!
 
-Install Postman and follow the steps laid out below to very quickly try out any of the Nexmo APIs. We publish an OpenAPI document for each API and Postman can read these and create a collection of requests that you can simply enter values into.
+Install Postman and follow the steps laid out below to very quickly try out any of the Vonage APIs. We publish an OpenAPI document for each API and Postman can read these and create a collection of requests that you can simply enter values into.
 
 ## Get the OpenAPI Description of the API
 
@@ -59,4 +60,6 @@ Save the values and then in your request, instead of pasting in your API key, yo
 
 You can have multiple environments, which is useful if you use different keys for different things, or if you are sending API requests to a debugging tool or API mocking server such as Prism. Add as many environments as you need by repeating the steps above and choosing the environment to use from the dropdown in the top right hand section of the screen.
 
+### Postman collections
 
+For information about Postman collections see the [Postman Collections](/concepts/guides/openapi#postman-collections) documentation.

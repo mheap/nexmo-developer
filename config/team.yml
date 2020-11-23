@@ -1,7 +1,4 @@
 current:
-  - name: 'Adam Culp'
-    email: 'adam.culp@vonage.com'
-    twitter: 'adamculp'
   - name: 'Kelly Andrews'
     email: 'kelly.andrews@vonage.com'
     twitter: 'kellyjandrews'
@@ -41,7 +38,7 @@ current:
     twitter: 'pardel'
   - name: 'Luke Oliff'
     email: 'luke.oliff@vonage.com'
-    twitter: 'mroliff'
+    twitter: 'lukeocodes'
   - name: 'Fabian Rodriguez'
     email: 'fabian.rodriguez@vonage.com'
     twitter: 'fabianrbz'
@@ -100,3 +97,10 @@ current:
   - name: "Avital Tzubeli"
     email: "avital.tzubeli@vonage.com"
     role: "Regional Developer Advocate"
+  - name: "Filippos Kyprianou"
+    email: "filippos.kyprianou@vonage.com"
+    role: "Startup Community Manager"
+  - name: "Mark Lewin"
+    email: "mark.lewin@vonage.com"
+    role: "Technical Writer"
+    twitter: "devtechwriter"    
