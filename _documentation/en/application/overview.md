@@ -85,6 +85,57 @@ Capability | Webhook | API | Example | Description
 `rtc` | `event_url` | [Client SDK](/client-sdk/overview), [Conversation](/conversation/overview) | https://example.com/webhooks/rtcevent | Vonage will send RTC events to this URL.
 `vbc` | None | [Voice endpoint](/voice/voice-api/ncco-reference#connect) | None | Not used
 
+## Webhook timeouts
+
+For the `voice` capability only, you can set timeouts on webhooks. There are two timeouts that can be specified: `connection_timeout` and `socket_timeout`. These parameters apply to the `answer`, `event`, and `fallback` webhooks, and are specified in milliseconds. The following table provides further information:
+
+Parameter | Example | Description
+----|----|----
+`connection_timeout` | `1000` | If Vonage can't connect to the webhook URL for this specified amount of time, then Vonage makes one additional attempt to connect to the webhook endpoint. This is an integer value specified in milliseconds.
+`socket_timeout` | `3000` | If a response from the webhook URL can't be read for this specified amount of time, then Vonage makes one additional attempt to read the webhook endpoint. This is an integer value specified in milliseconds.
+
+When creating or updating an application these can be set directly, or updated as required, for example:
+
+``` json
+...
+  "capabilities": {
+    "voice": {
+      "webhooks": {
+        "answer_url": {
+          "address": "https://example.com/webhooks/answer",
+          "http_method": "POST",
+          "connection_timeout": 500,
+          "socket_timeout": 3000
+        },
+        "fallback_answer_url": {
+          "address": "https://fallback.example.com/webhooks/answer",
+          "http_method": "POST",
+          "connection_timeout": 500,
+          "socket_timeout": 3000
+        },
+        "event_url": {
+          "address": "https://example.com/webhooks/event",
+          "http_method": "POST",
+          "connection_timeout": 500,
+          "socket_timeout": 3000
+        }
+      }
+    }
+...
+```
+
+If these values are not specified when creating or updating the application, then default values are applied. The default values for these timeouts depend on the webhook concerned, as shown in the following table:
+
+Webhook | Default `connection_timeout` | Default `socket_timeout`
+----|----|----
+`answer` | 1000 | 5000
+`event` | 1000 | 10000
+`fallback` | 1000 | 5000
+
+> **NOTE:** Timeouts are specified in milliseconds.
+
+There is further explanation of webhook timeouts in the [webhook documentation](/concepts/guides/webhooks#webhook-timeouts).
+
 ## Creating applications
 
 There are four main ways to create an application:
