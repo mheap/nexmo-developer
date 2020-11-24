@@ -2,7 +2,9 @@ name: Smartling Downloader
 on:
   schedule:
     - cron: "0 8 * * *"
-
+  workflow_dispatch:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
