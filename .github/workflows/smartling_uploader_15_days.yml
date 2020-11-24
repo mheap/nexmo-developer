@@ -1,4 +1,4 @@
-name: Smartling Uploader for Files Changed within 1 Day
+name: Smartling Uploader for Files Changed within 15 Days
 on:
   push:
     branches:
