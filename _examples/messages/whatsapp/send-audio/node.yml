@@ -1,6 +1,6 @@
 ---
 dependencies:
-    - nexmo
+    - "@vonage/server-sdk@beta"
 code:
     source: .repos/vonage/vonage-node-code-snippets/messages/whatsapp/send-audio.js
     from_line: 14
