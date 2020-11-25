@@ -1,4 +1,4 @@
-name: Smartling Uploader for Files Changed within 1 Day
+name: Smartling Uploader for Files Changed within 180 Days
 on:
   push:
     branches:
@@ -16,7 +16,7 @@ jobs:
     - id: step1
       name: Check for File Changes
       run: |
-        echo ::set-output name=file_changes::"arr=( $(git log --since=1.day --name-only --oneline --diff-filter=AMR --pretty=format: master _documentation/en _tutorials/en _use_cases/en | uniq | awk 'NF' | paste -d \",\" -s) )"
+        echo ::set-output name=file_changes::"arr=( $(git log --since=180.days --name-only --oneline --diff-filter=AMR --pretty=format: master _documentation/en _tutorials/en _use_cases/en | uniq | awk 'NF' | paste -d \",\" -s) )"
       shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -85,4 +85,4 @@ jobs:
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
       run: |
-        RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-smartling-upload 30 ${{steps.step1.outputs.file_changes}}
+        RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-smartling-upload 180 ${{steps.step1.outputs.file_changes}}
