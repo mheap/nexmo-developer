@@ -9,20 +9,6 @@ on:
 jobs:
   check-changes:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: recursive
-    - id: step1
-      name: Check for File Changes
-      run: |
-        echo ::set-output name=file_changes::"arr=( $(git log --since=5.days --name-only --oneline --diff-filter=AMR --pretty=format: master _documentation/en _tutorials/en _use_cases/en | uniq | awk 'NF' | paste -d \",\" -s) )"
-      shell: bash
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  smartling-upload:
-    runs-on: ubuntu-latest
-    needs: check-changes
     services:
       db:
         env:
@@ -39,6 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
+        fetch-depth: 0
         submodules: recursive
     - uses: actions/setup-node@v1
       with:
@@ -78,6 +65,14 @@ jobs:
         gem install --no-document bundler
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
+    - id: step1
+      name: Check for File Changes
+      run: |
+        arr=$(git log --since=5.days --name-only --oneline --diff-filter=AMR --pretty=format: master _documentation/en _tutorials/en _use_cases/en | uniq | awk 'NF')
+        echo ::set-output name=file_changes::"$(echo $(sed 's/\n/ /g' <<< $arr))"
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Run rake task
       if: steps.step1.outputs.file_changes != ''
       env:
@@ -85,4 +80,4 @@ jobs:
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
       run: |
-        RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-smartling-upload 5 ${{steps.step1.outputs.file_changes}}
+        RAILS_LOG_TO_STDOUT=1 RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-smartling-upload 5 ${{steps.step1.outputs.file_changes}}
