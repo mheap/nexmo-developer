@@ -191,7 +191,7 @@ GEM
       activesupport (>= 4)
       railties (>= 4)
       request_store (~> 1.0)
-    loofah (2.7.0)
+    loofah (2.8.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -231,7 +231,7 @@ GEM
       sass (~> 3.1)
       shotgun (~> 0.9)
       sinatra (~> 2.0)
-    nexmo_markdown_renderer (0.5.1)
+    nexmo_markdown_renderer (0.7.0)
       activemodel (~> 6.0)
       banzai (~> 0.1.2)
       i18n (~> 1.7)
@@ -369,7 +369,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    station (0.0.100)
+    station (0.0.102)
       activeadmin (~> 2.7)
       activesupport (~> 6.0)
       algoliasearch (= 1.27.5)
@@ -400,7 +400,7 @@ GEM
       neatjson (= 0.9)
       newrelic_rpm (= 6.14.0)
       nexmo-oas-renderer (~> 2.4)
-      nexmo_markdown_renderer (~> 0.5)
+      nexmo_markdown_renderer (~> 0.7)
       nokogiri (= 1.10.10)
       octokit (~> 4.18)
       pg (~> 1.2)
@@ -457,7 +457,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  station (= 0.0.100)!
+  station (= 0.0.102)!
 
 BUNDLED WITH
    2.1.4
