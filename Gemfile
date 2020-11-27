@@ -10,4 +10,5 @@ group :test do
   gem 'byebug'
   gem 'capybara'
   gem 'factory_bot'
+  gem 'database_cleaner-active_record'
 end
