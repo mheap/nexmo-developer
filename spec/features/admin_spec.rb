@@ -10,8 +10,6 @@ RSpec.feature 'Admin pages', type: :feature do
     click_button 'Login'
   end
 
-  after { User.destroy_all }
-
   scenario 'can access the feedback stats page' do
     visit '/stats'
 

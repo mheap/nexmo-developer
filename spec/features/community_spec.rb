@@ -15,11 +15,6 @@ RSpec.feature 'Community', type: :feature do
     FactoryBot.create_list(:session, 3)
   end
 
-  after do
-    Event.destroy_all
-    Session.destroy_all
-  end
-
   scenario 'visiting the community page' do
     visit '/community'
 
