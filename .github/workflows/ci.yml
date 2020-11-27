@@ -79,3 +79,11 @@ jobs:
         FORCE_COLOR: true
       run: |
         DISABLE_DATABASE_ENVIRONMENT_CHECK=1 RAILS_ENV=production bundle exec nexmo-developer --docs=. --rake-ci
+    - name: Run tests
+      env:
+        POSTGRES_USERNAME: postgres
+        OAS_PATH: "_open_api/api_specs/definitions"
+        DISABLE_SSL: true
+        RAILS_ENV: "production"
+        DOCS_BASE_PATH: "."
+      run: bundle exec rspec
