@@ -76,7 +76,7 @@ GEM
     arbre (1.3.0)
       activesupport (>= 3.0.0, < 6.1)
       ruby2_keywords (>= 0.0.2, < 1.0)
-    autoprefixer-rails (10.0.2.0)
+    autoprefixer-rails (10.0.3.0)
       execjs
     banzai (0.1.3)
     barnes (0.0.8)
@@ -395,11 +395,11 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    station (0.0.102)
+    station (0.0.103)
       activeadmin (~> 2.7)
       activesupport (~> 6.0)
       algoliasearch (= 1.27.5)
-      autoprefixer-rails (= 10.0.2.0)
+      autoprefixer-rails (= 10.0.3.0)
       barnes (= 0.0.8)
       bootsnap (~> 1.4)
       bugsnag (~> 6.13)
@@ -490,7 +490,7 @@ DEPENDENCIES
   factory_bot
   rack-test
   rspec
-  station (= 0.0.102)!
+  station (= 0.0.103)!
 
 BUNDLED WITH
    2.1.4
