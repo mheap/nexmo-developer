@@ -85,6 +85,5 @@ jobs:
         OAS_PATH: "_open_api/api_specs/definitions"
         DISABLE_SSL: true
         RAILS_ENV: "production"
-        DOCS_BASE_PATH: "."
         DATABASE_CLEANER_ALLOW_PRODUCTION: 1
-      run: bundle exec rspec
+      run: DOCS_BASE_PATH=`pwd` bundle exec rspec
