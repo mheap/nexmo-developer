@@ -86,4 +86,5 @@ jobs:
         DISABLE_SSL: true
         RAILS_ENV: "production"
         DOCS_BASE_PATH: "."
+        DATABASE_CLEANER_ALLOW_PRODUCTION: 1
       run: bundle exec rspec
