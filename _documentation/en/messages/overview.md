@@ -9,7 +9,7 @@ navigation_weight: 1
 
 The Messages API allows you to send and in some cases receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp. Further channels may be supported in the future.
 
-The following diagram illustrates how the Vonage Messages API enables you to send messages over multiple channels with minimal work:
+The following diagram illustrates how the Vonage Messages API enables you to send messages via multiple channels from a single endpoint:
 
 <img src="/images/messages-overview.png" alt="Messages and Dispatch Overview" style="width: 75%;">
 
