@@ -17,7 +17,7 @@ in-progress call.
 
 ## Example
 
-The following example NCCO shows a light use case:
+The following NCCO demonstrates an example use case:
 
 ``` json
 [
