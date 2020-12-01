@@ -42,6 +42,6 @@ If you're already a [Postman](https://www.postman.com/) fan then this may well a
 
 ### Mock Server for Testing with Prism
 
-One tool that many of our developers find useful is [Prism](https://stoplight.io/open-source/prism). It's an open source JavaScript tool that accepts an OpenAPI spec and then imitates the API behavior it describes. It's an ideal way to work with a local API, avoids using up account credit when you're testing something, and also gives an coherent way to test error responses.
+One tool that many of our developers find useful is [Prism](https://stoplight.io/open-source/prism). It's an open source JavaScript tool that accepts an OpenAPI spec and then imitates the API behavior it describes. It's an ideal way to work with a local API, avoids using up account credit when you're testing something, and also provides a way to test error responses locally.
 
 > We have a [more detailed guide to working with Prism and OpenAPI](/tools/prism) that you may find useful.
