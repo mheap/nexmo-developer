@@ -52,7 +52,7 @@ This is your client application that uses the Client SDK to make a voice call to
 
 There are several key components to this code:
 
-1. A small UI that allows you to enter a username and then click the `Call` button to make the the in-app call to the specified user (Bob).
+1. A UI that allows you to enter a username and then click the `Call` button to make the the in-app call to the specified user (Bob).
 2. Code that logs the user (Alice) into the Client SDK (a JWT is used for authentication) using `.login(USER_JWT)`.
 3. The function to make the call is `callServer(username, type)`, where `type` in this case is "app", as the destination is the specified user (Bob).
     > **NOTE**: Another way to make Voice Calls is with `inAppCall(username)` which uses peer-peer call functionality. [More info on `inAppCall()`](/sdk/stitch/javascript/Application.html#inAppCall__anchor)
