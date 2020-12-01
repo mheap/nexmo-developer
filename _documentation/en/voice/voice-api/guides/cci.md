@@ -34,7 +34,7 @@ For the typical IVR case, the user calls a PSTN (phone) number and interacts wit
 
 ![IVR](/images/voice-api/cci_ivr.png)
 
-Vonage deals with the complexity of connecting the call, so all you need is to provision a Vonage virtual number, assign it to your app, and implement HTTP request handlers ([webhooks](/voice/voice-api/webhook-reference)) to instruct the Voice platform with the desired call control [actions](/voice/voice-api/ncco-reference). Building an IVR is this straightforward.
+Vonage deals with the complexity of connecting the call, so all you need is to provision a Vonage virtual number, assign it to your app, and implement HTTP request handlers ([webhooks](/voice/voice-api/webhook-reference)) to instruct the Voice platform with the desired call control [actions](/voice/voice-api/ncco-reference).
 
 Quite a similar approach can be used for voice notifications with or without IVR as a part of it. The difference is that now your app initiates the call with a [REST API](/api/voice#createCall) (HTTP) request:
 
