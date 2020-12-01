@@ -15,7 +15,7 @@ There are three groups of contact center oriented use-cases where the Voice API 
 
 For *self-service* cases, the Voice API provides the following set of features:
 
-* [Text-to-Speech](/voice/voice-api/guides/text-to-speech) and [Speech Recognition](/voice/voice-api/guides/asr) for advanced IVR or basic voice bots. Follow this [tutorial](/use-cases/asr-use-case-voice-bot) to learn more.
+* [Text-to-Speech](/voice/voice-api/guides/text-to-speech) and [Speech Recognition](/voice/voice-api/guides/asr) for advanced IVR or voice bots. Follow this [tutorial](/use-cases/asr-use-case-voice-bot) to learn more.
 * [WebSockets](/voice/voice-api/guides/websockets) allow you to connect phone calls to any AI bot engine of your choice. Clone our [reference application](https://github.com/Nexmo/lex-connector) to quickly start with [Amazon Lex](https://aws.amazon.com/lex/) integration, which applies natural language understanding (NLU) to recognize the intent of the text, enabling you to build applications with highly engaging user experiences and lifelike conversational interactions. 
 
 With WebSockets, you can also embed any kind of *real-time analytics* into your contact center. With an NCCO [`connect`](/voice/voice-api/ncco-reference#connect) action, you can attach a WebSocket one-way (or two-way, depending on the case) stream to any inbound or outbound call and then pass the media to an analytics engine, such as [Amazon Transcribe](https://aws.amazon.com/transcribe/). You can perform a deeper analysis with [Amazon Comprehend](https://aws.amazon.com/comprehend/) to provide the agent with useful insights and real-time hints during the call.
