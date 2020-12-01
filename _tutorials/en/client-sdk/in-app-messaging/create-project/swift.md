@@ -22,7 +22,7 @@ You will be using the iOS Client SDK library inside an Xcode project you'll crea
 * You now have a brand new Xcode Project.
 
 
-**Before continuing, please close the new project you've now created.**
+**Before continuing, please close the new project you created.**
 
 You will add the iOS Client SDK library to your project via [CocoaPods](https://cocoapods.org/).
 
@@ -100,4 +100,3 @@ As described in the output above, please use `AppToAppChat.xcworkspace` rather t
 ``` shell
 open AppToAppChat.xcworkspace
 ```
-
