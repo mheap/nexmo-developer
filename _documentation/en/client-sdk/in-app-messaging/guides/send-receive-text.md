@@ -9,7 +9,7 @@ navigation_weight: 3
 
 This guide covers sending and receiving messages within a conversation.
 
-Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app) and you are able to [create a light conversation](/client-sdk/in-app-messaging/guides/simple-conversation).
+Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app) and you are able to [create a conversation](/client-sdk/in-app-messaging/guides/simple-conversation).
 
 ```partial
 source: _partials/client-sdk/messaging/chat-app-tutorial-note.md
@@ -38,4 +38,3 @@ A `text` conversation event will be received when a member sends a text message 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-text
 ```
-
