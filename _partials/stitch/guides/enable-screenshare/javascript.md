@@ -75,7 +75,7 @@ chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => 
 
 ### 1.3 - Installing the extension
 
-We'll need to install the extension on Chrome. There are a few ways to do that, the first being to publish it in the Chrome App store. But that's a lengthy process so we're opting for enabling developer extensions and installing it from there. You'll need to open [chrome://extensions/](chrome://extensions/) an toggle `Developer Mode` in the right hand corner. A few more buttons will appear in the UI and we'll use `LOAD UNPACKED` and point that to the folder we have now created for our extension, `chrome-extension`. That automatically installs and enables the extension we now created, and lists the extension id. It looks something like `aaaabbbbccccddddeeeeffffgggghhhh` and we'll have to make a note of it, we'll be using it later.
+We'll need to install the extension on Chrome. There are a few ways to do that, the first being to publish it in the Chrome App store. But that's a lengthy process so we're opting for enabling developer extensions and installing it from there. You'll need to open [chrome://extensions/](chrome://extensions/) and toggle `Developer Mode` in the right hand corner. A few more buttons will appear in the UI and we'll use `LOAD UNPACKED` and point that to the folder we have now created for our extension, `chrome-extension`. That automatically installs and enables the extension we now created, and lists the extension id. It looks something like `aaaabbbbccccddddeeeeffffgggghhhh` and we'll have to make a note of it, we'll be using it later.
 
 ### 2 - Updating the JavaScript application
 
