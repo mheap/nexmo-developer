@@ -50,7 +50,7 @@ The transmission of one or more custom SIP Headers from the Voice platform to th
 
 ### Voice Bot
 
-If you want to enhance your IVR with natural language understanding (NLU), you may connect it to an AI service, such as [Amazon Lex](https://aws.amazon.com/lex/). Lex accepts both text and media (audio) and provides text and media output following the business logic you implement in your bot. In order to connect the telephony world with binary media processing services, you may use a WebSocket connection, supported by the Vonage Voice platform. To do that, include the [`connect` action](/voice/voice-api/ncco-reference#connect) with your app WebSocket URL as the endpoint into your NCCO - and the call will be immediately connected to your app with media flowing from the user and backward. Then you  need to pass the media frames to Lex and stream Lex responses back through the same connection:
+If you want to enhance your IVR with natural language understanding (NLU), you may connect it to an AI service, such as [Amazon Lex](https://aws.amazon.com/lex/). Lex accepts both text and media (audio) and provides text and media output following the business logic you implement in your bot. In order to connect the telephony world with binary media processing services, you may use a WebSocket connection, supported by the Vonage Voice platform. To do that, include the [`connect` action](/voice/voice-api/ncco-reference#connect) with your app WebSocket URL as the endpoint into your NCCO - and the call will be immediately connected to your app with media flowing from the user and backward. Then you need to pass the media frames to Lex and stream Lex responses back through the same connection:
 
 ![Voice Bot](/images/voice-api/cci_bot.png)
 
