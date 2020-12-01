@@ -30,7 +30,7 @@ alice@yourcompany.sip-us.nexmo.com
 
 ## Authentication - Access Control Lists
 
-IP addresses of your devices and endpoints can be configured to reach your Vonage application. Vonage will only accept calls from the IP address list that is configured for your domain. This method will enable you to ad your endpoints’ and devices’ IP Addresses per your application to your allow list.
+IP addresses of your devices and endpoints can be configured to reach your Vonage application. Vonage will only accept calls from the IP address list that is configured for your domain. This method will enable you to add your endpoints’ and devices’ IP Addresses per your application to your allow list.
 
 ## Domain Based Routing
 
