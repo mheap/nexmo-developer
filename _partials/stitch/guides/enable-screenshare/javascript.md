@@ -5,7 +5,7 @@ language: javascript
 
 # Getting Started with Screen Sharing
 
-In this getting started guide we'll cover updating media streams to add screen sharing to the Conversation we created in the [small conversation with video](/client-sdk/in-app-video/guides/enable-video/javascript) getting started guide. We'll deal with updating media stream events, the ones that come via the conversation.
+In this getting started guide we'll cover updating media streams to add screen sharing to the Conversation we created in the [conversation with video](/client-sdk/in-app-video/guides/enable-video/javascript) getting started guide. We'll deal with updating media stream events, the ones that come via the conversation.
 
 We’ll also build a Chrome extension needed for capturing our screen and update our media object with the screen stream.
 
