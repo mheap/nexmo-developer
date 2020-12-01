@@ -78,7 +78,7 @@ This is your web application that uses the Client SDK to make a voice call to th
 
 There are several key components to this code:
 
-1. A small UI that allows you to enter a phone number and then click the `Call` button to make the voice call.
+1. A UI that allows you to enter a phone number and then click the `Call` button to make the voice call.
 2. Code that logs the user in (a JWT is used for authentication).
 3. The function to make the call `callServer(number)`, where `number` is the destination phone number in [E.164](/concepts/guides/glossary#e-164-format) format.
 
