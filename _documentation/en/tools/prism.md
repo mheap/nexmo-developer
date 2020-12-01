@@ -4,7 +4,7 @@ title: Prism
 
 # Prism
 
-Working with APIs is great but sometimes you don't need to work with the real API to get development work done. One tool that you may find useful to include in your development workflow is [Prism](https://stoplight.io/open-source/prism/) from [Stoplight](https://stoplight.io/). Prism is a mock server, it imitates our live APIs in a streamlined tool that you can run locally and test your API calls and whole applications against.
+Working with APIs is great but sometimes you don't need to work with the real API to get development work done. One tool that you may find useful to include in your development workflow is [Prism](https://stoplight.io/open-source/prism/) from [Stoplight](https://stoplight.io/). Prism is a mock server that imitates our live APIs. You can run it locally to test your API calls during development, without incurring any usage costs.
 
 Prism understands the [OpenAPI](/concepts/guides/openapi) specs we publish for each of our APIs, so you can use this approach to work with any of the Vonage APIs.
 
@@ -123,5 +123,4 @@ In its simplest form, use it to get a nicer output from the curl example we used
 ```
 curl "http://localhost:4010/basic/json?api_key=abcd1234&api_secret=VerySecret1&number=44777000777" | jq "."
 ```
-
 
