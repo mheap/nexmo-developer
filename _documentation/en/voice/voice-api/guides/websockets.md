@@ -20,7 +20,7 @@ Using Vonage’s Voice API, you can connect phone calls to WebSocket endpoints. 
 This enables some really innovative use cases, such as:
 
 * Recording, transcribing or otherwise analyzing calls using third party solutions. For example: performing sentiment analysis in call centers to determine customer satisfaction.
-* Automating outbound calls with bots to perform simple tasks like making a restaurant booking or more complex ones, such as requesting information from field experts.
+* Automating outbound calls with bots to perform tasks like making a restaurant booking or more complex ones, such as requesting information from field experts.
 * Using an "expert" bot that accepts inbound calls and provides tailored advice. For example, a doctor in a remote area can call a medical expert bot and get access to the same medical advice available to specialists in big cities.
 * Including artificial intelligence engines in conference calls to enable better decision making.
 
@@ -249,7 +249,7 @@ When you receive a `disconnected` event, you can commence your fallback strategy
 
 However, the `disconnected` event gets raised both when the disconnection was unintentional (due to some problem) or you intentionally disconnected the websocket (as part of your business logic).
 
-Ideally, you want to fallback _only when the disconnect is unintentional_, so a better approach than just closing the connection is to explicitly terminate the call leg via an API request:
+Ideally, you want to fallback _only when the disconnect is unintentional_, so a better approach than closing the connection is to explicitly terminate the call leg via an API request:
 
 ``` curl
 PUT https://api.nexmo.com/v1/calls/aaaaaaaa-bbbb-cccc-dddd-0123456789ab

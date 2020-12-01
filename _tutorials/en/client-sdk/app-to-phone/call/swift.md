@@ -5,7 +5,7 @@ description: In this step you will place the call.
 
 # Place a call
 
-At the top of the `ViewController` class, just below the `client` declaration, add a `NXMCall` property to hold a reference to any call in progress
+At the top of the `ViewController` class, right below the `client` declaration, add a `NXMCall` property to hold a reference to any call in progress
 
 ```swift
 class ViewController: UIViewController, NXMClientDelegate {

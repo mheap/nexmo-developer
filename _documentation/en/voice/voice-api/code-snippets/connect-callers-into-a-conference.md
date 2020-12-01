@@ -8,7 +8,7 @@ navigation_weight: 6
 This code snippet shows how to join multiple calls into a conversation.
 
 Multiple inbound calls can be joined into a conversation (conference
-call) by simply connecting the call into the same named
+call) by connecting the call into the same named
 conference.
 
 Conference names are scoped at the Vonage Application

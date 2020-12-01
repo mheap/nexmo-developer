@@ -42,7 +42,7 @@ Vonage does **not** encourage SMPP access for the following reasons:
 
 Vonage offers this service to integrate new carriers and make it easier for customers with an existing SMPP implementation to use our platform.
 
-Instead of having to re-implement messaging over our REST APIs, you can simply modify your existing integration to establish a bind with Vonage's SMPP clusters. 
+Instead of having to re-implement messaging over our REST APIs, you can modify your existing integration to establish a bind with Vonage's SMPP clusters. 
 
 ## Configuring SMPP access
 

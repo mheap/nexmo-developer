@@ -6,7 +6,7 @@ meta_title: Send and receive SMS with the SMS API
 
 # SMS API
 
-Vonage's SMS API enables you to send and receive text messages to and from users worldwide, using simple REST APIs.
+Vonage's SMS API enables you to send and receive text messages to and from users worldwide, using our REST APIs.
 
 * Programmatically send and receive high volumes of SMS globally.
 * Send SMS with low latency and high delivery rates.

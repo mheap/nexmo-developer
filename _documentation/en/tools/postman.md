@@ -15,9 +15,9 @@ If you need any of our Beta or Developer Preview APIs, read on for how to use th
 
 Postman has support for the OpenAPI documents that we publish with all our APIs.
 
-> If you're new to OpenAPI, we have a [Guide to OpenAPI](/concepts/guides/openapi) just for you!
+> If you're new to OpenAPI, we have a [Guide to OpenAPI](/concepts/guides/openapi) specifically for you!
 
-Install Postman and follow the steps laid out below to very quickly try out any of the Vonage APIs. We publish an OpenAPI document for each API and Postman can read these and create a collection of requests that you can simply enter values into.
+Install Postman and follow the steps laid out below to very quickly try out any of the Vonage APIs. We publish an OpenAPI document for each API and Postman can read these and create a collection of requests that you can enter values into.
 
 ## Get the OpenAPI Description of the API
 
@@ -37,7 +37,7 @@ For example if you imported the Verify API description, you'd be able to choose 
 
 * Your API credentials! For Verify API that's the `api_key` and `api_secret` fields and you can find these details in your account dashboard
 * The phone number to Verify (remember to use E.164 format)
-* The name of the brand doing the verifying (you can choose anything here as you are just testing things)
+* The name of the brand doing the verifying (you can choose anything here as you are only testing things)
 * Set the `format` value in the path parameters section to `json`
 
 Now press "Send" and check the response from the API.

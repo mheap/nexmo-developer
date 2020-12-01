@@ -153,7 +153,7 @@ Input is unique in that when the webhook is sent with the entered digits, the re
 
 ## Transferring to a new NCCO
 
-You can replace the currently executing NCCO with a new one by making an HTTP `PUT` request to the REST API with the call UUID in it. This will replace whatever actions are being executed or queued in the current NCCO. One such use case for this is to transfer a call that is on hold (looping an audio file) to an agent by putting a new NCCO with a `connect` action. However, you can also use this approach to simply modify any aspect of an in progress call.
+You can replace the currently executing NCCO with a new one by making an HTTP `PUT` request to the REST API with the call UUID in it. This will replace whatever actions are being executed or queued in the current NCCO. One such use case for this is to transfer a call that is on hold (looping an audio file) to an agent by putting a new NCCO with a `connect` action. However, you can also use this approach to modify any aspect of an in progress call.
 
 ## Machine Detection
 

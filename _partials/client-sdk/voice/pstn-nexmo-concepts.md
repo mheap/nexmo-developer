@@ -1,6 +1,6 @@
 Before proceeding any further, here are couple of concepts that you'll need to understand.
 
-A [Vonage API application](/concepts/guides/applications) allows you to easily use Vonage API products, in this case the [Voice API](/voice/voice-api/overview) to build voice applications in the Cloud.
+A [Vonage API application](/concepts/guides/applications) allows you to use Vonage API products, in this case the [Voice API](/voice/voice-api/overview) to build voice applications in the Cloud.
 
 A Vonage API application requires two URLs as parameters:
 

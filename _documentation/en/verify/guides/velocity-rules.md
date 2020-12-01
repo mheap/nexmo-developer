@@ -6,7 +6,7 @@ navigation_weight: 4
 
 # Verify Velocity Rules
 
-The Verify API provides a quick and simple way to implement 2FA into your application and avoid dubious sign-ups.
+The Verify API provides a quick way to implement 2FA into your application and avoid dubious sign-ups.
 
 However, Vonage also needs to prevent fraudulent activity on its own platform. One way we achieve this is by using an anti-fraud system called Velocity Rules.
 

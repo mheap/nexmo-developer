@@ -4,13 +4,13 @@ title: Prism
 
 # Prism
 
-Working with APIs is great but sometimes you don't need to work with the real API to get development work done. One tool that you may find useful to include in your development workflow is [Prism](https://stoplight.io/open-source/prism/) from [Stoplight](https://stoplight.io/). Prism is a mock server, it imitates our live APIs in a simple tool that you can run locally and test your API calls and whole applications against.
+Working with APIs is great but sometimes you don't need to work with the real API to get development work done. One tool that you may find useful to include in your development workflow is [Prism](https://stoplight.io/open-source/prism/) from [Stoplight](https://stoplight.io/). Prism is a mock server, it imitates our live APIs in a streamlined tool that you can run locally and test your API calls and whole applications against.
 
 Prism understands the [OpenAPI](/concepts/guides/openapi) specs we publish for each of our APIs, so you can use this approach to work with any of the Vonage APIs.
 
 ## Install Prism
 
-Prism is a node.js tool, so you will need to have node.js installed locally. Full [documentation and installation instructions](https://github.com/stoplightio/prism#installation) are of course available but the simple version is an `npm install` command:
+Prism is a node.js tool, so you will need to have node.js installed locally. Full [documentation and installation instructions](https://github.com/stoplightio/prism#installation) are available but the quick version is an `npm install` command:
 
 ```
 npm install -g @stoplight/prism-cli
@@ -70,7 +70,7 @@ Once you've settled in with Prism, here are some tips for taking things to the n
 
 ### Request a Specific Response
 
-Our APIs can return error responses in some situations, and it can be difficult (or just annoying) to recreate those error situations on the live platform. Using Prism gives an opportunity to test applications against all the possible responses.
+Our APIs can return error responses in some situations, and it can be difficult (or plainly annoying) to recreate those error situations on the live platform. Using Prism gives an opportunity to test applications against all the possible responses.
 
 Some of our API specs have error responses described in detail, and you can use the name of the response to ask Prism to return it.
 

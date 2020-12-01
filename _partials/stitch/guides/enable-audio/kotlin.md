@@ -53,7 +53,7 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 ## Add audio UI
 
-You will now need to add two buttons for the user to enable and disable audio. Open `app/src/main/res/layout/fragment_chat.xml` file and add two new buttons (`enableMediaButton` and `disableMediaButton`) just below `sendMessageButton`. 
+You will now need to add two buttons for the user to enable and disable audio. Open `app/src/main/res/layout/fragment_chat.xml` file and add two new buttons (`enableMediaButton` and `disableMediaButton`) right below `sendMessageButton`. 
 
 ``` xml
         <!--...-->

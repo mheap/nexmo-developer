@@ -12,7 +12,7 @@ Member objects connect Users with Conversations. When a User joins a Conversatio
 
 A Member object has one associated Channel, so one User can have many Member objects associated with it, according to the Channels that they can be reached through.
 
-A User can be associated with many Member objects in Conversations, just as a Conversation can have many Members.
+A User can be associated with many Member objects in Conversations, in the same way as a Conversation can have many Members.
 
 A Member can have one of several states such as `invited`, `joined` and `left`.
 

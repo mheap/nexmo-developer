@@ -28,7 +28,7 @@ Apply the change by executing:
 rake db:migrate
 ```
 
-Devise enables you to edit a user right out of the box. By default these views are hidden, so we need to get a copy of them to make changes to. Devise makes this pretty easy through a Rails generator, which you would run using `rails generate:devise:views:templates`.
+Devise enables you to edit a user right out of the box. By default these views are hidden, so we need to get a copy of them to make changes to. Devise makes this pretty straightforward through a Rails generator, which you would run using `rails generate:devise:views:templates`.
 
 However, because the sample application uses the `devise-bootstrap-templates` gem, you need to use a different version of the generator:
 

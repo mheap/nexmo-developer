@@ -5,7 +5,7 @@ language: javascript
 
 # Getting Started with Screen Sharing
 
-In this getting started guide we'll cover updating media streams to add screen sharing to the Conversation we created in the [simple conversation with video](/client-sdk/in-app-video/guides/enable-video/javascript) getting started guide. We'll deal with updating media stream events, the ones that come via the conversation.
+In this getting started guide we'll cover updating media streams to add screen sharing to the Conversation we created in the [small conversation with video](/client-sdk/in-app-video/guides/enable-video/javascript) getting started guide. We'll deal with updating media stream events, the ones that come via the conversation.
 
 We’ll also build a Chrome extension needed for capturing our screen and update our media object with the screen stream.
 
@@ -14,7 +14,7 @@ We’ll also build a Chrome extension needed for capturing our screen and update
 This guide will introduce you to the following concepts:
 
 - **Media** updates - updating the media stream in a Conversation
-- [Chrome extensions](https://developer.chrome.com/extensions) - creating and installing a simple dedicated chrome extension for capturing the screen.
+- [Chrome extensions](https://developer.chrome.com/extensions) - creating and installing a dedicated chrome extension for capturing the screen.
 
 ## Before you begin
 
@@ -75,7 +75,7 @@ chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => 
 
 ### 1.3 - Installing the extension
 
-We'll need to install the extension on Chrome. There are a few ways to do that, the first being to publish it in the Chrome App store. But that's a lengthy process so we're opting for enabling developer extensions and installing it from there. You'll need to open [chrome://extensions/](chrome://extensions/) an toggle `Developer Mode` in the right hand corner. A few more buttons just appeared in the UI and we'll use `LOAD UNPACKED` and point that to the folder we just created for our extension, `chrome-extension`. That automatically installs and enables the extension we just created, and lists the extension id. It looks something like `aaaabbbbccccddddeeeeffffgggghhhh` and we'll have to make a note of it, we'll be using it later.
+We'll need to install the extension on Chrome. There are a few ways to do that, the first being to publish it in the Chrome App store. But that's a lengthy process so we're opting for enabling developer extensions and installing it from there. You'll need to open [chrome://extensions/](chrome://extensions/) an toggle `Developer Mode` in the right hand corner. A few more buttons now appeared in the UI and we'll use `LOAD UNPACKED` and point that to the folder we have now created for our extension, `chrome-extension`. That automatically installs and enables the extension we now created, and lists the extension id. It looks something like `aaaabbbbccccddddeeeeffffgggghhhh` and we'll have to make a note of it, we'll be using it later.
 
 ### 2 - Updating the JavaScript application
 

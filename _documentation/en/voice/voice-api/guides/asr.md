@@ -8,7 +8,7 @@ navigation_weight: 6
 
 ## Overview
 
-Automatic Speech Recognition (ASR) enables apps to support voice input for such use cases as IVR, identification and different kinds of voice bots/assistants. Using this feature, the app gets transcribed user speech (in the text form) once it expects the user to answer some question just by saying it rather than entering digits (DTMF); and then may continue the call flow according to its business logic based on what the user said.
+Automatic Speech Recognition (ASR) enables apps to support voice input for such use cases as IVR, identification and different kinds of voice bots/assistants. Using this feature, the app gets transcribed user speech (in the text form) once it expects the user to answer some question by saying it rather than entering digits (DTMF); and then may continue the call flow according to its business logic based on what the user said.
 
 ## How it works
 

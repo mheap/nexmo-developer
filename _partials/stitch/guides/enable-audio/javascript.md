@@ -5,7 +5,7 @@ language: javascript
 
 # Enable Audio in your Application
 
-In this guide we'll cover adding audio events to the Conversation we have created in the [simple conversation with events](/client-sdk/in-app-messaging/guides/utilizing-events/javascript) guide. We'll deal with sending and receiving  media events to and from the conversation.
+In this guide we'll cover adding audio events to the Conversation we have created in the [small conversation with events](/client-sdk/in-app-messaging/guides/utilizing-events/javascript) guide. We'll deal with sending and receiving  media events to and from the conversation.
 
 ## Concepts
 

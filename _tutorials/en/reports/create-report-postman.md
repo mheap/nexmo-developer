@@ -36,7 +36,7 @@ In the "Body" tab select the "raw" radio button and "JSON" from the dropdown lis
 
 In the "Body" tab, enter the request body as shown below, replacing the API key with your own API key and `date_start` and `date_end` with suitable values for the time period you are interested in.
 
-> **Note**: The `end_date` parameter is exclusive - the report generated  covers the period from `start_date` to just before the time and date specified in `end_date`.
+> **Note**: The `end_date` parameter is exclusive - the report generated  covers the period from `start_date` to right before the time and date specified in `end_date`.
 
 ### For an SMS report
 

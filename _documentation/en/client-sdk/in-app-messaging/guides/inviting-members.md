@@ -11,7 +11,7 @@ navigation_weight: 2
 
 This guide covers inviting users to a conversation (members), listening for invites to join a conversation as well as new members joining.
 
-Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app) and you are able to [create a simple conversation](/client-sdk/in-app-messaging/guides/simple-conversation).
+Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app) and you are able to [create a light conversation](/client-sdk/in-app-messaging/guides/simple-conversation).
 
 ```partial
 source: _partials/client-sdk/messaging/chat-app-tutorial-note.md

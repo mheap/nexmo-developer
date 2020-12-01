@@ -522,7 +522,7 @@ You use Vonage's US Short Codes API to:
 
 A turnkey, pay-per-conversation phone verification solution that allows you to instantly verify users globally and achieve highest conversion in order to:
 
-* Easily register users.
+* Effortlessly register users.
 * Verify transactions.
 * Implement [2FA](#2fa) and one-time passwords.
 
@@ -546,7 +546,7 @@ Voice includes:
 
 ## Voice API, VAPI
 
-This [Voice](#voice) product provides a simple and affordable personalized voice communication experience.
+This [Voice](#voice) product provides a straightforward and affordable personalized voice communication experience.
 
 Further information can be found in the [Voice API documentation](/voice/voice-api/overview).
 

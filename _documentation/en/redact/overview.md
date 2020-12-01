@@ -129,7 +129,7 @@ Redact API details | Redact API redacts only CDRs in the long-term storage of CD
 
 ### Conversations API
 
-For the multi-channel communications APIs of Conversation, a developer might decide to use personal data (such as a personal phone number) as a user handle. In that case, the [[PUT] method](/api/conversation#updateUser) of the User resource could be used to replace the personal data in the resource, or the [[DELETE] method](/api/conversation#deleteUser) could be used to simply delete the resource completely.
+For the multi-channel communications APIs of Conversation, a developer might decide to use personal data (such as a personal phone number) as a user handle. In that case, the [[PUT] method](/api/conversation#updateUser) of the User resource could be used to replace the personal data in the resource, or the [[DELETE] method](/api/conversation#deleteUser) could be used to delete the resource completely.
 
 If Conversation messages need to be redacted, the corresponding Event resource can be deleted using the [[DELETE] method](/api/conversation#deleteEvent).
 

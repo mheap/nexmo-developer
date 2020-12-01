@@ -5,7 +5,7 @@ description: In this step you will receive the call.
 
 # Receive a call
 
-At the top of the `MainActivity` class, just below the view declarations, add a `call` property to hold a reference to any call in progress and `incomingCall` property to hold information about currently incoming call.
+At the top of the `MainActivity` class, right below the view declarations, add a `call` property to hold a reference to any call in progress and `incomingCall` property to hold information about currently incoming call.
 
 ```java
 private NexmoCall call;

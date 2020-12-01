@@ -24,7 +24,7 @@ The `uri` should be constructed as a SIP URL in the format `sip:user@example.com
 
 Media will be sent via UDP on all ports.
 
-For more information on the IP addresses used for SIP traffic originating from Vonage see [What IP addresses should I whitelist in order to receive voice traffic from Vonage?](https://help.nexmo.com/hc/en-us/articles/115004859247-What-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo-)
+For more information on the IP addresses used for SIP traffic originating from Vonage see [What IP addresses should I allow in order to receive voice traffic from Vonage?](https://help.nexmo.com/hc/en-us/articles/115004859247-What-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo-)
 
 ## Websockets
 

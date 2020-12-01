@@ -35,7 +35,7 @@ Delivery receipts are either:
 * **Carrier** - returned when the service provider receives the message
 * **Handset** - returned when the user's handset receives the message
 
-Not all DLRs guarantee that the target received your message. Some delivery receipts represent successful completion of just one stage in the delivery process, such as passing the message to another operator. Other delivery receipts are fakes. Because of this, Vonage cannot completely guarantee that a DLR is accurate. It depends on the [countries](/messaging/sms/guides/country-specific-features) you are sending messages to and the providers involved.
+Not all DLRs guarantee that the target received your message. Some delivery receipts represent successful completion of only one stage in the delivery process, such as passing the message to another operator. Other delivery receipts are fakes. Because of this, Vonage cannot completely guarantee that a DLR is accurate. It depends on the [countries](/messaging/sms/guides/country-specific-features) you are sending messages to and the providers involved.
 
 If your message is longer than can be sent in a single SMS, the messages are [concatenated](/messaging/sms/guides/concatenation-and-encoding). You should receive a carrier DLR for each part of the concatenated SMS. Handset DLRs for a concatenated message are delayed. This is because the target handset has to process each part of the concatenated message before it can acknowledge receipt of the full message.
 
