@@ -1,6 +1,6 @@
 ## Associate an application with your webhook
 
-To link your number to the endpoint you've just created you will need to create an Application:
+To link your number to the endpoint you've now created you will need to create an Application:
 
 ```
 $ nexmo app:create demo <YOUR_HOSTNAME>/webhooks/answer <YOUR_HOSTNAME>/webhooks/event

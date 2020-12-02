@@ -72,7 +72,7 @@ If you restrict inbound traffic (including delivery receipts), you need to add t
 
 ## Tips for debugging webhooks
 
-**Start simple** - Publish the simplest possible script that you can think of to respond when the webhook is received and perhaps print some debug information. This makes sure that the URL is what you think it is, and that you can see the output or logs of the application.
+**Start small** - Publish the smallest possible script that you can think of to respond when the webhook is received and perhaps print some debug information. This makes sure that the URL is what you think it is, and that you can see the output or logs of the application.
 
 **Code defensively** - Inspect that data values exist and contain what you expected before you go ahead and use them. Depending on your setup, you could be open to receiving unexpected data so always bear this in mind.
 

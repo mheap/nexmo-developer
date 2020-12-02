@@ -6,7 +6,7 @@ description: Understanding and utilizing the Messages API Sandbox.
 
 # Messages API Sandbox
 
-The Messages API Sandbox provides a quick and easy method for sending test messages using the Vonage Messages API on supported messaging platforms without requiring the setup of business accounts on any of those platforms. This means you can code your application now while you wait for your business accounts to be created and approved. A sandbox can only be associated with one API key and supports the following three channels:
+The Messages API Sandbox provides a quick method for sending test messages using the Vonage Messages API on supported messaging platforms without requiring the setup of business accounts on any of those platforms. This means you can code your application now while you wait for your business accounts to be created and approved. A sandbox can only be associated with one API key and supports the following three channels:
 
 * WhatsApp
 * Viber
@@ -122,7 +122,7 @@ Inbound and Status webhooks are retried on a per-notification basis in the Messa
 Once your number or recipient ID is approved, you will use a Messages API Sandbox endpoint to send your test messages. The `from` value in the request should be the ID or number associated with the specific Vonage Sandbox external account. For your testing purposes, the value in the `from` field is already populated in the code snippets provided in the [Dashboard](https://dashboard.nexmo.com/messages/sandbox). It is important to note that you will need to replace the value in the `to` field with your number or Recipient ID that is approved on the specific Vonage Sandbox external account.
 
 1. Create a new file for each of the sandbox channels on which you want to send and receive messages. For instance `whatsapp-sandbox-message.sh`.
-2. Copy the code snippet for the appropriate channel from the code provided in the [Dashboard](https://dashboard.nexmo.com/messages/sandbox) and paste it into the file you just created.
+2. Copy the code snippet for the appropriate channel from the code provided in the [Dashboard](https://dashboard.nexmo.com/messages/sandbox) and paste it into the file you created.
 3. Replace the value in the `to` field with your number (WhatsApp or Viber) or Recipient ID (Facebook Messenger) that is approved in the sandbox.
 4. Save the file and run it.
 

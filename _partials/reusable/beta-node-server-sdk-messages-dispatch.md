@@ -1,5 +1,5 @@
 
-In addition to being able to use Messages and Dispatch via the REST APIs, Vonage also provides Server SDK support. The Server SDK provides a simple way to build you Messages and Dispatch applications. You can simply call the Server SDK to carry out tasks such as sending messages from your application.
+In addition to being able to use Messages and Dispatch via the REST APIs, Vonage also provides Server SDK support. The Server SDK provides a straightforward way to build you Messages and Dispatch applications. You can call the Server SDK to carry out tasks such as sending messages from your application.
 
 > **NOTE:** Currently Server SDK support is only available for Node.
 

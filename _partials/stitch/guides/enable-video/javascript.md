@@ -5,7 +5,7 @@ language: javascript
 
 # Getting Started with the Vonage Client SDK In-App Video
 
-In this getting started guide we'll cover adding video events to the Conversation we created in the [simple conversation with audio](/client-sdk/in-app-voice/guides/enable-audio/javascript) getting started guide. We'll deal with video and media stream events, the ones that come via the conversation, and the ones we send to the conversation.
+In this getting started guide we'll cover adding video events to the Conversation we created in the [conversation with audio](/client-sdk/in-app-voice/guides/enable-audio/javascript) getting started guide. We'll deal with video and media stream events, the ones that come via the conversation, and the ones we send to the conversation.
 
 ## Concepts
 

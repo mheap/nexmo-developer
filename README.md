@@ -28,6 +28,20 @@ docker-compose exec web ./node_modules/.bin/mdspell -r -n -a --en-us '_documenta
 
 If there is a word that isn't in the dictionary but is correct to use, add it to the `.spelling` file (there's a lot of exceptions in there, including `Vonage`!)
 
+### Prose Style Checking
+
+We check our content for any offensive, ableist or gendered language and enforce this at build time with a CI check. You can run the check locally using the following command:
+
+```
+./node_modules/.bin/alex _documentation/en _partials _modals _tutorials
+```
+
+Or if you're using Docker:
+
+```
+docker-compose exec web ./node_modules/.bin/alex _documentation/en _partials _modals _tutorials
+```
+
 ## Running locally
 
 The project can be run on your laptop, either directly or using Docker. These instructions have been tested for Mac.

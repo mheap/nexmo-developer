@@ -5,7 +5,7 @@ description: In this step you will receive the call.
 
 # Receive a call
 
-At the top of the `ViewController` class, just below the `client` declaration, add a `NXMCall` property to hold a reference to any call in progress.
+At the top of the `ViewController` class, below the `client` declaration, add a `NXMCall` property to hold a reference to any call in progress.
 
 ```swift
 class ViewController: UIViewController {
@@ -61,4 +61,3 @@ extension ViewController: NXMClientDelegate {
 Press `Cmd + R` to build and run again, when you call the number linked with your application from earlier you will be presented with an alert. You can pick up and the call will be connected!
 
 ![Incoming call alert](/meta/client-sdk/ios-phone-to-app/alert.png)
-

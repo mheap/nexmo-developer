@@ -59,7 +59,7 @@ Push notifications are received in your implementation of `MyFirebaseMessagingSe
 
 You can use `NexmoClient.isNexmoPushNotification(message.data))` to determine if the message is sent from Vonage server.
 
-Use `processPushNotification(message.data, listener)` to process the data received from Firebase Cloud Messaging (FCM) into an easy to use object:
+Use `processPushNotification(message.data, listener)` to process the data received from Firebase Cloud Messaging (FCM) into a ready to use object:
 
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/firebase-receive-push-notifications'

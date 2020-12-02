@@ -130,7 +130,7 @@ At the moment, only the following events are supported:
 
 All the other events, as well as the initial [answer](/voice/voice-api/webhook-reference#answer-webhook) webhook, are still sent without the signature (`Authorization` header).
 
-With this limitation, you can use the signed webhooks now for a simple voice alert or two-factor authentication scenario, using a [Create an outbound call](https://developer.nexmo.com/api/voice#createCall) API request with an embedded `NCCO`:
+With this limitation, you can use the signed webhooks now for a basic voice alert or two-factor authentication scenario, using a [Create an outbound call](https://developer.nexmo.com/api/voice#createCall) API request with an embedded `NCCO`:
 
 ```json
 {

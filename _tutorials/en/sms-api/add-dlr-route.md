@@ -5,7 +5,7 @@ description: Add Delivery Receipt route to
 
 # Add Delivery Receipt Route
 
-In order to receive Delivery receipts we'll need to add another route to our `SmsController`. This will be a `GET` route at `/webhooks/dlr`. This will just print to the console
+In order to receive Delivery receipts we'll need to add another route to our `SmsController`. This will be a `GET` route at `/webhooks/dlr`. This will only print to the console
 
 ```csharp
 [HttpGet("/webhooks/dlr")]

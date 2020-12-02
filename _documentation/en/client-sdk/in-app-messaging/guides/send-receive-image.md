@@ -9,7 +9,7 @@ navigation_weight: 4
 
 This guide covers sending and receiving images within a conversation.
 
-Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app) and you are able to [create a simple conversation](/client-sdk/in-app-messaging/guides/simple-conversation).
+Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app) and you are able to [create a conversation](/client-sdk/in-app-messaging/guides/simple-conversation).
 
 ```partial
 source: _partials/client-sdk/messaging/chat-app-tutorial-note.md

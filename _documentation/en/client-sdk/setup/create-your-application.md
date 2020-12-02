@@ -47,7 +47,7 @@ You now need to create a Vonage application. In this example you create an appli
 
 1) First create your project directory if you've not already done so.
 
-2) Change into the project directory you've just created.
+2) Change into the project directory you've now created.
 
 3) Use the following command to create a Vonage application with Voice and WebRTC capabilities. Replace the webhook URLs with your own.
 

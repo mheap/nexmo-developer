@@ -7,7 +7,7 @@ navigation_weight: 2
 
 # Managing applications with the Nexmo CLI
 
-The Nexmo CLI allows you to create and manage your Vonage applications. To obtain help simply type `nexmo` once the CLI has been installed.
+The Nexmo CLI allows you to create and manage your Vonage applications. To obtain help type `nexmo` once the CLI has been installed.
 
 ## Installation
 

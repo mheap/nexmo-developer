@@ -10,7 +10,7 @@ You can top up your Vonage account using PayPal, Visa, MasterCard, WeChat Pay (A
 
 > For more information on payment options, see [this knowledge base article](https://help.nexmo.com/hc/en-us/articles/213129327).
 
-One-click payments are quick and easy transactions made with a credit card stored for your account. You don't need to re-enter your credit card details as these are stored with our Payment Service Provider (PSP), [Braintree](https://www.braintreepayments.com/). Braintree (owned by PayPal) is [PCI level 1 compliant](https://www.braintreepayments.com/gb/features/data-security).
+One-click payments are quick and straightforward transactions made with a credit card stored for your account. You don't need to re-enter your credit card details as these are stored with our Payment Service Provider (PSP), [Braintree](https://www.braintreepayments.com/). Braintree (owned by PayPal) is [PCI level 1 compliant](https://www.braintreepayments.com/gb/features/data-security).
 
 > Vonage does not store, manage or transmit any complete credit card information in accordance with its PCI Compliance certification. Vonage has submitted and passed PCI DSS Self-Assessment Questionnaire Merchant Compliance and can produce evidence of this upon request.
 

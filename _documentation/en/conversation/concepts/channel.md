@@ -18,7 +18,7 @@ The Channels supported are:
 Examples:
 
 1. A User uses an App (Channel) to send in-app messages (Media) in a chat.
-2. A User uses a Phone (Channel) to receive Voice calls (Media) on his phone device.
+2. A User uses a Phone (Channel) to receive Voice calls (Media) on their phone device.
 
 It is then possible to mix Channels so that you can create:
 

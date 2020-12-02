@@ -45,7 +45,7 @@ WhatsApp has a core concept of Messages Templates (MTM). These were previously k
 
 > **IMPORTANT:** WhatsApp requires that a message that is sent to a user for the first time, or that is outside the Customer Care Window, be an MTM message. WhatsApp also requires that you obtain opt-in from your customers prior to sending them a message, this may be obtained on your website, IVR, or other standard means see [Facebook's docs](https://developers.facebook.com/docs/whatsapp/guides/opt-in/) for more details.
 
-The MTM allows a business to send just the template identifier along with the appropriate parameters instead of the full message content.
+The MTM allows a business to send only the template identifier along with the appropriate parameters instead of the full message content.
 
 > **NOTE:** New templates need to be approved by WhatsApp. Please contact your Vonage API Account Manager to submit the templates. Only templates created in your own namespace are valid. Using an template with a namespace outside of your own results in an error code 1022 being returned.
 

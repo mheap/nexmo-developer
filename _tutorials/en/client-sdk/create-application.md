@@ -31,7 +31,7 @@ nexmo app:create
 **5.** You can now select your application capabilities using the arrow keys and then pressing spacebar to select the 
 capabilities your application needs. For the purposes of this example select both Voice and RTC capabilities using the arrow keys and spacebar to select. Once you have selected both Voice and RTC capabilities press Enter to continue.
 
-> **NOTE:** If your application will be in-app voice only you can just select Voice capabilities. If you want in-app messaging select only RTC capabilities. If your app will have both in-app voice and in-app messaging select both capabilities.
+> **NOTE:** If your application will be in-app voice only you can select Voice capabilities only. If you want in-app messaging select only RTC capabilities. If your app will have both in-app voice and in-app messaging select both capabilities.
 
 **6.** For "Use the default HTTP methods?" press Enter to select the default.
 
@@ -39,7 +39,7 @@ capabilities your application needs. For the purposes of this example select bot
 
 **8.** You are next prompted for the "Voice Fallback Answer URL". This is an optional fallback URL should your main 
 Voice 
-Answer URL fail for some reason. In this case just press Enter. If later you need the fallback URL you can add it in the [Dashboard](https://dashboard.nexmo.com/sign-in), or using the Nexmo CLI.
+Answer URL fail for some reason. In this case press Enter. If later you need the fallback URL you can add it in the [Dashboard](https://dashboard.nexmo.com/sign-in), or using the Nexmo CLI.
 
 **9.** You are now required to enter the "Voice Event URL". Enter `https://example.ngrok.io/webhooks/event`.
 

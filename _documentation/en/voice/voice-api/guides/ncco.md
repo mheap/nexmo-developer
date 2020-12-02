@@ -165,7 +165,7 @@ You can also use `onAnswer` in conjunction with `ringbackTone` so that the calle
 ]
 ```
 
-In a very simple case `on-answer.json` might be:
+In a very straightforward case `on-answer.json` might be:
 
 ```json
 [

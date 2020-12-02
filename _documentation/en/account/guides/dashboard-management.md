@@ -5,7 +5,7 @@ description: How to use the Vonage dashboard
 
 # Using the Vonage Dashboard for Account management
 
-Dashboard is a web application that makes it easy to:
+Dashboard is a web application that allows you to:
 
 * Manage your account - setup and configure your Vonage account
 * Manage payments - top up your account balance, configure notifications and generate invoices

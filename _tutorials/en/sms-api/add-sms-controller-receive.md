@@ -11,7 +11,7 @@ Add a `using` statements for `Vonage.Messaging` and `Vonage.Utility` at the top 
 
 ## Add Receive SMS Action
 
-Finally we'll just need to add a route to receive the webhook from Vonage, parse out the SMS data structure, and print some stuff to our console:
+Finally we'll need to add a route to receive the webhook from Vonage, parse out the SMS data structure, and print some stuff to our console:
 
 ```csharp
 [HttpGet("/webhooks/inbound-sms")]

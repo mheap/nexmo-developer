@@ -23,7 +23,7 @@ You will be using the iOS Client SDK library inside an Xcode project you'll crea
 * You now have a brand new Xcode Project.
 
 
-**Before continuing, please close the new project you've just created.**
+**Before continuing, please close the new project you created.**
 
 You will add the iOS Client SDK library to your project via [CocoaPods](https://cocoapods.org/).
 
@@ -101,4 +101,3 @@ As described in the output above, please use `AppToAppCall.xcworkspace` rather t
 ``` shell
 open AppToAppCall.xcworkspace
 ```
-

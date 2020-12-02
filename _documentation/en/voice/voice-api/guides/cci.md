@@ -15,7 +15,7 @@ There are three groups of contact center oriented use-cases where the Voice API 
 
 For *self-service* cases, the Voice API provides the following set of features:
 
-* [Text-to-Speech](/voice/voice-api/guides/text-to-speech) and [Speech Recognition](/voice/voice-api/guides/asr) for advanced IVR or simple voice bots. Follow this [tutorial](/use-cases/asr-use-case-voice-bot) to learn more.
+* [Text-to-Speech](/voice/voice-api/guides/text-to-speech) and [Speech Recognition](/voice/voice-api/guides/asr) for advanced IVR or voice bots. Follow this [tutorial](/use-cases/asr-use-case-voice-bot) to learn more.
 * [WebSockets](/voice/voice-api/guides/websockets) allow you to connect phone calls to any AI bot engine of your choice. Clone our [reference application](https://github.com/Nexmo/lex-connector) to quickly start with [Amazon Lex](https://aws.amazon.com/lex/) integration, which applies natural language understanding (NLU) to recognize the intent of the text, enabling you to build applications with highly engaging user experiences and lifelike conversational interactions. 
 
 With WebSockets, you can also embed any kind of *real-time analytics* into your contact center. With an NCCO [`connect`](/voice/voice-api/ncco-reference#connect) action, you can attach a WebSocket one-way (or two-way, depending on the case) stream to any inbound or outbound call and then pass the media to an analytics engine, such as [Amazon Transcribe](https://aws.amazon.com/transcribe/). You can perform a deeper analysis with [Amazon Comprehend](https://aws.amazon.com/comprehend/) to provide the agent with useful insights and real-time hints during the call.
@@ -34,7 +34,7 @@ For the typical IVR case, the user calls a PSTN (phone) number and interacts wit
 
 ![IVR](/images/voice-api/cci_ivr.png)
 
-Vonage deals with the complexity of connecting the call, so all you need is to provision a Vonage virtual number, assign it to your app, and implement HTTP request handlers ([webhooks](/voice/voice-api/webhook-reference)) to instruct the Voice platform with the desired call control [actions](/voice/voice-api/ncco-reference). Building a simple IVR is this easy.
+Vonage deals with the complexity of connecting the call, so all you need is to provision a Vonage virtual number, assign it to your app, and implement HTTP request handlers ([webhooks](/voice/voice-api/webhook-reference)) to instruct the Voice platform with the desired call control [actions](/voice/voice-api/ncco-reference).
 
 Quite a similar approach can be used for voice notifications with or without IVR as a part of it. The difference is that now your app initiates the call with a [REST API](/api/voice#createCall) (HTTP) request:
 
@@ -50,7 +50,7 @@ The transmission of one or more custom SIP Headers from the Voice platform to th
 
 ### Voice Bot
 
-If you want to enhance your IVR with natural language understanding (NLU), you may connect it to an AI service, such as [Amazon Lex](https://aws.amazon.com/lex/). Lex accepts both text and media (audio) and provides text and media output following the business logic you implement in your bot. In order to connect the telephony world with binary media processing services, you may use a WebSocket connection, supported by the Vonage Voice platform. To do that, include the [`connect` action](/voice/voice-api/ncco-reference#connect) with your app WebSocket URL as the endpoint into your NCCO - and the call will be immediately connected to your app with media flowing from the user and backward. Then you just need to pass the media frames to Lex and stream Lex responses back through the same connection:
+If you want to enhance your IVR with natural language understanding (NLU), you may connect it to an AI service, such as [Amazon Lex](https://aws.amazon.com/lex/). Lex accepts both text and media (audio) and provides text and media output following the business logic you implement in your bot. In order to connect the telephony world with binary media processing services, you may use a WebSocket connection, supported by the Vonage Voice platform. To do that, include the [`connect` action](/voice/voice-api/ncco-reference#connect) with your app WebSocket URL as the endpoint into your NCCO - and the call will be immediately connected to your app with media flowing from the user and backward. Then you need to pass the media frames to Lex and stream Lex responses back through the same connection:
 
 ![Voice Bot](/images/voice-api/cci_bot.png)
 
@@ -70,7 +70,7 @@ Use a similar approach to perform real-time analysis of the conversation between
 
 ### Post-call Analytics
 
-The Vonage Voice API enables you to easily [record](/voice/voice-api/guides/recording) the conversation or a part of the conversation, depending on your call flow and the use case. Because you can record across [multiple channels](/voice/voice-api/guides/recording#multi-channel-recording), the audio file can be further processed by various analytics services. Check our detailed tutorial to learn how to [transcribe the recording using Amazon Transcribe](/use-cases/trancribe-amazon-api).
+The Vonage Voice API enables you to [record](/voice/voice-api/guides/recording) the conversation or a part of the conversation with minimal effort, depending on your call flow and the use case. Because you can record across [multiple channels](/voice/voice-api/guides/recording#multi-channel-recording), the audio file can be further processed by various analytics services. Check our detailed tutorial to learn how to [transcribe the recording using Amazon Transcribe](/use-cases/trancribe-amazon-api).
 
 ### Further Reading
 * Check [NCCO Reference](/voice/voice-api/ncco-reference) for all the supported NCCO actions
