@@ -10,7 +10,7 @@ Start the verification process by using the [Verify API request endpoint](/api/v
 Use the Node Server SDK for this. First, instantiate it after the lines of code that read your environment variables from `.env`:
 
 ```javascript
-const nexmo = new Nexmo(
+const vonage = new Vonage(
   {
     apiKey: VONAGE_API_KEY,
 		apiSecret: VONAGE_API_SECRET,
@@ -27,7 +27,7 @@ Then, create the verification request within the `/verify` route handler:
 app.post('/verify', (req, res) => {
 	// Start the verification process
 	verifyRequestNumber = req.body.number;
-	nexmo.verify.request(
+	vonage.verify.request(
 		{
 			number: verifyRequestNumber,
 			brand: VONAGE_BRAND_NAME,

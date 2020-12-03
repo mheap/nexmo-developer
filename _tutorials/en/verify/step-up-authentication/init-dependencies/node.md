@@ -16,7 +16,7 @@ const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const app = express();
-const Nexmo = require('nexmo');
+const Vonage = require('@vonage/server-sdk');
 
 const VONAGE_API_KEY = process.env.VONAGE_API_KEY;
 const VONAGE_API_SECRET = process.env.VONAGE_API_SECRET;

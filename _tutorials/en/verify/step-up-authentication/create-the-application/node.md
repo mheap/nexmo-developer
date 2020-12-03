@@ -22,12 +22,12 @@ In addition to `express` and `pug`, you will be using the following external mod
 * `express-session` - to manage the login state of the user
 * `body-parser` - to parse `POST` requests
 * `dotenv` - to store your Vonage API key and secret and the name of your application in a `.env` file
-* `nexmo` - the [Node Server SDK](https://github.com/nexmo/nexmo-node)
+* `nexmo` - the [Node Server SDK](https://github.com/Vonage/vonage-node-sdk)
 
 Install these dependencies by running the following `npm` command at a terminal prompt:
 
 ```sh
-npm install express express-session pug body-parser dotenv nexmo
+npm install express express-session pug body-parser dotenv @vonage/server-sdk
 ```
 
 > **Note**: This tutorial assumes that you have [Node.js](https://nodejs.org/) installed and are running in a Unix-like environment. The terminal commands for Windows environments might be different.

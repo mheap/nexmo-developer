@@ -13,28 +13,17 @@ After checking the code, return your user to the home page.
 
 Enter the following code in the `/check-code` route handler to achieve this:
 
-```javascript
-app.post('/check-code', (req, res) => {
-	// Check the code provided by the user
-	nexmo.verify.check(
-		{
-			request_id: verifyRequestId,
-			code: req.body.code,
-		},
-		(err, result) => {
-			if (err) {
-				console.error(err);
-			} else {
-				if (result.status == 0) {
-					// User provided correct code, so create a session for that user
-					req.session.user = {
-						number: verifyRequestNumber,
-					};
-				}
-			}
-			// Redirect to the home page
-			res.redirect('/');
-		}
-	);
-});
+```python
+@app.route("/check-code", methods=["POST"])
+def check_code():
+    response = verify.check(session["request_id"],
+                            code=request.form.get("code"))
+
+    if response["status"] == "0":
+        session["verified_number"] = session["unverified_number"]
+        return render_template("index.html",
+                               number=session["verified_number"],
+                               brand=VONAGE_BRAND_NAME)
+    else:
+        return render_template("index.html", error=response["error_text"])
 ```
