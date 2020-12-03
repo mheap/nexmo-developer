@@ -241,7 +241,16 @@ page:
             intro: Senior Communications Engineer at MongoDB, occasional blogger, crocheter, and hacker. Previously engineer at Google, Microsoft, and Bloomberg.
             location: Netherlands
             github: npentrel
-
+      - column:
+        - type: headshot
+          headshot:
+            name: Sudipto Ghosh
+            url: 'https://sudipto.ghosh.pro/'
+            img_src: 'https://sudipto.ghosh.pro/assets/img/sgpp.jpg'
+            twitter: ScientificGhosh
+            intro: Computer Science Undergraduate Student. Experience in WebDev and ML. Love to learn, innovate and build things.
+            location: New Delhi, India
+            github: sudiptog81
 
   - row:
       - column:
