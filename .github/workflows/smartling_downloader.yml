@@ -74,5 +74,13 @@ jobs:
         FORCE_COLOR: true
       run: |
         RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-smartling-download
+    - name: Clean Git Commit of Untracked Files and Directories
+      run: |
+        git clean -fdX
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
+      with:
+        title: 'Latest Smartling Translation Changes'
+        branch-suffix: timestamp
+        delete-branch: true
+        base: master
