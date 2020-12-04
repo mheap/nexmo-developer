@@ -75,6 +75,9 @@ jobs:
     - name: Run rake task
       if: steps.step1.outputs.file_changes != ''
       env:
+        SMARTLING_USER_ID: ${{ secrets.SMARTLING_USER_ID }}
+        SMARTLING_USER_SECRET: ${{ secrets.SMARTLING_USER_SECRET }}
+        SMARTLING_PROJECT_ID: ${{ secrets.SMARTLING_PROJECT_ID }}
         POSTGRES_USERNAME: postgres
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
