@@ -5,7 +5,7 @@ description: In this step you learn how to add JWT to the application and set th
 
 Now it's time to fill previously generated `CONVERSATION_ID` and `JWT` tokens.
 
-Open `Config.kt` file and replace placeholders with real values:
+Create `Config.kt` file and replace placeholders with real values:
 
 1. `CONVERSATION_ID` - id of the conversation created in the previous step
 2. `ALICE_TOKEN` - Alice JWT token

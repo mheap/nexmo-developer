@@ -17,8 +17,8 @@ image: public/screenshots/tutorials/client-sdk/android-shared/login-screen-users
 
 You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Locate the `private val client` property in the `LoginViewModel` class and update its implementation:
 
-```kotlin
-private val client = NexmoClient.get()
+```java
+private NexmoClient client = NexmoClient.get();
 ```
 
 Make sure to add missing import again.
@@ -27,11 +27,11 @@ Make sure to add missing import again.
 
 Your user must be authenticated to be able to participate in the Call. Locate the `onLoginUser` method inside `LoginViewModel` class and replace it with this code:
 
-```kotlin
-fun onLoginUser(user: User) {
-    if (user.jwt.isNotBlank()) {
-        this.user = user
-        client.login(user.jwt)
+```java
+void onLoginUser(User user) {
+    if (!StringUtils.isBlank(user.jwt)) {
+        this.user = user;
+        client.login(user.jwt);
     }
 }
 ```
@@ -42,20 +42,22 @@ fun onLoginUser(user: User) {
 
 ## Monitor connection state
 
-When a successful connection is established you need to navigate user to `MainFragment`. Locate the `init` block inside `LoginViewModel` class and replace it with this code:
+When a successful connection is established you need to navigate user to `MainFragment`. Locate the `LoginViewModel` constructor inside `LoginViewModel` class and replace it with this code:
 
 
-```kotlin
-init {
-        client.setConnectionListener { newConnectionStatus, _ ->
-
-            if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                navigate()
-                return@setConnectionListener
+```java
+public LoginViewModel() {
+    client.setConnectionListener(new NexmoConnectionListener() {
+        @Override
+        public void onConnectionStatusChange(@NonNull ConnectionStatus connectionStatus, @NonNull ConnectionStatusReason connectionStatusReason) {
+            if (connectionStatus == ConnectionStatus.CONNECTED) {
+                navigate();
+                return;
             }
 
-            connectionStatusMutableLiveData.postValue(newConnectionStatus)
+            connectionStatusMutableLiveData.postValue(connectionStatus);
         }
+    });
 }
 ```
 

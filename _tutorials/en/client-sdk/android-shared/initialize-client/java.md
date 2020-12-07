@@ -10,7 +10,12 @@ description: In this step you will initialize `NexmoClient`, so it can be used w
 Locate the `initializeNexmoClient` method in the `BaseApplication` class and initialize `NexmoClient` using the builder. You can find this class in the Android view on the left or use `Navigate class` keyboard shortcut (Mac: `Cmd + O` ; Win: `Ctrl + O`).
 
 ```kotlin
-private fun initializeNexmoClient() {
+@Override
+protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    setContentView(R.layout.activity_main);
+
     new NexmoClient.Builder().build(this);
 }
 ```

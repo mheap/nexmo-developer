@@ -9,7 +9,7 @@ description: In this step you create an Android project and add the Android Clie
 
 * Select a `Empty Activity` template type and click `Next`.
 
-* Type `Project Name` and select `Kotlin` language.
+* Type `Project Name` and select `Java` language.
 
 * Click `Finish`
 
@@ -20,7 +20,7 @@ description: In this step you create an Android project and add the Android Clie
 You need to add a custom Maven URL repository to your Gradle configuration. Add the following URL in your top-level `build.gradle` file:
 
  ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/maven'
+source: '_tutorials_tabbed_content/client-sdk/android/shared/nexmo-maven'
 ``` 
 
 Now add the Client SDK to your project. Add the following dependency in your app level `build.gradle` file (typically `app/build.gradle`):

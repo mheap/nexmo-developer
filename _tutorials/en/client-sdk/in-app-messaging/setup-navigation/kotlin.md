@@ -1,0 +1,203 @@
+---
+title: Setup navigation
+description: In this step you will setup navigation component.
+---
+
+# Setup navigation
+
+## Create application nav graph
+
+Select `New` > `Android resource file`:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/new-android-resource-file.png
+```
+
+Enter `app_nav_graph` as file name, select `Navigation` as resource type and press `OK` button.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/new-app-nav-graph.png
+```
+
+You will defne navigation targets (login and chat screens) in the navigation graph latter, when creating individual screens. 
+
+## Create NavHostFragment
+
+Set `app_nav_graph` as main navigation graph of the application. Open `activity_main.xml` file and fill it's content:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/activity-main-layout-file.png
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".messaging.MainActivity">
+
+    <fragment
+            android:id="@+id/navHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/app_nav_graph" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+> **NOTE:** `NavHostFragment` with navigation graph (`@navigation/app_nav_graph`) will serve as main navigation mechanism within this application.
+
+
+## Configure navigation in the MainActivity
+
+First we have to define two helpers `BackPressHandler` interface and `NavManager` object.
+
+### Create BackPressHandler interface
+
+`BackPressHandler` interface will help with handling pressing of the back button.
+
+Select `New` > `Kotlin Class/File`:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-new-kotlin-class-file.png
+```
+
+Enter `BackPressHandler` as name and select `Interface`.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/new-backpresshandler.png
+```
+
+Add `onBackPressed` method to the `BackPressHandler` interface:
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+interface BackPressHandler {
+    fun onBackPressed()
+}
+```
+
+### Create NavManager object
+
+`NavManager` object will allow to navigate directly from ViewModels.
+
+Select `New` > `Kotlin Class/File`:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-new-kotlin-class-file.png
+```
+
+Enter `NavManager` as name and select `Object`.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/new-navmanager.png
+```
+
+Repleace file content with below code snippet:
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+import androidx.navigation.NavController
+import androidx.navigation.NavDirections
+
+object NavManager {
+    private lateinit var navController: NavController
+
+    fun init(navController: NavController) {
+        NavManager.navController = navController
+    }
+
+    fun navigate(navDirections: NavDirections) {
+        navController.navigate(navDirections)
+    }
+}
+```
+
+### Update MainActivity
+
+To support pressing of the back button add `onBackPressed` method to the `MainActivity`.
+
+```kotlin
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
+
+    // ...
+
+    override fun onBackPressed() {
+        val childFragmentManager = supportFragmentManager.primaryNavigationFragment?.childFragmentManager
+        val currentNavigationFragment = childFragmentManager?.fragments?.first()
+
+        if(currentNavigationFragment is BackPressHandler) {
+            currentNavigationFragment.onBackPressed()
+        }
+
+        super.onBackPressed()
+    }
+}
+```
+
+To initialize `NavManager` call it's `init` method from `MainActivity.onCreate` method:
+
+```kotlin
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // ...
+        val navController = findNavController(R.id.navHostFragment)
+        NavManager.init(navController)
+    }
+
+    // ...
+}
+
+```
+
+Here is the complete code for the `MainActivity` class:
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import com.nexmo.client.NexmoClient
+
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        NexmoClient.Builder().build(this)
+
+        val navController = findNavController(R.id.navHostFragment)
+        NavManager.init(navController)
+    }
+
+    override fun onBackPressed() {
+        val childFragmentManager = supportFragmentManager.primaryNavigationFragment?.childFragmentManager
+        val currentNavigationFragment = childFragmentManager?.fragments?.first()
+
+        if(currentNavigationFragment is BackPressHandler) {
+            currentNavigationFragment.onBackPressed()
+        }
+
+        super.onBackPressed()
+    }
+}
+```
+
+Run `Build` > `Make project` to make sure project is compiling.
+
+Now you can build login screen.

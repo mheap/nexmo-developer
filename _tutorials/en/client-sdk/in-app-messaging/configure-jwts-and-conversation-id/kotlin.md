@@ -3,14 +3,19 @@ title: Configure JWTs and conversation id
 description: In this step you learn how to add JWT to the application and set the conversation id.
 ---
 
-Now it's time to fill previously generated `CONVERSATION_ID` and `JWT` tokens.
+Create `Config.kt` file in the `com.vonage.tutorial.messaging` package to store the configuration. Right click on `messaging` pacage and select `New` > `Kotlin Class/File`. 
 
-Open `Config.kt` file and replace placeholders with real values:
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/kotlin-new-kotlin-class-file.png
+```
 
-1. `CONVERSATION_ID` - id of the conversation created in the previous step
-2. `ALICE_TOKEN` - Alice JWT token
-3. `BOB_TOKEN` - Bob JWT token
+Enter `Config` as name and select `File` and press Enter to confirm.
 
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/kotlin-new-kotlin-class-file-popup.png
+```
+
+Repleace file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging
@@ -34,5 +39,15 @@ object Config {
     )
 }
 ```
+
+
+Now it's time to fill previously generated `CONVERSATION_ID` and `JWT` tokens. Replace placeholders with real values:
+
+1. `CONVERSATION_ID` - id of the conversation created in the previous step
+2. `ALICE_TOKEN` - Alice JWT token
+3. `BOB_TOKEN` - Bob JWT token
+
+
+
 
 Notice that these constants and values are hardcoded to store the properties of users. This makes it easier to use these values later in this tutorial.

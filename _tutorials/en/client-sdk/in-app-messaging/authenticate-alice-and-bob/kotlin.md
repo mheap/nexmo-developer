@@ -1,17 +1,33 @@
 ---
-title: Authenticate your User
+title: Authenticate your Users
 description: In this step you authenticate your users via the JWTs you created earlier
 ---
 
-# Authenticate your User
+# Authenticate your Users
 
-Login screen (`LoginFragment` and `LoginViewModel` classes) is responsible for authenticating the user.
+Your users must be authenticated to be able to participate in the Call. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
 
 ```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/login-screen-user.png
+image: public/screenshots/tutorials/client-sdk/android-shared/login-screen-users.png
 ```
 
-> **NOTE:** You perform this authentication using the `JWT` generated in previous steps.
+> **NOTE:** You perform this authentication using the `JWTs` generated in previous steps.
+
+## LoginFragment layout
+
+First you have to define screen layout. Right click on `layout` directory, select `New` > `Layout Resource File` and enter `fragment_login` as layout name.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/new-layout-resource-file.png
+```
+
+Edit newly created `fragment_login.xml `layout file...
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/create-fragment-login-layout.png
+```
+
+... by 
 
 ## Get NexmoClient instance
 
@@ -36,7 +52,7 @@ fun onLoginUser(user: User) {
 }
 ```
 
-> **NOTE:** Inside `LoginFragment` class, explore the `loginUser` method that was written for you. This method is called when one of the two `Login ...` buttons are clicked. This method calls the above `onLoginUser` method.
+> **NOTE:** Inside `LoginFragment` class, explore the `loginUser` method that was written for you. This method is called when one of the two `Login ...` buttons are clicked. This method calls the above `onLoginUser` method. 
 
 > **NOTE:** The `User` type is the `data class` that we've defined in the `Config.kt` file.
 

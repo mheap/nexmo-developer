@@ -11,8 +11,9 @@ introduction:
     In this tutorial, you will learn how to create an Android application using Kotlin and the Client SDK, and then write the code to receive an
     inbound <abbr title="Public Switched Telephone Network">PSTN</abbr> call.
 
-    ### Completed project
-    If you would like to follow along without building the app yourself, the completed project for this tutorial is available on [Github](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-phone-to-app-kotlin) for you to download.
+    The source code is available on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-phone-to-app-kotlin).
+
+    This tutorial uses NexmoClient version 2.x
 
 prerequisites:
 - create-nexmo-account
