@@ -14,6 +14,7 @@ introduction:
 
     In this tutorial, you will connect an inbound call to a WebSocket endpoint. The WebSocket server will listen to the call audio and echo it back to you. You will implement this using the [express](https://expressjs.com) web application framework and [express-ws](https://www.npmjs.com/package/express-ws), which lets you define WebSocket endpoints like any other `express` route. 
 prerequisites:
+  - create-nexmo-account
   - install-nexmo-cli
 tasks:
   - buy-nexmo-number
