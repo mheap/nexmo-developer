@@ -1,0 +1,29 @@
+---
+title: Call a WebSocket
+description: Connect an inbound call to a WebSocket with the Voice API
+products:
+  - voice/voice-api
+
+introduction:
+  title: Introduction
+  description: Learn how to ...
+  content: |
+    # Introduction
+
+    You can use the Vonage Voice API to connect a call to a [WebSocket](/voice/voice-api/guides/websockets), giving you a two-way stream of the call audio delivered over the WebSocket protocol in real-time. This enables you to process the call audio to perform tasks such as sentiment analysis, real-time transcription and decision-making using artificial intelligence.
+
+    In this tutorial, you will connect an inbound call to a WebSocket endpoint. The WebSocket server will listen to the call audio and echo it back to you. You will implement this using the [express](https://expressjs.com) web application framework and [express-ws](https://www.npmjs.com/package/express-ws), which lets you define WebSocket endpoints like any other `express` route. 
+prerequisites:
+  - install-nexmo-cli
+tasks:
+  - buy-nexmo-number
+  - voice/voice-api/call-a-websocket/create-voice-application
+  - link-nexmo-number
+  - voice/voice-api/call-a-websocket/create-the-project
+  - voice/voice-api/call-a-websocket/write-answer-webhook
+  - voice/voice-api/call-a-websocket/write-event-webhook
+  - voice/voice-api/call-a-websocket/create-the-websocket
+  - voice/voice-api/call-a-websocket/create-your-server
+  - voice/voice-api/call-a-websocket/test-your-application
+  - voice/voice-api/call-a-websocket/conclusion
+  - voice/voice-api/call-a-websocket/whats-next
