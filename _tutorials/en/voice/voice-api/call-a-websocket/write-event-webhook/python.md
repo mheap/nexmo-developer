@@ -7,7 +7,7 @@ description: Listen for call lifecycle events
 
 Implement a webhook that captures call events so that you can observe the lifecycle of the call in the console.
 
-We won't use the request data in this tutorial, so just return an `HTTP 200` response (`success`):
+We won't use the request data in this tutorial, so your webhook should immediately return an `HTTP 200` response (`success`):
 
 ```python
 @app.route("/webhooks/event", methods=["POST"])
