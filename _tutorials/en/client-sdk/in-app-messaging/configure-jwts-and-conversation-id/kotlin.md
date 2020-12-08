@@ -20,11 +20,6 @@ Repleace file content with below code snippet:
 ```kotlin
 package com.vonage.tutorial.messaging
 
-data class User(
-    val name: String,
-    val jwt: String
-)
-
 object Config {
 
     const val CONVERSATION_ID: String = "" // TODO: set conversation Id
@@ -38,6 +33,11 @@ object Config {
         "BOB_TOKEN" // TODO: "set Bob's JWT token"
     )
 }
+
+data class User(
+    val name: String,
+    val jwt: String
+)
 ```
 
 
