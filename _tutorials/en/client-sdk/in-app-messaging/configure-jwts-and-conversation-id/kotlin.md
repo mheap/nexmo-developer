@@ -47,7 +47,4 @@ Now it's time to fill previously generated `CONVERSATION_ID` and `JWT` tokens. R
 2. `ALICE_TOKEN` - Alice JWT token
 3. `BOB_TOKEN` - Bob JWT token
 
-
-
-
 Notice that these constants and values are hardcoded to store the properties of users. This makes it easier to use these values later in this tutorial.

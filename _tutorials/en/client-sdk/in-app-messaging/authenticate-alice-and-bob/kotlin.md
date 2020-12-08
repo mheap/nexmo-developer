@@ -1,9 +1,9 @@
 ---
-title: Authenticate your Users
+title: Authenticate Users
 description: In this step you authenticate your users via the JWTs you created earlier
 ---
 
-# Authenticate your Users
+# Authenticate Users
 
 Your users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
 
