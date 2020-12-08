@@ -7,7 +7,7 @@ description: In this step you will setup navigation component.
 
 ## Create application nav graph
 
-Select `New` > `Android resource file`:
+Right click at `res` folder, select `New` > `Android resource file`:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/new-android-resource-file.png
@@ -37,7 +37,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/activity-main-layo
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".messaging.MainActivity">
+        tools:context=".MainActivity">
 
     <fragment
             android:id="@+id/navHostFragment"
@@ -72,6 +72,8 @@ interface BackPressHandler {
     fun onBackPressed()
 }
 ```
+
+> **NOTE** You can also copy the above code snippet to clipboard, select `messaging` package in Android Studio and paste it - this will create `BackPressHandler.kt` file containing above code.
 
 ### Create NavManager object
 
