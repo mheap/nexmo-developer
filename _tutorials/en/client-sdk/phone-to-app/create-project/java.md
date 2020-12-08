@@ -1,5 +1,5 @@
 ---
-title: Create new Android project
+title: Create an Android project
 description: In this step you create an Android project and add the Android Client SDK library.
 ---
 
