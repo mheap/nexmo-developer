@@ -12,7 +12,7 @@ There are two methods for creating a Voice application:
 
 Each of these methods is described in the following sections.
 
-### How to create a Voice application using the Nexmo CLI
+## How to create a Voice application using the Nexmo CLI
 
 To create your application using the Nexmo CLI, enter the following command into the shell replacing `NGROK_HOST_NAME` with the ngrok host that you got when you set up ngrok:
 
@@ -30,7 +30,7 @@ nexmo link:app VONAGE_NUMBER APPLICATION_ID
 
 This will link that Vonage Virtual Number to your application, which will cause all voice events occurring for that number to be routed to your designated URLs.
 
-### How to create a Voice application using the Dashboard
+## How to create a Voice application using the Dashboard
 
 You can create Voice applications in the [Dashboard](https://dashboard.nexmo.com/applications).
 

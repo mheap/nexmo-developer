@@ -26,15 +26,15 @@ prerequisites:
   - create-nexmo-account
   - install-nexmo-cli
   - run-ngrok
-  - voice-api/create-vonage-application  
+  - voice/voice-api/create-vonage-application  
 
 tasks:
-  - voice-api/create-voice-csproj  
-  - voice-api/install-vonage-dotnet
-  - voice-api/create-voice-controller
-  - voice-api/add-voicemail-answer-route
-  - voice-api/add-recording-route
-  - voice-api/configure-aspnet-app
+  - voice/voice-api/create-voice-csproj  
+  - install-vonage-dotnet
+  - voice/voice-api/create-voice-controller
+  - voice/voice-api/voicemail-dotnet/add-voicemail-answer-route
+  - voice/voice-api/voicemail-dotnet/add-recording-route
+  - voice/voice-api/configure-aspnet-app-vapi
   - run-dotnet-app
   
 conclusion:

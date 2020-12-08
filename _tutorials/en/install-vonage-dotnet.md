@@ -3,7 +3,7 @@ title: Install Vonage Dotnet
 description: In this step you will install the Vonage .NET package
 ---
 
-## Install Vonage Package
+# Install Vonage Package
 
 To install the Vonage NuGet package, change directory into the `VonageVoice` repository and run the following command:
 
