@@ -3,6 +3,8 @@ title: Create an Android project
 description: In this step you create an Android project and add the Android Client SDK library.
 ---
 
+# Create an Android project
+
 ## Project overview
 
 You will be building application with the following screens:
