@@ -31,7 +31,11 @@ You now have a brand new Android Project.
 
 ### Add Nexmo dependency
 
-You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside `allprojects` block in the top-level `build.gradle` file:
+You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside `allprojects` block in the project-level `build.gradle` file:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
+```
 
 ```groovy
 allprojects {
@@ -48,6 +52,10 @@ allprojects {
 
 Now add the Client SDK to the project. Add the following dependency in the app level `build.gradle` file (typically `app/build.gradle`):
 
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
+```
+
 ```groovy
 dependencies {
     // ...
@@ -59,6 +67,10 @@ dependencies {
 ### Set Java 1.8
 
 Set Java 1.8 in the app level `build.gradle` file (typically `app/build.gradle`):
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
+```
 
  ```groovy
 android {
@@ -76,12 +88,15 @@ android {
 
 To navigate between screens you will use [Navigation component](https://developer.android.com/guide/navigation).
 
-To add navigation component dependency define a variable `ext.android_navigation_version` containing version in top level `build.gradle` file:
+To add navigation component dependency define a variable `ext.android_navigation_version` containing version in project-level `build.gradle` file:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
+```
 
 ```groovy
 buildscript {
     ext.android_navigation_version = '2.3.2'
-
     // ...
 }
 ```
@@ -89,21 +104,30 @@ buildscript {
 Now in the same file add dependency for Gradle safe args plugin that provides type safety when navigating and passing data between destinations.
 Add new classpath in the `dependencies` block:
 
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
+```
+
 ```groovy
 dependencies {
-    classpath "com.android.tools.build:gradle:4.1.1"
+    // ...
+
     classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$android_navigation_version"
 }
 ```
 
 Finaly you add navigation component dependencies in the app level `build.gradle` file (typically `app/build.gradle`):
 
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
+```
+
 ```groovy
 dependencies {
     // ...
 
     implementation "androidx.navigation:navigation-fragment:$android_navigation_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$android_navigation_version"
+    implementation "androidx.navigation:navigation-ui:$android_navigation_version"
 }
 ```
 
