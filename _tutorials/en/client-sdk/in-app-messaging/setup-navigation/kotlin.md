@@ -54,30 +54,16 @@ image: public/screenshots/tutorials/client-sdk/android-shared/activity-main-layo
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-> **NOTE:** `NavHostFragment` with navigation graph (`@navigation/app_nav_graph`) will serve as main navigation mechanism within this application.
+Now `NavHostFragment` with navigation graph (`@navigation/app_nav_graph`) will serve as main navigation mechanism within this application.
 
 
 ## Configure navigation in the MainActivity
 
-First we have to define two helpers `BackPressHandler` interface and `NavManager` object.
+Define two helpers - `BackPressHandler` and `NavManager` to simplify the nagation.
 
 ### Create BackPressHandler interface
 
-`BackPressHandler` interface will help with handling pressing of the back button.
-
-Select `New` > `Kotlin Class/File`:
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-new-kotlin-class-file.png
-```
-
-Enter `BackPressHandler` as name and select `Interface`.
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/new-backpresshandler.png
-```
-
-Add `onBackPressed` method to the `BackPressHandler` interface:
+`BackPressHandler` interface will help with handling pressing of the back button. Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `BackPressHandler` as file name, select `Interface` and press `OK`. Add `onBackPressed` method to the `BackPressHandler` interface:
 
 ```kotlin
 package com.vonage.tutorial.messaging
@@ -89,21 +75,9 @@ interface BackPressHandler {
 
 ### Create NavManager object
 
-`NavManager` object will allow to navigate directly from ViewModels.
+`NavManager` object will allow to navigate directly from ViewModels by storing reference to navigation controller.
 
-Select `New` > `Kotlin Class/File`:
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-new-kotlin-class-file.png
-```
-
-Enter `NavManager` as name and select `Object`.
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/new-navmanager.png
-```
-
-Repleace file content with below code snippet:
+Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `NavManager` as file name, select `Object` and press `OK`. Repleace file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging
@@ -199,5 +173,3 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 ```
 
 Run `Build` > `Make project` to make sure project is compiling.
-
-Now you can build login screen.

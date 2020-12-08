@@ -3,7 +3,9 @@ title: Build chat screen
 description: In this step you build chat screen.
 ---
 
-# Create layout
+# Converstion
+
+## Create layout
 
 Rght click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_chat` as file name and press `OK`.
 
@@ -118,7 +120,7 @@ Repleace file content with below code snippet:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-# Create Fragment
+## Create Fragment
 
 Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginFragment` as file name, select `Class` and press `OK`.
 
@@ -130,72 +132,256 @@ package com.vonage.tutorial.messaging
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
-import kotlin.properties.Delegates
+import androidx.navigation.fragment.findNavController
+import com.nexmo.client.NexmoEvent
+import com.nexmo.client.NexmoMemberEvent
+import com.nexmo.client.NexmoMemberState
+import com.nexmo.client.NexmoTextEvent
 
-class LoginFragment : Fragment(R.layout.fragment_login) {
+class ChatFragment : Fragment(R.layout.fragment_chat), BackPressHandler {
 
-    private val viewModel by viewModels<LoginViewModel>()
+    private val viewModel by viewModels<ChatViewModel>()
 
-    private lateinit var loginAsAliceButton: Button
-    private lateinit var loginAsBobButton: Button
     private lateinit var progressBar: ProgressBar
-    private lateinit var connectionStatusTextView: TextView
+    private lateinit var errorTextView: TextView
+    private lateinit var chatContainer: ConstraintLayout
+    private lateinit var logoutButton: Button
+    private lateinit var sendMessageButton: Button
+    private lateinit var userNameTextView: TextView
+    private lateinit var messageEditText: EditText
+    private lateinit var conversationEventsTextView: TextView
 
-    private var dataLoading: Boolean by Delegates.observable(false) { _, _, newValue ->
-        loginAsAliceButton.isEnabled = !newValue
-        loginAsBobButton.isEnabled = !newValue
-        progressBar.isVisible = newValue
+    private var errorMessageObserver = Observer<String> {
+        progressBar.isVisible = false
+        errorTextView.text = it
+        errorTextView.isVisible = it.isNotEmpty()
+        chatContainer.isVisible = it.isEmpty()
     }
 
-    private val stateObserver = Observer<ConnectionStatus> {
-        connectionStatusTextView.text = it.toString()
+    private var userNameObserver = Observer<String> {
+        userNameTextView.text = resources.getString(R.string.user_says, it)
+        logoutButton.text = resources.getString(R.string.logout, it)
+    }
 
-        if (it == ConnectionStatus.DISCONNECTED) {
-            dataLoading = false
+    private var conversationEvents = Observer<List<NexmoEvent>?> {
+        val events = it?.mapNotNull { event ->
+            when (event) {
+                is NexmoMemberEvent -> getConversationLine(event)
+                is NexmoTextEvent -> getConversationLine(event)
+                else -> null
+            }
         }
+
+        // Production application should utilise RecyclerView to provide better UX
+        conversationEventsTextView.text = if (events.isNullOrEmpty()) {
+            "Conversation has no events"
+        } else {
+            events.joinToString(separator = "\n")
+        }
+
+        progressBar.isVisible = false
+        chatContainer.isVisible = true
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.connectionStatus.observe(viewLifecycleOwner, stateObserver)
+        if (Config.CONVERSATION_ID.isBlank()) {
 
-        loginAsAliceButton = view.findViewById(R.id.loginAsAliceButton)
-        loginAsBobButton = view.findViewById(R.id.loginAsBobButton)
-        progressBar = view.findViewById(R.id.progressBar)
-        connectionStatusTextView = view.findViewById(R.id.connectionStatusTextView)
-
-        loginAsAliceButton.setOnClickListener {
-            loginUser(Config.alice)
+            Toast.makeText(context, "Please set Config.CONVERSATION_ID", Toast.LENGTH_SHORT).show()
+            activity?.onBackPressed()
+            return
         }
 
-        loginAsBobButton.setOnClickListener {
-            loginUser(Config.bob)
+        viewModel.onInit()
+
+        viewModel.errorMessage.observe(viewLifecycleOwner, errorMessageObserver)
+        viewModel.conversationEvents.observe(viewLifecycleOwner, conversationEvents)
+        viewModel.userName.observe(viewLifecycleOwner, userNameObserver)
+
+        sendMessageButton.setOnClickListener {
+            val message = messageEditText.text.toString()
+
+            if (message.isNotBlank()) {
+                viewModel.onSendMessage(messageEditText.text.toString())
+                messageEditText.setText("")
+            } else {
+                Toast.makeText(context, "Message is blank", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        logoutButton.setOnClickListener {
+            viewModel.onLogout()
+            findNavController().popBackStack()
         }
     }
 
-    private fun loginUser(user: User) {
-        if (user.jwt.isBlank()) {
-            Toast.makeText(context, "Error: Please set Config.${user.name.toLowerCase()}.jwt", Toast.LENGTH_SHORT)
-        } else {
-            viewModel.onLoginUser(user)
-            dataLoading = true
+    private fun getConversationLine(textEvent: NexmoTextEvent): String {
+        val user = textEvent.fromMember.user.name
+        return "$user said: ${textEvent.text}"
+    }
+
+    private fun getConversationLine(memberEvent: NexmoMemberEvent): String {
+        val user = memberEvent.member.user.name
+
+        return when (memberEvent.state) {
+            NexmoMemberState.JOINED -> "$user joined"
+            NexmoMemberState.INVITED -> "$user invited"
+            NexmoMemberState.LEFT -> "$user left"
+            else -> "Error: Unknown member event state"
         }
+    }
+
+    override fun onBackPressed() {
+        viewModel.onBackPressed()
     }
 }
 ```
 
-# Add Fragment to navigation graph
+## Create ViewModel
 
-Open `app_nav_graph.xml` file and repleace it's content with below code snippet to set `Loginragment` as start fragment in the application:
+Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name, select `Class` and press `OK`.
+
+Repleace file content with below code snippet:
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.nexmo.client.NexmoAttachmentEvent
+import com.nexmo.client.NexmoClient
+import com.nexmo.client.NexmoConversation
+import com.nexmo.client.NexmoDeletedEvent
+import com.nexmo.client.NexmoDeliveredEvent
+import com.nexmo.client.NexmoEvent
+import com.nexmo.client.NexmoEventsPage
+import com.nexmo.client.NexmoMessageEventListener
+import com.nexmo.client.NexmoPageOrder
+import com.nexmo.client.NexmoSeenEvent
+import com.nexmo.client.NexmoTextEvent
+import com.nexmo.client.NexmoTypingEvent
+import com.nexmo.client.request_listener.NexmoApiError
+import com.nexmo.client.request_listener.NexmoRequestListener
+
+class ChatViewModel : ViewModel() {
+
+    private val client = NexmoClient.get()
+
+    private var conversation: NexmoConversation? = null
+
+    private val _errorMessage = MutableLiveData<String>()
+    val errorMessage = _errorMessage as LiveData<String>
+
+    private val _userName = MutableLiveData<String>()
+    val userName = _userName as LiveData<String>
+
+    private val _conversationEvents = MutableLiveData<List<NexmoEvent>?>()
+    val conversationEvents = _conversationEvents as LiveData<List<NexmoEvent>?>
+
+    private val messageListener = object : NexmoMessageEventListener {
+        override fun onTypingEvent(typingEvent: NexmoTypingEvent) {}
+
+        override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {}
+
+        override fun onTextEvent(textEvent: NexmoTextEvent) {
+            updateConversation(textEvent)
+        }
+
+        override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {}
+
+        override fun onEventDeleted(deletedEvent: NexmoDeletedEvent) {}
+
+        override fun onDeliveredReceipt(deliveredEvent: NexmoDeliveredEvent) {}
+    }
+
+    fun onInit() {
+        getConversation()
+        _userName.postValue(client.user.name)
+    }
+
+    private fun getConversation() {
+        client.getConversation(Config.CONVERSATION_ID, object : NexmoRequestListener<NexmoConversation> {
+            override fun onSuccess(conversation: NexmoConversation?) {
+                this@ChatViewModel.conversation = conversation
+
+                conversation?.let {
+                    getConversationEvents(it)
+                    it.addMessageEventListener(messageListener)
+                }
+            }
+
+            override fun onError(apiError: NexmoApiError) {
+                this@ChatViewModel.conversation = null
+                _errorMessage.postValue("Error: Unable to load conversation ${apiError.message}")
+            }
+        })
+    }
+
+    private fun getConversationEvents(conversation: NexmoConversation) {
+        conversation.getEvents(100, NexmoPageOrder.NexmoMPageOrderAsc, null,
+            object : NexmoRequestListener<NexmoEventsPage> {
+                override fun onSuccess(nexmoEventsPage: NexmoEventsPage?) {
+                    nexmoEventsPage?.pageResponse?.data?.let {
+                        _conversationEvents.postValue(it.toList())
+                    }
+                }
+
+                override fun onError(apiError: NexmoApiError) {
+                    _errorMessage.postValue("Error: Unable to load conversation events ${apiError.message}")
+                }
+            })
+    }
+
+    private fun updateConversation(textEvent: NexmoEvent) {
+        val events = _conversationEvents.value?.toMutableList() ?: mutableListOf()
+        events.add(textEvent)
+        _conversationEvents.postValue(events)
+    }
+
+    fun onSendMessage(message: String) {
+        if (conversation == null) {
+            _errorMessage.postValue("Error: Conversation does not exist")
+            return
+        }
+
+        conversation?.sendText(message, object : NexmoRequestListener<Void> {
+            override fun onSuccess(p0: Void?) {
+            }
+
+            override fun onError(apiError: NexmoApiError) {
+            }
+        })
+    }
+
+    fun onBackPressed() {
+        client.logout()
+    }
+
+    fun onLogout() {
+        client.logout()
+    }
+
+    override fun onCleared() {
+        conversation?.removeMessageEventListener(messageListener)
+    }
+}
+
+```
+
+## Add Fragment to navigation graph
+
+Open `app_nav_graph.xml` file and repleace it's content with below code snippet. This sippet will add`ChatFragment` to navigation graph and allow to navigate from `Loginragment` to `ChatFragment`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -209,55 +395,14 @@ Open `app_nav_graph.xml` file and repleace it's content with below code snippet 
             android:name="com.vonage.tutorial.messaging.LoginFragment"
             android:label="LoginFragment"
             tools:layout="@layout/fragment_login">
+        <action
+                android:id="@+id/action_loginFragment_to_chatFragment"
+                app:destination="@id/chatFragment" />
     </fragment>
+    <fragment
+            android:id="@+id/chatFragment"
+            android:name="com.vonage.tutorial.messaging.ChatFragment"
+            android:label="ChatFragment"
+            tools:layout="@layout/fragment_chat" />
 </navigation>
 ```
-
-# Create ViewModel
-
-Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name, select `Class` and press `OK`.
-
-Repleace file content with below code snippet:
-
-```kotlin
-package com.vonage.tutorial.messaging
-
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.nexmo.client.NexmoClient
-import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
-
-class LoginViewModel : ViewModel() {
-
-    private val navManager = NavManager
-
-    private val _connectionStatus = MutableLiveData<ConnectionStatus>()
-    val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
-
-    private val client = NexmoClient.get()
-
-    init {
-        client.setConnectionListener { newConnectionStatus, _ ->
-            if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                navigate()
-                return@setConnectionListener
-            }
-
-            _connectionStatus.postValue(newConnectionStatus)
-        }
-    }
-
-    private fun navigate() {
-        val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
-        navManager.navigate(navDirections)
-    }
-
-    fun onLoginUser(user: User) {
-        if (user.jwt.isNotBlank()) {
-            client.login(user.jwt)
-        }
-    }
-}
-```
-

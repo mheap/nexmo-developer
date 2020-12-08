@@ -30,4 +30,4 @@ If Android Studio can't find the reference to the `NexmoClient` class then you h
 image: public/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png
 ```
 
-You now have a working client. Your next step is to authenticate the users.
+You now have a working client. Your next step is to setup navigation.
