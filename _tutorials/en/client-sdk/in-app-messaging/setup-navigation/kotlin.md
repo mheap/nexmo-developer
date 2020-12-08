@@ -100,7 +100,7 @@ object NavManager {
 
 ### Update MainActivity
 
-To support pressing of the back button add `onBackPressed` method to the `MainActivity`.
+Add `onBackPressed` method to the `MainActivity`:
 
 ```kotlin
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
@@ -136,40 +136,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     // ...
 }
 
-```
-
-Here is the complete code for the `MainActivity` class:
-
-```kotlin
-package com.vonage.tutorial.messaging
-
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import com.nexmo.client.NexmoClient
-
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        NexmoClient.Builder().build(this)
-
-        val navController = findNavController(R.id.navHostFragment)
-        NavManager.init(navController)
-    }
-
-    override fun onBackPressed() {
-        val childFragmentManager = supportFragmentManager.primaryNavigationFragment?.childFragmentManager
-        val currentNavigationFragment = childFragmentManager?.fragments?.first()
-
-        if(currentNavigationFragment is BackPressHandler) {
-            currentNavigationFragment.onBackPressed()
-        }
-
-        super.onBackPressed()
-    }
-}
 ```
 
 Run `Build` > `Make project` to make sure project is compiling.
