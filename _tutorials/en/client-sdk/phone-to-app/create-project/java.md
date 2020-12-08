@@ -64,26 +64,6 @@ dependencies {
 }
 ```
 
-### Set Java 1.8
-
-Set Java 1.8 in the app level `build.gradle` file (typically `app/build.gradle`):
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
-```
-
- ```groovy
-android {
-    // ...
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-}
-```
-
-
 ### Add Navigation component dependencies
 
 To navigate between screens you will use [Navigation component](https://developer.android.com/guide/navigation).
