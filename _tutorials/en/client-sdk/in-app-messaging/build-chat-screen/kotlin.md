@@ -5,6 +5,8 @@ description: In this step you build chat screen.
 
 # Converstion
 
+Chat screen (`ChatFragment` and `ChatViewModel` classes) is responsible for fetching the conversation and all the conversation events.
+
 ## Create layout
 
 Rght click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_chat` as file name and press `OK`.
@@ -256,7 +258,6 @@ Repleace file content with below code snippet:
 ```kotlin
 package com.vonage.tutorial.messaging
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.nexmo.client.NexmoAttachmentEvent
@@ -265,29 +266,26 @@ import com.nexmo.client.NexmoConversation
 import com.nexmo.client.NexmoDeletedEvent
 import com.nexmo.client.NexmoDeliveredEvent
 import com.nexmo.client.NexmoEvent
-import com.nexmo.client.NexmoEventsPage
 import com.nexmo.client.NexmoMessageEventListener
-import com.nexmo.client.NexmoPageOrder
 import com.nexmo.client.NexmoSeenEvent
 import com.nexmo.client.NexmoTextEvent
 import com.nexmo.client.NexmoTypingEvent
-import com.nexmo.client.request_listener.NexmoApiError
-import com.nexmo.client.request_listener.NexmoRequestListener
+import com.vonage.tutorial.messaging.extension.toLiveData
 
 class ChatViewModel : ViewModel() {
 
-    private val client = NexmoClient.get()
+    private val client: NexmoClient = NexmoClient.get()
 
     private var conversation: NexmoConversation? = null
 
     private val _errorMessage = MutableLiveData<String>()
-    val errorMessage = _errorMessage as LiveData<String>
+    val errorMessage = _errorMessage.toLiveData()
 
     private val _userName = MutableLiveData<String>()
-    val userName = _userName as LiveData<String>
+    val userName = _userName.toLiveData()
 
     private val _conversationEvents = MutableLiveData<List<NexmoEvent>?>()
-    val conversationEvents = _conversationEvents as LiveData<List<NexmoEvent>?>
+    val conversationEvents = _conversationEvents.toLiveData()
 
     private val messageListener = object : NexmoMessageEventListener {
         override fun onTypingEvent(typingEvent: NexmoTypingEvent) {}
@@ -295,7 +293,7 @@ class ChatViewModel : ViewModel() {
         override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {}
 
         override fun onTextEvent(textEvent: NexmoTextEvent) {
-            updateConversation(textEvent)
+            // TODO: Update the conversation
         }
 
         override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {}
@@ -311,36 +309,11 @@ class ChatViewModel : ViewModel() {
     }
 
     private fun getConversation() {
-        client.getConversation(Config.CONVERSATION_ID, object : NexmoRequestListener<NexmoConversation> {
-            override fun onSuccess(conversation: NexmoConversation?) {
-                this@ChatViewModel.conversation = conversation
-
-                conversation?.let {
-                    getConversationEvents(it)
-                    it.addMessageEventListener(messageListener)
-                }
-            }
-
-            override fun onError(apiError: NexmoApiError) {
-                this@ChatViewModel.conversation = null
-                _errorMessage.postValue("Error: Unable to load conversation ${apiError.message}")
-            }
-        })
+        TODO("Fetch the conversation")
     }
 
     private fun getConversationEvents(conversation: NexmoConversation) {
-        conversation.getEvents(100, NexmoPageOrder.NexmoMPageOrderAsc, null,
-            object : NexmoRequestListener<NexmoEventsPage> {
-                override fun onSuccess(nexmoEventsPage: NexmoEventsPage?) {
-                    nexmoEventsPage?.pageResponse?.data?.let {
-                        _conversationEvents.postValue(it.toList())
-                    }
-                }
-
-                override fun onError(apiError: NexmoApiError) {
-                    _errorMessage.postValue("Error: Unable to load conversation events ${apiError.message}")
-                }
-            })
+        TODO("Fetch the conversation events")
     }
 
     private fun updateConversation(textEvent: NexmoEvent) {
@@ -350,18 +323,7 @@ class ChatViewModel : ViewModel() {
     }
 
     fun onSendMessage(message: String) {
-        if (conversation == null) {
-            _errorMessage.postValue("Error: Conversation does not exist")
-            return
-        }
-
-        conversation?.sendText(message, object : NexmoRequestListener<Void> {
-            override fun onSuccess(p0: Void?) {
-            }
-
-            override fun onError(apiError: NexmoApiError) {
-            }
-        })
+        TODO("Send new message to client SDK")
     }
 
     fun onBackPressed() {
@@ -373,7 +335,7 @@ class ChatViewModel : ViewModel() {
     }
 
     override fun onCleared() {
-        conversation?.removeMessageEventListener(messageListener)
+        TODO("Unregister message listener")
     }
 }
 
@@ -381,7 +343,7 @@ class ChatViewModel : ViewModel() {
 
 ## Add Fragment to navigation graph
 
-Open `app_nav_graph.xml` file and repleace it's content with below code snippet. This sippet will add`ChatFragment` to navigation graph and allow to navigate from `Loginragment` to `ChatFragment`:
+Open `app_nav_graph.xml` file and repleace it's content with below code snippet. This sippet will add `ChatFragment` to navigation graph and allow to navigate from loin screen to chat screen:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -406,3 +368,5 @@ Open `app_nav_graph.xml` file and repleace it's content with below code snippet.
             tools:layout="@layout/fragment_chat" />
 </navigation>
 ```
+
+Now you can fetch the conversation.

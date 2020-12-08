@@ -171,29 +171,43 @@ Repleace file content with below code snippet:
 ```kotlin
 package com.vonage.tutorial.messaging
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.nexmo.client.NexmoClient
 import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
+import com.vonage.tutorial.messaging.extension.toLiveData
+import com.vonage.tutorial.messaging.util.NavManager
 
 class LoginViewModel : ViewModel() {
 
     private val navManager = NavManager
 
     private val _connectionStatus = MutableLiveData<ConnectionStatus>()
-    val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
+    val connectionStatus = _connectionStatus.toLiveData()
+
+    private var user: User? = null
+
+    private val client: NexmoClient = TODO("Retrieve NexmoClient instance")
+
+    init {
+        TODO("Add client connection listener")
+    }
 
     private fun navigate() {
+        val userName = checkNotNull(user?.name) { "user is null" }
         val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
         navManager.navigate(navDirections)
+    }
+
+    fun onLoginUser(user: User) {
+        TODO("Login user")
     }
 }
 ```
 
 ### Get NexmoClient instance
 
-You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Add the `private val client` property in the `LoginViewModel` class:
+You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Repleace the `client` property in the `LoginViewModel` class:
 
 ```kotlin
 private val client = NexmoClient.get()
@@ -201,7 +215,7 @@ private val client = NexmoClient.get()
 
 ### Login user
 
-Your user must be authenticated to be able to participate in the Call. Add the `onLoginUser` method inside `LoginViewModel` class:
+Your user must be authenticated to be able to participate in the Call. Repleace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```kotlin
 class LoginViewModel : ViewModel() {
@@ -223,17 +237,17 @@ When a successful connection is established you need to navigate user to `ChatFr
 
 ```kotlin
 init {
-        client.setConnectionListener { newConnectionStatus, _ ->
+    client.setConnectionListener { newConnectionStatus, _ ->
 
-            if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
-                navManager.navigate(navDirections)
-                
-                return@setConnectionListener
-            }
-
-            connectionStatusMutableLiveData.postValue(newConnectionStatus)
+        if (newConnectionStatus == ConnectionStatus.CONNECTED) {
+            val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
+            navManager.navigate(navDirections)
+            
+            return@setConnectionListener
         }
+
+        connectionStatusMutableLiveData.postValue(newConnectionStatus)
+    }
 }
 ```
 

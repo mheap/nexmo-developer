@@ -5,15 +5,19 @@ description: In this step you create an Android project and add the Android Clie
 
 ## Create an Android Project
 
-* Open Android Studio and, from the menu, select `File` > `New` > `New Project...`.
+Open Android Studio and, from the menu, select `File` > `New` > `New Project...`. Select a `Empty Activity` template type and click `Next`.
 
-* Select a `Empty Activity` template type and click `Next`.
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png
+```
 
-* Type `Project Name` and select `Kotlin` language.
+Enter `chat app` as project name, `com.vonage.tutorial.messaging` as package, select `Kotlin` language and press `Finish`.
 
-* Click `Finish`
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/configure-your-project-kotlin.png
+```
 
-* You now have a brand new Android Project.
+You now have a brand new Android Project.
 
 ### Add permission
 
