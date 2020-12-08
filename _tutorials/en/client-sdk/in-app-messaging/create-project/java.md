@@ -70,7 +70,7 @@ allprojects {
 }
 ```
 
-Now add the Client SDK to the project. Add the following dependency in the app level `build.gradle` file (typically `app/build.gradle`):
+Now add the Client SDK to the project. Add the following dependency in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
@@ -113,7 +113,20 @@ dependencies {
 }
 ```
 
-Finaly you add navigation component dependencies in the app level `build.gradle` file (typically `app/build.gradle`):
+Add safeargs plugin in the module level `build.gradle` file:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
+```
+
+```groovy
+plugins {
+    // ...
+    id 'androidx.navigation.safeargs.kotlin'
+}
+```
+
+Finaly you add navigation component dependencies in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
@@ -133,3 +146,5 @@ Click `Sync project with Gradle Files` icon to make sure build scripts have been
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/sync-project-wth-gradle-files.png
 ```
+
+Your next step is to initialize the Nexmo client.

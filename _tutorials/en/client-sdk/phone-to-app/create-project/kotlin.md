@@ -50,7 +50,7 @@ allprojects {
 }
 ```
 
-Now add the Client SDK to the project. Add the following dependency in the app level `build.gradle` file (typically `app/build.gradle`):
+Now add the Client SDK to the project. Add the following dependency in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
@@ -97,7 +97,7 @@ dependencies {
 }
 ```
 
-Finaly you add navigation component dependencies in the app level `build.gradle` file (typically `app/build.gradle`):
+Finaly you add navigation component dependencies in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png

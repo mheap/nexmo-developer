@@ -299,5 +299,5 @@ image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 
 You should see login screen with two buttons `Login Bob` and `Login Alice`. After clicking one of them user should login in and empty chat screen should open.
 
-You're now ready to rerieve and send messages.
+You're now ready to retrieve and send messages.
 
