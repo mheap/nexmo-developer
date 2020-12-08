@@ -85,7 +85,7 @@ Repleace file content with below code snippet:
 
 ## Create Fragment
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginFragment` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginFragment` as file name and select `Class`.
 
 Repleace file content with below code snippet:
 
@@ -160,7 +160,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
 ## Create ViewModel
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name and select `Class`.
 
 Repleace file content with below code snippet:
 
@@ -198,7 +198,7 @@ class LoginViewModel : ViewModel() {
 You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Repleace the `client` property in the `LoginViewModel` class:
 
 ```kotlin
-    private val client = NexmoClient.get()
+private val client = NexmoClient.get()
 }
 ```
 
@@ -219,7 +219,7 @@ fun onLoginUser(user: User) {
 
 ### Monitor connection state
 
-When a successful connection is established you need to navigate user to `ChatFragment`. Locate the `init` block inside `LoginViewModel` class and replace it with this code:
+When a successful connection is established you need to navigate user to `ChatFragment`. Locate the `init` block inside `LoginViewModel` class and replace it's body:
 
 
 ```kotlin
@@ -246,7 +246,7 @@ The above code will monitor connection state and if the user is authenticated (`
 
 ## Create ChatFragment
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `ChatFragment` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `ChatFragment` as file name and select `Class`.
 
 Repleace file content with below code snippet:
 

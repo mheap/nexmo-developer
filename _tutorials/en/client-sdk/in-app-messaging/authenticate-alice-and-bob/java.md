@@ -85,74 +85,84 @@ Repleace file content with below code snippet:
 
 ## Create Fragment
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginFragment` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Java File`, enter `LoginFragment` as file name and select `Class`.
 
 Repleace file content with below code snippet:
 
-```kotlin
-package com.vonage.tutorial.messaging
+```java
+package com.vonage.tutorial.messaging;
 
-import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
-import kotlin.properties.Delegates
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus;
 
-class LoginFragment : Fragment(R.layout.fragment_login) {
+public class LoginFragment extends Fragment {
 
-    private val viewModel by viewModels<LoginViewModel>()
+    private Button loginAsAliceButton;
+    private Button loginAsBobButton;
+    private ProgressBar progressBar;
+    private TextView connectionStatusTextView;
 
-    private lateinit var loginAsAliceButton: Button
-    private lateinit var loginAsBobButton: Button
-    private lateinit var progressBar: ProgressBar
-    private lateinit var connectionStatusTextView: TextView
+    private LoginViewModel viewModel;
 
-    private var dataLoading: Boolean by Delegates.observable(false) { _, _, newValue ->
-        loginAsAliceButton.isEnabled = !newValue
-        loginAsBobButton.isEnabled = !newValue
-        progressBar.isVisible = newValue
+    public LoginFragment() {
+        super(R.layout.fragment_login);
     }
 
-    private val stateObserver = Observer<ConnectionStatus> {
-        connectionStatusTextView.text = it.toString()
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        if (it == ConnectionStatus.DISCONNECTED) {
-            dataLoading = false
-        }
+        viewModel = new ViewModelProvider(requireActivity()).get(LoginViewModel.class);
+
+        viewModel._connectionStatusLiveData.observe(getViewLifecycleOwner(), connectionStatus -> {
+            connectionStatusTextView.setText(connectionStatus.toString());
+
+            if (connectionStatus == ConnectionStatus.DISCONNECTED) {
+                setDataLoading(false);
+            }
+        });
+
+        loginAsAliceButton = view.findViewById(R.id.loginAsAliceButton);
+        loginAsBobButton = view.findViewById(R.id.loginAsBobButton);
+        progressBar = view.findViewById(R.id.progressBar);
+        connectionStatusTextView = view.findViewById(R.id.connectionStatusTextView);
+
+
+        loginAsAliceButton.setOnClickListener(it -> loginUser(Config.getAlice()));
+
+        loginAsBobButton.setOnClickListener(it -> loginUser(Config.getBob()));
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private void setDataLoading(Boolean dataLoading) {
+        loginAsAliceButton.setEnabled(!dataLoading);
+        loginAsBobButton.setEnabled(!dataLoading);
 
-        viewModel.connectionStatus.observe(viewLifecycleOwner, stateObserver)
+        int visibility;
 
-        loginAsAliceButton = view.findViewById(R.id.loginAsAliceButton)
-        loginAsBobButton = view.findViewById(R.id.loginAsBobButton)
-        progressBar = view.findViewById(R.id.progressBar)
-        connectionStatusTextView = view.findViewById(R.id.connectionStatusTextView)
-
-        loginAsAliceButton.setOnClickListener {
-            loginUser(Config.alice)
-        }
-
-        loginAsBobButton.setOnClickListener {
-            loginUser(Config.bob)
-        }
-    }
-
-    private fun loginUser(user: User) {
-        if (user.jwt.isBlank()) {
-            Toast.makeText(context, "Error: Please set Config.${user.name.toLowerCase()}.jwt", Toast.LENGTH_SHORT)
+        if (dataLoading) {
+            visibility = View.VISIBLE;
         } else {
-            viewModel.onLoginUser(user)
-            dataLoading = true
+            visibility = View.GONE;
+        }
+
+        progressBar.setVisibility(visibility);
+    }
+
+    private void loginUser(User user) {
+        if (user.jwt.trim().isEmpty()) {
+            Toast.makeText(getActivity(), "Error: Please set Config." + user.name + " jwt", Toast.LENGTH_SHORT).show();
+        } else {
+            viewModel.onLoginUser(user);
+            setDataLoading(true);
         }
     }
 }
@@ -160,35 +170,41 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
 ## Create ViewModel
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Java Class`, enter `LoginViewModel` as file name and select `Class`.
 
 Repleace file content with below code snippet:
 
-```kotlin
-package com.vonage.tutorial.messaging
+```java
+package com.vonage.tutorial.messaging;
 
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.nexmo.client.NexmoClient
-import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
+import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+import androidx.navigation.NavDirections;
+import com.nexmo.client.NexmoClient;
+import com.nexmo.client.request_listener.NexmoConnectionListener;
+import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus;
 
-class LoginViewModel : ViewModel() {
+public class LoginViewModel extends ViewModel {
 
-    private val navManager = NavManager
+    private NexmoClient client = null
 
-    private val _connectionStatus = MutableLiveData<ConnectionStatus>()
-    val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
+    NavManager navManager = NavManager.getInstance();
+    private MutableLiveData<ConnectionStatus> connectionStatusMutableLiveData = new MutableLiveData<ConnectionStatus>();
+    public LiveData<ConnectionStatus> _connectionStatusLiveData = connectionStatusMutableLiveData;
 
-    private var user: User? = null
-
-    private val client: NexmoClient = TODO("Retrieve NexmoClient instance")
-
-    init {
-        TODO("Add client connection listener")
+    public LoginViewModel() {
+        // TODO: Add client connection listener
     }
 
-    fun onLoginUser(user: User) {
-        TODO("Login user")
+    private void navigate() {
+        NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment();
+        navManager.navigate(navDirections);
+    }
+
+    void onLoginUser(User user) {
+        // TODO: Login user
     }
 }
 ```
@@ -197,8 +213,8 @@ class LoginViewModel : ViewModel() {
 
 You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Repleace the `client` property in the `LoginViewModel` class:
 
-```kotlin
-    private val client = NexmoClient.get()
+```java
+NexmoClient.get();
 }
 ```
 
@@ -206,7 +222,7 @@ You have to retrieve client instance inside `LoginViewModel` class. Usually, it 
 
 Your user must be authenticated to be able to participate in the Call. Repleace the `onLoginUser` method inside `LoginViewModel` class:
 
-```kotlin
+```java
 fun onLoginUser(user: User) {
     if (user.jwt.isNotBlank()) {
         this.user = user
@@ -219,23 +235,27 @@ fun onLoginUser(user: User) {
 
 ### Monitor connection state
 
-When a successful connection is established you need to navigate user to `ChatFragment`. Locate the `init` block inside `LoginViewModel` class and replace it with this code:
+When a successful connection is established you need to navigate user to `ChatFragment`. Locate the ``LoginViewModel` constructor and replace its body:
 
 
-```kotlin
-class LoginViewModel : ViewModel() {
-    init {
-        client.setConnectionListener { newConnectionStatus, _ ->
+```java
+public class LoginViewModel extends ViewModel {
 
-            if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
-                navManager.navigate(navDirections)
-                
-                return@setConnectionListener
+    // ...
+
+    public LoginViewModel() {
+        client.setConnectionListener(new NexmoConnectionListener() {
+            @Override
+            public void onConnectionStatusChange(@NonNull ConnectionStatus connectionStatus, @NonNull ConnectionStatusReason connectionStatusReason) {
+                if (connectionStatus == ConnectionStatus.CONNECTED) {
+                    NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment();
+        navManager.navigate(navDirections);
+                    return;
+                }
+
+                connectionStatusMutableLiveData.postValue(connectionStatus);
             }
-
-            _connectionStatus.postValue(newConnectionStatus)
-        }
+        });
     }
 
     // ...
@@ -246,16 +266,16 @@ The above code will monitor connection state and if the user is authenticated (`
 
 ## Create ChatFragment
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `ChatFragment` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Java Class`, enter `ChatFragment` as file name and select `Class`.
 
 Repleace file content with below code snippet:
 
-```kotlin
-package com.vonage.tutorial.messaging
+```java
+package com.vonage.tutorial.messaging;
 
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.Fragment;
 
-class ChatFragment: Fragment() {
+public class ChatFragment extends Fragment {
     
 }
 ```
