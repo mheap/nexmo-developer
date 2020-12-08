@@ -9,7 +9,7 @@ Chat screen (`ChatFragment` and `ChatViewModel` classes) is responsible for fetc
 
 ## Create layout
 
-Rght click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_chat` as file name and press `OK`.
+Right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_chat` as file name and press `OK`.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/new-layout-resource-file.png
@@ -257,7 +257,7 @@ class ChatFragment : Fragment(R.layout.fragment_chat), BackPressHandler {
 
 ## Create ViewModel
 
-Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name, select `Class` and press `OK`.
 
 Repleace file content with below code snippet:
 

@@ -13,7 +13,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/login-screen-users
 
 ## Create layout
 
-Rght click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_login` as file name and press `OK`.
+Right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_login` as file name and press `OK`.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/new-android-resource-file.png
@@ -85,7 +85,7 @@ Repleace file content with below code snippet:
 
 ## Create Fragment
 
-Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginFragment` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginFragment` as file name, select `Class` and press `OK`.
 
 Repleace file content with below code snippet:
 
@@ -160,7 +160,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
 ## Create ViewModel
 
-Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name, select `Class` and press `OK`.
 
 Repleace file content with below code snippet:
 
@@ -246,7 +246,7 @@ The above code will monitor connection state and if the user is authenticated (`
 
 ## Create ChatFragment
 
-Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `ChatFragment` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `ChatFragment` as file name, select `Class` and press `OK`.
 
 Repleace file content with below code snippet:
 

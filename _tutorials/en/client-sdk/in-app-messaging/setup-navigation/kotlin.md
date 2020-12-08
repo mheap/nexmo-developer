@@ -63,7 +63,7 @@ Define two helpers - `BackPressHandler` and `NavManager` to simplify the nagatio
 
 ### Create BackPressHandler interface
 
-`BackPressHandler` interface will help with handling pressing of the back button. Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `BackPressHandler` as file name, select `Interface` and press `OK`. Add `onBackPressed` method to the `BackPressHandler` interface:
+`BackPressHandler` interface will help with handling pressing of the back button. Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `BackPressHandler` as file name, select `Interface`. Add `onBackPressed` method to the `BackPressHandler` interface:
 
 ```kotlin
 package com.vonage.tutorial.messaging
@@ -79,7 +79,7 @@ interface BackPressHandler {
 
 `NavManager` object will allow to navigate directly from ViewModels by storing reference to navigation controller.
 
-Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `NavManager` as file name, select `Object` and press `OK`. Repleace file content with below code snippet:
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `NavManager` as file name, select `Object`. Repleace file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging

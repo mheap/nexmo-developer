@@ -33,13 +33,14 @@ tasks:
   - client-sdk/android-shared/generate-jwt-alice-and-bob
   - client-sdk/in-app-messaging/create-project
   - client-sdk/android-shared/initialize-client
+  - client-sdk/in-app-messaging/setup-navigation
   - client-sdk/in-app-messaging/configure-jwts-and-conversation-id
   - client-sdk/in-app-messaging/authenticate-alice-and-bob
+  - client-sdk/in-app-messaging/build-chat-screen
   - client-sdk/in-app-messaging/fetch-conversation
   - client-sdk/in-app-messaging/fetch-events
   - client-sdk/in-app-messaging/send-message
   - client-sdk/in-app-messaging/receive-new-messages
-  - client-sdk/android-shared/run-app
 
 conclusion:
   title: What's next?
