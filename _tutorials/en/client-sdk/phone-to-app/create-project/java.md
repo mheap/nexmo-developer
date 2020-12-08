@@ -111,7 +111,7 @@ dependencies {
 }
 ```
 
-Click `Sync project with Gradle Files` icon to make sure uild scripts have been correctly configured:
+Click `Sync project with Gradle Files` icon to make sure build scripts have been correctly configured:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/sync-project-wth-gradle-files.png
