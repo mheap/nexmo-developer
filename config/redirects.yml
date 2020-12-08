@@ -165,6 +165,8 @@
 "/voice/voice-api/guides/inbound-calls": "/voice/voice-api/code-snippets/connect-an-inbound-call"
 "/voice/voice-api/guides/voice-app-components": "/voice/voice-api/guides/legs-conversations"
 "/voice/voice-api/guides/ssml": "/voice/voice-api/guides/customizing-tts"
+"/voice/voice-api/tutorials/build-voicemail-dotnet": "/voice/voice-api/tutorials/voicemail-dotnet"
+"/voice/voice-api/tutorials/play-audio-into-call-dotnet": "/voice/voice-api/tutorials/play-audio-dotnet"
 "/use-cases/voice-call-websocket-python": "/voice/voice-api/tutorials/call-a-websocket/introduction/python"
 "/use-cases/voice-call-websocket-node": "/voice/voice-api/tutorials/call-a-websocket/introduction/node"
 "/vonage-business-cloud/vbc-apis/account-api/api-reference": "/api/vonage-business-cloud/account"
