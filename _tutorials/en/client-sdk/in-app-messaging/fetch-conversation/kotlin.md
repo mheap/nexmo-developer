@@ -15,6 +15,7 @@ private fun getConversation() {
             this@ChatViewModel.conversation = conversation
 
             conversation?.let {
+                it.addMessageEventListener(messageListener)
                 getConversationEvents(it)
             }
         }

@@ -5,17 +5,25 @@ description: In this step you authenticate your users via the JWTs you created e
 
 # Authenticate Users
 
-Your users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
+You perform this authentication using the `JWTs` generated in previous steps. Users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/login-screen-users.png
 ```
 
-> **NOTE:** You perform this authentication using the `JWTs` generated in previous steps.
-
 ## Create layout
 
 Rght click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_login` as file name and press `OK`.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/new-android-resource-file.png
+```
+
+Click `Code` button in top right corner to display layout XML code:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
+```
 
 Repleace file content with below code snippet:
 
@@ -28,18 +36,6 @@ Repleace file content with below code snippet:
         android:layout_height="match_parent"
         android:padding="10dp">
 
-    <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/vonageLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/vonage_logo"
-            android:tint="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.1" />
-
     <Button
             android:id="@+id/loginAsAliceButton"
             android:layout_width="wrap_content"
@@ -48,7 +44,7 @@ Repleace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vonageLogo"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.2" />
 
     <Button
@@ -175,15 +171,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.nexmo.client.NexmoClient
 import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
-import com.vonage.tutorial.messaging.extension.toLiveData
-import com.vonage.tutorial.messaging.util.NavManager
 
 class LoginViewModel : ViewModel() {
 
     private val navManager = NavManager
 
     private val _connectionStatus = MutableLiveData<ConnectionStatus>()
-    val connectionStatus = _connectionStatus.toLiveData()
+    val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
 
     private var user: User? = null
 
@@ -191,12 +185,6 @@ class LoginViewModel : ViewModel() {
 
     init {
         TODO("Add client connection listener")
-    }
-
-    private fun navigate() {
-        val userName = checkNotNull(user?.name) { "user is null" }
-        val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
-        navManager.navigate(navDirections)
     }
 
     fun onLoginUser(user: User) {
@@ -210,7 +198,8 @@ class LoginViewModel : ViewModel() {
 You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Repleace the `client` property in the `LoginViewModel` class:
 
 ```kotlin
-private val client = NexmoClient.get()
+    private val client = NexmoClient.get()
+}
 ```
 
 ### Login user
@@ -218,12 +207,10 @@ private val client = NexmoClient.get()
 Your user must be authenticated to be able to participate in the Call. Repleace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```kotlin
-class LoginViewModel : ViewModel() {
-    fun onLoginUser(user: User) {
-        if (user.jwt.isNotBlank()) {
-            this.user = user
-            client.login(user.jwt)
-        }
+fun onLoginUser(user: User) {
+    if (user.jwt.isNotBlank()) {
+        this.user = user
+        client.login(user.jwt)
     }
 }
 ```
@@ -236,27 +223,48 @@ When a successful connection is established you need to navigate user to `ChatFr
 
 
 ```kotlin
-init {
-    client.setConnectionListener { newConnectionStatus, _ ->
+class LoginViewModel : ViewModel() {
+    init {
+        client.setConnectionListener { newConnectionStatus, _ ->
 
-        if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-            val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
-            navManager.navigate(navDirections)
-            
-            return@setConnectionListener
+            if (newConnectionStatus == ConnectionStatus.CONNECTED) {
+                val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
+                navManager.navigate(navDirections)
+                
+                return@setConnectionListener
+            }
+
+            _connectionStatus.postValue(newConnectionStatus)
         }
-
-        connectionStatusMutableLiveData.postValue(newConnectionStatus)
     }
+
+    // ...
 }
 ```
 
 The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connestion status to the UI (`LoginFragmnt`).
 
+## Create ChatFragment
+
+Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `ChatFragment` as file name, select `Class` and press `OK`.
+
+Repleace file content with below code snippet:
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+import androidx.fragment.app.Fragment
+
+class ChatFragment: Fragment() {
+    
+}
+```
+
+For now this fragmnt is just a placeholder for navigation. You will add functionality to it in following steps.
 
 ## Add Fragment to navigation graph
 
-Open `app_nav_graph.xml` file and repleace it's content with below code snippet to set `LoginFragment` as start fragment in the application:
+Open `app_nav_graph.xml` file and repleace it's content with below code snippet to define navigation graph for the application. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -268,13 +276,29 @@ Open `app_nav_graph.xml` file and repleace it's content with below code snippet 
     <fragment
             android:id="@+id/loginFragment"
             android:name="com.vonage.tutorial.messaging.LoginFragment"
-            android:label="LoginFragment"
-            tools:layout="@layout/fragment_login">
+            android:label="LoginFragment">
+        <action
+                android:id="@+id/action_loginFragment_to_chatFragment"
+                app:destination="@id/chatFragment" />
     </fragment>
+    <fragment
+            android:id="@+id/chatFragment"
+            android:name="com.vonage.tutorial.messaging.ChatFragment"
+            android:label="ChatFragment"/>
 </navigation>
 ```
 
-Run the application.
+Navigation graph defines navigation directions between fragmensts in the application. Notice that now `LoginFragment` is now start fragment in the application
+
+# Run the app
+
+You can either launch the app on the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When device is present press `Run` button: 
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
+```
+
+You should see login screen with two buttons `Login Bob` and `Login Alice`. After clicking one of them user should login in and empty chat screen should open.
 
 You're now ready to rerieve and send messages.
 

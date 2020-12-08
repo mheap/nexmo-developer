@@ -28,4 +28,4 @@ fun onSendMessage(message: String) {
 
 > **NOTE:** Inside `ChatFragment` class, contains `sendMessageButton listener` that was written for you. This method is called when user click `send` button. If message text exists above `viewModel.onSendMessage()` method is called.
 
-You'll notice that, although the message was sent, the conversation doesn't include it. It is possible to call the `getConversationEvents()` method after the message is sent, but the SDK provides a better way to handle this scenario.
+You'll notice that, although the message was sent, the conversation doesn't include it. It is possible to call the `getConversationEvents()` method after the message is sent, but the SDK provides a better way to handle this scenario. Let's do that in the next step.

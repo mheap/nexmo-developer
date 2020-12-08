@@ -31,7 +31,7 @@ Once the events are retrieved (or an error is returned), we're updating the view
 Let's make our view react to the new data. Inside `ChatFragment` locate the `private var conversationMessages = Observer<List<NexmoEvent>?>` property and add this code to handle our conversation history:
 
 ```java
-private var conversationMessages = Observer<List<NexmoEvent>?> { events ->
+private var conversationEvents = Observer<List<NexmoEvent>?> { events ->
     val messages = events?.mapNotNull {
         when (it) {
             is NexmoMemberEvent -> getConversationLine(it)
@@ -51,7 +51,7 @@ private var conversationMessages = Observer<List<NexmoEvent>?> { events ->
 }
 ```
 
-To handle member related events (member invited, joined or left) we need to fill the body of the `fun getConversationLine(memberEvent: NexmoMemberEvent)` method:
+To handle member related events (member invited, joined or left) you need to fill the body of the `fun getConversationLine(memberEvent: NexmoMemberEvent)` method:
 
 ```java
 private fun getConversationLine(memberEvent: NexmoMemberEvent): String {

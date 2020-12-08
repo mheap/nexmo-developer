@@ -5,11 +5,21 @@ description: In this step you build chat screen.
 
 # Converstion
 
-Chat screen (`ChatFragment` and `ChatViewModel` classes) is responsible for fetching the conversation and all the conversation events.
+Chat screen (`ChatFragment` and `ChatViewModel` classes) is responsible for fetching the conversation and all the conversation events and sending messages.
 
 ## Create layout
 
 Rght click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_chat` as file name and press `OK`.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/new-layout-resource-file.png
+```
+
+Click `Code` button in top right corner to display layout XML code:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
+```
 
 Repleace file content with below code snippet:
 
@@ -97,10 +107,10 @@ Repleace file content with below code snippet:
                 android:id="@+id/messageEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/message"
+                android:hint="Message"
                 android:inputType="text"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white_alpha_60"
+                android:textColor="@color/black"
+                android:textColorHint="#AAAAAA"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/userNameTextView"
                 app:layout_constraintRight_toLeftOf="@id/sendMessageButton"
@@ -111,7 +121,7 @@ Repleace file content with below code snippet:
                 android:id="@+id/sendMessageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:text="@string/send"
+                android:text="Send"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/messageEditText"
                 app:layout_constraintRight_toRightOf="parent"
@@ -122,11 +132,9 @@ Repleace file content with below code snippet:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-## Create Fragment
+## Update ChatFragment
 
-Rght click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginFragment` as file name, select `Class` and press `OK`.
-
-Repleace file content with below code snippet:
+Open `ChatFragment` and repleace file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging
@@ -170,28 +178,12 @@ class ChatFragment : Fragment(R.layout.fragment_chat), BackPressHandler {
     }
 
     private var userNameObserver = Observer<String> {
-        userNameTextView.text = resources.getString(R.string.user_says, it)
-        logoutButton.text = resources.getString(R.string.logout, it)
+        userNameTextView.text = "$it says:"
+        logoutButton.text ="Logout $it"
     }
 
     private var conversationEvents = Observer<List<NexmoEvent>?> {
-        val events = it?.mapNotNull { event ->
-            when (event) {
-                is NexmoMemberEvent -> getConversationLine(event)
-                is NexmoTextEvent -> getConversationLine(event)
-                else -> null
-            }
-        }
-
-        // Production application should utilise RecyclerView to provide better UX
-        conversationEventsTextView.text = if (events.isNullOrEmpty()) {
-            "Conversation has no events"
-        } else {
-            events.joinToString(separator = "\n")
-        }
-
-        progressBar.isVisible = false
-        chatContainer.isVisible = true
+        TODO("Process incomming events")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -210,12 +202,22 @@ class ChatFragment : Fragment(R.layout.fragment_chat), BackPressHandler {
         viewModel.conversationEvents.observe(viewLifecycleOwner, conversationEvents)
         viewModel.userName.observe(viewLifecycleOwner, userNameObserver)
 
+        progressBar = view.findViewById(R.id.progressBar)
+        errorTextView = view.findViewById(R.id.errorTextView)
+        chatContainer = view.findViewById(R.id.chatContainer)
+        logoutButton = view.findViewById(R.id.logoutButton)
+        sendMessageButton = view.findViewById(R.id.sendMessageButton)
+        userNameTextView = view.findViewById(R.id.userNameTextView)
+        messageEditText = view.findViewById(R.id.messageEditText)
+        conversationEventsTextView = view.findViewById(R.id.conversationEventsTextView)
+
         sendMessageButton.setOnClickListener {
             val message = messageEditText.text.toString()
 
             if (message.isNotBlank()) {
                 viewModel.onSendMessage(messageEditText.text.toString())
                 messageEditText.setText("")
+                hideKeyboard()
             } else {
                 Toast.makeText(context, "Message is blank", Toast.LENGTH_SHORT).show()
             }
@@ -228,23 +230,27 @@ class ChatFragment : Fragment(R.layout.fragment_chat), BackPressHandler {
     }
 
     private fun getConversationLine(textEvent: NexmoTextEvent): String {
-        val user = textEvent.fromMember.user.name
-        return "$user said: ${textEvent.text}"
+        TODO("Convert event to line string")
     }
 
     private fun getConversationLine(memberEvent: NexmoMemberEvent): String {
-        val user = memberEvent.member.user.name
-
-        return when (memberEvent.state) {
-            NexmoMemberState.JOINED -> "$user joined"
-            NexmoMemberState.INVITED -> "$user invited"
-            NexmoMemberState.LEFT -> "$user left"
-            else -> "Error: Unknown member event state"
-        }
+        TODO("Convert event to line string")
     }
 
     override fun onBackPressed() {
         viewModel.onBackPressed()
+    }
+
+    private fun hideKeyboard() {
+        val context = context ?: return
+
+        val inputMethodManager = ContextCompat.getSystemService(context, InputMethodManager::class.java)
+        var view = activity?.currentFocus
+        if (view == null) {
+            view = View(activity)
+        }
+
+        inputMethodManager?.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
 ```
@@ -258,6 +264,7 @@ Repleace file content with below code snippet:
 ```kotlin
 package com.vonage.tutorial.messaging
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.nexmo.client.NexmoAttachmentEvent
@@ -270,7 +277,6 @@ import com.nexmo.client.NexmoMessageEventListener
 import com.nexmo.client.NexmoSeenEvent
 import com.nexmo.client.NexmoTextEvent
 import com.nexmo.client.NexmoTypingEvent
-import com.vonage.tutorial.messaging.extension.toLiveData
 
 class ChatViewModel : ViewModel() {
 
@@ -279,13 +285,13 @@ class ChatViewModel : ViewModel() {
     private var conversation: NexmoConversation? = null
 
     private val _errorMessage = MutableLiveData<String>()
-    val errorMessage = _errorMessage.toLiveData()
+    val errorMessage = _errorMessage as LiveData<String>
 
     private val _userName = MutableLiveData<String>()
-    val userName = _userName.toLiveData()
+    val userName = _userName as LiveData<String>
 
     private val _conversationEvents = MutableLiveData<List<NexmoEvent>?>()
-    val conversationEvents = _conversationEvents.toLiveData()
+    val conversationEvents = _conversationEvents as LiveData<List<NexmoEvent>?>
 
     private val messageListener = object : NexmoMessageEventListener {
         override fun onTypingEvent(typingEvent: NexmoTypingEvent) {}
@@ -338,35 +344,6 @@ class ChatViewModel : ViewModel() {
         TODO("Unregister message listener")
     }
 }
-
-```
-
-## Add Fragment to navigation graph
-
-Open `app_nav_graph.xml` file and repleace it's content with below code snippet. This sippet will add `ChatFragment` to navigation graph and allow to navigate from loin screen to chat screen:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/app_navigation_graph"
-        app:startDestination="@id/loginFragment">
-    <fragment
-            android:id="@+id/loginFragment"
-            android:name="com.vonage.tutorial.messaging.LoginFragment"
-            android:label="LoginFragment"
-            tools:layout="@layout/fragment_login">
-        <action
-                android:id="@+id/action_loginFragment_to_chatFragment"
-                app:destination="@id/chatFragment" />
-    </fragment>
-    <fragment
-            android:id="@+id/chatFragment"
-            android:name="com.vonage.tutorial.messaging.ChatFragment"
-            android:label="ChatFragment"
-            tools:layout="@layout/fragment_chat" />
-</navigation>
 ```
 
 Now you can fetch the conversation.
