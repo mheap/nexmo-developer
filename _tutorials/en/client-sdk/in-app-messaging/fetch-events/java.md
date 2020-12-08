@@ -5,7 +5,7 @@ description: In this step you display any messages already sent as part of this 
 
 # Fetch conversation events
 
-Right below  `getConversation()` method, let's add a method to retrieve the events:
+Inside `ChatViewModel` class, locate the `getConversationEvents()` method and ptade its implementation:
 
 ```java
 private void getConversationEvents(NexmoConversation conversation) {

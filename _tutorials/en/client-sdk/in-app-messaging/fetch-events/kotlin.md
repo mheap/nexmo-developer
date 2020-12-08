@@ -5,7 +5,7 @@ description: In this step you display any messages already sent as part of this 
 
 # Fetch conversation events
 
-Inside `ChatViewModel` class, locate the following line and fill in the `getConversationEvents()` method implementation:
+Inside `ChatViewModel` class, locate the `getConversationEvents()` method and ptade its implementation:
 
 ```kotlin
 private fun getConversationEvents(conversation: NexmoConversation) {

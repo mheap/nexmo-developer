@@ -257,7 +257,7 @@ class ChatFragment : Fragment(R.layout.fragment_chat), BackPressHandler {
 
 ## Create ViewModel
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name, select `Class` and press `OK`.
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name and select `Class`.
 
 Repleace file content with below code snippet:
 
@@ -299,7 +299,7 @@ class ChatViewModel : ViewModel() {
         override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {}
 
         override fun onTextEvent(textEvent: NexmoTextEvent) {
-            // TODO: Update the conversation
+            TODO("Update the conversation")
         }
 
         override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {}
@@ -315,11 +315,11 @@ class ChatViewModel : ViewModel() {
     }
 
     private fun getConversation() {
-        TODO("Fetch the conversation")
+        TODO("Get the conversation")
     }
 
     private fun getConversationEvents(conversation: NexmoConversation) {
-        TODO("Fetch the conversation events")
+        TODO("Get the conversation events")
     }
 
     private fun updateConversation(textEvent: NexmoEvent) {

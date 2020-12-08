@@ -215,12 +215,11 @@ You have to retrieve client instance inside `LoginViewModel` class. Usually, it 
 
 ```java
 NexmoClient.get();
-}
 ```
 
 ### Login user
 
-Your user must be authenticated to be able to participate in the Call. Repleace the `onLoginUser` method inside `LoginViewModel` class:
+Your user must be authenticated to be able to participate in the Conversation. Repleace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```java
 fun onLoginUser(user: User) {

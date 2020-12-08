@@ -199,12 +199,11 @@ You have to retrieve client instance inside `LoginViewModel` class. Usually, it 
 
 ```kotlin
 private val client = NexmoClient.get()
-}
 ```
 
 ### Login user
 
-Your user must be authenticated to be able to participate in the Call. Repleace the `onLoginUser` method inside `LoginViewModel` class:
+Your user must be authenticated to be able to participate in the Conversation. Repleace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```kotlin
 fun onLoginUser(user: User) {
