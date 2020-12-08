@@ -3,7 +3,17 @@ title: Create an Android project
 description: In this step you create an Android project and add the Android Client SDK library.
 ---
 
-## Create an Android Project
+# Create an Android project
+
+## Project overview
+
+You will be building nd Android application with single screen:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-phone-to-app/nav-graph.png
+```
+
+## New Android Project
 
 Open Android Studio and, from the menu, select `File` > `New` > `New Project...`. Select a `Empty Activity` template type and click `Next`.
 

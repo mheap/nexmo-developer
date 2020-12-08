@@ -16,7 +16,7 @@ You will be building nd Android application with the following screens:
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/nav-graph.png
 ```
 
-## Create an Android Project
+## New Android Project
 
 Open Android Studio and, from the menu, select `File` > `New` > `New Project...`. Select a `Empty Activity` template type and click `Next`.
 
