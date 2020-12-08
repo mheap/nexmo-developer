@@ -30,7 +30,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/make-project.png
 image: public/screenshots/tutorials/client-sdk/android-app-to-phone/nav-graph.png
 ```
 
-The application consists of three screens:
+The application consists of few screens:
 
 - **login** - responsible for logging the user
 - **main** - allows to start a call
