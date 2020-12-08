@@ -11,31 +11,13 @@ Open Android Studio and, from the menu, select `File` > `New` > `New Project...`
 image: public/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png
 ```
 
-Enter `chat app` as project name, `com.vonage.tutorial.messaging` as package, select `Kotlin` language and press `Finish` button.
+Enter `phone-to-app` as project name, `com.vonage.tutorial.voice` as package, select `Kotlin` language and press `Finish` button.
 
 ```screenshot
-image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/configure-your-project-kotlin.png
+image: public/screenshots/tutorials/client-sdk/android-phone-to-app/configure-your-project-kotlin.png
 ```
 
 You now have a brand new Android Project.
-
-### Add permission
-
-Add `INTERNET` perission into `AndroidManifest.xml` file:
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png
-```
-
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.vonage.tutorial">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    ...
-```
 
 ### Add Nexmo dependency
 
@@ -88,7 +70,7 @@ android {
 
 To navigate between screens you will use [Navigation component](https://developer.android.com/guide/navigation).
 
-To add navigation component dependency define a variable `ext.android_navigation_version` containing version in top level `build.gradle` file:
+To add navigation component dependency define a variable `ext.android_navigation_version'` containing version in top level `build.gradle` file:
 
 ```groovy
 buildscript {

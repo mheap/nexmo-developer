@@ -29,7 +29,7 @@ tasks:
 - link-nexmo-number
 - client-sdk/android-shared/create-user-alice
 - client-sdk/android-shared/generate-jwt-alice
-- client-sdk/android-shared/create-new-project
+- client-sdk/phone-to-app/create-project
 - client-sdk/phone-to-app/permissions
 - client-sdk/phone-to-app/interface
 - client-sdk/phone-to-app/client

@@ -11,31 +11,13 @@ Open Android Studio and, from the menu, select `File` > `New` > `New Project...`
 image: public/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png
 ```
 
-Enter `chat app` as project name, `com.vonage.tutorial.messaging` as package, select `Kotlin` language and press `Finish` button.
+Enter `phone-to-app` as project name, `com.vonage.tutorial.voice` as package, select `Java` language and press `Finish` button.
 
 ```screenshot
-image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/configure-your-project-kotlin.png
+image: public/screenshots/tutorials/client-sdk/android-phone-to-app/configure-your-project-java.png
 ```
 
 You now have a brand new Android Project.
-
-### Add permission
-
-Add `INTERNET` perission into `AndroidManifest.xml` file:
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png
-```
-
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.vonage.tutorial">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    ...
-```
 
 ### Add Nexmo dependency
 
@@ -72,10 +54,6 @@ Set Java 1.8 in the app level `build.gradle` file (typically `app/build.gradle`)
 android {
     // ...
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
-    }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -92,7 +70,6 @@ To add navigation component dependency define a variable `ext.android_navigation
 
 ```groovy
 buildscript {
-    ext.kotlin_version = '1.4.20'
     ext.android_navigation_version = '2.3.2'
 
     // ...
@@ -105,7 +82,6 @@ Add new classpath in the `dependencies` block:
 ```groovy
 dependencies {
     classpath "com.android.tools.build:gradle:4.1.1"
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$android_navigation_version"
 }
 ```
@@ -116,7 +92,7 @@ Finaly you add navigation component dependencies in the app level `build.gradle`
 dependencies {
     // ...
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$android_navigation_version"
+    implementation "androidx.navigation:navigation-fragment:$android_navigation_version"
     implementation "androidx.navigation:navigation-ui-ktx:$android_navigation_version"
 }
 ```
