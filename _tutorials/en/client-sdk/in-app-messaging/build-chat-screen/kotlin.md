@@ -7,7 +7,7 @@ description: In this step you build chat screen.
 
 Chat screen (`ChatFragment` and `ChatViewModel` classes) is responsible for fetching the conversation and all the conversation events and sending messages.
 
-## Update layout
+## Update chat layout
 
 Open `fragment_chat.xml` layout and click `Code` button in top right corner to display layout XML code:
 
@@ -271,7 +271,7 @@ class ChatFragment : Fragment(R.layout.fragment_chat), BackPressHandler {
     }
 
     private var conversationEvents = Observer<List<NexmoEvent>?> {
-        TODO("Process incomming events")
+        TODO("Process incoming events")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
