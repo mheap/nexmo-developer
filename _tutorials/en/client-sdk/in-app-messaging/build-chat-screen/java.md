@@ -269,7 +269,7 @@ public class ChatFragment extends Fragment implements BackPressHandler {
 
 ```
 
-## Update ViewModel
+## Update ChatViewModel
 
 Open `ChatViewModel` and repleace file content with below code snippet:
 
@@ -377,5 +377,3 @@ public class ChatViewModel extends ViewModel {
     }
 }
 ```
-
-Now you can fetch the conversation.

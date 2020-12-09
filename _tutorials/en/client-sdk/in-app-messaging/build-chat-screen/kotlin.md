@@ -254,7 +254,7 @@ class ChatFragment : Fragment(R.layout.fragment_chat), BackPressHandler {
 }
 ```
 
-## Update ViewModel
+## Update ChatViewModel
 
 Open `ChatViewModel` and repleace file content with below code snippet:
 
@@ -342,5 +342,3 @@ class ChatViewModel : ViewModel() {
     }
 }
 ```
-
-Now you can fetch the conversation.

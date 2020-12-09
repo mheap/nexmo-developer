@@ -7,9 +7,13 @@ description: In this step you authenticate your users via the JWTs you created e
 
 You perform this authentication using the `JWTs` generated in previous steps. Users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
 
-## Update layout
+## Update login layout
 
-Open `fragment_login.xml` file and click `Code` button in top right corner to display layout XML code:
+Open `fragment_login.xml` file.
+
+> **NOTE** You can open any file by using `Go to file...` action. Press `Shift + Cmd + O` and enter file name.
+
+Click `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
@@ -166,13 +170,10 @@ Repleace file content with below code snippet:
 ```java
 package com.vonage.tutorial.messaging;
 
-import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-import androidx.navigation.NavDirections;
 import com.nexmo.client.NexmoClient;
-import com.nexmo.client.request_listener.NexmoConnectionListener;
 import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus;
 
 public class LoginViewModel extends ViewModel {
@@ -191,6 +192,7 @@ public class LoginViewModel extends ViewModel {
         // TODO: Login user
     }
 }
+
 ```
 
 ### Get NexmoClient instance
@@ -246,36 +248,6 @@ public class LoginViewModel extends ViewModel {
 
 The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connestion status to the UI (`LoginFragmnt`).
 
-## Add Fragment to navigation graph
-
-Open `app_nav_graph.xml` file and repleace it's content with below code snippet to define navigation graph for the application. 
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/app_navigation_graph"
-        app:startDestination="@id/loginFragment">
-    <fragment
-            android:id="@+id/loginFragment"
-            android:name="com.vonage.tutorial.messaging.LoginFragment"
-            android:label="LoginFragment"
-            tools:layout="@layout/fragment_login">
-        <action
-                android:id="@+id/action_loginFragment_to_chatFragment"
-                app:destination="@id/chatFragment" />
-    </fragment>
-    <fragment
-            android:id="@+id/chatFragment"
-            android:name="com.vonage.tutorial.messaging.ChatFragment"
-            android:label="ChatFragment"
-            tools:layout="@layout/fragment_chat"/>
-</navigation>
-```
-
-Navigation graph defines navigation directions between fragmensts in the application. Notice that now `LoginFragment` is now start fragment in the application
-
 # Run the app
 
 You can either launch the app on the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When device is present press `Run` button: 
@@ -284,7 +256,4 @@ You can either launch the app on the physical phone (with [USB Debugging enabled
 image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```
 
-You should see login screen with two buttons `Login Bob` and `Login Alice`. After clicking one of them user should login in and empty chat screen should open.
-
-You're now ready to retrieve and send messages.
-
+You should see login screen with two buttons `Login Bob` and `Login Alice`. After clicking one of them user will login and empty chat screen will open.

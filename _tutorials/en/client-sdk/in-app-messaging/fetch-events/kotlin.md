@@ -76,5 +76,3 @@ private fun getConversationLine(textEvent: NexmoTextEvent): String {
 ```
 
 > **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoTextEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).
-
-Now we are ready to send the first message.

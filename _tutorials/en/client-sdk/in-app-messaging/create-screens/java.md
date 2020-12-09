@@ -27,10 +27,35 @@ To create fragment right click on `com.vonage.tutorial.messaging` package, selec
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
+Repleace file content with below snippet:
+
+```java
+package com.vonage.tutorial.messaging;
+
+import androidx.fragment.app.Fragment;
+
+public class LoginFragment extends Fragment {
+}
+```
+
+> **NOTE** You can also create a new class by selecting `messaging` package, and pastng code snippet.
+
 To create view model right click on `com.vonage.tutorial.messaging` package, select `New` > `Java Class`, enter `LoginViewModel` as file name and select `Class`.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
+```
+
+Repleace file content with below snippet:
+
+```java
+package com.vonage.tutorial.messaging;
+
+import androidx.lifecycle.ViewModel;
+
+public class LoginViewModel extends ViewModel {
+
+}
 ```
 
 ### Chat screen
@@ -47,10 +72,33 @@ To create fragment right click on `com.vonage.tutorial.messaging` package, selec
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
+Repleace file content with below snippet:
+
+```java
+package com.vonage.tutorial.messaging;
+
+import androidx.fragment.app.Fragment;
+
+public class ChatFragment extends Fragment {
+}
+```
+
 To create view model right click on `com.vonage.tutorial.messaging` package, select `New` > `Java Class`, enter `ChatViewModel` as file name and select `Class`.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
-Now when all screens are created you can add dependencies.
+Repleace file content with below snippet:
+
+```java
+package com.vonage.tutorial.messaging;
+
+import androidx.lifecycle.ViewModel;
+
+public class ChatViewModel extends ViewModel {
+
+}
+```
+
+Run `Build` > `Make project` to make sure project is compiling.

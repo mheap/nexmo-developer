@@ -32,8 +32,8 @@ tasks:
   - client-sdk/in-app-messaging/add-users-to-conversation
   - client-sdk/android-shared/generate-jwt-alice-and-bob
   - client-sdk/in-app-messaging/create-project
-  - client-sdk/in-app-messaging/create-screens
   - client-sdk/in-app-messaging/add-dependencies
+  - client-sdk/in-app-messaging/create-screens
   - client-sdk/in-app-messaging/add-permissions
   - client-sdk/in-app-messaging/setup-navigation
   - client-sdk/in-app-messaging/configure-jwts-and-conversation-id

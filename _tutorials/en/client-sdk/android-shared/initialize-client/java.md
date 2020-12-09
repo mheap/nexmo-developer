@@ -12,9 +12,8 @@ Locate the `initializeNexmoClient` method in the `BaseApplication` class and ini
 ```kotlin
 @Override
 protected void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
-    setContentView(R.layout.activity_main);
+    
+    // ...
 
     new NexmoClient.Builder().build(this);
 }
@@ -29,5 +28,3 @@ If Android Studio can't find the reference to the `NexmoClient` class then you h
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png
 ```
-
-You now have a working client. Your next step is to setup navigation.

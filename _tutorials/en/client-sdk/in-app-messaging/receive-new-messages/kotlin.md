@@ -8,7 +8,7 @@ description: In this step you display any new messages
 You can display incoming messages by implementing the conversation listener.
 
 
-Now, locate the `private val messageListener = object : NexmoMessageEventListener` property in the `ChatFragment` class and implement conversation listener `onTextEvent(textEvent: NexmoTextEvent)` method:
+Now, locate the `private val messageListener = object : NexmoMessageEventListener` property in the `ChatViewModel` class and implement conversation listener `onTextEvent` method:
 
 ```kotlin
 private val messageListener = object : NexmoMessageEventListener {
@@ -28,7 +28,7 @@ private val messageListener = object : NexmoMessageEventListener {
 }
 ```
 
-Now each time a new message is received `onTextEvent(textEvent: NexmoTextEvent)` listener is called, the new message will be passed to `updateConversation(textEvent: NexmoTextEvent)` method and dispatched to the view via `conversationMessages` `LiveData` (same `LiveData` used to dispatch all the messages after loading conversation events).
+Now each time a new message is received `onTextEvent(textEvent: NexmoTextEvent)` listener is called, the new message will be passed to `updateConversation` method and dispatched to the view via `conversationEvents` `LiveData` (same `LiveData` used to dispatch all the messages after loading conversation events).
 
 The last thing to do is to make sure that all listeners are removed when `ChatViewModel` is destroyed, for example, when the user navigates back. Fill the body of the `onCleared()` method in the `ChatViewModel` class.
 

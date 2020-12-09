@@ -3,6 +3,8 @@ title: Configure JWTs and conversation id
 description: In this step you learn how to add JWT to the application and set the conversation id.
 ---
 
+# Configure JWTs and conversation id
+
 Create `User` class in the `com.vonage.tutorial.messaging` package to store user data. Right click on `messaging` package and select `New` > `Java Class`. Enter `User` and select `Class`.
 
 Repleace file content with below code snippet:

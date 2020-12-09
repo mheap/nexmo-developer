@@ -106,5 +106,3 @@ Click `Sync project with Gradle Files` icon to make sure build scripts have been
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/sync-project-wth-gradle-files.png
 ```
-
-Your next step is to initialize the Nexmo client.

@@ -25,10 +25,34 @@ To create fragment right click on `com.vonage.tutorial.messaging` package, selec
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
+Repleace file content with below snippet:
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+import androidx.fragment.app.Fragment;
+
+class LoginFragment : Fragment
+```
+
+> **NOTE** You can also create a new class by selecting `messaging` package, and pastng code snippet.
+
 To create view model right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name and select `Class`.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
+```
+
+Repleace file content with below snippet:
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+import androidx.lifecycle.ViewModel
+
+public class LoginViewModel : ViewModel {
+
+}
 ```
 
 ### Chat screen
@@ -45,10 +69,30 @@ To create fragment right click on `com.vonage.tutorial.messaging` package, selec
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
+Repleace file content with below snippet:
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+import androidx.fragment.app.Fragment;
+
+class ChatFragment : Fragment
+```
+
 To create view model right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `ChatViewModel` as file name and select `Class`.
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+import androidx.lifecycle.ViewModel
+
+public class CHatViewModel : ViewModel {
+
+}
+```
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
-Now when all screens are created you can add dependencies.
+Run `Build` > `Make project` to make sure project is compiling.

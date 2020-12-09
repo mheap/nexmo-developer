@@ -19,3 +19,4 @@ image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-f
     <uses-permission android:name="android.permission.INTERNET" />
     ...
 ```
+

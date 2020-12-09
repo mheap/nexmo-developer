@@ -3,6 +3,8 @@ title: Configure JWTs and conversation id
 description: In this step you learn how to add JWT to the application and set the conversation id.
 ---
 
+# Configure JWTs and conversation id
+
 Create `Config.kt` file in the `com.vonage.tutorial.messaging` package to store the configuration. Right click on `messaging` package and select `New` > `Kotlin Class/File`. 
 
 ```screenshot

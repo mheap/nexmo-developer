@@ -19,14 +19,48 @@ Enter `app_nav_graph` as file name, select `Navigation` as resource type and pre
 image: public/screenshots/tutorials/client-sdk/android-shared/new-app-nav-graph.png
 ```
 
-You will defne navigation targets (login and chat screens) in the navigation graph latter, when creating individual screens. 
+Click `Code` button in top right corner and repleace it's content with below code snippet to set navigation graph for the application:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/app_navigation_graph"
+        app:startDestination="@id/loginFragment">
+    <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.vonage.tutorial.messaging.LoginFragment"
+            android:label="LoginFragment"
+            tools:layout="@layout/fragment_login">
+        <action
+                android:id="@+id/action_loginFragment_to_chatFragment"
+                app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/chatFragment"
+            android:name="com.vonage.tutorial.messaging.ChatFragment"
+            android:label="ChatFragment"
+            tools:layout="@layout/fragment_chat"/>
+</navigation>
+```
+
+Navigation graph defines navigation directions between fragmensts in the application. Notice that now `LoginFragment` is now start fragment in the application
 
 ## Add NavHostFragment
 
-Set `app_nav_graph` as main navigation graph of the application. Open `activity_main.xml` file and fill it's content:
+Set `app_nav_graph` as main navigation graph of the application. Open `activity_main.xml`, click `Code` button in top right corner file and repleace xml layout code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/activity-main-layout-file.png
+```
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
 ```xml
@@ -55,7 +89,6 @@ image: public/screenshots/tutorials/client-sdk/android-shared/activity-main-layo
 ```
 
 Now `NavHostFragment` with navigation graph (`@navigation/app_nav_graph`) will serve as main navigation mechanism within this application.
-
 
 ## Configure navigation in the MainActivity
 
@@ -128,9 +161,9 @@ To initialize `NavManager` call it's `init` method from `MainActivity.onCreate` 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+        
         // ...
+
         val navController = findNavController(R.id.navHostFragment)
         NavManager.init(navController)
     }

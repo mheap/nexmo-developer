@@ -11,9 +11,8 @@ Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoCl
 
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-
-    setContentView(R.layout.activity_main);
+    
+    // ...
 
     NexmoClient.Builder().build(this)
 }
@@ -28,5 +27,3 @@ If Android Studio can't find the reference to the `NexmoClient` class then you h
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/missing-import-kotlin.png
 ```
-
-You now have a working client. Your next step is to setup navigation.

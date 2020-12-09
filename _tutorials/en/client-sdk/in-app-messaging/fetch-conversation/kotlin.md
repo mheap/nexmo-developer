@@ -32,4 +32,3 @@ Notice the use of the `client` - this references the exact same object as the  `
 
 > **Note:** Conversation id is retrieved from `Config.CONVERSATION_ID` provided in the previous step.
 
-If a conversation has been retrieved, you're ready to process to the next step: getting the events for your conversation.
