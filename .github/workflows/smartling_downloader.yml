@@ -80,6 +80,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
       with:
+        token: ${{ secrets.GH_ADMIN_TOKEN }}
         title: 'Latest Smartling Translation Changes'
         branch-suffix: timestamp
         delete-branch: true
