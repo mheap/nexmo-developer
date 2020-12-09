@@ -7,7 +7,7 @@ description: In this step you create an Android project and add the Android Clie
 
 ## Project overview
 
-You will be building application with the following screens:
+You will be building nd Android application with the following screens:
 
 - **login** - responsible for logging the user
 - **chat** - allows to send/receive chat messages and logut the user
@@ -24,10 +24,10 @@ Open Android Studio and, from the menu, select `File` > `New` > `New Project...`
 image: public/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png
 ```
 
-Enter `chat app` as project name, `com.vonage.tutorial.messaging` as package, select `Kotlin` language and press `Finish` button.
+Enter `chat app` as project name, `com.vonage.tutorial.messaging` as package, select `Java` language and press `Finish` button.
 
 ```screenshot
-image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/configure-your-project-kotlin.png
+image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/configure-your-project-java.png
 ```
 
 You now have a brand new Android Project.
@@ -70,7 +70,7 @@ allprojects {
 }
 ```
 
-Now add the Client SDK to the project. Add the following dependency in the module level `build.gradle` file.:
+Now add the Client SDK to the project. Add the following dependency in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
@@ -89,10 +89,6 @@ dependencies {
 To navigate between screens you will use [Navigation component](https://developer.android.com/guide/navigation).
 
 To add navigation component dependency define a variable `ext.android_navigation_version` containing version in project-level `build.gradle` file:
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
-```
 
 ```groovy
 buildscript {
@@ -117,7 +113,7 @@ dependencies {
 }
 ```
 
-Add safeargs plugin in the module level `build.gradle` file.:
+Add safeargs plugin in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
@@ -126,11 +122,11 @@ image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build
 ```groovy
 plugins {
     // ...
-    id 'androidx.navigation.safeargs.kotlin'
+    id 'androidx.navigation.safeargs'
 }
 ```
 
-Finaly you add navigation component dependencies in the module level `build.gradle` file.:
+Finaly you add navigation component dependencies in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
@@ -140,8 +136,8 @@ image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build
 dependencies {
     // ...
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$android_navigation_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$android_navigation_version"
+    implementation "androidx.navigation:navigation-fragment:$android_navigation_version"
+    implementation "androidx.navigation:navigation-ui:$android_navigation_version"
 }
 ```
 
