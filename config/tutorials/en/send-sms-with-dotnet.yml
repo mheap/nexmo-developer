@@ -25,7 +25,7 @@ tasks:
   - sms-api/create-send-sms-view
   - sms-api/manage-startup-route
   - sms-api/add-sms-controller
-  - configure-aspdotnet-app
+  - configure-aspnet-app-key-secret
   - run-dotnet-app
 
 conclusion:
