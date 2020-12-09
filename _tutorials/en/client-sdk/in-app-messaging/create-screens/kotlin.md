@@ -30,12 +30,10 @@ Repleace file content with below snippet:
 ```kotlin
 package com.vonage.tutorial.messaging
 
-import androidx.fragment.app.Fragment;
+import androidx.fragment.app.Fragment
 
-class LoginFragment : Fragment
+class LoginFragment : Fragment()
 ```
-
-> **NOTE** You can also create a new class by selecting `messaging` package, and pastng code snippet.
 
 To create view model right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name and select `Class`.
 
@@ -46,11 +44,11 @@ image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/mes
 Repleace file content with below snippet:
 
 ```kotlin
-package com.vonage.tutorial.messaging
+ppackage com.vonage.tutorial.messaging
 
 import androidx.lifecycle.ViewModel
 
-public class LoginViewModel : ViewModel {
+public class LoginViewModel : ViewModel() {
 
 }
 ```
@@ -74,9 +72,9 @@ Repleace file content with below snippet:
 ```kotlin
 package com.vonage.tutorial.messaging
 
-import androidx.fragment.app.Fragment;
+import androidx.fragment.app.Fragment
 
-class ChatFragment : Fragment
+class ChatFragment : Fragment()
 ```
 
 To create view model right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `ChatViewModel` as file name and select `Class`.
@@ -86,7 +84,7 @@ package com.vonage.tutorial.messaging
 
 import androidx.lifecycle.ViewModel
 
-public class CHatViewModel : ViewModel {
+public class ChatViewModel : ViewModel() {
 
 }
 ```

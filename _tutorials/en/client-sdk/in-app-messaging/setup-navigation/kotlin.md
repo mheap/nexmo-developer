@@ -164,7 +164,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         
         // ...
 
-        val navController = findNavController(R.id.navHostFragment)
+        val navController = findNavController(this, R.id.navHostFragment)
         NavManager.init(navController)
     }
 
