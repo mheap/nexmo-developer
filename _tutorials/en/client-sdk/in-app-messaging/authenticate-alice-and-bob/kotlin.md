@@ -77,6 +77,91 @@ Repleace file content with below code snippet:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
+## Update ViewModel
+
+Repleace `ViewModel.kt` file content with below code snippet:
+
+Repleace file content with below code snippet:
+
+```kotlin
+package com.vonage.tutorial.messaging
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.nexmo.client.NexmoClient
+import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
+
+class LoginViewModel : ViewModel() {
+
+    private val navManager = NavManager
+
+    private val _connectionStatus = MutableLiveData<ConnectionStatus>()
+    val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
+
+    private val client: NexmoClient = TODO("Retrieve NexmoClient instance")
+
+    init {
+        TODO("Add client connection listener")
+    }
+
+    fun onLoginUser(user: User) {
+        TODO("Login user")
+    }
+}
+```
+
+### Get NexmoClient instance
+
+You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Repleace the `client` property in the `LoginViewModel` class:
+
+```kotlin
+private val client = NexmoClient.get()
+```
+
+### Login user
+
+Your user must be authenticated to be able to participate in the Conversation. Repleace the `onLoginUser` method inside `LoginViewModel` class:
+
+```kotlin
+fun onLoginUser(user: User) {
+    if (user.jwt.isNotBlank()) {
+        client.login(user.jwt)
+    }
+}
+```
+
+> **NOTE:** Inside `LoginFragment` class, explore the `loginUser` method. This method is called when one of the two `Login ...` buttons are clicked. This method calls the above `onLoginUser` method. 
+
+### Monitor connection state
+
+When a successful connection is established you need to navigate user to `ChatFragment`. Locate the `init` block inside `LoginViewModel` class and replace it's body:
+
+
+```kotlin
+class LoginViewModel : ViewModel() {
+    init {
+        client.setConnectionListener { newConnectionStatus, _ ->
+
+            if (newConnectionStatus == ConnectionStatus.CONNECTED) {
+                val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
+                navManager.navigate(navDirections)
+                
+                return@setConnectionListener
+            }
+
+            _connectionStatus.postValue(newConnectionStatus)
+        }
+    }
+
+    // ...
+}
+```
+
+The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connestion status to the UI (`LoginFragmnt`).
+
+For now this fragmnt is just a placeholder for navigation. You will add functionality to it in following steps.
+
 ## Update LoginFragment
 
 Repleace `LoginFragment.kt` file content with below code snippet:
@@ -149,94 +234,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     }
 }
 ```
-
-## Update ViewModel
-
-Repleace `ViewModel.kt` file content with below code snippet:
-
-Repleace file content with below code snippet:
-
-```kotlin
-package com.vonage.tutorial.messaging
-
-import androidx.lifecycle.MutableLive
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.nexmo.client.NexmoClient
-import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
-
-class LoginViewModel : ViewModel() {
-
-    private val navManager = NavManager
-
-    private val _connectionStatus = MutableLiveData<ConnectionStatus>()
-    val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
-
-    private var user: User? = null
-
-    private val client: NexmoClient = TODO("Retrieve NexmoClient instance")
-
-    init {
-        TODO("Add client connection listener")
-    }
-
-    fun onLoginUser(user: User) {
-        TODO("Login user")
-    }
-}
-```
-
-### Get NexmoClient instance
-
-You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Repleace the `client` property in the `LoginViewModel` class:
-
-```kotlin
-private val client = NexmoClient.get()
-```
-
-### Login user
-
-Your user must be authenticated to be able to participate in the Conversation. Repleace the `onLoginUser` method inside `LoginViewModel` class:
-
-```kotlin
-fun onLoginUser(user: User) {
-    if (user.jwt.isNotBlank()) {
-        this.user = user
-        client.login(user.jwt)
-    }
-}
-```
-
-> **NOTE:** Inside `LoginFragment` class, explore the `loginUser` method. This method is called when one of the two `Login ...` buttons are clicked. This method calls the above `onLoginUser` method. 
-
-### Monitor connection state
-
-When a successful connection is established you need to navigate user to `ChatFragment`. Locate the `init` block inside `LoginViewModel` class and replace it's body:
-
-
-```kotlin
-class LoginViewModel : ViewModel() {
-    init {
-        client.setConnectionListener { newConnectionStatus, _ ->
-
-            if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
-                navManager.navigate(navDirections)
-                
-                return@setConnectionListener
-            }
-
-            _connectionStatus.postValue(newConnectionStatus)
-        }
-    }
-
-    // ...
-}
-```
-
-The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connestion status to the UI (`LoginFragmnt`).
-
-For now this fragmnt is just a placeholder for navigation. You will add functionality to it in following steps.
 
 # Run the app
 
