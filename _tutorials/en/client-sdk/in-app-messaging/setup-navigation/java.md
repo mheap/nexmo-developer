@@ -21,7 +21,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/new-app-nav-graph.
 
 You will defne navigation targets (login and chat screens) in the navigation graph latter, when creating individual screens. 
 
-## Create NavHostFragment
+## Add NavHostFragment
 
 Set `app_nav_graph` as main navigation graph of the application. Open `activity_main.xml` file and fill it's content:
 
