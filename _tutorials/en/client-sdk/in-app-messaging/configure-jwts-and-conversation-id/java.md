@@ -35,7 +35,7 @@ Create `Config.java` file in the `com.vonage.tutorial.messaging` package to stor
 Repleace file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.messaging
+package com.vonage.tutorial.messaging;
 
 public class Config {
 

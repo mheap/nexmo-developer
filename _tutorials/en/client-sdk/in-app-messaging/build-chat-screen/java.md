@@ -347,7 +347,6 @@ public class ChatViewModel extends ViewModel {
         //TODO: Get the conversation
     }
 
-
     private void getConversationEvents(NexmoConversation conversation) {
         //TODO: Get the conversation events
     }

@@ -26,9 +26,9 @@ private fun getConversationEvents(conversation: NexmoConversation) {
 
 Once the events are retrieved (or an error is returned), we're updating the view (`ChatFragment`) to reflect the new data.
 
-> **NOTE:** We are using two `LiveData` streams. `_conversationMessages` to post successful API response and `_errorMessage` to post returned error.
+> **NOTE:** We are using two `LiveData` streams. `conversationEvents` to post successful API response and `_errorMessage` to post returned error.
 
-Now you will pass events to the view. Inside `ChatFragment` locate the `private var conversationMessages = Observer<List<NexmoEvent>?>` property and add this code to handle our conversation history:
+Now you will pass events to the view. Inside `ChatFragment` locate the `conversationEvents` property and add this code to handle our conversation history:
 
 ```kotlin
 private var conversationEvents = Observer<List<NexmoEvent>?> { events ->

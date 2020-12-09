@@ -123,7 +123,7 @@ public class LoginFragment extends Fragment {
 
         viewModel = new ViewModelProvider(requireActivity()).get(LoginViewModel.class);
 
-        viewModel._connectionStatusLiveData.observe(getViewLifecycleOwner(), connectionStatus -> {
+        viewModel.connectionStatusLiveData.observe(getViewLifecycleOwner(), connectionStatus -> {
             connectionStatusTextView.setText(connectionStatus.toString());
 
             if (connectionStatus == ConnectionStatus.DISCONNECTED) {
@@ -188,19 +188,14 @@ import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatu
 
 public class LoginViewModel extends ViewModel {
 
-    private NexmoClient client = null
+    private NexmoClient client = null;
 
     NavManager navManager = NavManager.getInstance();
-    private MutableLiveData<ConnectionStatus> connectionStatusMutableLiveData = new MutableLiveData<ConnectionStatus>();
-    public LiveData<ConnectionStatus> _connectionStatusLiveData = connectionStatusMutableLiveData;
+    private MutableLiveData<ConnectionStatus> _connectionStatusMutableLiveData = new MutableLiveData<>();
+    public LiveData<ConnectionStatus> connectionStatusLiveData = _connectionStatusMutableLiveData;
 
     public LoginViewModel() {
         // TODO: Add client connection listener
-    }
-
-    private void navigate() {
-        NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment();
-        navManager.navigate(navDirections);
     }
 
     void onLoginUser(User user) {
@@ -214,7 +209,7 @@ public class LoginViewModel extends ViewModel {
 You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Repleace the `client` property in the `LoginViewModel` class:
 
 ```java
-NexmoClient.get();
+private NexmoClient client = NexmoClient.get();
 ```
 
 ### Login user
@@ -222,10 +217,9 @@ NexmoClient.get();
 Your user must be authenticated to be able to participate in the Conversation. Repleace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```java
-fun onLoginUser(user: User) {
-    if (user.jwt.isNotBlank()) {
-        this.user = user
-        client.login(user.jwt)
+void onLoginUser(User user) {
+    if (!user.jwt.trim().isEmpty()) {
+        client.login(user.jwt);
     }
 }
 ```
@@ -252,7 +246,7 @@ public class LoginViewModel extends ViewModel {
                     return;
                 }
 
-                connectionStatusMutableLiveData.postValue(connectionStatus);
+                _connectionStatusMutableLiveData.postValue(connectionStatus);
             }
         });
     }

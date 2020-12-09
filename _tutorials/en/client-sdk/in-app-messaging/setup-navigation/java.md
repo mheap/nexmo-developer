@@ -135,14 +135,13 @@ To initialize `NavManager` call it's `init` method from `MainActivity.onCreate` 
 
 ```java
 @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
 
-        // ...
-        NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
-        navManager.init(navController);
-    }
-
+    // ...
+    NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
+    NavManager.getInstance().init(navController);
+}
 ```
 
 Run `Build` > `Make project` to make sure project is compiling.

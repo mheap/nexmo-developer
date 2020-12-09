@@ -122,7 +122,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build
 ```groovy
 plugins {
     // ...
-    id 'androidx.navigation.safeargs.kotlin'
+    id 'androidx.navigation.safeargs'
 }
 ```
 

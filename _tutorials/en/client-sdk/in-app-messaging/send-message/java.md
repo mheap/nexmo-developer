@@ -17,7 +17,7 @@ public void onSendMessage(String message) {
     }
 
     conversation.sendText(message, new NexmoRequestListener<Void>() {
-        @Overridew
+        @Override
         public void onError(@NonNull NexmoApiError apiError) {
 
         }
