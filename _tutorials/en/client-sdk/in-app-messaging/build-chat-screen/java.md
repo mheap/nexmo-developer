@@ -101,6 +101,7 @@ Repleace file content with below code snippet:
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/messageEditText"
                 app:layout_constraintTop_toBottomOf="@+id/conversationEventsScrollView"
+                android:paddingRight="10dp"
                 tools:text="User name" />
 
         <EditText
@@ -115,7 +116,7 @@ Repleace file content with below code snippet:
                 app:layout_constraintLeft_toRightOf="@id/userNameTextView"
                 app:layout_constraintRight_toLeftOf="@id/sendMessageButton"
                 app:layout_constraintTop_toBottomOf="@+id/conversationEventsScrollView"
-                tools:text="Message input" />
+                tools:text="Message" />
 
         <Button
                 android:id="@+id/sendMessageButton"
