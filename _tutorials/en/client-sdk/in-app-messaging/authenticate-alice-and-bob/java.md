@@ -7,19 +7,9 @@ description: In this step you authenticate your users via the JWTs you created e
 
 You perform this authentication using the `JWTs` generated in previous steps. Users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/login-screen-users.png
-```
+## Update layout
 
-## Create layout
-
-Right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_login` as file name and press `OK`.
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/new-android-resource-file.png
-```
-
-Click `Code` button in top right corner to display layout XML code:
+Open `fragment_login.xml` file and click `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
@@ -83,11 +73,9 @@ Repleace file content with below code snippet:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-## Create Fragment
+## Update LoginFragment
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Java File`, enter `LoginFragment` as file name and select `Class`.
-
-Repleace file content with below code snippet:
+Repleace `LoginFragment.java` file content with below code snippet:
 
 ```java
 package com.vonage.tutorial.messaging;
@@ -168,11 +156,12 @@ public class LoginFragment extends Fragment {
 }
 ```
 
-## Create ViewModel
+## Update ViewModel
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Java Class`, enter `LoginViewModel` as file name and select `Class`.
+Repleace `ViewModel.java` file content with below code snippet:
 
 Repleace file content with below code snippet:
+
 
 ```java
 package com.vonage.tutorial.messaging;
@@ -257,24 +246,6 @@ public class LoginViewModel extends ViewModel {
 
 The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connestion status to the UI (`LoginFragmnt`).
 
-## Create ChatFragment
-
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Java Class`, enter `ChatFragment` as file name and select `Class`.
-
-Repleace file content with below code snippet:
-
-```java
-package com.vonage.tutorial.messaging;
-
-import androidx.fragment.app.Fragment;
-
-public class ChatFragment extends Fragment {
-    
-}
-```
-
-For now this fragmnt is just a placeholder for navigation. You will add functionality to it in following steps.
-
 ## Add Fragment to navigation graph
 
 Open `app_nav_graph.xml` file and repleace it's content with below code snippet to define navigation graph for the application. 
@@ -289,7 +260,8 @@ Open `app_nav_graph.xml` file and repleace it's content with below code snippet 
     <fragment
             android:id="@+id/loginFragment"
             android:name="com.vonage.tutorial.messaging.LoginFragment"
-            android:label="LoginFragment">
+            android:label="LoginFragment"
+            tools:layout="@layout/fragment_login">
         <action
                 android:id="@+id/action_loginFragment_to_chatFragment"
                 app:destination="@id/chatFragment" />
@@ -297,7 +269,8 @@ Open `app_nav_graph.xml` file and repleace it's content with below code snippet 
     <fragment
             android:id="@+id/chatFragment"
             android:name="com.vonage.tutorial.messaging.ChatFragment"
-            android:label="ChatFragment"/>
+            android:label="ChatFragment"
+            tools:layout="@layout/fragment_chat"/>
 </navigation>
 ```
 

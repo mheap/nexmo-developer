@@ -7,15 +7,13 @@ description: In this step you build chat screen.
 
 Chat screen (`ChatFragment` and `ChatViewModel` classes) is responsible for fetching the conversation and all the conversation events and sending messages.
 
-## Create layout
+## Update layout
 
-Right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_chat` as file name and press `OK`.
+Open `fragment_chat.xml` layout and click `Code` button in top right corner to display layout XML code:
 
 ```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/new-layout-resource-file.png
+image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
 ```
-
-Click `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
@@ -271,11 +269,9 @@ public class ChatFragment extends Fragment implements BackPressHandler {
 
 ```
 
-## Create ViewModel
+## Update ViewModel
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Java Class`, enter `LoginViewModel` as file name and select `Class`.
-
-Repleace file content with below code snippet:
+Open `ChatViewModel` and repleace file content with below code snippet:
 
 ```java
 package com.vonage.tutorial.messaging;
