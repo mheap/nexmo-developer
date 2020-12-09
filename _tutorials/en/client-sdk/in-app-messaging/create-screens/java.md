@@ -7,7 +7,7 @@ description: In this step you create screens.
 
 You will now create placeholders for screens in the application (we will define layouts and the functionality in following steps of this tutorial). You will create few files for each screen:
 
-- layout
+- Layout
 - Fragment (view)
 - ViewModel (mnaages the view)
 
