@@ -1,55 +1,11 @@
 ---
-title: Create an Android project
-description: In this step you create an Android project and add the Android Client SDK library.
+title: Add dependencies
+description: In this step you add external dependencies
 ---
 
-# Create an Android project
+# Add dependencies
 
-## Project overview
-
-You will be building application with the following screens:
-
-- **login** - responsible for logging the user
-- **chat** - allows to send/receive chat messages and logut the user
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/nav-graph.png
-```
-
-## New Android Project
-
-Open Android Studio and, from the menu, select `File` > `New` > `New Project...`. Select a `Empty Activity` template type and click `Next`.
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png
-```
-
-Enter `chat app` as project name, `com.vonage.tutorial.messaging` as package, select `Kotlin` language and press `Finish` button.
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/configure-your-project-kotlin.png
-```
-
-You now have a brand new Android Project.
-
-### Add permission
-
-Add `INTERNET` perission into `AndroidManifest.xml` file:
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png
-```
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.vonage.tutorial">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    ...
-```
-
-### Add Nexmo dependency
+## Add Nexmo
 
 You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside `allprojects` block in the project-level `build.gradle` file:
 
@@ -84,7 +40,7 @@ dependencies {
 }
 ```
 
-### Add Navigation component dependencies
+## Add Navigation component
 
 To navigate between screens you will use [Navigation component](https://developer.android.com/guide/navigation).
 
