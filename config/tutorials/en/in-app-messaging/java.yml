@@ -14,7 +14,7 @@ introduction:
 
     Finally, you will implement chat functionality in your application, including the ability to view and send messages and be notified when a new message appears in Conversation.
 
-    The source code is available on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging).
+    The source code is available on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging-java).
 
     This tutorial uses NexmoClient version 2.x
 
@@ -52,7 +52,7 @@ conclusion:
 
     # What's next?
 
-    For the complete version please see the Android Studio project on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging).
+    For the complete version please see the Android Studio project on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging-java).
 
     You can do a lot more with the Client SDK. See [Client SDK documentation](/client-sdk/overview) or review
     [Android Client SDK documentation](/sdk/stitch/android/index).  
