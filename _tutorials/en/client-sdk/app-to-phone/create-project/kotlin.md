@@ -10,7 +10,7 @@ description: In this step you create an Android project and add the Android Clie
 You will be building an Android application with the following screens:
 
 - **login** - responsible for logging the user
-- **chat** - allows to send/receive chat messages and logout the user
+- **main** - allows to start new call
 - **on call** - allows to end the call
 
 ```screenshot

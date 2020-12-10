@@ -53,15 +53,15 @@ public class LoginViewModel : ViewModel() {
 }
 ```
 
-## Chat screen
+## Main screen
 
-To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_chat` as file name and press `OK`.
+To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_Main` as file name and press `OK`.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
 ```
 
-To create fragment right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `ChatFragment` as file name and select `Class`.
+To create fragment right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `MainFragment` as file name and select `Class`.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
@@ -74,17 +74,17 @@ package com.vonage.tutorial.messaging
 
 import androidx.fragment.app.Fragment
 
-class ChatFragment : Fragment()
+class MainFragment : Fragment()
 ```
 
-To create view model right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `ChatViewModel` as file name and select `Class`.
+To create view model right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `MainViewModel` as file name and select `Class`.
 
 ```kotlin
 package com.vonage.tutorial.messaging
 
 import androidx.lifecycle.ViewModel
 
-public class ChatViewModel : ViewModel() {
+public class MainViewModel : ViewModel() {
 
 }
 ```
