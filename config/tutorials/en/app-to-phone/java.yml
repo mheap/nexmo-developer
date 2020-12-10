@@ -28,6 +28,7 @@ tasks:
   - client-sdk/app-to-phone/create-project
   - client-sdk/android-shared/add-dependencies
   - client-sdk/app-to-phone/create-screens
+  - client-sdk/app-to-phone/setup-navigation
   - client-sdk/android-shared/initialize-client
   - client-sdk/android-shared/configure-jwt-alice
   - client-sdk/android-shared/authenticate-alice
