@@ -32,7 +32,7 @@ tasks:
   - client-sdk/app-to-phone/add-permissions
   - client-sdk/android-shared/initialize-client
   - client-sdk/app-to-phone/authenticate-alice
-  - client-sdk/app-to-phone/make-call
+  - client-sdk/app-to-phone/build-main-screen
   - client-sdk/android-shared/run-app
 
 conclusion:

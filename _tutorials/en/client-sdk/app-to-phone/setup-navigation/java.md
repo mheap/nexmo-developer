@@ -47,15 +47,13 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
         <action
                 android:id="@+id/action_mainFragment_to_onCallFragment"
                 app:destination="@id/onCallFragment" />
-        <argument
-                android:name="userName"
-                app:argType="string" />
     </fragment>
 
     <fragment
             android:id="@+id/onCallFragment"
             android:name="com.vonage.tutorial.voice.view.oncall.OnCallFragment"
-            tools:layout="@layout/fragment_on_call"/>
+            tools:layout="@layout/fragment_on_call" />
+
 </navigation>
 ```
 
