@@ -36,7 +36,7 @@ Create `Config.java` file in the `com.vonage.tutorial.messaging` package to stor
 
 Replace file content with below code snippet:
 
-```kotlin
+```java
 package com.vonage.tutorial.messaging;
 
 public class Config {
