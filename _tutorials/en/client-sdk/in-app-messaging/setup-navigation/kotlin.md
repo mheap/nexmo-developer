@@ -106,8 +106,6 @@ interface BackPressHandler {
 }
 ```
 
-> **NOTE** You can also copy the above code snippet to clipboard, select `messaging` package in Android Studio and paste it - this will create `BackPressHandler.kt` file containing above code.
-
 ### Create `NavManager` object
 
 `NavManager` object will allow to navigate directly from `ViewModel` by storing reference to navigation controller.
