@@ -160,8 +160,6 @@ class LoginViewModel : ViewModel() {
 
 The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connection status to the UI (`Loginfragment`).
 
-For now this fragment is just a placeholder for navigation. You will add functionality to it in following steps.
-
 ## Update `LoginFragment`
 
 Replace `LoginFragment.kt` file content with below code snippet:
