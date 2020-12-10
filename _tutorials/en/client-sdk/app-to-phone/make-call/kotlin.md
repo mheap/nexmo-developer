@@ -5,7 +5,7 @@ description: In this step you learn how to make a phone call.
 
 # Make a call
 
-Locate the `startAppToAppCall` method within the `MainViewModel` class and fill its body to enable call:
+Locate the `startAppToPhoneCall` method within the `MainViewModel` class and fill its body to enable the call:
 
 ```kotlin
 @SuppressLint("MissingPermission")
