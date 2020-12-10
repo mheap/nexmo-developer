@@ -11,6 +11,7 @@ You will be building an Android application with the following screens:
 
 - **login** - responsible for logging the user
 - **chat** - allows to send/receive chat messages and logout the user
+- **on call** - allows to end the call
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-app-to-phone/nav-graph.png
