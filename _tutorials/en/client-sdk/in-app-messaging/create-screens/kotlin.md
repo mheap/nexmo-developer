@@ -11,7 +11,7 @@ You will now create placeholders for screens in the application (we will define 
 - Fragment (view)
 - `ViewModel` (manages the view)
 
-### Login screen
+## Login screen
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_login` as file name and press `OK`.
 
@@ -53,7 +53,7 @@ public class LoginViewModel : ViewModel() {
 }
 ```
 
-### Chat screen
+## Chat screen
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_chat` as file name and press `OK`.
 
