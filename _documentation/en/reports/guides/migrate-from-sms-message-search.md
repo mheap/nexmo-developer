@@ -14,7 +14,7 @@ You can use the Reports API either [synchronously or asynchronously](/reports/ov
 
 Use [this endpoint](/api/reports#get-records) to retrieve SMS records synchronously, using **one** of the following approaches:
 
-* **By message ID**: Returns SMS records with the IDs specified in the `id` parameter. To retrieve multiple records, supply a comma-separated list of IDs. If any IDs you request are not found they are listed in `ids_not_found` in the response.
+* **By message ID**: Returns SMS records with the IDs specified in the `id` parameter. To retrieve multiple records, supply a comma-separated list of up to 20 IDs. If any IDs you request are not found they are listed in `ids_not_found` in the response.
 
 * **By time period**: Returns multiple SMS records that were sent in a time window that you specify using the `date_start` and `date_end` parameters, which cannot be more than 24 hours apart. These records are returned in JSON format in batches of up to 1,000 records. If more than 1,000 records match then the response will contain a link to the next batch.
 
