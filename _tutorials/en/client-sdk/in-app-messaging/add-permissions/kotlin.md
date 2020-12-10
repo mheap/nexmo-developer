@@ -5,6 +5,8 @@ description: In this step you add permissions
 
 # Add permissions
 
+## Declare permissions in Android Manifest
+
 Add `INTERNET` permission into `AndroidManifest.xml` file:
 
 ```screenshot
@@ -19,3 +21,5 @@ image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-f
     <uses-permission android:name="android.permission.INTERNET" />
     ...
 ```
+
+`INTERNET` permission is granted implicitly, so there is no need to request it at runtime.
