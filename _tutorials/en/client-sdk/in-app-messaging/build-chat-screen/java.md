@@ -3,11 +3,11 @@ title: Build chat screen
 description: In this step you build chat screen.
 ---
 
-# Converstion
+# Conversation
 
 Chat screen (`ChatFragment` and `ChatViewModel` classes) is responsible for fetching the conversation and all the conversation events and sending messages.
 
-## Update chat layout
+## Update `fragment_chat` layout
 
 Open `fragment_chat.xml` layout and click `Code` button in top right corner to display layout XML code:
 
@@ -19,7 +19,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.pn
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
-Repleace file content with below code snippet:
+Replace file content with below code snippet:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -131,9 +131,9 @@ Repleace file content with below code snippet:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-## Update ChatViewModel
+## Update `ChatViewModel`
 
-Open `ChatViewModel` and repleace file content with below code snippet:
+Open `ChatViewModel` and Replace file content with below code snippet:
 
 ```java
 package com.vonage.tutorial.messaging;
@@ -240,9 +240,9 @@ public class ChatViewModel extends ViewModel {
 }
 ```
 
-## Update ChatFragment
+## Update `ChatFragment`
 
-Open `ChatFragment` and repleace file content with below code snippet:
+Open `ChatFragment` and Replace file content with below code snippet:
 
 ```java
 package com.vonage.tutorial.messaging;

@@ -7,7 +7,7 @@ description: In this step you learn how to add JWT to the application and set th
 
 Create `User` class in the `com.vonage.tutorial.messaging` package to store user data. Right click on `messaging` package and select `New` > `Java Class`. Enter `User` and select `Class`.
 
-Repleace file content with below code snippet:
+Replace file content with below code snippet:
 
 ```java
 package com.vonage.tutorial.messaging;
@@ -34,7 +34,7 @@ public class User {
 
 Create `Config.java` file in the `com.vonage.tutorial.messaging` package to store the configuration. Right click on `messaging` package and select `New` > `Java Class`. Enter `Config` and select `Class`.
 
-Repleace file content with below code snippet:
+Replace file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging;

@@ -17,7 +17,7 @@ Enter `Config` as name and select `File` and press Enter to confirm.
 image: public/screenshots/tutorials/client-sdk/android-shared/kotlin-new-kotlin-class-file-popup.png
 ```
 
-Repleace file content with below code snippet:
+Replace file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging

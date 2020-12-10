@@ -7,7 +7,7 @@ description: In this step you create an Android project and add the Android Clie
 
 ## Project overview
 
-You will be building nd Android application with single screen:
+You will be building an Android application with single screen:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-phone-to-app/nav-graph.png
@@ -82,8 +82,8 @@ buildscript {
 }
 ```
 
-Now in the same file add dependency for Gradle safe args plugin that provides type safety when navigating and passing data between destinations.
-Add new classpath in the `dependencies` block:
+Now in the same file add dependency for Gradle `Safe Args` plugin that provides type safety when navigating and passing data between destinations.
+Add new `classpath` in the `dependencies` block:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
@@ -97,7 +97,7 @@ dependencies {
 }
 ```
 
-Finaly you add navigation component dependencies in the module level `build.gradle` file:
+Finally you add navigation component dependencies in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png

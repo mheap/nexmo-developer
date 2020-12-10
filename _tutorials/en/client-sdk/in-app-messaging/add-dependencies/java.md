@@ -54,8 +54,8 @@ buildscript {
 }
 ```
 
-Now in the same file add dependency for Gradle safe args plugin that provides type safety when navigating and passing data between destinations.
-Add new classpath in the `dependencies` block:
+Now in the same file add dependency for Gradle `Safe Args` plugin that provides type safety when navigating and passing data between destinations.
+Add new `classpath` in the `dependencies` block:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
@@ -69,7 +69,7 @@ dependencies {
 }
 ```
 
-Add safeargs plugin in the module level `build.gradle` file:
+Add `Safe Args` plugin in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
@@ -82,7 +82,7 @@ plugins {
 }
 ```
 
-Finaly you add navigation component dependencies in the module level `build.gradle` file:
+Finally you add navigation component dependencies in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png

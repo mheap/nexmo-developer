@@ -7,10 +7,10 @@ description: In this step you create an Android project and add the Android Clie
 
 ## Project overview
 
-You will be building nd Android application with the following screens:
+You will be building an Android application with the following screens:
 
 - **login** - responsible for logging the user
-- **chat** - allows to send/receive chat messages and logut the user
+- **chat** - allows to send/receive chat messages and logout the user
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/nav-graph.png

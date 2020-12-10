@@ -5,7 +5,7 @@ description: In this step you add permissions
 
 # Add permissions
 
-Add `INTERNET` perission into `AndroidManifest.xml` file:
+Add `INTERNET` permission into `AndroidManifest.xml` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png

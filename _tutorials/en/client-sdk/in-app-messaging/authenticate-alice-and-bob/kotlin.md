@@ -7,7 +7,7 @@ description: In this step you authenticate your users via the JWTs you created e
 
 You perform this authentication using the `JWTs` generated in previous steps. Users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
 
-## Update login layout
+## Update `fragment_login` layout
 
 Open `fragment_login.xml` file.
 
@@ -19,7 +19,7 @@ Click `Code` button in top right corner to display layout XML code:
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
-Repleace file content with below code snippet:
+Replace file content with below code snippet:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -77,11 +77,11 @@ Repleace file content with below code snippet:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-## Update ViewModel
+## Update `LoginViewModel`
 
-Repleace `ViewModel.kt` file content with below code snippet:
+Replace `ViewModel.kt` file content with below code snippet:
 
-Repleace file content with below code snippet:
+Replace file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging
@@ -113,7 +113,7 @@ class LoginViewModel : ViewModel() {
 
 ### Get NexmoClient instance
 
-You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Repleace the `client` property in the `LoginViewModel` class:
+You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Replace the `client` property in the `LoginViewModel` class:
 
 ```kotlin
 private val client = NexmoClient.get()
@@ -121,7 +121,7 @@ private val client = NexmoClient.get()
 
 ### Login user
 
-Your user must be authenticated to be able to participate in the Conversation. Repleace the `onLoginUser` method inside `LoginViewModel` class:
+Your user must be authenticated to be able to participate in the Conversation. Replace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```kotlin
 fun onLoginUser(user: User) {
@@ -158,13 +158,13 @@ class LoginViewModel : ViewModel() {
 }
 ```
 
-The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connestion status to the UI (`LoginFragmnt`).
+The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connection status to the UI (`Loginfragment`).
 
-For now this fragmnt is just a placeholder for navigation. You will add functionality to it in following steps.
+For now this fragment is just a placeholder for navigation. You will add functionality to it in following steps.
 
-## Update LoginFragment
+## Update `LoginFragment`
 
-Repleace `LoginFragment.kt` file content with below code snippet:
+Replace `LoginFragment.kt` file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging

@@ -7,7 +7,7 @@ description: In this step you authenticate your users via the JWTs you created e
 
 You perform this authentication using the `JWTs` generated in previous steps. Users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
 
-## Update login layout
+## Update `fragment_login` layout
 
 Open `fragment_login.xml` file.
 
@@ -19,7 +19,7 @@ Click `Code` button in top right corner to display layout XML code:
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
-Repleace file content with below code snippet:
+Replace file content with below code snippet:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -77,11 +77,11 @@ Repleace file content with below code snippet:
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-## Update ViewModel
+## Update `LoginViewModel`
 
-Repleace `ViewModel.java` file content with below code snippet:
+Replace `ViewModel.java` file content with below code snippet:
 
-Repleace file content with below code snippet:
+Replace file content with below code snippet:
 
 
 ```java
@@ -114,7 +114,7 @@ public class LoginViewModel extends ViewModel {
 
 ### Get NexmoClient instance
 
-You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Repleace the `client` property in the `LoginViewModel` class:
+You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Replace the `client` property in the `LoginViewModel` class:
 
 ```java
 private NexmoClient client = NexmoClient.get();
@@ -122,7 +122,7 @@ private NexmoClient client = NexmoClient.get();
 
 ### Login user
 
-Your user must be authenticated to be able to participate in the Conversation. Repleace the `onLoginUser` method inside `LoginViewModel` class:
+Your user must be authenticated to be able to participate in the Conversation. Replace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```java
 void onLoginUser(User user) {
@@ -136,7 +136,7 @@ void onLoginUser(User user) {
 
 ### Monitor connection state
 
-When a successful connection is established you need to navigate user to `ChatFragment`. Locate the ``LoginViewModel` constructor and replace its body:
+When a successful connection is established you need to navigate user to `ChatFragment`. Locate the `LoginViewModel` constructor and replace its body:
 
 
 ```java
@@ -163,11 +163,11 @@ public class LoginViewModel extends ViewModel {
 }
 ```
 
-The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connestion status to the UI (`LoginFragmnt`).
+The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connection status to the UI (`Loginfragment`).
 
-## Update LoginFragment
+## Update `LoginFragment`
 
-Repleace `LoginFragment.java` file content with below code snippet:
+Replace `LoginFragment.java` file content with below code snippet:
 
 ```java
 package com.vonage.tutorial.messaging;
