@@ -2,7 +2,7 @@ name: CI
 on:
   push: {}
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
 
 jobs:
   build:
@@ -70,7 +70,7 @@ jobs:
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
       run: |
-        ./node_modules/.bin/mdspell -r -n -a --en-us '_documentation/en/**/*.md' '_partials/*.md' '_partials/**/*.md' '_modals/**/*.md' '_tutorials/**/*.md'
+        ./node_modules/.bin/mdspell -r -n -a --en-us '_documentation/en/**/*.md' '_partials/*.md' '_partials/**/*.md' '_modals/**/*.md' '_tutorials/en/**/*.md'
     - name: Check prose issues
       env:
         POSTGRES_USERNAME: postgres
@@ -78,7 +78,7 @@ jobs:
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
       run: |
-        ./node_modules/.bin/alex _documentation/en _partials _modals _tutorials
+        ./node_modules/.bin/alex _documentation/en _partials _modals _tutorials/en
     - name: Run rake tasks
       env:
         POSTGRES_USERNAME: postgres

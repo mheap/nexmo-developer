@@ -42,10 +42,10 @@ jobs:
     - name: Install packages
       run: |
         yarn install --pure-lockfile
-    - name: Set up Ruby 2.5.8
+    - name: Set up Ruby 2.7.2
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.5.8
+        ruby-version: 2.7.2
     - name: Ruby gem cache
       uses: actions/cache@v1
       with:
@@ -60,7 +60,7 @@ jobs:
         POSTGRES_USERNAME: postgres
         BUNDLE_RUBYGEMS__PKG__GITHUB__COM: "NexmoDev:${{ secrets.GH_ADMIN_TOKEN }}"
       run: |
-        gem update --system 3.0.3 -N
+        gem update --system 3.1.4 -N
         gem install --no-document bundler
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
@@ -75,6 +75,9 @@ jobs:
     - name: Run rake task
       if: steps.step1.outputs.file_changes != ''
       env:
+        SMARTLING_USER_ID: ${{ secrets.SMARTLING_USER_ID }}
+        SMARTLING_USER_SECRET: ${{ secrets.SMARTLING_USER_SECRET }}
+        SMARTLING_PROJECT_ID: ${{ secrets.SMARTLING_PROJECT_ID }}
         POSTGRES_USERNAME: postgres
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
