@@ -7,9 +7,9 @@ description: In this step you build main screen.
 
 Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call.
 
-## Update `fragment_chat` layout
+## Update `fragment_main` layout
 
-Open `fragment_chat.xml` layout and click `Code` button in top right corner to display layout XML code:
+Open `fragment_main.xml` layout and click `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png

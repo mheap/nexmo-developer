@@ -33,6 +33,7 @@ tasks:
   - client-sdk/android-shared/initialize-client
   - client-sdk/app-to-phone/authenticate-alice
   - client-sdk/app-to-phone/build-main-screen
+  - client-sdk/app-to-phone/build-on-call-screen
   - client-sdk/android-shared/run-app
 
 conclusion:
