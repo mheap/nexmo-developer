@@ -8,7 +8,7 @@ description: In this step you display any new messages
 You can display incoming messages by implementing the conversation listener.
 
 
-Now, locate the `private val messageListener = object : NexmoMessageEventListener` property in the `ChatFragment` class and implement conversation listener `onTextEvent(textEvent: NexmoTextEvent)` method:
+Now, locate the `private val messageListener = object : NexmoMessageEventListener` property in the `ChatViewModel` class and implement conversation listener `onTextEvent` method:
 
 ```kotlin
 private val messageListener = object : NexmoMessageEventListener {
@@ -28,7 +28,7 @@ private val messageListener = object : NexmoMessageEventListener {
 }
 ```
 
-Now each time a new message is received `onTextEvent(textEvent: NexmoTextEvent)` listener is called, the new message will be passed to `updateConversation(textEvent: NexmoTextEvent)` method and dispatched to the view via `conversationMessages` `LiveData` (same `LiveData` used to dispatch all the messages after loading conversation events).
+Now each time a new message is received `onTextEvent(textEvent: NexmoTextEvent)` listener is called, the new message will be passed to `updateConversation` method and dispatched to the view via `conversationEvents` `LiveData` (same `LiveData` used to dispatch all the messages after loading conversation events).
 
 The last thing to do is to make sure that all listeners are removed when `ChatViewModel` is destroyed, for example, when the user navigates back. Fill the body of the `onCleared()` method in the `ChatViewModel` class.
 
@@ -36,4 +36,12 @@ The last thing to do is to make sure that all listeners are removed when `ChatVi
 override fun onCleared() {
     conversation?.removeMessageEventListener(messageListener)
 }
+```
+
+# Run the app
+
+You can either launch the app on the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When device is present press `Run` button: 
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```

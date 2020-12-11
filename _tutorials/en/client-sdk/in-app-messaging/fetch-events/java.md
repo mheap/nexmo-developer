@@ -5,7 +5,7 @@ description: In this step you display any messages already sent as part of this 
 
 # Fetch conversation events
 
-Right below  `getConversation()` method, let's add a method to retrieve the events:
+Inside `ChatViewModel` class, locate the `getConversationEvents()` method and paste its implementation:
 
 ```java
 private void getConversationEvents(NexmoConversation conversation) {
@@ -26,43 +26,70 @@ private void getConversationEvents(NexmoConversation conversation) {
 
 Once the events are retrieved (or an error is returned), we're updating the view (`ChatFragment`) to reflect the new data.
 
-> **NOTE:** We are using two `LiveData` streams. `_conversationMessages` to post successful API response and `_errorMessage` to post returned error.
+> **NOTE:** We are using two `LiveData` streams. `conversationEvents` to post successful API response and `_errorMessage` to post returned error.
 
-Let's make our view react to the new data. Inside `ChatFragment` locate the `private var conversationMessages = Observer<List<NexmoEvent>?>` property and add this code to handle our conversation history:
+Let's make our view react to the new data. Inside `ChatFragment` locate the `conversationEvents` property and add this code to handle our conversation history:
 
 ```java
-private var conversationMessages = Observer<List<NexmoEvent>?> { events ->
-    val messages = events?.mapNotNull {
-        when (it) {
-            is NexmoMemberEvent -> getConversationLine(it)
-            is NexmoTextEvent -> getConversationLine(it)
-            else -> null
+private Observer<ArrayList<NexmoEvent>> conversationEvents = events -> {
+
+    ArrayList<String> lines = new ArrayList<>();
+
+    for (NexmoEvent event : events) {
+        if (event == null) {
+            continue;
         }
+
+        String line = "";
+
+        if (event instanceof NexmoMemberEvent) {
+            line = getConversationLine((NexmoMemberEvent) event);
+        } else if (event instanceof NexmoTextEvent) {
+            line = getConversationLine((NexmoTextEvent) event);
+        }
+
+        lines.add(line);
     }
 
-    conversationMessagesTextView.text = if (messages.isNullOrEmpty()) {
-        "Conversation has No messages"
+    // Production application should utilise RecyclerView to provide better UX
+    if (events.isEmpty()) {
+        conversationEventsTextView.setText("Conversation has no events");
     } else {
-        messages.joinToString(separator = "\n")
+
+        String conversationEvents = "";
+
+        for (String line : lines) {
+            conversationEvents += line + "\n";
+        }
+
+        conversationEventsTextView.setText(conversationEvents);
     }
 
-    progressBar.isVisible = false
-    chatContainer.isVisible = true
-}
+    progressBar.setVisibility(View.GONE);
+    chatContainer.setVisibility(View.VISIBLE
+
+    );
+};
 ```
 
-To handle member related events (member invited, joined or left) we need to fill the body of the `fun getConversationLine(memberEvent: NexmoMemberEvent)` method:
+To handle member related events (member invited, joined or left) you need to fill the body of the `fun getConversationLine(memberEvent: NexmoMemberEvent)` method:
 
 ```java
-private fun getConversationLine(memberEvent: NexmoMemberEvent): String {
-    val user = memberEvent.member.user.name
+private String getConversationLine(NexmoMemberEvent memberEvent) {
+    String user = memberEvent.getMember().getUser().getName();
 
-    return when (memberEvent.state) {
-        NexmoMemberState.JOINED -> "$user joined"
-        NexmoMemberState.INVITED -> "$user invited"
-        NexmoMemberState.LEFT -> "$user left"
-        else -> "Error: Unknown member event state"
+    switch (memberEvent.getState()) {
+        case JOINED:
+            return user + " joined";
+        case INVITED:
+            return user + " invited";
+        case LEFT:
+            return user + " left";
+        case UNKNOWN:
+            return "Error: Unknown member event state";
     }
+
+    return "";
 }
 ```
 
@@ -71,10 +98,8 @@ Above method converts `NexmoMemberEvent` to a `String` that will be displayed as
 ```java
 private String getConversationLine(NexmoTextEvent textEvent) {
     String user = textEvent.getFromMember().getUser().getName();
-    return "$user said: " + textEvent.getText();
+    return user + "  said: " + textEvent.getText();
 }
 ```
 
 > **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoTextEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).
-
-Now we are ready to send the first message.

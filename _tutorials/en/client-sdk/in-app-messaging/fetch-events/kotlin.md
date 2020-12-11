@@ -5,7 +5,7 @@ description: In this step you display any messages already sent as part of this 
 
 # Fetch conversation events
 
-Right below  `getConversation()` method, let's add a method to retrieve the events:
+Inside `ChatViewModel` class, locate the `getConversationEvents()` method and paste its implementation:
 
 ```kotlin
 private fun getConversationEvents(conversation: NexmoConversation) {
@@ -13,7 +13,7 @@ private fun getConversationEvents(conversation: NexmoConversation) {
         object : NexmoRequestListener<NexmoEventsPage> {
             override fun onSuccess(nexmoEventsPage: NexmoEventsPage?) {
                 nexmoEventsPage?.pageResponse?.data?.let {
-                    _conversationMessages.postValue(it.toList())
+                    _conversationEvents.postValue(it.toList())
                 }
             }
 
@@ -26,12 +26,12 @@ private fun getConversationEvents(conversation: NexmoConversation) {
 
 Once the events are retrieved (or an error is returned), we're updating the view (`ChatFragment`) to reflect the new data.
 
-> **NOTE:** We are using two `LiveData` streams. `_conversationMessages` to post successful API response and `_errorMessage` to post returned error.
+> **NOTE:** We are using two `LiveData` streams. `conversationEvents` to post successful API response and `_errorMessage` to post returned error.
 
-Let's make our view react to the new data. Inside `ChatFragment` locate the `private var conversationMessages = Observer<List<NexmoEvent>?>` property and add this code to handle our conversation history:
+Now you will pass events to the view. Inside `ChatFragment` locate the `conversationEvents` property and add this code to handle our conversation history:
 
 ```kotlin
-private var conversationMessages = Observer<List<NexmoEvent>?> { events ->
+private var conversationEvents = Observer<List<NexmoEvent>?> { events ->
     val messages = events?.mapNotNull {
         when (it) {
             is NexmoMemberEvent -> getConversationLine(it)
@@ -40,7 +40,7 @@ private var conversationMessages = Observer<List<NexmoEvent>?> { events ->
         }
     }
 
-    conversationMessagesTextView.text = if (messages.isNullOrEmpty()) {
+    conversationEventsTextView.text = if (messages.isNullOrEmpty()) {
         "Conversation has No messages"
     } else {
         messages.joinToString(separator = "\n")
@@ -51,7 +51,7 @@ private var conversationMessages = Observer<List<NexmoEvent>?> { events ->
 }
 ```
 
-To handle member related events (member invited, joined or left) we need to fill the body of the `fun getConversationLine(memberEvent: NexmoMemberEvent)` method:
+To handle member related events (member invited, joined or left) you need to fill the body of the `fun getConversationLine(memberEvent: NexmoMemberEvent)` method:
 
 ```kotlin
 private fun getConversationLine(memberEvent: NexmoMemberEvent): String {
@@ -76,5 +76,3 @@ private fun getConversationLine(textEvent: NexmoTextEvent): String {
 ```
 
 > **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoTextEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).
-
-Now we are ready to send the first message.

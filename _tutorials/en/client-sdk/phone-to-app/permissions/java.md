@@ -1,9 +1,9 @@
 ---
-title: Project permissions
+title: Configure permissions
 description: In this step you will add the necessary permissions to the project properties.
 ---
 
-# Project permissions
+# Configure permissions
 
 As you'll be using the microphone when making a call, you need to request the permission to use it.
 

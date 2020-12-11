@@ -18,7 +18,7 @@ To make things easier, a starter project is provided for you.
 image: public/screenshots/tutorials/client-sdk/android-shared/select-kotlin-start-project.png
 ```
 
-**3.** Make project `Build -> Make Project`. If `Make Project` button is disabled please wait until Android Studio will finish parsing the project (progress will be displayed in bottom right corner of the Android Studio).
+**3.** Make project `Build > Make Project`. If `Make Project` button is disabled please wait until Android Studio will finish parsing the project (progress will be displayed in bottom right corner of the Android Studio).
    
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/make-project.png
@@ -30,7 +30,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/make-project.png
 image: public/screenshots/tutorials/client-sdk/android-app-to-phone/nav-graph.png
 ```
 
-The application consists of three screens:
+The application consists of few screens:
 
 - **login** - responsible for logging the user
 - **main** - allows to start a call
