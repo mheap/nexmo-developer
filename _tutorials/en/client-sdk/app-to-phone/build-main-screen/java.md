@@ -3,9 +3,45 @@ title: Build main screen
 description: In this step you build main screen.
 ---
 
-# Call
+# Make a call
 
 Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call.
+
+## Create `CallManager`
+
+Currently client SDK does not store call reference. We need to store call reference in the `CallManager` class, so it can be accessed from another screens.
+
+Create `CallManager.java` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `voice` package and select `New` > `Java Class`. Enter `CallManager` and select `Class`.
+
+Replace file content with below code snippet:
+
+```java
+package com.vonage.tutorial.voice;
+
+import com.nexmo.client.NexmoCall;
+
+public final class CallManager {
+
+    private static CallManager INSTANCE;
+    private static NexmoCall onGoingCall;
+
+    public static CallManager getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new CallManager();
+        }
+
+        return INSTANCE;
+    }
+
+    public NexmoCall getOnGoingCall() {
+        return onGoingCall;
+    }
+
+    public void setOnGoingCall(NexmoCall onGoingCall) {
+        CallManager.onGoingCall = onGoingCall;
+    }
+}
+```
 
 ## Update `fragment_main` layout
 
@@ -48,11 +84,10 @@ Replace file content with below code snippet:
                 android:id="@+id/startAppToPhoneCallButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/ic_phone"
                 android:drawablePadding="8dp"
                 android:layout_marginTop="36dp"
                 android:padding="16dp"
-                android:text="@string/make_phone_call" />
+                android:text="Make phone call" />
 
         <androidx.core.widget.ContentLoadingProgressBar
                 android:id="@+id/progressBar"
@@ -66,9 +101,9 @@ Replace file content with below code snippet:
 </FrameLayout>
 ```
 
-## Update `ChatViewModel`
+## Update `MainViewModel`
 
-Open `ChatViewModel` and Replace file content with below code snippet:
+Open `MainViewModel` and Replace file content with below code snippet:
 
 ```java
 package com.vonage.tutorial.voice.view.main;

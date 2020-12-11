@@ -3,9 +3,27 @@ title: Build main screen
 description: In this step you build main screen.
 ---
 
-# Call
+# Make a call
 
 Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call.
+
+## Create `CallManager`
+
+Currently client SDK does not store call reference. We need to store call reference in the `CallManager` class, so it can be accessed from another screens.
+
+Create `CallManager.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `voice` package and select `New` > `Kotlin Class/File`. Enter `CallManager` and select `Class`.
+
+Replace file content with below code snippet:
+
+```kotlin
+package com.vonage.tutorial.voice
+
+import com.nexmo.client.NexmoCall
+
+object CallManager {
+    var onGoingCall: NexmoCall? = null
+}
+```
 
 ## Update `fragment_main` layout
 
@@ -48,11 +66,10 @@ Replace file content with below code snippet:
                 android:id="@+id/startAppToPhoneCallButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/ic_phone"
                 android:drawablePadding="8dp"
                 android:layout_marginTop="36dp"
                 android:padding="16dp"
-                android:text="@string/make_phone_call" />
+                android:text="Make phone call" />
 
         <androidx.core.widget.ContentLoadingProgressBar
                 android:id="@+id/progressBar"

@@ -5,17 +5,7 @@ description: In this step you learn how to add JWT to the application.
 
 # Configure JWTs and conversation id
 
-Create `Config.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `voice` package and select `New` > `Kotlin Class/File`. 
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/kotlin-new-kotlin-class-file.png
-```
-
-Enter `Config` as name and select `File` and press Enter to confirm.
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/kotlin-new-kotlin-class-file-popup.png
-```
+Create `Config.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `voice` package and select `New` > `Kotlin Class/File`.  Enter `Config` as name and select `File` and press Enter to confirm.
 
 Replace file content with below code snippet:
 
@@ -35,7 +25,6 @@ data class User(
     val jwt: String
 )
 ```
-
 
 Now it's time to fill previously generated JWT. Replace `ALICE_TOKEN` placeholder with real value obtained in a previous step.
 
