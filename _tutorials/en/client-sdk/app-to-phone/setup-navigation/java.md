@@ -34,7 +34,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
         app:startDestination="@id/loginFragment">
     <fragment
             android:id="@+id/loginFragment"
-            android:name="com.vonage.tutorial.voice.view.login.LoginFragment"
+            android:name="com.vonage.tutorial.voice.LoginFragment"
             tools:layout="@layout/fragment_login">
         <action
                 android:id="@+id/action_loginFragment_to_voiceFragment"
@@ -42,7 +42,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
     </fragment>
     <fragment
             android:id="@+id/mainFragment"
-            android:name="com.vonage.tutorial.voice.view.main.MainFragment"
+            android:name="com.vonage.tutorial.voice.MainFragment"
             tools:layout="@layout/fragment_main">
         <action
                 android:id="@+id/action_mainFragment_to_onCallFragment"
@@ -51,7 +51,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 
     <fragment
             android:id="@+id/onCallFragment"
-            android:name="com.vonage.tutorial.voice.view.oncall.OnCallFragment"
+            android:name="com.vonage.tutorial.voice.OnCallFragment"
             tools:layout="@layout/fragment_on_call" />
 
 </navigation>
