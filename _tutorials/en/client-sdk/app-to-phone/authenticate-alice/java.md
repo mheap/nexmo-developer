@@ -74,17 +74,18 @@ Replace file content with below code snippet:
 
 
 ```java
-package com.vonage.tutorial.messaging;
+package com.vonage.tutorial.voice;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import com.nexmo.client.NexmoClient;
 import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus;
+import com.nexmo.clientcore.model.user.User;
 
 public class LoginViewModel extends ViewModel {
 
-    private NexmoClient client = null;
+    private NexmoClient client = null; // TODO: Retrieve NexmoClient instance
 
     NavManager navManager = NavManager.getInstance();
     private MutableLiveData<ConnectionStatus> _connectionStatusMutableLiveData = new MutableLiveData<>();
@@ -98,12 +99,11 @@ public class LoginViewModel extends ViewModel {
         // TODO: Login user
     }
 }
-
 ```
 
 ### Get NexmoClient instance
 
-You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Replace the `client` property in the `LoginViewModel` class:
+To retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Replace the `client` property in the `LoginViewModel` class:
 
 ```java
 private NexmoClient client = NexmoClient.get();

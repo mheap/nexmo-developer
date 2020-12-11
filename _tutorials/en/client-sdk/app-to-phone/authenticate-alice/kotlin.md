@@ -73,13 +73,14 @@ Replace `ViewModel.kt` file content with below code snippet:
 Replace file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.messaging
+package com.vonage.tutorial.voice;
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.nexmo.client.NexmoClient
-import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+import com.nexmo.client.NexmoClient;
+import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus;
+import com.nexmo.clientcore.model.user.User;
 
 class LoginViewModel : ViewModel() {
 
@@ -102,7 +103,7 @@ class LoginViewModel : ViewModel() {
 
 ### Get NexmoClient instance
 
-You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Replace the `client` property in the `LoginViewModel` class:
+To retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Replace the `client` property in the `LoginViewModel` class:
 
 ```kotlin
 private val client = NexmoClient.get()
