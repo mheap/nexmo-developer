@@ -11,7 +11,7 @@ Main screen (`MainFragment` and `MainViewModel` classes) is responsible for star
 
 Currently client SDK does not store call reference. We need to store call reference in the `CallManager` class, so it can be accessed from another screens.
 
-Create `CallManager.java` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `voice` package and select `New` > `Java Class`. Enter `CallManager` and select `Class`.
+Create `CallManager` class in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `voice` package and select `New` > `Java Class`. Enter `CallManager` and select `Class`.
 
 Replace file content with below code snippet:
 
