@@ -1,6 +1,6 @@
 ---
-title: Configure JWTs and conversation id
-description: In this step you learn how to add JWT to the application and set the conversation id.
+title: Configure JWTs
+description: In this step you learn how to add JWT to the application.
 ---
 
 # Configure JWTs and conversation id
