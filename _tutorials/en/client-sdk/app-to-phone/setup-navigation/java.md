@@ -148,6 +148,10 @@ public final class NavManager {
     public void navigate(NavDirections navDirections) {
         navController.navigate(navDirections);
     }
+
+    public void popBackStack(@IdRes int destinationId, Boolean inclusive) {
+        navController.popBackStack(destinationId, inclusive);
+    }
 }
 ```
 

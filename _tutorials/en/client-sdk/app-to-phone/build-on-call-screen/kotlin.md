@@ -190,7 +190,7 @@ class OnCallFragment : Fragment(R.layout.fragment_on_call),
         viewModel.toast.observe(viewLifecycleOwner, toastObserver)
 
         hangupFab.setOnClickListener {
-            viewModel.hangup()
+            viewModel.endCall()
         }
     }
 
@@ -199,3 +199,5 @@ class OnCallFragment : Fragment(R.layout.fragment_on_call),
     }
 }
 ```
+
+You are done. It's time to run the app.

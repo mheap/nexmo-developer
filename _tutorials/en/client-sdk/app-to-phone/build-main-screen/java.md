@@ -106,7 +106,7 @@ Replace file content with below code snippet:
 Open `MainViewModel` and Replace file content with below code snippet:
 
 ```java
-package com.vonage.tutorial.voice.view.main;
+package com.vonage.tutorial.voice;
 
 import android.annotation.SuppressLint;
 import androidx.annotation.NonNull;
@@ -118,12 +118,8 @@ import androidx.navigation.NavDirections;
 import com.nexmo.client.NexmoCall;
 import com.nexmo.client.NexmoCallHandler;
 import com.nexmo.client.NexmoClient;
-import com.nexmo.client.NexmoIncomingCallListener;
 import com.nexmo.client.request_listener.NexmoApiError;
 import com.nexmo.client.request_listener.NexmoRequestListener;
-import com.vonage.tutorial.voice.util.CallManager;
-import com.vonage.tutorial.voice.util.NavManager;
-import timber.log.Timber;
 
 public class MainViewModel extends ViewModel {
 
@@ -132,36 +128,12 @@ public class MainViewModel extends ViewModel {
     private NavManager navManager = NavManager.getInstance();
 
     private MutableLiveData<String> _toast = new MutableLiveData<>();
-    public LiveData<String> toast = toastMutableLiveData;
+    public LiveData<String> toast = _toast;
 
-    private MutableLiveData<Boolean> loadingMutableLiveData = new MutableLiveData<>();
-    public LiveData<Boolean> loadingLiveData = loadingMutableLiveData;
+    private MutableLiveData<Boolean> _loading = new MutableLiveData<>();
+    public LiveData<Boolean> loading = _loading;
 
-    private NexmoIncomingCallListener callListener = call -> {
-        callManager.setOnGoingCall(call);
-        String otherUserName = call.getCallMembers().get(0).getUser().getName();
-        NavDirections navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment();
-        navManager.navigate(navDirections);
-    };
-
-    private NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<NexmoCall>() {
-        @Override
-        public void onSuccess(@Nullable NexmoCall call) {
-            callManager.setOnGoingCall(call);
-
-            loadingMutableLiveData.postValue(false);
-
-            NavDirections navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment();
-            navManager.navigate(navDirections);
-        }
-
-        @Override
-        public void onError(@NonNull NexmoApiError apiError) {
-            Timber.e(apiError.getMessage());
-            toastMutableLiveData.postValue(apiError.getMessage());
-            loadingMutableLiveData.postValue(false);
-        }
-    };
+    private NexmoRequestListener<NexmoCall> callListener = null // TODO: Implement call listener
 
     @Override
     protected void onCleared() {
@@ -178,6 +150,7 @@ public class MainViewModel extends ViewModel {
     }
 }
 
+
 ```
 
 ### Make a call
@@ -189,8 +162,32 @@ Repleace `startAppToPhoneCall` method within the `MainViewModel` class to enable
 public void startAppToPhoneCall() {
     // Callee number is ignored because it is specified in NCCO config
     client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, callListener);
-    loadingMutableLiveData.postValue(true);
+    _loading.postValue(true);
 }
+```
+
+### Add call start listener
+
+Repleace `callListener` property with below implementation to know when call has started:
+
+```java
+private NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<NexmoCall>() {
+    @Override
+    public void onSuccess(@Nullable NexmoCall call) {
+        callManager.setOnGoingCall(call);
+
+        _loading.postValue(false);
+
+        NavDirections navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment();
+        navManager.navigate(navDirections);
+    }
+
+    @Override
+    public void onError(@NonNull NexmoApiError apiError) {
+        _toast.postValue(apiError.getMessage());
+        _loading.postValue(false);
+    }
+};
 ```
 
 > **NOTE:** we set the `IGNORED_NUMBER` argument, because our number is specified in the NCCO config (Vonage application answer URL that you configured previously).
@@ -267,3 +264,5 @@ public class MainFragment extends Fragment implements BackPressHandler {
     }
 }
 ```
+
+Now you can login and make a call. Last screen to implement is `on call screen`, where you can manage with existing call.

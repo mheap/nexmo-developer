@@ -23,42 +23,40 @@ Replace file content with below code snippet:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="48dp">
+        android:padding="10dp">
+
+    <Button
+            android:id="@+id/endCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End call"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
 
     <TextView
-            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|center_horizontal"
             android:layout_marginTop="50dp"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/on_a_call"
+            android:text="On call"
             android:textColor="@color/white"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            app:layout_constraintTop_toBottomOf="@id/endCall"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
 
-    <Space
-            android:layout_width="1dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/hangupFab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="40dp"
-            android:src="@drawable/ic_end_call"
-            app:backgroundTint="@color/negativeCallAction"
-            app:fabSize="normal" />
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
 ## Update `OnCallViewModel`
@@ -66,20 +64,12 @@ Replace file content with below code snippet:
 Open `on_callViewModel` and Replace file content with below code snippet:
 
 ```java
-package com.vonage.tutorial.voice.view.oncall;
+package com.vonage.tutorial.voice;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import com.nexmo.client.*;
-import com.nexmo.client.request_listener.NexmoApiError;
-import com.nexmo.client.request_listener.NexmoRequestListener;
-import com.vonage.tutorial.R;
-import com.vonage.tutorial.voice.util.CallManager;
-import com.vonage.tutorial.voice.util.NavManager;
-import timber.log.Timber;
 
 public class OnCallViewModel extends ViewModel {
 
@@ -87,33 +77,25 @@ public class OnCallViewModel extends ViewModel {
     private NavManager navManager = NavManager.getInstance();
 
     private MutableLiveData<String> _toast = new MutableLiveData<>();
-    LiveData<String> toast = _toast;
+    public LiveData<String> toast = _toast;
 
     private NexmoCallEventListener callEventListener = new NexmoCallEventListener() {
         @Override
         public void onMemberStatusUpdated(NexmoCallMemberStatus callMemberStatus, NexmoCallMember callMember) {
-            Timber.d("CallEventListener.onMemberStatusUpdated: %s : %s", callMember.getUser().getName(), callMemberStatus);
-
-            if (callMemberStatus == NexmoCallMemberStatus.COMPLETED || callMemberStatus == NexmoCallMemberStatus.CANCELED) {
+            if (callMemberStatus == NexmoCallMemberStatus.COMPLETED || callMemberStatus == NexmoCallMemberStatus.CANCELLED) {
                 callManager.setOnGoingCall(null);
                 navManager.popBackStack(R.id.mainFragment, false);
             }
         }
 
         @Override
-        public void onMuteChanged(NexmoMediaActionState mediaActionState, NexmoCallMember callMember) {
-            Timber.d("CallEventListener.onMuteChanged: %s : %s", callMember.getUser().getName(), mediaActionState);
-        }
+        public void onMuteChanged(NexmoMediaActionState mediaActionState, NexmoCallMember callMember) { }
 
         @Override
-        public void onEarmuffChanged(NexmoMediaActionState mediaActionState, NexmoCallMember callMember) {
-            Timber.d("CallEventListener.onEarmuffChanged: %s : %s", callMember.getUser().getName(), mediaActionState);
-        }
+        public void onEarmuffChanged(NexmoMediaActionState mediaActionState, NexmoCallMember callMember) { }
 
         @Override
-        public void onDTMF(String dtmf, NexmoCallMember callMember) {
-            Timber.d("CallEventListener.onDTMF: %s : %s", callMember.getUser().getName(), dtmf);
-        }
+        public void onDTMF(String dtmf, NexmoCallMember callMember) { }
     };
 
     public OnCallViewModel() {
@@ -149,6 +131,7 @@ public class OnCallViewModel extends ViewModel {
 
     private void hangupInternal() {
         //TODO: Hangup incoming call
+    }
 }
 ```
 
@@ -157,18 +140,23 @@ public class OnCallViewModel extends ViewModel {
 Locate `hangupInternal` method and replace its body:
 
 
-```kotlin
-private fun hangupInternal() {
-    callManager.onGoingCall?.hangup(object : NexmoRequestListener<NexmoCall> {
-        override fun onSuccess(call: NexmoCall?) {
-            callManager.onGoingCall = null
-            navManager.popBackStack()
-        }
+```java
+private void hangupInternal() {
+    NexmoCall ongoingCall = callManager.getOnGoingCall();
 
-        override fun onError(apiError: NexmoApiError) {
-            _toast.postValue(apiError.message)
-        }
-    })
+    if (ongoingCall != null) {
+        ongoingCall.hangup(new NexmoRequestListener<NexmoCall>() {
+            @Override
+            public void onSuccess(@Nullable NexmoCall call) {
+                callManager.setOnGoingCall(null);
+            }
+
+            @Override
+            public void onError(@NonNull NexmoApiError apiError) {
+                _toast.postValue(apiError.getMessage());
+            }
+        });
+    }
 }
 ```
 
@@ -187,14 +175,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.vonage.tutorial.R;
 import com.vonage.tutorial.voice.BackPressHandler;
+import com.vonage.tutorial.voice.OnCallViewModel;
+import com.vonage.tutorial.voice.R;
 
 public class OnCallFragment extends Fragment implements BackPressHandler {
 
     OnCallViewModel viewModel;
 
-    FloatingActionButton hangupFab;
+    FloatingActionButton endCall;
 
     public OnCallFragment() {
         super(R.layout.fragment_on_call);
@@ -206,11 +195,11 @@ public class OnCallFragment extends Fragment implements BackPressHandler {
 
         viewModel = new ViewModelProvider(requireActivity()).get(OnCallViewModel.class);
 
-        hangupFab = view.findViewById(R.id.hangupFab);
+        endCall = view.findViewById(R.id.endCall);
 
         viewModel.toast.observe(getViewLifecycleOwner(), it -> Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT));
 
-        hangupFab.setOnClickListener(view1 -> viewModel.hangup());
+        endCall.setOnClickListener(view1 -> viewModel.hangup());
     }
 
 
@@ -220,3 +209,5 @@ public class OnCallFragment extends Fragment implements BackPressHandler {
     }
 }
 ```
+
+You are done. It's time to run the app.

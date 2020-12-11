@@ -115,22 +115,7 @@ class MainViewModel : ViewModel() {
     private val _loading = MutableLiveData<Boolean>()
     val loading = _loading as MutableLiveData<Boolean>
 
-    private val callListener = object : NexmoRequestListener<NexmoCall> {
-        override fun onSuccess(call: NexmoCall?) {
-            callManager.onGoingCall = call
-
-            _loading.postValue(false)
-
-            val navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment()
-            navManager.navigate(navDirections)
-        }
-
-        override fun onError(apiError: NexmoApiError) {
-            Timber.e(apiError.message)
-            _toast.postValue(apiError.message)
-            _loading.postValue(false)
-        }
-    }
+    private val callListener: NexmoRequestListener<NexmoCall> = TODO("Implement call listener")
 
     override fun onCleared() {
         client.removeIncomingCallListeners()
@@ -158,6 +143,29 @@ fun startAppToPhoneCall() {
     client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, callListener)
     loadingMutableLiveData.postValue(true)
 }
+```
+
+### Add call start listener
+
+Repleace `callListener` property with below implementation to know when call has started:
+
+```java
+private val callListener = object : NexmoRequestListener<NexmoCall> {
+        override fun onSuccess(call: NexmoCall?) {
+            callManager.onGoingCall = call
+
+            _loading.postValue(false)
+
+            val navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment()
+            navManager.navigate(navDirections)
+        }
+
+        override fun onError(apiError: NexmoApiError) {
+            Timber.e(apiError.message)
+            _toast.postValue(apiError.message)
+            _loading.postValue(false)
+        }
+    }
 ```
 
 > **NOTE:** we set the `IGNORED_NUMBER` argument, because our number is specified in the NCCO config (Vonage application answer URL that you configured previously).
@@ -225,3 +233,5 @@ class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
     }
 }
 ```
+
+Now you can login and make a call. Last screen to implement is `on call screen`, where you can manage with existing call.
