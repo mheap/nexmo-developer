@@ -1,7 +1,7 @@
 ---
 title: Private voice communication
 products: voice/voice-api
-description: Protect user's number privacy by connecting users together for private voice communication.
+description: Enable users to call each other, keeping their real numbers private.
 languages:
     - Node
 ---
