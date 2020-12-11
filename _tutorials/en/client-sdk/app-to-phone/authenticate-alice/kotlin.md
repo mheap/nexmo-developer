@@ -50,7 +50,7 @@ Replace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton" />
 
     <TextView
             android:id="@+id/connectionStatusTextView"
@@ -125,7 +125,7 @@ fun onLoginUser(user: User) {
 
 ### Monitor connection state
 
-When a successful connection is established you need to navigate user to `ChatFragment`. Locate the `init` block inside `LoginViewModel` class and replace it's body:
+When a successful connection is established you need to navigate user to `MainFragment`. Locate the `init` block inside `LoginViewModel` class and replace it's body:
 
 
 ```kotlin
@@ -134,7 +134,7 @@ class LoginViewModel : ViewModel() {
         client.setConnectionListener { newConnectionStatus, _ ->
 
             if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                val navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment()
+                val navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment()
                 navManager.navigate(navDirections)
                 
                 return@setConnectionListener
@@ -148,14 +148,14 @@ class LoginViewModel : ViewModel() {
 }
 ```
 
-The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connection status to the UI (`Loginfragment`).
+The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `MainFragment`, otherwise it will emit connection status to the UI (`Loginfragment`).
 
 ## Update `LoginFragment`
 
 Replace `LoginFragment.kt` file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.messaging
+package com.vonage.tutorial.voice
 
 import android.os.Bundle
 import android.view.View
@@ -163,12 +163,11 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.view.isVisible
+import androidx.annotation.NonNull
+import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
-import kotlin.properties.Delegates
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
 
@@ -224,4 +223,4 @@ You can either launch the app on the physical phone (with [USB Debugging enabled
 image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```
 
-You should see login screen with two buttons `Login Bob` and `Login Alice`. After clicking one of them user will login and empty chat screen will open.
+You should see login screen with `Login Alice` button. After clicking user will login and empty main screen will open.

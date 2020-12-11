@@ -50,7 +50,7 @@ Replace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton" />
 
     <TextView
             android:id="@+id/connectionStatusTextView"
@@ -125,7 +125,7 @@ void onLoginUser(User user) {
 
 ### Monitor connection state
 
-When a successful connection is established you need to navigate user to `ChatFragment`. Locate the `LoginViewModel` constructor and replace its body:
+When a successful connection is established you need to navigate user to `MainFragment`. Locate the `LoginViewModel` constructor and replace its body:
 
 
 ```java
@@ -138,7 +138,7 @@ public class LoginViewModel extends ViewModel {
             @Override
             public void onConnectionStatusChange(@NonNull ConnectionStatus connectionStatus, @NonNull ConnectionStatusReason connectionStatusReason) {
                 if (connectionStatus == ConnectionStatus.CONNECTED) {
-                    NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToChatFragment();
+                    NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment();
         navManager.navigate(navDirections);
                     return;
                 }
@@ -152,14 +152,14 @@ public class LoginViewModel extends ViewModel {
 }
 ```
 
-The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment`, otherwise it will emit connection status to the UI (`Loginfragment`).
+The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `MainFragment`, otherwise it will emit connection status to the UI (`Loginfragment`).
 
 ## Update `LoginFragment`
 
 Replace `LoginFragment.java` file content with below code snippet:
 
 ```java
-package com.vonage.tutorial.messaging;
+package com.vonage.tutorial.voice;
 
 import android.os.Bundle;
 import android.view.View;
@@ -240,4 +240,4 @@ You can either launch the app on the physical phone (with [USB Debugging enabled
 image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```
 
-You should see login screen with two buttons `Login Bob` and `Login Alice`. After clicking one of them user will login and empty chat screen will open.
+You should see login screen with `Login Alice` button. After clicking user will login and empty main screen will open.
