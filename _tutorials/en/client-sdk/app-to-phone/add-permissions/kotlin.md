@@ -29,22 +29,16 @@ image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-f
 
 ## Request permissions at runtime
 
-Open `MainActivity` class add `requestPermissions` medhod:
-
-```kotlin
-private fun requestPermissions() {
-    val callsPermissions = arrayOf(Manifest.permission.RECORD_AUDIO)
-    ActivityCompat.requestPermissions(requireActivity(), callsPermissions, 123)
-}
-```
-
-Call `requestPermissions` method from `onCrete` method:
+To request permissions open `MainActivity` and class add code to `onCreate` method:
 
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
-
+    
     // ...
 
-    requestPermissions()
+    val callsPermissions = arrayOf(Manifest.permission.RECORD_AUDIO)
+    ActivityCompat.requestPermissions(this, callsPermissions, 123)
 }
 ```
+
+> **NOTE** To simplify tutorial permissions are requested each time application runs.

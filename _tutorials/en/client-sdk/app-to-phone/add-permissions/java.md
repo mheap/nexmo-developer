@@ -29,23 +29,17 @@ image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-f
 
 ## Request permissions at runtime
 
-Open `MainActivity` class add `requestPermissions` medhod:
-
-```java
-private void requestPermissions() {
-    String[] callsPermissions = { Manifest.permission.RECORD_AUDIO };
-    ActivityCompat.requestPermissions(requireActivity(), callsPermissions, 123);
-}
-```
-
-Call `requestPermissions` method from `onCrete` method:
+To request permissions open `MainActivity` and class add code to `onCreate` method:
 
 ```java
 @Override
 protected void onCreate(@Nullable Bundle savedInstanceState) {
-
+    
     // ...
 
-    requestPermissions();
+    String[] callsPermissions = { Manifest.permission.RECORD_AUDIO };
+    ActivityCompat.requestPermissions(this, callsPermissions, 123);
 }
 ```
+
+> **NOTE** To simplify tutorial permissions are requested each time application runs.
