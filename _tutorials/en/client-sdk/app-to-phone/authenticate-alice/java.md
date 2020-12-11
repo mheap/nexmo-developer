@@ -50,7 +50,7 @@ Replace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginAsBobButton" />
+            app:layout_constraintTop_toBottomOf="parent" />
 
     <TextView
             android:id="@+id/connectionStatusTextView"
