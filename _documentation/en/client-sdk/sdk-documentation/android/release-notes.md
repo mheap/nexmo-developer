@@ -10,7 +10,7 @@ navigation_weight: 0
 
 ### Enhancements
 
-- Fixed value inconsistence on attributes `displayName` and `imageUrl` for `NexmoUser` object.
+- Fixed value inconsistency on attributes `displayName` and `imageUrl` for `NexmoUser` object.
 - Improved outbound call and conversation stability.
 
 ## Version 2.8.0 - Nov 19, 2020
