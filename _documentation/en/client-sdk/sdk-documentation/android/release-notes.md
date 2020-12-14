@@ -6,6 +6,13 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 2.8.1 - Dec 14, 2020
+
+### Enhancements
+
+- Fixed value inconsistency on attributes `displayName` and `imageUrl` for `NexmoUser` object.
+- Improved outbound call and conversation stability.
+
 ## Version 2.8.0 - Nov 19, 2020
 
 ### Changed
