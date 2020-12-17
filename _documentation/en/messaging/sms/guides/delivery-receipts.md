@@ -96,9 +96,9 @@ The `err-code` field in the DLR provides more detailed information and can help 
 | 13         | Subscriber Age Restriction    | The target cannot receive your message due to their age                                                                                      |
 | 14         | Number Blocked by Carrier     | The recipient should ask their carrier to enable SMS on their plan                                                                           |
 | 15         | Prepaid Insufficient Funds    | The recipient is on a prepaid plan and does not have enough credit to receive your message                                                   |
-| 50         | Entity Filter                 | The message failed due to entity id being incorrect or not provided. [More information on country specific regulations](https://help.nexmo.com/hc/en-us/articles/115011781468) |
+| 50         | Entity Filter                 | The message failed due to `entity-id` being incorrect or not provided. [More information on country specific regulations](https://help.nexmo.com/hc/en-us/articles/115011781468) |
 | 51         | Header Filter                 | The message failed due to header id being incorrect or not provided. [More information on country specific regulations](https://help.nexmo.com/hc/en-us/articles/115011781468) |
-| 52         | Content Filter                | The message failed due to content id being incorrect or not provided. [More information on country specific regulations](https://help.nexmo.com/hc/en-us/articles/115011781468) |
+| 52         | Content Filter                | The message failed due to `content-id` being incorrect or not provided. [More information on country specific regulations](https://help.nexmo.com/hc/en-us/articles/115011781468) |
 | 53         | Consent Filter                | The message failed due to consent not being authorized. [More information on country specific regulations](https://help.nexmo.com/hc/en-us/articles/115011781468) |
 | 54         | Regulation Error              | Unexpected regulation error - contact <mailto:support@nexmo.com>                                                                         |
 | 99         | General Error                 | Typically refers to an error in the route - contact <mailto:support@nexmo.com>                                                               |
