@@ -37,7 +37,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
             android:name="com.vonage.tutorial.voice.LoginFragment"
             tools:layout="@layout/fragment_login">
         <action
-                android:id="@+id/action_loginFragment_to_mainFragment"
+                android:id="@+id/action_loginFragment_to_voiceFragment"
                 app:destination="@id/mainFragment" />
     </fragment>
     <fragment
@@ -45,14 +45,37 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
             android:name="com.vonage.tutorial.voice.MainFragment"
             tools:layout="@layout/fragment_main">
         <action
+                android:id="@+id/action_mainFragment_to_incomingCallFragment"
+                app:destination="@id/incomingCallFragment" />
+        <action
                 android:id="@+id/action_mainFragment_to_onCallFragment"
                 app:destination="@id/onCallFragment" />
+        <argument
+                android:name="userName"
+                app:argType="string" />
     </fragment>
+
 
     <fragment
             android:id="@+id/onCallFragment"
             android:name="com.vonage.tutorial.voice.OnCallFragment"
-            tools:layout="@layout/fragment_on_call" />
+            tools:layout="@layout/fragment_on_call">
+        <argument
+                android:name="otherUserName"
+                app:argType="string" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/incomingCallFragment"
+            android:name="com.vonage.tutorial.voice.IncomingCallFragment"
+            tools:layout="@layout/fragment_incoming_call">
+        <argument
+                android:name="otherUserName"
+                app:argType="string" />
+        <action
+                android:id="@+id/action_incomingCallFragment_to_onCallFragment"
+                app:destination="@id/onCallFragment" />
+    </fragment>
 
 </navigation>
 ```
