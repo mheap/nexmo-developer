@@ -144,4 +144,47 @@ public class OnCallViewModel extends ViewModel {
 }
 ```
 
+## `IncomingCall` screen 
+
+To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_incoming_call` as file name and press `OK`.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
+```
+
+To create fragment right click on `com.vonage.tutorial.voice` package, select `New` > `Java Class`, enter `IncomingCallFragment` as file name and select `Class`.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
+```
+
+Replace file content with below snippet:
+
+```java
+package com.vonage.tutorial.voice;
+
+import androidx.fragment.app.Fragment;
+
+public class IncomingCallFragment extends Fragment {
+}
+```
+
+To create view model right click on `com.vonage.tutorial.voice` package, select `New` > `Java Class`, enter `IncomingCallViewModel` as file name and select `Class`.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
+```
+
+Replace file content with below snippet:
+
+```java
+package com.vonage.tutorial.voice;
+
+import androidx.lifecycle.ViewModel;
+
+public class IncomingCallViewModel extends ViewModel {
+
+}
+```
+
 Run `Build` > `Make project` to make sure project is compiling.
