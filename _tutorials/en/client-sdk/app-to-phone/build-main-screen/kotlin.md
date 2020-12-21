@@ -130,7 +130,7 @@ class MainViewModel : ViewModel() {
 
 ### Make a call
 
-Repleace `startAppToPhoneCall` method within the `MainViewModel` class to enable the call:
+Replace `startAppToPhoneCall` method within the `MainViewModel` class to enable the call:
 
 ```kotlin
 @SuppressLint("MissingPermission")
@@ -143,7 +143,7 @@ fun startAppToPhoneCall() {
 
 ### Add call start listener
 
-Repleace `callListener` property with below implementation to know when call has started:
+Replace `callListener` property with below implementation to know when call has started:
 
 ```java
 private val callListener = object : NexmoRequestListener<NexmoCall> {

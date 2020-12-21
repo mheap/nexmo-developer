@@ -101,7 +101,7 @@ public class MainViewModel extends ViewModel {
 }
 ```
 
-## OnCall screen
+## `OnCall` screen 
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_on_call` as file name and press `OK`.
 

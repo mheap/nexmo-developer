@@ -89,7 +89,7 @@ public class MainViewModel : ViewModel()
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
-## OnCall screen
+## `OnCall` screen 
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_on_call` as file name and press `OK`.
 
