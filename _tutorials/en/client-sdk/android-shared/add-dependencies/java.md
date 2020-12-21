@@ -28,7 +28,7 @@ allprojects {
 
 > **NOTE** You can use `Navigate file` action to opn any file in the project. Run keyboard shortcut (Mac: `Shift + Cmd + O` ; Win: `Shift + Ctrl + O`) and typefile name.
 
-Now add the Client SDK to the project. Add the following dependency in the module level `build.gradle` file:
+Now add the Client SDK dependency to the project. Add the following dependency in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
@@ -59,10 +59,6 @@ buildscript {
 Now in the same file add dependency for Gradle `Safe Args` plugin that provides type safety when navigating and passing data between destinations.
 Add new `classpath` in the `dependencies` block:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
-```
-
 ```groovy
 dependencies {
     // ...
@@ -84,11 +80,7 @@ plugins {
 }
 ```
 
-Finally you add navigation component dependencies in the module level `build.gradle` file:
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
-```
+Now in the same file add navigation component dependencies:
 
 ```groovy
 dependencies {

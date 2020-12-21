@@ -197,7 +197,7 @@ private NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<
 Open `MainFragment` and Replace file content with below code snippet:
 
 ```java
-package com.vonage.tutorial.voice.view.main;
+package com.vonage.tutorial.voice;
 
 import android.os.Bundle;
 import android.view.View;
@@ -209,8 +209,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import com.vonage.tutorial.R;
-import com.vonage.tutorial.voice.BackPressHandler;
 
 public class MainFragment extends Fragment implements BackPressHandler {
 

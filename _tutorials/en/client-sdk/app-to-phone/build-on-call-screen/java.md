@@ -165,7 +165,7 @@ private void hangupInternal() {
 Open `OnallFragment` and Replace file content with below code snippet:
 
 ```java
-package com.vonage.tutorial.voice.view.oncall;
+package com.vonage.tutorial.voice;
 
 import android.os.Bundle;
 import android.view.View;
@@ -175,15 +175,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.vonage.tutorial.voice.BackPressHandler;
-import com.vonage.tutorial.voice.OnCallViewModel;
-import com.vonage.tutorial.voice.R;
 
 public class OnCallFragment extends Fragment implements BackPressHandler {
 
     OnCallViewModel viewModel;
 
-    FloatingActionButton endCall;
+    Button endCall;
 
     public OnCallFragment() {
         super(R.layout.fragment_on_call);

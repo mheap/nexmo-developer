@@ -28,7 +28,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```kotlin
-package com.vonage.tutorial.messaging
+package com.vonage.tutorial.voice
 
 import androidx.fragment.app.Fragment
 
@@ -44,7 +44,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```kotlin
-ppackage com.vonage.tutorial.messaging
+package com.vonage.tutorial.voice
 
 import androidx.lifecycle.ViewModel
 
@@ -70,7 +70,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```kotlin
-package com.vonage.tutorial.messaging
+package com.vonage.tutorial.voice
 
 import androidx.fragment.app.Fragment
 
@@ -80,7 +80,7 @@ class MainFragment : Fragment()
 To create view model right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `MainViewModel` as file name and select `Class`.
 
 ```kotlin
-package com.vonage.tutorial.messaging
+package com.vonage.tutorial.voice
 
 import androidx.lifecycle.ViewModel
 
@@ -110,7 +110,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```kotlin
-package com.vonage.tutorial.messaging
+package com.vonage.tutorial.voice
 
 import androidx.fragment.app.Fragment
 
@@ -120,7 +120,7 @@ class OnCallFragment : Fragment()
 To create view model right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `OnCallViewModel` as file name and select `Class`.
 
 ```kotlin
-package com.vonage.tutorial.messaging
+package com.vonage.tutorial.voice
 
 import androidx.lifecycle.ViewModel
 

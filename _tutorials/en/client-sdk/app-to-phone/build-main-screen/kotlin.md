@@ -176,7 +176,7 @@ private val callListener = object : NexmoRequestListener<NexmoCall> {
 Open `MainFragment` and Replace file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.voice.view.main
+package com.vonage.tutorial.voice
 
 import android.os.Bundle
 import android.view.View

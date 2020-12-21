@@ -30,7 +30,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```java
-package com.vonage.tutorial.messaging;
+package com.vonage.tutorial.voice;
 
 import androidx.fragment.app.Fragment;
 
@@ -49,7 +49,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```java
-package com.vonage.tutorial.messaging;
+package com.vonage.tutorial.voice;
 
 import androidx.lifecycle.ViewModel;
 
@@ -75,7 +75,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```java
-package com.vonage.tutorial.messaging;
+package com.vonage.tutorial.voice;
 
 import androidx.fragment.app.Fragment;
 
@@ -92,7 +92,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```java
-package com.vonage.tutorial.messaging;
+package com.vonage.tutorial.voice;
 
 import androidx.lifecycle.ViewModel;
 
@@ -118,7 +118,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```java
-package com.vonage.tutorial.messaging;
+package com.vonage.tutorial.voice;
 
 import androidx.fragment.app.Fragment;
 
@@ -135,7 +135,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 Replace file content with below snippet:
 
 ```java
-package com.vonage.tutorial.messaging;
+package com.vonage.tutorial.voice;
 
 import androidx.lifecycle.ViewModel;
 
