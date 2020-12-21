@@ -26,7 +26,7 @@ allprojects {
 }
 ```
 
-> **NOTE** You can use `Navigate file` action to opn any file in the project. Run keyboard shortcut (Mac: `Shift + Cmd + O` ; Win: `Shift + Ctrl + O`) and type filename.
+> **NOTE** You can use `Navigate file` action to open any file in the project. Run keyboard shortcut (Mac: `Shift + Cmd + O` ; Win: `Shift + Ctrl + O`) and type filename.
 
 Now add the Client SDK to the project. Add the following dependency in the module level `build.gradle` file.:
 
