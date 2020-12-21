@@ -25,6 +25,6 @@ Open Android Studio and, from the menu, select `File` > `New` > `New Project...`
 image: public/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png
 ```
 
-Enter `client-sdk-app-to-phone` as project name, `com.vonage.tutorial.voice` as package, select `Kotlin` language and press `Finish` button.
+Enter `client-sdk-app-to-phone` as project name, `com.vonage.tutorial.voice` as package, select `Java` language and press `Finish` button.
 
 You now have a brand new Android Project.
