@@ -207,4 +207,4 @@ public class OnCallFragment extends Fragment implements BackPressHandler {
 }
 ```
 
-You are done. It's time to run the app.
+You are done. It's time to run the app and make the call.

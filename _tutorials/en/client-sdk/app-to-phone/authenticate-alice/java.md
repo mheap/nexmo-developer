@@ -81,7 +81,6 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import com.nexmo.client.NexmoClient;
 import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus;
-import com.nexmo.clientcore.model.user.User;
 
 public class LoginViewModel extends ViewModel {
 

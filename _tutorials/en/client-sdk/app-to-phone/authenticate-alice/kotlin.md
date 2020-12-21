@@ -68,19 +68,18 @@ Replace file content with below code snippet:
 
 ## Update `LoginViewModel`
 
-Replace `ViewModel.kt` file content with below code snippet:
+Replace `LoginViewModel.kt` file content with below code snippet:
 
 Replace file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.voice;
+package com.vonage.tutorial.voice
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
-import com.nexmo.client.NexmoClient;
-import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus;
-import com.nexmo.clientcore.model.user.User;
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.nexmo.client.NexmoClient
+import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
 
 class LoginViewModel : ViewModel() {
 
@@ -163,11 +162,12 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.NonNull
-import androidx.annotation.Nullable
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatus
+import kotlin.properties.Delegates
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
 

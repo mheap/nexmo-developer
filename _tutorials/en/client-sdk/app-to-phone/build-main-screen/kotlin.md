@@ -88,20 +88,16 @@ Replace file content with below code snippet:
 Open `MainViewModel` and Replace file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.voice.view.main
+package com.vonage.tutorial.voice
 
 import android.annotation.SuppressLint
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.nexmo.client.NexmoCall
 import com.nexmo.client.NexmoCallHandler
 import com.nexmo.client.NexmoClient
-import com.nexmo.client.request_listener.NexmoApiError
 import com.nexmo.client.request_listener.NexmoRequestListener
-import com.vonage.tutorial.voice.extension.asLiveData
-import com.vonage.tutorial.voice.util.CallManager
-import com.vonage.tutorial.voice.util.NavManager
-import timber.log.Timber
 
 class MainViewModel : ViewModel() {
 
@@ -110,10 +106,10 @@ class MainViewModel : ViewModel() {
     private val navManager = NavManager
 
     private val _toast = MutableLiveData<String>()
-    val toast = _toast as MutableLiveData<String>
+    val toast = _toast as LiveData<String>
 
     private val _loading = MutableLiveData<Boolean>()
-    val loading = _loading as MutableLiveData<Boolean>
+    val loading = _loading as LiveData<Boolean>
 
     private val callListener: NexmoRequestListener<NexmoCall> = TODO("Implement call listener")
 
@@ -141,7 +137,7 @@ Repleace `startAppToPhoneCall` method within the `MainViewModel` class to enable
 fun startAppToPhoneCall() {
     // Callee number is ignored because it is specified in NCCO config
     client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, callListener)
-    loadingMutableLiveData.postValue(true)
+    _loading.postValue(true)
 }
 ```
 
@@ -161,7 +157,6 @@ private val callListener = object : NexmoRequestListener<NexmoCall> {
         }
 
         override fun onError(apiError: NexmoApiError) {
-            Timber.e(apiError.message)
             _toast.postValue(apiError.message)
             _loading.postValue(false)
         }
@@ -182,14 +177,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.navArgs
-import com.vonage.tutorial.R
-import com.vonage.tutorial.voice.BackPressHandler
-import com.vonage.tutorial.voice.extension.toast
 import kotlin.properties.Delegates
 
 class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
@@ -202,12 +194,10 @@ class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
         progressBar.isVisible = newValue
     }
 
-    private val args: MainFragmentArgs by navArgs()
-
     private val viewModel by viewModels<MainViewModel>()
 
     private val toastObserver = Observer<String> {
-        context?.toast(it)
+        Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show();
     }
 
     private val loadingObserver = Observer<Boolean> {
@@ -234,4 +224,4 @@ class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
 }
 ```
 
-Now you can login and make a call. Last screen to implement is `on call screen`, where you can manage with existing call.
+Now you can login and make a call. Last screen to implement is `on call screen`, where you can end existing call.

@@ -23,42 +23,40 @@ Replace file content with below code snippet:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="48dp">
+        android:padding="10dp">
+
+    <Button
+            android:id="@+id/endCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End call"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
 
     <TextView
-            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top|center_horizontal"
             android:layout_marginTop="50dp"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/on_a_call"
+            android:text="On call"
             android:textColor="@color/white"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            app:layout_constraintTop_toBottomOf="@id/endCall"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
 
-    <Space
-            android:layout_width="1dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/hangupFab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="40dp"
-            android:src="@drawable/ic_end_call"
-            app:backgroundTint="@color/negativeCallAction"
-            app:fabSize="normal" />
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
 ## Update `OnCallViewModel`
@@ -66,51 +64,36 @@ Replace file content with below code snippet:
 Open `OnCallViewModel` and Replace file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.voice.view.oncall
+package com.vonage.tutorial.voice
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.nexmo.client.NexmoCall
 import com.nexmo.client.NexmoCallEventListener
 import com.nexmo.client.NexmoCallMember
 import com.nexmo.client.NexmoCallMemberStatus
 import com.nexmo.client.NexmoMediaActionState
-import com.nexmo.client.request_listener.NexmoApiError
-import com.nexmo.client.request_listener.NexmoRequestListener
-import com.vonage.tutorial.R
-import com.vonage.tutorial.voice.extension.asLiveData
-import com.vonage.tutorial.voice.util.CallManager
-import com.vonage.tutorial.voice.util.NavManager
-import timber.log.Timber
 
 class OnCallViewModel : ViewModel() {
     private val callManager = CallManager
     private val navManager = NavManager
 
     private val _toast = MutableLiveData<String>()
-    val toast = _toast.asLiveData()
+    val toast = _toast as LiveData<String>
 
     private val callEventListener = object : NexmoCallEventListener {
         override fun onMemberStatusUpdated(nexmoCallStatus: NexmoCallMemberStatus, callMember: NexmoCallMember) {
-            Timber.d("CallEventListener.onMemberStatusUpdated: ${callMember.user.name} : $nexmoCallStatus")
-
-            if (nexmoCallStatus == NexmoCallMemberStatus.COMPLETED || nexmoCallStatus == NexmoCallMemberStatus.CANCELED) {
+            if (nexmoCallStatus == NexmoCallMemberStatus.COMPLETED || nexmoCallStatus == NexmoCallMemberStatus.CANCELLED) {
                 callManager.onGoingCall = null
                 navManager.popBackStack(R.id.mainFragment, false)
             }
         }
 
-        override fun onMuteChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoCallMember) {
-            Timber.d("CallEventListener.onMuteChanged: ${callMember.user.name} : $nexmoMediaActionState")
-        }
+        override fun onMuteChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoCallMember) {}
 
-        override fun onEarmuffChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoCallMember) {
-            Timber.d("CallEventListener.onEarmuffChanged: ${callMember.user.name} : $nexmoMediaActionState")
-        }
+        override fun onEarmuffChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoCallMember) {}
 
-        override fun onDTMF(dtmf: String, callMember: NexmoCallMember) {
-            Timber.d("CallEventListener.onDTMF: ${callMember.user.name} : $dtmf")
-        }
+        override fun onDTMF(dtmf: String, callMember: NexmoCallMember) {}
     }
 
     init {
@@ -148,7 +131,6 @@ private fun hangupInternal() {
     callManager.onGoingCall?.hangup(object : NexmoRequestListener<NexmoCall> {
         override fun onSuccess(call: NexmoCall?) {
             callManager.onGoingCall = null
-            navManager.popBackStack()
         }
 
         override fun onError(apiError: NexmoApiError) {
@@ -163,25 +145,25 @@ private fun hangupInternal() {
 Open `OnCallFragment` and Replace file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.voice.view.oncall
+package com.vonage.tutorial.voice
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import com.vonage.tutorial.R
-import com.vonage.tutorial.voice.BackPressHandler
-import com.vonage.tutorial.voice.extension.toast
-import kotlinx.android.synthetic.main.fragment_on_call.*
 
 class OnCallFragment : Fragment(R.layout.fragment_on_call),
     BackPressHandler {
 
+    private lateinit var endCall: Button
+
     private val viewModel by viewModels<OnCallViewModel>()
 
     private val toastObserver = Observer<String> {
-        context?.toast(it)
+        Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show();
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -189,8 +171,10 @@ class OnCallFragment : Fragment(R.layout.fragment_on_call),
 
         viewModel.toast.observe(viewLifecycleOwner, toastObserver)
 
-        hangupFab.setOnClickListener {
-            viewModel.endCall()
+        endCall = view.findViewById(R.id.endCall)
+
+        endCall.setOnClickListener {
+            viewModel.hangup()
         }
     }
 
@@ -200,4 +184,4 @@ class OnCallFragment : Fragment(R.layout.fragment_on_call),
 }
 ```
 
-You are done. It's time to run the app.
+You are done. It's time to run the app and make the call.

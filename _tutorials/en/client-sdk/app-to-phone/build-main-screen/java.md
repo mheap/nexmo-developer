@@ -263,4 +263,4 @@ public class MainFragment extends Fragment implements BackPressHandler {
 }
 ```
 
-Now you can login and make a call. Last screen to implement is `on call screen`, where you can manage with existing call.
+Now you can login and make a call. Last screen to implement is `on call screen`, where you can end existing call.

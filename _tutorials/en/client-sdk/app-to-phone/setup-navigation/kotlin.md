@@ -51,7 +51,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 
     <fragment
             android:id="@+id/onCallFragment"
-            android:name="com.vonage.tutorial.OnCallFragment"
+            android:name="com.vonage.tutorial.voice.OnCallFragment"
             tools:layout="@layout/fragment_on_call" />
 
 </navigation>
@@ -175,7 +175,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         
         // ...
 
-        val navController = findNavController(this, R.id.navHostFragment)
+        val navController = Navigation.findNavController(this, R.id.navHostFragment)
         NavManager.init(navController)
     }
 

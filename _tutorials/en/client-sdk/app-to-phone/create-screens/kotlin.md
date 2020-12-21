@@ -48,9 +48,7 @@ package com.vonage.tutorial.voice
 
 import androidx.lifecycle.ViewModel
 
-public class LoginViewModel : ViewModel() {
-
-}
+public class LoginViewModel : ViewModel()
 ```
 
 ## Main screen
@@ -84,9 +82,7 @@ package com.vonage.tutorial.voice
 
 import androidx.lifecycle.ViewModel
 
-public class MainViewModel : ViewModel() {
-
-}
+public class MainViewModel : ViewModel()
 ```
 
 ```screenshot
@@ -124,9 +120,7 @@ package com.vonage.tutorial.voice
 
 import androidx.lifecycle.ViewModel
 
-public class OnCallViewModel : ViewModel() {
-
-}
+public class OnCallViewModel : ViewModel()
 ```
 
 ```screenshot
