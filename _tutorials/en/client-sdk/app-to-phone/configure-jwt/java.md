@@ -37,26 +37,19 @@ Create `Config` class in the `com.vonage.tutorial.voice` package to store the co
 Replace file content with below code snippet:
 
 ```java
+package com.vonage.tutorial.voice;
+
 public class Config {
 
     public static User getAlice() {
         return new User(
                 "Alice",
-                "ALICE_TOKEN" // TODO: "set Bob JWT token"
+                "ALICE_TOKEN" // TODO: "set Alice JWT token"
         );
     }
-
-    public static User getBob() {
-        return new User(
-                "Bob",
-                "BOB_TOKEN" // TODO: "set Bob JWT token"
-        );
-    }
-
-    //...
 }
 ```
 
-Now it's time to fill previously generated JWT. Replace `ALICE_TOKEN` and `BOB_TOKEN` placeholders with real values:
+Now it's time to fill previously generated JWT. Replace `ALICE_TOKEN` placeholder with real value obtained in a previous step.
 
-Notice that these values are hardcoded. This makes it easier to use these values later in this tutorial, however in production application they should be retrieved from external API.
+Notice that these constants and values are hardcoded to store the properties of users. This makes it easier to use these values later in this tutorial.

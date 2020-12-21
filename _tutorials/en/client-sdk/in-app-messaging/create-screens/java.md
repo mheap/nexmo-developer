@@ -13,7 +13,7 @@ You will now create placeholders for screens in the application (we will define 
 
 We will define layouts and functionality in following steps of this tutorial.
 
-## Login screen
+## `Login` screen
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_login` as file name and press `OK`.
 

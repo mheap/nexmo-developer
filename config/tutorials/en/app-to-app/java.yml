@@ -27,12 +27,12 @@ tasks:
   - client-sdk/android-shared/generate-jwt-alice-and-bob
   - client-sdk/app-to-app/create-project
   - client-sdk/android-shared/add-dependencies
-  - client-sdk/app-to-phone/create-screens
-  - client-sdk/app-to-phone/setup-navigation
-  - client-sdk/app-to-phone/add-permissions
-  - client-sdk/app-to-phone/configure-jwt
+  - client-sdk/app-to-app/create-screens
+  - client-sdk/app-to-app/setup-navigation
+  - client-sdk/app-to-app/add-permissions
+  - client-sdk/app-to-app/configure-jwt
   - client-sdk/android-shared/initialize-client
-  - client-sdk/android-shared/authenticate-alice-and-bob
+  - client-sdk/app-to-app/authenticate-alice-and-bob
   - client-sdk/app-to-app/receive-call
   - client-sdk/app-to-app/make-call
   - client-sdk/android-shared/run-app
