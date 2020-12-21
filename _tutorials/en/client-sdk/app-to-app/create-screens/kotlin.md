@@ -53,7 +53,7 @@ public class LoginViewModel : ViewModel()
 
 ## Main screen
 
-To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_Main` as file name and press `OK`.
+To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_main` as file name and press `OK`.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
