@@ -38,7 +38,7 @@ Replace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     <Button
             android:id="@+id/loginAsBobButton"
@@ -81,9 +81,6 @@ Replace file content with below code snippet:
 
 Replace `ViewModel.java` file content with below code snippet:
 
-Replace file content with below code snippet:
-
-
 ```java
 package com.vonage.tutorial.voice;
 
@@ -96,8 +93,6 @@ import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatu
 public class LoginViewModel extends ViewModel {
 
     private NexmoClient client = null; // TODO: Retrieve NexmoClient instance
-
-    private User user = null;
 
     NavManager navManager = NavManager.getInstance();
 
@@ -127,9 +122,7 @@ private NexmoClient client = NexmoClient.get();
 Your user must be authenticated to be able to participate in the Conversation. Replace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```java
-void onLoginUser(User user) {
-    this.user = user;
-    
+void onLoginUser(User user) {    
     if (!user.jwt.trim().isEmpty()) {
         client.login(user.jwt);
     }
@@ -149,17 +142,14 @@ public class LoginViewModel extends ViewModel {
     // ...
 
     public LoginViewModel() {
-        client.setConnectionListener(new NexmoConnectionListener() {
-            @Override
-            public void onConnectionStatusChange(@NonNull ConnectionStatus connectionStatus, @NonNull ConnectionStatusReason connectionStatusReason) {
-                if (connectionStatus == ConnectionStatus.CONNECTED) {
-                    NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment();
-        navManager.navigate(navDirections);
-                    return;
-                }
-
-                _connectionStatusMutableLiveData.postValue(connectionStatus);
+        client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
+            if (connectionStatus == ConnectionStatus.CONNECTED) {
+                NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment();
+                navManager.navigate(navDirections);
+                return;
             }
+
+            _connectionStatusMutableLiveData.postValue(connectionStatus);
         });
     }
 
@@ -191,6 +181,7 @@ import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatu
 public class LoginFragment extends Fragment {
 
     private Button loginAsAliceButton;
+    private Button loginAsBobButton;
     private ProgressBar progressBar;
     private TextView connectionStatusTextView;
 
@@ -215,15 +206,17 @@ public class LoginFragment extends Fragment {
         });
 
         loginAsAliceButton = view.findViewById(R.id.loginAsAliceButton);
+        loginAsBobButton = view.findViewById(R.id.loginAsBobButton);
         progressBar = view.findViewById(R.id.progressBar);
         connectionStatusTextView = view.findViewById(R.id.connectionStatusTextView);
 
-
         loginAsAliceButton.setOnClickListener(it -> loginUser(Config.getAlice()));
+        loginAsBobButton.setOnClickListener(it -> loginUser(Config.getBob()));
     }
 
     private void setDataLoading(Boolean dataLoading) {
         loginAsAliceButton.setEnabled(!dataLoading);
+        loginAsBobButton.setEnabled(!dataLoading);
 
         int visibility;
 

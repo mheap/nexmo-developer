@@ -3,7 +3,7 @@ title: Build on call screen
 description: In this step you build OnCall screen.
 ---
 
-# Call
+# Build on call screen
 
 On call screen (`OnCallFragment` and `OnCallViewModel` classes) is responsible for starting a call.
 
@@ -207,4 +207,4 @@ public class OnCallFragment extends Fragment implements BackPressHandler {
 }
 ```
 
-You are done. It's time to run the app and make the call.
+You are almoust done. Run `Build` > `Make project` to make sure project is compiling.

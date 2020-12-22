@@ -38,7 +38,7 @@ Replace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     <Button
             android:id="@+id/loginAsBobButton"
@@ -81,8 +81,6 @@ Replace file content with below code snippet:
 
 Replace `LoginViewModel.kt` file content with below code snippet:
 
-Replace file content with below code snippet:
-
 ```kotlin
 package com.vonage.tutorial.voice
 
@@ -95,8 +93,6 @@ import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatu
 class LoginViewModel : ViewModel() {
 
     private val navManager = NavManager
-
-    private val user: User? = null
 
     private val _connectionStatus = MutableLiveData<ConnectionStatus>()
     val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
@@ -127,8 +123,6 @@ Your user must be authenticated to be able to participate in the Conversation. R
 
 ```kotlin
 fun onLoginUser(user: User) {
-    this.user = user
-
     if (user.jwt.isNotBlank()) {
         client.login(user.jwt)
     }
@@ -148,10 +142,8 @@ class LoginViewModel : ViewModel() {
         client.setConnectionListener { newConnectionStatus, _ ->
 
             if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                user?.let {
-                    val navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment(it.name)
-                    navManager.navigate(navDirections)
-                }
+                val navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment()
+                navManager.navigate(navDirections)
                 
                 return@setConnectionListener
             }
@@ -191,11 +183,13 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private val viewModel by viewModels<LoginViewModel>()
 
     private lateinit var loginAsAliceButton: Button
+    private lateinit var loginAsBobButton: Button
     private lateinit var progressBar: ProgressBar
     private lateinit var connectionStatusTextView: TextView
 
     private var dataLoading: Boolean by Delegates.observable(false) { _, _, newValue ->
         loginAsAliceButton.isEnabled = !newValue
+        loginAsBobButton.isEnabled = !newValue
         progressBar.isVisible = newValue
     }
 
@@ -213,11 +207,16 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         viewModel.connectionStatus.observe(viewLifecycleOwner, stateObserver)
 
         loginAsAliceButton = view.findViewById(R.id.loginAsAliceButton)
+        loginAsBobButton = view.findViewById(R.id.loginAsBobButton)
         progressBar = view.findViewById(R.id.progressBar)
         connectionStatusTextView = view.findViewById(R.id.connectionStatusTextView)
 
         loginAsAliceButton.setOnClickListener {
             loginUser(Config.alice)
+        }
+
+        loginAsBobButton.setOnClickListener {
+            loginUser(Config.bob)
         }
     }
 

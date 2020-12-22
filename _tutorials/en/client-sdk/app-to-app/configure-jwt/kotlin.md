@@ -22,8 +22,6 @@ object Config {
         "Bob",
         "BOB_TOKEN" // TODO: "set Bob's JWT token"
     )
-
-    fun getOtherUserName(userName: String) = if (userName == alice.name) bob.name else alice.name
 }
 
 data class User(
@@ -35,3 +33,5 @@ data class User(
 Now it's time to fill previously generated JWT. Replace `ALICE_TOKEN` and `BOB_TOKEN` placeholders with real values obtained in a previous step:
 
 Notice that these values are hardcoded. This makes it easier to use these values later in this tutorial, however in production application they should be retrieved from external API.
+
+Run `Build` > `Make project` to make sure project is compiling.

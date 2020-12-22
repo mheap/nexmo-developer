@@ -53,3 +53,5 @@ public class Config {
 Now it's time to fill previously generated JWT. Replace `ALICE_TOKEN` placeholder with real value obtained in a previous step.
 
 Notice that these constants and values are hardcoded to store the properties of users. This makes it easier to use these values later in this tutorial.
+
+Run `Build` > `Make project` to make sure project is compiling.

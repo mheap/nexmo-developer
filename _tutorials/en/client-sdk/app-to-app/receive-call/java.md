@@ -175,27 +175,43 @@ public class MainViewModel extends ViewModel {
 
 ```
 
-Locate the `incomingCallListener` property within the `MainViewModel` class and fill its body:
+### Make a call
+
+Replace `startAppToPhoneCall` method within the `MainViewModel` class to enable the call:
 
 ```java
-private NexmoIncomingCallListener incomingCallListener = call -> {
-    callManager.setOnGoingCall(call);
-    String otherUserName = call.getCallMembers().get(0).getUser().getName();
-    NavDirections navDirections = MainFragmentDirections.actionMainFragmentToIncomingCallFragment(otherUserName);
-    navManager.navigate(navDirections);
-};
+@SuppressLint("MissingPermission")
+public void startAppToPhoneCall() {
+    // Callee is ignored because it is specified in NCCO config
+    client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, callListener);
+    _loading.postValue(true);
+}
 ```
 
-Now you need to make sure that above listener will be called. Locate the `onInit` method within the `MainViewModel` class and configure listener:
+> **NOTE:** we set the `IGNORED_NUMBER` argument, because our number is specified in the NCCO config (Vonage application answer URL that you configured previously).
+
+### Add call start listener
+
+Replace `callListener` property with below implementation to know when call has started:
 
 ```java
-public void onInit(MainFragmentArgs mainFragmentArgs) {
-    // ...
+private NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<NexmoCall>() {
+    @Override
+    public void onSuccess(@Nullable NexmoCall call) {
+        callManager.setOnGoingCall(call);
 
-    // The same callback can be registered twice, so we are removing all callbacks to be save
-    client.removeIncomingCallListeners();
-    client.addIncomingCallListener(incomingCallListener);
-}
+        _loading.postValue(false);
+
+        NavDirections navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment();
+        navManager.navigate(navDirections);
+    }
+
+    @Override
+    public void onError(@NonNull NexmoApiError apiError) {
+        _toast.postValue(apiError.getMessage());
+        _loading.postValue(false);
+    }
+};
 ```
 
 ## Configure view

@@ -3,9 +3,9 @@ title: Build main screen
 description: In this step you build main screen.
 ---
 
-# Make a call
+# Build main screen
 
-Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call.
+Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call and listening for incomming call.
 
 ## Create `CallManager`
 
@@ -65,14 +65,6 @@ Replace file content with below code snippet:
         android:layout_height="match_parent"
         android:padding="48dp">
 
-    <TextView
-            android:id="@+id/currentUserNameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
-            android:textSize="25sp"
-            tools:text="Hello Alice" />
-
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -80,14 +72,23 @@ Replace file content with below code snippet:
             android:gravity="center"
             android:orientation="vertical">
 
-        <Button
-                android:id="@+id/startAppToPhoneCallButton"
+        <TextView
+                android:id="@+id/waitingTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
-                android:layout_marginTop="36dp"
+                android:textSize="20sp"
                 android:padding="16dp"
-                android:text="Make phone call" />
+                android:text="Waiting for incoming call" />
+
+        <Button
+                android:id="@+id/callBobButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Start call with Bob" />
 
         <androidx.core.widget.ContentLoadingProgressBar
                 android:id="@+id/progressBar"
@@ -116,8 +117,8 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.navigation.NavDirections;
 import com.nexmo.client.NexmoCall;
-import com.nexmo.client.NexmoCallHandler;
 import com.nexmo.client.NexmoClient;
+import com.nexmo.client.NexmoIncomingCallListener;
 import com.nexmo.client.request_listener.NexmoApiError;
 import com.nexmo.client.request_listener.NexmoRequestListener;
 
@@ -133,7 +134,31 @@ public class MainViewModel extends ViewModel {
     private MutableLiveData<Boolean> _loading = new MutableLiveData<>();
     public LiveData<Boolean> loading = _loading;
 
-    private NexmoRequestListener<NexmoCall> callListener = null // TODO: Implement call listener
+    private NexmoIncomingCallListener incomingCallListener = call -> {
+        // TODO: "Fill listener body"
+    };
+
+    private NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<NexmoCall>() {
+        @Override
+        public void onSuccess(@Nullable NexmoCall call) {
+            callManager.setOnGoingCall(call);
+
+            _loading.postValue(false);
+
+            NavDirections navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment();
+            navManager.navigate(navDirections);
+        }
+
+        @Override
+        public void onError(@NonNull NexmoApiError apiError) {
+            _toast.postValue(apiError.getMessage());
+            _loading.postValue(false);
+        }
+    };
+
+    public MainViewModel() {
+        // TODO: "Register incoming call listener"
+    }
 
     @Override
     protected void onCleared() {
@@ -141,16 +166,14 @@ public class MainViewModel extends ViewModel {
     }
 
     @SuppressLint("MissingPermission")
-    public void startAppToPhoneCall() {
-        // TODO: Start call
+    public void startAppToAppCall() {
+        // TODO: Start a call
     }
 
     public void onBackPressed() {
         client.logout();
     }
 }
-
-
 ```
 
 ### Make a call
@@ -159,14 +182,13 @@ Replace `startAppToPhoneCall` method within the `MainViewModel` class to enable 
 
 ```java
 @SuppressLint("MissingPermission")
-public void startAppToPhoneCall() {
-    // Callee is ignored because it is specified in NCCO config
-    client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, callListener);
+public void startAppToAppCall() {
+    client.call("IGNORED", NexmoCallHandler.SERVER, callListener);
     _loading.postValue(true);
 }
 ```
 
-### Add call start listener
+> **NOTE:** we set the `IGNORED` argument, because our number is specified in the NCCO config (Vonage application answer URL that you configured previously).
 
 Replace `callListener` property with below implementation to know when call has started:
 
@@ -190,7 +212,27 @@ private NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<
 };
 ```
 
-> **NOTE:** we set the `IGNORED_NUMBER` argument, because our number is specified in the NCCO config (Vonage application answer URL that you configured previously).
+### Handle incoming calls
+
+Fill the body of `incomingCallListener` listener:
+
+```java
+private NexmoIncomingCallListener incomingCallListener = call -> {
+    callManager.setOnGoingCall(call);
+    NavDirections navDirections = MainFragmentDirections.actionMainFragmentToIncomingCallFragment();
+    navManager.navigate(navDirections);
+};
+```
+
+Register `incomingCallListener` inside `MainViewModel` constructor:
+
+```java
+public MainViewModel() {
+    client.addIncomingCallListener(incomingCallListener);
+}
+```
+
+Register 
 
 ## Update `MainFragment`
 

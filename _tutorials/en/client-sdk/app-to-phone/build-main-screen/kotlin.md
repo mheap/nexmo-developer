@@ -9,7 +9,7 @@ Main screen (`MainFragment` and `MainViewModel` classes) is responsible for star
 
 ## Create `CallManager`
 
-Currently client SDK does not store call reference. We need to store call reference in the `CallManager` class, so it can be accessed from another screens.
+Currently client SDK does not store call reference. We need to store call reference in the `CallManager` class, so it can be accessed from all screens.
 
 Create `CallManager.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `voice` package and select `New` > `Kotlin Class/File`. Enter `CallManager` and select `Class`.
 
@@ -135,7 +135,7 @@ Replace `startAppToPhoneCall` method within the `MainViewModel` class to enable 
 ```kotlin
 @SuppressLint("MissingPermission")
 fun startAppToPhoneCall() {
-    // Callee number is ignored because it is specified in NCCO config
+    // Callee is ignored because it is specified in NCCO config
     client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, callListener)
     _loading.postValue(true)
 }
