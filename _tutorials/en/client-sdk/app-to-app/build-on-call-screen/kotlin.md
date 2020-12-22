@@ -184,4 +184,4 @@ class OnCallFragment : Fragment(R.layout.fragment_on_call),
 }
 ```
 
-You are almoust done. Run `Build` > `Make project` to make sure project is compiling.
+You are almost done. Run `Build` > `Make project` to make sure project is compiling.

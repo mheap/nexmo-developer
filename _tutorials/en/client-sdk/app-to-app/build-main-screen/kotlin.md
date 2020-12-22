@@ -5,7 +5,7 @@ description: In this step you build main screen.
 
 # Build main screen
 
-Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call and listening for incomming call.
+Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call and listening for incoming call.
 
 ## Create `CallManager`
 

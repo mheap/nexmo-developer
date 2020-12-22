@@ -207,4 +207,4 @@ public class OnCallFragment extends Fragment implements BackPressHandler {
 }
 ```
 
-You are almoust done. Run `Build` > `Make project` to make sure project is compiling.
+You are almost done. Run `Build` > `Make project` to make sure project is compiling.

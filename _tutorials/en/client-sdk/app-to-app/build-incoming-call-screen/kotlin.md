@@ -3,7 +3,7 @@ title: Build incoming call screen
 description: In this step you build OnCall screen.
 ---
 
-# Build  incomming call sreen
+# Build  incoming call screen
 
 On call screen (`IncomingCallFragment` and `OnCallViewModel` classes) is responsible for answering incoming a call.
 
