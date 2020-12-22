@@ -58,64 +58,52 @@ Replace file content with below code snippet:
 </LinearLayout>
 ```
 
-## Update `OnCallViewModel`
+## Update `IncommingCallViewModel`
 
-Open `OnCallViewModel` and Replace file content with below code snippet:
+Open `IncommingCallViewModel` and Replace file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.voice
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.nexmo.client.NexmoCallEventListener
-import com.nexmo.client.NexmoCallMember
-import com.nexmo.client.NexmoCallMemberStatus
-import com.nexmo.client.NexmoMediaActionState
+import com.nexmo.client.NexmoCall
+import com.nexmo.client.request_listener.NexmoApiError
+import com.nexmo.client.request_listener.NexmoRequestListener
 
-class OnCallViewModel : ViewModel() {
-    private val callManager = CallManager
-    private val navManager = NavManager
-
+class IncomingCallViewModel : ViewModel() {
+    private val navManager: NavManager = NavManager
+    private val callManager: CallManager = CallManager
+    
     private val _toast = MutableLiveData<String>()
-    val toast = _toast as LiveData<String>
+    var toast: LiveData<String> = _toast
+    
+    fun hangup() {
+        hangupInternal(true)
+    }
 
-    private val callEventListener = object : NexmoCallEventListener {
-        override fun onMemberStatusUpdated(nexmoCallStatus: NexmoCallMemberStatus, callMember: NexmoCallMember) {
-            if (nexmoCallStatus == NexmoCallMemberStatus.COMPLETED || nexmoCallStatus == NexmoCallMemberStatus.CANCELLED) {
-                callManager.onGoingCall = null
-                navManager.popBackStack(R.id.mainFragment, false)
+    @SuppressLint("MissingPermission")
+    fun answer() {
+        callManager.onGoingCall?.answer(object : NexmoRequestListener<NexmoCall?> {
+            override fun onSuccess(call: NexmoCall?) {
+                val navDirections = IncomingCallFragmentDirections.actionIncomingCallFragmentToOnCallFragment()
+                navManager.navigate(navDirections)
             }
-        }
 
-        override fun onMuteChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoCallMember) {}
-
-        override fun onEarmuffChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoCallMember) {}
-
-        override fun onDTMF(dtmf: String, callMember: NexmoCallMember) {}
-    }
-
-    init {
-        val onGoingCall = checkNotNull(callManager.onGoingCall) { "Call is null" }
-        onGoingCall.addCallEventListener(callEventListener)
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-
-        callManager.onGoingCall?.removeCallEventListener(callEventListener)
+            override fun onError(apiError: NexmoApiError) {
+                _toast.postValue(apiError.message)
+            }
+        })
     }
 
     fun onBackPressed() {
-        hangupInternal()
+        hangupInternal(false)
     }
 
-    fun hangup() {
-        hangupInternal()
-    }
-
-    private fun hangupInternal() {
-        TODO("Hangup incoming call")
+    private fun hangupInternal(popBackStack: Boolean?) {
+        // TODO: Hangup
     }
 }
 ```
@@ -139,9 +127,9 @@ private fun hangupInternal() {
 }
 ```
 
-## Update `OnCallFragment`
+## Update `IncomingCallFragment`
 
-Open `OnCallFragment` and Replace file content with below code snippet:
+Open `IncomingCallFragment` and Replace file content with below code snippet:
 
 ```kotlin
 package com.vonage.tutorial.voice
@@ -151,30 +139,27 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 
-class OnCallFragment : Fragment(R.layout.fragment_on_call),
-    BackPressHandler {
+class IncomingCallFragment : Fragment(R.layout.fragment_incoming_call), BackPressHandler {
 
-    private lateinit var endCall: Button
+    private lateinit var viewModel: IncomingCallViewModel
 
-    private val viewModel by viewModels<OnCallViewModel>()
-
-    private val toastObserver = Observer<String> {
-        Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show();
-    }
+    private lateinit var hangupButton: Button
+    private lateinit var answerButton: Button
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.toast.observe(viewLifecycleOwner, toastObserver)
+        viewModel = ViewModelProvider(requireActivity()).get(IncomingCallViewModel::class.java)
 
-        endCall = view.findViewById(R.id.endCall)
+        hangupButton = view.findViewById(R.id.hangupButton)
+        answerButton = view.findViewById(R.id.answerButton)
 
-        endCall.setOnClickListener {
-            viewModel.hangup()
-        }
+        viewModel.toast.observe(viewLifecycleOwner, { Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show() })
+
+        hangupButton.setOnClickListener { viewModel.hangup() }
+        answerButton.setOnClickListener { viewModel.answer() }
     }
 
     override fun onBackPressed() {

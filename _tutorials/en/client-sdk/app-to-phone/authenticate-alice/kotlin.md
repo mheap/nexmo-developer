@@ -206,7 +206,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun loginUser(user: User) {
         if (user.jwt.isBlank()) {
-            Toast.makeText(context, "Error: Please set Config.${user.name.toLowerCase()}.jwt", Toast.LENGTH_SHORT)
+            Toast.makeText(context, "Error: Please set Config.${user.name.toLowerCase()}.jwt", Toast.LENGTH_SHORT).show()
         } else {
             viewModel.onLoginUser(user)
             dataLoading = true

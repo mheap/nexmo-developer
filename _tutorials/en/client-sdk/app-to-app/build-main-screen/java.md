@@ -138,23 +138,7 @@ public class MainViewModel extends ViewModel {
         // TODO: "Fill listener body"
     };
 
-    private NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<NexmoCall>() {
-        @Override
-        public void onSuccess(@Nullable NexmoCall call) {
-            callManager.setOnGoingCall(call);
-
-            _loading.postValue(false);
-
-            NavDirections navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment();
-            navManager.navigate(navDirections);
-        }
-
-        @Override
-        public void onError(@NonNull NexmoApiError apiError) {
-            _toast.postValue(apiError.getMessage());
-            _loading.postValue(false);
-        }
-    };
+    private NexmoRequestListener<NexmoCall> callListener = null // TODO: Implement call listener
 
     public MainViewModel() {
         // TODO: "Register incoming call listener"

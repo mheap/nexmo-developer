@@ -177,7 +177,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
-import android.widget.TextView;
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -189,7 +188,6 @@ class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
 
     private lateinit var startAppToPhoneCallButton: Button
     private lateinit var progressBar: ProgressBar
-    private lateinit var waitingTextView: TextView
 
     private var dataLoading: Boolean by Delegates.observable(false) { _, _, newValue ->
         startAppToPhoneCallButton.isEnabled = !newValue
@@ -214,11 +212,6 @@ class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
 
         progressBar = view.findViewById(R.id.progressBar)
         startAppToPhoneCallButton = view.findViewById(R.id.startAppToPhoneCallButton)
-
-        MainFragmentArgs args = MainFragmentArgs.fromBundle(getArguments());
-        Boolean isBob = args.userName == Config.bob.name;
-        startAppToPhoneCallButton.setVisibility(isBob ? View.GONE : View.VISIBLE);
-        waitingTextView.setVisibility(isBob ? View.VISIBLE : View.GONE);
 
         startAppToPhoneCallButton.setOnClickListener {
             viewModel.startAppToPhoneCall()

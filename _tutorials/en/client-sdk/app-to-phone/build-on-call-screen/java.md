@@ -194,7 +194,7 @@ public class OnCallFragment extends Fragment implements BackPressHandler {
 
         endCall = view.findViewById(R.id.endCall);
 
-        viewModel.toast.observe(getViewLifecycleOwner(), it -> Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT));
+        viewModel.toast.observe(getViewLifecycleOwner(), it -> Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show());
 
         endCall.setOnClickListener(view1 -> viewModel.hangup());
     }

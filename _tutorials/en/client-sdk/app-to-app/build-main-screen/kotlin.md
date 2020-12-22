@@ -89,9 +89,10 @@ Replace file content with below code snippet:
 Open `MainViewModel` and Replace file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.voice.view.main
+package com.vonage.tutorial.voice
 
 import android.annotation.SuppressLint
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.nexmo.client.NexmoCall
@@ -100,12 +101,6 @@ import com.nexmo.client.NexmoClient
 import com.nexmo.client.NexmoIncomingCallListener
 import com.nexmo.client.request_listener.NexmoApiError
 import com.nexmo.client.request_listener.NexmoRequestListener
-import com.vonage.tutorial.voice.Config
-import com.vonage.tutorial.voice.extension.asLiveData
-import com.vonage.tutorial.voice.util.CallManager
-import com.vonage.tutorial.voice.util.NavManager
-import com.vonage.tutorial.voice.util.observer
-import timber.log.Timber
 
 class MainViewModel : ViewModel() {
 
@@ -114,30 +109,14 @@ class MainViewModel : ViewModel() {
     private val navManager = NavManager
 
     private val _toast = MutableLiveData<String>()
-    val toast = _toast.asLiveData()
+    val toast = _toast as LiveData<String>
 
     private val _loading = MutableLiveData<Boolean>()
-    val loading = _loading.asLiveData()
+    val loading = _loading as LiveData<Boolean>
 
-    private val incomingCallListener = NexmoIncomingCallListener { call ->
-        TODO("Fill listener body")
-    }
+    private val incomingCallListener: NexmoIncomingCallListener = TODO("Fill listener body")
 
-    private val callListener = object : NexmoRequestListener<NexmoCall> {
-        override fun onSuccess(call: NexmoCall?) {
-            callManager.onGoingCall = call
-
-            _loading.postValue(false)
-
-            val navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment()
-            navManager.navigate(navDirections)
-        }
-
-        override fun onError(apiError: NexmoApiError) {
-            _toast.postValue(apiError.message)
-            _loading.postValue(false)
-        }
-    }
+    private val callListener: NexmoRequestListener<NexmoCall> = TODO("Implement call listener")
 
     init {
         TODO("Register incoming call listener")
@@ -149,8 +128,7 @@ class MainViewModel : ViewModel() {
 
     @SuppressLint("MissingPermission")
     fun startAppToAppCall() {
-        client.call(otherUserName, NexmoCallHandler.IN_APP, callListener)
-        _loading.postValue(true)
+        TODO("Start the call")
     }
 
     fun onBackPressed() {
@@ -200,7 +178,7 @@ Fill the body of `incomingCallListener` listener:
 ```kotlin
 private val incomingCallListener = NexmoIncomingCallListener { it ->
     callManager.onGoingCall = it
-    val navDirections = MainFragmentDirections.actionMainFragmentToIncomingCallFragment(otherUserName)
+    val navDirections = MainFragmentDirections.actionMainFragmentToIncomingCallFragment()
     navManager.navigate(navDirections)
 }
 ```
@@ -209,7 +187,7 @@ Register `incomingCallListener` inside `init` block of `MainViewModel`:
 
 ```kotlin
 init {
-    client.addIncomingCallListener(incomingCallListener);
+    client.addIncomingCallListener(incomingCallListener)
 }
 ```
 
@@ -219,68 +197,65 @@ init {
 Open `MainFragment` and Replace file content with below code snippet:
 
 ```kotlin
-package com.vonage.tutorial.voice;
+package com.vonage.tutorial.voice
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.TextView;
+import android.widget.Toast
+import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import kotlin.properties.Delegates
 
-public class MainFragment extends Fragment implements BackPressHandler {
+class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
 
-    MainViewModel viewModel;
+    private lateinit var startAppToPhoneCallButton: Button
+    private lateinit var progressBar: ProgressBar
+    private lateinit var waitingTextView: TextView
 
-    Button startAppToPhoneCallButton;
-
-    ProgressBar progressBar;
-
-
-    private Observer<String> toastObserver = it -> Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show();
-
-    private Observer<Boolean> loadingObserver = this::setDataLoading;
-
-    public MainFragment() {
-        super(R.layout.fragment_main);
+    private var dataLoading: Boolean by Delegates.observable(false) { _, _, newValue ->
+        startAppToPhoneCallButton.isEnabled = !newValue
+        progressBar.isVisible = newValue
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    private val viewModel by viewModels<MainViewModel>()
 
-        startAppToPhoneCallButton = view.findViewById(R.id.callBobButton);
-        progressBar = view.findViewById(R.id.progressBar);
-
-        viewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
-
-        viewModel.toast.observe(getViewLifecycleOwner(), toastObserver);
-        viewModel.loading.observe(getViewLifecycleOwner(), loadingObserver);
-
-        startAppToPhoneCallButton.setOnClickListener(it -> viewModel.startAppToAppCall());
+    private val toastObserver = Observer<String> {
+        Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void onBackPressed() {
-        viewModel.onBackPressed();
+    private val loadingObserver = Observer<Boolean> {
+        dataLoading = it
     }
 
-    private void setDataLoading(Boolean dataLoading) {
-        startAppToPhoneCallButton.setEnabled(!dataLoading);
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        int visibility;
+        viewModel.toast.observe(viewLifecycleOwner, toastObserver)
+        viewModel.loading.observe(viewLifecycleOwner, loadingObserver)
 
-        if (dataLoading) {
-            visibility = View.VISIBLE;
-        } else {
-            visibility = View.GONE;
+        progressBar = view.findViewById(R.id.progressBar)
+        startAppToPhoneCallButton = view.findViewById(R.id.callBobButton)
+        waitingTextView = view.findViewById(R.id.waitingTextView)
+
+        startAppToPhoneCallButton.setOnClickListener {
+            viewModel.startAppToAppCall()
         }
 
-        progressBar.setVisibility(visibility);
+        arguments?.let {
+            val args = MainFragmentArgs.fromBundle(it)
+            val isBob = args.userName == Config.bob.name
+            startAppToPhoneCallButton.visibility = if(isBob) View.GONE else View.VISIBLE
+            waitingTextView.visibility = if(isBob) View.VISIBLE else View.GONE
+        }
+    }
+
+    override fun onBackPressed() {
+        viewModel.onBackPressed()
     }
 }
 ```

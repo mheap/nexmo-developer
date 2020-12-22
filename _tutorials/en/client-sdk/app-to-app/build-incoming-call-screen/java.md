@@ -81,8 +81,8 @@ public class IncomingCallViewModel extends ViewModel {
     private NavManager navManager = NavManager.getInstance();
     private CallManager callManager = CallManager.getInstance();
 
-    private MutableLiveData<String> toastMutableLiveData = new MutableLiveData<>();
-    public LiveData<String> toastLiveData = toastMutableLiveData;
+    private MutableLiveData<String> _toast = new MutableLiveData<>();
+    public LiveData<String> toast = _toast;
 
     public void hangup() {
         hangupInternal(true);
@@ -100,7 +100,7 @@ public class IncomingCallViewModel extends ViewModel {
 
             @Override
             public void onError(@NonNull NexmoApiError apiError) {
-                toastMutableLiveData.postValue(apiError.getMessage());
+                _toast.postValue(apiError.getMessage());
             }
         });
     }
@@ -140,9 +140,9 @@ private void hangupInternal() {
 }
 ```
 
-## Update `OnCallFragment`
+## Update `IncomingCallFragment`
 
-Open `OnallFragment` and Replace file content with below code snippet:
+Open `IncomingCallFragment` and Replace file content with below code snippet:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -178,7 +178,7 @@ public class IncomingCallFragment extends Fragment implements BackPressHandler {
         hangupButton = view.findViewById(R.id.hangupButton);
         answerButton = view.findViewById(R.id.answerButton);
 
-        viewModel.toastLiveData.observe(getViewLifecycleOwner(), it -> Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT));
+        viewModel.toast.observe(getViewLifecycleOwner(), it -> Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT));
 
         hangupButton.setOnClickListener(it -> viewModel.hangup());
 
