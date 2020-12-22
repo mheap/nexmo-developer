@@ -123,6 +123,8 @@ Your user must be authenticated to be able to participate in the Conversation. R
 
 ```kotlin
 fun onLoginUser(user: User) {
+    this.user = user;
+
     if (user.jwt.isNotBlank()) {
         client.login(user.jwt)
     }
@@ -142,8 +144,11 @@ class LoginViewModel : ViewModel() {
         client.setConnectionListener { newConnectionStatus, _ ->
 
             if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                val navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment()
-                navManager.navigate(navDirections)
+
+                user?.let {
+                    NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment(it.name)
+                    navManager.navigate(navDirections)
+                }
                 
                 return@setConnectionListener
             }

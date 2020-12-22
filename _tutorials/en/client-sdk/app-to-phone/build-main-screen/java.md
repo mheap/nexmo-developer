@@ -203,6 +203,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -213,10 +214,9 @@ import androidx.lifecycle.ViewModelProvider;
 public class MainFragment extends Fragment implements BackPressHandler {
 
     MainViewModel viewModel;
-
     Button startAppToPhoneCallButton;
-
     ProgressBar progressBar;
+    TextView waitingTextView;
 
 
     private Observer<String> toastObserver = it -> Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show();
@@ -233,11 +233,17 @@ public class MainFragment extends Fragment implements BackPressHandler {
 
         startAppToPhoneCallButton = view.findViewById(R.id.startAppToPhoneCallButton);
         progressBar = view.findViewById(R.id.progressBar);
+        waitingTextView = view.findViewById(R.id.waitingTextView);
 
         viewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
 
         viewModel.toast.observe(getViewLifecycleOwner(), toastObserver);
         viewModel.loading.observe(getViewLifecycleOwner(), loadingObserver);
+
+        MainFragmentArgs args = MainFragmentArgs.fromBundle(getArguments());
+        Boolean isBob = args.getUserName() == Config.getBob().getName();
+        startAppToPhoneCallButton.setVisibility(isBob ? View.GONE : View.VISIBLE);
+        waitingTextView.setVisibility(isBob ? View.VISIBLE : View.GONE);
 
         startAppToPhoneCallButton.setOnClickListener(it -> viewModel.startAppToPhoneCall());
     }

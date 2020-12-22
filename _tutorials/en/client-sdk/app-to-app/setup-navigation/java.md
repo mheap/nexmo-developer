@@ -51,6 +51,9 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
         <action
                 android:id="@+id/action_mainFragment_to_onCallFragment"
                 app:destination="@id/onCallFragment" />
+        <argument
+                android:name="userName"
+                app:argType="string" />
     </fragment>
 
     <fragment

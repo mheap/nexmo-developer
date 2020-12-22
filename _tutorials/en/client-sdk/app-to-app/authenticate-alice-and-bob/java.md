@@ -96,6 +96,8 @@ public class LoginViewModel extends ViewModel {
 
     NavManager navManager = NavManager.getInstance();
 
+    User user = null;
+
     private MutableLiveData<ConnectionStatus> _connectionStatusMutableLiveData = new MutableLiveData<>();
     public LiveData<ConnectionStatus> connectionStatusLiveData = _connectionStatusMutableLiveData;
 
@@ -122,7 +124,9 @@ private NexmoClient client = NexmoClient.get();
 Your user must be authenticated to be able to participate in the Conversation. Replace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```java
-void onLoginUser(User user) {    
+void onLoginUser(User user) {
+    this.user = user;
+
     if (!user.jwt.trim().isEmpty()) {
         client.login(user.jwt);
     }
@@ -144,7 +148,7 @@ public class LoginViewModel extends ViewModel {
     public LoginViewModel() {
         client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
             if (connectionStatus == ConnectionStatus.CONNECTED) {
-                NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment();
+                NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment(user.getName());
                 navManager.navigate(navDirections);
                 return;
             }
