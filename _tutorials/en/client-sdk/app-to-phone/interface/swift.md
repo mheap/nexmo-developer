@@ -1,9 +1,11 @@
 ---
-title: Building the interface
-description: In this step you will build the only screen of the app.
+title:  Building the interface
+description:  In this step you will build the only screen of the app.
+
 ---
 
-# Building the interface
+Building the interface
+======================
 
 To be able to place the call, you need to add two elements to the screen:
 
@@ -53,8 +55,10 @@ The `callButton` has been hidden, its `alpha` is set 0, and will be shown when a
 
 Also, a target has been added for when `callButton` is tapped and will be used to place and end calls.
 
-## Build and Run
+Build and Run
+-------------
 
-Run the project again (`Cmd + R`) to launch it in the simulator. 
+Run the project again (`Cmd + R`) to launch it in the simulator.
 
 ![Interface](/images/client-sdk/ios-voice/interface.jpg)
+

@@ -1,9 +1,11 @@
 ---
-title: Link your Facebook Page to your Vonage account
-description: In this step you learn how to link your Facebook Page to your Vonage account.
+title:  Link your Facebook Page to your Vonage account
+description:  In this step you learn how to link your Facebook Page to your Vonage account.
+
 ---
 
-# Link your Facebook Page to your Vonage account
+Link your Facebook Page to your Vonage account
+==============================================
 
 The process of completely linking your application to your Facebook consists of two parts:
 
@@ -12,7 +14,8 @@ The process of completely linking your application to your Facebook consists of 
 
 There may be occasions where you want to link your Vonage account to a Facebook page, but have not yet created a Vonage application. This is fine, as long as after you create your Vonage application, you then link that application to your Facebook page. This step shows both parts of the complete process.
 
-## Part 1: Link your Facebook Page to your Vonage account
+Part 1: Link your Facebook Page to your Vonage account
+------------------------------------------------------
 
 Linking your Facebook page to your Vonage account allows Vonage to handle inbound messages and enables you to send messages from the Vonage Messages API.
 
@@ -22,11 +25,12 @@ Linking your Facebook page to your Vonage account allows Vonage to handle inboun
 
 3. Enter the API key and API secret for your Vonage account.
 
-4. Click **Subscribe**. You will receive a message confirm successful subscription.
+4. Click **Subscribe** . You will receive a message confirm successful subscription.
 
 At this point your Vonage account and this Facebook Page are linked. The link between your Vonage account and Facebook page expires after 90 days. After then you must [re-link it](#re-linking-your-facebook-page-to-your-nexmo-account).
 
-## Part 2: Link your Facebook Page to your Vonage application
+Part 2: Link your Facebook Page to your Vonage application
+----------------------------------------------------------
 
 Once your Facebook page is linked to your Vonage account, it becomes available for use by any of your applications. To link the Facebook page to a Vonage application:
 
@@ -36,18 +40,20 @@ Once your Facebook page is linked to your Vonage account, it becomes available f
 
 3. Then, select the **Linked external accounts** tab.
 
-4. Click the **Link** button beside the Facebook Page you want to link your application to, ensuring that the **Provider** is **Facebook Messenger**.
+4. Click the **Link** button beside the Facebook Page you want to link your application to, ensuring that the **Provider** is **Facebook Messenger** .
 
 You're now ready to receive messages users send to you on your Facebook Page.
 
 > **NOTE:** If in the future you want to link a different application to this Facebook page, you only need to repeat the procedure described in Part 2, for the new application.
 
-## Re-linking your Facebook page to your Vonage account
+Re-linking your Facebook page to your Vonage account
+------------------------------------------------------
 
 The link between your Vonage account and Facebook page expires after 90 days. You can re-link it by performing the following steps:
 
 1. Visit the following page and select the page you want to re-link from the [drop down list](https://messenger.nexmo.com/)
 
-2. Click **Unsubscribe**.
+2. Click **Unsubscribe** .
 
-3. When the page is successfully unsubscribed, re-link it by clicking **Subscribe**.
+3. When the page is successfully unsubscribed, re-link it by clicking **Subscribe** .
+

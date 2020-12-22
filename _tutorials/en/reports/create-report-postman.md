@@ -1,9 +1,11 @@
 ---
-title: Create a CSV report using Postman
-description: Creates a CSV format report using the Postman tool
+title:  Create a CSV report using Postman
+description:  Creates a CSV format report using the Postman tool
+
 ---
 
-# Create a CSV report using Postman
+Create a CSV report using Postman
+=================================
 
 In the Postman workspace, set the HTTP method to `POST` and enter the following URL: `https://api.nexmo.com/v2/reports/`
 
@@ -14,7 +16,8 @@ You then need to:
 * [Create the request](#create-the-request)
 * [Execute the request](#execute-the-request)
 
-## Authorize the request
+Authorize the request
+---------------------
 
 Select the "Authorization" tab and enter the following values:
 
@@ -22,21 +25,23 @@ Select the "Authorization" tab and enter the following values:
 * Username: Your Vonage API key
 * Password: Your Vonage API secret
 
-> **Note**: You can find your API key and secret in the [developer dashboard](https://dashboard.nexmo.com).
+> **Note** : You can find your API key and secret in the [developer dashboard](https://dashboard.nexmo.com).
 
 ![Create Report](/images/reports-api/create-report-postman.png)
 
-## Format the request body
+Format the request body
+-----------------------
 
 In the "Body" tab select the "raw" radio button and "JSON" from the dropdown list of formats:
 
 ![Format the request](/images/reports-api/format-request-body-postman.png)
 
-## Create the request
+Create the request
+------------------
 
 In the "Body" tab, enter the request body as shown below, replacing the API key with your own API key and `date_start` and `date_end` with suitable values for the time period you are interested in.
 
-> **Note**: The `end_date` parameter is exclusive - the report generated  covers the period from `start_date` to right before the time and date specified in `end_date`.
+> **Note** : The `end_date` parameter is exclusive - the report generated  covers the period from `start_date` to just before the time and date specified in `end_date`.
 
 ### For an SMS report
 
@@ -46,9 +51,10 @@ In the "Body" tab, enter the request body as shown below, replacing the API key 
 
 ![Create SMS report request](/images/reports-api/create-request-body-voice-postman.png)
 
-> **Note**: The `product` must be one of `SMS`, `VOICE-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES` or `CONVERSATION`.
+> **Note** : The `product` must be one of `SMS`, `VOICE-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES` or `CONVERSATION`.
 
-## Execute the request
+Execute the request
+-------------------
 
 Click the "Send" button. The response will appear in the following format:
 
@@ -72,4 +78,5 @@ Click the "Send" button. The response will appear in the following format:
 }
 ```
 
-> **Note**: If there is a large volume of data to query, the report can take a while to generate.
+> **Note** : If there is a large volume of data to query, the report can take a while to generate.
+

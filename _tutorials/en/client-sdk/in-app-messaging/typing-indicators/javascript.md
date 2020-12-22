@@ -1,13 +1,15 @@
 ---
-title: Add typing indicators
-description: In this step you learn how to show when a user is typing
+title:  Add typing indicators
+description:  In this step you learn how to show when a user is typing
+
 ---
 
-# Add Typing Indicators
+Add Typing Indicators
+=====================
 
 In order to make the application a bit more polished, you will let your users know when the other parties in the Conversation are typing.
 
-Add the following code to the end of the `run` function. If your application detects the `keypress` event on the message text area, call the `conversation.startTyping` function to alert your application that the user is currently typing. 
+Add the following code to the end of the `run` function. If your application detects the `keypress` event on the message text area, call the `conversation.startTyping` function to alert your application that the user is currently typing.
 
 If you detect the `keyup` event on the text area for longer that half a second, you can assume that the user has stopped typing and call `conversation.stopTyping` to alert your application.
 
@@ -40,3 +42,4 @@ conversation.on("text:typing:off", (data) => {
   status.innerHTML = "";
 });
 ```
+

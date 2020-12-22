@@ -1,0 +1,31 @@
+---
+title: "进行应用到应用的语音通话"
+description: "从一个 iOS 应用向另一个 iOS 应用进行语音通话"
+products: 
+    - "client-sdk"
+introduction: 
+    title: "任务简介"
+    description: "本任务介绍如何使用 iOS Client SDK 和 Swift 从一个 iOS 应用向另一个 iOS 应用拨打电话。"
+    content: "# 简介\n在本任务中，您将学习如何创建和配置 Client SDK 应用程序，然后构建 iOS 应用程序，以使两个用户可以彼此之间拨打电话。\n\n如果您想继续操作而又不想自行构建应用，可以在 [GitHub](https://github.com/nexmo-community/clientsdk-app-to-app-call-objective-c) 上获取本教程已完成的项目。\n\n*本教程使用 NexmoClient 版本 2.2.1*\n"
+prerequisites: 
+    - "create-nexmo-account"
+    - "install-nodejs"
+    - "install-nexmo-cli-beta"
+    - "install-xcode"
+tasks: 
+    - "client-sdk/phone-to-app/create-ncco"
+    - "client-sdk/app-to-app/create-application"
+    - "client-sdk/app-to-app/create-users"
+    - "client-sdk/app-to-app/generate-jwts"
+    - "client-sdk/app-to-app/create-project"
+    - "client-sdk/app-to-app/permissions"
+    - "client-sdk/app-to-app/create-ui"
+    - "client-sdk/app-to-app/create-model"
+    - "client-sdk/app-to-app/initialize-client"
+    - "client-sdk/app-to-app/call-ui"
+    - "client-sdk/app-to-app/receive-call"
+    - "client-sdk/app-to-app/make-call"
+conclusion: 
+    title: "接下来做什么？"
+    description: "您还可以使用 Client SDK 执行哪些操作？"
+    content: "\n# 接下来做什么？\n\n为完整起见，也可以在 [GitHub](https://github.com/nexmo-community/clientsdk-app-to-app-call-objective-c) 上获取您在本教程中构建的项目。\n\n使用 Client SDK 可以执行更多操作。请参阅 [Client SDK 文档](/client-sdk/overview)。\n\n我们想听听您有什么想法？请发送电子邮件至 <a href=\"mailto:devrel@vonage.com\">devrel@vonage.com</a> 联系我们\n"

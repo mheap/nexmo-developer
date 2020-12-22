@@ -1,9 +1,11 @@
 ---
-title: NXMClient
-description: In this step you will authenticate to the Vonage servers.
+title:  NXMClient
+description:  In this step you will authenticate to the Vonage servers.
+
 ---
 
-# `NXMClient`
+`NXMClient`
+===========
 
 Before you can start a chat, the Client SDK needs to authenticate to the Vonage servers. The following additions are required to `ViewController.m`.
 
@@ -27,7 +29,8 @@ Add a `NXMClient` instance and `user` property below the `statusLabel`.
 @end
 ```
 
-## Button targets
+Button targets
+--------------
 
 For the log in buttons to work, you need to add targets to them which will run a function when they are tapped. In the `ViewController.m` file add the following.
 
@@ -61,7 +64,8 @@ Then link the two functions them to their respective buttons at the end of the `
 }
 ```
 
-## Add the log in function
+Add the log in function
+-----------------------
 
 At the end of `ViewController.m`, add the `login` function needed by the `setUserAs` functions. This function sets the client's delegate and logs in.
 
@@ -75,7 +79,8 @@ At the end of `ViewController.m`, add the `login` function needed by the `setUse
 }
 ```
 
-## The client delegate
+The client delegate
+-------------------
 
 For the delegate to work, you need to have `ViewController` conform to `NXMClientDelegate`. To do this you will need to add the `NXMClientDelegate` to the interface definition for `ViewController.m`.
 
@@ -86,7 +91,6 @@ For the delegate to work, you need to have `ViewController` conform to `NXMClien
 
 @end
 ```
-
 
 Then at the end of the file, add the following `NXMClientDelegate` functions.
 
@@ -117,10 +121,12 @@ Then at the end of the file, add the following `NXMClientDelegate` functions.
 }
 ```
 
-An error is shown if encountered and the `statusLabel` is updated with the relevant connection status. 
+An error is shown if encountered and the `statusLabel` is updated with the relevant connection status.
 
-## Build and Run
+Build and Run
+-------------
 
 Press `Cmd + R` to build and run again. If you tap on one of the log in buttons it will log the client in with the respective user:
 
 ![Interface connected](/images/client-sdk/ios-messaging/client.png)
+

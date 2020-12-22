@@ -1,9 +1,11 @@
 ---
-title: Try it out!
-description: Test the 2fa capability of your application
+title:  Try it out\!
+description:  Test the 2fa capability of your application
+
 ---
 
-# Try it out!
+Try it out\!
+=============
 
 Run your application:
 
@@ -24,3 +26,4 @@ The following page displays:
 Enter the code you received and you will be logged in:
 
 ![Successful verification](/images/2fa-ruby-verification-success.png)
+

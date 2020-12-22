@@ -1,11 +1,13 @@
 ---
-title: Place a call
-description: In this step you will place the call.
+title:  Place a call
+description:  In this step you will place the call.
+
 ---
 
-# Place a call
+Place a call
+============
 
-At the top of the `ViewController` class, right below the `client` declaration, add a `NXMCall` property to hold a reference to any call in progress
+At the top of the `ViewController` class, just below the `client` declaration, add a `NXMCall` property to hold a reference to any call in progress
 
 ```swift
 class ViewController: UIViewController, NXMClientDelegate {
@@ -16,7 +18,7 @@ class ViewController: UIViewController, NXMClientDelegate {
 }
 ```
 
-Based on the object referenced by the `call` property, the `callButtonPressed` method can now be used to either place or end calls; the `placeCall` and `endCall` methods are triggered for each case. 
+Based on the object referenced by the `call` property, the `callButtonPressed` method can now be used to either place or end calls; the `placeCall` and `endCall` methods are triggered for each case.
 
 Please make sure to replace `PHONE_NUMBER` below with the actual phone number you want to call. Note: must be the same one as the one specified in the gist NCCO:
 
@@ -47,6 +49,5 @@ func endCall() {
 }
 ```
 
-That's it! You can now build, run and place the call! Magic!
-
+That's it\! You can now build, run and place the call\! Magic\!
 

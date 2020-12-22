@@ -1,11 +1,13 @@
 ---
-title: Building the chat interface
-description: In this step you will build the second screen of the app.
+title:  Building the chat interface
+description:  In this step you will build the second screen of the app.
+
 ---
 
-# Building the chat interface
+Building the chat interface
+===========================
 
-To be able to chat, you will need to create a new View Controller for the chat interface. From the Xcode menu, select `File` > `New` > `File...`. Choose a *Cocoa Touch Class*, name it `ChatViewController` with a subclass of `UIViewController` and language of `Objective-C`.
+To be able to chat, you will need to create a new View Controller for the chat interface. From the Xcode menu, select `File` > `New` > `File...`. Choose a *Cocoa Touch Class* , name it `ChatViewController` with a subclass of `UIViewController` and language of `Objective-C`.
 
 ![Xcode adding file](/images/client-sdk/ios-messaging/chatviewcontrollerobjc.png)
 
@@ -79,8 +81,8 @@ Open `ChatViewController.m` and add it programmatically.
 
 In the `viewWillAppear` function an observer is added to the `keyboardDidShowNotification` which calls the `keyboardWasShown`. The `keyboardWasShown` function adjusts the layout margins of the view which moves the input field. This stops the `inputField` being blocked by the keyboard when typing.
 
-
-## The `UITextField` delegate
+The `UITextField` delegate
+--------------------------
 
 You will need to conform to the `UITextFieldDelegate` to know when the user has finished typing to move the input field to its original position.
 
@@ -106,7 +108,8 @@ At the end of the `ChatViewController` class add the `textFieldDidEndEditing` de
 @end
 ```
 
-## Presenting the `ChatViewController`
+Presenting the `ChatViewController`
+-----------------------------------
 
 Now that the chat interface is built you will need to present the view controller from the log in screen you built earlier. You will need information about the logged in user to be passed between the two view controllers, within `ChatViewController.h` import the `User` class at the top of the file.
 
@@ -162,7 +165,7 @@ self.title = [NSString stringWithFormat:@"Conversation with %@", self.user.chatP
 
 This will also creates a logout button in the navigation bar, add the `logout` function to the end of `ChatViewController.m`.
 
-```objective_c 
+```objective_c
 @implementation ChatViewController
     ...
 - (void)logout {
@@ -203,8 +206,10 @@ Then import `ChatViewController` at the top of the file.
 
 If the user connects successfully a `ChatViewController` will be presented with the user data needed.
 
-## Build and Run
+Build and Run
+-------------
 
 Run the project again (`Cmd + R`) to launch it in the simulator. If you log in with one of the users you will see the chat interface
 
 ![Chat interface](/images/client-sdk/ios-messaging/chat.png)
+

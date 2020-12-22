@@ -1,9 +1,11 @@
 ---
-title: NXMClient
-description: In this step you will authenticate to the Vonage servers.
+title:  NXMClient
+description:  In this step you will authenticate to the Vonage servers.
+
 ---
 
-# `NXMClient`
+`NXMClient`
+===========
 
 Before you can start a chat, the Client SDK needs to authenticate to the Vonage servers. The following additions are required to `ViewController.swift`.
 
@@ -40,7 +42,8 @@ class ViewController: UIViewController {
 }
 ```
 
-## Button Targets
+Button Targets
+--------------
 
 For the log in buttons to work, you need to add targets to them which will run a function when they are tapped. In the `ViewController.swift` file add:
 
@@ -75,7 +78,8 @@ override func viewDidLoad() {
 }
 ```
 
-## Add the Log in function
+Add the Log in function
+-----------------------
 
 At the end of `ViewController.swift`, add the `login` function needed by the user property. This function sets the client's delegate and logs in when the user property is set to a new value:
 
@@ -96,7 +100,8 @@ class ViewController: UIViewController {
 }
 ```
 
-## The Client Delegate
+The Client Delegate
+-------------------
 
 For the delegate to work, you need to have `ViewController` conform to `NXMClientDelegate`. At the end of the file, add:
 
@@ -127,10 +132,12 @@ extension ViewController: NXMClientDelegate {
 }
 ```
 
-An error is shown if encountered and the `statusLabel` is updated with the relevant connection status. 
+An error is shown if encountered and the `statusLabel` is updated with the relevant connection status.
 
-## Build and Run
+Build and Run
+-------------
 
 Press `Cmd + R` to build and run again. If you tap on one of the log in buttons it will log the client in with the respective user:
 
 ![Interface connected](/images/client-sdk/ios-messaging/client.png)
+

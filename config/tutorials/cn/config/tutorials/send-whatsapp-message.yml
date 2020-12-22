@@ -1,0 +1,24 @@
+---
+title: "发送 WhatsApp 消息"
+description: "Messages API 提供将消息发送到 Facebook Messenger、短信、WhatsApp 和 Viber 等各种渠道的功能。本教程介绍如何使用 Messages API 发送 WhatsApp 消息。"
+products: 
+    - "消息"
+introduction: 
+    title: "教程简介"
+    description: "本教程介绍如何通过 Messages API 发送 WhatsApp 消息。"
+    content: "# 简介\n[Messages API](/messages/overview) 允许您发送 WhatsApp 消息。在本教程中，您将学习如何发送 WhatsApp 消息。\n\n本教程提供安装所需工具、构建应用程序、编写代码和测试的分步指南。发送的消息是纯文本格式。\n\n有关 WhatsApp 消息传递的更多背景信息，请参阅我们的 [支持文档](/messages/concepts/whatsapp)。\n\n> **注意：** 请仔细阅读前提条件。\n"
+prerequisites: 
+    - "create-nexmo-account"
+    - "install-nodejs"
+    - "install-nexmo-cli-beta"
+    - "install-node-sdk-beta"
+    - "messages-dispatch/create-application"
+    - "messages-dispatch/configure-webhooks"
+    - "messages-dispatch/write-webhook-server"
+    - "messages-dispatch/test-webhook-server"
+tasks: 
+    - "messages-dispatch/send-whatsapp-message"
+conclusion: 
+    title: "接下来做什么？"
+    description: "您还可以使用 Messages API 执行哪些操作？"
+    content: "\n# 接下来做什么？\n使用 Messages API 可以执行更多操作。\n\n请参阅 [Messages API 文档](/messages/overview)。\n"

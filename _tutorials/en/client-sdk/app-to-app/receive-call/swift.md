@@ -1,9 +1,11 @@
 ---
-title: Receive a call
-description: In this step you learn how to receive an in-app call
+title:  Receive a call
+description:  In this step you learn how to receive an in-app call
+
 ---
 
-# Receiving a call
+Receiving a call
+================
 
 Now that the calling interface is built, you can now add the code needed receive a call. The `NXMClientDelegate` has a function that is called when there is an incoming call. Add an implementation for it in the `NXMClientDelegate` extension in the `ViewController.swift` file.
 
@@ -61,7 +63,7 @@ class CallViewController: UIViewController {
                 }
                 call.setDelegate(self)
                 self.setHangUpButtonHidden(false)
-                self.setStatusLabelText("On a call with \(from)")
+                self.setStatusLabelText("On a call with (from)")
                 self.call = call
             }
         }))
@@ -81,9 +83,10 @@ class CallViewController: UIViewController {
 }
 ```
 
-When a notification is received `didReceiveCall` is called which in turn calls `displayIncomingCallAlert` to present the user with the option of accepting or rejecting the call. If the user accepts the UI is updated to show who the user is on a call with and the `hangUpButton` becomes visible. If the `hangUpButton` is tapped `endCall` is called which hangs up the call and updates the UI. 
+When a notification is received `didReceiveCall` is called which in turn calls `displayIncomingCallAlert` to present the user with the option of accepting or rejecting the call. If the user accepts the UI is updated to show who the user is on a call with and the `hangUpButton` becomes visible. If the `hangUpButton` is tapped `endCall` is called which hangs up the call and updates the UI.
 
-## The call delegate
+The call delegate
+-----------------
 
 Similar to `NXMClient`, `NXMCall` also has a delegate to handle changes to the call. To the end of the `CallViewController.swift` file add the conformance to the `NXMCallDelegate`.
 
@@ -93,7 +96,7 @@ extension CallViewController: NXMCallDelegate {
         switch status {
         case .answered:
             guard callMember.user.name != self.user.name else { return }
-            setStatusLabelText("On a call with \(callMember.user.name)")
+            setStatusLabelText("On a call with (callMember.user.name)")
         case .completed:
             setStatusLabelText("Call ended")
             setHangUpButtonHidden(true)
@@ -112,3 +115,4 @@ extension CallViewController: NXMCallDelegate {
 ```
 
 In the next step you will add the code needed to make a call.
+

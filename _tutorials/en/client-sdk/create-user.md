@@ -1,9 +1,11 @@
 ---
-title: Create a User
-description: In this step you learn how to create a Client SDK User.
+title:  Create a User
+description:  In this step you learn how to create a Client SDK User.
+
 ---
 
-# Create a User
+Create a User
+=============
 
 [Users](/conversation/concepts/user) are a key concept when working with the Vonage Client SDKs. When a user authenticates with the Client SDK, the credentials provided identify them as a specific user. Each authenticated user will typically correspond to a single user in your users database.
 
@@ -18,3 +20,4 @@ This will return a user ID similar to the following:
 ```bash
 User created: USR-aaaaaaaa-bbbb-cccc-dddd-0123456789ab
 ```
+

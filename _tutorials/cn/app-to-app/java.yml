@@ -1,0 +1,31 @@
+---
+title: "进行应用到应用的语音通话"
+description: "使用 Android Client SDK，从一个 Android 应用向另一台设备上安装的相同 Android 应用进行语音通话。"
+products: 
+    - "client-sdk"
+introduction: 
+    title: "任务简介"
+    description: "本任务介绍如何使用 Android Client SDK 和 Java 从一个 Android 应用向另一个 Android 应用拨打电话。"
+    content: "# 简介\n在本教程中，您将学习如何使用 Kotlin 和 Nexmo Android Client SDK 创建 Android 应用程序，然后编写代码以便从您的 Android 应用向另一个 Android 应用拨打电话。\n可在 [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-app-to-app) 上获取源代码。\n\n### 本教程需要安装以下版本：\n\n- Android（6.0 及以上 - API 级别 23 及以上）\n- 适用于 Android 2.6.4 的 Client SDK\n\n上次更新日期：2020 年 9 月\n"
+prerequisites: 
+    - "create-nexmo-account"
+    - "install-nodejs"
+    - "install-nexmo-cli-beta"
+    - "install-android-studio"
+    - "join-github"
+tasks: 
+    - "client-sdk/app-to-app/create-ncco"
+    - "client-sdk/app-to-app/create-application"
+    - "client-sdk/android-shared/create-users-alice-and-bob"
+    - "client-sdk/android-shared/generate-jwt-alice-and-bob"
+    - "client-sdk/app-to-app/starter-project"
+    - "client-sdk/android-shared/initialize-client"
+    - "client-sdk/android-shared/configure-jwt-alice-and-bob"
+    - "client-sdk/android-shared/authenticate-alice-and-bob"
+    - "client-sdk/app-to-app/receive-call"
+    - "client-sdk/app-to-app/make-call"
+    - "client-sdk/android-shared/run-app"
+conclusion: 
+    title: "接下来做什么？"
+    description: "您还可以使用 Client SDK 执行哪些操作？"
+    content: "\n# 接下来做什么？\n\n有关完整版本，请参阅您克隆的 \n[git 存储库](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-app-to-app) 的“java-completed”文件夹中的 Android Studio 项目。\n\n使用 Client SDK 可以执行更多操作。请参阅 [Client SDK 文档](/client-sdk/overview) 或查看\n[Android Client SDK 文档](/sdk/stitch/android/index)。\n\n我们想听听您有什么想法？请发送电子邮件至 <a href=\"mailto:devrel@vonage.com\">devrel@vonage.com</a> 联系我们\n"

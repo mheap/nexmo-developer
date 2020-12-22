@@ -1,11 +1,13 @@
 ---
-title: Building the call interface
-description: In this step you will build the second screen of the app.
+title:  Building the call interface
+description:  In this step you will build the second screen of the app.
+
 ---
 
-# Building the call interface
+Building the call interface
+===========================
 
-To be able to call, you will need to create a new View Controller for the calling interface. From the Xcode menu, select `File` > `New` > `File...`. Choose a *Cocoa Touch Class*, name it `CallViewController` with a subclass of `UIViewController` and language of `Objective-C`.
+To be able to call, you will need to create a new View Controller for the calling interface. From the Xcode menu, select `File` > `New` > `File...`. Choose a *Cocoa Touch Class* , name it `CallViewController` with a subclass of `UIViewController` and language of `Objective-C`.
 
 ![Xcode adding file](/images/client-sdk/ios-in-app-voice/callviewcontrollerobjc.png)
 
@@ -89,10 +91,10 @@ Open `CallViewController.m` and add them programmatically.
 @end
 ```
 
-There are two helper functions `setHangUpButtonHidden` and `setStatusLabelText` to avoid repetition of calling `DispatchQueue.main.async` as changing the state of the UI elements needs to be done on the main thread as required by `UIKit`. The `setHangUpButtonHidden` function toggles the visibility of the `hangUpButton` as this only needs to be visible during an active call. 
+There are two helper functions `setHangUpButtonHidden` and `setStatusLabelText` to avoid repetition of calling `DispatchQueue.main.async` as changing the state of the UI elements needs to be done on the main thread as required by `UIKit`. The `setHangUpButtonHidden` function toggles the visibility of the `hangUpButton` as this only needs to be visible during an active call.
 
-
-## Presenting the `CallViewController`
+Presenting the `CallViewController`
+-----------------------------------
 
 Now that the calling interface is built you will need to present the view controller from the log in screen you built earlier. You will need information about the logged in user to be passed between the two view controllers, within `ChatViewController.h` import the `User` class at the top of the file.
 
@@ -148,9 +150,9 @@ if ([self.user.name isEqualToString:@"Alice"]) {
 }
 ```
 
-This will hide the call button for Alice since for this demonstration only Bob will be able to make a call to Alice. In a production application the `NCCO` that is returned by your application's answer URL will dynamically return the correct username to avoid this. It also creates a logout button in the navigation bar, add the corresponding `logout` function to the end of `CallViewController.m` 
+This will hide the call button for Alice since for this demonstration only Bob will be able to make a call to Alice. In a production application the `NCCO` that is returned by your application's answer URL will dynamically return the correct username to avoid this. It also creates a logout button in the navigation bar, add the corresponding `logout` function to the end of `CallViewController.m`
 
-```objective_c 
+```objective_c
 @implementation ChatViewController
     ...
 - (void)logout {
@@ -191,8 +193,10 @@ Then import `CallViewController` at the top of the file.
 
 If the user connects successfully a `CallViewController` will be presented with the user data needed.
 
-## Build and Run
+Build and Run
+-------------
 
 Run the project again (`Cmd + R`) to launch it in the simulator. If you log in with one of the users you will see the calling interface
 
 ![Call interface](/images/client-sdk/ios-in-app-voice/call.png)
+

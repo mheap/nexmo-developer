@@ -1,9 +1,11 @@
 ---
-title: Building the interface
-description: In this step you will build the only screen of the app.
+title:  Building the interface
+description:  In this step you will build the only screen of the app.
+
 ---
 
-# Building the interface
+Building the interface
+======================
 
 To be able view the connection status of the app you will need to add a `TextView` view to the screen. You will also add buttons to control the call (Answer, Reject, End). Replace content of `app/res/layout.activity_main.xml` file with below layout:
 
@@ -65,6 +67,8 @@ To be able view the connection status of the app you will need to add a `TextVie
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-## Build and Run
+Build and Run
+-------------
 
 Press `Cmd + R` to build and run the app.
+

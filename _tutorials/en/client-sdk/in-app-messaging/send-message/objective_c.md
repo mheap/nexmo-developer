@@ -1,9 +1,11 @@
 ---
-title: Sending a message
-description: In this step you will build the send message functionality.
+title:  Sending a message
+description:  In this step you will build the send message functionality.
+
 ---
 
-# Sending a message
+Sending a message
+=================
 
 In the previous step you learned about conversations and events, sending a message creates a new event and sends it via the conversation.
 
@@ -23,7 +25,7 @@ To send a message, add the following function to `ChatViewController.m` class:
 }
 ```
 
-To get the text from the `inputField` you need to add another function provided by the `UITextFieldDelegate`: 
+To get the text from the `inputField` you need to add another function provided by the `UITextFieldDelegate`:
 
 ```objective_c
 @implementation ViewController
@@ -43,8 +45,10 @@ To get the text from the `inputField` you need to add another function provided 
 
 This delegate function is called when the return button on the keyboard is pressed.
 
-## Build and Run
+Build and Run
+-------------
 
-`Cmd + R` to build and run again. You now have a functioning chat app! To chat simultaneously you can run the app on two different simulators/devices:
+`Cmd + R` to build and run again. You now have a functioning chat app\! To chat simultaneously you can run the app on two different simulators/devices:
 
 ![Sent messages](/images/client-sdk/ios-messaging/messages.png)
+

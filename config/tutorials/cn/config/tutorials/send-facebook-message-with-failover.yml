@@ -1,0 +1,25 @@
+---
+title: "通过故障转移发送 Facebook 消息"
+description: "Dispatch API 提供通过故障转移到辅助渠道创建消息工作流的功能。本任务介绍通过故障转移到短信渠道，使用 Dispatch API 发送 Facebook 消息。"
+products: 
+    - "调度"
+introduction: 
+    title: "任务简介"
+    description: "本任务向您介绍如何使用 Dispatch API 的故障转移功能。"
+    content: "# 简介\n[Dispatch API](/dispatch/overview) 采用具有自动故障转移功能的工作流。在本教程中，您将了解如何通过自动故障转移到短信来发送 Facebook Messenger 消息。\n\n本教程提供安装所需工具、构建应用程序、编写代码和测试的分步指南。发送的消息是纯文本格式。\n\n有关 Facebook 消息传递的更多背景信息，请参阅我们的 [支持文档](/messages/concepts/facebook)。\n\n> **注意：** 本任务假定您已经创建了 Facebook 个人资料和 Facebook 页面。\n"
+prerequisites: 
+    - "create-nexmo-account"
+    - "install-nodejs"
+    - "install-nexmo-cli-beta"
+    - "install-node-sdk-beta"
+    - "messages-dispatch/create-application"
+    - "messages-dispatch/configure-webhooks"
+    - "messages-dispatch/write-webhook-server"
+    - "messages-dispatch/test-webhook-server"
+tasks: 
+    - "messages-dispatch/link-facebook-page"
+    - "messages-dispatch/send-facebook-failover"
+conclusion: 
+    title: "接下来做什么？"
+    description: "您还可以使用 Dispatch API 执行哪些操作？"
+    content: "\n# 接下来做什么？\n使用 Dispatch API 可以执行更多操作。\n\n请参阅 [Dispatch API 文档](/dispatch/overview) 和 [多用户、多渠道工作流调度用例](/use-cases/dispatch-user-fallback)。\n"

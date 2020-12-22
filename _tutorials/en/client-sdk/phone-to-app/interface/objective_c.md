@@ -1,9 +1,11 @@
 ---
-title: Building the interface
-description: In this step you will build the only screen of the app.
+title:  Building the interface
+description:  In this step you will build the only screen of the app.
+
 ---
 
-# Building the interface
+Building the interface
+======================
 
 To be able view the connection status of the app you will need to add a `UILabel` element to the screen. Open `ViewController.swift` and add it programmatically.
 
@@ -33,8 +35,10 @@ To be able view the connection status of the app you will need to add a `UILabel
 @end
 ```
 
-## Build and Run
+Build and Run
+-------------
 
-Run the project again (`Cmd + R`) to launch it in the simulator. 
+Run the project again (`Cmd + R`) to launch it in the simulator.
 
 ![Interface](/meta/client-sdk/ios-phone-to-app/interface.png)
+

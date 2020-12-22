@@ -1,17 +1,22 @@
 ---
-title: Authenticate User
-description: In this step you authenticate your users via the JWTs you created earlier
+title:  Authenticate your User
+description:  In this step you authenticate your users via the JWTs you created earlier
+
 ---
 
-# Authenticate User
+Authenticate your User
+======================
 
-You perform this authentication using the `JWT` generated in previous steps. Login screen (`LoginFragment` and `LoginViewModel` classes) is responsible for authenticating the user.
+Login screen (`LoginFragment` and `LoginViewModel` classes) is responsible for authenticating the user.
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/login-screen-user.png
 ```
 
-## Get NexmoClient instance
+> **NOTE:** You perform this authentication using the `JWT` generated in previous steps.
+
+Get NexmoClient instance
+------------------------
 
 You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Locate the `private val client` property in the `LoginViewModel` class and update its implementation:
 
@@ -21,13 +26,14 @@ private val client = NexmoClient.get()
 
 Make sure to add missing import again.
 
-## Login user
+Login user
+----------
 
 Your user must be authenticated to be able to participate in the Call. Locate the `onLoginUser` method inside `LoginViewModel` class and replace it with this code:
 
 ```kotlin
 fun onLoginUser(user: User) {
-    if (user.jwt.isNotBlank()) {
+    if (!user.jwt.isBlank()) {
         this.user = user
         client.login(user.jwt)
     }
@@ -38,10 +44,10 @@ fun onLoginUser(user: User) {
 
 > **NOTE:** The `User` type is the `data class` that we've defined in the `Config.kt` file.
 
-## Monitor connection state
+Monitor connection state
+------------------------
 
 When a successful connection is established you need to navigate user to `MainFragment`. Locate the `init` block inside `LoginViewModel` class and replace it with this code:
-
 
 ```kotlin
 init {
@@ -60,3 +66,4 @@ init {
 The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `MainFragment`.
 
 You're now ready to make the call within the app.
+

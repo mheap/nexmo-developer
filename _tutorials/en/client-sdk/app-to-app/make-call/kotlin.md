@@ -1,9 +1,11 @@
 ---
-title: Make a call
-description: In this step you learn how to make an app-to-app call.
+title:  Make a call
+description:  In this step you learn how to make an app-to-app call.
+
 ---
 
-# Make a call
+Make a call
+===========
 
 Locate the `startAppToAppCall` method within the `MainViewModel` class and fill its body to enable call:
 
@@ -25,3 +27,4 @@ startAppToAppCallButton.setOnClickListener {
     viewModel.startAppToAppCall()
 }
 ```
+

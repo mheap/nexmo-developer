@@ -1,13 +1,16 @@
 ---
-title: Project permissions
-description: In this step you will add the necessary permissions to the project properties.
+title:  Project permissions
+description:  In this step you will add the necessary permissions to the project properties.
+
 ---
 
-# Project permissions
+Project permissions
+===================
 
 As you'll be using the microphone when making a call, you need to request the permission to use it.
 
-## `Info.plist`
+`Info.plist`
+------------
 
 Every Xcode project contains an `Info.plist` file containing all the metadata required in each app or bundle  - you will find the file inside the `AppToPhone` group.
 
@@ -21,7 +24,8 @@ Your `Info.plist` should look like this:
 
 ![Info.plist](/images/client-sdk/ios-voice/Xcode-permissions.jpg)
 
-## Request permission on application start
+Request permission on application start
+---------------------------------------
 
 Open `AppDelegate.swift` and import the `AVFoundation` library right after where `UIKit` is included:
 
@@ -32,7 +36,7 @@ import AVFoundation
 
 Next, call `requestRecordPermission:` inside `application:didFinishLaunchingWithOptions:`:
 
-``` swift
+```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     AVAudioSession.sharedInstance().requestRecordPermission { (granted:Bool) in
@@ -42,10 +46,12 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-## Build and Run
+Build and Run
+-------------
 
-You can now build and run the project, by either selecting `Product` > `Run` from the top menu, or pressing `Cmd + R`, and launch it in the simulator. 
+You can now build and run the project, by either selecting `Product` > `Run` from the top menu, or pressing `Cmd + R`, and launch it in the simulator.
 
 Notice the prompt asking for permission to use the microphone:
 
 ![Simulator microphone permission ask](/images/client-sdk/ios-voice/Simulator-microphone-permission-ask.jpg)
+

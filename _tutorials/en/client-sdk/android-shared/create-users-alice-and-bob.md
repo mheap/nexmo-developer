@@ -1,9 +1,11 @@
 ---
-title: Create the users
-description: In this step you learn how to create the Users that will participate in the Call.
+title:  Create the users
+description:  In this step you learn how to create the Users that will participate in the Call.
+
 ---
 
-# Create the Users
+Create the Users
+================
 
 Each participant is represented by a [User](/conversation/concepts/user) object and must be authenticated by the Client SDK. In a production application, you would typically store this user information in a database.
 
@@ -20,4 +22,5 @@ This will return user IDs similar to the following:
 User created: USR-aaaaaaaa-bbbb-cccc-dddd-0123456789ab
 ```
 
-There is no need to remember this user ID because we will use JWT token to authenticate users. 
+There is no need to remember this user ID because we will use JWT token to authenticate users.
+

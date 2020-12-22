@@ -1,9 +1,11 @@
 ---
-title: Check report status
-description: Check on the progress of your report
+title:  Check report status
+description:  Check on the progress of your report
+
 ---
 
-# Check report status
+Check report status
+===================
 
 Once a report has been requested, it may take some time to generate. You can check on the progress of your report by calling the `GET /v2/reports/:id` endpoint, for example:
 
@@ -41,3 +43,4 @@ The response will contain information about the report. The `download_report` fi
   "items_count": 14952
 }
 ```
+

@@ -1,9 +1,11 @@
 ---
-title: Show the message history
-description: In this step you display any messages already sent as part of this Conversation
+title:  Show the message history
+description:  In this step you display any messages already sent as part of this Conversation
+
 ---
 
-# Show the Message History
+Show the Message History
+========================
 
 You want your users to see all the messages in the Conversation. You can achieve this by handling the Conversation’s `getEvents` method (to retrieve messages sent and received before the current session started) and its `text` event (which alerts your application when a user sends a message).
 
@@ -15,13 +17,13 @@ loadMessagesButton.addEventListener('click', async (event) => {
   let nextEvents = await listedEvents.getNext();
   listMessages(nextEvents);
 });
-``` 
+```
 
 Your application can retrieve the message detail from the event data sent to each handler and add it to the list of messages.
 
 To list the messages, we will create a `listMessages` function that will take an events page and perform a few steps.
 
-First, if the events page has messages on a following page, the "Load Previous Messages" button is visible. To do that, `hasNext()` is called and returns a boolean based on if there is another page of messages. You can find out more information about `hasNext()` in the [documentation](https://developer.nexmo.com/sdk/stitch/javascript/EventsPage.html#hasNext). 
+First, if the events page has messages on a following page, the "Load Previous Messages" button is visible. To do that, `hasNext()` is called and returns a boolean based on if there is another page of messages. You can find out more information about `hasNext()` in the [documentation](https://developer.nexmo.com/sdk/stitch/javascript/EventsPage.html#hasNext).
 
 Next, you will loop through the events, format and combine them and then add to the message list.
 
@@ -96,3 +98,4 @@ Finally, you need to set up an event listener for any new incoming messages. You
     messagesCountSpan.textContent = `${messagesCount}`;
   });
 ```
+

@@ -1,9 +1,11 @@
 ---
-title: Create the basic application
-description: Download the basic web application from GitHub
+title:  Create the basic application
+description:  Download the basic web application from GitHub
+
 ---
 
-# Create the basic application
+Create the basic application
+============================
 
 In this step, you will install the code you will use as the starting point for this tutorial.
 
