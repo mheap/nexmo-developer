@@ -142,7 +142,7 @@ public class MainViewModel extends ViewModel {
 
     @SuppressLint("MissingPermission")
     public void startAppToPhoneCall() {
-        // TODO: Start call
+        // TODO: Start the call
     }
 
     public void onBackPressed() {

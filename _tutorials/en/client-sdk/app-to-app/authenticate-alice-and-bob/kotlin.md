@@ -94,6 +94,8 @@ class LoginViewModel : ViewModel() {
 
     private val navManager = NavManager
 
+    private var user: User? = null
+
     private val _connectionStatus = MutableLiveData<ConnectionStatus>()
     val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
 
@@ -146,7 +148,7 @@ class LoginViewModel : ViewModel() {
             if (newConnectionStatus == ConnectionStatus.CONNECTED) {
 
                 user?.let {
-                    NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment(it.name)
+                    val navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment(it.name)
                     navManager.navigate(navDirections)
                 }
                 

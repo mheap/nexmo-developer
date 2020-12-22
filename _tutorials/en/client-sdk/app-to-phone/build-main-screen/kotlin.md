@@ -119,7 +119,7 @@ class MainViewModel : ViewModel() {
 
     @SuppressLint("MissingPermission")
     fun startAppToPhoneCall() {
-        TODO("Start call")
+        TODO("Start the call")
     }
 
     fun onBackPressed() {
