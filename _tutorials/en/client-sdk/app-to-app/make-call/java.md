@@ -5,6 +5,28 @@ description: In this step you learn how to make an app-to-app call.
 
 # Make a call
 
+Add `callListener` property within the `MainViewModel` class:
+
+```java
+private NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<NexmoCall>() {
+    @Override
+    public void onSuccess(@Nullable NexmoCall call) {
+        callManager.setOnGoingCall(call);
+
+        loadingMutableLiveData.postValue(false);
+
+        NavDirections navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment(lastCalledUserName);
+        navManager.navigate(navDirections);
+    }
+
+    @Override
+    public void onError(@NonNull NexmoApiError apiError) {
+        toastMutableLiveData.postValue(apiError.getMessage());
+        loadingMutableLiveData.postValue(false);
+    }
+};
+```
+
 Locate the `startAppToAppCall` method within the `MainViewModel` class and fill its body to enable call:
 
 ```java
@@ -16,10 +38,5 @@ public void startAppToAppCall() {
     loadingMutableLiveData.postValue(true);
 }
 ```
+
 > **NOTE** Only Alice calling Bob scenario will work given used NCCO config.
-
-Now you need to make sure that above method is called after pressing the button. Open `MainFragment` class and update `startAppToAppCallButton.setOnClickListener` inside `onViewCreated` method:
-
-```java
-startAppToAppCallButton.setOnClickListener(it -> viewModel.startAppToAppCall());
-```

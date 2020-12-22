@@ -22,6 +22,8 @@ object Config {
         "Bob",
         "BOB_TOKEN" // TODO: "set Bob's JWT token"
     )
+
+    fun getOtherUserName(userName: String) = if (userName == alice.name) bob.name else alice.name
 }
 
 data class User(

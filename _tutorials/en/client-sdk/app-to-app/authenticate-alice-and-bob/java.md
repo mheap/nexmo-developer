@@ -38,8 +38,19 @@ Replace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintTop_toBottomOf="parent" />
+
+    <Button
+            android:id="@+id/loginAsBobButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login as Bob"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton"
+            app:layout_constraintVertical_bias="0.1" />
 
     <androidx.core.widget.ContentLoadingProgressBar
             android:id="@+id/progressBar"
@@ -50,7 +61,7 @@ Replace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton" />
+            app:layout_constraintTop_toBottomOf="@id/loginAsBobButton" />
 
     <TextView
             android:id="@+id/connectionStatusTextView"
@@ -86,7 +97,10 @@ public class LoginViewModel extends ViewModel {
 
     private NexmoClient client = null; // TODO: Retrieve NexmoClient instance
 
+    private User user = null;
+
     NavManager navManager = NavManager.getInstance();
+
     private MutableLiveData<ConnectionStatus> _connectionStatusMutableLiveData = new MutableLiveData<>();
     public LiveData<ConnectionStatus> connectionStatusLiveData = _connectionStatusMutableLiveData;
 
@@ -114,6 +128,8 @@ Your user must be authenticated to be able to participate in the Conversation. R
 
 ```java
 void onLoginUser(User user) {
+    this.user = user;
+    
     if (!user.jwt.trim().isEmpty()) {
         client.login(user.jwt);
     }

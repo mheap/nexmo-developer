@@ -37,7 +37,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
             android:name="com.vonage.tutorial.voice.LoginFragment"
             tools:layout="@layout/fragment_login">
         <action
-                android:id="@+id/action_loginFragment_to_voiceFragment"
+                android:id="@+id/action_loginFragment_to_mainFragment"
                 app:destination="@id/mainFragment" />
     </fragment>
 

@@ -53,7 +53,13 @@ public class Config {
         );
     }
 
-    //...
+    public static String getOtherUserName(String userName) {
+        if (userName.equals(getAlice().getName())) {
+            return getBob().getName();
+        } else {
+            return getAlice().getName();
+        }
+    }
 }
 ```
 

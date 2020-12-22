@@ -38,8 +38,19 @@ Replace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintTop_toBottomOf="parent" />
+
+    <Button
+            android:id="@+id/loginAsBobButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login as Bob"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton"
+            app:layout_constraintVertical_bias="0.1" />
 
     <androidx.core.widget.ContentLoadingProgressBar
             android:id="@+id/progressBar"
@@ -50,7 +61,7 @@ Replace file content with below code snippet:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton" />
+            app:layout_constraintTop_toBottomOf="@id/loginAsBobButton" />
 
     <TextView
             android:id="@+id/connectionStatusTextView"
@@ -85,6 +96,8 @@ class LoginViewModel : ViewModel() {
 
     private val navManager = NavManager
 
+    private val user: User? = null
+
     private val _connectionStatus = MutableLiveData<ConnectionStatus>()
     val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
 
@@ -114,6 +127,8 @@ Your user must be authenticated to be able to participate in the Conversation. R
 
 ```kotlin
 fun onLoginUser(user: User) {
+    this.user = user
+
     if (user.jwt.isNotBlank()) {
         client.login(user.jwt)
     }
@@ -133,8 +148,10 @@ class LoginViewModel : ViewModel() {
         client.setConnectionListener { newConnectionStatus, _ ->
 
             if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                val navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment()
-                navManager.navigate(navDirections)
+                user?.let {
+                    val navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment(it.name)
+                    navManager.navigate(navDirections)
+                }
                 
                 return@setConnectionListener
             }

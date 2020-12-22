@@ -5,7 +5,7 @@ description: In this step you create screens.
 
 # Create empty screens
 
-You will now create placeholders for screens in the application (we will define layouts and the functionality in following steps of this tutorial). You will create few files for each screen:
+You will now create placeholders for screens in the application (we will define layouts and the functionality in following steps of this tutorial). You will create a few files for each screen:
 
 - Layout
 - Fragment (view)
