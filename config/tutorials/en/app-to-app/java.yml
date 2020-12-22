@@ -36,8 +36,6 @@ tasks:
   - client-sdk/app-to-app/build-main-screen
   - client-sdk/app-to-app/build-on-call-screen
   - client-sdk/app-to-app/build-incoming-call-screen
-  - client-sdk/app-to-app/receive-call
-  - client-sdk/app-to-app/make-call
   - client-sdk/android-shared/run-app
 
 conclusion:
