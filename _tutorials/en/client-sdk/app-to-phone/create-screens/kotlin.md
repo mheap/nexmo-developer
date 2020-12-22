@@ -1,9 +1,9 @@
 ---
-title: Create screens
+title: Create screens placeholders
 description: In this step you create screens.
 ---
 
-# Create empty screens
+# Create screens placeholders
 
 You will now create placeholders for screens in the application (we will define layouts and the functionality in following steps of this tutorial). You will create a few files for each screen:
 
