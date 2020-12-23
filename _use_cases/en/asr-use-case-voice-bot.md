@@ -8,7 +8,7 @@ languages:
 
 # Voice Bot / Interactive Voice Assistant
 
-In this tutorial, you will create a simple bot answering an inbound phone call. The bot will ask for your location and share your actual weather conditions in response. You will implement this using the [express](https://expressjs.com/) web application framework, [Weatherstack](https://weatherstack.com/) API and Vonage Automatic Speech Recognition (ASR) feature.
+In this tutorial, you will create a bot answering an inbound phone call. The bot will ask for your location and share your actual weather conditions in response. You will implement this using the [express](https://expressjs.com/) web application framework, [Weatherstack](https://weatherstack.com/) API and Vonage Automatic Speech Recognition (ASR) feature.
 
 ## Prerequisites
 
@@ -65,7 +65,7 @@ The command returns an application ID (which you should make a note of) and your
 
 ## Link your number
 
-You need to link your Vonage number to the Voice API application that you just created. Use the following command:
+You need to link your Vonage number to the Voice API application that you created. Use the following command:
 
 ```sh
 nexmo link:app NEXMO_NUMBER NEXMO_APPLICATION_ID
@@ -211,7 +211,7 @@ In the previous code block, `access_key` is your Weatherstack API key and `query
 }
 ```
 
-In the app, you will use just the very simple parameters like `description` (“Sunny”) and `temperature`. It’d be nice to get weather forecast rather than the actual temperature, however since the free Weatherstack account allows to get only `current` conditions - that’s what you will use.
+In the app, you will use parameters like `description` (“Sunny”) and `temperature`. It’d be nice to get weather forecast rather than the actual temperature, however since the free Weatherstack account allows to get only `current` conditions - that’s what you will use.
 
 Once you received the response from Weatherstack, you will return a new NCCO with the talk action to say “Today in New York: it’s sunny, 9 degrees Celsius”.
 
@@ -316,7 +316,7 @@ node index.js
 
 In this tutorial, you created an application that uses the Voice API to interact with caller by asking and answering with voice messages.
 
-The bot you created was simple, but it was able to listen to the caller and respond with some relevant information. You may use it as a basis for your IVR or some customer self-service app just by adding appropriate business logic relevant to your case and the services you are using.
+The bot you created was able to listen to the caller and respond with some relevant information. You may use it as a basis for your IVR or some customer self-service app by adding appropriate business logic relevant to your case and the services you are using.
 
 As you see, automatic speech recognition (ASR) is an effortless way to implement dialogue-style voice bot or IVR (Interactive Voice Response)/IVA (Interactive Voice Assistant) quickly. If you need more flexibility or almost real-time interaction, try our [WebSockets](/voice/voice-api/guides/websockets) feature, which is extremely powerful and can empower some very sophisticated use cases, such as artificial intelligence, analysis and transcription of call audio.
 

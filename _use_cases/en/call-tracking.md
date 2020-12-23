@@ -10,7 +10,7 @@ languages:
 
 Gain insight into the effectiveness of your customer communications by keeping track of the calls received by your Vonage numbers. By registering a different number for each of your marketing campaigns, you can see which one performs the best and use that information to improve your future marketing efforts.
 
-Today's example uses node.js and all the code is [available on GitHub](https://github.com/Nexmo/node-call-tracker), however the same approach could be used for any other technology stack just as effectively.
+Today's example uses node.js and all the code is [available on GitHub](https://github.com/Nexmo/node-call-tracker), however the same approach could be used for any other technology stack.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ In order to work through this tutorial you need:
 
 Before you grab the code and dive in, you will to set up a Vonage application and get some numbers to use with it. When you create a Vonage application, you specify some [webhook](https://developer.nexmo.com/concepts/guides/webhooks) endpoints; these are URLs in your own application and are the reason that your code must be publicly accessible. When a caller calls your Vonage number, Vonage will make a web request to the `answer_url` endpoint you specify and follow the instructions it finds there.
 
-There is also an `event_url` webhook, that receives updates whenever the call state changes. To keep things simple, in this application the code simply outputs the events to the console to make them easy to see while developing an application.
+There is also an `event_url` webhook, that receives updates whenever the call state changes. In this application the code outputs the events to the console to provide useful information during development.
 
 To create the initial application, use the Nexmo CLI to run the command below, replacing your URL in two places:
 
@@ -104,7 +104,7 @@ app.get('/track-call', function(req, res) {
 ⚓ Track the Call 
 ## Track the Call Before Connecting the Caller
 
-The logic for actually tracking the call is separate and super-simple in the example application. Possibly too simple, since it loses the data when you restart the server! For your own applications you may extend this part to write to a database, logging platform, or something else to suit your own needs. After tracking the call, the application returns a [Nexmo Call Control Object (NCCO)](https://developer.nexmo.com/voice/voice-api/ncco-reference) to tell Vonage's servers what to do next with the call.
+The logic for actually tracking the call is separate in the example application. Please note, the app loses the data when you restart the server! For your own applications you may extend this part to write to a database, logging platform, or something else to suit your own needs. After tracking the call, the application returns a [Nexmo Call Control Object (NCCO)](https://developer.nexmo.com/voice/voice-api/ncco-reference) to tell Vonage's servers what to do next with the call.
 
 You'll find this code in `lib/CallTracker.js`:
 

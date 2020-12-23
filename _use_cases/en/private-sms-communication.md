@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
 })
 ```
 
-Note that we are instantiating an object of the `SmsProxy` class to handle the routing of messages sent to your virtual number to the intended recipient's real number. We cover the actual proxying process in [proxy the SMS](#proxy-the-sms), but for now just be aware that this class initializes `nexmo` using the API key and secret that you will configure in the next step. This enables your application to send and receive SMS:
+Note that we are instantiating an object of the `SmsProxy` class to handle the routing of messages sent to your virtual number to the intended recipient's real number. We cover the actual proxying process in [proxy the SMS](#proxy-the-sms), but for now be aware that this class initializes `nexmo` using the API key and secret that you will configure in the next step. This enables your application to send and receive SMS:
 
 ```javascript
 const Nexmo = require('nexmo');
@@ -226,7 +226,7 @@ proxySms(from, text) {
 
 When the SMS API receives an SMS destined for your virtual number, it alerts your application via a [webhook](/concepts/guides/webhooks). The webhook provides a mechanism for Vonage's servers to communicate with yours.
 
-For your application to be accessible to Vonage's servers, it must be publicly available on the Internet. A simple way to achieve this during development and testing is to use [ngrok](https://ngrok.com), a service that exposes local servers to the public Internet over secure tunnels. See [this blog post](https://www.nexmo.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/) for more details.
+For your application to be accessible to Vonage's servers, it must be publicly available on the Internet. One way to achieve this during development and testing is to use [ngrok](https://ngrok.com), a service that exposes local servers to the public Internet over secure tunnels. See [this blog post](https://www.nexmo.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/) for more details.
 
 Download and install [ngrok](https://ngrok.com), then start it with the following command:
 

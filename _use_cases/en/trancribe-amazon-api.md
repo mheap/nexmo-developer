@@ -571,7 +571,7 @@ Hello back this is channel one .
 
 ### Adding more callers
 
-If you have more than two numbers, you can add more callers to the conversation. Simply create a `connect` action for each in the `/webhooks/answer` NCCO and increase the number of channels in the `record` action accordingly.
+If you have more than two numbers, you can add more callers to the conversation. Create a `connect` action for each in the `/webhooks/answer` NCCO and increase the number of channels in the `record` action accordingly.
 
 ## Further reading
 

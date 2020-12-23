@@ -15,7 +15,7 @@ The Advanced level provides you with the most comprehensive data to help protect
 
 ## In this tutorial
 
-In this tutorial, you create a simple RESTful web service in Node.js and Express that accepts a phone number and returns insight information about the number when it becomes available.
+In this tutorial, you create a RESTful web service in Node.js and Express that accepts a phone number and returns insight information about the number when it becomes available.
 
 To achieve this, you perform the following steps:
 
@@ -63,7 +63,7 @@ $ npm install nexmo --save
 
 When the Number Insight API finishes processing your request, it alerts your application via a [webhook](/concepts/guides/webhooks). The webhook provides a mechanism for Vonage's servers to communicate with yours.
 
-For your application to be accessible to Vonage's servers, it must be publicly available on the Internet. A simple way to achieve this during development and testing is to use [ngrok](https://ngrok.com), a service that exposes local servers to the public Internet over secure tunnels. See [this blog post](https://www.nexmo.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/) for more details.
+For your application to be accessible to Vonage's servers, it must be publicly available on the Internet. One way to achieve this during development and testing is to use [ngrok](https://ngrok.com), a service that exposes local servers to the public Internet over secure tunnels. See [this blog post](https://www.nexmo.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/) for more details.
 
 Download and install [ngrok](https://ngrok.com), then start it with the following command:
 
@@ -235,7 +235,7 @@ Consider the following when testing your application:
 
 ## Conclusion
 
-In this tutorial, you created a simple application that uses the Number Insight Advanced Async API to return data to a webhook.
+In this tutorial, you created an application that uses the Number Insight Advanced Async API to return data to a webhook.
 
 The tutorial did not cover some of the features specific to the Advanced API such as IP address matching, reachability and roaming status. Review the [documentation](/number-insight/overview) to learn how to use these features.
 
