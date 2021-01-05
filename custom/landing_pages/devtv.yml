@@ -96,9 +96,9 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="13">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="13a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="13a" role="tab">
                         <b>13</b>
-                        <p class="show"></p>
+                        <p class="show">The Low-Code Hour</p>
                       </div>
                     </span>
                   </div>
@@ -138,9 +138,9 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="20">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="20a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="20a" role="tab">
                         <b>20</b>
-                        <p class="show"></p>
+                        <p class="show">Vonage Gems</p>
                       </div>
                     </span>
                   </div>
@@ -437,50 +437,54 @@ page:
                 <div class="Vlt-tabs__panel" id="tab-13" role="tabpanel">
                   <div class="Vlt-grid">
                     <div class="Vlt-col Vlt-col--1of3 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1603108151/Twitch_Show_Social_Graphics_21_xofgrg.png" alt="Mistakes Were Made">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1603841781/Twitch_Show_Social_Graphics_23_diks5y.png" alt="The Low-Code Hour">
                     </div>
                     <div class="Vlt-col Vlt-col--2of3">
                       <div class="Vlt-grid">
-                        <h4 class="Vlt-col mobile-center">Vonage Gems</h4>
-                        <p class="Vlt-col Vlt-right mobile-justify">13:30 Tel Aviv / 11:30 London / 6:30 New York</p>
+                        <h4 class="Vlt-col mobile-center">The Low-Code Hour</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">15:00 London / 10:00 New York / 09:00 SF</p>
                       </div>
                       <p class="Vlt-col padding-left-0 mobile-justify">
-                        Come and learn how to build apps that can communicate with the world in one of the friendliest programming languages that there is, Ruby! From Facebook chatbots to phone applications and WhatsApp interactive experiences, we will uncover all these gems and a lot more during our regular time together.
+                        Exploring Vonage Voice with Zapier
+
+                        In this episode, we're looking at the different Vonage Voice API actions and triggers available in Zapier.
                       </p>
-                      <br>
                       <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
                         <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        Ruby on Rails - Ruby - JS - APIs
+                        Zapier - Vonage Voice API - Low Code - No Code
                       </h5>
                     </div>
-                    <div class="Vlt-grid padding-top-32">
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4>About The Show</h4>
-                        <p class="text-justify">
-                          This will be a regular Ruby language stream of building Vonage API powered apps in Ruby. We'll be covering the full breadth of Vonage APIs with Ruby and different Ruby tooling and frameworks, although primarily Rails for the framework aspect.
-                        </p>
-                      </div>
-                      <div class="Vlt-col Vlt-col--1of2">
-                        <h4 class="inline-block">About Ben Greenberg</h4>
-                        <a href="https://twitter.com/RabbiGreenberg" target="_blank">
-                          <i class="icon icon-twitter"></i>
-                        </a>
-                        <a href="https://github.com/bencgreenberg" target="_blank">
-                          <i class="icon icon-github"></i>
-                        </a>
-                        <h5>
-                          Ruby Developer Advocate
-                        </h5>
-                        <p class="text-justify">
-                          Ben is a second career developer who previously spent a decade in the fields of adult education, community organizing and non-profit management. He works as a developer advocate for Nexmo, the Vonage API Platform by day and experiments with open source projects at night. He writes regularly on the intersection of community development and tech. Originally from Southern California and a long time resident of New York City, Ben now resides near Tel Aviv, Israel.
-                        </p>
-                        </br>
-                        <a class="Vlt-purple" href="https://torahandtech.dev/">
-                           Torah && Tech.dev
-                        </a>
+                    <div class="padding-top-32">
+                      <div class="Vlt-grid padding-top-32">
+                        <div class="Vlt-col Vlt-col--1of2">
+                          <h4>About The Show</h4>
+                          <p class="text-justify">
+                            Bi-weekly on Wednesdays Julia explores different low-code tools, a software development approach that enables the delivery of applications faster and with minimal hand-coding, such as Node-Red, Zapier, Netlify, etc.
+                          </p>
+                        </div>
+                        <div class="Vlt-col Vlt-col--1of2">
+                          <h4 class="inline-block">About Julia Biro</h4>
+                          <a href="https://twitter.com/iza_biro" target="_blank">
+                            <i class="icon icon-twitter"></i>
+                          </a>
+                          <a href="https://github.com/juliacodez" target="_blank">
+                            <i class="icon icon-github"></i>
+                          </a>
+                          <h5>
+                            Developer Advocate
+                          </h5>
+                          <p class="text-justify">
+                            Julia is a Developer Advocate for Vonage focusing on low-code technologies and integrations. Maker and breaker of things, explorer of yet another builder tool. Forever challenging the barriers to entry of tech, she is passionate about learning and teaching, creating resources for the community.
+                          </p>
+                          </br>
+                          <a class="Vlt-purple" href="https://developeravocados.net/">
+                            DeveloperAvocados.net
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
+
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-14" role="tabpanel">
                   <div class="Vlt-grid">
@@ -680,6 +684,54 @@ page:
                   </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-20" role="tabpanel">
+                  <div class="Vlt-grid">
+                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1603108151/Twitch_Show_Social_Graphics_21_xofgrg.png" alt="Mistakes Were Made">
+                    </div>
+                    <div class="Vlt-col Vlt-col--2of3">
+                      <div class="Vlt-grid">
+                        <h4 class="Vlt-col mobile-center">Vonage Gems</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">13:30 Tel Aviv / 11:30 London / 6:30 New York</p>
+                      </div>
+                      <p class="Vlt-col padding-left-0 mobile-justify">
+                        Come and learn how to build apps that can communicate with the world in one of the friendliest programming languages that there is, Ruby! From Facebook chatbots to phone applications and WhatsApp interactive experiences, we will uncover all these gems and a lot more during our regular time together.
+                        <br><br>
+                        In each episode, we will start from scratch building a brand new application together. In doing so, we'll learn about working with APIs diving into the wonderful nuances of Ruby and its ecosystem of tools and frameworks.
+                      </p>
+                      <br>
+                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
+                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
+                        Ruby on Rails - Ruby - JS - APIs
+                      </h5>
+                    </div>
+                    <div class="Vlt-grid padding-top-32">
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4>About The Show</h4>
+                        <p class="text-justify">
+                          This will be a regular Ruby language stream of building Vonage API powered apps in Ruby. We'll be covering the full breadth of Vonage APIs with Ruby and different Ruby tooling and frameworks, although primarily Rails for the framework aspect.
+                        </p>
+                      </div>
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4 class="inline-block">About Ben Greenberg</h4>
+                        <a href="https://twitter.com/RabbiGreenberg" target="_blank">
+                          <i class="icon icon-twitter"></i>
+                        </a>
+                        <a href="https://github.com/bencgreenberg" target="_blank">
+                          <i class="icon icon-github"></i>
+                        </a>
+                        <h5>
+                          Ruby Developer Advocate
+                        </h5>
+                        <p class="text-justify">
+                          Ben is a second career developer who previously spent a decade in the fields of adult education, community organizing and non-profit management. He works as a developer advocate for Nexmo, the Vonage API Platform by day and experiments with open source projects at night. He writes regularly on the intersection of community development and tech. Originally from Southern California and a long time resident of New York City, Ben now resides near Tel Aviv, Israel.
+                        </p>
+                        </br>
+                        <a class="Vlt-purple" href="https://torahandtech.dev/">
+                           Torah && Tech.dev
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-21" role="tabpanel">
                   <div class="Vlt-grid">
