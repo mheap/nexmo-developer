@@ -85,6 +85,11 @@ page:
                         <p class="show">Week.init()</p>
                       </div>
                     </span>
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="11b" role="tab">
+                        <p class="show"><span class="Vlt-badge Vlt-badge--green Vlt-badge--transparent">new</span>The Dev Lounge</p>
+                      </div>
+                    </span>
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="12">
                     <span class="Vlt-col padding-0">
@@ -222,9 +227,7 @@ page:
                         <p class="text-justify">
                           Paul is an iOS Developer Advocate at Nexmo. A seasoned software engineer, trainer and speaker, he specialised in data-driven solutions on Apple platforms with an emphasis on prototyping, best practices and balance with agility.
                         </p>
-                        <a class="Vlt-purple" href="https://www.pardel.net/">
-                          pardel.net
-                        </a>
+                        <a href="https://learn.vonage.com/authors/paul-ardeleanu" target="_blank">Articles by Paul</a>
                       </div>
                     </div>
                   </div>
@@ -273,10 +276,7 @@ page:
                         <p class="text-justify">
                           Ben is a second career developer who previously spent a decade in the fields of adult education, community organizing and non-profit management. He works as a developer advocate for Nexmo, the Vonage API Platform by day and experiments with open source projects at night. He writes regularly on the intersection of community development and tech. Originally from Southern California and a long time resident of New York City, Ben now resides near Tel Aviv, Israel.
                         </p>
-                        </br>
-                        <a class="Vlt-purple" href="https://torahandtech.dev/">
-                           Torah && Tech.dev
-                        </a>
+                        <a href="https://learn.vonage.com/authors/ben-greenberg" target="_blank">Articles by Ben</a>
                       </div>
                     </div>
                   </div>
@@ -320,17 +320,14 @@ page:
                         <p class="text-justify">
                           An English teacher turned empathetic software engineer. A curious optimist with a passion for creating accessible content and helping developers level up their skills.
                         </p>
-                        </br>
-                        <a class="Vlt-purple" href="https://lolocoding.com">
-                          LoLoCoding.com
-                        </a>
+                        <a href="https://learn.vonage.com/authors/laurenlee" target="_blank">Articles by Lauren</a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="Vlt-tabs__panel" id="tab-8" role="tabpanel">
                 </div>
-                <div class="Vlt-tabs__panel" id="tab-11" role="tabpanel">
+                <div class="Vlt-tabs__panel" id="tab-11a" role="tabpanel">
                   <div class="Vlt-grid">
                     <div class="Vlt-col Vlt-col--1of3 padding-left-0">
                       <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1599463202/Week.init_twitter_gt26mi.png" alt="Week.init()">
@@ -375,9 +372,63 @@ page:
                         <p class="text-justify">
                           Paul is an iOS Developer Advocate at Nexmo. A seasoned software engineer, trainer and speaker, he specialised in data-driven solutions on Apple platforms with an emphasis on prototyping, best practices and balance with agility.
                         </p>
-                        <a class="Vlt-purple" href="https://www.pardel.net/">
-                          pardel.net
+                        <a href="https://learn.vonage.com/authors/paul-ardeleanu" target="_blank">Articles by Paul</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Vlt-tabs__panel" id="tab-11b" role="tabpanel">
+                  <div class="Vlt-grid">
+                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1609856167/Twitch_Show_Social_Graphics_36_sskjly.png" alt="The Dev Lounge">
+                    </div>
+                    <div class="Vlt-col Vlt-col--2of3">
+                      <div class="Vlt-grid">
+                        <h4 class="Vlt-col mobile-center"><span class="Vlt-badge Vlt-badge--green Vlt-badge--transparent">new</span>The Dev Lounge with Nahrin Jalal</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">17:00 London / 12:00 New York / 09:00 SF</p>
+                      </div>
+                      <p class="Vlt-col padding-left-0 mobile-justify">
+                      <h5>How to Build a Learning Platform With React, Express, Apollo GraphQL & Vonage</h5>
+                        In this stream, Nahrin Jalal and Vonage Voyager Héctor Zelaya (<a href="https://twitter.com/inuxero" target="_blank">@inuxero</a>) take a look at how it's possible to build our own learning platform with video/audio capabilities, SMS notifications, and passwordless authentication
+                        <br><br>
+                        <b>Links:</b>
+                        <a href="https://learn.vonage.com/blog/2020/12/15/how-to-build-a-learning-platform-using-vonage-javascript-typescript-react-express-and-apollo-graphql" target="_blank">
+                          Companion Article
                         </a>
+                        <b> - </b>
+                        <a href="https://developer.nexmo.com/voyagers" target="_blank">
+                          Vonage Voyagers
+                        </a>
+
+                      </p>
+                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
+                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
+                        JavaScript - reactJS - Express - Apollo - GraphQL - Vonage API
+                      </h5>
+                    </div>
+                    <div class="Vlt-grid padding-top-32">
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4>About The Show</h4>
+                        <p class="text-justify">
+                          Join Nahrin for a developer variety show featuring innovative live demos, interviews with inspirational folks in tech, live hacks, and more! Tune in bi-weekly on Mondays to hang out with special guests and get your questions answered live on stream.
+                        </p>
+                      </div>
+                      <div class="Vlt-col Vlt-col--1of2">
+                        <h4 class="inline-block">About Nahrin Jalal</h4>
+                        <a href="https://twitter.com/nahrinjalal" target="_blank">
+                          <i class="icon icon-twitter"></i>
+                        </a>
+                        <a href="https://github.com/NJalal7" target="_blank">
+                          <i class="icon icon-github"></i>
+                        </a>
+                        <h5>
+                          Developer Educator
+                        </h5>
+                        <p class="text-justify">
+                          Nahrin is a Developer Educator for Nexmo, the Vonage API Platform. She is passionate about building inclusive communities, pragmatic software solutions, and creating technical content that is accessible to all skill levels.
+                          <br>
+                          <a href="https://learn.vonage.com/authors/nahrinjalal" target="_blank">Articles by Nahrin</a>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -476,10 +527,7 @@ page:
                           <p class="text-justify">
                             Julia is a Developer Advocate for Vonage focusing on low-code technologies and integrations. Maker and breaker of things, explorer of yet another builder tool. Forever challenging the barriers to entry of tech, she is passionate about learning and teaching, creating resources for the community.
                           </p>
-                          </br>
-                          <a class="Vlt-purple" href="https://developeravocados.net/">
-                            DeveloperAvocados.net
-                          </a>
+                          <a href="https://learn.vonage.com/authors/julia" target="_blank">Articles by Julia</a>
                         </div>
                       </div>
                     </div>
@@ -523,10 +571,7 @@ page:
                         <p class="text-justify">
                           An English teacher turned empathetic software engineer. A curious optimist with a passion for creating accessible content and helping developers level up their skills.
                         </p>
-                        </br>
-                        <a class="Vlt-purple" href="https://lolocoding.com">
-                          LoLoCoding.com
-                        </a>
+                        <a href="https://learn.vonage.com/authors/laurenlee" target="_blank">Articles by Lauren</a>
                       </div>
                     </div>
                   </div>
@@ -624,9 +669,7 @@ page:
                         <p class="text-justify">
                           Paul is an iOS Developer Advocate at Nexmo. A seasoned software engineer, trainer and speaker, he specialised in data-driven solutions on Apple platforms with an emphasis on prototyping, best practices and balance with agility.
                         </p>
-                        <a class="Vlt-purple" href="https://www.pardel.net/">
-                          pardel.net
-                        </a>
+                        <a href="https://learn.vonage.com/authors/paul-ardeleanu" target="_blank">Articles by Paul</a>
                       </div>
                     </div>
                   </div>
@@ -676,9 +719,7 @@ page:
                         <p class="text-justify">
                           Paul is an iOS Developer Advocate at Nexmo. A seasoned software engineer, trainer and speaker, he specialised in data-driven solutions on Apple platforms with an emphasis on prototyping, best practices and balance with agility.
                         </p>
-                        <a class="Vlt-purple" href="https://www.pardel.net/">
-                          pardel.net
-                        </a>
+                        <a href="https://learn.vonage.com/authors/paul-ardeleanu" target="_blank">Articles by Paul</a>
                       </div>
                     </div>
                   </div>
@@ -725,10 +766,7 @@ page:
                         <p class="text-justify">
                           Ben is a second career developer who previously spent a decade in the fields of adult education, community organizing and non-profit management. He works as a developer advocate for Nexmo, the Vonage API Platform by day and experiments with open source projects at night. He writes regularly on the intersection of community development and tech. Originally from Southern California and a long time resident of New York City, Ben now resides near Tel Aviv, Israel.
                         </p>
-                        </br>
-                        <a class="Vlt-purple" href="https://torahandtech.dev/">
-                           Torah && Tech.dev
-                        </a>
+                        <a href="https://learn.vonage.com/authors/ben-greenberg" target="_blank">Articles by Ben</a>
                       </div>
                     </div>
                   </div>
@@ -770,10 +808,7 @@ page:
                         <p class="text-justify">
                           An English teacher turned empathetic software engineer. A curious optimist with a passion for creating accessible content and helping developers level up their skills.
                         </p>
-                        </br>
-                        <a class="Vlt-purple" href="https://lolocoding.com">
-                          LoLoCoding.com
-                        </a>
+                        <a href="https://learn.vonage.com/authors/laurenlee" target="_blank">Articles by Lauren</a>
                       </div>
                     </div>
                   </div>
