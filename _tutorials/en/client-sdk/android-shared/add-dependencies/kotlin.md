@@ -60,7 +60,7 @@ buildscript {
 }
 ```
 
-Now in the same file add dependency for Gradle `Safe Args` plugin that provides type safety when navigating and passing data between destinations.
+In the same file, add a dependency for the Gradle `Safe Args` plugin. This provides type safety when navigating and passing data between destinations.
 Add new `classpath` in the `dependencies` block:
 
 ```groovy
