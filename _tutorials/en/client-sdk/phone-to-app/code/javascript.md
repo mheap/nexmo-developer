@@ -1,15 +1,13 @@
 ---
-title:  Create a client side application
-description:  In this step you learn how to write the code for your phone to app application.
-
+title: Create a client side application
+description: In this step you learn how to write the code for your phone to app application.
 ---
 
-Create a client side application
-================================
+# Create a client side application
 
 Create an HTML file called `index.html` in your project directory. Add the following code, but make sure you paste in the JWT you generated for the user in the [earlier step](/client-sdk/tutorials/phone-to-app/client-sdk/generate-jwt) in this tutorial:
 
-```html
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,4 +74,3 @@ The main features of this code are:
 5. The code logs the agent in using the user JWT generated in an [earlier step](/client-sdk/tutorials/phone-to-app/client-sdk/generate-jwt).
 6. The code sets up two main event handlers. The first is fired on the inbound call. This in turn sets up 3 click button event handlers which answers, rejects and hangs-up the inbound call using the Client SDK method `call.answer()`,`call.reject()`, and `call.hangUp()` respectively.
 7. The second, the call status changed (`call:status:changed`) event handler sets the text of the notification box to the inbound call status.
-

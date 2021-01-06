@@ -1,17 +1,15 @@
 ---
-title:  Check the verification code
-description:  Check that the code the user enters is the same as the one that was sent
-
+title: Check the verification code
+description: Check that the code the user enters is the same as the one that was sent
 ---
 
-Check the verification code
-===========================
+# Check the verification code
 
 The final part of the process is to have the user enter the code they received and confirm that it matches the one that was sent by the Verify API.
 
 First, add a new route:
 
-**`config/routes.rb`** 
+**`config/routes.rb`**
 
 ```ruby
 Rails.application.routes.draw do
@@ -24,7 +22,7 @@ end
 
 Then, create a basic controller:
 
-**`app/controllers/verifications_controller.rb`** 
+**`app/controllers/verifications_controller.rb`**
 
 ```ruby
 class VerificationsController < ApplicationController
@@ -42,7 +40,7 @@ Note from the above that is important to skip the `before_action` we added to th
 
 Create a view to enable the user to fill in their verification code:
 
-**`app/views/verifications/edit.html.erb`** 
+**`app/views/verifications/edit.html.erb`**
 
 ```html
 <div class="panel panel-default devise-bs">
@@ -65,11 +63,11 @@ Create a view to enable the user to fill in their verification code:
 
 The user then submits their code to the new `update` action. Within this action you need to take the `request_id` and `code` and pass them to the `check_verification_request` method:
 
-**`app/controllers/verifications_controller.rb`** 
+**`app/controllers/verifications_controller.rb`**
 
 ```ruby
 def update
-  confirmation = Nexmo::Client.new.verify.check(
+  confirmation = Vonage::Client.new.verify.check(
     request_id: params[:id],
     code: params[:code]
   )
@@ -84,4 +82,3 @@ end
 ```
 
 When the verification check is successful, the user’s status is set to verified and they are redirected to the main page. If the check is unsuccessful, a message displays describing what went wrong
-

@@ -1,16 +1,14 @@
 ---
-title:  Building the log in interface
-description:  In this step you will build the first screen of the app.
-
+title: Building the log in interface
+description: In this step you will build the first screen of the app.
 ---
 
-Building the log in interface
-=============================
+# Building the log in interface
 
 To be able to log in, you will need to add three elements to the screen:
 
 * A `UIButton` to log in Alice
-* A `UIButton` to log in Bob
+* A `UIButton` to log in Bob 
 * A `UILabel` to show the connection status.
 
 Open `ViewController.m` and add it programmatically.
@@ -66,10 +64,9 @@ Open `ViewController.m` and add it programmatically.
 @end
 ```
 
-Build and Run
--------------
+## Build and Run
 
-Run the project again (`Cmd + R`) to launch it in the simulator.
+Run the project again (`Cmd + R`) to launch it in the simulator. 
 
 ![Interface](/images/client-sdk/ios-in-app-voice/login.png)
 

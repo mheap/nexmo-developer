@@ -1,13 +1,11 @@
 ---
-title:  Create a Messages and Dispatch Application
-description:  In this step you learn how to create a Messages and Dispatch Application. A Messages and Dispatch application has a message status webhook and inbound message webhook, where the inbound message is of type `whatsapp`, `messenger` or `viber_service_msg`. Inbound SMS has to be handled through your account-level SMS webhook.
-meta_title:  Create a Messages and Dispatch application for the Vonage APIs
-meta_description:  A Messages and Dispatch application has a message status webhook and inbound message webhook, where the inbound message is of type `whatsapp`, `messenger` or `viber_service_msg`. Inbound SMS has to be handled through your account-level SMS webhook.
-
+title: Create a Messages and Dispatch Application
+description: In this step you learn how to create a Messages and Dispatch Application. A Messages and Dispatch application has a message status webhook and inbound message webhook, where the inbound message is of type `whatsapp`, `messenger` or `viber_service_msg`. Inbound SMS has to be handled through your account-level SMS webhook.
+meta_title: Create a Messages and Dispatch application for the Vonage APIs
+meta_description: A Messages and Dispatch application has a message status webhook and inbound message webhook, where the inbound message is of type `whatsapp`, `messenger` or `viber_service_msg`. Inbound SMS has to be handled through your account-level SMS webhook.
 ---
 
-Create your application
------------------------
+## Create your application
 
 There are two alternative methods for creating a Messages and Dispatch application:
 
@@ -20,7 +18,7 @@ Each of these methods is described in the following sections.
 
 To create your application using the Nexmo CLI, enter the following command into the shell:
 
-```shell
+``` shell
 nexmo app:create "My Messages App" --capabilities=messages --messages-inbound-url=https://example.com/webhooks/inbound-message --messages-status-url=https://example.com/webhooks/message-status --keyfile=private.key
 ```
 
@@ -34,9 +32,9 @@ To create your application using the Dashboard:
 
 1. Under [Applications](https://dashboard.nexmo.com/applications) in the Dashboard, click the **Create a new application** button.
 
-2. Under **Name** , enter the Application name. Choose a name for ease of future reference.
+2. Under **Name**, enter the Application name. Choose a name for ease of future reference.
 
-3. Click the button **Generate public and private key** . This will create a public/private key pair and the private key will be downloaded by your browser.
+3. Click the button **Generate public and private key**. This will create a public/private key pair and the private key will be downloaded by your browser.
 
 4. Under **Capabilities** select the **Messages** button.
 
@@ -51,4 +49,3 @@ To create your application using the Dashboard:
 You have now created your application.
 
 > **NOTE:** Before testing your application ensure that your webhooks are configured and your webhook server is running.
-

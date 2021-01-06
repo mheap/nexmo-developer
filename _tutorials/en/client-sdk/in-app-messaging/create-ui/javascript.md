@@ -1,11 +1,9 @@
 ---
-title:  Create the UI
-description:  Create a web page to host your chat
-
+title: Create the UI
+description: Create a web page to host your chat
 ---
 
-Create the UI
-=============
+# Create the UI
 
 Create the user interface for your web chat.
 
@@ -117,4 +115,3 @@ Create a file named `index.html` in your project directory with the following co
 
 </html>
 ```
-

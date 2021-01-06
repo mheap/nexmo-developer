@@ -1,11 +1,9 @@
 ---
-title:  NXMClient
-description:  In this step you will authenticate to the Vonage servers.
-
+title: NXMClient
+description: In this step you will authenticate to the Vonage servers.
 ---
 
-`NXMClient`
-===========
+# `NXMClient`
 
 Before you can place a call, the Client SDK needs to authenticate to the Vonage servers. The following additions are required to `ViewController.m`.
 
@@ -25,8 +23,7 @@ Add a `NXMClient` instance and conformance to the `NXMClientDelegate` to the int
 @end
 ```
 
-Add the JWT
------------
+## Add the JWT
 
 At the end of `viewDidLoad`, set the client delegate and log in - please make sure to replace `ALICE_JWT` for the `JWT` you created during a previous step. Please remember, the expiry time for the token was set to 6 hours so you will need to generate a new one if it is too old.
 
@@ -40,8 +37,7 @@ At the end of `viewDidLoad`, set the client delegate and log in - please make su
 }
 ```
 
-The Client Delegate
--------------------
+## The Client Delegate
 
 For the delegate part to work, you need to have `ViewController` conform to `NXMClientDelegate`. Add these two delegate functions to the class.
 
@@ -73,10 +69,8 @@ For the delegate part to work, you need to have `ViewController` conform to `NXM
 
 An error is shown if encountered and the `connectionStatusLabel` is updated with the relevant connection status. Also, `callButton` is shown when connected.
 
-Build and Run
--------------
+## Build and Run
 
 `Cmd + R` to build and run again:
 
 ![Interface connected](/images/client-sdk/ios-voice/interface-connected.jpg)
-

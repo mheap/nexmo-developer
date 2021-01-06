@@ -1,11 +1,9 @@
 ---
-title:  Chat events
-description:  In this step you will handle chat events.
-
+title: Chat events
+description: In this step you will handle chat events.
 ---
 
-Chat events
-===========
+# Chat events
 
 Earlier you created a conversation in the Nexmo CLI and added the two users to that conversation. Conversations, modeled as `NXMConversation` objects in the Client SDK, are how the users will communicate. You can learn more about conversations in the [Conversation API documentation](/conversation/concepts/conversation). Chat events, or `NXMEvent` objects, are sent using the conversation that you created, so to get chat event you will first need to fetch the conversation. To implement this, the additions to `ChatViewController.swift` shown in the following sections are required.
 
@@ -76,11 +74,11 @@ class ChatViewController: UIViewController {
     func showMemberEvent(event: NXMMemberEvent) {
         switch event.state {
         case .invited:
-            addConversationLine("(event.member.user.name) was invited.")
+            addConversationLine("\(event.member.user.name) was invited.")
         case .joined:
-            addConversationLine("(event.member.user.name) joined.")
+            addConversationLine("\(event.member.user.name) joined.")
         case .left:
-            addConversationLine("(event.member.user.name) left.")
+            addConversationLine("\(event.member.user.name) left.")
         @unknown default:
             fatalError("Unknown member event state.")
         }
@@ -88,13 +86,13 @@ class ChatViewController: UIViewController {
 
     func showTextEvent(event: NXMTextEvent) {
         if let message = event.text {
-            addConversationLine("(event.fromMember?.user.name ?? "A user") said: '(message)'")
+            addConversationLine("\(event.fromMember?.user.name ?? "A user") said: '\(message)'")
         }
     }
 
     func addConversationLine(_ line: String) {
         if let text = conversationTextView.text, text.count > 0 {
-            conversationTextView.text = "(text)\n(line)"
+            conversationTextView.text = "\(text)\n\(line)"
         } else {
             conversationTextView.text = line
         }
@@ -106,15 +104,14 @@ class ChatViewController: UIViewController {
 
 Once the events are fetched they are processed by `processEvents`. In `processEvents` there is type casting to either a `NXMMemberEvent` or a `NXMTextEvent` which get append to the `conversationTextView` by `showMemberEvent` and `showTextEvent` respectively. You can find out more about the supported event types in the [Conversation API documentation](/conversation/concepts/event).
 
-The Conversation Delegate
--------------------------
+## The Conversation Delegate
 
 The application also needs to react to events in a conversation after loading initially so you need to have `ChatViewController` conform to `NXMConversationDelegate`. At the end of the file, add:
 
 ```swift
 extension ChatViewController: NXMConversationDelegate {
     func conversation(_ conversation: NXMConversation, didReceive error: Error) {
-        NSLog("Conversation error: (error.localizedDescription)")
+        NSLog("Conversation error: \(error.localizedDescription)")
     }
 
     func conversation(_ conversation: NXMConversation, didReceive event: NXMTextEvent) {
@@ -125,10 +122,8 @@ extension ChatViewController: NXMConversationDelegate {
 
 When a new event is received it is appended to the `events` array which in turn starts the processing of the events again.
 
-Build and Run
--------------
+## Build and Run
 
 Press `Cmd + R` to build and run again. After logging in you will see that both users have joined the conversation as expected:
 
 ![Chat interface with connection events](/images/client-sdk/ios-messaging/chatevents.png)
-

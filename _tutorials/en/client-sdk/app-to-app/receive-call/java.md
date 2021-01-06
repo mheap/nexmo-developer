@@ -1,11 +1,9 @@
 ---
-title:  Receive a call
-description:  In this step you learn how to receive an in-app call
-
+title: Receive a call
+description: In this step you learn how to receive an in-app call
 ---
 
-Receive a call
-==============
+# Receive a call
 
 Locate the `incomingCallListener` property within the `MainViewModel` class and fill its body:
 
@@ -32,4 +30,3 @@ public void onInit(MainFragmentArgs mainFragmentArgs) {
     client.addIncomingCallListener(incomingCallListener);
 }
 ```
-

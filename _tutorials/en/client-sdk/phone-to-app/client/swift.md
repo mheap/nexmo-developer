@@ -1,11 +1,9 @@
 ---
-title:  NXMClient
-description:  In this step you will authenticate to the Vonage servers.
-
+title: NXMClient
+description: In this step you will authenticate to the Vonage servers.
 ---
 
-`NXMClient`
-===========
+# `NXMClient`
 
 Before you can place a call, the Client SDK needs to authenticate to the Vonage servers. The following additions are required to `ViewController.swift`.
 
@@ -27,8 +25,7 @@ class ViewController: UIViewController {
 }
 ```
 
-Add the JWT
------------
+## Add the JWT
 
 At the end of `viewDidLoad`, set the client delegate and log in - please make sure to replace `ALICE_JWT` for the `JWT` you created during a previous step. Please remember, the expiry time for the token was set to 6 hours so you will need to generate a new one if it is too old.
 
@@ -40,8 +37,7 @@ override func viewDidLoad() {
 }
 ```
 
-The Client Delegate
--------------------
+## The Client Delegate
 
 For the delegate to work, you need to have `ViewController` conform to `NXMClientDelegate`. Add the extension the end of the file.
 
@@ -72,12 +68,10 @@ extension ViewController: NXMClientDelegate {
 }
 ```
 
-An error is shown if encountered and the `connectionStatusLabel` is updated with the relevant connection status.
+An error is shown if encountered and the `connectionStatusLabel` is updated with the relevant connection status. 
 
-Build and Run
--------------
+## Build and Run
 
 Press `Cmd + R` to build and run again:
 
 ![Interface connected](/meta/client-sdk/ios-phone-to-app/interface-connected.png)
-

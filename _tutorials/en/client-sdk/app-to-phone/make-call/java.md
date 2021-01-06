@@ -1,11 +1,9 @@
 ---
-title:  Make a call
-description:  In this step you learn how to make a phone call.
-
+title: Make a call
+description: In this step you learn how to make a phone call.
 ---
 
-Make a call
-===========
+# Make a call
 
 Locate the `startAppToAppCall` method within the `MainViewModel` class and fill its body to enable call:
 
@@ -25,4 +23,3 @@ Now you need to make sure that above method is called after pressing UI button. 
 ```java
 startAppToPhoneCallButton.setOnClickListener(it -> viewModel.startAppToPhoneCall());
 ```
-

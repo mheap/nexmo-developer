@@ -1,20 +1,17 @@
 ---
-title:  Generate a JWT
-description:  In this step you learn how to generate a valid JWT for your Client SDK Application.
-
+title: Generate a JWT
+description: In this step you learn how to generate a valid JWT for your Client SDK Application.
 ---
 
-Generate a JWT
-==============
+# Generate a JWT
 
 The Client SDK uses [JWTs](/concepts/guides/authentication#json-web-tokens-jwt) for authentication. The JWT identifies the user name, the associated application ID and the permissions granted to the user. It is signed using your private key to prove that it is a valid token.
 
-> **NOTE** : We'll be creating a one-time use JWT on this page for testing. In production apps, your server should expose an endpoint that generates a JWT for each client request.
+> **NOTE**: We'll be creating a one-time use JWT on this page for testing. In production apps, your server should expose an endpoint that generates a JWT for each client request.
 
 Remember to replace the `MY_APP_ID` variable with your own value in the section below. If you're testing with multiple users, generate multiple JWTs (changing the `sub` value each time).
 
-Using the CLI
--------------
+## Using the CLI
 
 You can generate a JWT using the Nexmo CLI by running the following command:
 
@@ -24,14 +21,13 @@ nexmo jwt:generate ./private.key exp=$(($(date +%s)+21600)) acl='{"paths":{"/*/u
 
 The generated JWT will be valid for the next 6 hours.
 
-Using the web interface
------------------------
+## Using the web interface
 
-Alternatively, you can use our [online JWT generator](/jwt) with the following parameters to generate a JWT.
+Alternatively, you can use our <a href="/jwt" target="_blank">online JWT generator</a> with the following parameters to generate a JWT.
 
-**Application ID:** `MY_APP_ID`  
-**Sub:** `Alice`  
-**ACL:** 
+**Application ID:** `MY_APP_ID`<br />
+**Sub:** `Alice`<br />
+**ACL:**
 
 ```json
 {
@@ -50,8 +46,6 @@ Alternatively, you can use our [online JWT generator](/jwt) with the following p
 }
 ```
 
-Further information
--------------------
+## Further information
 
 * [JWT guide](/concepts/guides/authentication#json-web-tokens-jwt)
-

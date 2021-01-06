@@ -1,16 +1,13 @@
 ---
-title:  Download the report
-description:  Download your completed report
-
+title: Download the report
+description: Download your completed report
 ---
 
-Download the report
-===================
+# Download the report
 
 When the report is ready (the `request_status` field in the check status request reads `SUCCESS`) you can download the report by making a `GET` request to the URL in the `download_report` field.
 
-Create the download request
----------------------------
+## Create the download request
 
 To make the request:
 
@@ -21,8 +18,8 @@ To make the request:
 
 ![Download the report](/images/reports-api/download-report-postman.png)
 
-Execute the download request
-----------------------------
+
+## Execute the download request
 
 Click the "Send" button. The response contains unreadable text, because the API returns a compressed CSV file.
 
@@ -31,4 +28,5 @@ Click the "Save Response" button in Postman, select the "Save to a file" option 
 ![Save the compressed file locally](/images/reports-api/save-report-zip-postman.png)
 
 Extract the contents of the `.zip` file and open the `.csv` file to view your report.
+
 

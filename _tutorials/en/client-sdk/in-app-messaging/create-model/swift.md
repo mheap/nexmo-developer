@@ -1,13 +1,11 @@
 ---
-title:  Building the user model
-description:  In this step you will build the user model struct.
-
+title: Building the user model
+description: In this step you will build the user model struct.
 ---
 
-Building the user model
-=======================
+# Building the user model
 
-To have a conversation you need to store some information about a user:
+To have a conversation you need to store some information about a user: 
 
 * A user's name
 * A user's JWT
@@ -43,4 +41,3 @@ struct User {
                           chatPartnerName: "Alice")
 }
 ```
-

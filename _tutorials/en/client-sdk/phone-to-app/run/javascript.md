@@ -1,15 +1,13 @@
 ---
-title:  Run your application
-description:  In this step you learn how to run your phone to app application.
-
+title: Run your application
+description: In this step you learn how to run your phone to app application.
 ---
 
-Run your application
-====================
+# Run your application
 
 > **NOTE:** If you have not already done so, make sure you have [Ngrok running](/client-sdk/tutorials/app-to-phone/prerequisites#how-to-run-ngrok).
 
-Run your application with `node server.js`, then visit http://localhost:3000
+Run your application with `node server.js`, then visit [http://localhost:3000](http://localhost:3000)
 
 The call’s current status and an Answer button are displayed on the page.
 
@@ -24,4 +22,3 @@ In your web app, you will see the call status updated. Click the `Answer` button
 A conversation can now take place between the web app (agent) and the inbound caller.
 
 Hang up when you're done and the call status will be updated again.
-

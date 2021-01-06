@@ -1,16 +1,13 @@
 ---
-title:  Project permissions
-description:  In this step you will add the necessary permissions to the project properties.
-
+title: Project permissions
+description: In this step you will add the necessary permissions to the project properties.
 ---
 
-Project permissions
-===================
+# Project permissions
 
 As you'll be using the microphone when making a call, you need to request the permission to use it.
 
-`Info.plist`
-------------
+## `Info.plist`
 
 Every Xcode project contains an `Info.plist` file containing all the metadata required in each app or bundle  - you will find the file inside the `PhoneToApp` group.
 
@@ -24,8 +21,7 @@ Your `Info.plist` should look like this:
 
 ![Info.plist](/meta/client-sdk/ios-phone-to-app/info-plist.png)
 
-Request permission on application start
----------------------------------------
+## Request permission on application start
 
 Open `AppDelegate.h` and import the `AVFoundation` library right after where `UIKit` is included:
 
@@ -46,12 +42,10 @@ Next, call `requestRecordPermission:` inside `application:didFinishLaunchingWith
 }
 ```
 
-Build and Run
--------------
+## Build and Run
 
-You can now build and run the project, by either selecting `Product` > `Run` from the top menu, or pressing `Cmd + R`, and launch it in the simulator.
+You can now build and run the project, by either selecting `Product` > `Run` from the top menu, or pressing `Cmd + R`, and launch it in the simulator. 
 
 Notice the prompt asking for permission to use the microphone:
 
 ![Simulator microphone permission ask](/meta/client-sdk/ios-phone-to-app/permissions.png)
-

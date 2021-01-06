@@ -1,11 +1,9 @@
 ---
-title:  Create a webhook server
-description:  In this step you learn how to create a suitable webhook server that enables your web app to accept an inbound PSTN phone call.
-
+title: Create a webhook server
+description: In this step you learn how to create a suitable webhook server that enables your web app to accept an inbound PSTN phone call.
 ---
 
-Create a webhook server
-=======================
+# Create a webhook server
 
 You will need to create a webhook server. When the inbound call comes into Vonage you can capture the originating number and use a dynamic NCCO to forward the call to the web application. This is achieved by using a `connect` action of type `app`. The call is forwarded to an authenticated user who represents the agent handling the inbound call.
 
@@ -13,7 +11,7 @@ Create a `server.js` file and add the code for the server:
 
 > **NOTE:** Paste in your Vonage number and your user name to the code below. The username is the one you created a JWT for in a previous step (Alice).
 
-```javascript
+``` javascript
 'use strict';
 const path = require('path');
 const express = require('express');
@@ -66,4 +64,3 @@ The important parts of this code are:
 
 1. A static NCCO is used in this example to forward the inbound call to the agent identified by `Alice`.
 2. The NCCO uses a `connect` action of type `app`, providing a username to connect to.
-

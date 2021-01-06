@@ -1,11 +1,9 @@
 ---
-title:  Receive a call
-description:  In this step you learn how to receive an in-app call
-
+title: Receive a call
+description: In this step you learn how to receive an in-app call
 ---
 
-Receiving a call
-================
+# Receiving a call
 
 Now that the calling interface is built, you can now add the code needed receive a call. The `NXMClientDelegate` has a function that is called when there is an incoming call. Add an implementation for it in the `NXMClientDelegate` extension in the `ViewController.m` file.
 
@@ -58,10 +56,9 @@ The `CallViewController` class will be in the foreground and the class handling 
 @end
 ```
 
-When a notification is received `didReceiveCall` is called which in turn calls `displayIncomingCallAlert` to present the user with the option of accepting or rejecting the call. If the user accepts the UI is updated to show who the user is on a call with and the `hangUpButton` becomes visible. If the `hangUpButton` is tapped `endCall` is called which hangs up the call and updates the UI.
+When a notification is received `didReceiveCall` is called which in turn calls `displayIncomingCallAlert` to present the user with the option of accepting or rejecting the call. If the user accepts the UI is updated to show who the user is on a call with and the `hangUpButton` becomes visible. If the `hangUpButton` is tapped `endCall` is called which hangs up the call and updates the UI. 
 
-The call delegate
------------------
+## The call delegate
 
 Similar to `NXMClient`, `NXMCall` also has a delegate to handle changes to the call. Add conformance for `NXMCallDelegate` to the interface and implement the required functions.
 
@@ -96,4 +93,3 @@ Similar to `NXMClient`, `NXMCall` also has a delegate to handle changes to the c
 ```
 
 In the next step you will add the code needed to make a call.
-

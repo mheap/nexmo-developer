@@ -1,11 +1,9 @@
 ---
-title:  Send a message
-description:  In this step you enable your user to send a message
-
+title: Send a message
+description: In this step you enable your user to send a message
 ---
 
-Send a Message
-==============
+# Send a Message
 
 To send a message to other participants in the Conversation, you need to call the `conversation.sendText()` method.
 
@@ -18,4 +16,3 @@ sendButton.addEventListener('click', async () => {
   messageTextarea.value = '';
 });
 ```
-
