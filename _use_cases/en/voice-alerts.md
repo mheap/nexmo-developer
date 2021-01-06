@@ -1,9 +1,10 @@
 ---
-title: Broadcast Voice-based Critical Alerts
+title: Voice-based Critical Alerts
 products: voice/voice-api
 description: In this tutorial, you will learn how to contact a list of people by phone, convey a message, and see who confirmed that they had received the message. These voice-based critical alerts are more persistent than a text message, making your message more likely to be noticed. Additionally, with the recipient confirmation, you can be sure that your message made it through.
 languages:
     - PHP
+navigation_weight: 1    
 ---
 
 # Broadcast Voice-based Critical Alerts
@@ -113,7 +114,7 @@ function record_steps($message) {
 }
 ```
 
-> The `record_steps()` function here is just a very basic logging example, writing to a text file. You can replace this with your preferred logging protocol.
+> The `record_steps()` function here is a very basic logging example, writing to a text file. You can replace this with your preferred logging protocol.
 
 You can look at what happened when you called your application earlier by inspecting the contents of `call_log.txt`. This file holds a record of each status that a particular phone call or "conversation" went through. Each line includes the conversation identifier; this becomes very important in a moment when we start making many outgoing calls at one time to pass on our broadcast message. We will still want to know which event belongs to which conversation!
 
@@ -179,7 +180,7 @@ foreach ($contacts as $name => $number) {
 }
 ```
 
-The code in `broadcast.php` uses your configured API key and secret, the application ID and the `private.key` file you saved earlier to create a `Nexmo\Client` object. This gives a simple interface to make a call and pass the [call options](https://developer.nexmo.com/api/voice#createCall) required.
+The code in `broadcast.php` uses your configured API key and secret, the application ID and the `private.key` file you saved earlier to create a `Nexmo\Client` object. This gives an interface to make a call and pass the [call options](https://developer.nexmo.com/api/voice#createCall) required.
 
 You'll probably notice that there is an instruction for a short pause with the `usleep()` method. This is to avoid hitting the [API rate limit](https://help.nexmo.com/hc/en-us/articles/207100288-What-is-the-maximum-number-of-calls-per-second-).
 
@@ -253,12 +254,12 @@ if (isset($request['dtmf'])) {
 }
 ```
 
-In this example we just log what happened, but in your own applications you could store or respond to the user input to suit your own needs.
+In this example we log what happened, but in your own applications you could store or respond to the user input to suit your own needs.
 
 ⚓ Conclusion
 ## Your Broadcast Call Application
 
-You now have a simple, but working, voice-alert system where you can broadcast out a text-to-speech or prerecorded message, log which calls are answered versus sent to voicemail, and receive confirmation of receipt from users who receive the message.
+You now have a working voice-alert system where you can broadcast a text-to-speech or prerecorded message, log which calls are answered versus sent to voicemail, and receive confirmation of receipt from users who receive the message.
 
 ⚓ References
 ## Next Steps and Further Reading

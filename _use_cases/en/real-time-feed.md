@@ -208,9 +208,9 @@ It's time to look into this use case in more detail so you can more effectively 
 
 For channels that support inbound messages (Messenger, WhatsApp and SMS) you can allow the user to send in a message to sign up. For Viber this will have to be done via another part of the web app. Typically you would provide a form where the user can sign up to the real-time feed.
 
-If a user sends in an inbound message such as "Hi", the app will respond with a help message. In our simple case this is "Send us a message with MSFT or GOOGL in it for real-time data". This sign up will then be acknowledged by another message confirming which feed you have subscribed to.
+If a user sends in an inbound message such as "Hi", the app will respond with a help message. In our case this is "Send us a message with MSFT or GOOGL in it for real-time data". This sign up will then be acknowledged by another message confirming which feed you have subscribed to.
 
-After this you will then receive a real-time price on your selected stock symbol. If you want to additionally sign up on another channel you are free to do so. Also, if you want to change your stock symbol simply send in a message with the new symbol, it will be acknowledged, and the data stream will change accordingly.
+After this you will then receive a real-time price on your selected stock symbol. If you want to additionally sign up on another channel you are free to do so. Also, if you want to change your stock symbol, send in a message with the new symbol: it will be acknowledged, and the data stream will change accordingly.
 
 The core code to implement this is located in the function `proc_inbound_msg` in `app_funcs.py`.
 
@@ -228,7 +228,7 @@ Where `APP_ID` is the Vonage Application ID of your Messages application.
 
 ### SMS
 
-To test with SMS simply send in an SMS as you did before. You will receive a help message. Send a message back with the stock symbol of either `MSFT` or `GOOGL`. You will then periodically receive a (simulated) price update. You currently have to exit the app to stop receiving these, but it would be a simple matter to add in the ability to switch these messages off, as was done in [this tutorial](/tutorials/fbm-product-info).
+To test with SMS send in an SMS as you did before. You will receive a help message. Send a message back with the stock symbol of either `MSFT` or `GOOGL`. You will then periodically receive a (simulated) price update. You currently have to exit the app to stop receiving these, but you could add the ability to switch these messages off, as demonstrated in [this tutorial](/tutorials/fbm-product-info).
 
 ### Facebook Messenger
 

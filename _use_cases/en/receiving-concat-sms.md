@@ -11,13 +11,13 @@ languages:
 
 SMS messages that [exceed a certain length](/messaging/sms/guides/concatenation-and-encoding) are split into two or more shorter messages and sent as multiple SMS. 
 
-When you use the SMS API to receive [inbound SMS](/messaging/sms/guides/inbound-sms) that might be longer than the byte-length allowed for a single SMS, you must check to see if the messages delivered to your [webhook](/concepts/guides/webhooks) are standalone or just one part of a multi-part SMS. If there are multiple parts to the message, you must reassemble them to display the full message text.
+When you use the SMS API to receive [inbound SMS](/messaging/sms/guides/inbound-sms) that might be longer than the byte-length allowed for a single SMS, you must check to see if the messages delivered to your [webhook](/concepts/guides/webhooks) are standalone or one part of a multi-part SMS. If there are multiple parts to the message, you must reassemble them to display the full message text.
 
 This tutorial shows you how.
 
 ## In this tutorial
 
-In this tutorial, you will create a simple Node.js application using the Express framework that receives inbound SMS via a webhook and determines whether the message is a single-part or multi-part SMS.
+In this tutorial, you will create a Node.js application using the Express framework that receives inbound SMS via a webhook and determines whether the message is a single-part or multi-part SMS.
 
 If the incoming SMS is multi-part, the application waits until it has received all the message parts and then combines them in the right order to display to the user.
 
@@ -59,7 +59,7 @@ npm install express body-parser --save
 
 When the SMS API receives an SMS destined for one of your virtual numbers, it alerts your application via a [webhook](/concepts/guides/webhooks). The webhook provides a mechanism for Vonage's servers to communicate with yours.
 
-For your application to be accessible to Vonage's servers, it must be publicly available on the Internet. A simple way to achieve this during development and testing is to use [ngrok](https://ngrok.com), a service that exposes local servers to the public Internet over secure tunnels. See [this blog post](https://www.nexmo.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/) for more details.
+For your application to be accessible to Vonage's servers, it must be publicly available on the Internet. One way to achieve this during development and testing is to use [ngrok](https://ngrok.com), a service that exposes local servers to the public Internet over secure tunnels. See [this blog post](https://www.nexmo.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/) for more details.
 
 Download and install [ngrok](https://ngrok.com), then start it with the following command:
 
@@ -146,7 +146,7 @@ Now, let's write some code to parse the incoming SMS to see what the message con
     }
     ```
 
-3. Also in `server.js` and just before your code sends the `204` response, add a call to `displaySms()` using the following parameters:
+3. Also in `server.js` and before your code sends the `204` response, add a call to `displaySms()` using the following parameters:
 
     ```javascript
     displaySms(params.msisdn, params.text);
@@ -218,7 +218,7 @@ const handleInboundSms = (request, response) => {
     if (params['concat'] == 'true') {
         // Perform extra processing
     } else {
-        // Not a concatenated message, so just display it
+        // Not a concatenated message, so display it
         displaySms(params.msisdn, params.text);
     }   
     
@@ -249,7 +249,7 @@ const handleInboundSms = (request, response) => {
             message: params.text
         });
     } else {
-        // Not a concatenated message, so just display it
+        // Not a concatenated message, so display it
         displaySms(params.msisdn, params.text);
     }   
     
@@ -260,9 +260,9 @@ const handleInboundSms = (request, response) => {
 
 ### Gather all the message parts
 
-Before we even attempt to reassemble the message from its parts, we need to ensure that we have all the parts for a given message reference. Remember that there is no guarantee that all the parts will arrive in the correct order, so it is not simply a matter of checking if `concart-part` equals `concat-total`.
+Before we even attempt to reassemble the message from its parts, we need to ensure that we have all the parts for a given message reference. Remember that there is no guarantee that all the parts will arrive in the correct order, so it is not only a matter of checking if `concart-part` equals `concat-total`.
 
-We can do this by filtering the `concat_sms` array to include only those SMS objects that share the same `concat-ref` as the SMS that we have just received. If the length of that filtered array is the same as `concat-total`, then we have all the parts for that message and can then reassemble them:
+We can do this by filtering the `concat_sms` array to include only those SMS objects that share the same `concat-ref` as the SMS that we have received. If the length of that filtered array is the same as `concat-total`, then we have all the parts for that message and can then reassemble them:
 
 ```javascript
     if (params['concat'] == 'true') {
@@ -338,7 +338,7 @@ MESSAGE: It was the best of times, it was the worst of times, it was the age of 
 
 ## Conclusion
 
-In this tutorial, you created a simple application that shows you how to reassemble a concatenated SMS from its constituent message parts. You learned about the `concat`, `concat-ref`, `concat-total`, and `concat-part` request parameters to your inbound SMS webhook and how you can use them to determine:
+In this tutorial, you created an application that shows you how to reassemble a concatenated SMS from its constituent message parts. You learned about the `concat`, `concat-ref`, `concat-total`, and `concat-part` request parameters to your inbound SMS webhook and how you can use them to determine:
 
 * If an inbound SMS is concatenated 
 * Which message a specific message part belongs to

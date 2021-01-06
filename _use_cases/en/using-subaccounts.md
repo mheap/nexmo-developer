@@ -32,7 +32,7 @@ source: '_examples/subaccounts/create-subaccount'
 
 The Partner could not control spending among its end customers because they all shared the same balance. One end customer used to occasionally consume all shared balance effectively blocking access to the Vonage APIs for other Partner’s end customers. The Partner decided to set individual balance and allocate a credit limit to that end customer.
 
-> **NOTE:** The Partner could have made his accounts prepaid.
+> **NOTE:** The Partner could have made their accounts prepaid.
 
 Each subaccount can be allocated an individual balance, and a credit limit, as show in the following diagram:
 

@@ -98,7 +98,7 @@ For security reasons, your client app should not hold your private key. Therefor
 
 Your backend should expose an endpoint that would allow the client-side app to request a valid JWT per user. In a real life scenario, you would probably add an authentication system, in order to ensure the identity of the user who attempts to log in to your app.
 
-For the purpose of this guide, the backend demo application exposes a simple endpoint that uses the username, together with an API key provided by the demo application:
+For the purpose of this guide, the backend demo application exposes an endpoint which accepts the username and API key provided by the demo application:
 
 ```
 POST YOUR_BACKEND/api/jwt

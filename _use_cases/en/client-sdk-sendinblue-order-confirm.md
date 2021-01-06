@@ -95,7 +95,7 @@ The file `.nexmo-app` is created in the project directory containing the Applica
 Set the following information:
 
 ``` text
-NEXMO_APPLICATION_ID=App ID for the application you just created
+NEXMO_APPLICATION_ID=App ID for the application you created
 NEXMO_API_KEY=
 NEXMO_API_SECRET=
 NEXMO_APPLICATION_PRIVATE_KEY_PATH=private.key
@@ -183,7 +183,7 @@ User agent and Conversation CON-7f1ae6c9-9f52-455e-b8e4-c08e96e6abcd created.
 
 This creates the user 'agent'. In the case of the 'agent' the conversation is not used in this demo.
 
-> **IMPORTANT:** It is necessary to create the support agent before any other user in this simple demo. In this use case the agent must have the username `agent`.
+> **IMPORTANT:** It is necessary to create the support agent before any other user in this demo. In this use case the agent must have the username `agent`.
 
 **3.** Create a customer user:
 
@@ -191,7 +191,7 @@ This creates the user 'agent'. In the case of the 'agent' the conversation is no
 curl -d "username=user-123" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost:3000/user
 ```
 
-This creates the user 'user-123'. You can specify any username here. Make a note of the username you specified.
+This creates the user `user-123`. You can specify any username here. Make a note of the username you specified.
 
 You will notice from the server console logging that a conversation is also created for the user:
 
@@ -206,7 +206,7 @@ User user-123 and Conversation CON-7f1ae6c9-9f52-455e-b8e4-c08e96e6abcd created.
 curl -d "username=user-123" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost:3000/order
 ```
 
-This creates an order for user 'user-123'. For simplicity, this is a simple pre-defined static order, rather than a full-fledged shopping cart. Check the server console logging, you will see something similar to:
+This creates an order for user `user-123`. For our purposes, this is a predefined static order, rather than a full-fledged shopping cart. Check the server console logging, you will see something similar to:
 
 ``` text
 Creating order...
@@ -225,7 +225,7 @@ In addition, a confirmation email is sent via Sendinblue. This email contains a 
 
 **7.** Log the agent into the chat. For this step it is recommended you additionally start an 'incognito' tab in your browser (or use a new browser instance).
 
-For simplicity, the support agent logs into the chat using a method similar to the customer. You can just copy the link the client clicked on in the email, and change the username in the link to `agent`:
+For simplicity, the support agent logs into the chat using a method similar to the customer. You can copy the link the client clicked on in the email, and change the username in the link to `agent`:
 
 ```
 localhost:3000/chat/agent/CON-ID/ORDER-ID
@@ -237,7 +237,7 @@ The user and support agent can now engage in a two-way chat messaging session to
 
 The main code files are `client.js` and `server.js`.
 
-The **server** implements a simple REST API for creating users and orders:
+The **server** implements a REST API for creating users and orders:
 
 1. `POST` on `/user` - creates a user. Username is passed in the body.
 2. `POST` on `/order` - creates an order. Username of the person creating an order is passed in the body.

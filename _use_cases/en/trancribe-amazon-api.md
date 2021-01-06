@@ -1,9 +1,10 @@
 ---
-title: Transcribe a recorded call with Amazon Transcribe
+title: Call Recording Transcription
 products: voice/voice-api
 description: "This tutorial shows you how to use the Amazon Transcribe API to transcribe a phone conversation recorded with the Vonage Voice API."
 languages:
     - Node
+navigation_weight: 8    
 ---
 # Transcribe a Recorded Call with Amazon Transcribe
 
@@ -571,7 +572,7 @@ Hello back this is channel one .
 
 ### Adding more callers
 
-If you have more than two numbers, you can add more callers to the conversation. Simply create a `connect` action for each in the `/webhooks/answer` NCCO and increase the number of channels in the `record` action accordingly.
+If you have more than two numbers, you can add more callers to the conversation. Create a `connect` action for each in the `/webhooks/answer` NCCO and increase the number of channels in the `record` action accordingly.
 
 ## Further reading
 

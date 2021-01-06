@@ -44,7 +44,8 @@ Alternatively, you can use our [online JWT generator](/jwt) with the following p
       "/*/media/**": {},
       "/*/applications/**": {},
       "/*/push/**": {},
-      "/*/knocking/**": {}
+      "/*/knocking/**": {},
+      "/*/legs/**": {}
   }
 }
 ```
