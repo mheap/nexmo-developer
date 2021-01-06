@@ -1,6 +1,6 @@
 ---
 title:  GitHub 帐户
-description:` 在本教程中，我们将使用 [GitHub Gist](```https:```//gist.github.com/)，因此需要有 [GitHub 帐户](```https: ``//www.github.com/)。
+description: 在本教程中，我们将使用 [GitHub Gist](https://gist.github.com/)，因此需要有 [GitHub 帐户](https://www.github.com/)。
 
 ---
 
