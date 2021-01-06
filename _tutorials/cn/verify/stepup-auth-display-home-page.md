@@ -38,7 +38,7 @@ node server.js
 
 ![主页](/images/tutorials/verify-stepup-auth-home-page.png)
 
-另外，请确保当您点击“验证我”按钮时，您会被重定向到可以输入手机号码的页面：
+另外，请确保当您点击"验证我"按钮时，您会被重定向到可以输入手机号码的页面：
 
 ![输入代码页面](/images/tutorials/verify-stepup-auth-enter-number-page.png)
 
