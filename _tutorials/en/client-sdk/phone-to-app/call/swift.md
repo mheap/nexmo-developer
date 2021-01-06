@@ -1,13 +1,11 @@
 ---
-title:  Receive a call
-description:  In this step you will receive the call.
-
+title: Receive a call
+description: In this step you will receive the call.
 ---
 
-Receive a call
-==============
+# Receive a call
 
-At the top of the `ViewController` class, just below the `client` declaration, add a `NXMCall` property to hold a reference to any call in progress.
+At the top of the `ViewController` class, below the `client` declaration, add a `NXMCall` property to hold a reference to any call in progress.
 
 ```swift
 class ViewController: UIViewController {
@@ -43,7 +41,6 @@ class ViewController: UIViewController {
     }
 }
 ```
-
 The `displayIncomingCallAlert` function takes a `NXMCall` as a parameter, with this you can access the members, which are the type `NXMCallMember`, of the call to retrieve the phone number of the incoming call. Note in the `UIAlertAction` for answering the call you assign the call to the property from earlier.
 
 To use `displayIncomingCallAlert` you need to use the `NXMClientDelegate` which has a function that will be called when the client receives an incoming `NXMCall`.
@@ -59,10 +56,8 @@ extension ViewController: NXMClientDelegate {
 }
 ```
 
-Build and Run
--------------
+## Build and Run
 
-Press `Cmd + R` to build and run again, when you call the number linked with your application from earlier you will be presented with an alert. You can pick up and the call will be connected\!
+Press `Cmd + R` to build and run again, when you call the number linked with your application from earlier you will be presented with an alert. You can pick up and the call will be connected!
 
 ![Incoming call alert](/meta/client-sdk/ios-phone-to-app/alert.png)
-

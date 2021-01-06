@@ -1,11 +1,9 @@
 ---
-title:  Require a phone number
-description:  Ensure that users supply a phone number when registering for an account
-
+title: Require a phone number
+description: Ensure that users supply a phone number when registering for an account
 ---
 
-Require a phone number
-======================
+# Require a phone number
 
 Start by requiring that users include a phone number when registering. Do this by generating a new database migration:
 
@@ -14,6 +12,7 @@ rails generate migration add_phone_number_to_users
 ```
 
 Edit the `db/migrate/..._add_phone_number_to_users.rb` file to add a new column to the `user` model:
+
 
 ```ruby
 class AddPhoneNumberToUsers < ActiveRecord::Migration
@@ -29,7 +28,7 @@ Apply the change by executing:
 rake db:migrate
 ```
 
-Devise enables you to edit a user right out of the box. By default these views are hidden, so we need to get a copy of them to make changes to. Devise makes this pretty easy through a Rails generator, which you would run using `rails generate:devise:views:templates`.
+Devise provides a Rails generator for creating a copy of the templates you need to edit. You run the generator using the command `rails generate:devise:views:templates`.
 
 However, because the sample application uses the `devise-bootstrap-templates` gem, you need to use a different version of the generator:
 
@@ -50,7 +49,7 @@ Then, amend the edit template to add a field for the user to enter a phone numbe
 
 Finally, you need to make Devise aware of this extra parameter:
 
-**`app/controllers/application_controller.rb`** 
+**`app/controllers/application_controller.rb`**
 
 ```ruby
 class ApplicationController < ActionController::Base
@@ -69,4 +68,3 @@ end
 To add a phone number to your account, run `rails server`, then navigate to http://localhost:3000/ and log in using the account details you registered with in the previous step.
 
 Click your email address at the top right of the screen, enter your phone number and the password you used to register with and click Update. This will save your phone number to the database.
-

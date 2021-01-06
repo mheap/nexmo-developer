@@ -1,13 +1,11 @@
 ---
-title:  Receive a call
-description:  In this step you will receive the call.
-
+title: Receive a call
+description: In this step you will receive the call.
 ---
 
-Receive a call
-==============
+# Receive a call
 
-At the top of the `MainActivity` class, just below the view declarations, add a `call` property to hold a reference to any call in progress and `incomingCall` property to hold information about currently incoming call.
+At the top of the `MainActivity` class, below the view declarations, add a `call` property to hold a reference to any call in progress and `incomingCall` property to hold information about the currently incoming call.
 
 ```kotlin
 private var call: NexmoCall? = null
@@ -93,8 +91,6 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }      
 ```
 
-Build and Run
--------------
+## Build and Run
 
 Press `Cmd + R` to build and run again, when you call the number linked with your application from earlier you will be presented with `Answer` and `Reject` buttons.
-
