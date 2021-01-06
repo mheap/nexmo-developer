@@ -70,7 +70,7 @@ Replace the file contents with the following code:
 
 Replace the contents of the `LoginViewModel.kt` file with the following code:
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```kotlin
 package com.vonage.tutorial.voice
