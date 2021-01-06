@@ -1,14 +1,10 @@
 ---
-`标题：`私人语音通信
-
-`产品：语音/语音 api`
-
-`描述：`允许用户间可以互相通话，保证真实号码的私密性。
-
-`语言：`
-
-* `Node`
-
+title: 私人语音通信
+products: voice/voice-api
+description: 允许用户间可以互相通话，保证真实号码的私密性。
+languages:
+    - Node
+navigation_weight: 2
 
 ---
 
