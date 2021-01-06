@@ -1,6 +1,6 @@
 ---
 title:  GitHubアカウント
-description:` このチュートリアルでは、[GitHub Gist](```https:```//gist.github.com/)を使用しますので、[GitHubアカウント](```https: ``//www.github.com/)が必要です。
+description: このチュートリアルでは、[GitHub Gist](https://gist.github.com/)を使用しますので、[GitHubアカウント](https://www.github.com/)が必要です。
 
 ---
 
