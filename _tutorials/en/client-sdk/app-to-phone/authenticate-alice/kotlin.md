@@ -11,7 +11,7 @@ Users must be authenticated before being able to participate in the Conversation
 
 Open the `fragment_login.xml` file.
 
-> **NOTE** You can open any file by using `Go to file...` action. Press `Shift + Cmd + O` and enter file name.
+> **NOTE** You can open any file by using the `Go to file...` action. Press `Shift + Cmd + O` and enter the file name.
 
 Click the `Code` button in the top right corner to display layout XML code:
 
