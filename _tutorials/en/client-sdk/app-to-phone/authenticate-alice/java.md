@@ -155,7 +155,7 @@ The above code monitors the connection state and if the user is authenticated (`
 
 ## Update `LoginFragment`
 
-Replace `LoginFragment.java` file content with below code snippet:
+Replace the contents of the `LoginFragment.java` file with the following code:
 
 ```java
 package com.vonage.tutorial.voice;
