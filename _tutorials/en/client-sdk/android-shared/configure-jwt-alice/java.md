@@ -48,6 +48,6 @@ public class Config {
 }
 ```
 
-Now it's time to fill previously generated and `JWT` token. Replace `ALICE_TOKEN` placeholder with real value.
+Now it's time to configure the `Alice` user with the JWT that you generated in an earlier step. Replace the `ALICE_TOKEN` placeholder with the real JWT value.
 
 Notice that these constants and values are hardcoded to store the properties of users. This makes it easier to use these values later in this tutorial.
