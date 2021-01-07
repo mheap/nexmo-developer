@@ -102,7 +102,7 @@ public class LoginViewModel extends ViewModel {
 
 ### Get NexmoClient instance
 
-To retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Replace the `client` property in the `LoginViewModel` class:
+In a production application you would typically retrieve the client instance inside the `LoginViewModel` class via injection. However, in this tutorial, you will retrieve the instance directly. Replace the `client` property in the `LoginViewModel` class:
 
 ```java
 private NexmoClient client = NexmoClient.get();
