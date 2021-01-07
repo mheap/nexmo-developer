@@ -124,7 +124,7 @@ void onLoginUser(User user) {
 
 ### Monitor connection state
 
-When a successful connection is established you need to navigate user to `MainFragment`. Locate the `LoginViewModel` constructor and replace its body:
+When a successful connection is established you need to navigate the user to the `MainFragment` class. Locate the `LoginViewModel` constructor and replace its body:
 
 
 ```java
