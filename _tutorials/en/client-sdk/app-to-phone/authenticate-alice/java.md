@@ -19,7 +19,7 @@ Click the `Code` button in the top right corner to display the layout XML code:
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
