@@ -7,7 +7,7 @@ description: In this step you learn how to add JWT to the application.
 
 Create a `User` class in the `com.vonage.tutorial.voice` package to store user data. Right click on the `messaging` package and select `New` > `Java Class`. Enter `User` and select `Class`.
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```java
 package com.vonage.tutorial.messaging;
