@@ -7,7 +7,7 @@ description: In this step you add permissions
 
 ## Declare permissions in Android Manifest
 
-Add required permissions into `AndroidManifest.xml` file:
+Add the required permissions to the `AndroidManifest.xml` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png
@@ -29,7 +29,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-f
 
 ## Request permissions at runtime
 
-To request permissions open `MainActivity` and class add code to `onCreate` method:
+To request permissions, add the following code to the `onCreate` method of the `MainActivity` class:
 
 ```java
 @Override

@@ -5,9 +5,9 @@ description: In this step you learn how to add JWT to the application.
 
 # Configure JWTs and conversation id
 
-Create `Config.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `voice` package and select `New` > `Kotlin Class/File`.  Enter `Config` as name and select `File` and press Enter to confirm.
+Create a `Config.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on the `voice` package and select `New` > `Kotlin Class/File`.  Enter `Config` as name and select `File` and press Enter to confirm.
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```kotlin
 package com.vonage.tutorial.voice
@@ -26,7 +26,7 @@ data class User(
 )
 ```
 
-Now it's time to fill previously generated JWT. Replace `ALICE_TOKEN` placeholder with real value obtained in a previous step.
+Now it's time to configure the `Alice` user with the JWT that you generated in an earlier step. Replace the `ALICE_TOKEN` placeholder with the real JWT value.
 
 Notice that these constants and values are hardcoded to store the properties of users. This makes it easier to use these values later in this tutorial.
 

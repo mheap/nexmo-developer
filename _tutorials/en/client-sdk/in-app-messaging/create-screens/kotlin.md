@@ -25,7 +25,7 @@ To create fragment right click on `com.vonage.tutorial.messaging` package, selec
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging
@@ -41,7 +41,7 @@ To create view model right click on `com.vonage.tutorial.messaging` package, sel
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging
@@ -67,7 +67,7 @@ To create fragment right click on `com.vonage.tutorial.messaging` package, selec
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging

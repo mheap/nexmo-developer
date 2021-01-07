@@ -5,21 +5,21 @@ description: In this step you authenticate your users via the JWTs you created e
 
 # Authenticate Users
 
-You perform this authentication using the `JWTs` generated in previous steps. Users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
+Users must be authenticated before being able to participate in the Conversation. You authenticate your users with the `JWTs` that you generated in an earlier step. In this step, you will create a login screen (using the `LoginFragment` and `LoginViewModel` classes) to manage the authentication process.
 
 ## Update `fragment_login` layout
 
-Open `fragment_login.xml` file.
+Open the `fragment_login.xml` file.
 
-> **NOTE** You can open any file by using `Go to file...` action. Press `Shift + Cmd + O` and enter file name.
+> **NOTE** You can open any file by using the `Go to file...` action. Press `Shift + Cmd + O` and enter file name.
 
-Click `Code` button in top right corner to display layout XML code:
+Click the `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -79,10 +79,7 @@ Replace file content with below code snippet:
 
 ## Update `LoginViewModel`
 
-Replace `ViewModel.java` file content with below code snippet:
-
-Replace file content with below code snippet:
-
+Replace the contents of the `ViewModel.java` file with the following code:
 
 ```java
 package com.vonage.tutorial.messaging;
@@ -167,7 +164,7 @@ The above code will monitor connection state and if the user is authenticated (`
 
 ## Update `LoginFragment`
 
-Replace `LoginFragment.java` file content with below code snippet:
+Replace the contents of the `LoginViewModel.java` file with the following code:
 
 ```java
 package com.vonage.tutorial.messaging;
@@ -256,4 +253,4 @@ You can either launch the app on the physical phone (with [USB Debugging enabled
 image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```
 
-You should see login screen with two buttons `Login Bob` and `Login Alice`. After clicking one of them user will login and empty chat screen will open.
+You should see the login screen with the two buttons `Login Bob` and `Login Alice`. After clicking one of them user will login and empty chat screen will open.

@@ -151,7 +151,7 @@ The above code will monitor connection state and if the user is authenticated (`
 
 ## Update `LoginFragment`
 
-Replace `LoginFragment.kt` file content with below code snippet:
+Replace the contents of the `LoginViewModel.kt` file with the following code:
 
 ```kotlin
 package com.vonage.tutorial.voice
@@ -223,4 +223,4 @@ You can either launch the app on the physical phone (with [USB Debugging enabled
 image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```
 
-You should see login screen with `Login Alice` and `Login Bob` buttons. After clicking user will login and empty main screen will open.
+You should see the login screen with the `Login Alice` and `Login Bob` buttons. After clicking user will login and empty main screen will open.

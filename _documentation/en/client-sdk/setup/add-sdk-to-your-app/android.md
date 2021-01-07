@@ -44,7 +44,11 @@ source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/gradlejava18
 
 To use the In-App Voice features, add audio permissions using the following procedure:
 
-1. Add required permissions to `AndroidManifest.xml` file (typically `app/src/main/AndroidManifest.xml`):
+1. Add the required permissions to the `AndroidManifest.xml` file:
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png
+```
 
     ```xml
     <manifest ...>

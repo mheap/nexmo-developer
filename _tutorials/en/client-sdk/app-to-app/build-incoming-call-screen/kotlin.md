@@ -9,7 +9,7 @@ On call screen (`IncomingCallFragment` and `OnCallViewModel` classes) is respons
 
 ## Update `fragment_incoming_call` layout
 
-Open `fragment_incoming_call.xml` layout and click `Code` button in top right corner to display layout XML code:
+Open the `fragment_incoming_call.xml` layout and click `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
@@ -19,7 +19,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.pn
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,7 +60,7 @@ Replace file content with below code snippet:
 
 ## Update `IncommingCallViewModel`
 
-Open `IncommingCallViewModel` and Replace file content with below code snippet:
+Open the `IncommingCallViewModel` and replace the file contents with the following code:
 
 ```kotlin
 package com.vonage.tutorial.voice
@@ -129,7 +129,7 @@ private fun hangupInternal() {
 
 ## Update `IncomingCallFragment`
 
-Open `IncomingCallFragment` and Replace file content with below code snippet:
+Open the `IncomingCallFragment` and replace the file contents with the following code:
 
 ```kotlin
 package com.vonage.tutorial.voice

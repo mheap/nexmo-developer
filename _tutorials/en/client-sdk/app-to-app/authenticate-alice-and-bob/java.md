@@ -5,21 +5,21 @@ description: In this step you authenticate your users via the JWTs you created e
 
 # Authenticate User
 
-You perform this authentication using the `JWTs` generated in previous steps. Users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
+Users must be authenticated before being able to participate in the Call. You authenticate your users with the `JWTs` that you generated in an earlier step. In this step, you will create a login screen (using the `LoginFragment` and `LoginViewModel` classes) to manage the authentication process.
 
 ## Update `fragment_login` layout
 
-Open `fragment_login.xml` file.
+Open the `fragment_login.xml` file.
 
-> **NOTE** You can open any file by using `Go to file...` action. Press `Shift + Cmd + O` and enter file name.
+> **NOTE** You can open any file by using the `Go to file...` action. Press `Shift + Cmd + O` and enter file name.
 
-Click `Code` button in top right corner to display layout XML code:
+Click the `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -79,7 +79,7 @@ Replace file content with below code snippet:
 
 ## Update `LoginViewModel`
 
-Replace `ViewModel.java` file content with below code snippet:
+Replace the contents of the `ViewModel.java` file with the following code:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -113,7 +113,7 @@ public class LoginViewModel extends ViewModel {
 
 ### Get NexmoClient instance
 
-To retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Replace the `client` property in the `LoginViewModel` class:
+In a production application you would typically retrieve the client instance inside the `LoginViewModel` class via injection. However, in this tutorial, you will retrieve the instance directly. Replace the `client` property in the `LoginViewModel` class:
 
 ```java
 private NexmoClient client = NexmoClient.get();
@@ -165,7 +165,7 @@ The above code will monitor connection state and if the user is authenticated (`
 
 ## Update `LoginFragment`
 
-Replace `LoginFragment.java` file content with below code snippet:
+Replace the contents of the `LoginFragment.java` file with the following code:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -252,4 +252,4 @@ You can either launch the app on the physical phone (with [USB Debugging enabled
 image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```
 
-You should see login screen with `Login Alice` button. After clicking user will login and empty main screen will open.
+You should see the login screen with the `Login Alice` button. After clicking user will login and empty main screen will open.

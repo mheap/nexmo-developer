@@ -9,7 +9,7 @@ Users must be authenticated before being able to participate in the Conversation
 
 ## Update `fragment_login` layout
 
-Open `fragment_login.xml` file.
+Open the `fragment_login.xml` file.
 
 > **NOTE** You can open any file by using the `Go to file...` action. Press `Shift + Cmd + O` and enter the file name.
 

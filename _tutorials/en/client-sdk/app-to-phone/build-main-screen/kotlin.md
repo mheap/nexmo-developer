@@ -11,9 +11,9 @@ Main screen (`MainFragment` and `MainViewModel` classes) is responsible for star
 
 Currently client SDK does not store call reference. We need to store call reference in the `CallManager` class, so it can be accessed from all screens.
 
-Create `CallManager.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `voice` package and select `New` > `Kotlin Class/File`. Enter `CallManager` and select `Class`.
+Create a `CallManager.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on the `voice` package and select `New` > `Kotlin Class/File`. Enter `CallManager` and select `Class`.
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```kotlin
 package com.vonage.tutorial.voice
@@ -27,7 +27,7 @@ object CallManager {
 
 ## Update `fragment_main` layout
 
-Open `fragment_main.xml` layout and click `Code` button in top right corner to display layout XML code:
+Open the `fragment_main.xml` layout and click `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
@@ -37,7 +37,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.pn
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -85,7 +85,7 @@ Replace file content with below code snippet:
 
 ## Update `MainViewModel`
 
-Open `MainViewModel` and Replace file content with below code snippet:
+Open the `MainViewModel` and replace the file contents with the following code:
 
 ```kotlin
 package com.vonage.tutorial.voice
@@ -168,7 +168,7 @@ private val callListener = object : NexmoRequestListener<NexmoCall> {
 
 ## Update `MainFragment`
 
-Open `MainFragment` and Replace file content with below code snippet:
+Open the `MainFragment` and replace the file contents with the following code:
 
 ```kotlin
 package com.vonage.tutorial.voice

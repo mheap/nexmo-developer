@@ -19,7 +19,7 @@ Enter `app_nav_graph` as file name, select `Navigation` as resource type and pre
 image: public/screenshots/tutorials/client-sdk/android-shared/new-app-nav-graph.png
 ```
 
-Click `Code` button in top right corner and Replace it's content with below code snippet to set navigation graph for the application:
+Click the `Code` button in top right corner and replace it's content with below code snippet to set navigation graph for the application:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
@@ -53,7 +53,7 @@ Navigation graph defines navigation directions between fragments in the applicat
 
 ## Add `NavHostFragment`
 
-Set `app_nav_graph` as main navigation graph of the application. Open `activity_main.xml`, click `Code` button in top right corner file and Replace XML layout code:
+Set `app_nav_graph` as main navigation graph of the application. Open the `activity_main.xml`, click `Code` button in top right corner file and replace XML layout code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/activity-main-layout-file.png
@@ -112,7 +112,7 @@ public interface BackPressHandler {
 
 `NavManager` object will allow to navigate directly from `ViewModel` by storing reference to navigation controller.
 
-Right click on `com.vonage.tutorial.messaging` package, select `New` > `Java Class`, enter `NavManager` as file name, select `Class`. Replace file content with below code snippet:
+Right click on `com.vonage.tutorial.messaging` package, select `New` > `Java Class`, enter `NavManager` as file name, select `Class`. Replace the file contents with the following code:
 
 ```java
 package com.vonage.tutorial.messaging;

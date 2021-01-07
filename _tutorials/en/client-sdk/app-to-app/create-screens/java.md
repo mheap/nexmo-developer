@@ -27,7 +27,7 @@ To create fragment right click on `com.vonage.tutorial.voice` package, select `N
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -46,7 +46,7 @@ To create view model right click on `com.vonage.tutorial.voice` package, select 
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -72,7 +72,7 @@ To create fragment right click on `com.vonage.tutorial.voice` package, select `N
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -89,7 +89,7 @@ To create view model right click on `com.vonage.tutorial.voice` package, select 
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -115,7 +115,7 @@ To create fragment right click on `com.vonage.tutorial.voice` package, select `N
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -132,7 +132,7 @@ To create view model right click on `com.vonage.tutorial.voice` package, select 
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -158,7 +158,7 @@ To create fragment right click on `com.vonage.tutorial.voice` package, select `N
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```java
 package com.vonage.tutorial.voice;
@@ -175,7 +175,7 @@ To create view model right click on `com.vonage.tutorial.voice` package, select 
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```java
 package com.vonage.tutorial.voice;
