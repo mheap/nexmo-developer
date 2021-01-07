@@ -120,7 +120,7 @@ void onLoginUser(User user) {
 }
 ```
 
-> **NOTE:** Inside `LoginFragment` class, explore the `loginUser` method. This method is called when one of the two `Login ...` buttons are clicked. This method calls the above `onLoginUser` method. 
+> **NOTE:** Examine the `loginUser` method of the `LoginFragment` class. This method is called when one of the two `Login ...` buttons are clicked and, in turn, invokes the `onLoginUser` method. 
 
 ### Monitor connection state
 
