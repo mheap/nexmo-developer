@@ -5,7 +5,7 @@ description: In this step you authenticate your users via the JWTs you created e
 
 # Authenticate User
 
-You perform this authentication using the `JWTs` generated in previous steps. Users must be authenticated to be able to participate in the Conversation. You will now build login screen (`LoginFragment` and `LoginViewModel` classes) responsible for authenticating the users.
+Users must be authenticated before being able to participate in the Conversation. You authenticate your users with the `JWTs` that you generated in an earlier step. In this step, you will create a login screen (using the `LoginFragment` and `LoginViewModel` classes) to manage the authentication process.
 
 ## Update `fragment_login` layout
 
