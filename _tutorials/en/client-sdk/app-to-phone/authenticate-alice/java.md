@@ -151,7 +151,7 @@ public class LoginViewModel extends ViewModel {
 }
 ```
 
-The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `MainFragment`, otherwise it will emit connection status to the UI (`Loginfragment`).
+The above code monitors the connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `MainFragment`, otherwise it will emit the connection status to the UI (`LoginFragment`).
 
 ## Update `LoginFragment`
 
