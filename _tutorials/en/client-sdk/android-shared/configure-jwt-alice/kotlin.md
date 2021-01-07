@@ -7,7 +7,7 @@ description: In this step you learn how to add JWT to the application.
 
 Create a `Config.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click the `voice` package and select `New` > `Kotlin Class/File`. Enter `Config` as the name, then select `File` and press Enter to confirm.
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```kotlin
 object Config {
