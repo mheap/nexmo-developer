@@ -239,4 +239,4 @@ You can either launch the app on the physical phone (with [USB Debugging enabled
 image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```
 
-You should see login screen with `Login Alice` button. After clicking user will login and empty main screen will open.
+You should see the login screen with the `Login Alice` button. Click the button to log in and the empty main screen will open.
