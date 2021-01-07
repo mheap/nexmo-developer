@@ -41,4 +41,4 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-> **NOTE** To simplify tutorial permissions are requested each time application runs.
+> **NOTE** To simplify the tutorial, the permissions are requested each time application runs.
