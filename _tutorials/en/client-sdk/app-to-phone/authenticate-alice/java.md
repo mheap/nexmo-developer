@@ -110,7 +110,7 @@ private NexmoClient client = NexmoClient.get();
 
 ### Login user
 
-Your user must be authenticated to be able to participate in the Conversation. Replace the `onLoginUser` method inside `LoginViewModel` class:
+You must authenticate your user to enable them to participate in the Conversation. Replace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```java
 void onLoginUser(User user) {
