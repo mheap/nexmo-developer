@@ -34,7 +34,7 @@ public class User {
 
 Create a `Config` class in the `com.vonage.tutorial.voice` package to store the configuration. Right click on `messaging` package and select `New` > `Java Class`. Enter `Config` and select `Class`.
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```java
 public class Config {
