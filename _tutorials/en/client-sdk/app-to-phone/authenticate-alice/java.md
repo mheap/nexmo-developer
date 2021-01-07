@@ -13,7 +13,7 @@ Open `fragment_login.xml` file.
 
 > **NOTE** You can open any file by using the `Go to file...` action. Press `Shift + Cmd + O` and enter the file name.
 
-Click `Code` button in top right corner to display layout XML code:
+Click the `Code` button in the top right corner to display the layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
