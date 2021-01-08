@@ -79,7 +79,7 @@ plugins {
 }
 ```
 
-In the same file, add a navigation component dependencies:
+In the same file, add navigation component dependencies:
 
 ```groovy
 dependencies {

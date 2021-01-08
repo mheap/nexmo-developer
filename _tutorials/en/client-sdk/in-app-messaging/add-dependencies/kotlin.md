@@ -56,6 +56,8 @@ buildscript {
 
     // ...
 }
+```
+
 In the same file, add a dependency for the Gradle `Safe Args` plugin. This provides type safety when navigating and passing data between destinations.
 
 Add a new `classpath` in the `dependencies` block:
@@ -68,7 +70,7 @@ dependencies {
 }
 ```
 
-Add `Safe Args` plugin in the module level `build.gradle` file.:
+Add `Safe Args` plugin in the module level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
@@ -81,7 +83,7 @@ plugins {
 }
 ```
 
-In the same file, add a navigation component dependencies:
+In the same file, add navigation component dependencies:
 
 ```groovy
 dependencies {
