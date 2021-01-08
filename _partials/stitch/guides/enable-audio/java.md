@@ -44,7 +44,7 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
 
 ## Add audio UI
 
-Add two buttons for the user to enable and disable audio. Open `app/src/main/res/layout/fragment_chat.xml` file and add two new buttons (`enableMediaButton` and `disableMediaButton`) inside `chatContainer`:
+You will now need to add two buttons for the user to enable and disable audio. Open the `app/src/main/res/layout/fragment_chat.xml` file and add two new buttons (`enableMediaButton` and `disableMediaButton`) right below `sendMessageButton`. 
 
 ``` xml
 <!--...-->

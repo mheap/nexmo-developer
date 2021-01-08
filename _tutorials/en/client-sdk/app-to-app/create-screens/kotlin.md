@@ -127,4 +127,43 @@ public class OnCallViewModel : ViewModel()
 image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
 ```
 
+## `IncomingCall` screen 
+
+To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_incoming_call` as file name and press `OK`.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
+```
+
+To create fragment right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `IncomingCallFragment` as file name and select `Class`.
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
+```
+
+Replace the file contents with below snippet:
+
+```kotlin
+package com.vonage.tutorial.voice
+
+import androidx.fragment.app.Fragment
+
+class IncomingCallFragment : Fragment()
+```
+
+To create view model right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `IncomingCallViewModel` as file name and select `Class`.
+
+```kotlin
+package com.vonage.tutorial.voice
+
+import androidx.lifecycle.ViewModel
+
+public class IncomingCallViewModel : ViewModel()
+```
+
+```screenshot
+image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
+```
+
 Run `Build` > `Make project` to make sure project is compiling.
+

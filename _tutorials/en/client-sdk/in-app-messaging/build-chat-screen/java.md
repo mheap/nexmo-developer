@@ -9,7 +9,7 @@ Chat screen (`ChatFragment` and `ChatViewModel` classes) is responsible for fetc
 
 ## Update `fragment_chat` layout
 
-Open `fragment_chat.xml` layout and click `Code` button in top right corner to display layout XML code:
+Open the `fragment_chat.xml` layout and click `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
@@ -19,7 +19,7 @@ image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.pn
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
 ```
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -133,7 +133,7 @@ Replace file content with below code snippet:
 
 ## Update `ChatViewModel`
 
-Open `ChatViewModel` and Replace file content with below code snippet:
+Open the `ChatViewModel` and replace the file contents with the following code:
 
 ```java
 package com.vonage.tutorial.messaging;
@@ -242,7 +242,7 @@ public class ChatViewModel extends ViewModel {
 
 ## Update `ChatFragment`
 
-Open `ChatFragment` and Replace file content with below code snippet:
+Open the `ChatFragment` and replace the file contents with the following code:
 
 ```java
 package com.vonage.tutorial.messaging;

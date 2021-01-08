@@ -28,3 +28,5 @@ If Android Studio can't find the reference to the `NexmoClient` class then you h
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png
 ```
+
+Run `Build` > `Make project` to make sure project is compiling.

@@ -5,15 +5,15 @@ description: In this step you authenticate your users via the JWTs you created e
 
 # Authenticate User
 
-Users must be authenticated before being able to participate in the Conversation. You authenticate your users with the `JWTs` that you generated in an earlier step. In this step, you will create a login screen (using the `LoginFragment` and `LoginViewModel` classes) to manage the authentication process.
+Users must be authenticated before being able to participate in the Call. You authenticate your users with the `JWTs` that you generated in an earlier step. In this step, you will create a login screen (using the `LoginFragment` and `LoginViewModel` classes) to manage the authentication process.
 
 ## Update `fragment_login` layout
 
 Open the `fragment_login.xml` file.
 
-> **NOTE** You can open any file by using the `Go to file...` action. Press `Shift + Cmd + O` and enter the file name.
+> **NOTE** You can open any file by using the `Go to file...` action. Press `Shift + Cmd + O` and enter file name.
 
-Click the `Code` button in the top right corner to display the layout XML code:
+Click the `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
@@ -38,8 +38,19 @@ Replace the file contents with the following code:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+            android:id="@+id/loginAsBobButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login as Bob"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton"
+            app:layout_constraintVertical_bias="0.1" />
 
     <androidx.core.widget.ContentLoadingProgressBar
             android:id="@+id/progressBar"
@@ -50,7 +61,7 @@ Replace the file contents with the following code:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton" />
+            app:layout_constraintTop_toBottomOf="@id/loginAsBobButton" />
 
     <TextView
             android:id="@+id/connectionStatusTextView"
@@ -70,9 +81,6 @@ Replace the file contents with the following code:
 
 Replace the contents of the `ViewModel.java` file with the following code:
 
-Replace the file contents with the following code:
-
-
 ```java
 package com.vonage.tutorial.voice;
 
@@ -87,6 +95,9 @@ public class LoginViewModel extends ViewModel {
     private NexmoClient client = null; // TODO: Retrieve NexmoClient instance
 
     NavManager navManager = NavManager.getInstance();
+
+    User user = null;
+
     private MutableLiveData<ConnectionStatus> _connectionStatusMutableLiveData = new MutableLiveData<>();
     public LiveData<ConnectionStatus> connectionStatusLiveData = _connectionStatusMutableLiveData;
 
@@ -110,21 +121,23 @@ private NexmoClient client = NexmoClient.get();
 
 ### Login user
 
-You must authenticate your user to enable them to participate in the Conversation. Replace the `onLoginUser` method inside `LoginViewModel` class:
+Your user must be authenticated to be able to participate in the Conversation. Replace the `onLoginUser` method inside `LoginViewModel` class:
 
 ```java
 void onLoginUser(User user) {
+    this.user = user;
+
     if (!user.jwt.trim().isEmpty()) {
         client.login(user.jwt);
     }
 }
 ```
 
-> **NOTE:** Examine the `loginUser` method of the `LoginFragment` class. This method is called when one of the two `Login ...` buttons are clicked and, in turn, invokes the `onLoginUser` method. 
+> **NOTE:** Inside `LoginFragment` class, explore the `loginUser` method. This method is called when one of the two `Login ...` buttons are clicked. This method calls the above `onLoginUser` method. 
 
 ### Monitor connection state
 
-When a successful connection is established you need to navigate the user to the `MainFragment` class. Locate the `LoginViewModel` constructor and replace its body:
+When a successful connection is established you need to navigate user to `MainFragment`. Locate the `LoginViewModel` constructor and replace its body:
 
 
 ```java
@@ -133,17 +146,14 @@ public class LoginViewModel extends ViewModel {
     // ...
 
     public LoginViewModel() {
-        client.setConnectionListener(new NexmoConnectionListener() {
-            @Override
-            public void onConnectionStatusChange(@NonNull ConnectionStatus connectionStatus, @NonNull ConnectionStatusReason connectionStatusReason) {
-                if (connectionStatus == ConnectionStatus.CONNECTED) {
-                    NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment();
-        navManager.navigate(navDirections);
-                    return;
-                }
-
-                _connectionStatusMutableLiveData.postValue(connectionStatus);
+        client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
+            if (connectionStatus == ConnectionStatus.CONNECTED) {
+                NavDirections navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment(user.getName());
+                navManager.navigate(navDirections);
+                return;
             }
+
+            _connectionStatusMutableLiveData.postValue(connectionStatus);
         });
     }
 
@@ -151,7 +161,7 @@ public class LoginViewModel extends ViewModel {
 }
 ```
 
-The above code monitors the connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `MainFragment`, otherwise it will emit the connection status to the UI (`LoginFragment`).
+The above code will monitor connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `MainFragment`, otherwise it will emit connection status to the UI (`Loginfragment`).
 
 ## Update `LoginFragment`
 
@@ -175,6 +185,7 @@ import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatu
 public class LoginFragment extends Fragment {
 
     private Button loginAsAliceButton;
+    private Button loginAsBobButton;
     private ProgressBar progressBar;
     private TextView connectionStatusTextView;
 
@@ -199,15 +210,17 @@ public class LoginFragment extends Fragment {
         });
 
         loginAsAliceButton = view.findViewById(R.id.loginAsAliceButton);
+        loginAsBobButton = view.findViewById(R.id.loginAsBobButton);
         progressBar = view.findViewById(R.id.progressBar);
         connectionStatusTextView = view.findViewById(R.id.connectionStatusTextView);
 
-
         loginAsAliceButton.setOnClickListener(it -> loginUser(Config.getAlice()));
+        loginAsBobButton.setOnClickListener(it -> loginUser(Config.getBob()));
     }
 
     private void setDataLoading(Boolean dataLoading) {
         loginAsAliceButton.setEnabled(!dataLoading);
+        loginAsBobButton.setEnabled(!dataLoading);
 
         int visibility;
 
@@ -239,4 +252,4 @@ You can either launch the app on the physical phone (with [USB Debugging enabled
 image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```
 
-You should see the login screen with the `Login Alice` button. Click the button to log in and the empty main screen will open.
+You should see the login screen with the `Login Alice` button. After clicking user will login and empty main screen will open.

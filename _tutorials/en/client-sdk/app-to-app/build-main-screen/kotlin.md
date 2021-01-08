@@ -3,9 +3,9 @@ title: Build main screen
 description: In this step you build main screen.
 ---
 
-# Make a call
+# Build main screen
 
-Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call.
+Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call and listening for incoming call.
 
 ## Create `CallManager`
 
@@ -47,14 +47,6 @@ Replace the file contents with the following code:
         android:layout_height="match_parent"
         android:padding="48dp">
 
-    <TextView
-            android:id="@+id/currentUserNameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
-            android:textSize="25sp"
-            tools:text="Hello Alice" />
-
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -62,14 +54,23 @@ Replace the file contents with the following code:
             android:gravity="center"
             android:orientation="vertical">
 
-        <Button
-                android:id="@+id/startAppToPhoneCallButton"
+        <TextView
+                android:id="@+id/waitingTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
-                android:layout_marginTop="36dp"
+                android:textSize="20sp"
                 android:padding="16dp"
-                android:text="Make phone call" />
+                android:text="Waiting for incoming call" />
+
+        <Button
+                android:id="@+id/callBobButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Start call with Bob" />
 
         <androidx.core.widget.ContentLoadingProgressBar
                 android:id="@+id/progressBar"
@@ -97,6 +98,8 @@ import androidx.lifecycle.ViewModel
 import com.nexmo.client.NexmoCall
 import com.nexmo.client.NexmoCallHandler
 import com.nexmo.client.NexmoClient
+import com.nexmo.client.NexmoIncomingCallListener
+import com.nexmo.client.request_listener.NexmoApiError
 import com.nexmo.client.request_listener.NexmoRequestListener
 
 class MainViewModel : ViewModel() {
@@ -111,14 +114,20 @@ class MainViewModel : ViewModel() {
     private val _loading = MutableLiveData<Boolean>()
     val loading = _loading as LiveData<Boolean>
 
+    private val incomingCallListener: NexmoIncomingCallListener = TODO("Fill listener body")
+
     private val callListener: NexmoRequestListener<NexmoCall> = TODO("Implement call listener")
+
+    init {
+        TODO("Register incoming call listener")
+    }
 
     override fun onCleared() {
         client.removeIncomingCallListeners()
     }
 
     @SuppressLint("MissingPermission")
-    fun startAppToPhoneCall() {
+    fun startAppToAppCall() {
         TODO("Start the call")
     }
 
@@ -134,36 +143,53 @@ Replace `startAppToPhoneCall` method within the `MainViewModel` class to enable 
 
 ```kotlin
 @SuppressLint("MissingPermission")
-fun startAppToPhoneCall() {
-    // Callee is ignored because it is specified in NCCO config
-    client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, callListener)
+fun startAppToAppCall() {
+    client.call("IGNORED", NexmoCallHandler.SERVER, callListener)
     _loading.postValue(true)
 }
 ```
 
-### Add call start listener
+> **NOTE:** we set the `IGNORED` argument, because our number is specified in the NCCO config (Vonage application answer URL that you configured previously).
 
 Replace `callListener` property with below implementation to know when call has started:
 
 ```java
 private val callListener = object : NexmoRequestListener<NexmoCall> {
-        override fun onSuccess(call: NexmoCall?) {
-            callManager.onGoingCall = call
+    override fun onSuccess(call: NexmoCall?) {
+        callManager.onGoingCall = call
 
-            _loading.postValue(false)
+        _loading.postValue(false)
 
-            val navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment()
-            navManager.navigate(navDirections)
-        }
-
-        override fun onError(apiError: NexmoApiError) {
-            _toast.postValue(apiError.message)
-            _loading.postValue(false)
-        }
+        val navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment()
+        navManager.navigate(navDirections)
     }
+
+    override fun onError(apiError: NexmoApiError) {
+        _toast.postValue(apiError.message)
+        _loading.postValue(false)
+    }
+}
 ```
 
-> **NOTE:** we set the `IGNORED_NUMBER` argument, because our number is specified in the NCCO config (Vonage application answer URL that you configured previously).
+### Handle incoming calls
+
+Fill the body of `incomingCallListener` listener:
+
+```kotlin
+private val incomingCallListener = NexmoIncomingCallListener { it ->
+    callManager.onGoingCall = it
+    val navDirections = MainFragmentDirections.actionMainFragmentToIncomingCallFragment()
+    navManager.navigate(navDirections)
+}
+```
+
+Register `incomingCallListener` inside `init` block of `MainViewModel`:
+
+```kotlin
+init {
+    client.addIncomingCallListener(incomingCallListener)
+}
+```
 
 
 ## Update `MainFragment`
@@ -177,6 +203,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.TextView;
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -188,6 +215,7 @@ class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
 
     private lateinit var startAppToPhoneCallButton: Button
     private lateinit var progressBar: ProgressBar
+    private lateinit var waitingTextView: TextView
 
     private var dataLoading: Boolean by Delegates.observable(false) { _, _, newValue ->
         startAppToPhoneCallButton.isEnabled = !newValue
@@ -211,10 +239,18 @@ class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
         viewModel.loading.observe(viewLifecycleOwner, loadingObserver)
 
         progressBar = view.findViewById(R.id.progressBar)
-        startAppToPhoneCallButton = view.findViewById(R.id.startAppToPhoneCallButton)
+        startAppToPhoneCallButton = view.findViewById(R.id.callBobButton)
+        waitingTextView = view.findViewById(R.id.waitingTextView)
 
         startAppToPhoneCallButton.setOnClickListener {
-            viewModel.startAppToPhoneCall()
+            viewModel.startAppToAppCall()
+        }
+
+        arguments?.let {
+            val args = MainFragmentArgs.fromBundle(it)
+            val isBob = args.userName == Config.bob.name
+            startAppToPhoneCallButton.visibility = if(isBob) View.GONE else View.VISIBLE
+            waitingTextView.visibility = if(isBob) View.VISIBLE else View.GONE
         }
     }
 

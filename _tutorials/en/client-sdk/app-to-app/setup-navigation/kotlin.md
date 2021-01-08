@@ -40,20 +40,36 @@ image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
                 android:id="@+id/action_loginFragment_to_mainFragment"
                 app:destination="@id/mainFragment" />
     </fragment>
-    
+
     <fragment
             android:id="@+id/mainFragment"
             android:name="com.vonage.tutorial.voice.MainFragment"
             tools:layout="@layout/fragment_main">
         <action
+                android:id="@+id/action_mainFragment_to_incomingCallFragment"
+                app:destination="@id/incomingCallFragment" />
+        <action
                 android:id="@+id/action_mainFragment_to_onCallFragment"
                 app:destination="@id/onCallFragment" />
+        <argument
+                android:name="userName"
+                app:argType="string" />
     </fragment>
 
     <fragment
             android:id="@+id/onCallFragment"
             android:name="com.vonage.tutorial.voice.OnCallFragment"
-            tools:layout="@layout/fragment_on_call" />
+            tools:layout="@layout/fragment_on_call">
+    </fragment>
+
+    <fragment
+            android:id="@+id/incomingCallFragment"
+            android:name="com.vonage.tutorial.voice.IncomingCallFragment"
+            tools:layout="@layout/fragment_incoming_call">
+        <action
+                android:id="@+id/action_incomingCallFragment_to_onCallFragment"
+                app:destination="@id/onCallFragment" />
+    </fragment>
 
 </navigation>
 ```
@@ -105,52 +121,40 @@ Define two helpers - `BackPressHandler` and `NavManager` to simplify the navigat
 
 ### Create `BackPressHandler` interface
 
-`BackPressHandler` interface will help with handling pressing of the back button. Right click on `com.vonage.tutorial.voice` package, select `New` > `Java Class`, enter `BackPressHandler` as file name, select `Interface`. Add `onBackPressed` method to the `BackPressHandler` interface:
+`BackPressHandler` interface will help with handling pressing of the back button. Right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `BackPressHandler` as file name, select `Interface`. Add `onBackPressed` method to the `BackPressHandler` interface:
 
-```java
-package com.vonage.tutorial.voice;
+```kotlin
+package com.vonage.tutorial.voice
 
-public interface BackPressHandler {
-    void onBackPressed();
+interface BackPressHandler {
+    fun onBackPressed()
 }
 ```
-
-> **NOTE** You can also copy the above code snippet to clipboard, select `voice` package in Android Studio and paste it - this will create `BackPressHandler.kt` file containing above code.
 
 ### Create `NavManager` object
 
 `NavManager` object will allow to navigate directly from `ViewModel` by storing reference to navigation controller.
 
-Right click on `com.vonage.tutorial.voice` package, select `New` > `Java Class`, enter `NavManager` as file name, select `Class`. Replace the file contents with the following code:
+Right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `NavManager` as file name, select `Object`. Replace the file contents with the following code:
 
-```java
-package com.vonage.tutorial.voice;
+```kotlin
+package com.vonage.tutorial.voice
 
-import androidx.navigation.NavController;
-import androidx.navigation.NavDirections;
+import androidx.navigation.NavController
+import androidx.navigation.NavDirections
 
-public final class NavManager {
+object NavManager {
+    private lateinit var navController: NavController
 
-    private static NavManager INSTANCE;
-    NavController navController;
-
-    public static NavManager getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new NavManager();
-        }
-
-        return INSTANCE;
+    fun init(navController: NavController) {
+        NavManager.navController = navController
     }
 
-    public void init(NavController navController) {
-        this.navController = navController;
+    fun navigate(navDirections: NavDirections) {
+        navController.navigate(navDirections)
     }
 
-    public void navigate(NavDirections navDirections) {
-        navController.navigate(navDirections);
-    }
-
-    public void popBackStack(@IdRes int destinationId, Boolean inclusive) {
+    fun popBackStack(@IdRes destinationId: Int, inclusive: Boolean) {
         navController.popBackStack(destinationId, inclusive);
     }
 }
@@ -160,34 +164,40 @@ public final class NavManager {
 
 Add `onBackPressed` method to the `MainActivity`:
 
-```java
-@Override
-public void onBackPressed() {
-    FragmentManager childFragmentManager =
-            getSupportFragmentManager().getPrimaryNavigationFragment().getChildFragmentManager();
+```kotlin
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
-    Fragment currentNavigationFragment = childFragmentManager.getFragments().get(0);
-    BackPressHandler backPressHandler = (BackPressHandler) currentNavigationFragment;
+    // ...
 
-    if (backPressHandler != null) {
-        backPressHandler.onBackPressed();
+    override fun onBackPressed() {
+        val childFragmentManager = supportFragmentManager.primaryNavigationFragment?.childFragmentManager
+        val currentNavigationFragment = childFragmentManager?.fragments?.first()
+
+        if(currentNavigationFragment is BackPressHandler) {
+            currentNavigationFragment.onBackPressed()
+        }
+
+        super.onBackPressed()
     }
-
-    super.onBackPressed();
 }
 ```
 
 To initialize `NavManager` call it's `init` method from `MainActivity.onCreate` method:
 
-```java
-@Override
-protected void onCreate(@Nullable Bundle savedInstanceState) {
-    
-    // ...
+```kotlin
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
-    NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
-    NavManager.getInstance().init(navController);
+    override fun onCreate(savedInstanceState: Bundle?) {
+        
+        // ...
+
+        val navController = Navigation.findNavController(this, R.id.navHostFragment)
+        NavManager.init(navController)
+    }
+
+    // ...
 }
+
 ```
 
 Run `Build` > `Make project` to make sure project is compiling.

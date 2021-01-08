@@ -5,15 +5,15 @@ description: In this step you authenticate your users via the JWTs you created e
 
 # Authenticate User
 
-Users must be authenticated before being able to participate in the Conversation. You authenticate your users with the `JWTs` that you generated in an earlier step. In this step, you will create a login screen (using the `LoginFragment` and `LoginViewModel` classes) to manage the authentication process.
+Users must be authenticated before being able to participate in the Call. You authenticate your users with the `JWTs` that you generated in an earlier step. In this step, you will create a login screen (using the `LoginFragment` and `LoginViewModel` classes) to manage the authentication process.
 
 ## Update `fragment_login` layout
 
 Open the `fragment_login.xml` file.
 
-> **NOTE** You can open any file by using the `Go to file...` action. Press `Shift + Cmd + O` and enter the file name.
+> **NOTE** You can open any file by using the `Go to file...` action. Press `Shift + Cmd + O` and enter file name.
 
-Click the `Code` button in the top right corner to display layout XML code:
+Click the `Code` button in top right corner to display layout XML code:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
@@ -38,8 +38,19 @@ Replace the file contents with the following code:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+            android:id="@+id/loginAsBobButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login as Bob"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton"
+            app:layout_constraintVertical_bias="0.1" />
 
     <androidx.core.widget.ContentLoadingProgressBar
             android:id="@+id/progressBar"
@@ -50,7 +61,7 @@ Replace the file contents with the following code:
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginAsAliceButton" />
+            app:layout_constraintTop_toBottomOf="@id/loginAsBobButton" />
 
     <TextView
             android:id="@+id/connectionStatusTextView"
@@ -70,8 +81,6 @@ Replace the file contents with the following code:
 
 Replace the contents of the `LoginViewModel.kt` file with the following code:
 
-Replace the file contents with the following code:
-
 ```kotlin
 package com.vonage.tutorial.voice
 
@@ -84,6 +93,8 @@ import com.nexmo.client.request_listener.NexmoConnectionListener.ConnectionStatu
 class LoginViewModel : ViewModel() {
 
     private val navManager = NavManager
+
+    private var user: User? = null
 
     private val _connectionStatus = MutableLiveData<ConnectionStatus>()
     val connectionStatus = _connectionStatus as LiveData<ConnectionStatus>
@@ -114,6 +125,8 @@ Your user must be authenticated to be able to participate in the Conversation. R
 
 ```kotlin
 fun onLoginUser(user: User) {
+    this.user = user;
+
     if (user.jwt.isNotBlank()) {
         client.login(user.jwt)
     }
@@ -133,8 +146,11 @@ class LoginViewModel : ViewModel() {
         client.setConnectionListener { newConnectionStatus, _ ->
 
             if (newConnectionStatus == ConnectionStatus.CONNECTED) {
-                val navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment()
-                navManager.navigate(navDirections)
+
+                user?.let {
+                    val navDirections = LoginFragmentDirections.actionLoginFragmentToMainFragment(it.name)
+                    navManager.navigate(navDirections)
+                }
                 
                 return@setConnectionListener
             }
@@ -174,11 +190,13 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private val viewModel by viewModels<LoginViewModel>()
 
     private lateinit var loginAsAliceButton: Button
+    private lateinit var loginAsBobButton: Button
     private lateinit var progressBar: ProgressBar
     private lateinit var connectionStatusTextView: TextView
 
     private var dataLoading: Boolean by Delegates.observable(false) { _, _, newValue ->
         loginAsAliceButton.isEnabled = !newValue
+        loginAsBobButton.isEnabled = !newValue
         progressBar.isVisible = newValue
     }
 
@@ -196,11 +214,16 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         viewModel.connectionStatus.observe(viewLifecycleOwner, stateObserver)
 
         loginAsAliceButton = view.findViewById(R.id.loginAsAliceButton)
+        loginAsBobButton = view.findViewById(R.id.loginAsBobButton)
         progressBar = view.findViewById(R.id.progressBar)
         connectionStatusTextView = view.findViewById(R.id.connectionStatusTextView)
 
         loginAsAliceButton.setOnClickListener {
             loginUser(Config.alice)
+        }
+
+        loginAsBobButton.setOnClickListener {
+            loginUser(Config.bob)
         }
     }
 
@@ -223,4 +246,4 @@ You can either launch the app on the physical phone (with [USB Debugging enabled
 image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
 ```
 
-You should see the login screen with the `Login Alice` and `Login Bob` buttons. After clicking user will login and empty main screen will open.
+You should see the login screen with the `Login Alice` button. After clicking user will login and empty main screen will open.
