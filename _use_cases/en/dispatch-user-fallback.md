@@ -69,7 +69,7 @@ Perhaps the best way to understand this use case is to look at the sample config
 
 The most important part of this configuration files is the `USERS` section. Here you have a priority list of users. In this case the application will attempt to send the message to Tony, and if Tony fails to read the message on any of the designated channels within the expiry time, the process is repeated for Michael.
 
-> **NOTE:** The failover condition for each channel of `read` with an expiry time of `600` is currently hardcoded into the application, but could easily be added to the configuration file (see [case-3](https://github.com/nexmo-community/dispatch-user-fallback/tree/master/case-3) for code on how to do this).
+> **NOTE:** The failover condition for each channel of `read` with an expiry time of `600` is currently hardcoded into the application, but could be added to the configuration file (see [case-3](https://github.com/nexmo-community/dispatch-user-fallback/tree/master/case-3) for code on how to do this).
 
 Note that the following conditions apply:
 
@@ -83,7 +83,7 @@ Note that the following conditions apply:
 
 ## Source code
 
-The Python source code for this project is available in the community [GitHub repository](https://github.com/nexmo-community/dispatch-user-fallback). Three use cases are actually included in the codebase, but this tutorial only describes `case-2`. The code for `case-2` specifically can be found [here](https://github.com/nexmo-community/dispatch-user-fallback/tree/master/case-2). There are just two files - the sample configuration file, `sample.json` and the application, `app.py`.
+The Python source code for this project is available in the community [GitHub repository](https://github.com/nexmo-community/dispatch-user-fallback). Three use cases are actually included in the codebase, but this tutorial only describes `case-2`. The code for `case-2` specifically can be found [here](https://github.com/nexmo-community/dispatch-user-fallback/tree/master/case-2). There are two files - the sample configuration file, `sample.json` and the application, `app.py`.
 
 ## Prerequisites
 
@@ -192,7 +192,7 @@ Most importantly, the configuration file stores the list of users to contact in 
 
 The last channel listed for each user is treated as the final fallback before switching to another user. For each user, each channel will be sent a message using the Dispatch API, with **automatic** failover to the next channel if the message is not read within 600 seconds.
 
-The first part of the application code, `app.py`, simply reads the configuration file and loads the important variables and data structures. It is assumed that your company will support all four channels supported by the Dispatch API, `messenger`, `viber_service_msg`, `whatsapp` and `sms`, although the target users can be assigned their preferred channels only. Some users for example might only be contactable by SMS.
+The first part of the application code, `app.py`, reads the configuration file and loads the important variables and data structures. It is assumed that your company will support all four channels supported by the Dispatch API, `messenger`, `viber_service_msg`, `whatsapp` and `sms`, although the target users can be assigned their preferred channels only. Some users for example might only be contactable by SMS.
 
 There is a helper function, `set_field_types`, to manage the fact that some channels use `numbers` and some use `ids`, and Viber which uses both `ids` and `numbers`.
 
@@ -264,7 +264,7 @@ The main functionality for this use case is in the `build_user_workflow` functio
 
 The function `build_user_workflow` also makes sure values read from the configuration file are embedded into the workflow.
 
-You probably noticed that the `expiry_time` and `condition_status` are hardcoded into the workflow as built in `build_user_workflow`. This was done to keep the code as simple as possible, but you could add these parameters to the configuration file on a per-channel basis. In this case some users might have a 300 second expiry on some channels, and you could also specify the failover condition of `read` or `delivered` on a per-channel basis. This has been implemented for you in [case-3](https://github.com/nexmo-community/dispatch-user-fallback/tree/master/case-3) but is not described further in this tutorial as all the code is given, along with the modified sample configuration file.
+You probably noticed that the `expiry_time` and `condition_status` are hardcoded into the workflow as built in `build_user_workflow`. This was done to keep the code as straightforward as possible, but you could add these parameters to the configuration file on a per-channel basis. In this case some users might have a 300 second expiry on some channels, and you could also specify the failover condition of `read` or `delivered` on a per-channel basis. This has been implemented for you in [case-3](https://github.com/nexmo-community/dispatch-user-fallback/tree/master/case-3) but is not described further in this tutorial as all the code is given, along with the modified sample configuration file.
 
 Once the workflow has been built, you use the [Dispatch API](/dispatch/overview) to send the message:
 

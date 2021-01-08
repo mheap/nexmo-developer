@@ -8,17 +8,17 @@ languages:
 
 # Mobile app invites
 
-With the number of apps on Android and iOS rising it is important for people to easily find your apps, both in the stores and on the Web.
+With the number of apps on Android and iOS rising it is important for people to find your apps, both in the stores and on the Web.
 
 If your mobile app has a Website you are probably familiar with:
 
 ![Mobile app button example](/images/app_store_play_badges.png)
 
-These buttons make it easy for anyone to navigate to the correct store for their mobile device. However, this flow quickly falls apart if the user is not mobile. What happens when your user is using a desktop computer? By using **Mobile app promotion**, you can quickly convert a browsing user into an active customer by sending them a link to your app via SMS.
+These buttons make it possible for anyone to navigate to the correct store for their mobile device. However, this flow quickly falls apart if the user is not mobile. What happens when your user is using a desktop computer? By using **Mobile app promotion**, you can quickly convert a browsing user into an active customer by sending them a link to your app via SMS.
 
 ## In this tutorial
 
-You see how easy it is to build a mobile app invites system using the Vonage APIs and libraries:
+You see how quick it is to build a mobile app invites system using the Vonage APIs and libraries:
 
 1. [Create a Web app](#create-a-web-app) - create a Web app with download buttons.
 2. [Detect desktop users](#detect-desktop-users) - show the correct download button for desktop or mobile users.

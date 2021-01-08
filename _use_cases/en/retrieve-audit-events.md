@@ -85,7 +85,7 @@ $  curl "https://api.nexmo.com/beta/audit/events?search_text=password" \
 
 ## Retrieve a specific audit event
 
-If you know the UUID for a specific audit event you can retrieve the information for just that audit event object. For example if the event UUID is `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` you would enter:
+If you know the UUID for a specific audit event you can retrieve the information for that audit event object. For example if the event UUID is `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` you would enter:
 
 ```
 $ curl "https://api.nexmo.com/beta/audit/events/aaaaaaaa-bbbb-cccc-dddd-0123456789ab" \

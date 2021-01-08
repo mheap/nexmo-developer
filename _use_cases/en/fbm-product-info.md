@@ -38,7 +38,7 @@ After the prerequisites have been met, the steps are as follows:
 5. [Interact with your Facebook Page](#interact-with-your-facebook-page)
 6. [Minimal client for sending Facebook Messenger messages using Python](#minimal-client-for-sending-facebook-messenger-messages-using-python)
 7. [The use case revisited](#the-use-case-revisited)
-8. [A simple implementation](#a-simple-implementation)
+8. [An implementation](#an-implementation)
 
 There are various ways you can achieve the same result with Vonage. This tutorial shows only one specific way to do things, for example you will see how to use the command line to create the application, rather than the Dashboard. Other tutorials demonstrate other ways of doing things.
 
@@ -152,7 +152,7 @@ It's time to look into this use case in more detail so you can more effectively 
 
 Imagine a user messages your Facebook Page via Messenger with a message such as "Hi". However, due to time zones you are not available to respond to the message - this may leave the user feeling dejected. On the other hand it would be great if you could automatically respond with useful information. For example, to a message such as "Hi" you might respond with "Welcome to T's Cat Supplies. Here are our main product categories: toys, food, medicine, bling."
 
-Using a Python construct such as `if keyword in msg` you can detect keywords and send material based on that. For example, if a user sends in a message like "Hi my tanks need sorting" you might detect the word `tank` and send information on your tank cleaning services. Or if you receive a message such as "Hi, I think I need a crane to lift our pipeline sections." You could send information on your crane hire services. Where keywords are not detected it is a simple matter to send a generic message back to the user to help orientate them.
+Using a Python construct such as `if keyword in msg` you can detect keywords and send material based on that. For example, if a user sends in a message like "Hi my tanks need sorting" you might detect the word `tank` and send information on your tank cleaning services. Or if you receive a message such as "Hi, I think I need a crane to lift our pipeline sections." You could send information on your crane hire services. Where keywords are not detected it is a straightforward matter to send a generic message back to the user to help orientate them.
 
 This auto-response feature is useful as some companies have hundreds of products and services.
 
@@ -160,7 +160,7 @@ Another feature that is useful is the ability to switch auto-response off, perha
 
 In the following sections you will see how to implement this use case.
 
-## A simple implementation
+## An implementation
 
 One of the useful data structures in implementing this use case is the Python dictionary. You can see an example here:
 
@@ -210,7 +210,7 @@ class ProductMatcher:
         return product
 ```
 
-If the user sends a message via Messenger, and there's no human to respond, a simple menu is sent back to the user. In the user's message the product is extracted and the appropriate message sent. Of course this code takes a naive approach, but hopefully it indicates the potential.
+If the user sends a message via Messenger, and there's no human to respond, a menu is sent back to the user. In the user's message the product is extracted and the appropriate message sent. This code takes a specific approach, but hopefully it indicates the potential.
 
 You might be wondering would this get annoying for the user if they want to talk to a real person? However, the auto-respond could be disabled once you are online and able to take messages. The code allows the user to use the commands `auto: off` and `auto: on` to control interaction. This could also be controlled by the channel manager.
 
@@ -218,7 +218,7 @@ In the above code the product the user is interested in is also returned. This c
 
 ## Summary
 
-In this tutorial you have seen a use case where the user can receive product information automatically via Facebook Messenger. This was based around simple keyword matching. The user also had the ability to toggle auto-response mode as required.
+In this tutorial you have seen a use case where the user can receive product information automatically via Facebook Messenger. This was based around keyword matching. The user also had the ability to toggle auto-response mode as required.
 
 ## Further resources
 

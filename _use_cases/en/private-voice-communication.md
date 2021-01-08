@@ -1,9 +1,10 @@
 ---
-title: Private voice communication
+title: Private Voice Communication
 products: voice/voice-api
 description: Enable users to call each other, keeping their real numbers private.
 languages:
     - Node
+navigation_weight: 2  
 ---
 
 # Private voice communication
@@ -55,7 +56,7 @@ To build the application, you perform the following steps:
 
 ## Configuration
 
-You need to create a `.env` file containing configuration. Instructions on how to do that are explained in the [GitHub Readme](https://github.com/Nexmo/node-voice-proxy#configuration). As you work through this use case you can populate your configuration file with the required values for variables such as API key, API secret, Application ID, debug mode, and provisioned numbers.
+You need to create a `.env` file containing configuration. Instructions on how to do that are explained in the [GitHub README](https://github.com/Nexmo/node-voice-proxy#configuration). As you work through this use case you can populate your configuration file with the required values for variables such as API key, API secret, Application ID, debug mode, and provisioned numbers.
 
 ## Create a Voice API application
 
@@ -97,7 +98,7 @@ app.listen(app.get('port'), function() {
 });
 ```
 
-Note that the code instantiates an object of the `VoiceProxy` class to handle the routing of messages sent to your virtual number to the intended recipient's real number. The proxying process is described in [proxy the call](#proxy-the-call), but for now just be aware that this class initializes the Vonage Server SDK using the API key and secret that you configure in the next step. This enables your application to make and receive voice calls:
+Note that the code instantiates an object of the `VoiceProxy` class to handle the routing of messages sent to your virtual number to the intended recipient's real number. The proxying process is described in [proxy the call](#proxy-the-call), but for now be aware that this class initializes the Vonage Server SDK using the API key and secret that you configure in the next step. This enables your application to make and receive voice calls:
 
 ``` javascript
 const VoiceProxy = function(config) {

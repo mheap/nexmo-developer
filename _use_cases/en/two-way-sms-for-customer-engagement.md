@@ -1,18 +1,18 @@
 ---
 title: Two-way SMS for customer engagement
 products: messaging/sms
-description: Programmable SMS is not just useful for one way notifications. When you combine outbound notifications with inbound messages you create chat-like interactions between your company and your customers.
+description: Programmable SMS is not only useful for one way notifications. When you combine outbound notifications with inbound messages you create chat-like interactions between your company and your customers.
 languages:
     - Ruby
 ---
 
 # Two-way SMS for customer engagement
 
-Programmable SMS is not just useful for one way notifications. When you combine outbound notifications with inbound messages you create chat-like interactions between your company and your customers.
+Programmable SMS is not only useful for one way notifications. When you combine outbound notifications with inbound messages you create chat-like interactions between your company and your customers.
 
 ## In this tutorial
 
-You see how easy it is to build two-way communication into your app; you send a delivery notification to your customer's phone number and handle their reply when they want to change a delivery slot.
+You see how quick it is to build two-way communication into your app; you send a delivery notification to your customer's phone number and handle their reply when they want to change a delivery slot.
 
 The workflow for your app is:
 
@@ -221,7 +221,7 @@ Now reply back to the SMS you received earlier. You should see it be processed b
 
 ## Conclusion
 
-That's how simple it is to send and receive SMS in your app. With a few lines of code you have sent a SMS to a customer's phone with the SMS API, handled a reply, and responded with a confirmation.
+That's how quick it is to send and receive SMS in your app. With a few lines of code you have sent a SMS to a customer's phone with the SMS API, handled a reply, and responded with a confirmation.
 
 ## Get the Code
 

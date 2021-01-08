@@ -1,7 +1,7 @@
 ---
 title: SMS Customer Support
 products: messaging/sms
-description: Programmable SMS is not just useful for one way notifications. When you combine outbound notifications with inbound messages you create chat-like interactions between your company and your customers.
+description: Programmable SMS is not only useful for one way notifications. When you combine outbound notifications with inbound messages you create chat-like interactions between your company and your customers.
 languages:
     - Ruby
 ---
@@ -10,11 +10,11 @@ languages:
 
 The general availability of SMS makes it a versatile solution for customer support. Phone numbers can be printed, read out, and put on websites, allowing anyone online or offline to engage with your business.
 
-Providing customer support over SMS is an easy way to provide a full two-way communication system to anybody with a phone connected to a mobile network.
+Providing customer support over SMS is one way to provide a full two-way communication system to anybody with a phone connected to a mobile network.
 
 ## In this tutorial
 
-You will build a simple system for SMS customer support using Vonage's APIs and libraries.
+You will build a system for SMS customer support using Vonage's APIs and libraries.
 
 To do this:
 
@@ -34,7 +34,7 @@ In order for this tutorial to work you will need:
 
 ## A Basic Web application
 
-For this tutorial start off with a simple web application with one page. The user will be able to click on a link to open their SMS app and request support. Your app will collect the inbound SMS and open a new ticket. Finally, the app will reply with a new SMS to the user confirming their ticket number.
+For this tutorial start off with a web application with one page. The user will be able to click on a link to open their SMS app and request support. Your app will collect the inbound SMS and open a new ticket. Finally, the app will reply with a new SMS to the user confirming their ticket number.
 
 ```sequence_diagram
 Participant Phone

@@ -5,9 +5,9 @@ description: In this step you add external dependencies
 
 # Add dependencies
 
-## Add Nexmo
+## Client SDK
 
-You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside `allprojects` block in the project-level `build.gradle` file:
+You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside the `allprojects` block within the project-level `build.gradle` file:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
@@ -42,11 +42,11 @@ dependencies {
 }
 ```
 
-## Add Navigation component
+## Navigation component
 
-To navigate between screens you will use [Navigation component](https://developer.android.com/guide/navigation).
+To navigate between screens you will use the [Navigation component](https://developer.android.com/guide/navigation).
 
-To add navigation component dependency define a variable `ext.android_navigation_version` containing version in project-level `build.gradle` file:
+To add the navigation component dependency define a variable called `ext.android_navigation_version` in the project-level `build.gradle` file and specify the required version:
 
 ```groovy
 buildscript {
@@ -68,7 +68,7 @@ dependencies {
 }
 ```
 
-Add `Safe Args` plugin in the module level `build.gradle` file:
+Then, add the `Safe Args` plugin:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png

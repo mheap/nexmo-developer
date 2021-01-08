@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 6.1.1 - December 09, 2020
+
+### Fixes
+
+- Update Typescript definitions
+
 ## Version 6.1.0 - December 01, 2020
 
 ### Changes

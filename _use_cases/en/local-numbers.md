@@ -4,6 +4,7 @@ products: voice/voice-api
 description: "Replace your toll-free numbers (e.g. 800, 0800) with local geographical numbers that allow you to provide a better customer service. Users can make cheaper calls and you can offer location-sensitive information when they contact you."
 languages:
     - Ruby
+navigation_weight: 5    
 ---
 
 # Local Numbers for Voice Calls
@@ -51,7 +52,7 @@ One you have it, you will need to:
 
 Whenever someone calls one of the numbers that are linked to the Vonage application, Vonage will receive an incoming call. Vonage will then notify your web application of that call. It does this by making a webhook request to your web app's `answer_url` endpoint. You can read more information about the [answer webhook](/voice/voice-api/webhook-reference#answer-webhook) in the developer docs.
 
-User will call a city-specific number, so we need to know which number maps to which city. In our simplified case we will simply configure the two numbers you bought into your application, but in most real environments this relationship is stored in a database. The configuration can be found in `app.rb`:
+User will call a city-specific number, so we need to know which number maps to which city. In our case we will configure the two numbers you bought into your application, but in most real environments this relationship is stored in a database. The configuration can be found in `app.rb`:
 
 ```ruby
 # Map our inbound numbers to different cities.

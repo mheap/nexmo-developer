@@ -1,6 +1,142 @@
-NEXMO_API_KEY:
-  description: You can find this in your account overview
-NEXMO_API_SECRET:
-  description: You can find this in your account overview
-TO_NUMBER:
-  description: The number you are sending the SMS to in E.164 format. For example `447700900000`.
+# Contribution guide examples
+NEXMO_API_KEY: Your Nexmo API key (see it on [your dashboard](http://dashboard.nexmo.com/))
+
+# Generic
+VONAGE_API_KEY: Your Vonage API key (see it on [your dashboard](http://dashboard.nexmo.com/)).
+VONAGE_API_SECRET: Your Vonage API secret (also available on [your dashboard](http://dashboard.nexmo.com/)).
+VONAGE_APPLICATION_PRIVATE_KEY_PATH: Private key path.
+VONAGE_APPLICATION_PRIVATE_KEY: Private key.
+VONAGE_APPLICATION_ID: The Vonage Application ID.
+VONAGE_NUMBER: Your Vonage Number. E.g. `447700900000`
+VONAGE_BRAND_NAME: The alphanumeric string that represents the name or number of the organization sending the message.
+ACCOUNT_ID: The account ID to target
+TO_NUMBER: The number you are sending the to in E.164 format. For example `447700900000`.
+IMAGE_URL: The link to the image file to send.
+IMAGE_CAPTION: The text describing the image being sent.
+AUDIO_URL: The link to the audio file to send.
+FILE_URL: The URL of the file to send.
+FILE_CAPTION: The text describing the file being sent.
+VIDEO_CAPTION: The text describing the video being sent.
+COUNTRY_CODE: "The two digit country code for the number. For example: `GB` for the United Kingdom"
+
+# Account API
+VONAGE_SECRET_ID.DELETE: The ID of the secret to delete.
+VONAGE_SECRET_ID.FETCH: The ID of the secret to retrieve.
+SMS_CALLBACK_URL: The publicly-accessible URL that Vonage should send information to when your Vonage number receives an SMS
+NEW_SECRET: The new API secret for the API key.
+
+# Application API
+APPLICATION_NAME: The name for your Vonage Application.
+NAME.UPDATE.APPLICATION: The new name for the Vonage application you want to update.
+
+# Audit API
+EVENT_UUID: The UUID of the audit event you want to retrieve.
+SEARCH_TEXT: Some JSON compatible text to search for. For example, "number".
+DATE_FROM: Audit events starting from this ISO-8601 datetime value. For example, "2018-07-01".
+DATE_TO: Audit events up to this ISO-8601 datetime value. For example, "2018-08-01".
+
+# Conversation
+CONV_NAME: The unique name of the Conversation.
+CONV_DISPLAY_NAME: The display name of the Conversation.
+CONVERSATION_ID: The ID of the Conversation.
+CONVERSATION_ID.GET: The ID of the Conversation to be retrieved.
+CONVERSATION_ID.DELETE: The ID of the Conversation to be deleted.
+CONV_NEW_NAME: The new name.
+CONV_NEW_DISPLAY_NAME: The new display name.
+MEMBER_ID: The unique ID of the Member.
+EVENT_ID: The unique ID of the Event
+LEG_ID: The unique ID of the Leg.
+USER_ID: The unique ID of the User.
+USER_NAME: The unique name of the User.
+USER_DISPLAY_NAME: The display name of the User.
+USER_NEW_NAME: The new name of the User.
+USER_NEW_DISPLAY_NAME: The new display name of the User.
+
+# Messages AND Dispatch
+FB_RECIPIENT_ID: The PSID of the user you want to reply to. The `FB_RECIPIENT_ID` is the PSID of the Facebook User you are messaging. This value is the `from.id` value you received in the inbound messenger event on your Inbound Message Webhook URL.
+LOGO_IMAGE_URL: An optional logo image.
+HEADER_IMAGE_URL: An optional header image.
+ABOVE_BAR_CODE_IMAGE_URL: An optional image for above the bar code.
+
+# Messages AND SMS
+TO_NUMBER.SMS: The phone number you are sending the message to.
+FROM_NUMBER.SMS: The phone number you are sending the message from.
+
+# Dispatch API
+FROM_NUMBER.DISPATCH: Replace with number you are sending from. E.g. `447700900002`
+TO_NUMBER.DISPATCH: Replace with the number you are sending to. E.g. `447700900001`
+TO_NUMBER_1.DISPATCH: The phone number you are sending the SMS to.
+TO_NUMBER_2.DISPATCH: The phone number of the second phone. In this example, the workflow will failover to this number if the first message is not read in 60 seconds.
+FB_SENDER_ID: Your Page ID. The `FB_SENDER_ID` is the same as the `to.id` value you received in the inbound messenger event on your Inbound Message Webhook URL.
+VIBER_SERVICE_MESSAGE_ID: Your Viber Service Message ID. For sandbox testing this is 16273.
+WHATSAPP_NUMBER: The WhatsApp number that has been allocated to you by Vonage. For sandbox testing the number is 14157386170.
+
+# Messages API
+FROM_NUMBER.MESSAGES: Replace with number you are sending from. E.g. `447700900002`
+TO_NUMBER.MESSAGES: Replace with the number you are sending to. E.g. `447700900001`
+BASE_URL.MESSAGES: For production use the base URL is `https://api.nexmo.com/`. For sandbox testing the base URL is `https://messages-sandbox.nexmo.com/`.
+MESSAGES_API_URL: For production use the Messages API endpoint is `https://api.nexmo.com/v0.1/messages`. For sandbox testing the Messages API endpoint is `https://messages-sandbox.nexmo.com/v0.1/messages`.
+FB_SENDER_ID.MESSAGES: Your Page ID. The `FB_SENDER_ID` is the same as the `to.id` value you received in the inbound messenger event on your Inbound Message Webhook URL. For sandbox testing this is `107083064136738`.
+AUDIO_URL.MESSENGER.MESSAGES: The link to the audio file to send. Must be MP3 format for Messenger.
+FILE_URL.MESSENGER.MESSAGES: The link to the file to send. Can be ZIP, CSV, PDF or any other type supported by Messenger.
+IMAGE_URL.MESSENGER.MESSAGES: The link to the image file to send. Messenger supports `.jpg`, `.jpeg`, `.png` and `.gif` types.
+VIDEO_URL.MESSENGER.MESSAGES: The link to the video to send. Messenger supports MP4 (`.mp4`) file format only.
+FROM_NUMBER.MMS.MESSAGES: The phone number you are sending the MMS from. (US Short Code only)
+IMAGE_URL.MMS.MESSAGES: The URL of the media you want to send. Accepted file formats are `.jpg`, `.jpeg`, `.png`, and `.gif`.
+WHATSAPP_TEMPLATE_NAMESPACE: The namespace ID found in your WhatsApp Business Account. Only templates created in your own namespace will work. Using an template with a namespace outside of your own results in an error code 1022 being returned. For sandbox testing the supported namespace is `9b6b4fcb_da19_4a26_8fe8_78074a91b584`.
+WHATSAPP_TEMPLATE_NAME: The name of the template created in your WhatsApp Business Account. For sandbox testing the `verify` template is currently available. Refer to [this table](/messages/concepts/messages-api-sandbox#whatsapp-templates-for-use-with-the-messages-api-sandbox) for new templates as they become available.
+HEADER_IMAGE_URL.WHATSAPP.MESSAGES: The URL of the image to display in the template message header.
+VIDEO_URL.WHATSAPP.MESSAGES: The link to the video to send. WhatsApp supports `.mp4` and `.3gpp`. Note, only `H.264` video codec and `AAC` audio codecs are supported.
+
+# Number Insight API
+INSIGHT_NUMBER: The number you want to retrieve insight information for.
+
+# Numbers
+NUMBER_SEARCH_CRITERIA: The filter criteria. For example, numbers containing `234`.
+NUMBER_SEARCH_PATTERN: "Where the `NUMBER_SEARCH_CRITERIA` should appear in the number: <ul><li>`0` - At the beginning of the number</li><li>`1`- Anywhere in the number</li><li>`2` - At the end of the number</ul>"
+VONAGE_NUMBER_TYPE: "The type of number: `landline`, `mobile-lvn` or `landline-toll-free`"
+VONAGE_NUMBER_FEATURES: "The capabilities of the number: `SMS`, `VOICE` or `SMS,VOICE` for both"
+SMS_CALLBACK_URL.NUMBERS: An URL-encoded URI to the webhook endpoint that handles inbound messages. Your webhook endpoint must be active before you make this request. Vonage makes a GET request to the endpoint and checks that it returns a 200 OK response. Set this parameter's value to an empty string to remove the webhook.
+VONAGE_APPLICATION_ID.NUMBERS: The ID of the application that handles inbound traffic to this number.
+VOICE_CALLBACK_TYPE.NUMBERS: "The Voice API webhook type: `sip`, `tel` or `app`"
+VOICE_CALLBACK_VALUE.NUMBERS: A SIP URI, telephone number or Application ID, depending on `VOICE_CALLBACK_TYPE`
+VOICE_STATUS_URL.NUMBERS: A webhook URL for Vonage to POST Voice API status updates to
+
+# Redact
+VONAGE_REDACT_ID: The ID of the data record that you'd like to redact
+VONAGE_REDACT_TYPE: The product that the ID belongs to e.g. `sms`
+
+# Reports
+REQUEST_ID.REPORTS: The request ID returned when a report was created
+ACCOUNT_ID.REPORTS: The account ID (same as `VONAGE_API_KEY`) for the account you want to generate reports, or retrieve records for.
+REPORT_PRODUCT: Specifies the product for which reports and records are obtained. Can be one of `SMS`, `VOICE-CALL`, `WEBSOCKET-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES`, `CONVERSATIONS`, or `ASR`.
+REPORT_DIRECTION: Either `inbound` or `outbound`
+DATE_START.REPORTS: Date of time window from when you want to start gathering records in ISO-8601 format.
+DATE_END.REPORTS: Date of time window from when you want to stop gathering records in ISO-8601 format.
+STATUS.REPORTS: Status of message or call.
+REPORT_STATUS: Status of report generation, can be any of `PENDING`, `PROCESSING`, `SUCCESS`, `ABORTED`, `FAILED`, `TRUNCATED`. For [report listing](/reports/code-snippets/list-reports), `status` is passed in as a comma-separated list of report status values.
+FILE_ID.REPORTS: The file ID of the report to retrieve.
+ID.REPORTS: The UUID of the message or call to retrieve a record for. It is possible to specify a comma-separated list of UUIDs to retrieve multiple records.
+
+# Verify
+REQUEST_ID.VERIFY: The ID of the Verify request (this is returned in the API response when you [send a verification code](/verify/code-snippets/send-verify-request))
+CODE.VERIFY.VERIFY: The code the user supplies as having been sent to them
+RECIPIENT_NUMBER.VERIFY: The phone number to verify
+PAYEE.VERIFY: Included in the message to describe the payment recipient
+AMOUNT.VERIFY: How much the payment is for (always in Euro)
+WORKFLOW_ID.VERIFY: Choose a workflow (number between 1 and 7), these are defined in the [workflows guide](/verify/guides/workflows-and-events)
+BRAND_NAME.VERIFY: Included in the message to explain who is confirming the phone number
+CODE.VERIFY: The code the user supplies as having been sent to them
+
+# Voice
+TO_NUMBER.VOICE: The number you are calling. E.g. `447700900001`
+SECOND_NUMBER.VOICE: The number you are forwarding to. E.g. `447700900002`
+YOUR_SECOND_NUMBER.VOICE: The number you are connecting to. E.g. `447700900002`
+UUID.VOICE: The UUID of the [call leg](/conversation/concepts/leg#leg)
+CONF_NAME.VOICE: The named identifier for your conference
+RECORDING_URL.VOICE: The URL of the recording to download. You typically get this from the JSON response received on the `/webhooks/recordings` endpoint when the `record` action is used.
+ANSWER_URL: The answer URL. For example `https://raw.githubusercontent.com/nexmo-community/ncco-examples/gh-pages/text-to-speech.json`.
+URL.AUDIO.VOICE: The URL of the audio file that will be streamed into an array. The URL must be in an array.
+DIGITS.VOICE: Digits representing the DTMF tones that will be played into the call.
+TEXT.VOICE: The text of the message to play into the call.
+NCCO_URL: The URL of the NCCO to execute. URLs _must_ be array type.
