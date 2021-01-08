@@ -29,7 +29,7 @@ You can work around this issue by sending your API request to the correct region
 * https://api-eu-1.nexmo.com
 * https://api-sg-1.nexmo.com
 
-The following are examples of how to override the default hosts using the Vonage SDKs:
+The following are examples of how to override the default hosts using the [Vonage Server SDKs](/tools):
 
 ```tabbed_content
 source: '/_examples/voice/dc-config'
