@@ -1,4 +1,3 @@
-title: Making an app to app voice call
 description: Make a voice call from an Android app to the same Android app installed on other device using the Android Client SDK.
 products:
   - client-sdk
@@ -9,7 +8,7 @@ introduction:
   content: |
     # Introduction
     In this tutorial, you will learn how to create an Android application using Kotlin and the Nexmo Android Client SDK, and then write the code to make a phone call from your Android app to another Android app.
-    The source code is available on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-app-to-app).
+    The source code is available on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-app-to-app-kotlin).
 
     This tutorial uses NexmoClient version 2.x
 
@@ -25,12 +24,17 @@ tasks:
   - client-sdk/app-to-app/create-application
   - client-sdk/android-shared/create-users-alice-and-bob
   - client-sdk/android-shared/generate-jwt-alice-and-bob
-  - client-sdk/app-to-app/starter-project
+  - client-sdk/app-to-app/create-project
+  - client-sdk/android-shared/add-dependencies
+  - client-sdk/app-to-app/create-screens
+  - client-sdk/app-to-app/setup-navigation
+  - client-sdk/app-to-app/add-permissions
+  - client-sdk/app-to-app/configure-jwt
   - client-sdk/android-shared/initialize-client
-  - client-sdk/android-shared/configure-jwt-alice-and-bob
-  - client-sdk/android-shared/authenticate-alice-and-bob
-  - client-sdk/app-to-app/receive-call
-  - client-sdk/app-to-app/make-call
+  - client-sdk/app-to-app/authenticate-alice-and-bob
+  - client-sdk/app-to-app/build-main-screen
+  - client-sdk/app-to-app/build-on-call-screen
+  - client-sdk/app-to-app/build-incoming-call-screen
   - client-sdk/android-shared/run-app
 
 conclusion:
@@ -41,7 +45,7 @@ conclusion:
     # What's next?
 
     For the complete version please see the Android Studio project in the `kotlin-completed` folder of 
-    the [git repository](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-app-to-app) you've cloned.
+    the [git repository](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-app-to-app-kotlin) you've cloned.
 
     You can do a lot more with the Client SDK. See [Client SDK documentation](/client-sdk/overview) or review
     [Android Client SDK documentation](/sdk/stitch/android/index).

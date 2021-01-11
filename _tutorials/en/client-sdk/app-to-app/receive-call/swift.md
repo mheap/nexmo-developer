@@ -18,7 +18,7 @@ extension ViewController: NXMClientDelegate {
 
 extension Notification.Name {
     static var call: Notification.Name {
-        return .init(rawValue: "NXMClient.incommingCall")
+        return .init(rawValue: "NXMClient.incomingCall")
     }
 }
 ```

@@ -1,13 +1,13 @@
 ---
-title: Configure JWTs and conversation id
-description: In this step you learn how to add JWT to the application and set the conversation id.
+title: Configure JWTs
+description: In this step you learn how to add JWT to the application.
 ---
 
 # Configure JWTs and conversation id
 
-Create `User` class in the `com.vonage.tutorial.messaging` package to store user data. Right click on `messaging` package and select `New` > `Java Class`. Enter `User` and select `Class`.
+Create a `User` class in the `com.vonage.tutorial.messaging` package to store user data. Right click on the `messaging` package and select `New` > `Java Class`. Enter `User` and select `Class`.
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```java
 package com.vonage.tutorial.messaging;
@@ -32,9 +32,9 @@ public class User {
 }
 ```
 
-Create `Config.java` file in the `com.vonage.tutorial.messaging` package to store the configuration. Right click on `messaging` package and select `New` > `Java Class`. Enter `Config` and select `Class`.
+Create a `Config` class in the `com.vonage.tutorial.messaging` package to store the configuration. Right click on the `messaging` package and select `New` > `Java Class`. Enter `Config` and select `Class`.
 
-Replace file content with below code snippet:
+Replace the file contents with the following code:
 
 ```java
 package com.vonage.tutorial.messaging;
@@ -59,7 +59,8 @@ public class Config {
 }
 ```
 
-Now it's time to fill previously generated `CONVERSATION_ID` and `JWT` tokens. Replace placeholders with real values obtained in a previous step:
+
+Now it's time to configure conversation and users. Replace the `CONVERSATION_ID` and JWT tokens with values generated in a earlier steps:
 
 1. `CONVERSATION_ID` - id of the conversation created in the previous step
 2. `ALICE_TOKEN` - Alice JWT token

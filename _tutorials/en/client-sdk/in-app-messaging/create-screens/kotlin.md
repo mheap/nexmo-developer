@@ -1,17 +1,17 @@
 ---
-title: Create screens
+title: Create screens placeholders
 description: In this step you create screens.
 ---
 
-# Create empty screens
+# Create screens placeholders
 
-You will now create placeholders for screens in the application (we will define layouts and the functionality in following steps of this tutorial). You will create few files for each screen:
+You will now create placeholders for screens in the application (we will define layouts and the functionality in following steps of this tutorial). You will create a few files for each screen:
 
 - Layout
 - Fragment (view)
 - `ViewModel` (manages the view)
 
-## Login screen
+## `Login` screen
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_login` as file name and press `OK`.
 
@@ -25,7 +25,7 @@ To create fragment right click on `com.vonage.tutorial.messaging` package, selec
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging
@@ -41,10 +41,10 @@ To create view model right click on `com.vonage.tutorial.messaging` package, sel
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```kotlin
-ppackage com.vonage.tutorial.messaging
+package com.vonage.tutorial.messaging
 
 import androidx.lifecycle.ViewModel
 
@@ -67,7 +67,7 @@ To create fragment right click on `com.vonage.tutorial.messaging` package, selec
 image: public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png
 ```
 
-Replace file content with below snippet:
+Replace the file contents with below snippet:
 
 ```kotlin
 package com.vonage.tutorial.messaging

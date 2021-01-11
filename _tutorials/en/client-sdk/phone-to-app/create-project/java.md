@@ -80,13 +80,9 @@ buildscript {
     // ...
 }
 ```
+In the same file, add a dependency for the Gradle `Safe Args` plugin. This provides type safety when navigating and passing data between destinations.
 
-Now in the same file add dependency for Gradle `Safe Args` plugin that provides type safety when navigating and passing data between destinations.
-Add new `classpath` in the `dependencies` block:
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
-```
+Add a new `classpath` in the `dependencies` block:
 
 ```groovy
 dependencies {
@@ -96,11 +92,7 @@ dependencies {
 }
 ```
 
-Finally you add navigation component dependencies in the module level `build.gradle` file:
-
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
-```
+In the same file, add a navigation component dependencies:
 
 ```groovy
 dependencies {
@@ -111,7 +103,7 @@ dependencies {
 }
 ```
 
-Click `Sync project with Gradle Files` icon to make sure build scripts have been correctly configured:
+Click the `Sync project with Gradle Files` icon to make sure build scripts have been correctly configured:
 
 ```screenshot
 image: public/screenshots/tutorials/client-sdk/android-shared/sync-project-wth-gradle-files.png
