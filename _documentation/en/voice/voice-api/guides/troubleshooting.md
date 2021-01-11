@@ -26,6 +26,7 @@ The Vonage Voice API resides in three geographic data centers. Phone numbers are
 You can work around this issue by sending your API request to the correct region, either:
 
 * https://api-us-1.nexmo.com
+* https://api-us-2.nexmo.com
 * https://api-eu-1.nexmo.com
 * https://api-sg-1.nexmo.com
 
