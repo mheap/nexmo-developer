@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/Nexmo/station.git
-  revision: 05353150ad764d690006d8bfd1f64ad656060e17
+  revision: ef200bed0eebc37157c122050efb26a20b5c4b60
   branch: modify-upload
   specs:
     station (0.0.107)
