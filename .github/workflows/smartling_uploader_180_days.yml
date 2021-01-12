@@ -67,10 +67,14 @@ jobs:
     - id: step1
       name: Check for File Changes
       run: |
-        arr=$(git log --since=180.days --name-only --oneline --diff-filter=AMR --pretty=format: master _documentation/en _tutorials/en _use_cases/en | uniq | awk 'NF')
+        arr=$(RAILS_LOG_TO_STDOUT=1 RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-check-docs-changes 180)
+        arr=${arr#*successfully.}
         echo ::set-output name=file_changes::"$(echo $(sed 's/\n/ /g' <<< $arr))"
-      shell: bash
       env:
+        POSTGRES_USERNAME: postgres
+        DOCS_BASE_PATH: "."
+        OAS_PATH: "_open_api/api_specs/definitions"
+        FORCE_COLOR: true
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Run rake task
       if: steps.step1.outputs.file_changes != ''

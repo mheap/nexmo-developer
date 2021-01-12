@@ -4,6 +4,7 @@ products:
     icon: 'user'
     icon_colour: 'purple-dark'
     path: account
+    translate: true
     translation_frequency: 180
     dropdown: true
   - 
@@ -11,6 +12,7 @@ products:
     icon: 'add-user'
     icon_colour: 'blue'
     path: account/subaccounts
+    translate: false
     translation_frequency: 180
     dropdown: true
   -
@@ -18,6 +20,7 @@ products:
     icon: 'flow'
     icon_colour: 'purple-dark' 
     path: application
+    translate: true
     translation_frequency: 180
     dropdown: true
   -
@@ -25,6 +28,7 @@ products:
     icon: 'file-search'
     icon_colour: 'blue' 
     path: audit
+    translate: false
     translation_frequency: 180
     dropdown: true
   -
@@ -32,6 +36,7 @@ products:
     icon: 'group-2'
     icon_colour: 'red' 
     path: client-sdk
+    translate: false
     translation_frequency: 180
     dropdown: true
   -
@@ -39,6 +44,7 @@ products:
     icon: 'microphone'
     icon_colour: 'purple-dark' 
     path: client-sdk/in-app-voice
+    translate: false
     translation_frequency: 180
     dropdown: false
   -
@@ -46,6 +52,7 @@ products:
     icon: 'video'
     icon_colour: 'purple-dark' 
     path: client-sdk/in-app-video
+    translate: false
     translation_frequency: 180
     dropdown: false
   -
@@ -53,6 +60,7 @@ products:
     icon: 'chat'
     icon_colour: 'purple-dark' 
     path: client-sdk/in-app-messaging
+    translate: false
     translation_frequency: 180
     dropdown: false
   -
@@ -60,6 +68,7 @@ products:
     icon: 'books'
     icon_colour: 'purple-dark' 
     path: concepts
+    translate: true
     translation_frequency: 180
     dropdown: true
   -
@@ -67,6 +76,7 @@ products:
     icon: 'more-detailed-list'
     icon_colour: 'red' 
     path: conversation
+    translate: false
     translation_frequency: 180
     dropdown: true
   -
@@ -74,6 +84,7 @@ products:
     icon: 'reload'
     icon_colour: 'green' 
     path: dispatch
+    translate: false
     translation_frequency: 180
     dropdown: true
   -
@@ -81,6 +92,7 @@ products:
     icon: 'queue'
     icon_colour: 'purple-dark'
     path: 'getting-started'
+    translate: true
     translation_frequency: 180
     dropdown: false
   -
@@ -88,6 +100,7 @@ products:
     icon: 'chat'
     icon_colour: 'indigo' 
     path: messages
+    translate: false
     translation_frequency: 5
     dropdown: true
   -
@@ -95,6 +108,7 @@ products:
     icon: 'message'
     icon_colour: 'purple' 
     path: messaging/sms
+    translate: true
     translation_frequency: 5
     dropdown: true
   -
@@ -102,6 +116,7 @@ products:
     icon: 'message'
     icon_colour: 'purple-dark' 
     path: messaging/conversion-api
+    translate: true
     translation_frequency: 180
     dropdown: true
   -
@@ -109,6 +124,7 @@ products:
     icon: 'message'
     icon_colour: 'purple-dark' 
     path: messaging/us-short-codes
+    translate: true
     translation_frequency: 180
     dropdown: true
   -
@@ -116,6 +132,7 @@ products:
     icon: 'search'
     icon_colour: 'grey' 
     path: number-insight
+    translate: true
     translation_frequency: 180
     dropdown: true
   -
@@ -123,6 +140,7 @@ products:
     icon: 'hash'
     icon_colour: 'purple-dark'   
     path: numbers
+    translate: true
     translation_frequency: 180
     dropdown: true
   -
@@ -130,6 +148,7 @@ products:
     icon: 'search'
     icon_colour: 'purple-dark' 
     path: redact
+    translate: false
     translation_frequency: 180
     dropdown: true
   -
@@ -137,6 +156,7 @@ products:
     icon: 'report'
     icon_colour: 'blue' 
     path: reports
+    translate: false
     translation_frequency: 180
     dropdown: true
   -
@@ -144,6 +164,7 @@ products:
     icon: 'code'
     icon_colour: 'purple-dark' 
     path: tools
+    translate: true
     translation_frequency: 180
     dropdown: true
   -
@@ -151,6 +172,7 @@ products:
     icon: 'lock'
     icon_colour: 'purple-dark' 
     path: verify
+    translate: true
     translation_frequency: 5
     dropdown: true
   -
@@ -158,6 +180,7 @@ products:
     icon: 'phone'
     icon_colour: 'purple-dark' 
     path: voice/sip
+    translate: true
     translation_frequency: 180
     dropdown: true
   -
@@ -165,6 +188,7 @@ products:
     icon: 'phone'
     icon_colour: 'orange' 
     path: voice/voice-api
+    translate: true
     translation_frequency: 5
     dropdown: true
   -
@@ -172,5 +196,6 @@ products:
     icon: 'telephone'
     icon_colour: 'purple-dark' 
     path: vonage-business-cloud
+    translate: false
     translation_frequency: 5
     dropdown: true
