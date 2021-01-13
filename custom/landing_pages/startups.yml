@@ -1,0 +1,189 @@
+# Startups Landing Page Config
+
+title: "Vonage for Startups"
+meta_title: "Build faster, reach more customers and focus your time on what matters most"
+
+page:
+  - row:
+    - column: 
+      - type: header
+        header:
+          title: 
+            text: "Vonage Startups"
+            align: center
+          subtitle:
+            text: "Build faster, reach more customers and focus your time on what matters most."
+            align: center
+            type: large
+      - type: html
+        html:
+          content: <p align="center" style="font-size:15px;padding-bottom:50px;">We want to <strong>support the global startup community</strong> to build better products by <strong>connecting them to the best Vonage resources, people and communication APIs.</strong></p>
+  - row:
+    - column:
+      - type: action_button
+        action_button:
+          text: "Join the Community!"
+          url: "#"
+          type: "primary"
+          large: true
+          center_button: true
+      - type: html
+        html:
+          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;">Get the latest news, content and updates from Vonage for Startups. </p>
+    - column:
+      - type: action_button
+        action_button:
+          text: "Apply"
+          url: "#"
+          type: "primary"
+          large: true
+          center_button: true
+      - type: html
+        html:
+          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;">For startups that want to work closely with our team to receive tailored support and Vonage API credits</p>          
+  - row:
+    - column:
+        - type: line_divider      
+  - row:
+    - column:
+      - type: section_header
+        section_header:
+          title: "What you can get"
+          icon:
+            name: "icon-app"
+            color: yellow
+  - row:
+    - column: 
+      - type: html
+        html:
+          content: <h5>LEARN</h5><p>Gain access to Vonage <strong>technical resources</strong> and <strong>curated startup content</strong>. Learn how to use our APIs and save valuable time.</p>          
+    - column: 
+      - type: html
+        html:
+          content: <h5>RECEIVE TAILORED SUPPORT</h5><p>Selected startups can leverage Vonage resources <strong>tailored to their needs to solve challenges</strong> they are facing. </p>            
+  - row:
+    - column: 
+      - type: html
+        html:
+          content: <h5>BUILD</h5><p>Utilize our <strong>products through a credits package and tailored technical sessions</strong> to build your MVP, reach more customers and grow your business</p>          
+    - column: 
+      - type: html
+        html:
+          content: <h5>CONNECT</h5><p style="padding-bottom:50px;">Join our <strong>community</strong> and have the opportunity to engage with other <strong>founders, developers and advocates.</strong></p>    
+  - row:
+    - column:
+        - type: line_divider      
+  - row:
+    - column:
+      - type: section_header
+        section_header:
+          title: "Gain access to a complete suite of communication APIs"
+          icon:
+            name: "icon-app"
+            color: yellow
+  - row:
+    - column:
+      - type: html
+        html:
+          content: '<img src="/images/startups/api-cards-startups.png" usemap="#image-map"/><map name="image-map" >
+            <area target="_blank" alt="Communication APIs" title="Communication APIs" href="https://www.vonage.co.uk/communications-apis/#Communications" coords="309,250,17,10" style="outline:none;" shape="rect">
+            <area target="_blank" alt="Use Case APIs" title="Use Case APIs" href="https://www.vonage.co.uk/communications-apis/#UseCase" style="outline:none;" coords="639,248,349,13" shape="rect">
+            <area target="_blank" alt="Management APIs" title="Management APIs" href="https://www.vonage.co.uk/communications-apis/#Management" style="outline:none;" coords="968,248,680,14" shape="rect">
+            <area target="_blank" alt="Programmable Numbers" title="Programmable Numbers" href="https://www.vonage.co.uk/communications-apis/#Programmable" style="outline:none;" coords="1009,14,1297,246" shape="rect">
+            </map>'
+  - row:
+    - column:
+        - type: line_divider    
+  - row:
+    - column:
+      - type: section_header
+        section_header:
+          title: "Partner with us"
+          icon:
+            name: "icon-app"
+            color: yellow            
+  - row:
+    - column: 
+      - type: html
+        html:
+          content: <p align="center" >We are always on the lookout for organizations sharing a similar vision of empowering startups to join our ecosystem.</p>
+                   <p align="center" >Incubators, accelerators, angel investors, venture capital firms or other startup enabling organisations looking to support their startups further with our communication APIs.</p>
+  - row:
+    - column:
+      - type: action_button
+        action_button:
+          text: "Partner with us"
+          url: "#"
+          type: "primary"
+          large: true
+          center_button: true
+  - row:
+    - column:
+        - type: line_divider                   
+  - row:
+    - column:
+      - type: section_header
+        section_header:
+          title: "Resources"
+          icon:
+            name: "icon-app"
+            color: yellow   
+  - row:
+    - column:
+      - type: linked_image
+        linked_image:
+          image: https://placekitten.com/g/300/300
+          url: "#"
+          alt_text: Resource No 1       
+    - column:
+      - type: linked_image
+        linked_image:
+          image: https://placekitten.com/g/300/300
+          url: "#"
+          alt_text: Resource No 2   
+    - column:
+      - type: linked_image
+        linked_image:
+          image: https://placekitten.com/g/300/300
+          url: "#"
+          alt_text: Resource No 3       
+    - column:
+      - type: linked_image
+        linked_image:
+          image: https://placekitten.com/g/300/300
+          url: "#"
+          alt_text: Resource No 4   
+  - row:
+      - column:
+          - type: line_divider
+  - row:
+      - column:
+          - type: structured_text
+            structured_text:
+              header: "Frequently Asked Questions"
+              text:
+                - content: __First question?__
+                  type: large
+                - content: Extremely helpful answer to first question.
+                  type: large
+                - content: __Second question?__
+                  type: large
+                - content: Extremely helpful answer to second question.
+                  type: large
+                - content: __Third question?__
+                  type: large
+                - content: Extremely helpful answer to third question.
+                  type: large     
+  - row:
+      - column:
+          - type: line_divider  
+  - row:
+      - column:
+          - type: structured_text
+            structured_text:
+              header: "Get in touch"
+              text:
+                - content: Do you have a question about Vonage for Startups?
+                  type: large
+                - content: Drop us an email at <a href="mailto://startups@vonage.com">startups@vonage.com</a>
+                  type: large                                                           
