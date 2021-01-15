@@ -7,13 +7,13 @@ description: How to set up Vonage SIP with NEC SV9100
 
 ### August 2017
 
-## 1 Audience
+## 1. Audience
 
 This document is intended for the SIP trunk customer’s technical staff and Value Added Retailer
 (VAR) having installation and operational responsibilities. This configuration guide provides steps
 for configuring NEC SV9100 version 6.00.50 with Nexmo SIP Trunking services.
 
-## 2 SIP Trunking Network Components
+## 2. SIP Trunking Network Components
 
 The network for the SIP trunk reference configuration is illustrated below and is representative of
 a NEC SV9100 configuration to Nexmo SIP trunking.
@@ -29,7 +29,7 @@ image: public/screenshots/sip/configuration/guides/nec-sv9100/nec-sv9100-1.png
 | NEC SV9100     | 6.00.50                |                                             |
 | Cisco IP Phone | **Model**: `CP-7965` **App Load ID**: `jar45sccp.9-4-2TH1-1.sbn` **Boot Load ID**: `tnp65.9-3-1-CR17.bin`    | This Cisco IP Phone is the PSTN test device |
 
-## 3 Features
+## 3. Features
 
 #### 3.1.1 Features Supported
 
@@ -70,7 +70,7 @@ if NEC SV9100 is enabled for E164 dialing.
 released until one of the PBX endpoints disconnect
 * No Session Audit message is sent from Nexmo
 
-## 4 Configuration
+## 4. Configuration
 
 ### 4.1 IP Address Worksheet
 
@@ -231,7 +231,7 @@ image: public/screenshots/sip/configuration/guides/vonage-dashboard/numbers-dash
 image: public/screenshots/sip/configuration/guides/vonage-dashboard/edit-number.png
 ```
 
-## 5 Summary of Tests and Results
+## 5. Summary of Tests and Results
 
 *N/S = Not Supported N/T= Not Tested N/A= Not Applicable*
 
