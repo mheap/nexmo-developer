@@ -5,6 +5,16 @@ meta_title: "Build faster, reach more customers and focus your time on what matt
 
 page:
   - row:
+      - column:
+          - type: text
+            text:
+              content: |
+                <style>
+                  .Vlt-card--scrollable {
+                    height: 164px;
+                  }
+                </style>
+  - row:
     - column: 
       - type: header
         header:
@@ -53,23 +63,55 @@ page:
             name: "icon-app"
             color: yellow
   - row:
-    - column: 
+    - column:
       - type: html
         html:
-          content: <h5>LEARN</h5><p>Gain access to Vonage <strong>technical resources</strong> and <strong>curated startup content</strong>. Learn how to use our APIs and save valuable time.</p>          
-    - column: 
+          content: |
+            <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="learn">
+              <div class="Vlt-card__header">
+                <h5>LEARN</h5>
+              </div>
+              <div class="Vlt-card__content">
+                <p>Gain access to Vonage <strong>technical resources</strong> and <strong>curated startup content</strong>. Learn how to use our APIs and save valuable time.</p>
+              </div>
+            </div>
+    - column:
       - type: html
         html:
-          content: <h5>RECEIVE TAILORED SUPPORT</h5><p>Selected startups can leverage Vonage resources <strong>tailored to their needs to solve challenges</strong> they are facing. </p>            
+          content: |
+            <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="receive-tailored-support">
+              <div class="Vlt-card__header">
+                <h5>RECEIVE TAILORED SUPPORT</h5>
+              </div>
+              <div class="Vlt-card__content">
+                <p>Selected startups can leverage Vonage resources <strong>tailored to their needs to solve challenges</strong> they are facing. </p>
+              </div>
+            </div>
   - row:
-    - column: 
+    - column:
       - type: html
         html:
-          content: <h5>BUILD</h5><p>Utilize our <strong>products through a credits package and tailored technical sessions</strong> to build your MVP, reach more customers and grow your business</p>          
-    - column: 
+          content: |
+            <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="build">
+              <div class="Vlt-card__header">
+                <h5>BUILD</h5>
+              </div>
+              <div class="Vlt-card__content">
+                <p>Utilize our <strong>products through a credits package and tailored technical sessions</strong> to build your MVP, reach more customers and grow your business</p>
+              </div>
+            </div>
+    - column:
       - type: html
         html:
-          content: <h5>CONNECT</h5><p style="padding-bottom:50px;">Join our <strong>community</strong> and have the opportunity to engage with other <strong>founders, developers and advocates.</strong></p>    
+          content: |
+            <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="connect">
+              <div class="Vlt-card__header">
+                <h5>CONNECT</h5>
+              </div>
+              <div class="Vlt-card__content">
+                <p style="padding-bottom:50px;">Join our <strong>community</strong> and have the opportunity to engage with other <strong>founders, developers and advocates.</strong></p>
+              </div>
+            </div>
   - row:
     - column:
         - type: line_divider      
