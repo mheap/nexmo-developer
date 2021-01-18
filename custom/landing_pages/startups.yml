@@ -127,12 +127,50 @@ page:
     - column:
       - type: html
         html:
-          content: '<img src="/images/startups/api-cards-startups.png" usemap="#image-map"/><map name="image-map" >
-            <area target="_blank" alt="Communication APIs" title="Communication APIs" href="https://www.vonage.co.uk/communications-apis/#Communications" coords="309,250,17,10" style="outline:none;" shape="rect">
-            <area target="_blank" alt="Use Case APIs" title="Use Case APIs" href="https://www.vonage.co.uk/communications-apis/#UseCase" style="outline:none;" coords="639,248,349,13" shape="rect">
-            <area target="_blank" alt="Management APIs" title="Management APIs" href="https://www.vonage.co.uk/communications-apis/#Management" style="outline:none;" coords="968,248,680,14" shape="rect">
-            <area target="_blank" alt="Programmable Numbers" title="Programmable Numbers" href="https://www.vonage.co.uk/communications-apis/#Programmable" style="outline:none;" coords="1009,14,1297,246" shape="rect">
-            </map>'
+          content: |
+            <div class="Vlt-card Vlt-card--clickable">
+              <div class="Vlt-card__content">
+                <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-sms"></svg>
+                <h5>Communcation APIs</h5>
+                <p>Cloud communications building blocks with global reach.</p>
+              </div>
+            </div>
+
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-card Vlt-card--clickable">
+              <div class="Vlt-card__content">
+                <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-files"></svg>
+                <h5>Use Case APIs</h5>
+                <p>Common business use cases prebuilt with a simple API.</p>
+              </div>
+            </div>
+
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-card Vlt-card--clickable">
+              <div class="Vlt-card__content">
+                <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-group-3"></svg>
+                <h5>Management APIs</h5>
+                <p>Self-service tools to get full value from your Vonage API account.</p>
+              </div>
+            </div>
+
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-card Vlt-card--clickable">
+              <div class="Vlt-card__content">
+                <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-phone-number"></svg>
+                <h5>Programmable Numbers</h5>
+                <p>Virtual phone numbers for text messages and phone calls.</p>
+              </div>
+            </div>
   - row:
     - column:
         - type: line_divider    
