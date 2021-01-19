@@ -17,13 +17,13 @@ This repository is the content for <https://developer.nexmo.com>, which includes
 We write the docs in US English and enforce this at build time with a CI check. You can run the check locally using the following command:
 
 ```
-./node_modules/.bin/mdspell -r -n -a --en-us '_documentation/en/**/*.md' '_partials/*.md' '_partials/**/*.md' '_modals/**/*.md' '_tutorials/**/*.md'
+yarn spellchek
 ```
 
 Or if you're using Docker:
 
 ```
-docker-compose exec web ./node_modules/.bin/mdspell -r -n -a --en-us '_documentation/en/**/*.md' '_partials/*.md' '_partials/**/*.md' '_modals/**/*.md' '_tutorials/**.md'
+docker-compose exec web yarn spellcheck
 ```
 
 If there is a word that isn't in the dictionary but is correct to use, add it to the `.spelling` file (there's a lot of exceptions in there, including `Vonage`!)

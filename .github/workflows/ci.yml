@@ -70,7 +70,7 @@ jobs:
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
       run: |
-        ./node_modules/.bin/mdspell -r -n -a --en-us '_documentation/en/**/*.md' '_partials/*.md' '_partials/**/*.md' '_modals/**/*.md' '_tutorials/en/**/*.md' '_use_cases/en/**/*.md'
+        yarn spellcheck
     - name: Check prose issues
       env:
         POSTGRES_USERNAME: postgres

@@ -5,5 +5,8 @@
   "dependencies": {
     "alex": "^9.1.0",
     "markdown-spellcheck": "^1.3.1"
+  },
+  "scripts": {
+    "spellcheck": "./node_modules/.bin/mdspell -r -n -a --en-us '_documentation/en/**/*.md' '_partials/*.md' '_partials/**/*.md' '_modals/**/*.md' '_tutorials/en/**/*.md' '_use_cases/en/**/*.md'"
   }
 }
