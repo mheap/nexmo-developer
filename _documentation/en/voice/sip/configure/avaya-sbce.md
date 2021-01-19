@@ -135,7 +135,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-1.png
 #### 4.2.1 Licenses
 
 In order to connect to Nexmo, Avaya Aura Communication Manager needs to have enough SIP
-trunk licenses. Use the display system-parameters customer-options command to verify the
+trunk licenses. Use the `display system-parameters customer-options` command to verify the
 available SIP Trunk licenses
 
 ```screenshot
@@ -144,7 +144,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-2.png
 
 #### 4.2.2 System Features
 
-Use the change system-parameters features command and ensure Trunk to Trunk Transfer is set
+Use the `change system-parameters features` command and ensure Trunk to Trunk Transfer is set
 to all
 
 ```screenshot
@@ -153,7 +153,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-3.png
 
 #### 4.2.3 IP Node Names
 
-Use the display node-names IP command to verify that node names have been properly defined
+Use the `display node-names IP` command to verify that node names have been properly defined
 for Communication Manager (`procr`) and Session Manager (AASM in this test). These node
 names will be needed for configuring the Signaling Group later.
 
@@ -179,7 +179,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-6.png
 
 #### 4.2.6 Signaling Group
 
-Use the add signaling-group x command to create a signaling group 2 between Communication
+Use the `add signaling-group x` command to create a signaling group 2 between Communication
 Manager and Session Manager for SIP trunk calls.
 
 ```screenshot
@@ -188,7 +188,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-7.png
 
 #### 4.2.7 Trunk Group
 
-Use the add trunk-group x command to create trunk groups for the associated signaling group,
+Use the `add trunk-group x` command to create trunk groups for the associated signaling group,
 trunk group 2 is associated with Signaling group 2 for SIP trunk between CM and SM.
 
 ```screenshot
@@ -214,7 +214,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-11.png
 
 #### 4.2.8 Route Pattern
 
-Use the change route-pattern 2 command to add routing preference for SIP trunk to Session
+Use the `change route-pattern 2` command to add routing preference for SIP trunk to Session
 Manager.
 
 ```screenshot
@@ -252,7 +252,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-15.png
 
 #### 4.2.11 Caller ID
 
-The change private-numbering 2 command is used to assign the Caller ID for 4 digit Avaya Aura
+The `change private-numbering 2` command is used to assign the Caller ID for 4 digit Avaya Aura
 extensions
 
 ```screenshot
