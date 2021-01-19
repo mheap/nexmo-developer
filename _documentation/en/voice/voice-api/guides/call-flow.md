@@ -6,159 +6,215 @@ navigation_weight: 1
 
 # Call Flow
 
-## Overview
+Any voice interaction starts with a call.
 
-The Vonage Voice API handles two types of phone call: **inbound** and **outbound**.
+**Inbound** calls are calls made to the Vonage platform:
 
-**Inbound** calls are calls made to a Vonage number from another regular phone anywhere in the world.
+* to [Vonage number](/numbers/overview) from a regular phone,
+* to [SIP domain](/voice/sip/concepts/programmable-sip) assigned to the application from PBX or any SIP capable software/hardware,
+* from a client application using [Client SDK](/client-sdk/overview).
 
-**Outbound** calls are calls made from the Vonage platform to a regular phone number. Outbound calls are usually initiated in response to a request made via the REST API to create a new call. Outbound calls may also be made from within the call flow of an existing call (either inbound or outbound) using the `connect` action within the NCCO (Nexmo Call Control Object). This scenario is generally used for forwarding calls.
+**Outbound** calls are calls made from the Vonage platform to a regular phone number, SIP endpoint, client application or [WebSocket](/voice/voice-api/guides/websockets) server. Outbound calls are usually initiated in response to a request made via the REST API to create a new call. Outbound calls may also be made from within the call flow of an existing call (either inbound or outbound) using the `connect` action within the [NCCO](/voice/voice-api/guides/ncco). This scenario is generally used for forwarding calls.
 
-Both inbound and outbound calls follow the same call flow once answered. This call flow is controlled by an NCCO. An NCCO is a script of actions to be run within the context of the call. Actions are executed in the order they appear in the script, with the next action starting when the previous action has finished executing. For more information about NCCOs, see the [NCCO reference](/voice/voice-api/ncco-reference).
+## Scripted Call
+Both inbound and outbound calls initially follow the same call flow once answered. This call flow is controlled by an NCCO. An NCCO is a script of actions to be run within the context of the call. Actions are executed in the order they appear in the script, with the next action starting when the previous action has finished executing. For more information about NCCOs, see the [NCCO Reference](/voice/voice-api/ncco-reference).
 
 When a call is answered, Vonage makes a call to the `answer_url` provided. For inbound calls the `answer_url` is fetched from the configuration of the application that the number is linked to. For outbound calls, an `answer_url` is provided in the API request made to create the call.
 
-You may choose to provide your NCCO as part of the request you send to create a call instead of providing an `answer_url`. This is done by providing an NCCO in the `ncco` key of [your request](/api/voice#createCall)
-
-## Call states
-
-Each call goes through a sequence of states in its lifecycle:
-
-1. `started`
-2. `ringing`
-3. `answered`
-4. `completed`
-
-## Event objects
-
-As the call progresses through the various [call states](#call-states), the Vonage platform
-will send event objects to your `event_url`. Like the `answer_url` the
-`event_url` is associated with the application for inbound calls, or is
-supplied as an `event_url` parameter when the call is created.
-
-The following table shows possible values for the `status` field of an event object:
-
-|Event Name | Description |
-| --------- | ----------- |
-| `started`    | The call is created on the Vonage platform |
-| `ringing`    | The destination has confirmed that the call is ringing |
-| `answered`   | The destination has answered the call |
-| `completed`    | The call flow has been terminated. This event is always received at the end of a call unless the call was `rejected`. |
-| `machine`    | When machine detection has been requested and the call is answered by a machine|
-| `human`      | When machine detection has been requested and the call is answered by a human|
-| `input`  | User input has been collected via an `input` action |
-| `busy`  | The destination is on the line with another caller |
-| `cancelled`  | The call was cancelled by the originator before it was answered |
-| `failed`     | The call attempt failed in the phone network |
-| `recording`  | A `record` stage has completed. This event contains the recording URL |
-| `rejected`   | The call attempt was rejected by the Vonage platform |
-| `timeout`    | The call timed out before it was answered|
-| `unanswered` | The recipient handset was unreachable, or the recipient declined the call | 
-| `notify` | An event to signify that processing has reached the `notify` action in the NCCO | 
-
-The `type` field in the event object is used for the `transfer` event:
-
-|Event Name | Description |
-| --------- | ----------- |
-| `transfer`    | The call has been transferred to a new conversation
-
-An example event object is shown here:
-
+```sequence_diagram
+activate User
+User ->> Vonage: inbound call
+activate Vonage
+Vonage ->> Application: answer URL
+activate Application
+Application ->> Vonage: NCCO
+Vonage ->> User: NCCO action
+deactivate Application
+deactivate Vonage
+deactivate User
 ```
-{
-    'conversation_uuid': 'CON-4bf66420-d6cb-46e0-9ba9-f7eede9a7301',
-    'direction': 'inbound',
-    'from': '447700900000',
-    'status': 'started',
-    'timestamp': '2018-08-14T11:07:01.284Z',
-    'to': '447700900001',
-    'uuid': '688fd94bd0e1f59c36a4cbd36312fc28'
-}
+<br/>
+<em style="margin-left: 258px;">Simple inbound call</em>
+
+<br/>
+
+You may choose to provide your NCCO as part of the request you send to create a call instead of providing an `answer_url`. This is done by providing an NCCO in the `ncco` key of your request.
+
+```sequence_diagram
+participant U as User
+participant V as Vonage
+participant A as Application
+
+activate A
+A->>V: POST /calls
+note left of A: NCCO
+
+activate V
+V->>U: outbound call
+activate U
+V->>U: NCCO action
+
+deactivate U
+deactivate V
+deactivate A
 ```
+<br/>
+<em style="margin-left: 204px;">Outbound call with embedded NCCO</em>
 
-An example object for a `transfer` event is shown here:
+<br/>
 
+
+During the call, Vonage is doing callback requests to the application using `event URL`, set in the application configuration or in the specific NCCO action as a parameter. There are two types of callbacks:
+
+* notifications, for example, call status change;
+* instructions request, for example, `input` or `notify` callback - for these events Vonage expects the application to provide new NCCO for processing, which allows implementing different logical call flows.
+
+Successfully established calls pass through the following states:
+
+* `started`
+* `ringing`
+* `answered`
+* `completed`
+
+Vonage platform sends corresponding event callbacks per each status. You can find more detail in the [Webhooks Reference](/voice/voice-api/webhook-reference).
+
+NCCO and webhooks allow scripting the call as the set of messages and questions to the user which is applicable to [voice notifications](/use-cases/voice-alerts), [IVR](/use-cases/interactive-voice-response), [voice assistant](/use-cases/asr-use-case-voice-bot) and other scenarios with a predefined list of possible events. With NCCO, the application may instruct Vonage platform to play the audio message ([Text-to-speech](/voice/voice-api/guides/text-to-speech) or [pre-recorded](/voice/voice-api/ncco-reference#stream)) and then expect user input either with [DTMF](/voice/voice-api/guides/dtmf) or [speech](/voice/voice-api/guides/asr). On user input, the application gets input callback with user choice (digit or speech transcript), analyses it and provides Vonage with new instructions (NCCO).
+
+```sequence_diagram
+participant U as User
+participant V as Vonage
+participant A as Application
+
+activate U
+U->>V: inbound call
+
+activate V
+V->>A: answer URL
+
+activate A
+A->>V: NCCO
+note left of A: talk\n...\ninput
+
+V->>U: NCCO action 1: talk
+V->>U: NCCO action N: input
+
+U->>V: input
+V->>A: event URL
+A->>A: analyse input
+
+A->>V: NCCO
+V->>U: NCCO action
+
+deactivate U
+deactivate V
+deactivate A
 ```
-{
-    'conversation_uuid_from': 'CON-4bf66420-d6cb-46e0-9ba9-f7eede9a7301',
-    'type': 'transfer',
-    'uuid': '688fd94bd0e1f59c36a4cbd36312fc28',
-    'conversation_uuid_to': 'CON-4bf66420-d6cb-46e0-9ba9-f8eeba9f5619',
-    'timestamp': '2018-08-14T11:07:01.284Z'
-}
+<br/>
+<em style="margin-left: 268px;">Typical IVR flow</em>
+
+<br/>
+
+## Live Conversation
+
+In some scenarios, for example, [Private Voice Communication](/use-cases/private-voice-communication) use case, it’s required to connect two or more participants to establish a live conversation. Each call, inbound or outbound, is automatically added to the ad-hoc conversation behind the scenes. To connect it to another call with NCCO, the application can either
+
+* create a new outbound call with [`connect`](/voice/voice-api/ncco-reference#connect) action - it will be automatically joined to the same conversation;
+
+* move the call to existing (or new) named conversation with [`conversation`](/voice/voice-api/ncco-reference#conversation) action.
+
+During the conversation, the call is naturally no longer following a sequence of actions - it’s a live interaction between two or more members. To control the call during the conversation, for example, mute/unmute the member, the application should use [REST API](/voice/voice-api/api-reference).
+
+```sequence_diagram
+participant U1 as User 1
+participant V as Vonage
+participant A as Application
+participant U2 as User 2
+
+activate U1
+U1->>V: inbound call
+
+activate V
+V->>A: answer URL
+
+activate A
+A->>V: NCCO
+note left of A: connect
+
+V->>U2: outbound call
+activate U2
+
+note over U1, U2: Conversation starts
+
+A->>V: PUT /calls/id
+V->>U1: modify call
+
+deactivate U1
+deactivate V
+deactivate A
+deactivate U2
 ```
+<br/>
+<em style="margin-left: 350px;">Live conversation flow</em>
 
-In addition, certain errors are sent to the `event_url` such as when your `answer_url` returns an invalid NCCO. You can find more detail in the [Webhooks Reference](/voice/voice-api/webhook-reference#event-webhook).
+<br/>
 
-## Answer URL payload
 
-When a call is answered a payload is delivered to your `answer_url` [webhook](/concepts/guides/webhooks).
+Using a sequence of `connect` actions, the application may join other members in the conversations (up to 50 total conversation participants).
 
-The payload delivered to the `answer_url` is in the form of query parameters and these are shown in the following table:
+> Since any type of voice endpoint might be used in the `connect` action, the second member is not necessarily a human: it might be a voice bot talking to the user using the media passed through the [WebSocket](/voice/voice-api/guides/websockets) connection.
 
-Query Parameter | Description
-----|----
-`to` | The number being called
-`from` | The number making the call
-`conversation_uuid` | The UUID of the [conversation](/voice/voice-api/guides/legs-conversations)
-`uuid` | The UUID of the [leg](/voice/voice-api/guides/legs-conversations)
+## Switching between Scripted Call and Live Conversation
+Typical IVR usually has one or more options to speak to a live agent, sales or support person. Also, in some cases live conversation may end up with some scripted part, for example, customer satisfaction survey. Voice API allows switching from one form of interaction to another so that the call flow may consist of three (or more in the complex cases) parts:
 
-To illustrate this, an example GET request to the `answer_url` is given here:
+* Initial IVR, controlled with NCCO and webhooks; ends with `connect` or `conversation` action → 
 
+* Live conversation with a person (or multiparty conference), controlled with REST API; ends with [`PUT /calls/{id}`](/api/voice#updateCall) REST API call with `transfer` action → 
+
+* The survey, controlled with NCCO
+
+```sequence_diagram
+participant U as User
+participant V as Vonage
+participant App as Application
+participant A as Agent
+
+activate U
+U->>V: inbound call
+activate V
+V->>App: answer URL
+activate App
+App->>V: NCCO
+note left of App: talk\ninput
+V->>U: question
+U->>V: answer
+V->>App: input callback
+App->>V: NCCO
+note left of App: conversation
+App->>V: POST /calls
+note left of App: conversation
+V->>A:outbound call
+activate A
+note over U,A: Conversation
+A->>V: hang up
+deactivate A
+V->>App: completed
+App->>V: PUT /calls/id
+note left of App: transfer: NCCO\ntalk\ninput
+V->>U: question
+U->>V: answer
+V->>App: input callback
+App->>App: save result
+App->>V: NCCO
+note left of App: talk
+deactivate App
+V->>U: message
+V->>U: end call
+deactivate V
+deactivate U
 ```
-/webhooks/answer?to=447700900000&from=447700900001&conversation_uuid=CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab&uuid=aaaaaaaa-bbbb-cccc-dddd-0123456789cd
-```
+<br/>
+<em style="margin-left: 238px;">Switching from scripted call to live conversation and back</em>
 
-In general, useful information such as the calling number and destination number is extracted from the query string and processed by your application. For more information, refer to the [Webhooks Reference](/voice/voice-api/webhook-reference).
+<br/>
 
-## Synchronous vs Asynchronous Actions
-
-Each *action* within an NCCO has certain conditions on which it will be considered "complete" and the call progresses to the next action. For some actions this `completed` state depends on how they are configured.
-
-> Ultimately, all calls end up as `completed` unless the call was `rejected`.
-
-### Record
-
-A `record` action will complete when either the `endOnSilence` timer has been reached, or the `endOnKey` key is sent. At this point the recording ends and a `recording` event is sent before the next action is executed.
-
-If neither value is set then the record will work in an asynchronous manner and will instantly continue on to the next action while still recording the call. The recording will only then end and send the relevant event when either the `timeout` value is reached or the call is ended.
-
-### Conversation
-
-The `conversation` action always acts in a synchronous manner where the call is merged into the named conversation (or conference). The action only ends when the call is ended, and therefore all actions in an NCCO after a `conversation` action will be ignored.
-
-### Connect
-
-A `connect` action will progress to the next action in the NCCO when the call is answered. If you have multiple connect actions in an NCCO it will call each one in turn and when answered create a conference between each leg of the call.
-
-
-### Talk
-A `talk` action will complete when the requested text has been read the requested number of times. However, if `bargeIn` is set to `true` _and the following action is an input_, then the call will progress to accepting input as soon as the text starts to be played.
-
-### Stream
-
-A `stream` action will complete when the requested audio file has been played the requested number of times. However, if `bargeIn` is set to `true` _and the following action is an input_, then the call will progress to accepting input as soon as the text starts to be played.
-
-### Input
-
-An input event will complete when one of the following conditions has been met:
-
-1. The `timeOut` is reached
-2. The `maxDigits` number of digits are entered
-3. A `#` is sent and `submitOnHash` is set
-
-The input action will then send a webhook to the `event_url` containing the submitted digits. 
-
-Input is unique in that when the webhook is sent with the entered digits, the remote application can then return a new NCCO to be executed. If no NCCO is returned, then the call will continue to the next item in the NCCO.
-
-## Transferring to a new NCCO
-
-You can replace the currently executing NCCO with a new one by making an HTTP `PUT` request to the REST API with the call UUID in it. This will replace whatever actions are being executed or queued in the current NCCO. One such use case for this is to transfer a call that is on hold (looping an audio file) to an agent by putting a new NCCO with a `connect` action. However, you can also use this approach to modify any aspect of an in progress call.
-
-## Machine Detection
-
-Machine detection can be configured on either a `connect` action within an NCCO or on a REST API request to create an outbound call.  This can be set to one of two values, `hangup` or `continue`. If either of these values is set when the call is answered, Vonage will attempt to determine if the call was answered by a human, or a machine such as voicemail. This normally takes a few seconds to be determined. At this point Vonage will send an event to your `event_url` with either `Human` or `Machine` included.
-
-If machine detection was set to `hangup` and Vonage determined that a machine answered the call, then the call will be ended.
-
-If set to `continue` then the call will remain connected. You can then modify the call. For example, you could transfer the call to a new destination with the `PUT` feature described above in the section [Transferring to a new NCCO](#transferring-to-a-new-ncco).
+The scenario described above is a typical example; however, the application may have any combination of scripted and live parts depending on a certain use-case.
