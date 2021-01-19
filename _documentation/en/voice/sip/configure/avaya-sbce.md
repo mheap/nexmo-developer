@@ -239,7 +239,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-14.png
 
 #### 4.2.10 Call Routing
 
-***4.2.10.1 Outbound Calls**
+**4.2.10.1 Outbound Calls**
 
 The `change ars analysis` command is used for outbound PSTN call routing. 121 is shown as an
 example setup for this test.
