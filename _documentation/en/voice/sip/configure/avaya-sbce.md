@@ -48,14 +48,14 @@ description: How to set up Vonage SIP with Avaya SBCe
    - 4.6.1 Configure Numbers in Nexmo Account
 
 
-## 1 Introduction
+## 1. Introduction
 
 This document is intended for the SIP trunk customer’s technical staff and Value Added Retailer
 (VAR) having installation and operational responsibilities. This configuration guide provides steps
 for configuring Avaya Aura 6.3.18.0.631804 and Avaya SBCe 6.3.7-01-12611 to Nexmo SIP
 Trunking services.
 
-## 2 SIP Trunking Network Components
+## 2. SIP Trunking Network Components
 
 The network for the SIP trunk reference configuration is illustrated below and is representative of
 an Avaya Aura and Avaya SBCe configuration to Nexmo SIP trunking.
@@ -75,10 +75,9 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-73.png
 | Cisco IP Phone | **Model**: `CP-7965` **App Load ID**: `jar45sccp.9-4-2TH1-1.sbn` **Boot Load ID**: `tnp65.9-3-1-CR17.bin`    | This Cisco IP Phone is the PSTN test device |
 
 
-## 3 Features
+## 3. Features
 
 #### 3.1.1 Features Supported
-
 
 * Incoming and outgoing off-net calls using G711ULAW & G711ALAW voice codecs
 * Calling Line (number) Identification Presentation
@@ -98,7 +97,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-73.png
 
 * Session refresh is always done by Avaya Aura. The issue does not impact the calls.
 
-## 4 Configuration
+## 4. Configuration
 
 ### 4.1 IP Address Worksheet
 
