@@ -164,8 +164,7 @@ image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-4.png
 
 #### 4.2.4 IP Codecs
 
-The change `ip-codec-set` command is used for assigning the proper codecs. For this setup, `ip-
-codec-set 1` is used.
+The change `ip-codec-set` command is used for assigning the proper codecs. For this setup, `ip-codec-set 1` is used.
 
 ```screenshot
 image: public/screenshots/sip/configuration/guides/avaya-sbce/avaya-sbce-5.png
