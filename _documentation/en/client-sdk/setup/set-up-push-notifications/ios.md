@@ -12,7 +12,7 @@ There are two types of push notifications that you can use:
 * VoIP push *([PushKit](https://developer.apple.com/documentation/pushkit))* - the better fit for applications that use Vonage In-App Voice functionality.
 * Regular push *([UserNotifications](https://developer.apple.com/documentation/usernotifications))* - the better fit for applications that use Vonage In-App Chat functionality.
 
-This guide will cover how to VoIP push notifications with the Client SDK.
+This guide will cover how to VoIP push notifications with the Client SDK. 
 
 ## Create a push certificate
 
@@ -87,19 +87,17 @@ Similar to the process for adding the push notifications capability earlier, in 
    
 ![Background modes selected](/images/client-sdk/push-notifications/background-modes.png)
 
-#### 2. Import `PushKit`, adopt `PKPushRegistryDelegate`, and sign up to VoIP notifications
+#### 2. Link the `CallKit` Framework
+
+When using VoIP push notifications, you have to use the CallKit framework. Link it to your project by adding it under _Frameworks, Libraries, and Embedded Content_ under General:
+
+![Linking CallKit framework](/images/client-sdk/push-notifications/callkitframework.png)
+
+#### 3. Import `PushKit`, adopt `PKPushRegistryDelegate`, and sign up to VoIP notifications
 
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/pushkit'
 ```
-
-#### 3. Implement the following delegate method and add the code to handle an incoming VoIP push notification
-
-```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/pushkit-delegate-voip'
-```
-
-For the SDK to process the push properly `NXMClient` should be logged in.
 
 #### 4. Enable push notifications through a logged in `NXMClient`
 
@@ -111,6 +109,16 @@ source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/enable-no
 
 * `'pushKitToken'` is the token received in `pushRegistry(_:didUpdate:for:)`.
 
+#### 5. Implement the following delegate method and add the code to handle an incoming VoIP push notification
+
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/pushkit-delegate-voip'
+```
+
+The `pushPayload` contains information about the incoming call that you can use to [report the call](https://developer.apple.com/documentation/pushkit/responding_to_voip_notifications_from_pushkit) with CallKit. You can view a sample of the JSON contained in the push payload on [GitHub](https://github.com/nexmo-community/client-sdk-push-payload).
+
+For the SDK to enable push notifications and to process the push notifications properly `NXMClient` should be logged in. You can store both the push token and push payload and handle them when the client successfully connects. For an example of this, view the [blog post](LINKHERE) on using push notifications with CallKit and its accompanying [sample project](https://github.com/nexmo-community/swift-phone-to-app-callkit).
+
 ## Conclusion
 
-In this guide you have seen how to set up push notifications.
+In this guide you have seen how to set up push notifications. You can find the sample project on [GitHub](https://github.com/nexmo-community/swift-phone-to-app-callkit) and learn more about CallKit on [developer.apple.com](https://developer.apple.com/documentation/callkit)
