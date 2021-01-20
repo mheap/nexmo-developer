@@ -40,7 +40,7 @@ You can re-connect your Vonage API account and Facebook page by performing the f
 
 2. From the list of **Your connected social channels**, click the **Edit** button associated with the page you want to re-connect.
 
-3. Click **Reconnect Facebook** page.
+3. Click **Reconnect Facebook page**.
 
 4. Enter login credentials for the desired account, and click **Log In**.
 
