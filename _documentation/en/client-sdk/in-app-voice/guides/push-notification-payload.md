@@ -13,7 +13,7 @@ This is an example of the push payload that is send to the Client SDK from Vonag
   "application_id": "e2dd57b5-5071-4506-8827-8efa5b96fc9d", // Your Vonage Application ID
   "timestamp": "2021-01-06T17:18:19.093Z",
   "user_id": "USR-6c38a318-a24d-43c4-a667-563696416040",
-    "push_info": { // Information for the push notification
+  "push_info": { // Information for the push notification
     "conversation": {
       "name": "NAM-23c60ce9-77b4-4c99-aaec-cd1ad6cc0e31"
     },
