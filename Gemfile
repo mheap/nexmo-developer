@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 source "https://rubygems.pkg.github.com/nexmo" do
-  gem "station", "0.0.111"
+  gem "station", "0.0.112"
 end
 
 group :test do

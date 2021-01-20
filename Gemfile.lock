@@ -97,6 +97,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    chartkick (3.4.2)
     coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 5.2.0)
@@ -146,6 +147,7 @@ GEM
     geocoder (1.6.4)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gmaps4rails (2.1.2)
     gravatar_image_tag (1.2.0)
     greenhouse_io (2.5.0)
       httmultiparty (~> 0.3.16)
@@ -232,7 +234,7 @@ GEM
       mustermann (= 1.1.1)
     neatjson (0.9)
     netrc (0.11.0)
-    newrelic_rpm (6.14.0)
+    newrelic_rpm (6.15.0)
     nexmo-oas-renderer (2.6.0)
       activemodel (~> 6.0)
       activesupport (~> 6.0)
@@ -346,7 +348,7 @@ GEM
       rspec-support (~> 3.10.0)
     rspec-support (3.10.1)
     ruby-progressbar (1.11.0)
-    ruby2_keywords (0.0.2)
+    ruby2_keywords (0.0.4)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -391,13 +393,14 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    station (0.0.111)
+    station (0.0.112)
       activeadmin (~> 2.7)
       activesupport (~> 6.0)
       algoliasearch (= 1.27.5)
       barnes (= 0.0.8)
       bootsnap (~> 1.4)
       bugsnag (~> 6.13)
+      chartkick (= 3.4.2)
       coffee-rails (~> 5.0)
       colorize (= 0.8.1)
       countries (= 3.0.1)
@@ -405,6 +408,7 @@ GEM
       devise (~> 4.7)
       diffy (~> 3.3)
       geocoder (~> 1.6)
+      gmaps4rails (= 2.1.2)
       gravatar_image_tag (~> 1.2)
       greenhouse_io (~> 2.5)
       groupdate (= 5.2.1)
@@ -415,7 +419,7 @@ GEM
       lograge (= 0.11.2)
       msgpack (~> 1.3)
       neatjson (= 0.9)
-      newrelic_rpm (= 6.14.0)
+      newrelic_rpm (= 6.15.0)
       nexmo-oas-renderer (~> 2.6)
       nexmo_markdown_renderer (~> 0.8)
       nokogiri (= 1.11.1)
@@ -478,7 +482,7 @@ DEPENDENCIES
   factory_bot
   rack-test
   rspec
-  station (= 0.0.111)!
+  station (= 0.0.112)!
 
 BUNDLED WITH
    2.1.4
