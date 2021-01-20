@@ -58,7 +58,7 @@ NCCO example with specific voice language and style:
 
 > **Where are "voice names"?**
 > 
-> Previously, in order to set the desired language and voice style you had to set `voiceName` parameter with certain "name". You can continue using it unless you want to try another style or support new language. For your convenience, see [below](#legacy-voice-names) how voice names are mapped to `language` and `style`. Please note, not all the supported voices have corresponding `voiceName`; thus it's recommended to use `language` and `style` in all new or being updated apps. You can listen to the voice samples in the table below.
+> Previously, in order to set the desired language and voice style, you used the `voiceName` parameter with a certain "name" as the value. The `voiceName` parameter has been deprecated, and while you can continue to use it, it will not contain new styles and languages. For your convenience, see [below](#legacy-voice-names) for a mapping of the legacy `voiceName` parameter to `language` and `style`. Please note, not all the supported styles have a corresponding `voiceName`; thus it's recommended to use `language` and `style` in your application or service. You can listen to the voice samples in the table below.
 
 
 Language | Code | Style | [SSML](/voice/voice-api/guides/customizing-tts) Support | Sample
@@ -385,6 +385,5 @@ Welsh | cy-GB | 0 | ✔️ | 🔈[/audio/tts-samples/cy-GB-0.mp3]
 | Zhiyu | Chinese, Mandarin | cmn-CN | 0
 | Zuzana | Czech | cs-CZ | 2
 |
-
 
 
