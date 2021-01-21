@@ -21,7 +21,7 @@ for configuring Skype for Business 6.0.9319 and Oracle Enterprise SBC Acme Packe
 The network for the SIP trunk reference configuration is illustrated below and is representative of
 a Skype for Business and Oracle SBC configuration to Nexmo SIP trunking.
 
-![Network for the SIP trunk reference configuration](/images/sip-config/skype/skype-1.png)
+![](/images/sip-config/skype/skype-1.png)
 
 
 ### 2.1 Network Components
@@ -100,13 +100,13 @@ by Skype for Business. To enable TCP mode in Skype for Business follow the steps
 4. Assign **Listening ports** for TCP on the Skype for Business side
 5. Check **Enable TCP Port** option
 
-![Enabling TCP mode](/images/sip-config/skype/skype-2.png)
+![](/images/sip-config/skype/skype-2.png)
 
 #### 4.2.2 Adding a Trunk
 
 1. Right click on the **PSTN gateways** option and select **New IP/PSTN Gateway**
 
-    ![New IP/PSTN gateway](/images/sip-config/skype/skype-13.png)    
+    ![](/images/sip-config/skype/skype-13.png)    
 
 2. Enter the IP address of the Oracle E-SBC
 3. Click **Next**
