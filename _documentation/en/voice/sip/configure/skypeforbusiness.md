@@ -109,16 +109,16 @@ image: public/screenshots/sip/configuration/guides/skype/skype-2.png
 
 1. Right click on the **PSTN gateways** option and select **New IP/PSTN Gateway**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-3.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-3.png
+    ```
 
 2. Enter the IP address of the Oracle E-SBC
 3. Click **Next**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-4.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-4.png
+    ```
 
 4. In **Define the root trunk** page
 5. **Trunk name:** 10.64.4.177 (Oracle E-SBC LAN IP)
@@ -162,26 +162,26 @@ configured Oracle E-SBC trunk.
 3. A **Dial Plan** can be configured for users if any digit modifications are needed. Here the Global Dial Plan is used.
 4. Configure a **Voice Policy** for the users to use when dialing a call out to the Oracle E-SBC
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-7.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-7.png
+    ```
 
 5. Click **New** under **Associated PSTN Usages** to create a new PSTN Usage
 6. Assign a name
 7. Click **New** under **Associated Routes** to create a new Route
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-8.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-8.png
+    ```
 
 8. Assign a **Name** for the new route
 9. Create a match pattern for the calls going out under **Build a Pattern to match** section.
     Here **"+1214242**" is used to match PSTN number.
 10. Select the Trunk under **Associated trunks** section and click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-9.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-9.png
+    ```
 
 11. Save the Route
 12. Save the PSTN Usage
@@ -195,9 +195,9 @@ Dial Plan is used to strip or insert digits.
 1. Navigate to **Voice Routing** section in the **Skype for Business Control Panel**
 2. Select **Global Dial Plan.** Here the Global Dial Plan is used.
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-10.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-10.png
+    ```
 
 3. Open the Global dial plan
 4. Navigate to **Associated Normalization Rules** and add normalization rules
@@ -406,23 +406,23 @@ Session agents are created for both Skype for Business and Nexmo.
 6. **Transport Method:** `StaticTCP`
 7. **Realm ID:** SFB
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-23.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-23.png
+    ```
 
 8. `Out translationid`:** `addplusone`
 9. `In manipulationid`:** `add_pai`
 10. `Out manipulationid`:** `outManipToSFB`
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-24.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-24.png
+    ```
 
 11. Click **Add** under **Auth attribute**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-25.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-25.png
+    ```
 
 12. **Auth Realm** : Nexmo FQDN (sip.nexmo.com is used for this test) provided by Nexmo
 13. **Username** : User name (`911236e3` is used for this test) provided by Nexmo
@@ -446,9 +446,9 @@ image: public/screenshots/sip/configuration/guides/skype/skype-26.png
     E-SBC sends "513 MESSAGE TOO LARGE" if a UDP packet length is more than 1500
     bytes.
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-27.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/skype/skype-27.png
+    ```
 
 8. `Out manipulationid`: Surrogate
 9. Click **OK**
@@ -866,17 +866,17 @@ new-value sip.nexmo.com
     **Key** and **Secret** will be displayed on the dashboard and this can be used as the
     username and password for Registration SIP Trunks.
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/vonage-dashboard/dashboard-key-secret.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/vonage-dashboard/dashboard-key-secret.png
+    ```
 
 2. In order to provide the URL to which the call has to be routed from Nexmo, navigate to
     the **Numbers** tab
 3. Click **Edit** against each number as shown below
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/vonage-dashboard/numbers-dashboard.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/vonage-dashboard/numbers-dashboard.png
+    ```
 
 4. A pop-up will be displayed
 5. Select the "**Forward to**" and provide the URL to which the calls route
