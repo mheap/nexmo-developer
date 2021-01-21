@@ -21,9 +21,8 @@ for configuring Skype for Business 6.0.9319 and Oracle Enterprise SBC Acme Packe
 The network for the SIP trunk reference configuration is illustrated below and is representative of
 a Skype for Business and Oracle SBC configuration to Nexmo SIP trunking.
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-1.png
-```
+![Network for the SIP trunk reference configuration](/images/sip-config/skype/skype-1.png)
+
 
 ### 2.1 Network Components
 
@@ -101,24 +100,18 @@ by Skype for Business. To enable TCP mode in Skype for Business follow the steps
 4. Assign **Listening ports** for TCP on the Skype for Business side
 5. Check **Enable TCP Port** option
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-2.png
-```
+![Enabling TCP mode](/images/sip-config/skype/skype-2.png)
 
 #### 4.2.2 Adding a Trunk
 
 1. Right click on the **PSTN gateways** option and select **New IP/PSTN Gateway**
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-3.png
-    ```
+    ![New IP/PSTN gateway](/images/sip-config/skype/skype-13.png)    
 
 2. Enter the IP address of the Oracle E-SBC
 3. Click **Next**
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-4.png
-    ```
+    ![](/images/sip-config/skype/skype-4.png)
 
 4. In **Define the root trunk** page
 5. **Trunk name:** 10.64.4.177 (Oracle E-SBC LAN IP)
@@ -130,9 +123,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-2.png
 10. Click **Finish**
 11. Publish the topology for the configuration to be reflected
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-5.png
-```
+![](/images/sip-config/skype/skype-5.png)
 
 #### 4.2.3 Trunk Configuration
 
@@ -147,9 +138,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-5.png
 9. Set the remaining options as seen in the figure below
 10. Click **OK** and **Commit** the changes.
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-6.png
-```
+![](/images/sip-config/skype/skype-6.png)
 
 #### 4.2.4 Voice Routing
 
@@ -162,26 +151,20 @@ configured Oracle E-SBC trunk.
 3. A **Dial Plan** can be configured for users if any digit modifications are needed. Here the Global Dial Plan is used.
 4. Configure a **Voice Policy** for the users to use when dialing a call out to the Oracle E-SBC
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-7.png
-    ```
+    ![](/images/sip-config/skype/skype-7.png)
 
 5. Click **New** under **Associated PSTN Usages** to create a new PSTN Usage
 6. Assign a name
 7. Click **New** under **Associated Routes** to create a new Route
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-8.png
-    ```
+    ![](/images/sip-config/skype/skype-8.png)
 
 8. Assign a **Name** for the new route
 9. Create a match pattern for the calls going out under **Build a Pattern to match** section.
     Here **"+1214242**" is used to match PSTN number.
 10. Select the Trunk under **Associated trunks** section and click **OK**
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-9.png
-    ```
+    ![](/images/sip-config/skype/skype-9.png)
 
 11. Save the Route
 12. Save the PSTN Usage
@@ -195,18 +178,14 @@ Dial Plan is used to strip or insert digits.
 1. Navigate to **Voice Routing** section in the **Skype for Business Control Panel**
 2. Select **Global Dial Plan.** Here the Global Dial Plan is used.
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-10.png
-    ```
+    ![](/images/sip-config/skype/skype-10.png)
 
 3. Open the Global dial plan
 4. Navigate to **Associated Normalization Rules** and add normalization rules
 5. **Keep All** is a default normalization rule which allows all the numbers
 6. **Save** the changes
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-11.png
-```
+![](/images/sip-config/skype/skype-11.png)
 
 ### 4.3 Oracle E-SBC Configuration
 
@@ -224,9 +203,7 @@ This section defines the physical interfaces to the Skype for Business and Nexmo
 5. **Slot:** 1
 6. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-12.png
-```
+![](/images/sip-config/skype/skype-12.png)
 
 ##### 4.3.1.2 Physical Interface for Nexmo
 
@@ -238,9 +215,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-12.png
 5. **Slot:** 0
 6. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-13.png
-```
+![](/images/sip-config/skype/skype-13.png)
 
 #### 4.3.2 Create Network Interfaces
 
@@ -259,9 +234,7 @@ This section defines the network interfaces to the Skype for Business and Nexmo 
 8. **Gateway:** 10.64.1.
 9. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-14.png
-```
+![](/images/sip-config/skype/skype-14.png)
 
 ##### 4.3.2.2 Network Interface for Nexmo
 
@@ -274,9 +247,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-14.png
 7. **Gateway:** `192.x.x.x`
 8. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-15.png
-```
+![](/images/sip-config/skype/skype-15.png)
 
 #### 4.3.3 Create Realm-config
 
@@ -291,9 +262,7 @@ and network interfaces.
 4. **Network Interfaces:** Click Add and select Skype for Business Network interface
 5. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-16.png
-```
+![](/images/sip-config/skype/skype-16.png)
 
 ##### 4.3.3.2 Realm for Nexmo
 
@@ -303,9 +272,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-16.png
 4. **Network Interfaces:** Click Add and select Nexmo Network interface
 5. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-17.png
-```
+![](/images/sip-config/skype/skype-17.png)
 
 #### 4.3.4 Create Steering Pool
 
@@ -321,9 +288,7 @@ Packet E-SBC.
 5. **Network Interface:** Select Skype for Business Network interface
 6. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-18.png
-```
+![](/images/sip-config/skype/skype-18.png)
 
 ##### 4.3.4.2 Steering pool for Nexmo
 
@@ -334,9 +299,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-18.png
 5. **Network Interface:** Select Nexmo Network interface
 6. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-19.png
-```
+![](/images/sip-config/skype/skype-19.png)
 
 #### 4.3.5 Modify SIP Config
 
@@ -348,9 +311,7 @@ SIP-config sets the values for the Acme Packet SIP operating parameters.
 4. **Registrar Host:** * (This option is required when using Registration Method)
 5. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-20.png
-```
+![](/images/sip-config/skype/skype-20.png)
 
 #### 4.3.6 Create SIP Interface
 
@@ -370,9 +331,7 @@ for Business and Nexmo
 8. **Allow Anonymous** : _all_ , for example
 9. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-21.png
-```
+![](/images/sip-config/skype/skype-21.png)
 
 ##### 4.3.6.2 SIP Interface for Nexmo
 
@@ -386,9 +345,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-21.png
 8. **Allow Anonymous** : _all,_ for example
 9. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-22.png
-```
+![](/images/sip-config/skype/skype-22.png)
 
 #### 4.3.7 Create Session Agent
 
@@ -406,32 +363,24 @@ Session agents are created for both Skype for Business and Nexmo.
 6. **Transport Method:** `StaticTCP`
 7. **Realm ID:** SFB
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-23.png
-    ```
+    ![](/images/sip-config/skype/skype-23.png)
 
 8. `Out translationid`:** `addplusone`
 9. `In manipulationid`:** `add_pai`
 10. `Out manipulationid`:** `outManipToSFB`
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-24.png
-    ```
+    ![](/images/sip-config/skype/skype-24.png)
 
 11. Click **Add** under **Auth attribute**
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-25.png
-    ```
+    ![](/images/sip-config/skype/skype-25.png)
 
 12. **Auth Realm** : Nexmo FQDN (sip.nexmo.com is used for this test) provided by Nexmo
 13. **Username** : User name (`911236e3` is used for this test) provided by Nexmo
 14. **Password** : Password provided by Nexmo
 15. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-26.png
-```
+![](/images/sip-config/skype/skype-26.png)
 
 ##### 4.3.7.2 Session Agent for Nexmo
 
@@ -446,16 +395,12 @@ image: public/screenshots/sip/configuration/guides/skype/skype-26.png
     E-SBC sends "513 MESSAGE TOO LARGE" if a UDP packet length is more than 1500
     bytes.
 
-    ```screenshot
-    image: public/screenshots/sip/configuration/guides/skype/skype-27.png
-    ```
+    ![](/images/sip-config/skype/skype-27.png)
 
 8. `Out manipulationid`: Surrogate
 9. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-28.png
-```
+![](/images/sip-config/skype/skype-28.png)
 
 #### 4.3.8 Create Local Policy
 
@@ -475,9 +420,7 @@ to the Nexmo realm and vice-versa.
 9. **Cost:** 0
 10. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-29.png
-```
+![](/images/sip-config/skype/skype-29.png)
 
 ##### 4.3.8.2 Local Policy for Nexmo
 
@@ -493,9 +436,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-29.png
 10. **Cost:** 0
 11. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-30.png
-```
+![](/images/sip-config/skype/skype-30.png)
 
 #### 4.3.9 Create Surrogate Agent
 
@@ -518,9 +459,7 @@ by Nexmo.
 12. **Auth User:** `911236e3` is used in this example
 13. Click **OK**
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-31.png
-```
+![](/images/sip-config/skype/skype-31.png)
 
 #### 4.3.10 Create Translation Rules
 
@@ -533,9 +472,7 @@ This adds + in the user part of the TO header.
 4. **Type:** add
 5. **Add String:** +
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/skype/skype-32.png
-```
+![](/images/sip-config/skype/skype-32.png)
 
 #### 4.3.11 Create SIP Manipulation
 
