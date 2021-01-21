@@ -288,102 +288,102 @@ Welsh | cy-GB | 0 | ✔️ | 🔈[/audio/tts-samples/cy-GB-0.mp3]
 |
 | `voiceName` | Language | `language` | `style` 
 | ------------|----------|------------|---------
-| Aditi | Hindi | hi-IN | 0
-| Alva | Swedish | sv-SE | 2
-| Amy | English (United Kingdom) | en-GB | 0
-| Astrid | Swedish | sv-SE | 0
-| Bianca | Italian | it-IT | 0
-| Brian | English (United Kingdom) | en-GB | 4
-| Camila | Portuguese (Brazil) | pt-BR | 5
-| Carla | Italian | it-IT | 1
-| Carmen | Romanian | ro-RO | 0
-| Carmit | Hebrew | he-IL | 0
-| Catarina | Portuguese (Portugal) | pt-PT | 3
-| Celine | French (France) | fr-FR | 0
-| Cem | Turkish | tr-TR | 7
-| Chantal | French (Canada) | fr-CA | 0
-| Conchita | Spanish (Spain) | es-ES | 0
-| Cristiano | Portuguese (Portugal) | pt-PT | 5
-| Damayanti | Indonesian | id-ID | 1
-| Dora | Icelandic | is-IS | 0
-| Emma | English (United Kingdom) | en-GB | 1
-| Empar | Spanish (Spain) | es-ES | 3
-| Enrique | Spanish (Spain) | es-ES | 4
-| Ewa | Polish | pl-PL | 0
-| Felipe | Portuguese (Brazil) | pt-BR | 4
-| Filiz | Turkish | tr-TR | 0
-| Geraint | English (Wales) | en-GB-WLS | 0
-| Giorgio | Italian | it-IT | 4
-| Gwyneth | Welsh | cy-GB | 0
-| Hans | German | de-DE | 3
-| Henrik | Norwegian | no-NO | 1
-| Henrik | Norwegian | nb-NO | 7
-| Ines | Portuguese (Portugal) | pt-PT | 0
-| Ioana | Romanian | ro-RO | 1
-| Iveta | Czech | cs-CZ | 1
-| Ivy | English (United States) | en-US | 1
-| Jacek | Polish | pl-PL | 5
-| Jan | Polish | pl-PL | 6
-| Joana | Portuguese (Portugal) | pt-PT | 4
-| Joanna | English (United States) | en-US | 2
-| Joey | English (United States) | en-US | 7
-| Jordi | Catalan, Valencian | ca-ES | 1
-| Justin | English (United States) | en-US | 8
-| Kanya | Thai | th-TH | 0
-| Karl | Icelandic | is-IS | 1
-| Kendra | English (United States) | en-US | 3
-| Kimberly | English (United States) | en-US | 0
-| Laila | Arabic | ar | 2
-| Laura | Slovak | sk-SK | 1
-| Lea | French (France) | fr-FR | 1
-| Lekha | Hindi | hi-IN | 2
-| Liv | Norwegian | nb-NO | 0
-| Lotte | Dutch | nl-NL | 0
-| Lucia | Spanish (Spain) | es-ES | 1
-| Luciana | Portuguese (Brazil) | pt-BR | 2
-| Lupe | Spanish (United States) | es-US | 2
-| Mads | Danish | da-DK | 2
-| Maged | Arabic | ar | 5
-| Maja | Polish | pl-PL | 1
-| Mariska | Hungarian | hu-HU | 1
-| Marlene | German | de-DE | 0
-| Mathieu | French (France) | fr-FR | 5
-| Matthew | English (United States) | en-US | 9
-| Maxim | Russian | ru-RU | 4
-| Mei-Jia | Chinese, Mandarin (Taiwan) | cmn-TW | 0
-| Melina | Greek | el-GR | 1
-| Mia | Spanish (Mexico) | es-MX | 0
-| Miguel | Spanish (United States) | es-US | 1
-| Miren | Basque | eu-ES | 0
-| Mizuki | Japanese | ja-JP | 0
-| Montserrat | Catalan, Valencian | ca-ES | 0
-| Naja | Danish | da-DK | 0
-| Nicole | English (Australia) | en-AU | 0
-| Nikos | Greek | el-GR | 2
-| Nora | Norwegian | no-NO | 0
-| Nora | Norwegian | nb-NO | 6
-| Oskar | Swedish | sv-SE | 3
-| Penelope | Spanish (United States) | es-US | 0
-| Raveena | English (India) | en-IN | 1
-| Ricardo | Portuguese (Brazil) | pt-BR | 3
-| Ruben | Dutch | nl-NL | 4
-| Russell | English (Australia) | en-AU | 3
-| Salli | English (United States) | en-US | 4
-| Satu | Finnish | fi-FI | 1
-| Seoyeon | Korean | ko-KR | 0
-| Sin-Ji | Chinese, Cantonese | yue-CN | 0
-| Sora | Korean | ko-KR | 3
-| Takumi | Japanese | ja-JP | 3
-| Tarik | Arabic | ar | 6
-| Tatyana | Russian | ru-RU | 0
-| Tessa | English (South Africa) | en-ZA | 0
-| Tian-Tian | Chinese, Mandarin | cmn-CN | 3
-| Vicki | German | de-DE | 1
-| Vitoria | Portuguese (Brazil) | pt-BR | 0
-| Yelda | Turkish | tr-TR | 4
-| Zeina | Arabic | ar | 0
-| Zhiyu | Chinese, Mandarin | cmn-CN | 0
-| Zuzana | Czech | cs-CZ | 2
+| `Aditi` | Hindi | hi-IN | 0
+| `Alva` | Swedish | sv-SE | 2
+| `Amy` | English (United Kingdom) | en-GB | 0
+| `Astrid` | Swedish | sv-SE | 0
+| `Bianca` | Italian | it-IT | 0
+| `Brian` | English (United Kingdom) | en-GB | 4
+| `Camila` | Portuguese (Brazil) | pt-BR | 5
+| `Carla` | Italian | it-IT | 1
+| `Carmen` | Romanian | ro-RO | 0
+| `Carmit` | Hebrew | he-IL | 0
+| `Catarina` | Portuguese (Portugal) | pt-PT | 3
+| `Celine` | French (France) | fr-FR | 0
+| `Cem` | Turkish | tr-TR | 7
+| `Chantal` | French (Canada) | fr-CA | 0
+| `Conchita` | Spanish (Spain) | es-ES | 0
+| `Cristiano` | Portuguese (Portugal) | pt-PT | 5
+| `Damayanti` | Indonesian | id-ID | 1
+| `Dora` | Icelandic | is-IS | 0
+| `Emma` | English (United Kingdom) | en-GB | 1
+| `Empar` | Spanish (Spain) | es-ES | 3
+| `Enrique` | Spanish (Spain) | es-ES | 4
+| `Ewa` | Polish | pl-PL | 0
+| `Felipe` | Portuguese (Brazil) | pt-BR | 4
+| `Filiz` | Turkish | tr-TR | 0
+| `Geraint` | English (Wales) | en-GB-WLS | 0
+| `Giorgio` | Italian | it-IT | 4
+| `Gwyneth` | Welsh | cy-GB | 0
+| `Hans` | German | de-DE | 3
+| `Henrik` | Norwegian | no-NO | 1
+| `Henrik` | Norwegian | nb-NO | 7
+| `Ines` | Portuguese (Portugal) | pt-PT | 0
+| `Ioana` | Romanian | ro-RO | 1
+| `Iveta` | Czech | cs-CZ | 1
+| `Ivy` | English (United States) | en-US | 1
+| `Jacek` | Polish | pl-PL | 5
+| `Jan` | Polish | pl-PL | 6
+| `Joana` | Portuguese (Portugal) | pt-PT | 4
+| `Joanna` | English (United States) | en-US | 2
+| `Joey` | English (United States) | en-US | 7
+| `Jordi` | Catalan, Valencian | ca-ES | 1
+| `Justin` | English (United States) | en-US | 8
+| `Kanya` | Thai | th-TH | 0
+| `Karl` | Icelandic | is-IS | 1
+| `Kendra` | English (United States) | en-US | 3
+| `Kimberly` | English (United States) | en-US | 0
+| `Laila` | Arabic | ar | 2
+| `Laura` | Slovak | sk-SK | 1
+| `Lea` | French (France) | fr-FR | 1
+| `Lekha` | Hindi | hi-IN | 2
+| `Liv` | Norwegian | nb-NO | 0
+| `Lotte` | Dutch | nl-NL | 0
+| `Lucia` | Spanish (Spain) | es-ES | 1
+| `Luciana` | Portuguese (Brazil) | pt-BR | 2
+| `Lupe` | Spanish (United States) | es-US | 2
+| `Mads` | Danish | da-DK | 2
+| `Maged` | Arabic | ar | 5
+| `Maja` | Polish | pl-PL | 1
+| `Mariska` | Hungarian | hu-HU | 1
+| `Marlene` | German | de-DE | 0
+| `Mathieu` | French (France) | fr-FR | 5
+| `Matthew` | English (United States) | en-US | 9
+| `Maxim` | Russian | ru-RU | 4
+| `Mei-Jia` | Chinese, Mandarin (Taiwan) | cmn-TW | 0
+| `Melina` | Greek | el-GR | 1
+| `Mia` | Spanish (Mexico) | es-MX | 0
+| `Miguel` | Spanish (United States) | es-US | 1
+| `Miren` | Basque | eu-ES | 0
+| `Mizuki` | Japanese | ja-JP | 0
+| `Montserrat` | Catalan, Valencian | ca-ES | 0
+| `Naja` | Danish | da-DK | 0
+| `Nicole` | English (Australia) | en-AU | 0
+| `Nikos` | Greek | el-GR | 2
+| `Nora` | Norwegian | no-NO | 0
+| `Nora` | Norwegian | nb-NO | 6
+| `Oskar` | Swedish | sv-SE | 3
+| `Penelope` | Spanish (United States) | es-US | 0
+| `Raveena` | English (India) | en-IN | 1
+| `Ricardo` | Portuguese (Brazil) | pt-BR | 3
+| `Ruben` | Dutch | nl-NL | 4
+| `Russell` | English (Australia) | en-AU | 3
+| `Salli` | English (United States) | en-US | 4
+| `Satu` | Finnish | fi-FI | 1
+| `Seoyeon` | Korean | ko-KR | 0
+| `Sin-Ji` | Chinese, Cantonese | yue-CN | 0
+| `Sora` | Korean | ko-KR | 3
+| `Takumi` | Japanese | ja-JP | 3
+| `Tarik` | Arabic | ar | 6
+| `Tatyana` | Russian | ru-RU | 0
+| `Tessa` | English (South Africa) | en-ZA | 0
+| `Tian-Tian` | Chinese, Mandarin | cmn-CN | 3
+| `Vicki` | German | de-DE | 1
+| `Vitoria` | Portuguese (Brazil) | pt-BR | 0
+| `Yelda` | Turkish | tr-TR | 4
+| `Zeina` | Arabic | ar | 0
+| `Zhiyu` | Chinese, Mandarin | cmn-CN | 0
+| `Zuzana` | Czech | cs-CZ | 2
 |
 
 
