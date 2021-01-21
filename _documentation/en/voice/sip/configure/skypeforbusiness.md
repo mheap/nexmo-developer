@@ -176,7 +176,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-8.png
 
 8. Assign a **Name** for the new route
 9. Create a match pattern for the calls going out under **Build a Pattern to match** section.
-    Here **“+1214242** ” is used to match PSTN number.
+    Here **"+1214242**" is used to match PSTN number.
 10. Select the Trunk under **Associated trunks** section and click **OK**
 
 ```screenshot
@@ -392,7 +392,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-22.png
 
 **4.3.7 Create Session Agent**
 
-A session agent defines an internal “next hop” signaling entity for the SIP traffic. A realm is
+A session agent defines an internal "next hop" signaling entity for the SIP traffic. A realm is
 associated with a session agent to identify sessions coming from or going to the session agent.
 Session agents are created for both Skype for Business and Nexmo.
 
@@ -443,7 +443,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-26.png
 6. **Realm ID:** Nexmo
 7. **Options:** `max-udp-length=0` (Note: This setting allows the SBC to fragment UDP packets.
     Otherwise the maximum size a UDP packet may be is 1500 bytes.). Without this setting,
-    E-SBC sends “513 MESSAGE TOO LARGE” if a UDP packet length is more than 1500
+    E-SBC sends "513 MESSAGE TOO LARGE" if a UDP packet length is more than 1500
     bytes.
 
 ```screenshot
@@ -879,7 +879,7 @@ image: public/screenshots/sip/configuration/guides/vonage-dashboard/numbers-dash
 ```
 
 4. A pop-up will be displayed
-5. Select the “ **Forward to** ” and provide the URL to which the calls route
+5. Select the "**Forward to**" and provide the URL to which the calls route
 6. Click **Update** to save the changes
 
 ```screenshot
