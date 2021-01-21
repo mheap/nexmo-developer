@@ -9,14 +9,14 @@ description: How to set up Vonage SIP with Skype for Business with Oracle E-SBC
 
 ### July 2017
 
-## 1 Audience
+## 1. Audience
 
 This document is intended for the SIP trunk customer’s technical staff and Value Added Retailer
 (VAR) having installation and operational responsibilities. This configuration guide provides steps
 for configuring Skype for Business 6.0.9319 and Oracle Enterprise SBC Acme Packet 3820
 `ECZ7.3.0 Patch 2` (Build 75) to Nexmo SIP Trunking services.
 
-## 2 SIP Trunking Network Components
+## 2. SIP Trunking Network Components
 
 The network for the SIP trunk reference configuration is illustrated below and is representative of
 a Skype for Business and Oracle SBC configuration to Nexmo SIP trunking.
@@ -25,7 +25,7 @@ a Skype for Business and Oracle SBC configuration to Nexmo SIP trunking.
 image: public/screenshots/sip/configuration/guides/skype/skype-1.png
 ```
 
-#### 2.1 Network Components
+### 2.1 Network Components
 
 
 | Component                            | Version                                                                                                         | Comments              |
@@ -36,9 +36,9 @@ image: public/screenshots/sip/configuration/guides/skype/skype-1.png
 | Skype for Business Client            | `Model: CP-7965`                                                                                                |                       |
 | Cisco IP Phone                       | **Model**: `CP-7965` **App Load ID**: `jar45sccp.9-4-2TH1-1.sbn` **Boot Load ID**: `tnp65.9-3-1-CR17.bin`       | This Cisco IP Phone is the PSTN test device                       |
 
-## 3 Features
+## 3. Features
 
-**3.1.1 Features Supported**
+### 3.1.1 Features Supported
 
 * Incoming and outgoing off-net calls using G711ULAW & G711ALAW voice codecs
 * Calling Line (number) Identification Presentation
@@ -51,23 +51,23 @@ image: public/screenshots/sip/configuration/guides/skype/skype-1.png
 * Media flow-through on Oracle E-SBC
 
 
-**3.1.2 Features Not Supported by PBX**
+### 3.1.2 Features Not Supported by PBX
 
 * None
 
-**3.1.3 Features Not Tested**
+### 3.1.3 Features Not Tested
 
 * None
 
-**3.1.4 Caveats and Limitations**
+### 3.1.4 Caveats and Limitations
 
 * No Session Audit message is sent from Nexmo
 * Session refresh is always done by Nexmo. Skype for Business does Session refresh only
 through UPDATE message and Nexmo does not support UPDATE.
 
-## 4 Configuration
+## 4. Configuration
 
-#### 4.1 IP Address Worksheet
+### 4.1 IP Address Worksheet
 
 The specific values listed in the table below and in subsequent sections are used in the lab
 configuration described in this document, and are for **illustrative purposes only**. The customer
@@ -84,13 +84,13 @@ must obtain and use the values for your deployment.
 | System IP Address  | `172.16.29.62`       |                       |
 
 
-#### 4.2 Configuring Skype for Business
+### 4.2 Configuring Skype for Business
 
 This section describes the Skype for Business configuration necessary to support connectivity to
 Oracle E-SBC. A SIP trunk is established between Skype for Business and Oracle E-SBC for
 use by signaling traffic to and from Nexmo via Oracle E-SBC.
 
-**4.2.1 Enable TCP Mode**
+#### 4.2.1 Enable TCP Mode
 
 Skype for Business and Oracle E-SBC will communicate over TCP since UDP is not supported
 by Skype for Business. To enable TCP mode in Skype for Business follow the steps below.
@@ -105,7 +105,7 @@ by Skype for Business. To enable TCP mode in Skype for Business follow the steps
 image: public/screenshots/sip/configuration/guides/skype/skype-2.png
 ```
 
-**4.2.2 Adding a Trunk**
+#### 4.2.2 Adding a Trunk
 
 1. Right click on the **PSTN gateways** option and select **New IP/PSTN Gateway**
 
@@ -134,7 +134,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-4.png
 image: public/screenshots/sip/configuration/guides/skype/skype-5.png
 ```
 
-**4.2.3 Trunk Configuration**
+#### 4.2.3 Trunk Configuration
 
 1. Open the Skype for Business Control Panel
 2. Navigate to **Voice Routing**
@@ -151,7 +151,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-5.png
 image: public/screenshots/sip/configuration/guides/skype/skype-6.png
 ```
 
-**4.2.4 Voice Routing**
+#### 4.2.4 Voice Routing
 
 The trunk created in the previous step needs to be assigned to a Route. This is done so that
 when a Skype for Business user dials a call out to the Nexmo, the calls terminate via the
@@ -187,7 +187,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-9.png
 12. Save the PSTN Usage
 13. Save the Voice Policy
 
-**4.2.5 Dial Plan**
+#### 4.2.5 Dial Plan
 
 Dial Plan is used to strip or insert digits.
 
@@ -208,13 +208,13 @@ image: public/screenshots/sip/configuration/guides/skype/skype-10.png
 image: public/screenshots/sip/configuration/guides/skype/skype-11.png
 ```
 
-#### 4.3 Oracle E-SBC Configuration
+### 4.3 Oracle E-SBC Configuration
 
-**4.3.1 Create Physical Interfaces**
+#### 4.3.1 Create Physical Interfaces
 
 This section defines the physical interfaces to the Skype for Business and Nexmo networks.
 
-**4.3.1.1 Physical Interface for Skype for Business**
+##### 4.3.1.1 Physical Interface for Skype for Business
 
 1. Navigate to **Configuration** → **Objects** → **system** → **`phy-interface`**
 2. Click **Add**
@@ -228,7 +228,7 @@ This section defines the physical interfaces to the Skype for Business and Nexmo
 image: public/screenshots/sip/configuration/guides/skype/skype-12.png
 ```
 
-**4.3.1.2 Physical Interface for Nexmo**
+##### 4.3.1.2 Physical Interface for Nexmo
 
 1. Navigate to **Configuration** → **Objects** → **system** → **`phy-interface`**
 2. Click **Add**
@@ -242,12 +242,12 @@ image: public/screenshots/sip/configuration/guides/skype/skype-12.png
 image: public/screenshots/sip/configuration/guides/skype/skype-13.png
 ```
 
-**4.3.2 Create Network Interfaces**
+#### 4.3.2 Create Network Interfaces
 
 This section defines the network interfaces to the Skype for Business and Nexmo networks.
 
 
-**4.3.2.1 Network Interface for Skype for Business**
+##### 4.3.2.1 Network Interface for Skype for Business
 
 1. Navigate to **Configuration** → **Objects** → **system** → **network-interface**
 2. Click **Add**
@@ -263,7 +263,7 @@ This section defines the network interfaces to the Skype for Business and Nexmo 
 image: public/screenshots/sip/configuration/guides/skype/skype-14.png
 ```
 
-**4.3.2.2 Network Interface for Nexmo**
+##### 4.3.2.2 Network Interface for Nexmo
 
 1. Navigate to **Configuration** → **Objects** → **system** → **network-interface**
 2. Click **Add**
@@ -278,12 +278,12 @@ image: public/screenshots/sip/configuration/guides/skype/skype-14.png
 image: public/screenshots/sip/configuration/guides/skype/skype-15.png
 ```
 
-**4.3.3 Create Realm-config**
+#### 4.3.3 Create Realm-config
 
 Realms are used as a basis for determining egress and ingress associations between physical
 and network interfaces.
 
-**4.3.3.1 Realm for Skype for Business**
+##### 4.3.3.1 Realm for Skype for Business
 
 1. Navigate to **Configuration** → **Objects** → **media-manager** → **realm-config**
 2. Click **Add**
@@ -295,7 +295,7 @@ and network interfaces.
 image: public/screenshots/sip/configuration/guides/skype/skype-16.png
 ```
 
-**4.3.3.2 Realm for Nexmo**
+##### 4.3.3.2 Realm for Nexmo
 
 1. Navigate to **Configuration** → **Objects** → **media-manager** → **realm-config**
 2. Click **Add**
@@ -307,12 +307,12 @@ image: public/screenshots/sip/configuration/guides/skype/skype-16.png
 image: public/screenshots/sip/configuration/guides/skype/skype-17.png
 ```
 
-**4.3.4 Create Steering Pool**
+#### 4.3.4 Create Steering Pool
 
 Steering pool define sets of ports that are used for steering media flows through the Acme
 Packet E-SBC.
 
-**4.3.4.1 Steering Pool for Skype for Business**
+##### 4.3.4.1 Steering Pool for Skype for Business
 
 1. Navigate to **Configuration** → **Objects** → **media-manager** → **steering-pool**
 2. Click **Add**
@@ -325,7 +325,7 @@ Packet E-SBC.
 image: public/screenshots/sip/configuration/guides/skype/skype-18.png
 ```
 
-**4.3.4.2 Steering pool for Nexmo**
+##### 4.3.4.2 Steering pool for Nexmo
 
 1. Navigate to **Configuration** → **Objects** → **media-manager** → **steering-pool**
 2. Click **Add**
@@ -338,7 +338,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-18.png
 image: public/screenshots/sip/configuration/guides/skype/skype-19.png
 ```
 
-**4.3.5 Modify SIP Config**
+#### 4.3.5 Modify SIP Config
 
 SIP-config sets the values for the Acme Packet SIP operating parameters.
 
@@ -352,13 +352,13 @@ SIP-config sets the values for the Acme Packet SIP operating parameters.
 image: public/screenshots/sip/configuration/guides/skype/skype-20.png
 ```
 
-**4.3.6 Create SIP Interface**
+#### 4.3.6 Create SIP Interface
 
 SIP interface defines the signaling interface (IP address and port) to which the Acme Packet E-
 SBC sends and receives SIP messages. SIP Interface and Realm ID are created for both Skype
 for Business and Nexmo
 
-**4.3.6.1 SIP Interface for Skype for Business**
+##### 4.3.6.1 SIP Interface for Skype for Business
 
 1. Navigate to **Configuration** → **Objects** → **session-router** → **sip-interface**
 2. Click **Add**
@@ -374,7 +374,7 @@ for Business and Nexmo
 image: public/screenshots/sip/configuration/guides/skype/skype-21.png
 ```
 
-**4.3.6.2 SIP Interface for Nexmo**
+##### 4.3.6.2 SIP Interface for Nexmo
 
 1. Navigate to **Configuration** → **Objects** → **session-router** → **sip-interface**
 2. Click **Add**
@@ -390,13 +390,13 @@ image: public/screenshots/sip/configuration/guides/skype/skype-21.png
 image: public/screenshots/sip/configuration/guides/skype/skype-22.png
 ```
 
-**4.3.7 Create Session Agent**
+#### 4.3.7 Create Session Agent
 
 A session agent defines an internal "next hop" signaling entity for the SIP traffic. A realm is
 associated with a session agent to identify sessions coming from or going to the session agent.
 Session agents are created for both Skype for Business and Nexmo.
 
-**4.3.7.1 Session Agent for Skype for Business**
+##### 4.3.7.1 Session Agent for Skype for Business
 
 1. Navigate to **Configuration** → **Objects** → **session-router** → **session-agent**
 2. Click **Add** or **Modify**
@@ -433,7 +433,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-25.png
 image: public/screenshots/sip/configuration/guides/skype/skype-26.png
 ```
 
-**4.3.7.2 Session Agent for Nexmo**
+##### 4.3.7.2 Session Agent for Nexmo
 
 1. Navigate to **Configuration** → **Objects** → **session-router** → **session-agent**
 2. Click **Add** or **Modify**
@@ -457,12 +457,12 @@ image: public/screenshots/sip/configuration/guides/skype/skype-27.png
 image: public/screenshots/sip/configuration/guides/skype/skype-28.png
 ```
 
-**4.3.8 Create Local Policy**
+#### 4.3.8 Create Local Policy
 
 Local policies are defined to allow any SIP request from Skype for Business realm to be routed
 to the Nexmo realm and vice-versa.
 
-**4.3.8.1 Local Policy for Skype for Business**
+##### 4.3.8.1 Local Policy for Skype for Business
 
 1. Navigate to **Configuration** → **Objects** → **session-router** → **local-policy**
 2. Click **Add** or **Modify**
@@ -479,7 +479,7 @@ to the Nexmo realm and vice-versa.
 image: public/screenshots/sip/configuration/guides/skype/skype-29.png
 ```
 
-**4.3.8.2 Local Policy for Nexmo**
+##### 4.3.8.2 Local Policy for Nexmo
 
 1. Navigate to **Configuration** → **Objects** → **session-router** → **local-policy**
 2. Click **Add** or **Modify**
@@ -497,7 +497,7 @@ image: public/screenshots/sip/configuration/guides/skype/skype-29.png
 image: public/screenshots/sip/configuration/guides/skype/skype-30.png
 ```
 
-**4.3.9 Create Surrogate Agent**
+#### 4.3.9 Create Surrogate Agent
 
 Surrogate registration allows the Acme Packet SBC to perform trunk side registrations to the
 Nexmo network. The values for register-user, register-contact-user and password are provided
@@ -522,7 +522,7 @@ by Nexmo.
 image: public/screenshots/sip/configuration/guides/skype/skype-31.png
 ```
 
-**4.3.10 Create Translation Rules**
+#### 4.3.10 Create Translation Rules
 
 The below translation rule is applied to `Out translationid` of Skype for Business Session agent.
 This adds + in the user part of the TO header.
@@ -537,13 +537,13 @@ This adds + in the user part of the TO header.
 image: public/screenshots/sip/configuration/guides/skype/skype-32.png
 ```
 
-**4.3.11 Create SIP Manipulation**
+#### 4.3.11 Create SIP Manipulation
 
 SIP manipulation specifies rules for manipulating the contents of specified SIP headers. For the
 Compliance test, a set of SIP manipulations were configured that contain a set of SIP header
 manipulation rules (HMR) on traffic From or To with respect to Nexmo and Skype for Business.
 
-**4.3.11.1 SIP Manipulation for Skype for Business**
+##### 4.3.11.1 SIP Manipulation for Skype for Business**
 
 `add_pai` rule is applied in the SIP header coming from Skype for business to Oracle E-SBC. The
 manipulation script is assigned to `In manipulationid` of Session agent of Skype for Business.
@@ -697,7 +697,7 @@ match-value
 new-value sfbsp.local
 ```
 
-**4.3.11.2 SIP Manipulation for Nexmo**
+##### 4.3.11.2 SIP Manipulation for Nexmo
 
 `Surrogate` rule is applied to SIP header coming from Oracle E-SBC to Nexmo. The manipulation
 script is assigned to `out manipulationid` of Session agent of Nexmo.
@@ -858,9 +858,9 @@ match-value
 new-value sip.nexmo.com
 ```
 
-#### 4.4 Nexmo Configuration
+### 4.4 Nexmo Configuration
 
-**4.4.1 Configure Numbers in Nexmo Account**
+#### 4.4.1 Configure Numbers in Nexmo Account
 
 1. Login to the Nexmo account using the credentials provided at the time of registration. A
     **Key** and **Secret** will be displayed on the dashboard and this can be used as the
@@ -886,7 +886,7 @@ image: public/screenshots/sip/configuration/guides/vonage-dashboard/numbers-dash
 image: public/screenshots/sip/configuration/guides/vonage-dashboard/edit-number.png
 ```
 
-## 5 Summary of Tests and Results
+## 5. Summary of Tests and Results
 
 *N/S = Not Supported N/T= Not Tested N/A= Not Applicable*
 
