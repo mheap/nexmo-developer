@@ -3,11 +3,13 @@ title: Avaya SBCe
 description: How to set up Vonage SIP with Avaya SBCe
 ---
 
-# Nexmo SIP Trunking Configuration Guide
+# Vonage SIP Trunking Configuration Guide
 
 ## Avaya Aura 6.3.18.0.631804 With Avaya SBCe 6.3.7-01-12611
 
 ### June 2017
+
+> **Note**: Parts of this guide still refer to Nexmo. Vonage acquired Nexmo in June 2016.
 
 ## Contents
 

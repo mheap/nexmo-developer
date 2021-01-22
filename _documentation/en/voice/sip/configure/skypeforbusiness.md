@@ -3,11 +3,13 @@ title: Skype for Business
 description: How to set up Vonage SIP with Skype for Business with Oracle E-SBC
 ---
 
-# Nexmo SIP Trunking Configuration Guide 
+# Vonage SIP Trunking Configuration Guide 
 
 ### Skype for Business `6.0.9319` With Oracle E-SBC Acme Packet 3820 `ECZ7.3.0 Patch 2` (Build 75)
 
 ### July 2017
+
+> **Note**: Parts of this guide still refer to Nexmo. Vonage acquired Nexmo in June 2016.
 
 ## Contents
 

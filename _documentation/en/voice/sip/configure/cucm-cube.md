@@ -3,11 +3,13 @@ title: Cisco CUCM/CUBE
 description: How to set up Vonage SIP with Cisco CUCM/CUBE
 ---
 
-# Nexmo SIP Trunking Configuration Guide 
+# Vonage SIP Trunking Configuration Guide 
 
 ## `CUCM 11.5.1.12900` With `CUBE 16.05.01b`
 
 ### May 2017
+
+> **Note**: Parts of this guide still refer to Nexmo. Vonage acquired Nexmo in June 2016.
 
 ## Contents
 
