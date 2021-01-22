@@ -9,6 +9,56 @@ description: How to set up Vonage SIP with Skype for Business with Oracle E-SBC
 
 ### July 2017
 
+## Contents
+
+- [1. Audience](#1-audience)
+- [2. SIP Trunking Network Components](#2-sip-trunking-network-components)
+  - 2.1 Network Components
+- [3. Features](#3-features)
+  - 3.1.1 Features Supported
+  - 3.1.2 Features Not Supported by PBX
+  - 3.1.3 Features Not Tested
+  - 3.1.4 Caveats and Limitations
+- [4. Configuration](#4-configuration)
+  - 4.1 IP Address Worksheet
+  - 4.2 Configuring Skype for Business
+      - 4.2.1 Enable TCP Mode
+      - 4.2.2 Adding a Trunk
+      - 4.2.3 Trunk Configuration
+      - 4.2.4 Voice Routing
+      - 4.2.5 Dial Plan
+  - 4.3 Oracle E-SBC Configuration
+      - 4.3.1 Create Physical Interfaces
+          - 4.3.1.1 Physical Interface for Skype for Business
+          - 4.3.1.2 Physical Interface for Nexmo
+      - 4.3.2 Create Network Interfaces
+          - 4.3.2.1 Network Interface for Skype for Business
+          - 4.3.2.2 Network Interface for Nexmo
+      - 4.3.3 Create Realm-config
+          - 4.3.3.1 Realm for Skype for Business
+          - 4.3.3.2 Realm for Nexmo
+      - 4.3.4 Create Steering Pool
+          - 4.3.4.1 Steering Pool for Skype for Business
+          - 4.3.4.2 Steering pool for Nexmo
+      - 4.3.5 Modify SIP Config
+      - 4.3.6 Create SIP Interface
+          - 4.3.6.1 SIP Interface for Skype for Business
+          - 4.3.6.2 SIP Interface for Nexmo
+      - 4.3.7 Create Session Agent
+          - 4.3.7.1 Session Agent for Skype for Business
+          - 4.3.7.2 Session Agent for Nexmo
+      - 4.3.8 Create Local Policy
+          - 4.3.8.1 Local Policy for Skype for Business
+          - 4.3.8.2 Local Policy for Nexmo
+      - 4.3.9 Create Surrogate Agent
+      - 4.3.10 Create Translation Rules
+      - 4.3.11 Create SIP Manipulation
+          - 4.3.11.1 SIP Manipulation for Skype for Business**
+          - 4.3.11.2 SIP Manipulation for Nexmo
+  - 4.4 Nexmo Configuration
+      - 4.4.1 Configure Numbers in Nexmo Account
+- [5. Summary of Tests and Results](#5-summary-of-tests-and-results)
+
 ## 1. Audience
 
 This document is intended for the SIP trunk customer’s technical staff and Value Added Retailer

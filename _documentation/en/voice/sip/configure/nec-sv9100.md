@@ -3,9 +3,13 @@ title: NEC SV9100
 description: How to set up Vonage SIP with NEC SV9100
 ---
 
-# Nexmo SIP Trunking Configuration Guide NEC SV9100 version 6.00.
+# Nexmo SIP Trunking Configuration Guide
+
+## NEC SV9100 version 6.00.
 
 ### August 2017
+
+## Contents
 
 - [1. Audience](#1-audience)
 - [2. SIP Trunking Network Components](#2-sip-trunking-network-components)
