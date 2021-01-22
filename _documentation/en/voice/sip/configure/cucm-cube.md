@@ -476,16 +476,13 @@ no network-clock synchronization automatic
 
 ### 4.4 Configure Numbers in Nexmo Account.
 
-1. Login to the Nexmo account using the credentials provided at the time of registration. A
-    **Key** and **Secret** will be displayed on the dashboard and this can be used as the
-    username and password for Registration SIP Trunks.
+1. Login to the Nexmo account using the credentials provided at the time of registration. A **Key** and **Secret** will be displayed on the dashboard and this can be used as the username and password for Registration SIP Trunks.
 
     ```screenshot
     image: public/screenshots/sip/configuration/guides/vonage-dashboard/dashboard-key-secret.png
     ```
 
-2. In order to provide the URL to which the call has to be routed from Nexmo, navigate to
-    the **Numbers** tab
+2. In order to provide the URL to which the call has to be routed from Nexmo, navigate to the **Numbers** tab
 3. Click **Edit** against each number as shown below
 
     ```screenshot
