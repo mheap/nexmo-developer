@@ -53,7 +53,7 @@ description: How to set up Vonage SIP with Skype for Business with Oracle E-SBC
       - 4.3.9 Create Surrogate Agent
       - 4.3.10 Create Translation Rules
       - 4.3.11 Create SIP Manipulation
-          - 4.3.11.1 SIP Manipulation for Skype for Business**
+          - 4.3.11.1 SIP Manipulation for Skype for Business
           - 4.3.11.2 SIP Manipulation for Nexmo
   - 4.4 Nexmo Configuration
       - 4.4.1 Configure Numbers in Nexmo Account
@@ -530,7 +530,7 @@ SIP manipulation specifies rules for manipulating the contents of specified SIP 
 Compliance test, a set of SIP manipulations were configured that contain a set of SIP header
 manipulation rules (HMR) on traffic From or To with respect to Nexmo and Skype for Business.
 
-##### 4.3.11.1 SIP Manipulation for Skype for Business**
+##### 4.3.11.1 SIP Manipulation for Skype for Business
 
 `add_pai` rule is applied in the SIP header coming from Skype for business to Oracle E-SBC. The
 manipulation script is assigned to `In manipulationid` of Session agent of Skype for Business.
