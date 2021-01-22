@@ -51,6 +51,7 @@ a Cisco UCM and Cisco UBE configuration to Nexmo SIP trunking.
 ```screenshot
 image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-1.png
 ```
+![](/images/sip-config/cisco-cucm/cisco-cucm-1.png)
 
 ### 2.1 Hardware Components
 
@@ -116,9 +117,7 @@ must obtain and use the values for your deployment.
 
 #### 4.2.1 Cisco UC Version
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-2.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-2.png)
 
 #### 4.2.2 Cisco Unified Call Manager Service Parameters.
 
@@ -128,9 +127,7 @@ Navigation: System &rarr; Service Parameters
 2. Select **Service** : Cisco Call Manager (Active)
 3. All other fields are set to default values
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-3.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-3.png)
 
 #### 4.2.3 Off-Net Calls via Nexmo SIP Trunk
 
@@ -147,35 +144,23 @@ Navigation: System &rarr; Security &rarr; SIP Trunk Security Profile
 3. SIP trunks to Nexmo should use UDP as a transport protocol for SIP. This is configured
     using SIP Trunk Security profile, which is later assigned to the SIP trunk itself.
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-4.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-4.png)
 
 **4.2.3.2 SIP Profile Configuration**
 
 Navigation: Device &rarr; Device Settings &rarr; SIP Profile
 
-1. Set **Name** : _Standard SIP Profile_ is used as an example
+> Set **Name** : _Standard SIP Profile_ is used as an example
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-5.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-5.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-6.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-6.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-7.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-7.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-8.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-8.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-9.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-9.png)
 
 **4.2.3.3 SIP Trunk Configuration**
 
@@ -183,33 +168,19 @@ Create SIP trunk to Cisco UBE
 
 Navigation : Device &rarr; Trunk
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-10.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-10.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-11.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-11.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-12.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-12.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-13.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-13.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-14.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-14.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-15.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-15.png)
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-16.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-16.png)
 
 #### 4.2.4 Dial Plan
 
@@ -221,9 +192,7 @@ Route patterns are configured as below:
 &nbsp; Cisco IP phone dial "8"+11 digit number to access PSTN via Cisco UBE. "8" is removed
 before sending to Cisco UBE.
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-17.png
-```
+![](/images/sip-config/cisco-cucm/cisco-cucm-17.png)
 
 ### 4.3 Configuring Cisco Unified Border Element
 
