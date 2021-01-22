@@ -11,15 +11,15 @@ description: How to set up Vonage SIP with Cisco CUCM/CUBE
 
 ## Contents
 
-1. Introduction
-2. SIP Trunking Network Components
+- [1. Introduction](#1-Introduction)
+- [2. SIP Trunking Network Components](#2-SIP-Trunking-Network-Components)
    * 2.1 Hardware Components
    * 2.2 Software Requirements
-3. Features
+- [3. Features](#3-Features)
       * 3.1.1 Features Supported
       * 3.1.2 Features Not Supported by PBX
       * 3.1.3 Caveats and Limitations
-4. Configuration.
+- [4. Configuration](#4-Configuration)
    * 4.1 IP Address Worksheet
    * 4.2 Configuring Cisco Unified Communications manager
       * 4.2.1 Cisco UC Version
