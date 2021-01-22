@@ -512,22 +512,22 @@ the Messaging server as shown below.
     **Key** and **Secret** will be displayed on the dashboard and this can be used as the
     username and password for Registration SIP Trunks.
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/vonage-dashboard/dashboard-key-secret.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/vonage-dashboard/dashboard-key-secret.png
+    ```
 
 2. In order to provide the URL to which the call has to be routed from Nexmo, navigate to
     the **Numbers** tab
 3. Click **Edit** against each number as shown below
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/vonage-dashboard/numbers-dashboard.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/vonage-dashboard/numbers-dashboard.png
+    ```
 
-1. A pop-up will be displayed
-2. Select the " **Forward to** " and provide the URL to which the calls route
-3. Click **Update** to save the changes
+4. A pop-up will be displayed
+5. Select the " **Forward to** " and provide the URL to which the calls route
+6. Click **Update** to save the changes
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/vonage-dashboard/edit-number.png
-```
+    ```screenshot
+    image: public/screenshots/sip/configuration/guides/vonage-dashboard/edit-number.png
+    ```
