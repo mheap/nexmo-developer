@@ -11,14 +11,14 @@ description: How to set up Vonage SIP with Avaya SBCe
 
 ## Contents
 
-- [1 Introduction](#1-introduction)
-- [2 SIP Trunking Network Components](#2-sip-trunking-network-components)
+- [1. Introduction](#1-introduction)
+- [2. SIP Trunking Network Components](#2-sip-trunking-network-components)
    - 2.1 Network Components
-- [3 Features](#3-features)
+- [3. Features](#3-features)
       - 3.1.1 Features Supported
       - 3.1.2 Features Not Supported by PBX
       - 3.1.3 Caveats and Limitations
-- [4 Configuration](#4-configuration)
+- [4. Configuration](#4-configuration)
    - 4.1 IP Address Worksheet
    - 4.2 Configuring Avaya Aura Communication Manager
       - 4.2.1 Licenses
@@ -75,7 +75,7 @@ an Avaya Aura and Avaya SBCe configuration to Nexmo SIP trunking.
 
 ## 3. Features
 
-#### 3.1.1 Features Supported
+### 3.1.1 Features Supported
 
 * Incoming and outgoing off-net calls using G711ULAW & G711ALAW voice codecs
 * Calling Line (number) Identification Presentation
@@ -87,11 +87,11 @@ an Avaya Aura and Avaya SBCe configuration to Nexmo SIP trunking.
 * DTMF relay both directions (RFC2833)
 * Media flow-through on Avaya SBCe
 
-#### 3.1.2 Features Not Supported by PBX
+### 3.1.2 Features Not Supported by PBX
 
 * None
 
-#### 3.1.3 Caveats and Limitations
+### 3.1.3 Caveats and Limitations
 
 * Session refresh is always done by Avaya Aura. The issue does not impact the calls.
 
@@ -209,7 +209,7 @@ Use the `change dialplan` analysis and `change feature-access-codes` commands
 
 #### 4.2.10 Call Routing
 
-**4.2.10.1 Outbound Calls**
+##### 4.2.10.1 Outbound Calls
 
 The `change ars analysis` command is used for outbound PSTN call routing. 121 is shown as an
 example setup for this test.
@@ -265,7 +265,7 @@ to a SIP Entity.
 
 Navigate to **Routing > Adaptations > New**
 
-**4.3.1.1 Adaptation for Avaya SBCe**
+##### 4.3.1.1 Adaptation for Avaya SBCe
 
 The following adaption rules are provisioned in the "Module parameter" field:
 
@@ -279,7 +279,7 @@ Avaya SBCe.
 
 #### 4.3.2 SIP Entities
 
-**4.3.2.1 SIP Entity for Avaya SBCe**
+##### 4.3.2.1 SIP Entity for Avaya SBCe
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-25.png)
 
@@ -287,7 +287,7 @@ Avaya SBCe.
 * The link between the SM and the Avaya sBCe was configured as trusted using TCP
 protocol and port 5060
 
-**4.3.2.2 SIP Entity for Avaya CM**
+##### 4.3.2.2 SIP Entity for Avaya CM
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-26.png)
 
@@ -295,7 +295,7 @@ protocol and port 5060
 protocol and port 5060.
 
 
-**4.3.2.3 SIP Entity for Avaya MM**
+##### 4.3.2.3 SIP Entity for Avaya MM
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-27.png)
 
@@ -306,38 +306,38 @@ protocol and port 5060
 
 Navigate to **Routing > Routing Policies > New**
 
-**4.3.3.1 Routing Policy to Avaya SBCe**
+##### 4.3.3.1 Routing Policy to Avaya SBCe
 Create a routing policy to Avaya SBCe as shown below.
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-28.png)
 
-**4.3.3.2 Routing Policy to Avaya CM**
+##### 4.3.3.2 Routing Policy to Avaya CM
 Create a routing policy to Avaya CM as shown below
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-29.png)
 
-**4.3.3.3 Routing Policy to Avaya MM**
+##### 4.3.3.3 Routing Policy to Avaya MM
 Create a routing policy to Avaya MM as shown below
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-30.png)
 
 #### 4.3.4 Dial Patterns
 
-**4.3.4.1 Routing Policy to Avaya SBCe**
+##### 4.3.4.1 Routing Policy to Avaya SBCe
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-31.png)
 
 * Create a dial pattern to route the call to PSTN via Avaya SBCe and link the Routing
 Policy to Avaya SBCe as shown above.
 
-**4.3.4.2 Routing Policy to Avaya CM**
+##### 4.3.4.2 Routing Policy to Avaya CM
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-32.png)
 
 * Create a dial pattern to route the call to Avaya Aura and link the Routing Policy to Avaya
 CM as shown above
 
-**4.3.4.3 Routing Policy to Avaya MM**
+##### 4.3.4.3 Routing Policy to Avaya MM
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-33.png)
 
@@ -369,7 +369,7 @@ Navigate to **User Management> Endpoints > Manage Users**
 
 #### 4.4.1 Global Profile
 
-**4.4.1.1 Server Interworking**
+##### 4.4.1.1 Server Interworking
 
 Navigate to System Management > Global Profiles > Server Interworking. Create a clone named
 AASM of predefined Interworking Profile `avaya-ru` as shown below.
@@ -398,7 +398,7 @@ Create a Serving Interworking profile for Nexmo as shown below.
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-48.png)
 
-**4.4.1.2 Routing**
+##### 4.4.1.2 Routing
 Navigate to **System Management > Global Profiles > Routing**
 
 Creating a Routing profile for Avaya Session Manager as shown below.
@@ -409,7 +409,7 @@ Creating a Routing profile for Nexmo as shown below.
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-50.png)
 
-**4.4.1.3 Server Configuration**
+##### 4.4.1.3 Server Configuration
 Navigate to **System Management > Global Profiles > Server Configuration**
 
 Create a Server configuration profile for Avaya Session Manager as shown below.
@@ -426,7 +426,7 @@ Create a Server configuration profile for Nexmo as shown below.
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-55.png)
 
-**4.4.1.4 Topology Hiding**
+##### 4.4.1.4 Topology Hiding
 Navigate to **System Management > Global Profiles > Topology Hiding**
 
 Creating a Topology hiding profile for Avaya Session Manager as shown below
@@ -435,7 +435,7 @@ Creating a Topology hiding profile for Avaya Session Manager as shown below
 
 #### 4.4.2 Domain Policies
 
-**4.4.2.1 Signaling Rules**
+##### 4.4.2.1 Signaling Rules
 Signaling Rules define the actions to be taken (Allow, Block, Block with Response, etc.) for each
 type of SIP-specific signaling request and response message.
 
@@ -453,7 +453,7 @@ unwanted headers coming from Session Manager from being propagated to Nexmo.
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-60.png)
 
-**4.4.2.2 End Point Policy Groups**
+##### 4.4.2.2 End Point Policy Groups
 End Point Policy group "Avaya SM" is created as shown below
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-61.png)
@@ -462,19 +462,19 @@ End Point Policy group "Avaya SM" is created as shown below
 
 #### 4.4.3 Device Specific Settings
 
-**4.4.3.1 Media Interface**
+##### 4.4.3.1 Media Interface
 Navigate to **System Management > Device Specific Settings > Media Interface**. Create
 Internal and External Media Interface as shown below.
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-63.png)
 
-**4.4.3.2 Signaling Interface**
+##### 4.4.3.2 Signaling Interface
 Navigate to **System Management > Device Specific Settings > Signaling Interface**. Create
 Internal and External Signaling Interface as shown below.
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-64.png)
 
-**4.4.3.3 End Point Flows**
+##### 4.4.3.3 End Point Flows
 Navigate to **System Management > Device Specific Settings > End Point Flows**. Select the
 Server Flows tab and click Add. Create a Server flow for Avaya Session Manager as shown
 below.
@@ -490,13 +490,13 @@ Select the Server Flows tab and click Add. Create a Server flow for Nexmo as sho
 This section describes the steps for configuring the Avaya Modular Messaging to inter-operate
 with Avaya Aura Session Manager via SIP trunking.
 
-**4.5.1.1 Messaging Server**
+##### 4.5.1.1 Messaging Server
 Navigate to *Messaging Administration > Networked Machines* to configure Modular Messaging
 Server parameters as shown below.
 
 ![](/images/sip-config/avaya-sbce/avaya-sbce-67.png)
 
-**4.5.1.2 Subscriber**
+##### 4.5.1.2 Subscriber
 Navigate to **Messaging Administration > Subscriber Management**. Configure a subscriber for
 the Messaging server as shown below.
 
