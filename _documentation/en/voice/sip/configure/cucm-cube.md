@@ -11,15 +11,15 @@ description: How to set up Vonage SIP with Cisco CUCM/CUBE
 
 ## Contents
 
-- [1. Introduction](#1-Introduction)
-- [2. SIP Trunking Network Components](#2-SIP-Trunking-Network-Components)
+- [1. Introduction](#1-introduction)
+- [2. SIP Trunking Network Components](#2-sip-trunking-network-components)
    * 2.1 Hardware Components
    * 2.2 Software Requirements
-- [3. Features](#3-Features)
+- [3. Features](#3-features)
       * 3.1.1 Features Supported
       * 3.1.2 Features Not Supported by PBX
       * 3.1.3 Caveats and Limitations
-- [4. Configuration](#4-Configuration)
+- [4. Configuration](#4-configuration)
    * 4.1 IP Address Worksheet
    * 4.2 Configuring Cisco Unified Communications manager
       * 4.2.1 Cisco UC Version
@@ -135,7 +135,7 @@ Off-net calls are served by SIP trunks configured between Cisco UCM and Nexmo Ne
 calls are routed via Cisco UBE. From Cisco UBE, we have pointed the trunk to sip.nexmo.com
 and opened the firewall for the list of IP addresses in the portal provided by Nexmo.
 
-**4.2.3.1 SIP Trunk Security Profile**
+##### 4.2.3.1 SIP Trunk Security Profile
 
 Navigation: System &rarr; Security &rarr; SIP Trunk Security Profile
 
@@ -146,7 +146,7 @@ Navigation: System &rarr; Security &rarr; SIP Trunk Security Profile
 
 ![](/images/sip-config/cisco-cucm/cisco-cucm-4.png)
 
-**4.2.3.2 SIP Profile Configuration**
+##### 4.2.3.2 SIP Profile Configuration
 
 Navigation: Device &rarr; Device Settings &rarr; SIP Profile
 
@@ -162,7 +162,7 @@ Navigation: Device &rarr; Device Settings &rarr; SIP Profile
 
 ![](/images/sip-config/cisco-cucm/cisco-cucm-9.png)
 
-**4.2.3.3 SIP Trunk Configuration**
+##### 4.2.3.3 SIP Trunk Configuration
 
 Create SIP trunk to Cisco UBE
 
