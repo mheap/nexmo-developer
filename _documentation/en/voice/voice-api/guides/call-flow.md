@@ -217,4 +217,4 @@ deactivate U
 
 <br/>
 
-The scenario described above is a typical example; however, the application may have any combination of scripted and live parts depending on a certain use-case.
+The scenario described above is a typical example; however, the application may have any combination of scripted and live parts depending on a certain use-case. Try [Contact Center Augmentation tutorial](/use-cases/contact-center) to learn how to implement the described scenario step by step.
