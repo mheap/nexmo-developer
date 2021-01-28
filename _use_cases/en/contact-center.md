@@ -16,7 +16,7 @@ In this tutorial, you will implement the following contact center scenario:
 * the user is connected to an agent,
 * after the agent closes the call, the user is transferred to a customer satisfaction survey.
 
-For a better understanding of the flow, see [Call Flow](/voice/voice-api/guides/call-flow) guide.
+For a better understanding of the flow, see [Call Flow](/voice/voice-api/guides/call-flow#switching-between-scripted-call-and-live-conversation) guide.
 
 ## Prerequisites
 
