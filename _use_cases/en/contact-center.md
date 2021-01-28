@@ -286,7 +286,7 @@ app.post('/webhooks/input', (request, response) => {
 
 > In the real-life case, you should implement a cache to store the pairs of user/agent leg identifiers and. The sample code shown in this tutorial will work properly only for one concurrent call.
 
-Extend your event webhook with REST API update call method with inline NCCO with `talk` and `input` actions to move the user leg to the surgey part:
+Extend your event webhook with REST API update call method with inline NCCO with `talk` and `input` actions to move the user leg to the survey part:
 
 ```js
 app.post('/webhooks/event', (request, response) => {
@@ -363,7 +363,7 @@ node index.js
 
 3. Open the dial pad and press 1 or 2.
 
-3. Answer the inbound call on your second mobile phone (you have to use at least two devices to get the scenario working; alternatively, you may use some calling application, for example, [Vonage Bussiness](https://www.vonage.com/unified-communications/features) app).
+3. Answer the inbound call on your second mobile phone (you have to use at least two devices to get the scenario working; alternatively, you may use some calling application, for example, [Vonage Business](https://www.vonage.com/unified-communications/features) app).
 
 4. Hang up on the second ("agent") device.
 
