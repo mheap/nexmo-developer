@@ -34,7 +34,7 @@ deactivate Vonage
 deactivate User
 ```
 <br/>
-<em style="margin-left: 258px;">Simple inbound call</em>
+<em style="margin-left: 258px;">Inbound call</em>
 
 <br/>
 
