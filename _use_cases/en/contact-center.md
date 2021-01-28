@@ -9,7 +9,7 @@ navigation_weight: 5
 
 # Contact Center Augmentation
 
-In this tutorial, you will implement a simple contact center scenario:
+In this tutorial, you will implement a the following contact center scenario:
 
 * the user calls the phone number,
 * initial greeting is played, and the user selects an option with IVR,
@@ -391,7 +391,7 @@ const vonage = new Vonage({
 
 ## Conclusion
 
-With Vonage Voice API you can empower your existing contact center solution with IVR of any logic complexity, which depends only on your target use case and is virtually unlimited. Or you can build your own solution from scratch using just Voice API and Client SDK. Switching between the scripted part of the call and live conversation (and back) gives you the ability to mix any phone calling use cases and create a seamless customer experience.
+With Vonage Voice API you can empower your existing contact center solution with IVR of any logic complexity, which depends only on your target use case and is virtually unlimited. Or you can build your own solution from scratch using the Voice API and [Client SDK](/client-sdk/overview). Switching between the scripted part of the call and live conversation (and back) gives you the ability to mix any phone calling use cases and create a seamless customer experience.
 
 ## Where Next?
 * learn more about [Call Flow](/voice/voice-api/guides/call-flow) with Voice API;
