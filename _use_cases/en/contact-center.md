@@ -9,7 +9,7 @@ navigation_weight: 5
 
 # Contact Center Augmentation
 
-In this tutorial, you will implement a the following contact center scenario:
+In this tutorial, you will implement the following contact center scenario:
 
 * the user calls the phone number,
 * initial greeting is played, and the user selects an option with IVR,
