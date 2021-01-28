@@ -279,6 +279,8 @@ Vietnamese | vi-VN | 2 | ✔️ | 🔈[/audio/tts-samples/vi-VN-2.mp3]
 Vietnamese | vi-VN | 3 | ✔️ | 🔈[/audio/tts-samples/vi-VN-3.mp3]
 Welsh | cy-GB | 0 | ✔️ | 🔈[/audio/tts-samples/cy-GB-0.mp3]
 
+[Download](https://github.com/nexmo-community/vapi-tts-voices) the list of voices as JSON file.
+
 ### Legacy Voice Names
 
 
