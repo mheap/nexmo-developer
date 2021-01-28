@@ -116,7 +116,7 @@ deactivate A
 
 ## Live Conversation
 
-In some scenarios, for example, [Private Voice Communication](/use-cases/private-voice-communication) use case, it’s required to connect two or more participants to establish a live conversation. Each call, inbound or outbound, is automatically added to the ad hoc conversation behind the scenes. To connect it to another call with NCCO, the application can either
+In some scenarios, for example, [Private Voice Communication](/use-cases/private-voice-communication) use case, it’s required to connect two or more participants to establish a live conversation. Each call, inbound or outbound, is automatically added to the new conversation behind the scenes. To connect it to another call with NCCO, the application can either
 
 * create a new outbound call with [`connect`](/voice/voice-api/ncco-reference#connect) action - it will be automatically joined to the same conversation;
 
