@@ -396,6 +396,6 @@ With Vonage Voice API you can empower your existing contact center solution with
 ## Where Next?
 * learn more about [Call Flow](/voice/voice-api/guides/call-flow) with Voice API;
 * improve customer experience with [Speech Recognition](/voice/voice-api/guides/asr), as an alternative or together with DTMF input;
-* see how to use [Call Recordging](/voice/voice-api/guides/recording) for future references and post-call analytics;
+* see how to use [Call Recording](/voice/voice-api/guides/recording) for future references and post-call analytics;
 * get direct access to the media with [WebSockets](/voice/voice-api/guides/websockets) for real-time analytics and AI integration.
 * check [Vonage AI](https://www.ai.vonage.com/) offering to get IVR or voice bot built by our experts for your specific use-case.
