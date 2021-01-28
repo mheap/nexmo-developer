@@ -78,7 +78,7 @@ Successfully established calls pass through the following states:
 
 Vonage platform sends corresponding event callbacks per each status. You can find more detail in the [Webhooks Reference](/voice/voice-api/webhook-reference).
 
-NCCO and webhooks allow scripting the call as the set of messages and questions to the user which is applicable to [voice notifications](/use-cases/voice-alerts), [IVR](/use-cases/interactive-voice-response), [voice assistant](/use-cases/asr-use-case-voice-bot) and other scenarios with a predefined list of possible events. With NCCO, the application may instruct Vonage platform to play the audio message ([Text-to-speech](/voice/voice-api/guides/text-to-speech) or [pre-recorded](/voice/voice-api/ncco-reference#stream)) and then expect user input either with [DTMF](/voice/voice-api/guides/dtmf) or [speech](/voice/voice-api/guides/asr). On user input, the application gets input callback with user choice (digit or speech transcript), analyses it and provides Vonage with new instructions (NCCO).
+NCCO and webhooks allow scripting the call as the set of messages and questions to the user which is applicable to [voice notifications](/use-cases/voice-alerts), [IVR](/use-cases/interactive-voice-response), [voice assistant](/use-cases/asr-use-case-voice-bot) and other scenarios with a predefined list of possible events. With NCCO, the application may instruct Vonage platform to play the audio message ([Text-to-speech](/voice/voice-api/guides/text-to-speech) or [prerecorded](/voice/voice-api/ncco-reference#stream)) and then expect user input either with [DTMF](/voice/voice-api/guides/dtmf) or [speech](/voice/voice-api/guides/asr). On user input, the application gets input callback with user choice (digit or speech transcript), analyses it and provides Vonage with new instructions (NCCO).
 
 ```sequence_diagram
 participant U as User
@@ -116,7 +116,7 @@ deactivate A
 
 ## Live Conversation
 
-In some scenarios, for example, [Private Voice Communication](/use-cases/private-voice-communication) use case, it’s required to connect two or more participants to establish a live conversation. Each call, inbound or outbound, is automatically added to the ad-hoc conversation behind the scenes. To connect it to another call with NCCO, the application can either
+In some scenarios, for example, [Private Voice Communication](/use-cases/private-voice-communication) use case, it’s required to connect two or more participants to establish a live conversation. Each call, inbound or outbound, is automatically added to the ad hoc conversation behind the scenes. To connect it to another call with NCCO, the application can either
 
 * create a new outbound call with [`connect`](/voice/voice-api/ncco-reference#connect) action - it will be automatically joined to the same conversation;
 
