@@ -50,8 +50,8 @@ This is an example of the push payload that is send to the Client SDK from Vonag
     },
     "cname": "NAM-23c60ce9-77b4-4c99-aaec-cd1ad6cc0e31", 
     "conversation": {
-      "conversation_id": "CON-b24b963a-c50c-46b9-ac26-871d408f2f7c", // Your conversation name
-      "name": "NAM-23c60ce9-77b4-4c99-aaec-cd1ad6cc0e31" // Your conversation ID
+      "conversation_id": "CON-b24b963a-c50c-46b9-ac26-871d408f2f7c", // Your conversation ID
+      "name": "NAM-23c60ce9-77b4-4c99-aaec-cd1ad6cc0e31" // Your conversation name
     },
     "initiator": {
       "invited": {
