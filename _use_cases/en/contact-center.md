@@ -248,6 +248,9 @@ app.post('/webhooks/input', (request, response) => {
       }
     }]
   }
+  
+  response.json(ncco)
+})  
 ```
 
 ## Add survey NCCO
