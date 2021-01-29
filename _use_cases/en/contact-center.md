@@ -318,9 +318,9 @@ app.post('/webhooks/event', (request, response) => {
         console.log('transfer ok')
       }
     })
-  } else {
-    response.sendStatus(200)
   }
+  
+  response.sendStatus(200)
 })
 ```
 
@@ -338,7 +338,14 @@ app.post('/webhooks/survey', (request, response) => {
 
   console.log('[%s] User %s gave %d', date, phone, score)
 
-  response.sendStatus(200)
+  const ncco = [
+    {
+      action: 'talk',
+      text: 'Thank you, good bye.'
+    }
+  ]
+
+  response.json(ncco)
 })
 ```
 
