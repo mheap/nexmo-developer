@@ -8,7 +8,7 @@ navigation_weight: 1
 
 Any voice interaction starts with a call.
 
-**Inbound** calls are calls made to the Vonage platform:
+**Inbound** calls are made to the Vonage platform by one of the following methods:
 
 * to a [Vonage number](/numbers/overview) from a regular phone,
 * to a [SIP domain](/voice/sip/concepts/programmable-sip) assigned to the application from PBX or any SIP capable software/hardware,
@@ -19,7 +19,7 @@ Any voice interaction starts with a call.
 ## Scripted Call
 Both inbound and outbound calls initially follow the same call flow once answered. This call flow is controlled by an NCCO. An NCCO is a script of actions to be run within the context of the call. Actions are executed in the order they appear in the script, with the next action starting when the previous action has finished executing. For more information about NCCOs, see the [NCCO Reference](/voice/voice-api/ncco-reference).
 
-When a call is answered, Vonage makes an HTTP request to the `answer_url` provided. For inbound calls, the `answer_url` is fetched from the configuration of the application that the number is linked to. For outbound calls, an `answer_url` is provided in the API request made to create the call.
+when the Vonage API platform receives a call on your Vonage number, it makes an HTTP request to the `answer_url` provided. For inbound calls, the `answer_url` is configured in your [Voice Application](/application/overview). For outbound calls, you provide an `answer_url` in the API request that creates the call.
 
 ```sequence_diagram
 activate User
@@ -78,7 +78,7 @@ Successfully established calls pass through the following states:
 
 The Vonage platform sends corresponding event callbacks per each status. You can find more detail in the [Webhooks Reference](/voice/voice-api/webhook-reference).
 
-NCCO and webhooks allow scripting the call as a series of messages and questions to the user, which is applicable to [voice notifications](/use-cases/voice-alerts), [IVR](/use-cases/interactive-voice-response), [voice assistants](/use-cases/asr-use-case-voice-bot) and other scenarios with a predefined list of possible events. With an NCCO, the application may instruct the Vonage platform to play the audio message ([text-to-speech](/voice/voice-api/guides/text-to-speech) or [prerecorded](/voice/voice-api/ncco-reference#stream)) and then expect user input either with [DTMF](/voice/voice-api/guides/dtmf) or [speech](/voice/voice-api/guides/asr). On user input, the application gets input callback from the user choice (digit or speech transcript), analyzes it and provides Vonage with new instructions (NCCO).
+NCCO and webhooks allow scripting the call as a series of messages and questions to the user, which is applicable to [voice notifications](/use-cases/voice-alerts), [IVR](/use-cases/interactive-voice-response), [voice assistants](/use-cases/asr-use-case-voice-bot) and other scenarios with a predefined list of possible events. With an NCCO, the application may instruct the Vonage platform to play the audio message ([text-to-speech](/voice/voice-api/guides/text-to-speech) or [prerecorded](/voice/voice-api/ncco-reference#stream)) and then expect user input either with [DTMF](/voice/voice-api/guides/dtmf) or [speech](/voice/voice-api/guides/asr). When the user has made a menu selection, your application is notified and is able to direct the call appropriately by supplying new call instructions in the form of an NCCO.
 
 ```sequence_diagram
 participant U as User
@@ -116,7 +116,7 @@ deactivate A
 
 ## Live Conversation
 
-In some scenarios, for example, a [Private Voice Communication](/use-cases/private-voice-communication) use case, it’s required to connect two or more participants to establish a live conversation. Each call, inbound or outbound, is automatically added to the new conversation behind the scenes. To connect it to another call with an NCCO, the application can either
+In some scenarios, for example, a [private voice communication](/use-cases/private-voice-communication) use case, you want to connect two or more participants to establish a live conversation. Each call, inbound or outbound, is automatically added to the new conversation behind the scenes. To connect it to another call with an NCCO, the application can either
 
 * create a new outbound call with the [`connect`](/voice/voice-api/ncco-reference#connect) action - it will be automatically joined to the same conversation;
 
@@ -159,12 +159,12 @@ deactivate U2
 <br/>
 
 
-Using a sequence of `connect` actions, the application may join other members in the conversation (up to 50 total conversation participants).
+Using a sequence of `connect` actions, the application may add other members to the conversation (up to 50 total conversation participants).
 
 > Since any type of voice endpoint might be used in the `connect` action, the second member is not necessarily a human: it might be a voice bot talking to the user using the media passed through the [WebSocket](/voice/voice-api/guides/websockets) connection.
 
 ## Switching between Scripted Call and Live Conversation
-IVR usually has one or more options to speak to a live agent, sales, or support person. Also, in some cases a live conversation may end up with some scripted parts. For example, a customer satisfaction survey. The Voice API allows switching from one form of interaction to another so that the call flow may consist of three (or more in the complex cases) parts:
+IVR usually has one or more options to speak to a live agent, sales, or support person. Also, in some cases a live conversation may end up with some scripted parts. For example, a customer satisfaction survey. The Voice API allows switching from one form of interaction to another so that the call flow may consist of three (or more in  complex cases) parts:
 
 * Initial IVR, controlled with NCCO and webhooks; ends with `connect` or `conversation` action → 
 
