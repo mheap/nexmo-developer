@@ -17,7 +17,7 @@ This repository is the content for <https://developer.nexmo.com>, which includes
 We write the docs in US English and enforce this at build time with a CI check. You can run the check locally using the following command:
 
 ```
-yarn spellchek
+yarn spellcheck
 ```
 
 Or if you're using Docker:
