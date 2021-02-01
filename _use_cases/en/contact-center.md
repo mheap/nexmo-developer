@@ -22,10 +22,11 @@ For a better understanding of the flow, see [Call Flow](/voice/voice-api/guides/
 
 To complete this tutorial, you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up)
-* The [Nexmo CLI](/application/nexmo-cli) installed and set up
-* [ngrok](https://ngrok.com/) - to make your development web server accessible to Vonage's servers over the Internet
-* [Node.JS](https://nodejs.org/en/download/) installed
+* A [Vonage account](https://dashboard.nexmo.com/sign-up),
+* The [Nexmo CLI](/application/nexmo-cli) installed and set up,
+* [ngrok](https://ngrok.com/) - to make your development web server accessible to Vonage's servers over the Internet,
+* [Node.JS](https://nodejs.org/en/download/) installed,
+* two phone calling devices with PSTN numbers assigned, for example, two mobile phones or an application with calling capabity like [Vonage Business](https://www.vonage.com/unified-communications/features) app.
 
 ## Install the dependencies
 
@@ -141,7 +142,7 @@ Vonage makes a `POST` request to this endpoint every time the call status change
 
 ## Write your input webhook
 
-DTMF input will be sent to the specific URL you set in the `input` action: `/webhooks/input`. Add a webhook to process the result and provide some user interaction.
+DTMF input results will be sent to the specific URL you set in the `input` action: `/webhooks/input`. Add a webhook to process the result and add some user interaction.
 
 In case of a successful recognition, the request payload will look as follows:
 
@@ -163,9 +164,9 @@ In case of a successful recognition, the request payload will look as follows:
 
 So you should use the `dtmf.digits` array for further analysis. To connect both user and agent of the corresponding department, you'll create an outbound call to the agent endpoint. You can use a test phone number in this sample for simplicity, for example, your mobile number. In real life case, the endpoint might be still a PSTN number or [SIP endpoint](/voice/sip/concepts/programmable-sip) to connect your existing PBX or contact center, or WebRTC client if you're developing your contact center solution from scratch - Vonage [Client SDK](/client-sdk/overview) provides all the features required for implementing your own Contact Center agent application.
 
-Finally, both calls (legs) should be moved to one conference room (named [conversation](/voice/voice-api/ncco-reference#conversation)). To do that, use the `conversation` action with the same `name` both for the user call (the inbound leg) and the agent call (the outbound leg). To generate the conversation name, you may use any unique ID generation method (for example, a timestamp).
+Finally, both calls (legs) should be moved to one conference room (named [conversation](/voice/voice-api/ncco-reference#conversation)). To do that, you should use `conversation` action with the same `name` both for the user call (the inbound leg) and the agent leg (the outbound call). To generate the conversation name, you may use any unique ID generation method, for example, using the actual timestamp.
 
-> As an option, you may use `connect` action in the NCCO to connect the user to the agent. The difference is that with `connect`, the call will terminate as soon as any participant hangs up, and there is only one leg left. If that happens, it would be impossible to transfer the user to the survey after the call. If you want the user to remain connected to the call after the agent leaves, choose the `conversation` action instead, as shown in the example below.
+> As an option, you may use `connect` action in the NCCO to connect the user to the agent. The difference is that with `connect`, the call will be immediately completed when any of the call participants hang up, and there is only one leg left. So, it would be impossible to transfer the user to the survey after the call; if that's not needed in your case, `connect` is a bit more handy option. If you want the user still connected after the agent completes the call, choose `conversation` as shown in the example below.
 
 Add the code to handle the input callback:
 
@@ -255,7 +256,7 @@ app.post('/webhooks/input', (request, response) => {
 
 ## Add survey NCCO
 
-Next, to implement the customer satisfaction survey at the end of the call, you should handle the `completed` event for the agent's leg. It will arrive at the same event webhook, so you should extend the event webhook with a [transfer request](/voice/voice-api/code-snippets/transfer-a-call-inline-ncco) to the survey NCCO. To do that, you must store the user and the agent leg identifiers:
+Next, to implement the customer satisfaction survey at the end of the call, you should handle `completed` event for the agent's leg. It will arrive at the same event webhook, so you should extend the event webhook with [transfer request](/voice/voice-api/code-snippets/transfer-a-call-inline-ncco) to the survey NCCO. In order to do that, you have to store the user and the agent leg identifiers:
 
 ```
 var userLegId = ''
@@ -289,7 +290,7 @@ app.post('/webhooks/input', (request, response) => {
 
 > In the real-life case, you should implement a cache to store the pairs of user/agent leg identifiers and. The sample code shown in this tutorial will work properly only for one concurrent call.
 
-Extend your event webhook with a call to the `update` method, supplying an inline NCCO that contains `talk` and `input` actions to direct the user to the survey:
+Extend your event webhook with REST API update call method with inline NCCO with `talk` and `input` actions to move the user leg to the survey part:
 
 ```js
 app.post('/webhooks/event', (request, response) => {
@@ -329,7 +330,7 @@ app.post('/webhooks/event', (request, response) => {
 
 ## Write your survey webhook
 
-Create the survey webhook to print the results:
+Add survey webhook to print the results:
 
 ```js
 app.post('/webhooks/survey', (request, response) => {
@@ -369,13 +370,13 @@ app.listen(port, () => console.log(`Listening on port ${port}`))
 node index.js
 ```
 
-2. Call your Vonage number from your mobile phone and listen to the welcome message.
+2. Call your Vonage number from your first device ("user phone") and listen to the welcome message.
 
-3. Using your phone's dial pad press either 1 or 2.
+3. Open the dial pad and press 1 or 2.
 
-3. Answer the inbound call on your second mobile phone (you have to use at least two devices to get the scenario working; alternatively, you may use some calling application, for example, [Vonage Business](https://www.vonage.com/unified-communications/features) app).
+3. Answer the inbound call on your second device ("agent phone").
 
-4. Hang up on the second ("agent") device.
+4. Hang up on the agent phone.
 
 5. Listen to the survey message and press any key on the first device.
 
@@ -401,7 +402,7 @@ const vonage = new Vonage({
 
 ## Conclusion
 
-With the Vonage Voice API you can empower your existing contact center solution with sophisticated IVR logic that meets the needs of your business and customers. Or you can build your own solution from scratch using the Voice API and [Client SDK](/client-sdk/overview). Switching between the scripted part of the call and live conversation enables you to create a seamless customer experience.
+With Vonage Voice API you can empower your existing contact center solution with IVR of any logic complexity, which depends only on your target use case and is virtually unlimited. Or you can build your own solution from scratch using the Voice API and [Client SDK](/client-sdk/overview). Switching between the scripted part of the call and live conversation (and back) gives you the ability to mix any phone calling use cases and create a seamless customer experience.
 
 ## Where Next?
 * learn more about [Call Flow](/voice/voice-api/guides/call-flow) with Voice API;
