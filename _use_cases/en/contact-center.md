@@ -26,7 +26,7 @@ To complete this tutorial, you need:
 * The [Nexmo CLI](/application/nexmo-cli) installed and set up,
 * [ngrok](https://ngrok.com/) - to make your development web server accessible to Vonage's servers over the Internet,
 * [Node.JS](https://nodejs.org/en/download/) installed,
-* two phone calling devices with PSTN numbers assigned - "user phone" and "agent phone", for example, two mobile phones or an application with calling capabity like [Vonage Business](https://www.vonage.com/unified-communications/features) app.
+* two phone calling devices with PSTN numbers assigned - "user phone" and "agent phone", for example, two mobile phones or an application with calling capability like [Vonage Business](https://www.vonage.com/unified-communications/features) app.
 
 ## Install the dependencies
 
