@@ -117,7 +117,7 @@ source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/pushkit-d
 
 The `pushPayload` contains information about the incoming call that you can use to [report the call](https://developer.apple.com/documentation/pushkit/responding_to_voip_notifications_from_pushkit) with CallKit. You can view a sample of the JSON contained in the [push payload](/client-sdk/in-app-voice/guides/push-notification-payload.md).
 
-For the SDK to enable push notifications and to process the push notifications properly `NXMClient` should be logged in. You can store both the push token and push payload and handle them when the client successfully connects. For an example of this, view the [blog post](LINKHERE) on using push notifications with CallKit and its accompanying [sample project](https://github.com/nexmo-community/swift-phone-to-app-callkit).
+For the SDK to enable push notifications and to process the push notifications properly `NXMClient` should be logged in. You can store both the push token and push payload and handle them when the client successfully connects. For an example of this, view the [blog post](https://learn.vonage.com/blog/2021/01/28/handling-voip-push-notifications-with-callkit) on using push notifications with CallKit and its accompanying [sample project](https://github.com/nexmo-community/swift-phone-to-app-callkit).
 
 ## Conclusion
 
