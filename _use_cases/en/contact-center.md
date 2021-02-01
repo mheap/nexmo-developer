@@ -11,10 +11,10 @@ navigation_weight: 5
 
 In this tutorial, you will implement the following contact center scenario:
 
-* the user calls the phone number,
-* initial greeting is played, and the user selects an option with IVR,
-* the user is connected to an agent,
-* after the agent closes the call, the user is transferred to a customer satisfaction survey.
+* The user calls your Vonage number,
+* Initial greeting is played, and the user selects an option with IVR,
+* The user is connected to an agent,
+* After the agent closes the call, the user is transferred to a customer satisfaction survey.
 
 For a better understanding of the flow, see [Call Flow](/voice/voice-api/guides/call-flow#switching-between-scripted-call-and-live-conversation) guide.
 
