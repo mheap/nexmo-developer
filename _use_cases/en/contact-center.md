@@ -405,8 +405,8 @@ const vonage = new Vonage({
 With Vonage Voice API you can empower your existing contact center solution with IVR of any logic complexity, which depends only on your target use case and is virtually unlimited. Or you can build your own solution from scratch using the Voice API and [Client SDK](/client-sdk/overview). Switching between the scripted part of the call and live conversation (and back) gives you the ability to mix any phone calling use cases and create a seamless customer experience.
 
 ## Where Next?
-* learn more about [Call Flow](/voice/voice-api/guides/call-flow) with Voice API;
-* improve customer experience with [Speech Recognition](/voice/voice-api/guides/asr), as an alternative or together with DTMF input;
-* see how to use [Call Recording](/voice/voice-api/guides/recording) for future references and post-call analytics;
-* get direct access to the media with [WebSockets](/voice/voice-api/guides/websockets) for real-time analytics and AI integration.
-* check [Vonage AI](https://www.ai.vonage.com/) offering to get IVR or voice bot built by our experts for your specific use-case.
+* Learn more about [Call Flow](/voice/voice-api/guides/call-flow) with Voice API;
+* Improve customer experience with [Speech Recognition](/voice/voice-api/guides/asr), as an alternative or together with DTMF input;
+* See how to use [Call Recording](/voice/voice-api/guides/recording) for future references and post-call analytics;
+* Get direct access to the media with [WebSockets](/voice/voice-api/guides/websockets) for real-time analytics and AI integration.
+* Check [Vonage AI](https://www.ai.vonage.com/) offering to get IVR or voice bot built by our experts for your specific use-case.
