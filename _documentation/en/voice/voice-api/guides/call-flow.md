@@ -6,7 +6,9 @@ navigation_weight: 1
 
 # Call Flow
 
-Any voice interaction starts with a call.
+## Overview
+
+Any voice interaction starts with a call. This guide describes how the calls are being processed in different scenarious.
 
 **Inbound** calls are made to the Vonage platform by one of the following methods:
 
