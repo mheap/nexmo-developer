@@ -25,10 +25,10 @@ The Vonage Voice API resides in four geographic data centers. Phone numbers are 
 
 You can work around this issue by sending your API request to the correct region, either:
 
-* https://api-us-1.nexmo.com
-* https://api-us-2.nexmo.com
-* https://api-eu-1.nexmo.com
-* https://api-sg-1.nexmo.com
+* https://api-us-1.nexmo.com (Washington DC)
+* https://api-us-2.nexmo.com (Dallas)
+* https://api-eu-1.nexmo.com (London)
+* https://api-sg-1.nexmo.com (Singapore)
 
 The following are examples of how to override the default hosts using the [Vonage Server SDKs](/tools):
 
