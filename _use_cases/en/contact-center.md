@@ -76,7 +76,7 @@ The command returns an application ID (which you should make a note of) and your
 You need to link your Vonage number to the Voice API application that you created. Use the following command:
 
 ```sh
-nexmo link:app NEXMO_NUMBER NEXMO_APPLICATION_ID
+nexmo link:app VONAGE_NUMBER VONAGE_APPLICATION_ID
 ```
 
 You're now ready to write your application code.
@@ -95,10 +95,10 @@ const https = require('https')
 const Vonage = require('@vonage/server-sdk')
 
 const vonage = new Vonage({
-  apiKey: <YOUR_API_KEY>,
-  apiSecret: <YOUR_API_SECRET>,
-  applicationId: <YOUR_APP_ID>,
-  privateKey: 'private.key'
+  apiKey: VONAGE_API_KEY,
+  apiSecret: VONAGE_API_SECRET,
+  applicationId: VONAGE_APPLICATION_ID,
+  privateKey: VONAGE_APPLICATION_PRIVATE_KEY_PATH
 })
 
 app.use(bodyParser.json())
@@ -153,8 +153,8 @@ In case of a successful recognition, the request payload will look as follows:
     "digits": "1",
     "timed_out": true
   },
-  "from": <USER_NUMBER>,
-  "to": <LVN>,
+  "from": USER_NUMBER,
+  "to": VONAGE_NUMBER,
   "uuid": "abfd679701d7f810a0a9a44f8e298b33",
   "conversation_uuid": "CON-64e6c8ef-91a9-4a21-b664-b00a1f41340f",
   "timestamp": "2020-04-17T17:31:53.638Z"
@@ -186,11 +186,11 @@ app.post('/webhooks/input', (request, response) => {
   switch (departmentId) {
     case '1':
       department = 'Sales'
-      departmentNumber = <YOUR_MOBILE_NUMBER>
+      departmentNumber = AGENT_NUMBER
       break
     case '2':
       department = 'Support'
-      departmentNumber = <OTHER_PSTN_NUMBER> //you can use the same mobile number for the sample
+      departmentNumber = OTHER_AGENT_NUMBER //you can use the same number for the sample
       break
     default:
       break
@@ -219,7 +219,7 @@ app.post('/webhooks/input', (request, response) => {
       ],
       from: {
         type: 'phone',
-        number: <YOUR_LVN>
+        number: VONAGE_NUMBER
       },
       ncco: [
         {
@@ -392,10 +392,10 @@ const options = {
 }
 
 const vonage = new Vonage({
-  apiKey: <YOUR_API_KEY>,
-  apiSecret: <YOUR_API_SECRET>,
-  applicationId: <YOUR_APP_ID>,
-  privateKey: 'private.key'
+  apiKey: VONAGE_API_KEY,
+  apiSecret: VONAGE_API_SECRET
+  applicationId: VONAGE_APPLICATION_ID,
+  privateKey: VONAGE_APPLICATION_PRIVATE_KEY_PATH
 }, options)
 ```
 
