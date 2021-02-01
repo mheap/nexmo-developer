@@ -12,7 +12,7 @@ navigation_weight: 5
 In this tutorial, you will implement the following contact center scenario:
 
 * The user calls your Vonage number,
-* Initial greeting is played, and the user selects an option with IVR,
+* The initial greeting is read out, and the user chooses an option from the menu provided,
 * The user is connected to an agent,
 * After the agent closes the call, the user is transferred to a customer satisfaction survey.
 
