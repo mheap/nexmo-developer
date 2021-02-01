@@ -8,7 +8,7 @@ navigation_weight: 1
 
 ## Overview
 
-Any voice interaction starts with a call. This guide describes how the calls are being processed in different scenarious.
+Any voice interaction starts with a call. This guide describes how the calls are being processed in different scenarios.
 
 **Inbound** calls are made to the Vonage platform by one of the following methods:
 
