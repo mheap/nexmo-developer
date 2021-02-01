@@ -24,6 +24,7 @@ Any voice interaction starts with a call.
 Outbound calls are usually initiated in response to a request made via the REST API to create a new call. Outbound calls may also be made from within the call flow of an existing call (either inbound or outbound) using the `connect` action within the [NCCO](/voice/voice-api/guides/ncco). This scenario is generally used for forwarding calls.
 
 There are two different types of call in terms of call flow:
+
 * ["Scripted" Call](#scripted-call): when the flow is determined by a sequence of question-answer steps (actions);
 * [Live Conversation](#live-conversation): which connects two or more participants in a conversation.
 
