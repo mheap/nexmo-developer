@@ -14,7 +14,20 @@ Any voice interaction starts with a call.
 * to a [SIP domain](/voice/sip/concepts/programmable-sip) assigned to the application from PBX or any SIP capable software/hardware,
 * from a client application using the [Client SDK](/client-sdk/overview).
 
-**Outbound** calls are calls made from the Vonage platform to a regular phone number, a SIP endpoint, client application, or [WebSocket](/voice/voice-api/guides/websockets) server. Outbound calls are usually initiated in response to a request made via the REST API to create a new call. Outbound calls may also be made from within the call flow of an existing call (either inbound or outbound) using the `connect` action within the [NCCO](/voice/voice-api/guides/ncco). This scenario is generally used for forwarding calls.
+**Outbound** calls are calls made from the Vonage platform to 
+
+* a regular phone number, 
+* a SIP endpoint, 
+* client application, or 
+* [WebSocket](/voice/voice-api/guides/websockets) server. 
+
+Outbound calls are usually initiated in response to a request made via the REST API to create a new call. Outbound calls may also be made from within the call flow of an existing call (either inbound or outbound) using the `connect` action within the [NCCO](/voice/voice-api/guides/ncco). This scenario is generally used for forwarding calls.
+
+There are two different types of call in terms of call flow:
+* ["Scripted" Call](#scripted-call): when the flow is determined by a sequence of question-answer steps (actions);
+* [Live Conversation](#live-conversation): which connects two or more participants in a conversation.
+
+See both concepts described below, including [switching](#switching-between-scripted-call-and-live-conversation) seamlessly between on and another.
 
 ## Scripted Call
 Both inbound and outbound calls initially follow the same call flow once answered. This call flow is controlled by an NCCO. An NCCO is a script of actions to be run within the context of the call. Actions are executed in the order they appear in the script, with the next action starting when the previous action has finished executing. For more information about NCCOs, see the [NCCO Reference](/voice/voice-api/ncco-reference).
@@ -118,9 +131,9 @@ deactivate A
 
 In some scenarios, for example, a [private voice communication](/use-cases/private-voice-communication) use case, you want to connect two or more participants to establish a live conversation. Each call, inbound or outbound, is automatically added to the new conversation behind the scenes. To connect it to another call with an NCCO, the application can either
 
-* create a new outbound call with the [`connect`](/voice/voice-api/ncco-reference#connect) action - it will be automatically joined to the same conversation;
+* Create a new outbound call with the [`connect`](/voice/voice-api/ncco-reference#connect) action - it will be automatically joined to the same conversation;
 
-* move the call to an existing (or new) named conversation with the [`conversation`](/voice/voice-api/ncco-reference#conversation) action.
+* Move the call to an existing (or new) named conversation with the [`conversation`](/voice/voice-api/ncco-reference#conversation) action.
 
 During the conversation, the call is no longer following a sequence of actions, it is now a live interaction between two or more members. To control the call during the conversation, for example, to mute/unmute a member, the application should use the [REST API](/voice/voice-api/api-reference).
 
