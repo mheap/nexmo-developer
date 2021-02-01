@@ -26,7 +26,7 @@ To complete this tutorial, you need:
 * The [Nexmo CLI](/application/nexmo-cli) installed and set up,
 * [ngrok](https://ngrok.com/) - to make your development web server accessible to Vonage's servers over the Internet,
 * [Node.JS](https://nodejs.org/en/download/) installed,
-* two phone calling devices with PSTN numbers assigned, for example, two mobile phones or an application with calling capabity like [Vonage Business](https://www.vonage.com/unified-communications/features) app.
+* two phone calling devices with PSTN numbers assigned - "user phone" and "agent phone", for example, two mobile phones or an application with calling capabity like [Vonage Business](https://www.vonage.com/unified-communications/features) app.
 
 ## Install the dependencies
 
@@ -370,11 +370,11 @@ app.listen(port, () => console.log(`Listening on port ${port}`))
 node index.js
 ```
 
-2. Call your Vonage number from your first device ("user phone") and listen to the welcome message.
+2. Call your Vonage number from "user phone" and listen to the welcome message.
 
 3. Open the dial pad and press 1 or 2.
 
-3. Answer the inbound call on your second device ("agent phone").
+3. Answer the inbound call "agent phone".
 
 4. Hang up on the agent phone.
 
