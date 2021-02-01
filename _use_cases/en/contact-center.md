@@ -288,7 +288,7 @@ app.post('/webhooks/input', (request, response) => {
   } else ...
 ```
 
-> In the real-life case, you should implement a cache to store the pairs of user/agent leg identifiers and. The sample code shown in this tutorial will work properly only for one concurrent call.
+> In the real-life scenario, you should implement a cache to store the pairs of user/agent leg identifiers. The sample code shown in this tutorial will work properly only for one concurrent call.
 
 Extend your event webhook with REST API update call method with inline NCCO with `talk` and `input` actions to move the user leg to the survey part:
 
