@@ -80,7 +80,7 @@ deactivate A
 <br/>
 
 
-During the call, Vonage is performing callback requests to the application at the `event_url`, set in the application configuration or in the NCCO action, if one is provided in the NCCO. There are two types of callbacks:
+During the call, Vonage is making callback requests to the application at the `event_url`, set in the application configuration or in the NCCO action, if one is provided in the NCCO. There are two types of callbacks:
 
 * notifications, for example, a call status change;
 * instructions request, for example, on an `input` or `notify` callback - for these events Vonage expects the application to provide a new NCCO for processing, which allows implementing different logical call flows.
