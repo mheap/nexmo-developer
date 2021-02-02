@@ -31,9 +31,7 @@ A file named `.nexmo-app` is created in your project directory and contains the 
 
 **Please make a note of the Application ID as you'll need it in the future.**
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/nexmo-application-created.png
-```
+![](public/screenshots/tutorials/client-sdk/nexmo-application-created.png)
 
 > **NOTE:** An application can be also created using the CLI's [interactive mode](/application/nexmo-cli#interactive-mode).
 

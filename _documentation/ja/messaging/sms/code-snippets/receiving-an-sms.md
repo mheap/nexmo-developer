@@ -25,10 +25,7 @@ Nexmo が Web フックにアクセスできるようにするには、Nexmo ア
 
 Web フックはコードスニペットの `/webhooks/inbound-sms` にあります。Ngrok を使用している場合、[Nexmo Dashboard の API 設定ページ](https://dashboard.nexmo.com/settings)で設定が必要な Web フックは「`https://demo.ngrok.io/webhooks/inbound-sms`」フォームを取ります。「`demo`」部分を Ngrok から提供されるサブドメインに置き換えて、 **着信メッセージ用 Web フックの URL** というラベルが付いたフィールドにエンドポイントを入力します。
 
-```screenshot
-script: app/screenshots/webhook-url-for-inbound-message.js
-image: public/meta/screenshots/smsInboundWebhook.png
-```
+![](public/meta/screenshots/smsInboundWebhook.png)
 
 試行手順
 ----

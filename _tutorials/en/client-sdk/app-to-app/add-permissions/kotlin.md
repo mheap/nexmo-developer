@@ -9,9 +9,7 @@ description: In this step you add permissions
 
 Add the required permissions to the `AndroidManifest.xml` file (typically `app/src/main/AndroidManifest.xml`):
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png
-```
+![](public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
