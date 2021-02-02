@@ -6,6 +6,30 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 7.0.0 - February 02, 2021
+
+### Breaking changes
+
+- `legs` endpoint should be included in `acl` paths on `JWT` token creation
+
+```json
+"acl": {
+  "paths": {
+    ...,
+    "/*/legs/**": {}
+  }
+}
+```
+
+### Changes
+
+- Improve `callServer` setup time by prewarming leg
+- Add the `rtcObject` and remote `stream` to the `NxmCall` object
+
+### Fixes
+
+- Return `ClientDisconnected` reason when client logouts from SDK
+
 ## Version 6.1.1 - December 09, 2020
 
 ### Fixes
