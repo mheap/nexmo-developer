@@ -59,23 +59,24 @@ Once all the claims have been provided, the resulting claims should appear like 
 
 ### Overview
 
-In the previous section, you can see that the `acl` claim has `paths` object containing multiple endpoints. These endpoints correspond with certain permissions a user can have when utilizing Client SDK features.
+In the previous section, you can see that the `acl` claim has a `paths` object containing multiple endpoints. These endpoints correspond with certain permissions a user can have when utilizing Client SDK features.
 
 ### Paths
 
 |Endpoint | Description |
 | --------- | ----------- |
-| `/*/sessions/**`| Log in as a User.|
-| `/*/users/**`| Create and manage Users.|
-| `/*/conversations/**`| Create and manage Conversations & send/receive messages.|
-| `/*/image/**`| Send and receive images.|
-| `/*/media/**`| Send and receive audio.|
-| `/*/knocking/**`| Start phone calls.|
+| `/*/sessions/**`| Log in as a User|
+| `/*/users/**`| Create and manage Users|
+| `/*/conversations/**`| Create and manage Conversations & send/receive messages|
+| `/*/image/**`| Send and receive images|
+| `/*/media/**`| Send and receive audio|
+| `/*/knocking/**`| Start phone calls|
 | `/*/push/**`| Receive push notifications|
-| `/*/devices/**`| Send push notifications.|
-| `/*/applications/**`| Upload push notification certificate.|
+| `/*/devices/**`| Send push notifications|
+| `/*/applications/**`| Upload push notification certificate|
+| `/*/legs/**`| Create and manage legs in a conversaion|
 
-It is not necessary to provide users with the permissions to access all of these paths. For instance, if a user was not going to upload or receive push notifications, you could create a JWT without including the `/*/applications/**`or `/*/push/**` paths.
+You should provide the user you are generating with permissions to access only the relevant paths. For instance, if a user is not going to upload or receive push notifications, you can create a JWT without including the `/*/applications/**`or `/*/push/**` paths.
 
 ## Vonage Server SDKs
 
@@ -84,8 +85,7 @@ It is not necessary to provide users with the permissions to access all of these
 Currently, you can use the beta version of the [Nexmo CLI](https://github.com/Nexmo/nexmo-cli/tree/beta) to create a JWT [including the appropriate claims](https://github.com/Nexmo/nexmo-cli/tree/beta#jwt)
 
 ```sh
-nexmo jwt:generate ./private.key sub=jamie exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=YOUR_APP_ID
-> JWT: [...JWT String...]
+nexmo jwt:generate ./private.key sub=jamie exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=YOUR_APP_ID
 ```
 
 ### Node
@@ -140,6 +140,7 @@ $claims = [
             '/*/applications/**' => (object) [],
             '/*/push/**' => (object) [],
             '/*/knocking/**' => (object) [],
+            '/*/legs/**' => (object) [],
         ]
     ]
 ];
