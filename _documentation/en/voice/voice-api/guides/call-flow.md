@@ -35,7 +35,7 @@ See both concepts described below, including [switching](#switching-between-scri
 ## Scripted Call
 Both inbound and outbound calls initially follow the same call flow once answered. This call flow is controlled by an NCCO. An NCCO is a script of actions to be run within the context of the call. Actions are executed in the order they appear in the script, with the next action starting when the previous action has finished executing. For more information about NCCOs, see the [NCCO Reference](/voice/voice-api/ncco-reference).
 
-when the Vonage API platform receives a call on your Vonage number, it makes an HTTP request to the `answer_url` provided. For inbound calls, the `answer_url` is configured in your [Voice Application](/application/overview). For outbound calls, you provide an `answer_url` in the API request that creates the call.
+When the Vonage API platform receives a call on your Vonage number, it makes an HTTP request to the `answer_url` provided. For inbound calls, the `answer_url` is configured in your [Voice Application](/application/overview). For outbound calls, you provide an `answer_url` in the API request that creates the call.
 
 ```sequence_diagram
 activate User
@@ -54,7 +54,7 @@ deactivate User
 
 <br/>
 
-You may choose to provide your NCCO as part of the request you send to create a call instead of providing an `answer_url`. This is done by providing an NCCO in the `ncco` key of your request.
+You may choose to provide your NCCO as part of the request you send to create a call instead of supplying an `answer_url`. This is done by providing a `ncco` attribute in the NCCO object of your request.
 
 ```sequence_diagram
 participant U as User
