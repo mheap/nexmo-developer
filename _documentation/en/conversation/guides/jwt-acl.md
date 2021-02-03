@@ -74,7 +74,7 @@ In the previous section, you can see that the `acl` claim has a `paths` object c
 | `/*/push/**`| Receive push notifications|
 | `/*/devices/**`| Send push notifications|
 | `/*/applications/**`| Upload push notification certificate|
-| `/*/legs/**`| Create and manage legs in a conversaion|
+| `/*/legs/**`| Create and manage legs in a conversation|
 
 You should provide the user you are generating with permissions to access only the relevant paths. For instance, if a user is not going to upload or receive push notifications, you can create a JWT without including the `/*/applications/**`or `/*/push/**` paths.
 
