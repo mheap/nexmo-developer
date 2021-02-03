@@ -20,7 +20,7 @@ To manage your WhatsApp Business profile from the Vonage API dashboard:
     * **Profile picture** - The photo displayed on your profile. Must be a square JPG or PNG with maximum dimensions of 640 pixels X 640 pixels and a maximum file size of 800 kilobytes.
     * **Business description** - A longer description of your business - max 256 characters. URLs are not hyperlinked.
     * **Address** - Your business address - max 256 characters.
-    * **Business category** - Your business' industry selected from a pre-populated list of options.
+    * **Business category** - Your business' industry selected from a list of options.
     * **Contact email** - Your business' email - max 128 characters.
     * **Website** - Your business' websites maximum of 2 websites, max website length: 256. URLs are not hyperlinked.
 4. Once you are finished editing the desired profile fields, click **Save**.
