@@ -111,6 +111,12 @@ When a message template is sent with the deterministic language policy, the rece
 
 Further information is available in the [WhatsApp documentation](https://developers.facebook.com/docs/whatsapp/message-templates/sending/#language).
 
+## WhatsApp Provisioning API
+
+The WhatsApp Provisioning API enables you to deploy a WhatsApp cluster, perform one time password (OTP) verification, and update profile information for a WhatsApp business account. 
+
+For more information see the [WhatsApp Provisioning API](/whatsapp-provisioning/overview) documentation.
+
 ## Further information
 
 * [Custom objects](/messages/concepts/custom-objects)
