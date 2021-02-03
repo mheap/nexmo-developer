@@ -23,7 +23,7 @@ navigation_weight: 0
 
 ### Changes
 
-- Improve `callServer` setup time by prewarming leg
+- Improve `callServer` setup time by pre-warming leg
 - Add the `rtcObject` and remote `stream` to the `NxmCall` object
 
 ### Fixes
