@@ -6,6 +6,18 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 6.2.1 - December 24, 2020
+
+### Fixes
+
+- Revert back to 6.1.1 from 6.2.0-alpha
+
+## Version 6.1.2 - December 24, 2020
+
+### Fixes
+
+- Update Typescript definitions
+
 ## Version 6.1.1 - December 09, 2020
 
 ### Fixes
