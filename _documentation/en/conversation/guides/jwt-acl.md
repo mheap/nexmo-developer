@@ -35,7 +35,7 @@ Once all the claims have been provided, the resulting claims should appear like 
 {
   "iat": 1532093588,
   "jti": "705b6f50-8c21-11e8-9bcb-595326422d60",
-  "sub": "jamie",
+  "sub": "alice",
   "exp": "1532179987",
   "acl": {
     "paths": {
@@ -65,9 +65,9 @@ In the previous section, you can see that the `acl` claim has a `paths` object c
 
 |Endpoint | Description |
 | --------- | ----------- |
-| `/*/sessions/**`| Log in as a User|
-| `/*/users/**`| Create and manage Users|
-| `/*/conversations/**`| Create and manage Conversations & send/receive messages|
+| `/*/sessions/**`| Log in as a user|
+| `/*/users/**`| Create and manage users|
+| `/*/conversations/**`| Create and manage conversations & send/receive messages|
 | `/*/image/**`| Send and receive images|
 | `/*/media/**`| Send and receive audio|
 | `/*/knocking/**`| Start phone calls|
@@ -85,7 +85,7 @@ You should provide the user you are generating with permissions to access only t
 Currently, you can use the beta version of the [Nexmo CLI](https://github.com/Nexmo/nexmo-cli/tree/beta) to create a JWT [including the appropriate claims](https://github.com/Nexmo/nexmo-cli/tree/beta#jwt)
 
 ```sh
-nexmo jwt:generate ./private.key sub=jamie exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=YOUR_APP_ID
+nexmo jwt:generate ./private.key sub=alice exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=YOUR_APP_ID
 ```
 
 ### Node
@@ -110,7 +110,7 @@ const aclPaths = {
 
 Nexmo.generateJwt(PRIVATE_KEY, {
             application_id: "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-            sub: "jamie",
+            sub: "alice",
             //expire in 24 hours
             exp: Math.round(new Date().getTime()/1000)+86400,
             acl: aclPaths
