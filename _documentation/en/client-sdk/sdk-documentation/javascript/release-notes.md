@@ -15,7 +15,7 @@ navigation_weight: 0
 ```json
 "acl": {
   "paths": {
-    ...,
+    ...
     "/*/legs/**": {}
   }
 }
