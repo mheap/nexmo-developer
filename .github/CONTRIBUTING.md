@@ -4,7 +4,7 @@ We welcome everybody contributing to the Nexmo Developer. These guidelines outli
 
 ### Setup
 
-If you'd like to make contributions it's best if you setup a local version of the project to test. You can find instructions for setting up the dependencies and project in our [README](https://github.com/nexmo/nexmo-developer/blob/master/README.md).
+If you'd like to make contributions it's best if you setup a local version of the project to test. You can find instructions for setting up the dependencies and project in our [README](https://github.com/nexmo/nexmo-developer/blob/main/README.md).
 
 ### Report a bug
 
