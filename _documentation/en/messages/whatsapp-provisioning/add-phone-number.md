@@ -22,7 +22,7 @@ To set up a phone number for your account:
 
 > **NOTE:** Each time you click the **View** button, the certificate will change. Either download or copy your certificate so you can use it in a subsequent step.
 
-You may now [provision your WhatsApp deployment](/provision-deployment).
+You may now [provision your WhatsApp deployment](/messages/whatsapp-provisioning/provision-deployment).
 
 ## Reference
 

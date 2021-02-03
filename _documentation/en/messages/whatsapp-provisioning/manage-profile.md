@@ -7,13 +7,13 @@ navigation_weight: 4
 
 # Manage a WhatsApp Business Profile
 
-Once cluster has been successfully deployed, you may now manage your WhatsApp Business profile via the Vonage API Dashboard or the [WhatsApp Provisioning API](/api/whatsapp-provisioning).
+Once cluster has been successfully deployed, you may now manage your WhatsApp Business profile via the Vonage API Dashboard or programmatically using the [WhatsApp Provisioning API](/api/whatsapp-provisioning).
 
 To manage your WhatsApp Business profile from the Vonage API dashboard:
 
 > **Note** Your business profile is displayed when WhatsApp users tap to see your full contact information in the WhatsApp mobile app.
 
-1. Navigate to the [Social Channels page(https://dashboard.nexmo.com/messages/social-channels)] on the Vonage API dashboard.
+1. Navigate to the [Social Channels page](https://dashboard.nexmo.com/messages/social-channels) on the Vonage API dashboard.
 2. Click the **Edit** button corresponding to the WhatsApp application listed in the **Your connected social channels** list.
 3. From this menu, you may edit the following:
     * **About** - The text displayed in your profile's **About** section - max 139 characters. It is a brief description seen by new users whenever they contact your business profile.

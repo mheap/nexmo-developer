@@ -82,7 +82,7 @@ curl -X POST https://api.nexmo.com/v0.1/whatsapp-manager/$DEPLOYMENT_ID/verify\
   -d '{ "code": "$CODE" }'
 ```
 
-Now that the WhatsApp cluster has been successfully deployed, you may manage your [WhatsApp Business profile](/manage-profile).
+Now that the WhatsApp cluster has been successfully deployed, you may manage your [WhatsApp Business profile](/messages/whatsapp-provisioning/manage-profile).
 
 ## Reference
 

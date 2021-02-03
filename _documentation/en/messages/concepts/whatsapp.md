@@ -115,7 +115,7 @@ Further information is available in the [WhatsApp documentation](https://develop
 
 The WhatsApp Provisioning API enables you to deploy a WhatsApp cluster, perform one time password (OTP) verification, and update profile information for a WhatsApp business account. 
 
-For more information see the [WhatsApp Provisioning API](/whatsapp-provisioning/overview) documentation.
+For more information see the [WhatsApp Provisioning API](/messages/whatsapp-provisioning/overview) documentation.
 
 ## Further information
 

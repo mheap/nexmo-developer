@@ -9,11 +9,11 @@ navigation_weight: 1
 
 The WhatsApp Provisioning API enables you to deploy a WhatsApp cluster, perform one time password (OTP) verification, and update profile information for a WhatsApp business account.
 
-The first thing you must do is [add a phone number](/add-phone-number) in your WhatsApp Business account dashboard.
+The first thing you must do is [add a phone number](/messages/whatsapp-provisioning/add-phone-number) in your WhatsApp Business account dashboard.
 
-Once you've added a phone number, you may [provision your WhatsApp deployment](/provision-deployment).
+Once you've added a phone number, you may [provision your WhatsApp deployment](/messages/whatsapp-provisioning/provision-deployment).
 
-Finally, you may use the [Vonage API Dashboard](https://dashboard.nexmo.com/messages/social-channels) to [manage your WhatsApp Business profile](/manage-profile).
+Finally, you may use the [Vonage API Dashboard](https://dashboard.nexmo.com/messages/social-channels) to [manage your WhatsApp Business profile](/messages/whatsapp-provisioning/manage-profile).
 
 ## Reference
 
