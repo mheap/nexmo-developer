@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 7.0.1 - February 04, 2021
+
+### Fixes
+
+- Remove unnecessary warning message for call status transitions
+
 ## Version 7.0.0 - February 02, 2021
 
 ### Breaking changes
