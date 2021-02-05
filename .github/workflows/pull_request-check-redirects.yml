@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: check-redirects
-      uses: nexmo/github-actions/ndp-check-redirects@master
+      uses: nexmo/github-actions/ndp-check-redirects@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
