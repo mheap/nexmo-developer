@@ -17,35 +17,37 @@ page:
                     list-style: inherit;
                     padding-left: 30px;
                   }
+                  .Vlt-btn--larger {
+                    font-size: 1.3em;
+                    line-height: 2.6em;
+                  }
                 </style>
   - row:
     - column: 
       - type: html
         html:
-          content: <div class="Vlt-centeer"><img alt="Hero image" src="/images/startups/hero.svg"></img></div>
+          content: <div class="Vlt-center"><img alt="Hero image" src="/images/startups/hero.svg"></img></div>
   - row:
     - column:
         - type: line_divider      
   - row:
     - column:
-      - type: action_button
-        action_button:
-          text: "Join the Community!"
-          url: "#"
-          type: "primary"
-          large: true
-          center_button: true
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="#">Join the Community!</a>
+            </div>
       - type: html
         html:
           content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;">Get the latest news, content and updates from Vonage for Startups. </p>
     - column:
-      - type: action_button
-        action_button:
-          text: "Register your Interest"
-          url: "#"
-          type: "primary"
-          large: true
-          center_button: true
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="#">Register your Interest</a>
+            </div>
       - type: html
         html:
           content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;">For startups that want to work closely with our team to receive tailored support and Vonage API credits</p>          
@@ -119,7 +121,7 @@ page:
                 <h5>CONNECT</h5>
               </div>
               <div class="Vlt-card__content">
-                <p style="padding-bottom:50px;">Join our <strong>community</strong> and have the opportunity to engage with other <strong>founders, developers and advocates.</strong></p>
+                <p>Join our <strong>community</strong> and have the opportunity to engage with other <strong>founders, developers and advocates.</strong></p>
               </div>
             </div>
   - row:
@@ -200,13 +202,12 @@ page:
                    <p align="center" >Incubators, accelerators, angel investors, venture capital firms or other startup enabling organisations looking to support their startups further with our communication APIs.</p>
   - row:
     - column:
-      - type: action_button
-        action_button:
-          text: "Partner with us"
-          url: "#"
-          type: "primary"
-          large: true
-          center_button: true
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="#">Partner with us</a>
+            </div>
   - row:
     - column:
         - type: line_divider
