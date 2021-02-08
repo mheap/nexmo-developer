@@ -2,6 +2,8 @@
 
 title: "Vonage for Startups"
 meta_title: "Build faster, reach more customers and focus your time on what matters most"
+container_classes:
+  - startups-page
 
 page:
   - row:
@@ -10,6 +12,9 @@ page:
             text:
               content: |
                 <style>
+                  .Nxd-header-notices {
+                    padding: 0;
+                  }
                   .Vlt-card--scrollable {
                     height: 164px;
                   }
@@ -21,39 +26,74 @@ page:
                     font-size: 1.3em;
                     line-height: 2.6em;
                   }
+
+                  .startups-page {
+                      max-width: 100vw;
+                      padding: 0;
+                  }
+                  .startups-page .Nxd-landing-row {
+                      max-width: 1300px;
+                      margin: 0 auto;
+                  }
+                  .startups-page > .Nxd-landing-row:nth-child(2) {
+                      margin: 0;
+                      max-width: 100vw;
+                  }
+                  .startups-page > .Nxd-landing-row:nth-child(2) .Vlt-col {
+                      padding: 0;
+                  }
+                  .startups-page h2.Vlt-title--icon svg.Vlt-icon {
+                    display: none;
+                  }
+                  .sr-only {
+                    position:absolute;
+                    left:-10000px;
+                    top:auto;
+                    width:1px;
+                    height:1px;
+                    overflow:hidden;
+                  }
+
                 </style>
   - row:
-    - column: 
+    - column:
       - type: html
         html:
-          content: <div class="Vlt-center"><img alt="Hero image" src="/images/startups/hero.svg"></img></div>
-  - row:
-    - column:
-        - type: line_divider      
+          content: |
+            <div style="background: linear-gradient(180deg, #000000, #000000 82.4%, #231F20 82.4%, #231F20); margin-bottom: 70px;">
+              <div style="margin: 0 auto; max-width: 1300px;">
+                <img style="display: block;" alt="Hero image" src="/images/startups/hero.svg" alt="">
+                <div class="sr-only">
+                  <h1>Vonage for Startups</h1>
+                  <h2>Build faster, reach more customers and focus your time on what matters most.</h2>
+                  <p>We want to support the global startup community to build better products by connecting them to the best Vonage resources, people, and communication APIs.</p>
+                </div>
+              </div>
+            </div>
   - row:
     - column:
       - type: html
         html:
           content: |
             <div class="Vlt-center">
-              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="#">Join the Community!</a>
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrA1Sw95kLwqT3da">Join the Community!</a>
             </div>
       - type: html
         html:
-          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;">Get the latest news, content and updates from Vonage for Startups. </p>
+          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">Get the latest news, content and updates from the Vonage for Startups team.</p>
     - column:
       - type: html
         html:
           content: |
             <div class="Vlt-center">
-              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="#">Register your Interest</a>
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrTJTvlEU9sbeh9q">Register your Interest</a>
             </div>
       - type: html
         html:
-          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;">For startups that want to work closely with our team to receive tailored support and Vonage API credits</p>          
+          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">The Vonage Startup Program is dedicated to startups that want to receive tailored support and Vonage API credits.</p>
   - row:
     - column:
-        - type: line_divider      
+        - type: line_divider
   - row:
     - column:
       - type: section_header
@@ -126,7 +166,7 @@ page:
             </div>
   - row:
     - column:
-        - type: line_divider      
+        - type: line_divider
   - row:
     - column:
       - type: section_header
@@ -185,7 +225,7 @@ page:
             </a>
   - row:
     - column:
-        - type: line_divider    
+        - type: line_divider
   - row:
     - column:
       - type: section_header
@@ -193,20 +233,19 @@ page:
           title: "Partner with us"
           icon:
             name: "icon-app"
-            color: yellow            
+            color: yellow
   - row:
-    - column: 
+    - column:
       - type: html
         html:
-          content: <p align="center" >We are always on the lookout for organizations sharing a similar vision of empowering startups to join our ecosystem.</p>
-                   <p align="center" >Incubators, accelerators, angel investors, venture capital firms or other startup enabling organisations looking to support their startups further with our communication APIs.</p>
+          content: <p align="center" >We are always on the lookout for organizations sharing a similar vision of empowering startups to join our ecosystem.</p><p align="center" >Incubators, accelerators, angel investors, venture capital firms or other startup enabling organisations looking to support their startups further with our communication APIs.</p>
   - row:
     - column:
       - type: html
         html:
           content: |
             <div class="Vlt-center">
-              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="#">Partner with us</a>
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrfGCnFnxWCkJ4xI">Partner with us</a>
             </div>
   - row:
     - column:
@@ -223,27 +262,51 @@ page:
     - column:
       - type: linked_image
         linked_image:
-          image: https://placekitten.com/g/300/300
+          image: /images/startups/carbyne.png
           url: "https://www.vonage.com/resources/customers/carbyne/"
-          alt_text: Resource No 1
+          alt_text: Carbyne Revolutionizes Emergency Calls Using Vonage SMS and Messages APIs
     - column:
       - type: linked_image
         linked_image:
-          image: https://placekitten.com/g/300/300
+          image: /images/startups/report.png
           url: "https://www.vonage.com/resources/publications/communication-key-remote-work/"
-          alt_text: Resource No 2
+          alt_text: Communication is Key to Remote Work
     - column:
       - type: linked_image
         linked_image:
-          image: https://placekitten.com/g/300/300
+          image: /images/startups/7-app-ideas.png
           url: "https://www.nexmo.com/legacy-blog/2020/05/05/7-app-ideas-to-build-at-work-and-7-to-build-at-home-dr"
-          alt_text: Resource No 3
+          alt_text: 7 App Ideas to Build At Work (and 7 to Build At Home)
     - column:
       - type: linked_image
         linked_image:
-          image: https://placekitten.com/g/300/300
+          image: /images/startups/learning-platform.png
           url: "https://learn.vonage.com/blog/2020/12/15/how-to-build-a-learning-platform-using-vonage-javascript-typescript-react-express-and-apollo-graphql/"
-          alt_text: Resource No 4
+          alt_text: How to Build a Learning Platform With React, Express and Apollo GraphQL
+  - row:
+      - column:
+          - type: line_divider
+  - row:
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center" style="margin-top: 50px;">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrA1Sw95kLwqT3da">Join the Community!</a>
+            </div>
+      - type: html
+        html:
+          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">Get the latest news, content and updates from the Vonage for Startups team.</p>
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center" style="margin-top: 50px;">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrTJTvlEU9sbeh9q">Register your Interest</a>
+            </div>
+      - type: html
+        html:
+          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">The Vonage Startup Program is dedicated to startups that want to receive tailored support and Vonage API credits.</p>
   - row:
       - column:
           - type: line_divider
@@ -265,20 +328,18 @@ page:
                   type: large
                 - content: |
                     <p class="p-large">
-                      We are technology agnostic and want to support any startup that we can provide value to. Typically,  applicants need to meet the following criteria to be considered:
+                      We are technology agnostic and want to support any startup that we can provide value to. Typically, applicants need to meet the following criteria to be considered:
                       <ul class="criteria-list">
-                        <li>Early-stage (Pre Series A)</li>
+                        <li>Early-stage (pre-Series A)</li>
                         <li>Founded in the past 5 years</li>
-                        <li>Company Website and associated Emails</li>
-                        <li>Vonage Account/API Key</li>
-                        <li>Not an existing managed customer</li>
-                        <li>LinkedIn profile (applicant):</li>
+                        <li>Have a Vonage API account</li>
+                        <li>Not be an existing managed customer</li>
                       </ul>
                     </p>
                   type: large
                 - content: <b>Can I apply if I’m not backed by a VC, incubator, or accelerator?</b>
                   type: large
-                - content: We aim to democratize access to our resources therefore any startup that meets our criteria can apply.
+                - content: We want as many startups as possible to benefit from our resources. Any startup that meets our criteria can apply, regardless of their backing.
                   type: large
                 - content: <b>What do I get if I get accepted?</b>
                   type: large
@@ -294,7 +355,7 @@ page:
                   type: large
   - row:
       - column:
-          - type: line_divider  
+          - type: line_divider
   - row:
       - column:
           - type: structured_text
@@ -304,4 +365,4 @@ page:
                 - content: Do you have a question about Vonage for Startups?
                   type: large
                 - content: Drop us an email at <a href="mailto://startups@vonage.com">startups@vonage.com</a>
-                  type: large                                                           
+                  type: large
