@@ -6,6 +6,48 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 7.0.1 - February 04, 2021
+
+### Fixes
+
+- Remove unnecessary warning message for call status transitions
+
+## Version 7.0.0 - February 02, 2021
+
+### Breaking changes
+
+- `legs` endpoint should be included in `acl` paths on `JWT` token creation
+
+```json
+"acl": {
+  "paths": {
+    ...
+    "/*/legs/**": {}
+  }
+}
+```
+
+### Changes
+
+- Improve `callServer` setup time by pre-warming leg
+- Add the `rtcObject` and remote `stream` to the `NxmCall` object
+
+### Fixes
+
+- Return `ClientDisconnected` reason when client logouts from SDK
+
+## Version 6.2.1 - December 24, 2020
+
+### Fixes
+
+- Revert back to 6.1.1 from 6.2.0-alpha
+
+## Version 6.1.2 - December 24, 2020
+
+### Fixes
+
+- Update Typescript definitions
+
 ## Version 6.1.1 - December 09, 2020
 
 ### Fixes
