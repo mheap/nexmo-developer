@@ -13,21 +13,19 @@ page:
                   .Vlt-card--scrollable {
                     height: 164px;
                   }
+                  .criteria-list {
+                    list-style: inherit;
+                    padding-left: 30px;
+                  }
                 </style>
   - row:
     - column: 
-      - type: header
-        header:
-          title: 
-            text: "Vonage Startups"
-            align: center
-          subtitle:
-            text: "Build faster, reach more customers and focus your time on what matters most."
-            align: center
-            type: large
       - type: html
         html:
-          content: <p align="center" style="font-size:15px;padding-bottom:50px;">We want to <strong>support the global startup community</strong> to build better products by <strong>connecting them to the best Vonage resources, people and communication APIs.</strong></p>
+          content: <div class="Vlt-centeer"><img alt="Hero image" src="/images/startups/hero.svg"></img></div>
+  - row:
+    - column:
+        - type: line_divider      
   - row:
     - column:
       - type: action_button
@@ -43,7 +41,7 @@ page:
     - column:
       - type: action_button
         action_button:
-          text: "Apply"
+          text: "Register your Interest"
           url: "#"
           type: "primary"
           large: true
@@ -68,6 +66,9 @@ page:
         html:
           content: |
             <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="learn">
+              <div class="Vlt-card__corner">
+                <svg class="Vlt-icon Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-books-full"></svg>
+              </div>
               <div class="Vlt-card__header">
                 <h5>LEARN</h5>
               </div>
@@ -80,6 +81,9 @@ page:
         html:
           content: |
             <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="receive-tailored-support">
+              <div class="Vlt-card__corner">
+                <svg class="Vlt-icon Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-receptionist-full"></svg>
+              </div>
               <div class="Vlt-card__header">
                 <h5>RECEIVE TAILORED SUPPORT</h5>
               </div>
@@ -93,6 +97,9 @@ page:
         html:
           content: |
             <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="build">
+              <div class="Vlt-card__corner">
+                <svg class="Vlt-icon Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-design-tools-full"></svg>
+              </div>
               <div class="Vlt-card__header">
                 <h5>BUILD</h5>
               </div>
@@ -105,6 +112,9 @@ page:
         html:
           content: |
             <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="connect">
+              <div class="Vlt-card__corner">
+                <svg class="Vlt-icon Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-plug-full"></svg>
+              </div>
               <div class="Vlt-card__header">
                 <h5>CONNECT</h5>
               </div>
@@ -128,49 +138,49 @@ page:
       - type: html
         html:
           content: |
-            <div class="Vlt-card Vlt-card--clickable">
+            <a class="Vlt-card Vlt-card--clickable" href="https://www.vonage.com/communications-apis/#Communications" target="_blank" rel="noopener noreferrer">
               <div class="Vlt-card__content">
                 <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-sms"></svg>
                 <h5>Communcation APIs</h5>
                 <p>Cloud communications building blocks with global reach.</p>
               </div>
-            </div>
+            </a>
 
     - column:
       - type: html
         html:
           content: |
-            <div class="Vlt-card Vlt-card--clickable">
+            <a class="Vlt-card Vlt-card--clickable" href="https://www.vonage.com/communications-apis/#UseCase" target="_blank" rel="noopener noreferrer">
               <div class="Vlt-card__content">
                 <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-files"></svg>
-                <h5>Use Case APIs</h5>
+                <h5>Authentication APIs</h5>
                 <p>Common business use cases prebuilt with a simple API.</p>
               </div>
-            </div>
+            </a>
 
     - column:
       - type: html
         html:
           content: |
-            <div class="Vlt-card Vlt-card--clickable">
+            <a class="Vlt-card Vlt-card--clickable" href="https://www.vonage.com/communications-apis/#Management" target="_blank" rel="noopener noreferrer">
               <div class="Vlt-card__content">
                 <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-group-3"></svg>
                 <h5>Management APIs</h5>
                 <p>Self-service tools to get full value from your Vonage API account.</p>
               </div>
-            </div>
+            </a>
 
     - column:
       - type: html
         html:
           content: |
-            <div class="Vlt-card Vlt-card--clickable">
+            <a class="Vlt-card Vlt-card--clickable" href="https://www.vonage.com/communications-apis/#Programmable" target="_blank" rel="noopener noreferrer">
               <div class="Vlt-card__content">
                 <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-phone-number"></svg>
                 <h5>Programmable Numbers</h5>
                 <p>Virtual phone numbers for text messages and phone calls.</p>
               </div>
-            </div>
+            </a>
   - row:
     - column:
         - type: line_divider    
@@ -199,7 +209,7 @@ page:
           center_button: true
   - row:
     - column:
-        - type: line_divider                   
+        - type: line_divider
   - row:
     - column:
       - type: section_header
@@ -207,32 +217,32 @@ page:
           title: "Resources"
           icon:
             name: "icon-app"
-            color: yellow   
+            color: yellow
   - row:
     - column:
       - type: linked_image
         linked_image:
           image: https://placekitten.com/g/300/300
-          url: "#"
-          alt_text: Resource No 1       
+          url: "https://www.vonage.com/resources/customers/carbyne/"
+          alt_text: Resource No 1
     - column:
       - type: linked_image
         linked_image:
           image: https://placekitten.com/g/300/300
-          url: "#"
-          alt_text: Resource No 2   
+          url: "https://www.vonage.com/resources/publications/communication-key-remote-work/"
+          alt_text: Resource No 2
     - column:
       - type: linked_image
         linked_image:
           image: https://placekitten.com/g/300/300
-          url: "#"
-          alt_text: Resource No 3       
+          url: "https://www.nexmo.com/legacy-blog/2020/05/05/7-app-ideas-to-build-at-work-and-7-to-build-at-home-dr"
+          alt_text: Resource No 3
     - column:
       - type: linked_image
         linked_image:
           image: https://placekitten.com/g/300/300
-          url: "#"
-          alt_text: Resource No 4   
+          url: "https://learn.vonage.com/blog/2020/12/15/how-to-build-a-learning-platform-using-vonage-javascript-typescript-react-express-and-apollo-graphql/"
+          alt_text: Resource No 4
   - row:
       - column:
           - type: line_divider
@@ -242,18 +252,45 @@ page:
             structured_text:
               header: "Frequently Asked Questions"
               text:
-                - content: __First question?__
+                - content: <b>What is Vonage for Startups?</b>
                   type: large
-                - content: Extremely helpful answer to first question.
+                - content: Vonage for Startups is our community initiative aiming to enable and support startups. We are here to provide the right resources, support and tools to use our communication APIs in the best possible way.
                   type: large
-                - content: __Second question?__
+                - content: <b>Who is eligible to join the community?</b>
                   type: large
-                - content: Extremely helpful answer to second question.
+                - content: Anybody. Whether you are a solo founder, a growing startup or an individual interested in startups we want to interact with you and share information about our developer communities.
                   type: large
-                - content: __Third question?__
+                - content: <b>Who is eligible to apply for the program?</b>
                   type: large
-                - content: Extremely helpful answer to third question.
-                  type: large     
+                - content: |
+                    <p class="p-large">
+                      We are technology agnostic and want to support any startup that we can provide value to. Typically,  applicants need to meet the following criteria to be considered:
+                      <ul class="criteria-list">
+                        <li>Early-stage (Pre Series A)</li>
+                        <li>Founded in the past 5 years</li>
+                        <li>Company Website and associated Emails</li>
+                        <li>Vonage Account/API Key</li>
+                        <li>Not an existing managed customer</li>
+                        <li>LinkedIn profile (applicant):</li>
+                      </ul>
+                    </p>
+                  type: large
+                - content: <b>Can I apply if I’m not backed by a VC, incubator, or accelerator?</b>
+                  type: large
+                - content: We aim to democratize access to our resources therefore any startup that meets our criteria can apply.
+                  type: large
+                - content: <b>What do I get if I get accepted?</b>
+                  type: large
+                - content: Every startup has different needs -  as part of the onboarding process we will identify the best mix of resources to meet your needs.
+                  type: large
+                - content: <b>I am an existing customer, do I qualify for the program?</b>
+                  type: large
+                - content: Existing customers are not eligible for the Startup Program but can always join our Community.
+                  type: large
+                - content: <b>I am a VC, accelerator, incubator or other startup enabling organisation. How can I get involved?</b>
+                  type: large
+                - content: We are always on the lookout for amazing partners. Please fill the form in the above section.
+                  type: large
   - row:
       - column:
           - type: line_divider  
