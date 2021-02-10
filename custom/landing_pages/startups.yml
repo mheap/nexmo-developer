@@ -91,21 +91,21 @@ page:
         html:
           content: |
             <div class="Vlt-center">
-              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrA1Sw95kLwqT3da">Join the Community!</a>
-            </div>
-      - type: html
-        html:
-          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">Get the latest news, content and updates from the Vonage for Startups team.</p>
-    - column:
-      - type: html
-        html:
-          content: |
-            <div class="Vlt-center">
               <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrTJTvlEU9sbeh9q">Register your Interest</a>
             </div>
       - type: html
         html:
           content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">The Vonage Startup Program is dedicated to startups that want to receive tailored support and Vonage API credits.</p>
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrA1Sw95kLwqT3da">Join the Community!</a>
+            </div>
+      - type: html
+        html:
+          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">Get the latest news, content and updates from the Vonage for Startups team.</p>
   - row:
     - column:
         - type: line_divider
@@ -122,7 +122,7 @@ page:
       - type: html
         html:
           content: |
-            <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="learn">
+            <div class="Vlt-card Vlt-card--scrollable" id="learn">
               <div class="Vlt-card__corner">
                 <svg class="Vlt-icon Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-books-full"></svg>
               </div>
@@ -137,7 +137,7 @@ page:
       - type: html
         html:
           content: |
-            <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="receive-tailored-support">
+            <div class="Vlt-card Vlt-card--scrollable" id="receive-tailored-support">
               <div class="Vlt-card__corner">
                 <svg class="Vlt-icon Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-receptionist-full"></svg>
               </div>
@@ -153,7 +153,7 @@ page:
       - type: html
         html:
           content: |
-            <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="build">
+            <div class="Vlt-card Vlt-card--scrollable" id="build">
               <div class="Vlt-card__corner">
                 <svg class="Vlt-icon Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-design-tools-full"></svg>
               </div>
@@ -168,7 +168,7 @@ page:
       - type: html
         html:
           content: |
-            <div class="Vlt-card Vlt-card--clickable Vlt-card--scrollable" id="connect">
+            <div class="Vlt-card Vlt-card--scrollable" id="connect">
               <div class="Vlt-card__corner">
                 <svg class="Vlt-icon Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-plug-full"></svg>
               </div>
@@ -253,7 +253,9 @@ page:
     - column:
       - type: html
         html:
-          content: <p align="center" >We are always on the lookout for organizations sharing a similar vision of empowering startups to join our ecosystem.</p><p align="center" >Incubators, accelerators, angel investors, venture capital firms or other startup enabling organisations looking to support their startups further with our communication APIs.</p>
+          content: |
+            <p align="center">We are always on the lookout for organizations sharing a similar vision of empowering startups to join our ecosystem.</p>
+            <p align="center">If you're an incubator, accelerator, angel investor, venture capital firm or other startup enabling organization looking for support for your portfolio companies with our communications APIs, consider partnering with us.</p>
   - row:
     - column:
       - type: html
@@ -299,19 +301,15 @@ page:
           url: "https://learn.vonage.com/blog/2020/12/15/how-to-build-a-learning-platform-using-vonage-javascript-typescript-react-express-and-apollo-graphql/"
           alt_text: How to Build a Learning Platform With React, Express and Apollo GraphQL
   - row:
-      - column:
-          - type: line_divider
-  - row:
     - column:
       - type: html
         html:
           content: |
-            <div class="Vlt-center" style="margin-top: 50px;">
-              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrA1Sw95kLwqT3da">Join the Community!</a>
-            </div>
-      - type: html
-        html:
-          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">Get the latest news, content and updates from the Vonage for Startups team.</p>
+            <p align="center">You can find more resources on our <a href="https://learn.vonage.com">blog</a> and <a href="/">documentation</a> platforms.</p>
+  - row:
+      - column:
+          - type: line_divider
+  - row:
     - column:
       - type: html
         html:
@@ -322,6 +320,16 @@ page:
       - type: html
         html:
           content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">The Vonage Startup Program is dedicated to startups that want to receive tailored support and Vonage API credits.</p>
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center" style="margin-top: 50px;">
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrA1Sw95kLwqT3da">Join the Community!</a>
+            </div>
+      - type: html
+        html:
+          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">Get the latest news, content and updates from the Vonage for Startups team.</p>
   - row:
       - column:
           - type: line_divider
