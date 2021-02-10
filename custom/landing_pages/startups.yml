@@ -45,13 +45,27 @@ page:
                   .startups-page h2.Vlt-title--icon svg.Vlt-icon {
                     display: none;
                   }
-                  .sr-only {
-                    position:absolute;
-                    left:-10000px;
-                    top:auto;
-                    width:1px;
-                    height:1px;
-                    overflow:hidden;
+                  .startups-page .fw {
+                    background: linear-gradient(180deg, #000000, #000000 82.4%, #231F20 82.4%, #231F20);
+                  }
+                  .mb { display: none; }
+                  .dt { display: block; }
+                  @media screen and (min-width: 1301px) {
+                    .sr-only {
+                      position:absolute;
+                      left:-10000px;
+                      top:auto;
+                      width:1px;
+                      height:1px;
+                      overflow:hidden;
+                    }
+                  }
+                  @media screen and (max-width: 1300px) {
+                    .mb { display: block; }
+                    .dt { display: none; }
+                    .startups-page .fw {
+                      background: none
+                    }
                   }
 
                 </style>
@@ -60,13 +74,14 @@ page:
       - type: html
         html:
           content: |
-            <div style="background: linear-gradient(180deg, #000000, #000000 82.4%, #231F20 82.4%, #231F20); margin-bottom: 70px;">
+            <div class="fw" style="margin-bottom: 70px;">
               <div style="margin: 0 auto; max-width: 1300px;">
-                <img style="display: block;" alt="Hero image" src="/images/startups/hero.svg" alt="">
-                <div class="sr-only">
-                  <h1>Vonage for Startups</h1>
-                  <h2>Build faster, reach more customers and focus your time on what matters most.</h2>
-                  <p>We want to support the global startup community to build better products by connecting them to the best Vonage resources, people, and communication APIs.</p>
+                <img class="dt" alt="Hero image" src="/images/startups/hero.svg" alt="">
+                <img class="mb" alt="Hero image" src="/images/startups/hero-mobile.png " alt="">
+                <div class="sr-only" style="background: #231F20; padding: 1em;">
+                  <h1 style="color: white; font-size: 18px; letter-spacing: 0; line-height: 1.5em; margin-bottom: 1em;">Vonage for Startups</h1>
+                  <h2 style="color: white;">Build faster, reach more customers and focus your time on what matters most.</h2>
+                  <p style="color: white;">We want to support the global startup community to build better products by connecting them to the best Vonage resources, people, and communication APIs.</p>
                 </div>
               </div>
             </div>
