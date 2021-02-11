@@ -9,9 +9,7 @@ description: In this step you add external dependencies
 
 You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside `allprojects` block in the project-level `build.gradle` file:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
-```
+![](public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
 
 ```groovy
 allprojects {
@@ -28,9 +26,7 @@ allprojects {
 
 Now add the Client SDK to the project. Add the following dependency in the module level `build.gradle` file.:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
-```
+![](public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png)
 
 ```groovy
 dependencies {
@@ -46,9 +42,7 @@ To navigate between screens you will use [Navigation component](https://develope
 
 To add navigation component dependency define a variable `ext.android_navigation_version` containing version in project-level `build.gradle` file:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png
-```
+![](public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
 
 ```groovy
 buildscript {
@@ -72,9 +66,7 @@ dependencies {
 
 Add `Safe Args` plugin in the module level `build.gradle` file:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png
-```
+![](public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png)
 
 ```groovy
 plugins {
@@ -96,6 +88,4 @@ dependencies {
 
 Click the `Sync project with Gradle Files` icon to make sure build scripts have been correctly configured:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/sync-project-wth-gradle-files.png
-```
+![](public/screenshots/tutorials/client-sdk/android-shared/sync-project-wth-gradle-files.png)

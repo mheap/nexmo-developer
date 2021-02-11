@@ -15,9 +15,7 @@ Open the `fragment_login.xml` file.
 
 Click the `Code` button in top right corner to display layout XML code:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
-```
+![](public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
 
 Replace the file contents with the following code:
 
@@ -249,8 +247,6 @@ public class LoginFragment extends Fragment {
 
 You can either launch the app on the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When device is present press `Run` button: 
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
-```
+![](public/screenshots/tutorials/client-sdk/android-shared/launch-app.png)
 
 You should see the login screen with the two buttons `Login Bob` and `Login Alice`. After clicking one of them user will login and empty chat screen will open.

@@ -27,10 +27,7 @@ So that Vonage knows how to access your webhook, you must configure it in your V
 
 In the code snippets, the webhook is located at `/webhooks/delivery-receipt`. If you are using Ngrok, the webhook you need to configure in your [Vonage Dashboard API Settings page](https://dashboard.nexmo.com/settings) is of the form `https://demo.ngrok.io/webhooks/delivery-receipt`. Replace `demo` with the subdomain provided by Ngrok and enter your endpoint in the field labeled **Webhook URL for Delivery Receipts**:
 
-```screenshot
-script: app/screenshots/webhook-url-for-delivery-receipt.js
-image: public/screenshots/smsDLRsettings.png
-```
+![](public/screenshots/smsDLRsettings.png)
 
 ## Try it out
 

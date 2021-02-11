@@ -46,9 +46,8 @@ To use the In-App Voice features, add audio permissions using the following proc
 
 1. Add the required permissions to the `AndroidManifest.xml` file:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png
-```
+![](/public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
+
 
     ```xml
     <manifest ...>
