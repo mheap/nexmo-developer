@@ -28,4 +28,4 @@ To manage your WhatsApp Business profile from the Vonage API dashboard:
 ## Reference
 
 * [Understanding WhatsApp messaging](/messages/concepts/whatsapp)
-* [External Accounts API Reference](/api/whatsapp-provisioning)
+* [WhatsApp Provisioning API Reference](/api/whatsapp-provisioning)
