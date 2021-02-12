@@ -107,6 +107,14 @@ On a successful login, the following delegate method is called with `NXMConnecti
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/delegate'
 ```
 
+You can check if the connection status is connected with `isConnected`:
+
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/is-connected'
+```
+
+`isConnected` will be the last connection status of the client if your app is suspended in the background. Therefore the value for `isConnected` can be stale. 
+
 ### Get current user info
 
 After the login succeeds, the logged in user will be available via:
