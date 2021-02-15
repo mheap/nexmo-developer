@@ -9,7 +9,7 @@ description: In this step you add permissions
 
 Add `INTERNET` permission into `AndroidManifest.xml` file:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
+![](/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

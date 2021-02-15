@@ -9,7 +9,7 @@ As you'll be using the microphone when making a call, you need to request the pe
 
 1. Add the required permissions to the `AndroidManifest.xml` file:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
+![](/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
 
     ```xml
     <manifest ...>

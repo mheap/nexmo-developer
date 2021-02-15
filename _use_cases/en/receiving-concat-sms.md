@@ -113,7 +113,7 @@ In your application, the webhook is located at `/webhooks/inbound-sms`. If you a
 
 Enter your webhook endpoint in the field labeled **Webhook URL for Inbound Message** and click the [Save changes] button.
 
-![](public/screenshots/smsInboundWebhook.png)
+![](/screenshots/smsInboundWebhook.png)
 
 Now, if any of your virtual numbers receive an SMS, Vonage will call that webhook endpoint with the message details.
 

@@ -16,7 +16,7 @@ nexmo jwt:generate sub=Alice exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users
 
 Make a note of the JWT you generated for Alice.
 
-![](public/screenshots/tutorials/client-sdk/generated-jwt-key.png)
+![](/screenshots/tutorials/client-sdk/generated-jwt-key.png)
 
 ## Generate a JWT for Bob
 

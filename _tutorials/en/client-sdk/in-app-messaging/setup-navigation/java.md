@@ -9,15 +9,15 @@ description: In this step you will setup navigation component.
 
 Right click at `res` folder, select `New` > `Android resource file`:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/new-android-resource-file.png)
+![](/screenshots/tutorials/client-sdk/android-shared/new-android-resource-file.png)
 
 Enter `app_nav_graph` as file name, select `Navigation` as resource type and press `OK` button.
 
-![](public/screenshots/tutorials/client-sdk/android-shared/new-app-nav-graph.png)
+![](/screenshots/tutorials/client-sdk/android-shared/new-app-nav-graph.png)
 
 Click the `Code` button in top right corner and replace it's content with below code snippet to set navigation graph for the application:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
+![](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -49,9 +49,9 @@ Navigation graph defines navigation directions between fragments in the applicat
 
 Set `app_nav_graph` as main navigation graph of the application. Open the `activity_main.xml`, click `Code` button in top right corner file and replace XML layout code:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/activity-main-layout-file.png)
+![](/screenshots/tutorials/client-sdk/android-shared/activity-main-layout-file.png)
 
-![](public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
+![](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

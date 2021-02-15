@@ -11,9 +11,9 @@ On call screen (`OnCallFragment` and `OnCallViewModel` classes) is responsible f
 
 Open the `fragment_on_call.xml` layout and click `Code` button in top right corner to display layout XML code:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
+![](/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
 
-![](public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
+![](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
 
 Replace the file contents with the following code:
 

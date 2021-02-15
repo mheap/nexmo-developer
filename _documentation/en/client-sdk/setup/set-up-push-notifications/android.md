@@ -100,17 +100,17 @@ nexmo jwt:generate ./private.key exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/u
 
 Get your `FIREBASE_PROJECT_ID` from the [Firebase console](https://console.firebase.google.com/). Navigate to `Firebase console -> Project settings -> General`.
 
-![](/public/screenshots/setup/client-sdk/set-up-push-notifications/firebase-project-settings.png)
+![](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-project-settings.png)
 
-![](/public/screenshots/setup/client-sdk/set-up-push-notifications/firebase-project-id.png)
+![](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-project-id.png)
 
 ### Get Firebase token
 
 Get your `FIREBASE_TOKEN` from the Firebase console. Navigate to `Firebase console ->  Project settings -> Service accounts` and generate a new private key. 
 
-![](/public/screenshots/setup/client-sdk/set-up-push-notifications/firebase-project-settings.png)
+![](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-project-settings.png)
 
-![](/public/screenshots/setup/client-sdk/set-up-push-notifications/firebase-token.png)
+![](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-token.png)
 
 ## Link the Vonage backend push service with the Firebase application
 

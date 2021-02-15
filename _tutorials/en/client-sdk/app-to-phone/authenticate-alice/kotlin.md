@@ -15,7 +15,7 @@ Open the `fragment_login.xml` file.
 
 Click the `Code` button in the top right corner to display layout XML code:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
+![](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
 
 Replace the file contents with the following code:
 
@@ -217,6 +217,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
 You can either launch the app on the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When device is present press `Run` button: 
 
-![](public/screenshots/tutorials/client-sdk/android-shared/launch-app.png)
+![](/screenshots/tutorials/client-sdk/android-shared/launch-app.png)
 
 You should see the login screen with the `Login Alice` and `Login Bob` buttons. After clicking user will login and empty main screen will open.
