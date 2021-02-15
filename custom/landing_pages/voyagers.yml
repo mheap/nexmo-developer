@@ -52,7 +52,6 @@ page:
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 1em;
               }
               .voyagers-page .profile {
                 width: 225px;
@@ -60,6 +59,7 @@ page:
                 border-radius: 5px;
                 display: flex;
                 flex-direction: column;
+                margin: 0.5em;
               }
               .voyagers-page .profile img {
                 width: 100%;
@@ -129,6 +129,7 @@ page:
                 .mb { display: block; }
                 .dt { display: none; }
                 .voyagers-page .fw-main { background: none; }
+                .voyagers-page .Nxd-landing-row { margin: 25px 0; }
               }
               @media screen and (max-width: 700px) {
                 .voyagers-page .card-set { grid-template-columns: 1fr; gap: 1em; }
