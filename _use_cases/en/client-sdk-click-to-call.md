@@ -103,7 +103,7 @@ nexmo user:create name="supportuser"
 The Client SDK uses [JWTs](/concepts/guides/authentication#json-web-tokens-jwt) for authentication. Execute the following command to create the JWT, replacing `APPLICATION_ID` with your own Vonage Application ID. The JWT expires after one day (the maximum lifetime of a Vonage JWT), after which you will need to regenerate it.
 
 ```
-nexmo jwt:generate ./private.key sub=supportuser exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=APPLICATION_ID
+nexmo jwt:generate ./private.key sub=supportuser exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=APPLICATION_ID
 ```
 
 ## Configure your Application

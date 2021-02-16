@@ -87,7 +87,7 @@ Obtain your `VONAGE_APP_ID`. You can access existing application in the [dashboa
 To generate a `VONAGE_DEV_JWT` run the following command. Remember to replace the `VONAGE_APP_ID` with id of your Vonage application:
 
 ```bash
-nexmo jwt:generate ./private.key exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=VONAGE_APP_ID
+nexmo jwt:generate ./private.key exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=VONAGE_APP_ID
 ```
 
 > **NOTE** The above commands set the expiry of the JWT to one day from now, which is the maximum.
