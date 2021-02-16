@@ -34,9 +34,14 @@ Certificate (associated with your phone number)
 npm install nexmo-cli@beta -g
 ```
 
-## Create Vonage Application
+## Create a Vonage Application
+
+A Vonage API application contains the security and configuration information you need to connect to Vonage endpoints and use the Vonage APIs. In this case, you must create an application that uses the Vonage Messages API.
+
+> Note: Your WhatsApp account must be connected to your Vonage account before you can link it to a Vonage application. You can connect your WhatsApp account to your Vonage account via the [Vonage API Dashboard](https://dashboard.nexmo.com/messages/social-channels).
 
 * Both CLI and Dashboard examples are [here](https://developer.nexmo.com/messages/code-snippets/create-an-application)
+
 
 ## Generate your JWT
 

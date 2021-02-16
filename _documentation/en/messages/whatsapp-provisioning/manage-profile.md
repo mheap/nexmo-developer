@@ -7,7 +7,7 @@ navigation_weight: 4
 
 # Manage a WhatsApp Business Profile
 
-Once cluster has been successfully deployed, you may now manage your WhatsApp Business profile via the Vonage API Dashboard or programmatically using the [WhatsApp Provisioning API](/api/whatsapp-provisioning).
+Once the cluster has been successfully deployed, you may now manage your WhatsApp Business profile via the Vonage API Dashboard or programmatically using the [WhatsApp Provisioning API](/api/whatsapp-provisioning).
 
 To manage your WhatsApp Business profile from the Vonage API dashboard:
 

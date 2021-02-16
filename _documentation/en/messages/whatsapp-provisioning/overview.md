@@ -11,6 +11,8 @@ The WhatsApp Provisioning API enables you to deploy a WhatsApp cluster, perform 
 
 The first thing you must do is [add a phone number](/messages/whatsapp-provisioning/add-phone-number) in your WhatsApp Business account dashboard.
 
+> **Note:** If you don't have a WhatsApp business account via Facebook and if you aren't already a customer of Vonage using WhatsApp please contact sales.
+
 Once you've added a phone number, you may [provision your WhatsApp deployment](/messages/whatsapp-provisioning/provision-deployment).
 
 Finally, you may use the [Vonage API Dashboard](https://dashboard.nexmo.com/messages/social-channels) to [manage your WhatsApp Business profile](/messages/whatsapp-provisioning/manage-profile).
