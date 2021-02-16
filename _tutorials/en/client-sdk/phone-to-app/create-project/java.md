@@ -9,17 +9,17 @@ description: In this step you create an Android project and add the Android Clie
 
 You will be building an Android application with single screen:
 
-![](public/screenshots/tutorials/client-sdk/android-phone-to-app/nav-graph.png)
+![](/screenshots/tutorials/client-sdk/android-phone-to-app/nav-graph.png)
 
 ## New Android Project
 
 Open Android Studio and, from the menu, select `File` > `New` > `New Project...`. Select a `Empty Activity` template type and click `Next`.
 
-![](public/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png)
+![](/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png)
 
 Enter `phone-to-app` as project name, `com.vonage.tutorial.voice` as package, select `Java` language and press `Finish` button.
 
-![](public/screenshots/tutorials/client-sdk/android-phone-to-app/configure-your-project-java.png)
+![](/screenshots/tutorials/client-sdk/android-phone-to-app/configure-your-project-java.png)
 
 You now have a brand new Android Project.
 
@@ -27,7 +27,7 @@ You now have a brand new Android Project.
 
 You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside `allprojects` block in the project-level `build.gradle` file:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
+![](/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
 
 ```groovy
 allprojects {
@@ -44,7 +44,7 @@ allprojects {
 
 Now add the Client SDK to the project. Add the following dependency in the module level `build.gradle` file:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png)
+![](/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png)
 
 ```groovy
 dependencies {
@@ -60,7 +60,7 @@ To navigate between screens you will use [Navigation component](https://develope
 
 To add navigation component dependency define a variable `ext.android_navigation_version` containing version in project-level `build.gradle` file:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
+![](/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
 
 ```groovy
 buildscript {
@@ -93,4 +93,4 @@ dependencies {
 
 Click the `Sync project with Gradle Files` icon to make sure build scripts have been correctly configured:
 
-![](public/screenshots/tutorials/client-sdk/android-shared/sync-project-wth-gradle-files.png)
+![](/screenshots/tutorials/client-sdk/android-shared/sync-project-wth-gradle-files.png)

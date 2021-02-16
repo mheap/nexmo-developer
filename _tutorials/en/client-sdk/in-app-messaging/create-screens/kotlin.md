@@ -15,11 +15,11 @@ You will now create placeholders for screens in the application (we will define 
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_login` as file name and press `OK`.
 
-![](public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
+![](/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
 
 To create fragment right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginFragment` as file name and select `Class`.
 
-![](public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png)
+![](/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png)
 
 Replace the file contents with below snippet:
 
@@ -33,7 +33,7 @@ class LoginFragment : Fragment()
 
 To create view model right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name and select `Class`.
 
-![](public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png)
+![](/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png)
 
 Replace the file contents with below snippet:
 
@@ -51,11 +51,11 @@ public class LoginViewModel : ViewModel() {
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_chat` as file name and press `OK`.
 
-![](public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
+![](/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
 
 To create fragment right click on `com.vonage.tutorial.messaging` package, select `New` > `Kotlin Class/File`, enter `ChatFragment` as file name and select `Class`.
 
-![](public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png)
+![](/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png)
 
 Replace the file contents with below snippet:
 
@@ -79,6 +79,6 @@ public class ChatViewModel : ViewModel() {
 }
 ```
 
-![](public/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png)
+![](/screenshots/tutorials/client-sdk/android-in-app-messaging-chat/messaging-package.png)
 
 Run `Build` > `Make project` to make sure project is compiling.
