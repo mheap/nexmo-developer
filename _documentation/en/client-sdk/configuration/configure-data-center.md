@@ -24,6 +24,7 @@ Data Center | Location
 `DAL` | Dallas
 `LON` | London
 `SNG` | Singapore
+`AMS` | Amsterdam
 
 ## URLs
 
@@ -45,6 +46,7 @@ Data Center | URL
 `DAL` | `https://api-us-2.nexmo.com`
 `LON` | `https://api-eu-1.nexmo.com`
 `SNG` | `https://api-sg-1.nexmo.com`
+`AMS` | `https://api-eu-2.nexmo.com`
 
 ### `url`
 
@@ -58,6 +60,7 @@ Data Center | URL
 `DAL` | `wss://ws-us-2.nexmo.com`
 `LON` | `wss://ws-eu-1.nexmo.com`
 `SNG` | `wss://ws-sg-1.nexmo.com`
+`AMS` | `wss://ws-eu-2.nexmo.com`
 
 ### `ips_url`
 
@@ -71,6 +74,7 @@ Data Center | URL
 `DAL` | `https://api-us-2.nexmo.com/v1/image`
 `LON` | `https://api-eu-1.nexmo.com/v1/image`
 `SNG` | `https://api-sg-1.nexmo.com/v1/image`
+`AMS` | `https://api-eu-2.nexmo.com/v1/image`
 
 ## Configuration
 
