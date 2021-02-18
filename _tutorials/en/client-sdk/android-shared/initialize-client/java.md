@@ -25,8 +25,6 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 
 If Android Studio can't find the reference to the `NexmoClient` class then you have to add the missing import. Roll over on the `NexmoClient` class, wait for window to appear and press `Import` (this will be required in following steps as well).
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png)
 
 Run `Build` > `Make project` to make sure project is compiling.

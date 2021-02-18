@@ -12,7 +12,32 @@ Automatic Speech Recognition (ASR) enables apps to support voice input for such 
 
 ## How it works
 
-![ASR Flow](https://app.lucidchart.com/publicSegments/view/7840753c-7db0-4ec4-bab1-1e453d950762/image.png)
+```sequence_diagram
+participant U as User
+participant V as Vonage
+participant A as App
+
+activate U
+U->>V: phone call
+
+activate V
+V->>A: answer callback
+
+activate A
+A->>V: NCCO
+note left of A: talk/stream\ninput
+
+V->>U: audio message
+
+U->>V: speech
+
+V->>A: text
+
+A->>V: NCCO
+note left of A: next action(s)
+
+V-->U: next action(s)
+```
 
 Typically, ASR is used in conjunction with an audio message playing to the user. The message might be an [audio file](/voice/voice-api/code-snippets/play-an-audio-stream-into-a-call) or [Text-to-Speech](/voice/voice-api/guides/text-to-speech), or a combination of both played sequentially. To activate the ASR, NCCO should contain an `input` action with speech parameters specified.
 

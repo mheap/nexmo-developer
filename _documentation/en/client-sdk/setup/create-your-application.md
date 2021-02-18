@@ -86,7 +86,7 @@ The user ID is used to perform tasks by the SDK, such as login, starting a call 
 To generate a JWT for Alice run the following command, remembering to replace the `MY_APP_ID` variable with the value that suits your application:
 
 ```bash
-nexmo jwt:generate ./private.key exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' sub=Alice application_id=MY_APP_ID
+nexmo jwt:generate ./private.key exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' sub=Alice application_id=MY_APP_ID
 ```
 
 The above command sets the expiry of the JWT to one day from now, which is the maximum amount of time. You may change the expiration to a shortened amount of time, or regenerate a JWT for the user after the current JWT has expired.

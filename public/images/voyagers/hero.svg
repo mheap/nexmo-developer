@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="673px" viewBox="0 0 1920 673" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#861FFE" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="69" y="529" width="232" height="50" rx="25"></rect>
+        <filter x="-3.0%" y="-10.0%" width="106.0%" height="128.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="1080p" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="1920" height="673"></rect>
+        <text id="Get-recognized-for-b" font-family="Spezia-SemiBold, Spezia" font-size="48" font-weight="500" fill="#FFFFFF">
+            <tspan x="69" y="192">Get recognized for being an </tspan>
+            <tspan x="69" y="250">expert in Communications APIs</tspan>
+        </text>
+        <rect id="Rectangle" fill="#FFFFFF" x="69" y="303" width="174" height="6"></rect>
+        <text id="Vonage-Voyagers" font-family="Spezia-Regular, Spezia" font-size="24" font-weight="normal" fill="#FFFFFF">
+            <tspan x="69" y="107">Vonage Voyagers</tspan>
+        </text>
+        <text id="Communications-APIs" font-family="Spezia-Regular, Spezia" font-size="18" font-weight="normal" line-spacing="26" fill="#FFFFFF">
+            <tspan x="69" y="372">Communications APIs are key to how we connect and communicate in the future. We want to </tspan>
+            <tspan x="69" y="398">encourage the boldest and most curious to be pioneers in our field. Use Vonage Voyagers to </tspan>
+            <tspan x="69" y="424">learn from API experts, improve your technical communication skills, showcase your </tspan>
+            <tspan x="69" y="450">knowledge and support your peers.</tspan>
+        </text>
+        <g id="Rectangle">
+            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+        </g>
+        <a xlink:href="https://vonage.com">
+            <text id="Apply-to-be-a-Voyage" font-family="Spezia-SemiBold, Spezia" font-size="18" font-weight="500" fill="#3E0E76">
+                <tspan x="90" y="561">Apply to be a Voyager</tspan>
+            </text>
+        </a>
+        <a xlink:href="https://developer.vonage.com">
+            <text id="Nominate-someone-els" font-family="Spezia-Regular, Spezia" font-size="18" font-weight="normal" fill="#E7E7E7">
+                <tspan x="327" y="560">Nominate someone else</tspan>
+            </text>
+        </a>
+        <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="1044.5" y="84.5" width="792" height="525"></rect>
+    </g>
+</svg>

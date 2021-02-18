@@ -31,10 +31,7 @@ Nexmo が Web フックにアクセスできるようにするには、Nexmo ア
 
 Web フックはコードスニペットの `/webhooks/delivery-receipt` にあります。Ngrok を使用している場合、[Nexmo Dashboard の API 設定ページ](https://dashboard.nexmo.com/settings)で設定が必要な Web フックは「`https://demo.ngrok.io/webhooks/delivery-receipt`」フォームを取ります。「`demo`」部分を Ngrok から提供されるサブドメインに置き換えて、 **受信確認用 Web フックの URL** というラベルが付いたフィールドにエンドポイントを入力します。
 
-```screenshot
-script: app/screenshots/webhook-url-for-delivery-receipt.js
-image: public/meta/screenshots/smsDLRsettings.png
-```
+![](/meta/screenshots/smsDLRsettings.png)
 
 試行手順
 ----
