@@ -37,7 +37,7 @@ To complete the tutorial, you need:
 
 * A [Vonage account](https://dashboard.nexmo.com/sign-up) - for your API key and secret.
 * [ngrok](https://ngrok.com/) - (optional) to make your development web server accessible to Vonage's servers over the Internet.
-* All US based customers have a number that follows [10 DLC guidelines](/messaging/sms/overview#send-an-sms).
+* All US based customers must register a brand and campaign to comply with [10 DLC guidelines](/messaging/sms/overview#send-an-sms).
 
 ## Create the project
 Make a directory for your application, `cd` into the directory and then use the Node.js package manager `npm` to create a `package.json` file for your application's dependencies:

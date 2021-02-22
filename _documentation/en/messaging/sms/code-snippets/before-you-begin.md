@@ -17,7 +17,7 @@ Please read this information carefully before attempting to use the code snippet
 1. [Create a Vonage account](/account/guides/dashboard-management#create-and-configure-a-nexmo-account) - so that you can access your API key and secret to authenticate requests.
 2. [Rent a Vonage Number](/numbers/guides/number-management#rent-a-virtual-number) - if you want to receive inbound SMS.
 3. [Install a Server SDK](/tools) - for your chosen programming language.
-4. All US based customers must have a number that follows [10 DLC guidelines](/messaging/sms/overview#send-an-sms).
+4. All US based customers must register a brand and campaign to comply with [10 DLC guidelines](/messaging/sms/overview#send-an-sms).
 
 ## Webhooks
 

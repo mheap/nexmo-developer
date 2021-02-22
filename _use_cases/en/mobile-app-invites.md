@@ -33,7 +33,7 @@ In order to work through this tutorial you need:
 * A [Vonage account](https://dashboard.nexmo.com/sign-up)
 * A publicly accessible Web server so that Vonage can make webhook requests to your app. If you're developing locally you must use a tool such as [ngrok](https://ngrok.com/) ([see our ngrok tutorial blog post](https://www.nexmo.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/))
 * The source code for this tutorial from <https://github.com/Nexmo/ruby-mobile-app-promotion>
-* All US based customers have a number that follows [10 DLC guidelines](/messaging/sms/overview#send-an-sms).
+* All US based customers must register a brand and campaign to comply with [10 DLC guidelines](/messaging/sms/overview#send-an-sms).
 
 ## Create a Web app
 

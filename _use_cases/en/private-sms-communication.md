@@ -32,7 +32,7 @@ To complete this tutorial, you need:
 * The [source code](https://github.com/Nexmo/node-sms-proxy) on GitHub - installation instructions are in the [README](https://github.com/Nexmo/node-sms-proxy/blob/master/README.md).
 * [Node.js](https://nodejs.org/en/download/) installed and configured.
 * [ngrok](https://ngrok.com/) - (optional) to make your development web server accessible to Vonage's servers over the Internet.
-* All US based customers have a number that follows [10 DLC guidelines](/messaging/sms/overview#send-an-sms).
+* All US based customers must register a brand and campaign to comply with [10 DLC guidelines](/messaging/sms/overview#send-an-sms).
 
 ## Create the basic web application
 
