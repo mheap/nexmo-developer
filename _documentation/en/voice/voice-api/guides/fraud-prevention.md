@@ -19,10 +19,10 @@ If you have any suspicions that your dashboard credentials or API key/secret wer
 If your business operates in certain countries, you may restrict the destination number to be in these countries. Alternatively, you may restrict certain destination, for example, blocking the following country numbers, which often used for fraud activities:
 
 * Congo
-* Cote D'Ivoire
 * Gambia
 * Guinea
 * Haiti
+* Ivory Coast
 * Latvia
 * Liberia
 * Samoa
@@ -50,7 +50,7 @@ if (phoneNumber.startsWith('1'))
 }
 ```
 
-Wiht its comparable simplicity, the drawback here is that, for the example above, `+1` phone country code corresponds not only to the US and Canada but a few other countries/regions which might be outside of your case relevant destinations, for example, the Bahamas or Antigua and Barbuda. To do a more precise check, it's recommended to use basic Number Insights API to check the destination country:
+With its comparable simplicity, the drawback here is that, for the example above, `+1` phone country code corresponds not only to the US and Canada but a few other countries/regions which might be outside of your case relevant destinations, for example, the Bahamas or Antigua and Barbuda. To do a more precise check, it's recommended to use basic Number Insights API to check the destination country:
 
 ```js
 vonage.numberInsight.get({level: 'basic', number: phoneNumber}, (error, result) => {
@@ -70,6 +70,6 @@ See also [Number Insight Basic](/number-insight/code-snippets/number-insight-bas
 
 To make sure the webhook requests to your application are coming from Vonage, you may:
 
-* setup a firewall to accept requests from [Vonage IPs](https://help.nexmo.com/hc/en-us/articles/115004859247-Which-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo-) only;
+* setup a firewall to accept requests from [Vonage IP ranges](https://help.nexmo.com/hc/en-us/articles/115004859247-Which-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo-) only;
 * check [callback signature](/voice/voice-api/guides/signed-webhooks).
 
