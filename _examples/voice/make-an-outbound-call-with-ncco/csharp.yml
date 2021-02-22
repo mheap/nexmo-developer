@@ -14,7 +14,7 @@ client:
 code:
     source: .repos/vonage/vonage-dotnet-code-snippets/DotNetCliCodeSnippets/Voice/MakeCallWithNcco.cs
     from_line: 27
-    to_line: 34
+    to_line: 36
 run_command: 'Run using your IDE'
 file_name: MakeCallWithNcco.cs
 unindent: true
