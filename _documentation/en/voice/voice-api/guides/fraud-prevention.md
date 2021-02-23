@@ -68,7 +68,7 @@ See also [Number Insight Basic](/number-insight/code-snippets/number-insight-bas
 
 ## Webhook Origination Checking
 
-To make sure the webhook requests to your application are coming from Vonage, you may:
+Other types of attacks might target getting access to your application or customer private data. In this type of attack, a fraudster impersonates Vonage and makes webhook requests to your application similar to Vonage API callbacks, in order to receive valuable information, for example, the text of the voice message you deliver potentially including some Personally Identifiable Information. To make sure the webhook requests to your application are coming from Vonage, you may:
 
 * setup a firewall to accept requests from [Vonage IP ranges](https://help.nexmo.com/hc/en-us/articles/115004859247-Which-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo-) only;
 * check [callback signature](/voice/voice-api/guides/signed-webhooks).
