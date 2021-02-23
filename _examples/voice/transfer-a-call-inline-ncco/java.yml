@@ -1,0 +1,18 @@
+---
+title: Java
+language: java
+import_dependencies:
+    source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/voice/TransferCallNCCO.java
+    from_line: 24
+    to_line: 28
+code:
+    source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/voice/TransferCallNCCO.java
+    from_line: 48
+    to_line: 66
+client:
+    source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/voice/TransferCallNCCO.java
+    from_line: 43
+    to_line: 46
+run_command: java-ide
+file_name: TransferCallNCCO.java
+unindent: true

@@ -3,12 +3,12 @@ title: Java
 language: java
 code:
     source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/voice/SendTalkToCall.java
-    from_line: 46
-    to_line: 58
+    from_line: 47
+    to_line: 56
 client:
     source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/voice/SendTalkToCall.java
-    from_line: 41
-    to_line: 44
+    from_line: 42
+    to_line: 45
 run_command: java-ide
 file_name: SendTalkToCall.java
 unindent: true
