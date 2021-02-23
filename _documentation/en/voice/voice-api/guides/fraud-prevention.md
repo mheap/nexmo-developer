@@ -16,7 +16,7 @@ If you have any suspicions that your dashboard credentials or API key/secret wer
 
 ## Destinations Filtering
 
-If your business operates in certain countries, you may restrict the destination number to be in these countries. Alternatively, you may restrict certain destination, for example, blocking the following country numbers, which often used for fraud activities:
+If your business operates in certain countries, you may restrict the destination number to those countries. Alternatively, you may restrict an entire destination, blocking the following country numbers, which are often used for fraud activities:
 
 * Congo
 * Gambia
@@ -31,14 +31,14 @@ If your business operates in certain countries, you may restrict the destination
 
 > Vonage equally respects all countries and nations; the hint above is based on our statistical data only.
 
-In order to allow/block destinations, you may check the destination number (`from`) before performing Vonage API request for outbound call creation (`POST /calls` request or `connect` NCCO action) either by:
+In order to allow/block destinations, you may check the destination number (`from`) before performing a Vonage API request for an outbound call creation (`POST /calls` request or `connect` NCCO action) either by:
 
 * first digits in the number - check if it falls under your allowed/blocked destinations,
 * destination country using Number Insights API,
 
 and return an appropriate message if the destination is not supported by your service.
 
-Assuming you want to allow calls to, for example, the United States and Canada only, with the first approach, use this construction:
+Assuming you want to allow calls to, for example, the United States and Canada only, with the first approach, you can use this construction in JavaScript:
 
 ```js
 if (phoneNumber.startsWith('1'))
@@ -72,4 +72,3 @@ To make sure the webhook requests to your application are coming from Vonage, yo
 
 * setup a firewall to accept requests from [Vonage IP ranges](https://help.nexmo.com/hc/en-us/articles/115004859247-Which-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo-) only;
 * check [callback signature](/voice/voice-api/guides/signed-webhooks).
-
