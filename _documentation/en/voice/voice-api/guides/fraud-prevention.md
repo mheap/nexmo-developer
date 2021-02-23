@@ -1,6 +1,6 @@
 ---
 title: Fraud Prevention
-description: Learn basic voice calling fraud prevention practices
+description: Protect your Voice API applications from fraud
 navigation_weight: 10
 ---
 
