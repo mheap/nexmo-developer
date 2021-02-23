@@ -3,12 +3,12 @@ title: Java
 language: java
 client:
   source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/numbers/SearchNumbers.java
-  from_line: 41
-  to_line: 44
+  from_line: 42
+  to_line: 45
 code:
   source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/numbers/SearchNumbers.java
-  from_line: 46
-  to_line: 65
+  from_line: 47
+  to_line: 66
 file_name: SearchNumbers.java
 run_command: java-ide
 unindent: true
