@@ -8,7 +8,7 @@ navigation_weight: 10
 
 Like in other businesses, there are people and companies trying to profit unfairly in the world of telephony communications. Vonage undertakes a series of automatic and manual actions and processes to protect you from fraud activities. Still, there are certain practices that, if followed, may help you avoid business impact and potential losses.
 
-Typical fraud schemes are based on the generation of outbound calls to specific phone numbers known as "premium destinations" or "revenue shared numbers", so that the fraudsters get money for each second of the call. To do that, fraudsters should either know your API key and secret or use your service UI/API, which allows end-users to enter the destination phone number. Typical services that require this phone number input include a login or reset password page that uses two-factor authentication with a voice call. Follow the instruction provided below to reduce the risk of being affected by these types of schemes.
+Typical fraud schemes are based on the generation of outbound calls to specific phone numbers known as "premium destinations" or "revenue shared numbers", so that the fraudsters get money for each second of the call. To do that, fraudsters may either know your API key and secret or use your service UI/API, which allows end-users to enter the destination phone number. Typical services that require this phone number input include a login or reset password page that uses two-factor authentication with a voice call. Follow the instruction provided below to reduce the risk of being affected by these types of schemes.
 
 ## Credentials Rotation
 
