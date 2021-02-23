@@ -12,11 +12,13 @@ Typical fraud schemes are based on the generation of outbound calls to specific 
 
 ## Credentials Rotation
 
-If you have any suspicions that your dashboard credentials or API key/secret were compromised, update it as soon as possible. You can change your password in the Dashboard [Edit profile](https://dashboard.nexmo.com/edit-profile) page and request a new API secret on the [Settings](https://dashboard.nexmo.com/settings) page. See also [Best Security Practices for your Vonage Account](https://help.nexmo.com/hc/en-us/articles/115014939548).
+If you have any suspicions that your dashboard credentials or API key/secret have been compromised, update themas soon as possible. You can change your password in the Dashboard [Edit profile](https://dashboard.nexmo.com/edit-profile) page and request a new API secret on the [Settings](https://dashboard.nexmo.com/settings) page. See also [Best Security Practices for your Vonage Account](https://help.nexmo.com/hc/en-us/articles/115014939548).
 
 ## Destinations Filtering
 
-If your business operates in certain countries, you may restrict the destination number to those countries. Alternatively, you may restrict an entire destination, blocking the following country numbers, which are often used for fraud activities:
+If your business only operates in certain countries, you might choose to create an "allow list" to restrict calls to those countries. Alternatively, you can create a "block list" that allows calls to be made anywhere except to those countries in the list.
+
+Some users elect to prevent calls from being placed to countries that are perceived as being high risk. These include:
 
 * Congo
 * Gambia
@@ -68,7 +70,7 @@ See also [Number Insight Basic](/number-insight/code-snippets/number-insight-bas
 
 ## Webhook Origination Checking
 
-Other types of attacks might target getting access to your application or customer private data. In this type of attack, a fraudster impersonates Vonage and makes webhook requests to your application similar to Vonage API callbacks, in order to receive valuable information, for example, the text of the voice message you deliver potentially including some Personally Identifiable Information. To make sure the webhook requests to your application are coming from Vonage, you may:
+Other types of attacks might attempt to gain access to your application or your customers' private data. In these attacks, a fraudster impersonates the Vonage Platform by making webhook requests to your application. These can reveal the voice message text which could contain sensitive data. To ensure that requests to your webhooks are from Vonage, you can:
 
 * setup a firewall to accept requests from [Vonage IP ranges](https://help.nexmo.com/hc/en-us/articles/115004859247-Which-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo-) only;
 * check [callback signature](/voice/voice-api/guides/signed-webhooks).
