@@ -11,8 +11,9 @@ In order to use the WhatsApp Manager API to create deployments, link your busine
 
 To set up a phone number for your account:
 
-1. Navigate to [Business Manager](https://business.facebook.com/).
-2. Select the WhatsApp business account you want to set up a phone number for.
+1. Navigate to [Business Manager](https://business.facebook.com/settings/whatsapp-business-accounts/). If you have access to multiple business managers, select the **Vonage** page.
+2. Select the WhatsApp business account for which you want to set up a phone number. You can access the WhatsApp business account by selecting the **Settings** tab, then **WhatsApp Manager**.
+    The account opens in a new page.
 3. Navigate to the top bar and click **Phone Numbers**.
 4. Click **Add Phone Number**.
 5. Enter your phone number and display name. Your customers will see the display name when your messages appear in their WhatsApp app.
