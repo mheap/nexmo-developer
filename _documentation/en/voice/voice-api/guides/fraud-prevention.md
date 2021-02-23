@@ -12,7 +12,7 @@ Typical fraud schemes are based on the generation of outbound calls to specific 
 
 ## Credentials Rotation
 
-If you have any suspicions that your dashboard credentials or API key/secret have been compromised, update themas soon as possible. You can change your password in the Dashboard [Edit profile](https://dashboard.nexmo.com/edit-profile) page and request a new API secret on the [Settings](https://dashboard.nexmo.com/settings) page. See also [Best Security Practices for your Vonage Account](https://help.nexmo.com/hc/en-us/articles/115014939548).
+If you have any suspicions that your dashboard credentials or API key/secret have been compromised, update them as soon as possible. You can change your password in the Dashboard [Edit profile](https://dashboard.nexmo.com/edit-profile) page and request a new API secret on the [Settings](https://dashboard.nexmo.com/settings) page. See also [Best Security Practices for your Vonage Account](https://help.nexmo.com/hc/en-us/articles/115014939548).
 
 ## Destinations Filtering
 
@@ -52,7 +52,7 @@ if (phoneNumber.startsWith('1'))
 }
 ```
 
-With its comparable simplicity, the drawback here is that, for the example above, `+1` phone country code corresponds not only to the US and Canada but a few other countries/regions which might be outside of your case relevant destinations, for example, the Bahamas or Antigua and Barbuda. To do a more precise check, it's recommended to use basic Number Insights API to check the destination country:
+The flaw with this approach is that the `+1` phone country code allows calls not only to the US and Canada but also, for example, the Bahamas or Antigua and Barbuda, which might not be your intention. You can target countries more precisely by using the Number Insight API:
 
 ```js
 vonage.numberInsight.get({level: 'basic', number: phoneNumber}, (error, result) => {
