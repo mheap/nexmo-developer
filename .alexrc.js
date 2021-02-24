@@ -6,7 +6,8 @@ exports.allow = [
   "postman-postwoman",
   "hang",
   "special",
-  "black"
+  "black",
+  "guinea"
 ]
 
 exports.profanitySureness = 1;
