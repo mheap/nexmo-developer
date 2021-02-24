@@ -22,7 +22,7 @@ Some users elect to prevent calls from being placed to countries that are percei
 
 | ### High Risk Destination Examples
 |
-| These include (but not limited to):
+| These include (but are not limited to):
 |
 | * Congo
 | * Gambia
