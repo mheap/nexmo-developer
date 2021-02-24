@@ -37,7 +37,7 @@ Some users elect to prevent calls from being placed to countries that are percei
 |
 | > Vonage equally respects all countries and nations; the hint above is based on our statistical data only.
 
-In order to allow/block destinations, you may check the destination number (`from`) before performing a Vonage API request for an outbound call creation (`POST /calls` request or `connect` NCCO action) either by:
+In order to allow/block destinations, you may check the destination number before performing a Vonage API request for an outbound call creation (`POST /calls` request or `connect` NCCO action) either by:
 
 * first digits in the number - check if it falls under your allowed/blocked destinations,
 * destination country using Number Insights API,
