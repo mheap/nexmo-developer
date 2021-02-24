@@ -18,20 +18,24 @@ If you have any suspicions that your dashboard credentials or API key/secret hav
 
 If your business only operates in certain countries, you might choose to create an "allow list" to restrict calls to those countries. Alternatively, you can create a "block list" that allows calls to be made anywhere except to those countries in the list.
 
-Some users elect to prevent calls from being placed to countries that are perceived as being high risk. These include:
+Some users elect to prevent calls from being placed to countries that are perceived as being high risk. 
 
-* Congo
-* Gambia
-* Guinea
-* Haiti
-* Ivory Coast
-* Latvia
-* Liberia
-* Samoa
-* the Solomon Islands
-* Vanuatu
-
-> Vonage equally respects all countries and nations; the hint above is based on our statistical data only.
+| ### High Risk Destination Examples
+|
+| These include (but not limited to):
+|
+| * Congo
+| * Gambia
+| * Guinea
+| * Haiti
+| * Ivory Coast
+| * Latvia
+| * Liberia
+| * Samoa
+| * the Solomon Islands
+| * Vanuatu
+|
+| > Vonage equally respects all countries and nations; the hint above is based on our statistical data only.
 
 In order to allow/block destinations, you may check the destination number (`from`) before performing a Vonage API request for an outbound call creation (`POST /calls` request or `connect` NCCO action) either by:
 
@@ -40,7 +44,7 @@ In order to allow/block destinations, you may check the destination number (`fro
 
 and return an appropriate message if the destination is not supported by your service.
 
-Assuming you want to allow calls to, for example, the United States and Canada only, with the first approach, you can use this construction in JavaScript:
+Assuming you want to allow calls to, for example, the United States and Canada only, you can use this construction in JavaScript:
 
 ```js
 if (phoneNumber.startsWith('1'))
