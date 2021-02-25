@@ -10,16 +10,14 @@ The JWT is used to authenticate the user. Execute the following command in the t
 In the following command replace the `APPLICATION_ID` with the ID of your application:
 
 ``` shell
-nexmo jwt:generate sub=Alice exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}'
+nexmo jwt:generate sub=Alice exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}'
 ```
 
 The command above sets the expiry of the JWT to one day from now, which is the maximum.
 
 Make a note of the JWT you generated for Alice.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/generated-jwt-key.png
-```
+![](/screenshots/tutorials/client-sdk/generated-jwt-key.png)
 
 > **NOTE**: In a production environment, your application should expose an endpoint that generates a JWT for each client request.
 

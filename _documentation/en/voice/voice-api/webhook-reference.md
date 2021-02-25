@@ -178,6 +178,7 @@ Field | Example | Description
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
 `status` | `unanswered` | Call status
+`detail` | `unavailable` | Indicates if the subscriber is temporarily unavailable (`unavailable`) or the carrier could not produce a response within a suitable amount of time (`timeout`)
 `direction` | `outbound` | Call direction, this will be `outbound` in this context
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
 
@@ -209,6 +210,7 @@ Field | Example | Description
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
 `status` | `rejected` | Call status
+`detail` | `restricted` | Indicates if `to` or `from` numbers are invalid (`invalid_number`), the call rejected by carrier (`restricted`) or rejected by callee (`declined`)
 `direction` | `outbound` | Call direction, this will be `outbound` in this context
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
 
@@ -225,6 +227,7 @@ Field | Example | Description
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
 `status` | `failed` | Call status
+`detail` | `cannot_route` | Indicates the destination is not supported or blocked for the account (`cannot_route`), the number is not available (`number_out_of_service`) or a server error occurred (`internal_error`)
 `direction` | `outbound` | Call direction, this will be `outbound` in this context
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
 

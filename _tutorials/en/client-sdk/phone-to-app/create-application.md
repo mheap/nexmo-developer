@@ -29,9 +29,7 @@ A file named `.nexmo-app` is created in your project directory and contains the 
 
 **Please make a note of it as you'll need it in the future.**
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/nexmo-application-created.png
-```
+![](/screenshots/tutorials/client-sdk/nexmo-application-created.png)
 
 > **NOTE:** For more details on how to create an application and various available application capabilities please see our [documentation](/application/overview).
 

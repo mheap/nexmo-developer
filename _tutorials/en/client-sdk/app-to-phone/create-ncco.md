@@ -37,14 +37,10 @@ The NCCO must be public and accessible by the internet. To accomplish that, you 
 
 5) Click the `Create secret gist` button:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/app-to-phone/create-ncco/gist1.png
-```
+![](/screenshots/tutorials/client-sdk/app-to-phone/create-ncco/gist1.png)
 
 6) Click the `Raw` button:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/app-to-phone/create-ncco/gist2.png
-```
+![](/screenshots/tutorials/client-sdk/app-to-phone/create-ncco/gist2.png)
 
 7) Take note of the URL shown in your browser, you will be using it in the next step.

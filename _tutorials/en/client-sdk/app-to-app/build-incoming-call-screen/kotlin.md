@@ -11,13 +11,9 @@ On call screen (`IncomingCallFragment` and `OnCallViewModel` classes) is respons
 
 Open the `fragment_incoming_call.xml` layout and click `Code` button in top right corner to display layout XML code:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
 
 Replace the file contents with the following code:
 

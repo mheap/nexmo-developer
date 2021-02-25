@@ -50,9 +50,6 @@ Trunking services.
 The network for the SIP trunk reference configuration is illustrated below and is representative of
 a Cisco UCM and Cisco UBE configuration to Nexmo SIP trunking.
 
-```screenshot
-image: public/screenshots/sip/configuration/guides/cisco-cucm/cisco-cucm-1.png
-```
 ![](/images/sip-config/cisco-cucm/cisco-cucm-1.png)
 
 ### 2.1 Hardware Components

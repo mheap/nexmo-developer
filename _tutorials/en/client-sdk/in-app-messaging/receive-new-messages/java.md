@@ -59,6 +59,4 @@ protected void onCleared() {
 
 You can either launch the app on the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When device is present press `Run` button: 
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/launch-app.png)

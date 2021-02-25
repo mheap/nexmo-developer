@@ -49,7 +49,7 @@ You now need to create a Vonage application. In this example you create an appli
 
 2) Change into the project directory you've now created.
 
-3) Use the following command to create a Vonage application with Voice and WebRTC capabilities. Replace the webhook URLs with your own.
+3) Use the following command to create a Vonage application with Voice and WebRTC capabilities. Replace the webhook URLs with your own. If your platform restricts the inbound traffic it can receive using IP address-ranges you'll need to add the [Vonage IP addresses](https://help.nexmo.com/hc/en-us/articles/360035471331) to your allow list. The IP addresses can be fetched programmatically by sending a GET request to `https://api.nexmo.com/ips-v4`.
 
 ``` shell
 nexmo app:create "My Sample App" --capabilities=voice,rtc --voice-answer-url=https://example.com/webhooks/answer --voice-event-url=https://example.com/webhooks/event --rtc-event-url=https://example.com/webhooks/rtc --keyfile=private.key
@@ -86,7 +86,7 @@ The user ID is used to perform tasks by the SDK, such as login, starting a call 
 To generate a JWT for Alice run the following command, remembering to replace the `MY_APP_ID` variable with the value that suits your application:
 
 ```bash
-nexmo jwt:generate ./private.key exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' sub=Alice application_id=MY_APP_ID
+nexmo jwt:generate ./private.key exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' sub=Alice application_id=MY_APP_ID
 ```
 
 The above command sets the expiry of the JWT to one day from now, which is the maximum amount of time. You may change the expiration to a shortened amount of time, or regenerate a JWT for the user after the current JWT has expired.
