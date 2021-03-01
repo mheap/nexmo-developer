@@ -6,6 +6,7 @@ paths:
     steps:
     - title: Thank You!
       type: textarea
+      email: true
       content: |-
         We’re glad you found what you were looking for.
 
