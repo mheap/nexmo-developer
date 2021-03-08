@@ -15,9 +15,7 @@ Open the `fragment_login.xml` file.
 
 Click the `Code` button in the top right corner to display the layout XML code:
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/show-code-view.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
 
 Replace the file contents with the following code:
 
@@ -235,8 +233,6 @@ public class LoginFragment extends Fragment {
 
 You can either launch the app on the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When device is present press `Run` button: 
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/launch-app.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/launch-app.png)
 
 You should see the login screen with the `Login Alice` button. Click the button to log in and the empty main screen will open.

@@ -145,7 +145,7 @@ nexmo jwt:generate path/to/private.key application_id=asdasdas-asdd-2344-2344-as
 An example of generating a JWT for a Client SDK application is as follows:
 
 ``` shell
-nexmo jwt:generate ./private.key sub=MY_USER_NAME exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=MY_APP_ID
+nexmo jwt:generate ./private.key sub=MY_USER_NAME exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=MY_APP_ID
 ```
 
 More examples of generating JWTs with ACLs can be found in the [Vonage documentation](/conversation/guides/jwt-acl).

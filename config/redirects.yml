@@ -1,6 +1,7 @@
 ---
 "/messages/external-accounts/api-reference": "/api/external-accounts"
 "/dispatch/external-accounts/api-reference": "/api/external-accounts"
+"/messages/whatsapp-provisioning/api-reference": "/api/whatsapp-provisioning"
 "/contribute": "/contribute/overview"
 "/styleguide": "/contribute/guides/markdown-guide"
 "/write-the-docs": "/contribute/guides/writing-style-guide"
@@ -327,3 +328,4 @@
 "/api/vonage-business-cloud/vgis": "https://vbcdeveloper.vonage.com/api/vonage-integration-platform"
 "/use-cases/two-factor-authentication": "/verify/tutorials/verify-2fa-ruby/introduction"
 "/store": "https://apimanager.uc.vonage.com/store/"
+"/spotlight": "https://learn.vonage.com/spotlight/"

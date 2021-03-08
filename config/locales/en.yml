@@ -49,6 +49,7 @@ en:
     numbers: Numbers
     secret-management: Secret Management
     external-accounts: External Accounts API
+    whatsapp-provisioning: WhatsApp Provisioning API
     vonage-business-cloud: Vonage Business Cloud
     smart-numbers: Smart Numbers
     integration-suite: Vonage Integration Suite
@@ -89,6 +90,7 @@ en:
         start_building: Start building for free
         use-cases: Use Cases
         voyagers: Voyagers
+        startups: Startups
         devtv: Vonage Dev TV
         hacktoberfest: Hacktoberfest 2020
 

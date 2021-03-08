@@ -15,15 +15,11 @@ You will now create placeholders for screens in the application (we will define 
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_login` as file name and press `OK`.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
 
 To create fragment right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `LoginFragment` as file name and select `Class`.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/voice-package.png)
 
 Replace the file contents with below snippet:
 
@@ -37,9 +33,7 @@ class LoginFragment : Fragment()
 
 To create view model right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `LoginViewModel` as file name and select `Class`.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/voice-package.png)
 
 Replace the file contents with below snippet:
 
@@ -55,15 +49,11 @@ public class LoginViewModel : ViewModel()
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_main` as file name and press `OK`.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
 
 To create fragment right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `MainFragment` as file name and select `Class`.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/voice-package.png)
 
 Replace the file contents with below snippet:
 
@@ -85,23 +75,17 @@ import androidx.lifecycle.ViewModel
 public class MainViewModel : ViewModel()
 ```
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/voice-package.png)
 
 ## `OnCall` screen 
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_on_call` as file name and press `OK`.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
 
 To create fragment right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `OnCallFragment` as file name and select `Class`.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/voice-package.png)
 
 Replace the file contents with below snippet:
 
@@ -123,23 +107,17 @@ import androidx.lifecycle.ViewModel
 public class OnCallViewModel : ViewModel()
 ```
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/voice-package.png)
 
 ## `IncomingCall` screen 
 
 To create layout right click on `res/layout` folder, select `New` > `Layout Resource File`, enter `fragment_incoming_call` as file name and press `OK`.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/layout-resource.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
 
 To create fragment right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `IncomingCallFragment` as file name and select `Class`.
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/voice-package.png)
 
 Replace the file contents with below snippet:
 
@@ -161,9 +139,7 @@ import androidx.lifecycle.ViewModel
 public class IncomingCallViewModel : ViewModel()
 ```
 
-```screenshot
-image: public/screenshots/tutorials/client-sdk/android-shared/voice-package.png
-```
+![](/screenshots/tutorials/client-sdk/android-shared/voice-package.png)
 
 Run `Build` > `Make project` to make sure project is compiling.
 

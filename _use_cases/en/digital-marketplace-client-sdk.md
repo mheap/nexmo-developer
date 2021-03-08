@@ -177,7 +177,8 @@ app.post('/getJWT', function(req, res) {
                 "/*/media/**":{},
                 "/*/applications/**":{},
                 "/*/push/**":{},
-                "/*/knocking/**":{}
+                "/*/knocking/**":{},
+                "/*/legs/**":{}
             }
         }
     });
