@@ -20,6 +20,10 @@ The Messages API Sandbox is accessible via the [Dashboard](https://dashboard.nex
 
 The Messages API Sandbox is currently free to use.
 
+## Rate Limit
+
+The Messages API Sandbox has a rate limit of one message per second.
+
 ## Sandbox supported features
 
 The following table shows the supported features of the Messages Sandbox compared to the production Messages API:
