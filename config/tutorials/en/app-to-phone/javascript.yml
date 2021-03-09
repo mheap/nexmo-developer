@@ -14,17 +14,15 @@ introduction:
     To achieve this, you will need:
 
     * A web application that will make the voice call using the Client SDK.
-    * A publicly accessible URL that serves instructions on how to handle the call. You will use a GitHub Gist to accomplish this. <a href="https://gist.github.com/" target="_blank">GitHub Gists</a> are a simple way to share code snippets with others.
+    * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
 
 prerequisites:
 - create-nexmo-account
 - install-nodejs
-- client-sdk/install-node-client-sdk
 - install-nexmo-cli-beta
-- join-github
 
 tasks:
-- client-sdk/app-to-phone/create-ncco
+- client-sdk/app-to-phone/create-webhook-server
 - client-sdk/app-to-phone/create-application
 - client-sdk/create-user
 - client-sdk/generate-jwt-alice

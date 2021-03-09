@@ -5,7 +5,7 @@ description: In this step you learn how to run your app to phone application.
 
 # Run your application
 
-Open `index.html` in a browser.
+Open `client.html` in a browser.
 
 A text field and button is displayed on the page.
 
