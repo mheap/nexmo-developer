@@ -84,7 +84,7 @@ const localtunnel = require('localtunnel');
 })();
 ```
 
-> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice, containing letters, numbers, underscores (_) or dashes (-) .
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice, containing letters, numbers, underscores or dashes.
 
 
 There are 2 parts in the server code above:
