@@ -105,7 +105,7 @@ The first part creates an `Express` server and makes it available locally on por
 
 The second part of the server code above, exposes the `Express` server to will be accessible by the Vonage server.
 
-`localtunnel` is a JavaScript library that exposes your localhost to the world for easy testing and sharing! No need to mess with DNS or deploy just to have others test out your changes.
+`localtunnel` is a JavaScript library that exposes your localhost to the world for painless testing and sharing! No need to mess with DNS or deploy to have others test out your changes.
 
 
 ## Start the server
