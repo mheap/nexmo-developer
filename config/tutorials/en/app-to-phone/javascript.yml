@@ -4,14 +4,14 @@ products:
   - client-sdk
 
 introduction:
-  title: Introduction to this task
+  title: Introduction
   description: This task shows you how to use make a phone call from a web app using the JavaScript Client SDK.
   content: |
     # Introduction
-    In this tutorial, you will learn how to create a Client SDK application and then write the code to make a
+    In this tutorial, you will learn how to create a Client SDK application abd write the code to make a
     phone call from your web app to a phone.
 
-    To achieve this, you will need:
+    Two parts are needed to achieve this:
 
     * A web application that will make the voice call using the Client SDK.
     * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.

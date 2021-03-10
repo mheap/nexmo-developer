@@ -16,7 +16,7 @@ mkdir vonage-app-to-phone-tutorial
 cd vonage-app-to-phone-tutorial
 ```
 
-Inside the folder, create a blank project by running this command:
+Inside the folder, initialize a new Node.js project by running this command:
 
 ``` bash
 npm init -y
@@ -30,7 +30,7 @@ Next, install the required dependencies:
 npm install express localtunnel --save
 ```
 
-Also, install the Client SDK - you'll use this later when building the client:
+Also, install the Client SDK - you will use this later, when building the client application:
 
 ``` bash
 npm install nexmo-client --save
@@ -38,7 +38,7 @@ npm install nexmo-client --save
 
 ## Create the server file
 
-Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace `subdomain-of-your-choosing` with an actual value:
+Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace `SUBDOMAIN` with an actual value:
 
 ``` javascript
 'use strict';
@@ -77,17 +77,17 @@ app.listen(3000);
 const localtunnel = require('localtunnel');
 (async () => {
   const tunnel = await localtunnel({ 
-      subdomain: 'subdomain-of-your-choosing', 
+      subdomain: 'SUBDOMAIN', 
       port: 3000
     });
   console.log(`App available at: ${tunnel.url}`);
 })();
 ```
 
-Please remember to replace `subdomain-of-your-choosing` with an actual value.
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice, containing letters, numbers, underscores (_) or dashes (-) .
 
 
-There are 2 parts in the above server code:
+There are 2 parts in the server code above:
 
 
 ### The Express server
@@ -119,7 +119,7 @@ node server.js
 A notice will be displayed telling you the server is now available:
 
 ```
-App available at: https://subdomain-of-your-choosing.loca.lt
+App available at: https://SUBDOMAIN.loca.lt
 ```
 
 Please keep the terminal window handy as you will need the URL in the next step.
