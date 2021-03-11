@@ -5,7 +5,7 @@ dependencies:
 import_dependencies:
     source: .repos/vonage/vonage-python-code-snippets/sms/send-signed-sms.py
     from_line: 1
-    to_line: 9
+    to_line: 5
 client:
     source: .repos/vonage/vonage-python-code-snippets/sms/send-signed-sms.py
     from_line: 12

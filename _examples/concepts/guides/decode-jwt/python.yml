@@ -9,5 +9,5 @@ import_dependencies:
     to_line: 3
 code:
     source: .repos/vonage/vonage-python-code-snippets/jwt/decode-jwt/app.py
-    from_line: 5
+    from_line: 9
     to_line: 24

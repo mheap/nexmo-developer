@@ -5,7 +5,7 @@ dependencies:
 import_dependencies:
     source: .repos/vonage/vonage-python-code-snippets/verify/send-verification-request-with-workflow.py
     from_line: 1
-    to_line: 14
+    to_line: 5
 client:
     source: .repos/vonage/vonage-python-code-snippets/verify/send-verification-request-with-workflow.py
     from_line: 16
