@@ -1,0 +1,12 @@
+---
+dependencies:
+    - vonage
+    - flask
+import_dependencies:
+    source: .repos/vonage/vonage-python-code-snippets/sms/verify-signed-sms/app.py
+    from_line: 1
+    to_line: 3
+code:
+    source: .repos/vonage/vonage-python-code-snippets/sms/verify-signed-sms/app.py
+    from_line: 9
+    to_line: 22

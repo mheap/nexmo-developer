@@ -1,0 +1,13 @@
+---
+dependencies:
+    - vonage
+    - python-dotenv
+    - flask
+import_dependencies:
+    source: .repos/vonage/vonage-python-code-snippets/number-insight/async-callback/app.py
+    from_line: 1
+    to_line: 2
+code:
+    source: .repos/vonage/vonage-python-code-snippets/number-insight/async-callback/app.py
+    from_line: 4
+    to_line: 12

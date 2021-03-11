@@ -1,0 +1,16 @@
+---
+dependencies:
+    - vonage
+    - python-dotenv
+import_dependencies:
+    source: .repos/vonage/vonage-python-code-snippets/number-insight/ni-advanced-async-trigger.py
+    from_line: 1
+    to_line: 6
+client:
+    source: .repos/vonage/vonage-python-code-snippets/number-insight/ni-advanced-async-trigger.py
+    from_line: 13
+    to_line: 16
+code:
+    source: .repos/vonage/vonage-python-code-snippets/number-insight/ni-advanced-async-trigger.py
+    from_line: 18
+    to_line: 34

@@ -1,0 +1,15 @@
+---
+dependencies:
+    - vonage
+import_dependencies:
+    source: .repos/vonage/vonage-python-code-snippets/secrets/fetch-a-secret.py
+    from_line: 1
+    to_line: 3
+client:
+    source: .repos/vonage/vonage-python-code-snippets/secrets/fetch-a-secret.py
+    from_line: 12
+    to_line: 12
+code:
+    source: .repos/vonage/vonage-python-code-snippets/secrets/fetch-a-secret.py
+    from_line: 14
+    to_line: 15
