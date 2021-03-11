@@ -1,0 +1,16 @@
+---
+dependencies:
+    - vonage
+    - python-dotenv
+import_dependencies:
+    source: .repos/vonage/vonage-python-code-snippets/verify/send-verification-request-with-workflow.py
+    from_line: 1
+    to_line: 14
+client:
+    source: .repos/vonage/vonage-python-code-snippets/verify/send-verification-request-with-workflow.py
+    from_line: 16
+    to_line: 17
+code:
+    source: .repos/vonage/vonage-python-code-snippets/verify/send-verification-request-with-workflow.py
+    from_line: 19
+    to_line: 26

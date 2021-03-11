@@ -1,0 +1,16 @@
+---
+dependencies:
+    - vonage
+    - python-dotenv
+import_dependencies:
+    source: .repos/vonage/vonage-python-code-snippets/sms/send-signed-sms.py
+    from_line: 1
+    to_line: 9
+client:
+    source: .repos/vonage/vonage-python-code-snippets/sms/send-signed-sms.py
+    from_line: 12
+    to_line: 16
+code:
+    source: .repos/vonage/vonage-python-code-snippets/sms/send-signed-sms.py
+    from_line: 18
+    to_line: 33
