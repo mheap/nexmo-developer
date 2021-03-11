@@ -1,0 +1,13 @@
+---
+import_dependencies:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/sms/SendSignedSms.java
+  from_line: 24
+  to_line: 28
+client:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/sms/SendSignedSms.java
+  from_line: 43
+  to_line: 46
+code:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/sms/SendSignedSms.java
+  from_line: 48
+  to_line: 59
