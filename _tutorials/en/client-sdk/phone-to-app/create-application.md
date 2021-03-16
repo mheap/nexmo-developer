@@ -7,7 +7,7 @@ description: In this step you learn how to create a Vonage Application.
 
 You now need to create a Vonage [Application](/conversation/concepts/application). In this step you create an application capable of handling both in-app Voice and in-app Messaging use cases.
 
-**1.** Create your project directory if you've not already done so.
+**1.** Create your project directory if you've not already done so, run the following command in your terminal:
 
 ``` shell
 mkdir vonage-tutorial

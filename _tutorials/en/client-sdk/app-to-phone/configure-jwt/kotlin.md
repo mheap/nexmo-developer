@@ -26,7 +26,7 @@ data class User(
 )
 ```
 
-Now it's time to configure the `Alice` user with the JWT that you generated in an earlier step. Replace the `ALICE_TOKEN` placeholder with the real JWT value.
+Now it's time to configure the `Alice` user with the JWT that you generated in an earlier step. Replace the `ALICE_TOKEN` with the JWT token, you obtained previously from Nexmo CLI.
 
 Notice that these constants and values are hardcoded to store the properties of users. This makes it easier to use these values later in this tutorial.
 

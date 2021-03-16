@@ -25,7 +25,7 @@ client.setConnectionListener { connectionStatus, _ ->
 
 
 
-Now client needs to authenticate to the Vonage servers. The following additions are required to `onCreate` method inside `MainActivity`. Replace `ALICE_TOKEN` with JWT generated in previous step:
+Now client needs to authenticate to the Vonage servers. The following additions are required to `onCreate` method inside `MainActivity`. Replace the `ALICE_TOKEN` with the JWT token, you obtained previously from Nexmo CLI:
 
 ```kotlin
 client.login("ALICE_TOKEN");

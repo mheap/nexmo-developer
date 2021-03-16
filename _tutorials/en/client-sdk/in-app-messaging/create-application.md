@@ -9,7 +9,7 @@ In this step you will create a Vonage [Application](/conversation/concepts/appli
 
 > **NOTE:** This is the Vonage application project that allows client application to use Vonage backend.
 
-**1.** Create your project directory if you've not already done so.
+**1.** Create your project directory if you've not already done so, run the following command in your terminal:
 
 ``` shell
 mkdir vonage-tutorial
@@ -29,7 +29,7 @@ nexmo app:create "App to App Chat Tutorial" --capabilities=rtc --keyfile=private
 
 A file named `.nexmo-app` is created in your project directory and contains the newly created Vonage Application ID and the private key. A private key file named `private.key` is also created.
 
-**Please make a note of the Application ID as you'll need it in the future.**
+Make a note of the Application ID that is echoed in your terminal when your application is created:
 
 ![](/screenshots/tutorials/client-sdk/nexmo-application-created.png)
 
