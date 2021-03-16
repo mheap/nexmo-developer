@@ -8,7 +8,7 @@ introduction:
   description: This task shows you how to use make a phone call from a web app using the JavaScript Client SDK.
   content: |
     # Introduction
-    In this tutorial, you will learn how to create a Client SDK application abd write the code to make a
+    In this tutorial, you will learn how to create a Client SDK application and write the code to make a
     phone call from your web app to a phone.
 
     Two parts are needed to achieve this:
@@ -35,7 +35,10 @@ conclusion:
   content: |
 
     # What's next?
-    You can do a lot more with the Client SDK.
+
+    The complete version of the project you just built is available on [Github]() -  please see the [js] folder.
+
+    You can do a lot more with the Client SDK. For an summary, please see the [Client SDK Overview](/client-sdk/overview) or review the [JS Client SDK documentation](/sdk/stitch/javascript/index).
 
     We want to hear what ideas you have in mind? Contact us at [devrel@vonage.com](mailto:devrel@vonage.com)
 

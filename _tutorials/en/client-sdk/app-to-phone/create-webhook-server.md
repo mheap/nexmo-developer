@@ -5,15 +5,15 @@ description: In this step you learn how to create a suitable webhook server that
 
 # Create a webhook server
 
-When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an NCCO containing a `connect` action that will forward the call to the PSTN phone number. You do this by extracting the destination number from the `to` query parameter and returning it in your response.
+When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to the [PSTN phone number](/concepts/guides/glossary#virtual-number). You do this by extracting the destination number from the `to` query parameter and returning it in your response.
 
 ## New project
 
 Create a new project directory in a destination of your choice and change into it:
 
 ``` bash
-mkdir vonage-app-to-phone-tutorial
-cd vonage-app-to-phone-tutorial
+mkdir app-to-phone-js
+cd app-to-phone-js
 ```
 
 Inside the folder, initialize a new Node.js project by running this command:
@@ -38,7 +38,7 @@ npm install nexmo-client --save
 
 ## Create the server file
 
-Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace `SUBDOMAIN` with an actual value:
+Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace `SUBDOMAIN` with an actual value. The value used will become part of the URLs you will set as webhooks in the next step.
 
 ``` javascript
 'use strict';
@@ -48,7 +48,7 @@ app.use(express.json());
 
 app.get('/voice/answer', (req, res) => {
   console.log('NCCO request:');
-  console.log(`  - caller: ${req.query.from}\n  - callee: ${req.query.to}`);
+  console.log(`  - callee: ${req.query.to}`);
   console.log('---');
   res.json([ 
     { 
@@ -65,7 +65,7 @@ app.get('/voice/answer', (req, res) => {
 });
 
 app.all('/voice/event', (req, res) => {
-  console.log('VOICE EVENT:');
+  console.log('EVENT:');
   console.dir(req.body);
   console.log('---');
   res.sendStatus(200);
@@ -98,14 +98,14 @@ The first part creates an `Express` server and makes it available locally on por
    
     Notice, that the `number` is extracted from the `req.query.to` parameter that Vonage is sending as part of the request. The dynamically built NCCO then forwards the call to the destination phone using a `connect` action.
 
-2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening in your all - - we call this the `event_url`.
+2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the call - - we call this the `event_url`.
 
 
 ### The `localtunnel`  integration
 
-The second part of the server code above, exposes the `Express` server to will be accessible by the Vonage server.
+The second part of the server code above, exposes the `Express` server so it will be accessible by the Vonage servers.
 
-`localtunnel` is a JavaScript library that exposes your localhost to the world for painless testing and sharing! No need to mess with DNS or deploy to have others test out your changes.
+> **NOTE:** `localtunnel` is a JavaScript library that exposes your localhost to the world for painless testing and sharing! No need to mess with DNS or deploy to have others test out your changes.
 
 
 ## Start the server

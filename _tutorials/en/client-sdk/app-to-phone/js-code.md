@@ -75,4 +75,13 @@ There are several key components to this code:
 2. Code that logs the user in (a JWT is used for authentication).
 3. The function to make the call `callServer(number)`, where `number` is the destination phone number in [E.164](/concepts/guides/glossary#e-164-format) format.
 
-Once you enter the phone number and click the `Call` button you will hear a voice reporting on call status. Then when the call goes through you can answer and you will then hear the conversation via the app.
+Once you enter the phone number and click the `Call` button you will hear a voice reporting on call status, as per the first NCCO instruction  sent back by the webhook server you built in one of the previous steps:
+
+```json
+{ 
+  "action": "talk", 
+  "text": "Please wait while we connect you."
+}
+```
+
+Then the call connects and you can answer and be able to have a conversation via the app.

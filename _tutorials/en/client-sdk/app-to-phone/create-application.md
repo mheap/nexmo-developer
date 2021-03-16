@@ -7,7 +7,7 @@ description: In this step you learn how to create a Vonage Application.
 
 In this step you will create a Vonage [Application](/conversation/concepts/application) capable of in-app voice communication use cases.
 
-Change into the project directory if you've not already there.
+Open a new terminal and, if required, navigate to your project directory:
 
 ``` shell
 cd app-to-phone-js
@@ -16,7 +16,7 @@ cd app-to-phone-js
 Create a Vonage application by copying and pasting the command below into terminal Make sure to change the values of `--voice-answer-url` and `--voice-event-url` arguments, by replacing `SUBDOMAIN` with the actual value used in the previous step:
 
 ``` shell
-nexmo app:create "App to Phone Tutorial" --capabilities=voice --keyfile=private.key  --voice-event-url=https://SUBDOMAIN.loca.lt/voice/event --voice-answer-url=https://SUBDOMAIN.loca.lt/voice/answer
+nexmo app:create "App to Phone Tutorial" --capabilities=voice --keyfile=private.key  --voice-answer-url=https://SUBDOMAIN.loca.lt/voice/answer --voice-event-url=https://SUBDOMAIN.loca.lt/voice/event 
 ```
 
 > **NOTE:** An application can be also created using the CLI's [interactive mode](/application/nexmo-cli#interactive-mode). For more details on how to create an application and various available application capabilities please see our [documentation](/application/overview).
