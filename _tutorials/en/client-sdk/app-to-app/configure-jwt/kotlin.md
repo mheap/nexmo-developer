@@ -27,7 +27,7 @@ data class User(
 )
 ```
 
-Now it's time to configure the `Alice` and `Bob` users with the JWTs that you generated in an earlier step. Replace the `ALICE_TOKEN` and `BOB_TOKEN` placeholders with the real JWT values.
+Now it's time to configure the `Alice` and `Bob` users with the JWTs that you generated in an earlier step. Replace the `ALICE_TOKEN` and `BOB_TOKEN` with the JWT tokens, you obtained previously from Nexmo CLI.
 
 Notice that these values are hardcoded. This makes it easier to use these values later in this tutorial, however in production application they should be retrieved from external API.
 
