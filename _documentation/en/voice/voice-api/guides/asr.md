@@ -217,7 +217,7 @@ If the user is calling not for the first time, they may already know the questio
 
 ### Save Audio
 
-The speech audio may be optionally stored. To get the recording, the `saveAudio` parameter should be set, then the `recording_url` will be included to the callback request payload. This might be useful to compare the transcription with original audio.
+The speech audio may be optionally stored. To get the recording, the `saveAudio` parameter should be set, then the `recording_url` will be included in the callback request payload. This might be useful to compare the transcription with the original audio.
 
 ### Event Payload Example
 
