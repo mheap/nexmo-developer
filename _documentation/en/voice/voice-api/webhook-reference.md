@@ -330,6 +330,7 @@ Field | Example | Description
 `timeout_reason` | `end_on_silence_timeout` | Indicates if the input ended when user stopped speaking (`end_on_silence_timeout`), by max duration timeout (`max_duration`) or if the user didn't say anything (`start_timeout`)
 `results` | _see below_ | Array of [recognized text objects](#transcript-text)
 `error` | `ERR1: Failed to analyze audio` | Error message.
+`recording_url` | `https://api-us.nexmo.com/v1/files/eeeeeee-ffff-0123-4567-0123456789ab` | Speech recording. Included if `saveAudio` flag is set to `true` in the `input` action. Requires JWT authorization for downloading, see [Download a recording]()/voice/voice-api/code-snippets/download-a-recording).
 
 ##### Transcript text
 Field | Example | Description
