@@ -68,7 +68,8 @@ Typically, ASR is used in conjunction with an audio message playing to the user.
         "buy",
         "credit",
         "account"
-      ]      
+      ],
+      "saveAudio": true      
     }
   }
 ]
@@ -214,6 +215,10 @@ If the user is calling not for the first time, they may already know the questio
 
 > It is recommended to have the initial TTS/audio message be a short initial greeting without activating the `bargeIn` option to improve the user experience. If `bargeIn` is turned on for the first initial greeting, then the user may inadvertently interrupt it without hearing the prompt at all, since background noise may be interpreted by the application as an active interaction in those first moments.
 
+### Save Audio
+
+The speech audio may be optionally stored. To get the recording, the `saveAudio` parameter should be set, then the `recording_url` will be included to the callback request payload. This might be useful to compare the transcription with original audio.
+
 ### Event Payload Example
 
 Once the NCCO `input` action is completed, the input callback will be sent:
@@ -221,6 +226,7 @@ Once the NCCO `input` action is completed, the input callback will be sent:
 ```json
 {
   "speech": {
+    "recording_url": "https://api-us.nexmo.com/v1/files/ee94a327-ab6b-4bef-86bf-cadca33343e9",
     "timeout_reason": "end_on_silence_timeout",
     "results": [
       {

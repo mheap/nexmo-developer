@@ -315,6 +315,7 @@ Option | Description | Required
 `context` | Array of hints (strings) to improve recognition quality if certain words are expected from the user. | No
 `startTimeout` | Controls how long the system will wait for the user to start speaking. The range of possible values is between 1 second and 10 seconds. | No
 `maxDuration` | Controls maximum speech duration (from the moment user starts speaking). The default value is 60 (seconds). The range of possible values is between 1 and 60 seconds. | No
+`saveAudio` | Set to `true` so the speech input recording (`recording_url`) is sent to your webhook endpoint at `eventUrl`. The default value is `false` | No
 
 
 The following example shows the parameters sent to the `eventUrl` webhook for DTMF input:
@@ -339,6 +340,7 @@ The following example shows the parameters sent back to the `eventUrl` webhook f
 ```json
 {
   "speech": {
+    "recording_url": "https://api-us.nexmo.com/v1/files/eeeeeee-ffff-0123-4567-0123456789ab",
     "timeout_reason": "end_on_silence_timeout",
     "results": [
       {
