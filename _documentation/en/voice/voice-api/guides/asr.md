@@ -217,7 +217,7 @@ If the user is calling not for the first time, they may already know the questio
 
 ### Save Audio
 
-The speech audio may be optionally stored. To get the recording, the `saveAudio` parameter should be set, then the `recording_url` will be included in the callback request payload. This might be useful to compare the transcription with the original audio.
+The speech audio may be optionally stored. To get the recording, the `saveAudio` parameter should be set, then the `recording_url` will be included in the callback request payload. This might be useful to compare the transcription with the original audio. Use the [Download a recording](/voice/voice-api/code-snippets/download-a-recording) code snippet to download the audio.
 
 ### Event Payload Example
 
@@ -253,4 +253,4 @@ Once the NCCO `input` action is completed, the input callback will be sent:
 }
 ```
 
-In the response body, a new NCCO is expected, containing next call flow actions based on application logic and user input (`speech.results.text`).
+In the response body, a new NCCO is expected, containing next call flow actions based on application logic and user input (`speech.results.text`). See also [Webhook Reference](/voice/voice-api/webhook-reference) for details. 
