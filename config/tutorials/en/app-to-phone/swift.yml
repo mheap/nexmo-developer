@@ -10,26 +10,31 @@ introduction:
     # Introduction
     In this tutorial, you will learn how to create an iOS application using Swift and the Nexmo iOS Client SDK, and then write the code to make a phone call from your iOS app to a phone.
 
+    Two parts are needed to achieve this:
+
+    * An iOS application that will make the voice call using the Client SDK.
+    * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
+
     ### Completed project
-    If you would like to follow along without building the app yourself, the completed project for this tutorial is available on [Github](https://github.com/nexmo-community/client-sdk-swift-voice-app-to-phone) for you to download.
+    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-swift](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-swift) folder.
+
 
 prerequisites:
 - create-nexmo-account
 - install-nodejs
 - install-nexmo-cli-beta
 - install-xcode
-- join-github
 
 tasks:
-- client-sdk/app-to-phone/create-ncco
+- client-sdk/app-to-phone/create-webhook-server
 - client-sdk/app-to-phone/create-application
 - client-sdk/create-user
 - client-sdk/generate-jwt-alice
-- client-sdk/app-to-phone/project
-- client-sdk/app-to-phone/permissions
-- client-sdk/app-to-phone/interface
+- client-sdk/app-to-phone/create-project
+- client-sdk/app-to-phone/add-permissions
+- client-sdk/app-to-phone/main-screen
 - client-sdk/app-to-phone/client
-- client-sdk/app-to-phone/call
+- client-sdk/app-to-phone/place-call
 
 conclusion:
   title: What's next?
@@ -38,9 +43,9 @@ conclusion:
 
     # What's next?
 
-    For completeness, the project you've built as part of this tutorial is also available on [Github](https://github.com/nexmo-community/client-sdk-swift-voice-app-to-phone).
+    The complete version of the project you just built is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-swift](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-swift) folder.
 
-    And... you can do a lot more with the Client SDK.
+    You can do a lot more with the Client SDK. For an summary, please see the [Client SDK Overview](/client-sdk/overview) or review the [iOS Client SDK documentation](/sdk/stitch/ios/index).
 
     We want to hear what ideas you have in mind? Contact us at [devrel@vonage.com](mailto:devrel@vonage.com)
 

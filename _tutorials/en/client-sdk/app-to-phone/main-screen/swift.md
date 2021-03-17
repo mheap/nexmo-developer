@@ -10,9 +10,12 @@ To be able to place the call, you need to add two elements to the screen:
 * A `UILabel` to show the connection status
 * A `UIButton` to start and end calls
 
-Open `ViewController.swift` and add these two programmatically:
+Open `ViewController.swift` and add these two programmatically by replacing the entire file content with the following:
 
 ```swift
+import UIKit
+import NexmoClient
+
 class ViewController: UIViewController {
 
     var connectionStatusLabel = UILabel()

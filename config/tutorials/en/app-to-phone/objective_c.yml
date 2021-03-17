@@ -27,11 +27,11 @@ tasks:
 - client-sdk/app-to-phone/create-application
 - client-sdk/create-user
 - client-sdk/generate-jwt-alice
-- client-sdk/app-to-phone/project
-- client-sdk/app-to-phone/permissions
-- client-sdk/app-to-phone/interface
+- client-sdk/app-to-phone/create-project
+- client-sdk/app-to-phone/add-permissions
+- client-sdk/app-to-phone/main-screen
 - client-sdk/app-to-phone/client
-- client-sdk/app-to-phone/call
+- client-sdk/app-to-phone/place-call
 
 conclusion:
   title: What's next?

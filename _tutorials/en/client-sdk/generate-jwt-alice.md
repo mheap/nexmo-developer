@@ -17,6 +17,7 @@ nexmo jwt:generate ./private.key exp=$(($(date +%s)+21600)) acl='{"paths":{"/*/u
 
 The generated JWT will be valid for the next 6 hours.
 
+![](/screenshots/tutorials/client-sdk/generated-jwt-key.png)
 
 ## Further information
 

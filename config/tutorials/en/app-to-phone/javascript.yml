@@ -26,8 +26,8 @@ tasks:
 - client-sdk/app-to-phone/create-application
 - client-sdk/create-user
 - client-sdk/generate-jwt-alice
-- client-sdk/app-to-phone/js-code
-- client-sdk/app-to-phone/js-run
+- client-sdk/app-to-phone/main-screen
+- client-sdk/app-to-phone/place-call
 
 conclusion:
   title: What's next?
@@ -36,7 +36,7 @@ conclusion:
 
     # What's next?
 
-    The complete version of the project you just built is available on [Github]() -  please see the [js] folder.
+    The complete version of the project you just built is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-js](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-js) folder.
 
     You can do a lot more with the Client SDK. For an summary, please see the [Client SDK Overview](/client-sdk/overview) or review the [JS Client SDK documentation](/sdk/stitch/javascript/index).
 

@@ -7,11 +7,7 @@ description: In this step you learn how to create a Vonage Application.
 
 In this step you will create a Vonage [Application](/conversation/concepts/application) capable of in-app voice communication use cases.
 
-Open a new terminal and, if required, navigate to your project directory:
-
-``` shell
-cd app-to-phone-js
-```
+Open a new terminal and, if required, navigate to your project directory.
 
 Create a Vonage application by copying and pasting the command below into terminal Make sure to change the values of `--voice-answer-url` and `--voice-event-url` arguments, by replacing `SUBDOMAIN` with the actual value used in the previous step:
 
