@@ -12,8 +12,8 @@ When an inbound call is received, Vonage makes a request to a publicly accessibl
 Create a new project directory in a destination of your choice and change into it:
 
 ``` bash
-mkdir app-to-phone-swift
-cd app-to-phone-swift
+mkdir app-to-phone-objc
+cd app-to-phone-objc
 ```
 
 Inside the folder, initialize a new Node.js project by running this command:

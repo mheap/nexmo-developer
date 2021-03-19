@@ -10,7 +10,7 @@ To be able to place the call, you need to add two elements to the screen:
 * A `UILabel` to show the connection status
 * A `UIButton` to start and end calls
 
-Open `ViewController.h` and add these two programmatically:
+Open `ViewController.m` and add these two programmatically by replacing the entire file content with the following:
 
 ```objective_c
 @interface ViewController ()

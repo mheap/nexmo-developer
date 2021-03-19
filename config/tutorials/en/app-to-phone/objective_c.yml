@@ -5,25 +5,29 @@ products:
 
 introduction:
   title: Introduction to this task
-  description: This task shows you how to use make a phone call from an iOS app using the iOS Client SDK and Swift.
+  description: This task shows you how to use make a phone call from an iOS app using the iOS Client SDK and Objective-C.
   content: |
     # Introduction
-    In this tutorial, you will learn how to create an iOS application using Swift and the Nexmo iOS Client SDK, and then write the code to make a phone call from your iOS app to a phone.
+    In this tutorial, you will learn how to create an iOS application using Objective-C and the Nexmo iOS Client SDK, and then write the code to make a phone call from your iOS app to a phone.
+
+    Two parts are needed to achieve this:
+
+    * An iOS application that will make the voice call using the Client SDK.
+    * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
 
     ### Completed project
-    If you would like to follow along without building the app yourself, the completed project for this tutorial is available on [Github](https://github.com/nexmo-community/client-sdk-objective-c-voice-app-to-phone) for you to download.
+    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-objc](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-objc) folder.
 
-    *This tutorial uses NexmoClient version 2.2.1*
+    *This tutorial uses NexmoClient version 2.5.0*
 
 prerequisites:
 - create-nexmo-account
 - install-nodejs
 - install-nexmo-cli-beta
 - install-xcode
-- join-github
 
 tasks:
-- client-sdk/app-to-phone/create-ncco
+- client-sdk/app-to-phone/create-webhook-server
 - client-sdk/app-to-phone/create-application
 - client-sdk/create-user
 - client-sdk/generate-jwt-alice
@@ -40,7 +44,7 @@ conclusion:
 
     # What's next?
 
-    For completeness, the project you've built as part of this tutorial is also available on [Github](https://github.com/nexmo-community/client-sdk-objective-c-voice-app-to-phone).
+    For completeness, the project you've built as part of this tutorial is also available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-objc](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-objc) folder.
 
     And... you can do a lot more with the Client SDK.
 
