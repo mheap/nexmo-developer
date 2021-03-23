@@ -24,7 +24,7 @@ tasks:
   - client-sdk/app-to-phone/create-ncco
   - client-sdk/app-to-phone/create-application
   - client-sdk/android-shared/create-user-alice
-  - client-sdk/android-shared/generate-jwt-alice
+  - client-sdk/generate-jwt-alice
   - client-sdk/app-to-phone/create-project
   - client-sdk/android-shared/add-dependencies
   - client-sdk/app-to-phone/create-screens
