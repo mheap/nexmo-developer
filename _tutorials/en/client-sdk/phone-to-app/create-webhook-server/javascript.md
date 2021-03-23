@@ -30,6 +30,12 @@ Next, install the required dependencies:
 npm install express localtunnel --save
 ```
 
+Also, install the Client SDK - you will use this later, when building the client application:
+
+``` bash
+npm install nexmo-client --save
+```
+
 ## Create the server file
 
 Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace `SUBDOMAIN` with an actual value. The value used will become part of the URLs you will set as webhooks in the next step.
