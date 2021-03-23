@@ -18,12 +18,11 @@ prerequisites:
   - install-nodejs
   - install-nexmo-cli-beta
   - install-android-studio
-  - join-github
 
 tasks:
-  - client-sdk/app-to-phone/create-ncco
+  - client-sdk/app-to-phone/create-webhook-server
   - client-sdk/app-to-phone/create-application
-  - client-sdk/android-shared/create-user-alice
+  - client-sdk/create-user
   - client-sdk/generate-jwt-alice
   - client-sdk/app-to-phone/create-project
   - client-sdk/android-shared/add-dependencies
