@@ -5,7 +5,7 @@ products:
 
 introduction:
   title: Introduction to this task
-  description: This task shows you how to use make a phone call from an Android app to phone using the Android Client SDK and Kotlin.
+  description: This task shows you how to use make a phone call from an Android app to phone using the Android Client SDK and Java.
   content: |
     # Introduction
     In this tutorial, you will learn how to create an Android application using Kotlin and the Nexmo Android Client SDK, and then write the code to make a phone call from your Android app to a phone.
