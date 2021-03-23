@@ -30,10 +30,10 @@ tasks:
   - client-sdk/android-shared/create-user-alice
   - client-sdk/android-shared/generate-jwt-alice
   - client-sdk/phone-to-app/create-project
-  - client-sdk/phone-to-app/permissions
-  - client-sdk/phone-to-app/interface
+  - client-sdk/phone-to-app/add-permissions
+  - client-sdk/phone-to-app/main-screen
   - client-sdk/phone-to-app/client
-  - client-sdk/phone-to-app/call
+  - client-sdk/phone-to-app/receive-call
 
 
 conclusion:
