@@ -5,7 +5,7 @@ description: In this step you learn how to write the code for your phone to app 
 
 # Create a client side application
 
-Create an HTML file called `client_js.html` in your project directory. Add the following code, but make sure you paste in the JWT you generated for the user in the [earlier step](/client-sdk/tutorials/phone-to-app/client-sdk/generate-jwt) in this tutorial:
+Create an HTML file called `client_js.html` in your project directory. Add the following code, but make sure you paste in the JWT you generated for the user in the [earlier step](/client-sdk/tutorials/phone-to-app/client-sdk/generate-jwt-alice) in this tutorial:
 
 ``` html
 <!DOCTYPE html>
