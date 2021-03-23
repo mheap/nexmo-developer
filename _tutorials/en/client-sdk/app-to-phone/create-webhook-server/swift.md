@@ -1,6 +1,6 @@
 ---
 title: Create a webhook server
-description: In this step you learn how to create a suitable webhook server that supports an inbound call from a PSTN phone to a web app.
+description: In this step you learn how to create a suitable webhook server that supports an inbound call from a PSTN phone to an app.
 ---
 
 # Create a webhook server
