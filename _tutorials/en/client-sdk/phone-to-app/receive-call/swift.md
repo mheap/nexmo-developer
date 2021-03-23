@@ -9,7 +9,8 @@ At the top of the `ViewController` class, below the `client` declaration, add a 
 
 ```swift
 class ViewController: UIViewController {
-    ...
+    
+    let connectionStatusLabel = UILabel()
     let client = NXMClient.shared
     var call: NXMCall?
     ...

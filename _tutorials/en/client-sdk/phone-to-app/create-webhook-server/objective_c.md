@@ -1,19 +1,19 @@
 ---
 title: Create a webhook server
-description: In this step you learn how to create a suitable webhook server that supports an inbound call from a PSTN phone to a web app.
+description: In this step you learn how to create a suitable webhook server that supports an inbound call from a PSTN phone to an app.
 ---
 
 # Create a webhook server
 
-When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to the [PSTN phone number](/concepts/guides/glossary#virtual-number). You do this by extracting the destination number from the `to` query parameter and returning it in your response.
+When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to the [user's](/conversation/concepts/user) app. You do this by extracting the destination user from the `to` query parameter and returning it in your response.
 
 ## New project
 
 Create a new project directory in a destination of your choice and change into it:
 
 ``` bash
-mkdir app-to-phone-objc
-cd app-to-phone-objc
+mkdir phone-to-app-objc
+cd phone-to-app-objc
 ```
 
 Inside the folder, initialize a new Node.js project by running this command:
@@ -52,7 +52,7 @@ app.get('/voice/answer', (req, res) => {
     { 
       "action": "connect", 
       "endpoint": [ 
-        { "type": "phone", "number": req.query.to } 
+        { "type": "app", "user": req.query.to } 
       ]
     }
   ]);
@@ -88,9 +88,9 @@ There are 2 parts in the server code above:
 
 The first part creates an `Express` server and makes it available locally on port `3000`. The server exposes 2 paths:
 
-1. `/voice/answer` is the `answer_url` we mentioned above. It sends back a `JSON` response containing the destination number for the call. 
+1. `/voice/answer` is the `answer_url` we mentioned above. It sends back a `JSON` response containing the destination user for the call. 
    
-    Notice, that the `number` is extracted from the `req.query.to` parameter that Vonage is sending as part of the request. The dynamically built NCCO then forwards the call to the destination phone using a `connect` action.
+    Notice, that the `user` is extracted from the `req.query.to` parameter that Vonage is sending as part of the request. The dynamically built NCCO then forwards the call to the destination phone using a `connect` action.
 
 2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the call - - we call this the `event_url`.
 

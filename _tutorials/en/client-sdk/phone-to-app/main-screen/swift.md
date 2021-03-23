@@ -5,9 +5,12 @@ description: In this step you will build the only screen of the app.
 
 # Building the interface
 
-To be able view the connection status of the app you will need to add a `UILabel` element to the screen. Open `ViewController.swift` and add it programmatically.
+To be able view the connection status of the app you will need to add a `UILabel` element to the screen. Open `ViewController.swift` and add the label programmatically by replacing the entire file content with the following:
 
 ```swift
+import UIKit
+import NexmoClient
+
 class ViewController: UIViewController {
 
     let connectionStatusLabel = UILabel()

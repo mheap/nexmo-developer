@@ -9,7 +9,8 @@ At the top of the `ViewController` class, below the `client` declaration, add a 
 
 ```objective_c
  @interface ViewController () <NXMClientDelegate>
- ...
+ @property UILabel *connectionStatusLabel;
+ @property NXMClient *client;
  @property NXMCall * call;
  @end
  ```
