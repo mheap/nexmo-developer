@@ -9,7 +9,9 @@ Add a `NXMCall` property to the interface to hold a reference to any call in pro
 
 ```objective_c
 @interface ViewController () <NXMClientDelegate>
-...
+@property UIButton *callButton;
+@property UILabel *connectionStatusLabel;
+@property NXMClient *client;
 @property NXMCall * call;
 @end
 ```
