@@ -31,7 +31,6 @@ tasks:
   - client-sdk/create-user
   - client-sdk/generate-jwt-alice
   - client-sdk/app-to-phone/create-project
-  - client-sdk/app-to-phone/setup-navigation
   - client-sdk/app-to-phone/add-permissions
   - client-sdk/app-to-phone/configure-jwt
   - client-sdk/android-shared/initialize-client
