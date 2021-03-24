@@ -3,221 +3,108 @@ title: Build main screen
 description: In this step you build main screen.
 ---
 
-# Make a call
+# Building the interface
 
-Main screen (`MainFragment` and `MainViewModel` classes) is responsible for starting a call.
+To be able to place the call, you need to add three elements to the screen:
 
-## Create `CallManager`
+* A `TextView` to show the connection status
+* A `Button` to start the call
+* A `Button` to end the call
 
-Currently client SDK does not store call reference. We need to store call reference in the `CallManager` class, so it can be accessed from all screens.
+Open the `app/res/layout.activity_main.xml` file. Click the `Code` button in the top right corner:
 
-Create a `CallManager.kt` file in the `com.vonage.tutorial.voice` package to store the configuration. Right click on the `voice` package and select `New` > `Kotlin Class/File`. Enter `CallManager` and select `Class`.
+![Code view](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
 
-Replace the file contents with the following code:
-
-```kotlin
-package com.vonage.tutorial.voice
-
-import com.nexmo.client.NexmoCall
-
-object CallManager {
-    var onGoingCall: NexmoCall? = null
-}
-```
-
-## Update `fragment_main` layout
-
-Open the `fragment_main.xml` layout and click `Code` button in top right corner to display layout XML code:
-
-![](/screenshots/tutorials/client-sdk/android-shared/layout-resource.png)
-
-![](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
-
-Replace the file contents with the following code:
+Replace the file contents with the following:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="48dp">
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".MainActivity">
 
     <TextView
-            android:id="@+id/currentUserNameTextView"
+            android:id="@+id/connectionStatusTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
-            android:textSize="25sp"
-            tools:text="Hello Alice" />
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="20dp"
+            tools:text="Connection status" />
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
+    <Button
+            android:id="@+id/makeCallButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="20dp"
+            android:padding="16dp"
+            android:text="Make phone call" />
 
-        <Button
-                android:id="@+id/startAppToPhoneCallButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawablePadding="8dp"
-                android:layout_marginTop="36dp"
-                android:padding="16dp"
-                android:text="Make phone call" />
-
-        <androidx.core.widget.ContentLoadingProgressBar
-                android:id="@+id/progressBar"
-                android:layout_marginTop="36dp"
-                style="?android:attr/progressBarStyleLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible" />
-    </LinearLayout>
-
-</FrameLayout>
+    <Button
+            android:id="@+id/endCallButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End call"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+</LinearLayout>
 ```
 
-## Update `MainViewModel`
-
-Open the `MainViewModel` and replace the file contents with the following code:
+You will control the view using code, so you have to store references to the views. Add these properties at the top of the `ManActivity` class:
 
 ```kotlin
-package com.vonage.tutorial.voice
+private lateinit var makeCallButton: Button
+private lateinit var endCallButton: Button
+private lateinit var connectionStatusTextView: TextView
+```
 
-import android.annotation.SuppressLint
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.nexmo.client.NexmoCall
-import com.nexmo.client.NexmoCallHandler
-import com.nexmo.client.NexmoClient
-import com.nexmo.client.request_listener.NexmoRequestListener
+Now you need to asign views to previuusly added properties and add callbacks to the buttons. Add below code to the `onCreate` method inside `MainActivity` class (just below request permissions code):
 
-class MainViewModel : ViewModel() {
+```kotlin
+// init views
+makeCallButton = findViewById(R.id.makeCallButton)
+endCallButton = findViewById(R.id.endCallButton)
+connectionStatusTextView = findViewById(R.id.connectionStatusTextView)
 
-    private val client = NexmoClient.get()
-    private val callManager = CallManager
-    private val navManager = NavManager
+makeCallButton.setOnClickListener {
+        makeCall()
+}
 
-    private val _toast = MutableLiveData<String>()
-    val toast = _toast as LiveData<String>
-
-    private val _loading = MutableLiveData<Boolean>()
-    val loading = _loading as LiveData<Boolean>
-
-    private val callListener: NexmoRequestListener<NexmoCall> = TODO("Implement call listener")
-
-    override fun onCleared() {
-        client.removeIncomingCallListeners()
-    }
-
-    @SuppressLint("MissingPermission")
-    fun startAppToPhoneCall() {
-        TODO("Start the call")
-    }
-
-    fun onBackPressed() {
-        client.logout()
-    }
+endCallButton.setOnClickListener {
+        hangup()
 }
 ```
 
-### Make a call
-
-Replace `startAppToPhoneCall` method within the `MainViewModel` class to enable the call:
+To make code compile add these two empty methods in the `MainActivity` class:
 
 ```kotlin
 @SuppressLint("MissingPermission")
-fun startAppToPhoneCall() {
-    // Callee is ignored because it is specified in NCCO config
-    client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, callListener)
-    _loading.postValue(true)
+private void makeCall() {
+        // TODO: update body
+}
+
+private fun hangup() {
+        // TODO: update body
 }
 ```
 
-### Add call start listener
+You will fill the body of these methods in the following steps of this tutorial.
+## Build and Run
 
-Replace `callListener` property with below implementation to know when call has started:
+Run the project again (`Ctrl + R`). 
 
-```java
-private val callListener = object : NexmoRequestListener<NexmoCall> {
-        override fun onSuccess(call: NexmoCall?) {
-            callManager.onGoingCall = call
+Notice that buttons are hidden by default:
 
-            _loading.postValue(false)
+![Main screen](/screenshots/tutorials/client-sdk/app-to-phone/main-screen.png)
 
-            val navDirections = MainFragmentDirections.actionMainFragmentToOnCallFragment()
-            navManager.navigate(navDirections)
-        }
-
-        override fun onError(apiError: NexmoApiError) {
-            _toast.postValue(apiError.message)
-            _loading.postValue(false)
-        }
-    }
-```
-
-> **NOTE:** we set the `IGNORED_NUMBER` argument, because our number is specified in the NCCO config (Vonage application answer URL that you configured previously).
-
-
-## Update `MainFragment`
-
-Open the `MainFragment` and replace the file contents with the following code:
-
-```kotlin
-package com.vonage.tutorial.voice
-
-import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.Toast
-import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import kotlin.properties.Delegates
-
-class MainFragment : Fragment(R.layout.fragment_main), BackPressHandler {
-
-    private lateinit var startAppToPhoneCallButton: Button
-    private lateinit var progressBar: ProgressBar
-
-    private var dataLoading: Boolean by Delegates.observable(false) { _, _, newValue ->
-        startAppToPhoneCallButton.isEnabled = !newValue
-        progressBar.isVisible = newValue
-    }
-
-    private val viewModel by viewModels<MainViewModel>()
-
-    private val toastObserver = Observer<String> {
-        Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show();
-    }
-
-    private val loadingObserver = Observer<Boolean> {
-        dataLoading = it
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        viewModel.toast.observe(viewLifecycleOwner, toastObserver)
-        viewModel.loading.observe(viewLifecycleOwner, loadingObserver)
-
-        progressBar = view.findViewById(R.id.progressBar)
-        startAppToPhoneCallButton = view.findViewById(R.id.startAppToPhoneCallButton)
-
-        startAppToPhoneCallButton.setOnClickListener {
-            viewModel.startAppToPhoneCall()
-        }
-    }
-
-    override fun onBackPressed() {
-        viewModel.onBackPressed()
-    }
-}
-```
-
-Now you can login and make a call. Last screen to implement is `on call screen`, where you can end existing call.
+The state of the connection will be displayed and the `make a call` button will be shown after logging in the user.

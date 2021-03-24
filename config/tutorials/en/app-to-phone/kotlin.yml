@@ -32,12 +32,10 @@ tasks:
   - client-sdk/generate-jwt-alice
   - client-sdk/app-to-phone/create-project
   - client-sdk/app-to-phone/add-permissions
-  - client-sdk/app-to-phone/configure-jwt
-  - client-sdk/android-shared/initialize-client
-  - client-sdk/app-to-phone/authenticate-alice
   - client-sdk/app-to-phone/main-screen
-  - client-sdk/app-to-phone/build-on-call-screen
-  - client-sdk/android-shared/run-app
+  - client-sdk/app-to-phone/client
+  - client-sdk/app-to-phone/place-call
+  - client-sdk/app-to-phone/end-call
 
 conclusion:
   title: What's next?
