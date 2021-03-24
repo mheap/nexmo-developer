@@ -62,6 +62,6 @@ Run the project again (`Cmd + R`) to launch it in the simulator.
 
 ![Interface](/images/client-sdk/ios-voice/interface.jpg)
 
-The callButton has been hidden, its alpha is set 0, and will be shown when a connection is established.
+The `callButton` has been hidden, its alpha is set 0, and will be shown when a connection is established.
 
-Also, a target has been added for when callButton is tapped and will be used to place and end calls.
+Also, a target has been added for when `callButton` is tapped and will be used to place and end calls.

@@ -68,7 +68,7 @@ private lateinit var endCallButton: Button
 private lateinit var connectionStatusTextView: TextView
 ```
 
-Now you need to asign views to previuusly added properties and add callbacks to the buttons. Add below code to the `onCreate` method inside `MainActivity` class (just below request permissions code):
+Now you need to assign views to previusly added properties and add callbacks to the buttons. Add below code to the `onCreate` method inside `MainActivity` class (just below request permissions code):
 
 ```kotlin
 // init views

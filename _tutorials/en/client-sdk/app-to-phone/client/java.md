@@ -24,7 +24,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-Now below cleint intialization code add connection listener to monitor connection state:
+Now below client intialisation code add connection listener to monitor connection state:
 
 ```java
 client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
@@ -39,7 +39,7 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
 });
 ```
 
- The above listener allows us to determine that that user has logged in sucesfully and show `make a call` button. 
+ The above listener allows us to determine that that user has logged in successfully and show `make a call` button. 
  
  Finally add the code to login the user. Please make sure to replace `ALICE_JWT` with the JWT you created during a previous step:
 
@@ -51,6 +51,6 @@ client.login("ALICE_JWT");
 
 ## Build and Run
 
-`Ctrl + R` to build and run the app again. After sucesful login you will see `make a call` button:
+`Ctrl + R` to build and run the app again. After sucesfull login you will see `make a call` button:
 
 ![Make a call](/screenshots/tutorials/client-sdk/app-to-phone/make-a-call.png)

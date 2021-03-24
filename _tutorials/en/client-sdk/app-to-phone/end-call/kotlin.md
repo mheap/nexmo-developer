@@ -7,7 +7,7 @@ description: In this step you will end the call.
 
 The call can be ended by one of two parties:
 - application by the calling the `hangup` method on the `call` instance
-- callee by hanging up on the physical evice
+- callee by hanging up on the physical device
 
 ## End call when callee hangups
 

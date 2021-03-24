@@ -43,7 +43,7 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 
 After pasting the above snippet some of the class references (imports) can be missing. The missing class is marked using red color. You have to add the missing imports to fix this error. Rollover on the red text, wait for the window to appear, and press `Import` (this action will be required in the following steps as well).
 
-> **NOTE** You can also add missing import by placing caret at red text and pressing Option + Return on MacOS or Alt+Enter on Windows.
+> **NOTE** You can also add missing import by placing caret at red text and pressing Option + Return on macOS or Alt+Enter on Windows.
 
 # Run the app
 
