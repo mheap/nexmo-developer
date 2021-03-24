@@ -56,7 +56,8 @@ app.get('/voice/answer', (req, res) => {
       "text": "Please wait while we connect you."
     },
     { 
-      "action": "connect", 
+      "action": "connect",
+      "from": req.query.to,
       "endpoint": [ 
         { "type": "app", "user": "Alice" } 
       ]
@@ -84,7 +85,7 @@ const localtunnel = require('localtunnel');
 })();
 ```
 
-> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice, containing letters, numbers, underscores or dashes.
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes).
 
 
 There are 2 parts in the server code above:
