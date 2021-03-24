@@ -87,7 +87,7 @@ private void hangup() {
 }
 ```
 
-Notice that after succesfull hangup you set the value of the `onGoingCall` property back to null.
+Notice that after successful hangup you set the value of the `onGoingCall` property back to null.
 
 ## Build and Run
 

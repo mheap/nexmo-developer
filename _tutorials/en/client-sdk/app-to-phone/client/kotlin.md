@@ -24,7 +24,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-Now below client intialisation code add connection listener to monitor connection state:
+Now below client initialization code add connection listener to monitor connection state:
 
 ```kotlin
 client.setConnectionListener { connectionStatus, _ ->
@@ -50,6 +50,6 @@ client.login("ALICE_JWT")
 
 ## Build and Run
 
-`Ctrl + R` to build and run the app again. After sucesfull login you will see `make a call` button:
+`Ctrl + R` to build and run the app again. After successful login you will see `make a call` button:
 
 ![Make a call](/screenshots/tutorials/client-sdk/app-to-phone/make-a-call.png)
