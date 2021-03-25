@@ -36,6 +36,9 @@ Inside your project folder, create a file named `server.js` and add the code as 
 
 ``` javascript
 'use strict';
+
+const subdomain = 'SUBDOMAIN';
+
 const express = require('express')
 const app = express();
 app.use(express.json());
@@ -58,27 +61,30 @@ app.get('/voice/answer', (req, res) => {
   ]);
 });
 
+if(subdomain == "SUBDOMAIN") {
+  console.log('\n\t🚨🚨🚨 Please change the SUBDOMAIN value');
+  return false;
+}
+
 app.all('/voice/event', (req, res) => {
   console.log('EVENT:');
   console.dir(req.body);
   console.log('---');
   res.sendStatus(200);
 });
-
 app.listen(3000);
-
 
 const localtunnel = require('localtunnel');
 (async () => {
   const tunnel = await localtunnel({ 
-      subdomain: 'SUBDOMAIN', 
+      subdomain: subdomain, 
       port: 3000
     });
   console.log(`App available at: ${tunnel.url}`);
 })();
 ```
 
-> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice, containing letters, numbers, underscores or dashes.
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes).
 
 
 There are 2 parts in the server code above:
