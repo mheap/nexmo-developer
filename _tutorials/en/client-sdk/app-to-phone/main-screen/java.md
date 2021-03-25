@@ -68,7 +68,7 @@ private Button endCallButton;
 private TextView connectionStatusTextView;
 ```
 
-Now you need to assign views to previously added properties and add callbacks to the buttons. Add below code to the `onCreate` method inside `MainActivity` class (just below request permissions code):
+Now you need to assign views to previously added properties and add callbacks to the buttons. Add below code to the `onCreate` method inside `MainActivity` class (below request permissions code):
 
 ```java
 // init views
