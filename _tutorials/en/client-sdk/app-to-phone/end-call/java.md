@@ -34,7 +34,7 @@ private void makeCall() {
             runOnUiThread(() -> {
                 endCallButton.setVisibility(View.VISIBLE);
                 makeCallButton.setVisibility(View.INVISIBLE);
-            }
+            });
 
             onGoingCall = call;
             onGoingCall.addCallEventListener(new NexmoCallEventListener() {
@@ -47,7 +47,7 @@ private void makeCall() {
                             endCallButton.setVisibility(View.INVISIBLE);
                             makeCallButton.setVisibility(View.VISIBLE);
                         }
-                    }
+                    });
                 }
 
                 @Override
