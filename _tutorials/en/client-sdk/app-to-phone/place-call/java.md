@@ -19,8 +19,10 @@ To start the call after pressing `make call` button fill the body of the `makeCa
 
           @Override
           public void onSuccess(@Nullable NexmoCall call) {
+            runOnUiThread(() -> {
               endCallButton.setVisibility(View.VISIBLE);
               makeCallButton.setVisibility(View.INVISIBLE);
+            });
           }
       });
   }
@@ -118,3 +120,7 @@ VOICE EVENT:
 ```
 
 > **NOTE:** As the call is completed, events will also contain duration and pricing information.
+
+The `end call` button was shown to reflect the current state of the call:
+
+![End call](/screenshots/tutorials/client-sdk/app-to-phone/end-call.png)

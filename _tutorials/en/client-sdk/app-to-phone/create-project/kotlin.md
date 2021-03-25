@@ -16,7 +16,7 @@ Open Android Studio and, from the menu, select `File` > `New` > `New Project...`
 
 ![Create project](/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png)
 
-Enter `app-to-phone-kotlin` as project name, point location to previously created `app-to-phone-kotlin/app-to-phone` folder, select as `Kotlin` language and press `Finish` button.
+Enter `app-to-phone` as project name, point location to previously created `app-to-phone-kotlin/app-to-phone` folder, select as `Kotlin` language and press `Finish` button.
 
 You now have a brand new Android Project.
 

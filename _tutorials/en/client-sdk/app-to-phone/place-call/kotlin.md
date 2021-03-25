@@ -13,8 +13,10 @@ fun makeCall() {
   // Callee number is ignored because it is specified in NCCO config
   client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, object : NexmoRequestListener<NexmoCall> {
       override fun onSuccess(call: NexmoCall?) {
-          endCallButton.visibility = View.VISIBLE
-          makeCallButton.visibility = View.INVISIBLE
+          runOnUiThread { 
+            endCallButton.visibility = View.VISIBLE
+            makeCallButton.visibility = View.INVISIBLE
+          }
       }
 
       override fun onError(apiError: NexmoApiError) {
@@ -115,3 +117,7 @@ VOICE EVENT:
 ```
 
 > **NOTE:** As the call is completed, events will also contain duration and pricing information.
+
+The `end call` button was shown to reflect the current state of the call:
+
+![End call](/screenshots/tutorials/client-sdk/app-to-phone/end-call.png)

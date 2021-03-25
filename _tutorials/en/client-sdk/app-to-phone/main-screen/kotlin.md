@@ -32,32 +32,27 @@ Replace the file contents with the following:
             android:id="@+id/connectionStatusTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
             android:layout_marginBottom="20dp"
-            tools:text="Connection status" />
+            tools:text="Connection status"/>
 
     <Button
             android:id="@+id/makeCallButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawablePadding="8dp"
             android:layout_marginBottom="20dp"
-            android:padding="16dp"
-            android:text="Make phone call" />
+            android:text="Make phone call"
+            android:visibility="gone"
+            tools:visibility="visible"/>
 
     <Button
             android:id="@+id/endCallButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="End call"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2"
             android:visibility="gone"
             tools:visibility="visible"/>
 </LinearLayout>
+
 ```
 
 You will control the view using code, so you have to store references to the views. Add these properties at the top of the `ManActivity` class:
@@ -89,7 +84,7 @@ To make code compile add these two empty methods in the `MainActivity` class:
 
 ```kotlin
 @SuppressLint("MissingPermission")
-private void makeCall() {
+private fun makeCall() {
         // TODO: update body
 }
 

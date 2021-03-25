@@ -31,7 +31,7 @@ client.setConnectionListener { connectionStatus, _ ->
     runOnUiThread { connectionStatusTextView.text = connectionStatus.toString() }
 
     if (connectionStatus == ConnectionStatus.CONNECTED) {
-        makeCallButton.visibility = View.VISIBLE;
+        runOnUiThread { makeCallButton.visibility = View.VISIBLE }
 
         return@setConnectionListener
     }

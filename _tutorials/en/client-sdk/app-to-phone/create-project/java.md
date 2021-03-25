@@ -16,7 +16,7 @@ Open Android Studio and, from the menu, select `File` > `New` > `New Project...`
 
 ![Create project](/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png)
 
-Enter `app-to-phone-java` as project name, point location to previously created `app-to-phone-java/app-to-phone` folder,  select as `Java` language and press `Finish` button.
+Enter `app-to-phone` as project name, point location to previously created `app-to-phone-java/app-to-phone` folder,  select as `Java` language and press `Finish` button.
 
 You now have a brand new Android Project.
 

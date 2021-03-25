@@ -25,8 +25,10 @@ fun makeCall() {
     // Callee number is ignored because it is specified in NCCO config
     client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, object : NexmoRequestListener<NexmoCall> {
         override fun onSuccess(call: NexmoCall?) {
-            endCallButton.visibility = View.VISIBLE
-            makeCallButton.visibility = View.INVISIBLE
+            runOnUiThread { 
+                endCallButton.visibility = View.VISIBLE
+                makeCallButton.visibility = View.INVISIBLE
+            }
 
             onGoingCall = call
 
@@ -34,8 +36,11 @@ fun makeCall() {
                 override fun onMemberStatusUpdated(callStatus: NexmoCallMemberStatus, callMember: NexmoCallMember) {
                     if (callStatus == NexmoCallMemberStatus.COMPLETED || callStatus == NexmoCallMemberStatus.CANCELLED) {
                         onGoingCall = null
-                        endCallButton.visibility = View.INVISIBLE
-                        makeCallButton.visibility = View.VISIBLE
+                        
+                        runOnUiThread { 
+                            endCallButton.visibility = View.INVISIBLE
+                            makeCallButton.visibility = View.VISIBLE
+                        }
                     }
                 }
 
@@ -76,4 +81,4 @@ Notice that after successful hangup you set the value of the `onGoingCall` prope
 
 ## Build and Run
 
-`Ctrl + R` to build and run the app. Start and end the call. UI in the app will be updated after starting and ending the call.
+`Ctrl + R` to build and run the app. Start and end the call to see the UI changes.

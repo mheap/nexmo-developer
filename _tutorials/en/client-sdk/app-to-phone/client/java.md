@@ -33,7 +33,10 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
     });
 
     if (connectionStatus == ConnectionStatus.CONNECTED) {
-        makeCallButton.setVisibility(View.VISIBLE);
+        runOnUiThread(() -> {
+            makeCallButton.setVisibility(View.VISIBLE);
+        });
+        
         return;
     }
 });

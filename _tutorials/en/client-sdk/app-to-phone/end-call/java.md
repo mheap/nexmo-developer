@@ -31,8 +31,10 @@ private void makeCall() {
 
         @Override
         public void onSuccess(@Nullable NexmoCall call) {
-            endCallButton.setVisibility(View.VISIBLE);
-            makeCallButton.setVisibility(View.INVISIBLE);
+            runOnUiThread(() -> {
+                endCallButton.setVisibility(View.VISIBLE);
+                makeCallButton.setVisibility(View.INVISIBLE);
+            }
 
             onGoingCall = call;
             onGoingCall.addCallEventListener(new NexmoCallEventListener() {
@@ -40,8 +42,11 @@ private void makeCall() {
                 public void onMemberStatusUpdated(NexmoCallMemberStatus callStatus, NexmoCallMember nexmoCallMember) {
                     if (callStatus == NexmoCallMemberStatus.COMPLETED || callStatus == NexmoCallMemberStatus.CANCELLED) {
                         onGoingCall = null;
-                        endCallButton.setVisibility(View.INVISIBLE);
-                        makeCallButton.setVisibility(View.VISIBLE);
+                        
+                        runOnUiThread(() -> {
+                            endCallButton.setVisibility(View.INVISIBLE);
+                            makeCallButton.setVisibility(View.VISIBLE);
+                        }
                     }
                 }
 
@@ -91,4 +96,4 @@ Notice that after successful hangup you set the value of the `onGoingCall` prope
 
 ## Build and Run
 
-`Ctrl + R` to build and run the app. Start and end the call. UI in the app will be updated after starting and ending the call.
+`Ctrl + R` to build and run the app. Start and end the call to see the UI changes.
