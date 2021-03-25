@@ -96,6 +96,8 @@ Run the project again (`Ctrl + R`).
 
 Notice that buttons are hidden by default:
 
-![Main screen](/screenshots/tutorials/client-sdk/app-to-phone/main-scóreen.png)
+![Main screen](/screenshots/tutorials/client-sdk/app-to-phone/main-screen.png)
+
+/screenshots/tutorials/client-sdk/app-to-phone/main-screen.png
 
 The state of the connection will be displayed and the `make a call` button will be shown after logging in the user.
