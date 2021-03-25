@@ -81,7 +81,7 @@ page:
                 <div class="sr-only" style="background: #231F20; padding: 1em;">
                   <h1 style="color: white; font-size: 18px; letter-spacing: 0; line-height: 1.5em; margin-bottom: 1em;">Vonage for Startups</h1>
                   <h2 style="color: white;">Build faster, reach more customers and focus your time on what matters most.</h2>
-                  <p style="color: white;">We want to support the global startup community to build better products by connecting them to the best Vonage resources, people, and communication APIs.</p>
+                  <p style="color: white;">We want to support the global startup community to build better products by connecting them to the best Vonage resources, people, and Communications APIs.</p>
                 </div>
               </div>
             </div>
@@ -91,11 +91,11 @@ page:
         html:
           content: |
             <div class="Vlt-center">
-              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrTJTvlEU9sbeh9q">Register your Interest</a>
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrTJTvlEU9sbeh9q">Apply now!</a>
             </div>
       - type: html
         html:
-          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">The Vonage Startup Program is dedicated to startups that want to receive tailored support and Vonage API credits.</p>
+          content: <p style="font-size:15px;padding-left:100px;padding-right:100px;padding-bottom:50px;text-align:center;">The Vonage Startup Program is dedicated to startups that want to receive tailored support and up to €500 Vonage API credits.</p>
     - column:
       - type: html
         html:
@@ -286,8 +286,8 @@ page:
       - type: linked_image
         linked_image:
           image: /images/startups/report.png
-          url: "https://www.vonage.com/resources/publications/communication-key-remote-work/"
-          alt_text: Communication is Key to Remote Work
+          url: "https://learn.vonage.com/blog/2021/03/04/why-should-your-startup-use-communications-apis/"
+          alt_text: Why should your startup use Communications APIs?
     - column:
       - type: linked_image
         linked_image:
