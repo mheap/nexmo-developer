@@ -5,13 +5,13 @@ description: In this step you learn how to write the code for your phone to app 
 
 # Create a client side application
 
-Create an HTML file called `index.html` in your project directory. Add the following code, but make sure you paste in the JWT you generated for the user in the [earlier step](/client-sdk/tutorials/phone-to-app/client-sdk/generate-jwt) in this tutorial:
+Create an HTML file called `client_js.html` in your project directory. Add the following code, but make sure you paste in the JWT you generated for the user in the [earlier step](/client-sdk/tutorials/phone-to-app/client-sdk/generate-jwt-alice) in this tutorial:
 
 ``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="nexmoClient.js"></script>
+  <script src="./node_modules/nexmo-client/dist/nexmoClient.js"></script>
 </head>
 <body>
 
@@ -37,7 +37,7 @@ Create an HTML file called `index.html` in your project directory. Add the follo
         app.on("member:call", (member, call) => {
             notification.textContent = "You are receiving a call";
             // Answer the call.
-            answerBtn.addEventListener('click', () => {
+            answerBtn.addEventListener("click", () => {
                 call.answer();
                 notification.textContent = "You are in a call";
             });
@@ -57,7 +57,9 @@ Create an HTML file called `index.html` in your project directory. Add the follo
           notification.textContent = "Call Status: " + call.status;
         });
     })
-    .catch(console.error);
+    .catch((error) => {
+        console.error(error);
+    });
   </script>
 </body>
 </html>

@@ -1,65 +1,124 @@
 ---
 title: Create a webhook server
-description: In this step you learn how to create a suitable webhook server that enables your web app to accept an inbound PSTN phone call.
+description: In this step you learn how to create a suitable webhook server that supports an inbound call from a PSTN phone to an app.
 ---
 
 # Create a webhook server
 
-You will need to create a webhook server. When the inbound call comes into Vonage you can capture the originating number and use a dynamic NCCO to forward the call to the web application. This is achieved by using a `connect` action of type `app`. The call is forwarded to an authenticated user who represents the agent handling the inbound call.
+When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to the [user's](/conversation/concepts/user) app. You do this by extracting the destination user from the `to` query parameter and returning it in your response.
 
-Create a `server.js` file and add the code for the server:
+## New project
 
-> **NOTE:** Paste in your Vonage number and your user name to the code below. The username is the one you created a JWT for in a previous step (Alice).
+Create a new project directory in a destination of your choice and change into it:
+
+``` bash
+mkdir phone-to-app-js
+cd phone-to-app-js
+```
+
+Inside the folder, initialize a new Node.js project by running this command:
+
+``` bash
+npm init -y
+```
+
+## Add dependencies
+
+Next, install the required dependencies:
+
+``` bash
+npm install express localtunnel --save
+```
+
+Also, install the Client SDK - you will use this later, when building the client application:
+
+``` bash
+npm install nexmo-client --save
+```
+
+## Create the server file
+
+Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace `SUBDOMAIN` with an actual value. The value used will become part of the URLs you will set as webhooks in the next step.
 
 ``` javascript
 'use strict';
-const path = require('path');
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require('express')
 const app = express();
-const port = 3000;
+app.use(express.json());
 
-app.use(express.static('node_modules/nexmo-client/dist'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-const ncco = [
-  {
-    "action": "talk",
-    "text": "Please wait while we connect you to an agent"
-  },
-  {
-    "action": "connect",
-    "from": "NEXMO_NUMBER",
-    "endpoint": [
-      {
-        "type": "app",
-        "user": "Alice"
-      }
-    ]
-  }
-]
-
-app.get('/webhooks/answer', (req, res) => {
-    console.log("Answer:");
-    console.log(req.query);
-    res.json(ncco);
+app.get('/voice/answer', (req, res) => {
+  console.log('NCCO request:');
+  console.log(`  - from: ${req.query.from}`);
+  console.log('---');
+  res.json([ 
+    { 
+      "action": "talk", 
+      "text": "Please wait while we connect you."
+    },
+    { 
+      "action": "connect",
+      "from": req.query.to,
+      "endpoint": [ 
+        { "type": "app", "user": "Alice" } 
+      ]
+    }
+  ]);
 });
 
-app.post('/webhooks/event', (req, res) => {
-    console.log("EVENT:");
-    console.log(req.body);
-    res.status(200).end();
+app.all('/voice/event', (req, res) => {
+  console.log('EVENT:');
+  console.dir(req.body);
+  console.log('---');
+  res.sendStatus(200);
 });
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
-});
+app.listen(3000);
 
-app.listen(port, () => console.log(`Server listening on port ${port}!`));
+
+const localtunnel = require('localtunnel');
+(async () => {
+  const tunnel = await localtunnel({ 
+      subdomain: 'SUBDOMAIN', 
+      port: 3000
+    });
+  console.log(`App available at: ${tunnel.url}`);
+})();
 ```
 
-The important parts of this code are:
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes).
 
-1. A static NCCO is used in this example to forward the inbound call to the agent identified by `Alice`.
-2. The NCCO uses a `connect` action of type `app`, providing a username to connect to.
+
+There are 2 parts in the server code above:
+
+
+### The Express server
+
+The first part creates an `Express` server and makes it available locally on port `3000`. The server exposes 2 paths:
+
+1. `/voice/answer` is the `answer_url` we mentioned above. It sends back an NCCO as a `JSON` response containing information to connect to an application user. 
+       
+2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the call - - we call this the `event_url`.
+
+
+### The `localtunnel`  integration
+
+The second part of the server code above, exposes the `Express` server so it will be accessible by the Vonage servers.
+
+> **NOTE:** `localtunnel` is a JavaScript library that exposes your localhost to the world for painless testing and sharing! No need to mess with DNS or deploy to have others test out your changes.
+
+
+## Start the server
+
+You can now start the server by running, in the terminal, the following command:
+
+``` bash
+node server.js
+```
+
+A notice will be displayed telling you the server is now available:
+
+```
+App available at: https://SUBDOMAIN.loca.lt
+```
+
+Please keep the terminal window handy as you will need the URL in the next step.

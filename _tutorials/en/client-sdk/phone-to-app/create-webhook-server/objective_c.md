@@ -50,7 +50,8 @@ app.get('/voice/answer', (req, res) => {
       "text": "Please wait while we connect you."
     },
     { 
-      "action": "connect", 
+      "action": "connect",
+      "from": req.query.to,
       "endpoint": [ 
         { "type": "app", "user": "Alice" } 
       ]
@@ -78,7 +79,7 @@ const localtunnel = require('localtunnel');
 })();
 ```
 
-> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice, containing letters, numbers, underscores or dashes.
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes).
 
 
 There are 2 parts in the server code above:
@@ -88,10 +89,8 @@ There are 2 parts in the server code above:
 
 The first part creates an `Express` server and makes it available locally on port `3000`. The server exposes 2 paths:
 
-1. `/voice/answer` is the `answer_url` we mentioned above. It sends back a `JSON` response containing the destination user for the call. 
+1. `/voice/answer` is the `answer_url` we mentioned above. It sends back an NCCO as a `JSON` response containing information to connect to an application user. 
    
-    Notice, that the `user` is extracted from the `req.query.to` parameter that Vonage is sending as part of the request. The dynamically built NCCO then forwards the call to the destination phone using a `connect` action.
-
 2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the call - - we call this the `event_url`.
 
 

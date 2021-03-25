@@ -1,6 +1,6 @@
 title: Receiving a phone call in-app
 description: You receive a call from a phone to your app
-products: 
+products:
   - client-sdk
 
 introduction:
@@ -13,26 +13,23 @@ introduction:
 
     To achieve this, you will need:
 
-    * A web application that will notify the service agent of an inbound call and offer the ability to answer it
-    * A webhook server that can process an inbound webhook and return an <abbr title="Nexmo Call Control Object">NCCO</abbr> to forward the inbound call to your application
+    * A web application that will notify the service agent of an inbound call and offer the ability to answer it.
+    * A webhook server that can process an inbound webhook and return an <abbr title="Nexmo Call Control Object">NCCO</abbr> to forward the inbound call to your application using [Node.js](https://nodejs.org/en/), [Express](https://expressjs.com/), and [localtunnel](https://github.com/localtunnel/localtunnel).
 
 prerequisites:
 - create-nexmo-account
 - install-nodejs
-- install-node-client-sdk
 - install-nexmo-cli-beta
-- install-express
-- run-ngrok
 
 tasks:
-- client-sdk/create-application
+- client-sdk/phone-to-app/create-webhook-server
+- client-sdk/phone-to-app/create-application
 - buy-nexmo-number
 - link-nexmo-number
 - client-sdk/create-user
-- client-sdk/generate-jwt
-- client-sdk/phone-to-app/create-webhook-server
-- client-sdk/phone-to-app/code
-- client-sdk/phone-to-app/run
+- client-sdk/generate-jwt-alice
+- client-sdk/phone-to-app/main-screen
+- client-sdk/phone-to-app/receive-call
 
 conclusion:
   title: What's next?
