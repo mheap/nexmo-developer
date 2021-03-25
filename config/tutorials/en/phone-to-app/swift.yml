@@ -26,7 +26,7 @@ tasks:
 - client-sdk/phone-to-app/create-application
 - buy-nexmo-number
 - link-nexmo-number
-- client-sdk/create-user
+- client-sdk/create-user-alice
 - client-sdk/generate-jwt-alice
 - client-sdk/phone-to-app/project
 - client-sdk/phone-to-app/permissions
