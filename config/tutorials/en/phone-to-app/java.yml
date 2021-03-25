@@ -21,17 +21,17 @@ prerequisites:
 - join-github
 
 tasks:
-  - client-sdk/phone-to-app/create-ncco
-  - client-sdk/phone-to-app/create-application
-  - buy-nexmo-number
-  - link-nexmo-number
-  - client-sdk/android-shared/create-user-alice
-  - client-sdk/generate-jwt-alice
-  - client-sdk/phone-to-app/create-project
-  - client-sdk/phone-to-app/permissions
-  - client-sdk/phone-to-app/interface
-  - client-sdk/phone-to-app/client
-  - client-sdk/phone-to-app/call
+- client-sdk/phone-to-app/create-ncco
+- client-sdk/phone-to-app/create-application
+- buy-nexmo-number
+- link-nexmo-number
+- client-sdk/create-user
+- client-sdk/generate-jwt-alice
+- client-sdk/phone-to-app/create-project
+- client-sdk/phone-to-app/permissions
+- client-sdk/phone-to-app/interface
+- client-sdk/phone-to-app/client
+- client-sdk/phone-to-app/call
 
 
 conclusion:
