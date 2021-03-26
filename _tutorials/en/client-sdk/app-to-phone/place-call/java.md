@@ -28,6 +28,8 @@ To start the call after pressing `make call` button fill the body of the `makeCa
   }
 ```
 
+> **NOTE:** Please make sure that the webhook server you built in the previous steps is still running. 
+
 ## Webhooks
 
 As you proceed with placing the call, please switch to the terminal and notice the `/voice/answer` endpoint being called to retrieve the NCCO:
