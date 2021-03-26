@@ -96,4 +96,4 @@ Notice that after successful hangup you set the value of the `onGoingCall` prope
 
 ## Build and Run
 
-Press `Ctrl + R` the keys to build and run the app. Start and end the call to see the UI changes.
+Press the `Ctrl + R` keys to build and run the app. Start and end the call to see the UI changes.
