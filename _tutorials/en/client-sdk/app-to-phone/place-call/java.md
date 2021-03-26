@@ -10,8 +10,7 @@ To start the call after pressing `make call` button fill the body of the `makeCa
 ```java
 @SuppressLint("MissingPermission")
   private void makeCall() {
-      // Callee number is ignored because it is specified in NCCO config
-      client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, new NexmoRequestListener<NexmoCall>() {
+      client.call("PHONE_NUMBER", NexmoCallHandler.SERVER, new NexmoRequestListener<NexmoCall>() {
           @Override
           public void onError(@NonNull NexmoApiError nexmoApiError) {
 
@@ -27,6 +26,8 @@ To start the call after pressing `make call` button fill the body of the `makeCa
       });
   }
 ```
+
+Please make sure to replace `PHONE_NUMBER` below with the actual phone number you want to call, in the [E.164](https://developer.nexmo.com/concepts/guides/glossary#e-164-format) format (for example, 447700900000).
 
 > **NOTE:** Please make sure that the webhook server you built in the previous steps is still running. 
 
