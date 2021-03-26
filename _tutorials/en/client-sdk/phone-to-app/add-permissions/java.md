@@ -1,39 +1,56 @@
 ---
-title: Configure permissions
-description: In this step you will add the necessary permissions to the project properties.
+title: Add permissions
+description: In this step you add permissions
 ---
 
-# Configure permissions
+# Add permissions
 
-As you'll be using the microphone when making a call, you need to request the permission to use it.
+## Declare permissions in Android Manifest
 
-1. Add the required permissions to the `AndroidManifest.xml` file:
+Add the required permissions to the `AndroidManifest.xml` file:
 
-![](/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
+![Android Manifest](/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
 
-    ```xml
-    <manifest ...>
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    </manifest>
-    ```
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.vonage.tutorial">
 
-2. For devices running Android version M (API level 23) or higher, you should request for the `RECORD_AUDIO` permission at runtime. Add permission request in the `MainActivity` class inside `onCreate` method:
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    ...
+```
 
+## Request permissions at runtime
+
+To simplify the tutorial, the permissions are requested each time the application runs. To request permissions, add the following code to the `onCreate` method of the `MainActivity` class:
 
 ```java
 @Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
 
-    // this is the current activity
-    if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 123);
-    }
+    // request permissions
+    String[] callsPermissions = { Manifest.permission.RECORD_AUDIO };
+    ActivityCompat.requestPermissions(this, callsPermissions, 123);
 }
 ```
 
-## Build and Run
+After pasting the above snippet some of the class references (imports) can be missing. The missing class is marked using red color. You have to add the missing imports to fix this error. Rollover on the red text, wait for the window to appear, and press `Import` (this action will be required in the following steps as well).
 
-Press `Cmd + R` to build and run the app.
+> **NOTE** You can also add missing import by placing caret at red text and pressing Option + Return on macOS or Alt+Enter on Windows.
+
+# Run the app
+
+You now launch the app. Use the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When the virtual device is available press the `Launch` button: 
+
+![Launch app](/screenshots/tutorials/client-sdk/android-shared/launch-app.png)
+
+Notice the prompt asking for permission to use the microphone:
+
+![Permissions dialog](/screenshots/tutorials/client-sdk/phone-to-app/permission-dialog.png)

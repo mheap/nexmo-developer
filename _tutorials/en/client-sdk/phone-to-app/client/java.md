@@ -30,4 +30,6 @@ client.login("ALICE_TOKEN");
 
 ## Build and Run
 
-Press `Cmd + R` to build and run the app.
+`Ctrl + R` to build and run the app again. After successful login you will see `CONNECTED` text:
+
+![Connected](/screenshots/tutorials/client-sdk/phone-to-app/connected.png)
