@@ -11,9 +11,11 @@ To be able to log in, you will need to add three elements to the screen:
 * A `UIButton` to log in Bob 
 * A `UILabel` to show the connection status.
 
-Open `ViewController.m` and add it programmatically.
+Open `ViewController.m` and add it programmatically by replacing the entire file content with the following:
 
 ```objective_c
+#import "ViewController.h"
+
 @interface ViewController ()
 @property UIButton *loginAliceButton;
 @property UIButton *loginBobButton;
