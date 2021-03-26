@@ -11,7 +11,7 @@ To be able to place the call, you need to add three elements to the screen:
 * A `Button` to start the call
 * A `Button` to end the call
 
-Open the `app/res/layout.activity_main.xml` file. Click the `Code` button in the top right corner:
+Open the `app/res/layout/activity_main.xml` file. Click the `Code` button in the top right corner:
 
 ![Code view](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
 

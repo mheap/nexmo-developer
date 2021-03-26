@@ -45,6 +45,6 @@ client.login("ALICE_JWT")
 
 ## Build and Run
 
-Press `Ctrl + R` buttons to build and run the app again. After successful login you will see `make a call` button:
+Press `Ctrl + R` the keys to build and run the app again. After successful login you will see `make a call` button:
 
 ![Make a call](/screenshots/tutorials/client-sdk/app-to-phone/make-a-call.png)
