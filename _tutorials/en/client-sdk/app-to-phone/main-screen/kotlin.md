@@ -40,7 +40,7 @@ Replace the file contents with the following:
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="Make phone call"
+            android:text="Start call"
             android:visibility="gone"
             tools:visibility="visible"/>
 
