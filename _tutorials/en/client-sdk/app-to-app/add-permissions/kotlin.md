@@ -32,11 +32,22 @@ To request permissions, add the following code to the `onCreate` method of the `
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
     
-    // ...
-
+    // request permissions
     val callsPermissions = arrayOf(Manifest.permission.RECORD_AUDIO)
     ActivityCompat.requestPermissions(this, callsPermissions, 123)
 }
 ```
 
-Run `Build` > `Make project` to make sure project is compiling.
+After pasting the above snippet some of the class references (imports) can be missing. The missing class is marked using red color. You have to add the missing imports to fix this error. Rollover on the red text, wait for the window to appear, and press `Import` (this action will be required in the following steps as well).
+
+> **NOTE** You can also add missing import by placing caret at red text and pressing Option + Return on macOS or Alt+Enter on Windows.
+
+# Run the app
+
+You now launch the app. Use the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When the virtual device is available press the `Launch` button: 
+
+![Launch app](/screenshots/tutorials/client-sdk/android-shared/launch-app.png)
+
+Notice the prompt asking for permission to use the microphone:
+
+![Permissions dialog](/screenshots/tutorials/client-sdk/app-to-app/permission-dialog.png)
