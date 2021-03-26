@@ -9,7 +9,7 @@ You now need to create a Vonage [Application](/conversation/concepts/application
 
 Open a new terminal and, if required, navigate to your project directory.
 
-Create a Vonage application by copying and pasting the command below into terminal Make sure to change the values of `--voice-answer-url` and `--voice-event-url` arguments, by replacing `SUBDOMAIN` with the actual value used in the previous step:
+Create a Vonage application by copying and pasting the command below into terminal. Make sure to change the values of `--voice-answer-url` and `--voice-event-url` arguments, by replacing `SUBDOMAIN` with the actual value used in the previous step:
 
 ``` shell
 nexmo app:create "Phone To App Tutorial" --capabilities=voice --keyfile=private.key  --voice-answer-url=https://SUBDOMAIN.loca.lt/voice/answer --voice-event-url=https://SUBDOMAIN.loca.lt/voice/event

@@ -10,12 +10,7 @@ description: In this step you will initialize Client, so it can be used within t
 Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoClient` using the builder:
 
 ```kotlin
-override fun onCreate(savedInstanceState: Bundle?) {
-    
-    // ...
-
-    val client = NexmoClient.Builder().build(this)
-}
+val client = NexmoClient.Builder().build(this)
 ```
 
 Now below client initialization code add connection listener to monitor connection state:
@@ -36,6 +31,6 @@ client.login("ALICE_JWT")
 
 ## Build and Run
 
-`Ctrl + R` to build and run the app again. After successful login you will see `CONNECTED` text:
+Press `Ctrl + R` the buttons to build and run the app again. After successful login you will see `CONNECTED` text:
 
 ![Connected](/screenshots/tutorials/client-sdk/phone-to-app/connected.png)
