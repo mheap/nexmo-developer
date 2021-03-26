@@ -103,7 +103,7 @@ Notice that after a successful rejecting or ending the call you set `call` prope
 
 Please make sure that the webhook server you built in the previous steps is still running. 
 
-Press `Ctrl + R` the buttons to build and run the app. Call the number.
+Press `Ctrl + R` the keys to build and run the app. Call the number.
 
 Call the number linked with your application from the earlier step.
 
