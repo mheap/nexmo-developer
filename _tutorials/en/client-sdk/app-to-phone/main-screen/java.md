@@ -36,7 +36,7 @@ Replace the file contents with the following:
             tools:text="Connection status"/>
 
     <Button
-            android:id="@+id/makeCallButton"
+            android:id="@+id/startCallButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -52,13 +52,12 @@ Replace the file contents with the following:
             android:visibility="gone"
             tools:visibility="visible"/>
 </LinearLayout>
-
 ```
 
 You will control the view using code, so you have to store references to the views. Add these properties at the top of the `ManActivity` class:
 
 ```java
-private Button makeCallButton;
+private Button startCallButton;
 private Button endCallButton;
 private TextView connectionStatusTextView;
 ```
@@ -67,11 +66,11 @@ Now you need to assign views to previously added properties and add callbacks to
 
 ```java
 // init views
-makeCallButton = findViewById(R.id.makeCallButton);
+startCallButton = findViewById(R.id.startCallButton);
 endCallButton = findViewById(R.id.endCallButton);
 connectionStatusTextView = findViewById(R.id.connectionStatusTextView);
 
-makeCallButton.setOnClickListener(v -> makeCall());
+startCallButton.setOnClickListener(v -> startCall());
 endCallButton.setOnClickListener(v -> hangup());
 ```
 
@@ -79,7 +78,7 @@ To make code compile add these two empty methods in the `MainActivity` class:
 
 ```java
 @SuppressLint("MissingPermission")
-private void makeCall() {
+private void startCall() {
         // TODO: update body
 }
 

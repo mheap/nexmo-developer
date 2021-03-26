@@ -5,16 +5,16 @@ description: In this step you will place the call.
 
 # Place a call
 
-To start the call after pressing `make call` button fill the body of the `makeCall` method inside `Mainctivity` class:
+To start the call after pressing `start call` button fill the body of the `startCall` method inside `Mainctivity` class:
 
 ```kotlin
 @SuppressLint("MissingPermission")
-fun makeCall() {
+fun startCall() {
   client.call("PHONE_NUMBER", NexmoCallHandler.SERVER, object : NexmoRequestListener<NexmoCall> {
       override fun onSuccess(call: NexmoCall?) {
           runOnUiThread { 
             endCallButton.visibility = View.VISIBLE
-            makeCallButton.visibility = View.INVISIBLE
+            startCallButton.visibility = View.INVISIBLE
           }
       }
 

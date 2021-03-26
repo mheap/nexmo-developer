@@ -16,12 +16,7 @@ private lateinit var client: NexmoClient
 Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoClient` using the builder:
 
 ```kotlin
-override fun onCreate(savedInstanceState: Bundle?) {
-    
-    // ...
-
-    client = NexmoClient.Builder().build(this)
-}
+client = NexmoClient.Builder().build(this)
 ```
 
 Now below client initialization code add connection listener to monitor connection state:
@@ -31,7 +26,7 @@ client.setConnectionListener { connectionStatus, _ ->
     runOnUiThread { connectionStatusTextView.text = connectionStatus.toString() }
 
     if (connectionStatus == ConnectionStatus.CONNECTED) {
-        runOnUiThread { makeCallButton.visibility = View.VISIBLE }
+        runOnUiThread { startCallButton.visibility = View.VISIBLE }
 
         return@setConnectionListener
     }
@@ -50,6 +45,6 @@ client.login("ALICE_JWT")
 
 ## Build and Run
 
-`Ctrl + R` to build and run the app again. After successful login you will see `make a call` button:
+Press `Ctrl + R` buttons to build and run the app again. After successful login you will see `make a call` button:
 
 ![Make a call](/screenshots/tutorials/client-sdk/app-to-phone/make-a-call.png)

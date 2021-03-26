@@ -17,17 +17,17 @@ To end the call (hangup) you need to store the reference to the ongoing call obj
 var onGoingCall: NexmoCall? = null
 ```
 
-You need to store ongoing call reference in the `onGoingCall` property and add `addCallEventListener` to notify you when the call ends. In the `MainActivity` update the body of the `makeCall` method:
+You need to store ongoing call reference in the `onGoingCall` property and add `addCallEventListener` to notify you when the call ends. In the `MainActivity` update the body of the `startCall` method:
 
 ```kotlin
 @SuppressLint("MissingPermission")
-fun makeCall() {
+fun startCall() {
     // Callee number is ignored because it is specified in NCCO config
     client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, object : NexmoRequestListener<NexmoCall> {
         override fun onSuccess(call: NexmoCall?) {
             runOnUiThread { 
                 endCallButton.visibility = View.VISIBLE
-                makeCallButton.visibility = View.INVISIBLE
+                startCallButton.visibility = View.INVISIBLE
             }
 
             onGoingCall = call
@@ -39,7 +39,7 @@ fun makeCall() {
                         
                         runOnUiThread { 
                             endCallButton.visibility = View.INVISIBLE
-                            makeCallButton.visibility = View.VISIBLE
+                            startCallButton.visibility = View.VISIBLE
                         }
                     }
                 }
@@ -81,4 +81,4 @@ Notice that after successful hangup you set the value of the `onGoingCall` prope
 
 ## Build and Run
 
-`Ctrl + R` to build and run the app. Start and end the call to see the UI changes.
+Press `Ctrl + R` buttons to build and run the app. Start and end the call to see the UI changes.

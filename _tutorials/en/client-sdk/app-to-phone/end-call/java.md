@@ -17,11 +17,11 @@ To end the call (hangup) you need to store the reference to the ongoing call obj
 @Nullable private NexmoCall onGoingCall;
 ```
 
-You need to store ongoing call reference in the `onGoingCall` property and add `addCallEventListener` to notify you when the call ends. In the `MainActivity` update the body of the `makeCall` method:
+You need to store ongoing call reference in the `onGoingCall` property and add `addCallEventListener` to notify you when the call ends. In the `MainActivity` update the body of the `startCall` method:
 
 ```java
 @SuppressLint("MissingPermission")
-private void makeCall() {
+private void startCall() {
     // Callee number is ignored because it is specified in NCCO config
     client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, new NexmoRequestListener<NexmoCall>() {
         @Override
@@ -33,7 +33,7 @@ private void makeCall() {
         public void onSuccess(@Nullable NexmoCall call) {
             runOnUiThread(() -> {
                 endCallButton.setVisibility(View.VISIBLE);
-                makeCallButton.setVisibility(View.INVISIBLE);
+                startCallButton.setVisibility(View.INVISIBLE);
             });
 
             onGoingCall = call;
@@ -45,7 +45,7 @@ private void makeCall() {
                         
                         runOnUiThread(() -> {
                             endCallButton.setVisibility(View.INVISIBLE);
-                            makeCallButton.setVisibility(View.VISIBLE);
+                            startCallButton.setVisibility(View.VISIBLE);
                         }
                     });
                 }
@@ -96,4 +96,4 @@ Notice that after successful hangup you set the value of the `onGoingCall` prope
 
 ## Build and Run
 
-`Ctrl + R` to build and run the app. Start and end the call to see the UI changes.
+Press `Ctrl + R` buttons to build and run the app. Start and end the call to see the UI changes.

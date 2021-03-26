@@ -5,11 +5,11 @@ description: In this step you will place the call.
 
 # Place a call
 
-To start the call after pressing `make call` button fill the body of the `makeCall` method inside `Mainctivity` class:
+To start the call after pressing `start call` button fill the body of the `startCall` method inside `Mainctivity` class:
 
 ```java
 @SuppressLint("MissingPermission")
-  private void makeCall() {
+  private void startCall() {
       client.call("PHONE_NUMBER", NexmoCallHandler.SERVER, new NexmoRequestListener<NexmoCall>() {
           @Override
           public void onError(@NonNull NexmoApiError nexmoApiError) {
@@ -20,7 +20,7 @@ To start the call after pressing `make call` button fill the body of the `makeCa
           public void onSuccess(@Nullable NexmoCall call) {
             runOnUiThread(() -> {
               endCallButton.setVisibility(View.VISIBLE);
-              makeCallButton.setVisibility(View.INVISIBLE);
+              startCallButton.setVisibility(View.INVISIBLE);
             });
           }
       });
