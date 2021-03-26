@@ -17,7 +17,7 @@ introduction:
     * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
 
     ### Completed project
-    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-java](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-java) folder.
+    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-java/).
 
 prerequisites:
   - create-nexmo-account
@@ -44,8 +44,7 @@ conclusion:
 
     # What's next?
 
-    For the complete version please see the Android Studio project in the `app-to-phone-java/app-to-phone` folder of 
-    the [git repository](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-java/app-to-phone) you've cloned.
+    For the complete version please see the Android Studio project in the `app-to-phone-java/app-to-phone` folder of the [git repository]([Github](https://github.com/nexmo-community/client-sdk-tutorials/) you've cloned.
 
     You can do a lot more with the Client SDK. See [Client SDK documentation](/client-sdk/overview) or review
     [Android Client SDK documentation](/sdk/stitch/android/index).
