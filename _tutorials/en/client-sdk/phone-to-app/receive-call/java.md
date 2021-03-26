@@ -38,6 +38,7 @@ endCallButton.setOnClickListener(view -> { endCall();});
 To answer the call add `answerCall` method inside `MainActivity` class:
 
 ```java
+@SuppressLint("MissingPermission")
 private void answerCall() {
     call.answer(new NexmoRequestListener<NexmoCall>() {
         @Override
@@ -56,6 +57,8 @@ private void answerCall() {
 ```
 
 After answering the call the `end call` button will be shown.
+
+**NOTE:** The `SuppressLint` annotation is used for simplicity. In the production app you should make sure permissions are granted before answering the call.
 
 To reject the call add `rejectCall` method inside `MainActivity` class:
 
