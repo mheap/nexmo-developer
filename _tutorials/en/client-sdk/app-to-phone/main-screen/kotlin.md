@@ -54,7 +54,7 @@ Replace the file contents with the following:
 </LinearLayout>
 ```
 
-You will control the view using code, so you have to store references to the views. Add these properties at the top of the `ManActivity` class:
+You will control the view using code, so you have to store references to the views. Add these properties at the top of the `MainActivity` class:
 
 ```kotlin
 private lateinit var startCallButton: Button

@@ -8,7 +8,7 @@ introduction:
   description: This task shows you how to handle an inbound call into your web app using the Android Client SDK.
   content: |
     # Introduction
-    In this tutorial, you will learn how to create an Android application using kotlin and the Nexmo Android Client SDK, and then write the code to receive a phone call to your Android app from a phone.
+    In this tutorial, you will learn how to create an Android application using Kotlin and the Android Client SDK, and then write the code to receive a phone call to your Android app from a phone.
 
     Two parts are needed to achieve this:
 
@@ -16,7 +16,7 @@ introduction:
     * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
 
     ### Completed project
-    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/phone-to-app-kotlin/).
+    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [phone-to-app-kotlin](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/phone-to-app-kotlin) folder.
 
 prerequisites:
 - create-nexmo-account
@@ -29,7 +29,7 @@ tasks:
 - client-sdk/phone-to-app/create-application
 - buy-nexmo-number
 - link-nexmo-number
-- client-sdk/create-user
+- client-sdk/create-user-alice
 - client-sdk/generate-jwt-alice
 - client-sdk/phone-to-app/create-project
 - client-sdk/phone-to-app/add-permissions
@@ -44,8 +44,7 @@ conclusion:
   content: |
 
     # What's next?
-
-    For the complete version please see the Android Studio project in the `phone-to-app-kotlin/phone-to-app` folder of the [git repository]([Github](https://github.com/nexmo-community/client-sdk-tutorials/) you've cloned.
+    The complete version of the project you just built is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) - please see the [phone-to-app-kotlin](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/phone-to-app-kotlin) folder.
 
     You can do a lot more with the Client SDK. See [Client SDK documentation](/client-sdk/overview) or review
     [Android Client SDK documentation](/sdk/stitch/android/index).

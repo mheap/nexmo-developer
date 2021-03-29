@@ -57,7 +57,7 @@ To be able view the connection status of the app you will need to add a `TextVie
 
 ## Retrieve views references
 
-You will control the view using code, so references to the views have to be stored in the `MainActivity` class. Add these properties at the top of the `ManActivity` class:
+You will control the view using code, so references to the views have to be stored in the `MainActivity` class. Add these properties at the top of the `MainActivity` class:
 
 ```kotlin
 private lateinit var connectionStatusTextView: TextView

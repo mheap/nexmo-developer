@@ -11,7 +11,7 @@ The call can be ended by one of two parties:
 
 ## End call when callee hangups
 
-To end the call (hangup) you need to store the reference to the ongoing call object. Add `onGoingCall` property at the top of the `ManActivity`:
+To end the call (hangup) you need to store the reference to the ongoing call object. Add `onGoingCall` property at the top of the `MainActivity`:
 
 ```java
 @Nullable private NexmoCall onGoingCall;
