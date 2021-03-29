@@ -1,0 +1,9 @@
+---
+import_dependencies:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/jwt/ValidateInboundJwt.java
+  from_line: 24
+  to_line: 29
+code:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/jwt/ValidateInboundJwt.java
+  from_line: 34
+  to_line: 55
