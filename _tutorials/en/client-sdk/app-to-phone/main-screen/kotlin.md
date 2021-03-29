@@ -101,4 +101,4 @@ Notice that buttons are hidden by default:
 
 ![Main screen](/screenshots/tutorials/client-sdk/app-to-phone/main-screen.png)
 
-The state of the connection will be displayed and the `make a call` button will be shown after logging in the user.
+The state of the connection will be displayed and the `MAKE PHONE CALL` button will be shown after logging in the user.

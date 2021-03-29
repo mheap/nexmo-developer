@@ -5,7 +5,7 @@ description: In this step you will place the call.
 
 # Place a call
 
-To start the call after pressing `start call` button fill the body of the `startCall` method inside `Mainctivity` class:
+To start the call after pressing the `MAKE PHONE CALL` button fill the body of the `startCall` method inside `Mainctivity` class:
 
 ```kotlin
 @SuppressLint("MissingPermission")
@@ -121,6 +121,6 @@ VOICE EVENT:
 
 > **NOTE:** As the call is completed, events will also contain duration and pricing information.
 
-The `end call` button was shown to reflect the current state of the call:
+The `END CALL` button was shown to reflect the current state of the call:
 
 ![End call](/screenshots/tutorials/client-sdk/app-to-phone/end-call.png)

@@ -37,7 +37,7 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
 });
 ```
 
- The above listener allows us to determine that that user has logged in successfully and show `make a call` button. 
+ The above listener allows us to determine that that user has logged in successfully and show the `MAKE PHONE CALL` button. 
  
  Finally add the code to login the user. Please make sure to replace `ALICE_JWT` with the JWT you created during a previous step:
 
@@ -49,6 +49,6 @@ client.login("ALICE_JWT");
 
 ## Build and Run
 
-Press the `Ctrl + R` keys to build and run the app again. After successful login you will see `make a call` button:
+Press the `Ctrl + R` keys to build and run the app again. After successful login you will see the `MAKE PHONE CALL` button:
 
 ![Make a call](/screenshots/tutorials/client-sdk/app-to-phone/make-a-call.png)

@@ -58,7 +58,7 @@ fun startCall() {
 }
 ```
 
-When the call is ended (regardless of who ends the call app or callee) the UI is updated to reflect the current call state (`make a call button` is shown and `end call` button is hidden).
+When the call is ended (regardless of who ends the call app or callee) the UI is updated to reflect the current call state (`make a call button` is shown and `END CALL` button is hidden).
 
 ## End call in the application
 
