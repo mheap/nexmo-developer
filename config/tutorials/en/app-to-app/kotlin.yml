@@ -29,9 +29,11 @@ tasks:
   - client-sdk/app-to-app/create-webhook-server
   - client-sdk/app-to-app/create-application
   - client-sdk/create-users-alice-and-bob
+  - client-sdk/generate-jwts-alice-and-bob
   - client-sdk/app-to-app/create-project
   - client-sdk/app-to-app/add-permissions
   - client-sdk/app-to-app/main-screen
+  - client-sdk/app-to-app/client
 
   - client-sdk/app-to-app/configure-jwt
   - client-sdk/android-shared/initialize-client
