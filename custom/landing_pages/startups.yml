@@ -315,7 +315,7 @@ page:
         html:
           content: |
             <div class="Vlt-center" style="margin-top: 50px;">
-              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrTJTvlEU9sbeh9q">Register your Interest</a>
+              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--large Vlt-btn--larger" href="https://airtable.com/shrTJTvlEU9sbeh9q">Apply now!</a>
             </div>
       - type: html
         html:
@@ -353,8 +353,9 @@ page:
                     <p class="p-large">
                       We are technology agnostic and want to support any startup that we can provide value to. Typically, applicants need to meet the following criteria to be considered:
                       <ul class="criteria-list">
-                        <li>Early-stage (pre-Series A)</li>
+                        <li>Early-stage (Pre-Seed - Series A)</li>
                         <li>Founded in the past 5 years</li>
+                        <li>Company Website and associated Emails<li/>
                         <li>Have a Vonage API account</li>
                         <li>Not be an existing managed customer</li>
                       </ul>
@@ -366,7 +367,7 @@ page:
                   type: large
                 - content: <b>What do I get if I get accepted?</b>
                   type: large
-                - content: Every startup has different needs -  as part of the onboarding process we will identify the best mix of resources to meet your needs.
+                - content: Every startup has different needs -  as part of the onboarding process we will identify the best mix of resources to meet your needs. This ranges from technical worskhops, 1:1s with PMs, any other support you might need and including up to €500 in Vonage API credits.
                   type: large
                 - content: <b>I am an existing customer, do I qualify for the program?</b>
                   type: large

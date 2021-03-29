@@ -13,6 +13,9 @@ To be able to place the call, you need to add two elements to the screen:
 Open `ViewController.m` and add these two programmatically by replacing the entire file content with the following:
 
 ```objective_c
+#import "ViewController.h"
+#import <NexmoClient/NexmoClient.h>
+
 @interface ViewController ()
 @property UIButton *callButton;
 @property UILabel *connectionStatusLabel;

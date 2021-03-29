@@ -1,6 +1,6 @@
 ---
 title: Create a webhook server
-description: In this step you learn how to create a suitable webhook server that supports an inbound call from a PSTN phone to a web app.
+description: In this step you learn how to create a suitable webhook server that supports an inbound call from a PSTN phone to an app.
 ---
 
 # Create a webhook server
@@ -36,6 +36,9 @@ Inside your project folder, create a file named `server.js` and add the code as 
 
 ``` javascript
 'use strict';
+
+const subdomain = 'SUBDOMAIN';
+
 const express = require('express')
 const app = express();
 app.use(express.json());
@@ -65,13 +68,16 @@ app.all('/voice/event', (req, res) => {
   res.sendStatus(200);
 });
 
+if(subdomain == "SUBDOMAIN") {
+  console.log('\n\t🚨🚨🚨 Please change the SUBDOMAIN value');
+  return false;
+}
 app.listen(3000);
-
 
 const localtunnel = require('localtunnel');
 (async () => {
   const tunnel = await localtunnel({ 
-      subdomain: 'SUBDOMAIN', 
+      subdomain: subdomain, 
       port: 3000
     });
   console.log(`App available at: ${tunnel.url}`);

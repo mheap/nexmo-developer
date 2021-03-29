@@ -22,8 +22,6 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 > **NOTE:** You can enable additional `Logcat` logging by using `logLevel()` method of the builder, for example, `NexmoClient.Builder().logLevel(ILogger.eLogLevel.SENSITIVE).build(this)`
 
-If Android Studio can't find the reference to the `NexmoClient` class then you have to add the missing import. Roll over on the `NexmoClient` class, wait for window to appear and press `Import` (this action will be required in following steps as well).
-
 ![](/screenshots/tutorials/client-sdk/android-shared/missing-import-kotlin.png)
 
 Run `Build` > `Make project` to make sure project is compiling.

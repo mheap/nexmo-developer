@@ -22,7 +22,6 @@ As you proceed with placing the call, please switch to the terminal and notice t
 
 ``` bash
 NCCO request:
-  - caller: undefined
   - callee: 447700900000
 ```
 
