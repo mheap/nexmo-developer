@@ -16,6 +16,9 @@ introduction:
     * A web application that will notify the service agent of an inbound call and offer the ability to answer it.
     * A webhook server that can process an inbound webhook and return an <abbr title="Nexmo Call Control Object">NCCO</abbr> to forward the inbound call to your application using [Node.js](https://nodejs.org/en/), [Express](https://expressjs.com/), and [localtunnel](https://github.com/localtunnel/localtunnel).
 
+    ### Completed project
+    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [phone-to-app-js](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/phone-to-app-js) folder.
+
 prerequisites:
 - create-nexmo-account
 - install-nodejs
