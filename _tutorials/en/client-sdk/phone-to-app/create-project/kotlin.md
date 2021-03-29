@@ -1,177 +1,55 @@
 ---
-title: Setup navigation
-description: In this step you will setup navigation component.
+title: Create an Android project
+description: In this step you create an Android project and add the Android Client SDK library.
 ---
 
-# Setup navigation
+# Create an Android project
+## New Android Project
 
-## Create application nav graph
+Create new `phone-to-app` folder inside `phone-to-app-kotlin` folder:
 
-Right click at `res` folder, select `New` > `Android resource file`:
-
-![](/screenshots/tutorials/client-sdk/android-shared/new-android-resource-file.png)
-
-Enter `app_nav_graph` as file name, select `Navigation` as resource type and press `OK` button.
-
-![](/screenshots/tutorials/client-sdk/android-shared/new-app-nav-graph.png)
-
-Click the `Code` button in top right corner and replace it's content with below code snippet to set navigation graph for the application:
-
-![](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/app_navigation_graph"
-        app:startDestination="@id/loginFragment">
-    <fragment
-            android:id="@+id/loginFragment"
-            android:name="com.vonage.tutorial.voice.LoginFragment"
-            tools:layout="@layout/fragment_login">
-        <action
-                android:id="@+id/action_loginFragment_to_mainFragment"
-                app:destination="@id/mainFragment" />
-    </fragment>
-    <fragment
-            android:id="@+id/mainFragment"
-            android:name="com.vonage.tutorial.voice.MainFragment"
-            tools:layout="@layout/fragment_main">
-        <action
-                android:id="@+id/action_mainFragment_to_onCallFragment"
-                app:destination="@id/onCallFragment" />
-    </fragment>
-
-    <fragment
-            android:id="@+id/onCallFragment"
-            android:name="com.vonage.tutorial.voice.OnCallFragment"
-            tools:layout="@layout/fragment_on_call" />
-
-</navigation>
-
+```bash
+mkdir phone-to-app
 ```
 
-Navigation graph defines navigation directions between fragments in the application. Notice that now `LoginFragment` is now start fragment in the application
+Open Android Studio and, from the menu, select `File` > `New` > `New Project...`. Select a `Empty Activity` template type and click `Next`.
 
-## Add `NavHostFragment`
+![Create project](/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png)
 
-Set `app_nav_graph` as main navigation graph of the application. Open the `activity_main.xml`, click `Code` button in top right corner file and replace XML layout code:
+Enter `phone-to-app` as project name, point location to previously created `phone-to-app-kotlin/phone-to-app` folder, select as `Kotlin` language and press `Finish` button.
 
-![](/screenshots/tutorials/client-sdk/android-shared/activity-main-layout-file.png)
+You now have a brand new Android Project.
 
-![](/screenshots/tutorials/client-sdk/android-shared/show-code-view.png)
+## Add Client SDK dependency
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside the `allprojects` block within the project-level `build.gradle` file:
 
-    <fragment
-            android:id="@+id/navHostFragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:defaultNavHost="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:navGraph="@navigation/app_nav_graph" />
+![Build gradle](/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-```
-
-Now `NavHostFragment` with navigation graph (`@navigation/app_nav_graph`) will serve as main navigation mechanism within this application.
-
-## Configure navigation in the `MainActivity`
-
-Define two helpers - `BackPressHandler` and `NavManager` to simplify the navigation
-
-### Create `BackPressHandler` interface
-
-`BackPressHandler` interface will help with handling pressing of the back button. Right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `BackPressHandler` as file name, select `Interface`. Add `onBackPressed` method to the `BackPressHandler` interface:
-
-```kotlin
-package com.vonage.tutorial.voice
-
-interface BackPressHandler {
-    fun onBackPressed()
-}
-```
-
-### Create `NavManager` object
-
-`NavManager` object will allow to navigate directly from `ViewModel` by storing reference to navigation controller.
-
-Right click on `com.vonage.tutorial.voice` package, select `New` > `Kotlin Class/File`, enter `NavManager` as file name, select `Object`. Replace the file contents with the following code:
-
-```kotlin
-package com.vonage.tutorial.voice
-
-import androidx.navigation.NavController
-import androidx.navigation.NavDirections
-
-object NavManager {
-    private lateinit var navController: NavController
-
-    fun init(navController: NavController) {
-        NavManager.navController = navController
-    }
-
-    fun navigate(navDirections: NavDirections) {
-        navController.navigate(navDirections)
-    }
-
-    fun popBackStack(@IdRes destinationId: Int, inclusive: Boolean) {
-        navController.popBackStack(destinationId, inclusive);
-    }
-}
-```
-
-### Update `MainActivity`
-
-Add `onBackPressed` method to the `MainActivity`:
-
-```kotlin
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
-
-    // ...
-
-    override fun onBackPressed() {
-        val childFragmentManager = supportFragmentManager.primaryNavigationFragment?.childFragmentManager
-        val currentNavigationFragment = childFragmentManager?.fragments?.first()
-
-        if(currentNavigationFragment is BackPressHandler) {
-            currentNavigationFragment.onBackPressed()
-        }
-
-        super.onBackPressed()
-    }
-}
-```
-
-To initialize `NavManager` call it's `init` method from `MainActivity.onCreate` method:
-
-```kotlin
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+```groovy
+allprojects {
+    repositories {
+        google()
+        jcenter()
         
-        // ...
-
-        val navController = Navigation.findNavController(this, R.id.navHostFragment)
-        NavManager.init(navController)
+        maven {
+            url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
+        }
     }
-
-    // ...
 }
-
 ```
 
-Run `Build` > `Make project` to make sure project is compiling.
+> **NOTE** You can use the `Navigate file` action to open any file in the project. Run the keyboard shortcut (Mac: `Shift + Cmd + O` ; Win: `Shift + Ctrl + O`) and type the filename.
+
+Now add the Client SDK to the project. Add the following dependency in the module-level `build.gradle` file.:
+
+Now add the Client SDK dependency to the project in the module-level `build.gradle` file:
+
+![Build gradle](/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png)
+
+```groovy
+dependencies {
+    // ...
+
+    implementation 'com.nexmo.android:client-sdk:2.8.1'
+}

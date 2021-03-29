@@ -4,32 +4,33 @@ products:
   - client-sdk
 
 introduction:
-  title: Introduction to this task
+  title: Introduction
   description: This task shows you how to use make a phone call from a web app using the JavaScript Client SDK.
   content: |
     # Introduction
-    In this tutorial, you will learn how to create a Client SDK application and then write the code to make a
+    In this tutorial, you will learn how to create a Client SDK application and write the code to make a
     phone call from your web app to a phone.
 
-    To achieve this, you will need:
+    Two parts are needed to achieve this:
 
     * A web application that will make the voice call using the Client SDK.
-    * A publicly accessible URL that serves instructions on how to handle the call. You will use a GitHub Gist to accomplish this. <a href="https://gist.github.com/" target="_blank">GitHub Gists</a> are a simple way to share code snippets with others.
+    * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
+
+    ### Completed project
+    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-js](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-js) folder.
 
 prerequisites:
 - create-nexmo-account
 - install-nodejs
-- client-sdk/install-node-client-sdk
 - install-nexmo-cli-beta
-- join-github
 
 tasks:
-- client-sdk/app-to-phone/create-ncco
+- client-sdk/app-to-phone/create-webhook-server
 - client-sdk/app-to-phone/create-application
-- client-sdk/create-user
+- client-sdk/create-user-alice
 - client-sdk/generate-jwt-alice
-- client-sdk/app-to-phone/js-code
-- client-sdk/app-to-phone/js-run
+- client-sdk/app-to-phone/main-screen
+- client-sdk/app-to-phone/place-call
 
 conclusion:
   title: What's next?
@@ -37,7 +38,10 @@ conclusion:
   content: |
 
     # What's next?
-    You can do a lot more with the Client SDK.
+
+    The complete version of the project you just built is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-js](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-js) folder.
+
+    You can do a lot more with the Client SDK. For an summary, please see the [Client SDK Overview](/client-sdk/overview) or review the [JS Client SDK documentation](/sdk/stitch/javascript/index).
 
     We want to hear what ideas you have in mind? Contact us at [devrel@vonage.com](mailto:devrel@vonage.com)
 

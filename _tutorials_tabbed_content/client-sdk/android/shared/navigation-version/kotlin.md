@@ -7,6 +7,6 @@ language: kotlin
 dependencies {
     // ...
     
-    implementation("com.nexmo.android:client-sdk:2.8.0")
+    implementation("com.nexmo.android:client-sdk:2.8.1")
 }   
 ```

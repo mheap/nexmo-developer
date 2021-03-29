@@ -32,7 +32,7 @@ Now add the Client SDK to the project. Add the following dependency in the modul
 dependencies {
     // ...
 
-    implementation 'com.nexmo.android:client-sdk:2.8.0'
+    implementation 'com.nexmo.android:client-sdk:2.8.1'
 }
 ```
 

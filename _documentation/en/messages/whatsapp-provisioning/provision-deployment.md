@@ -9,24 +9,29 @@ navigation_weight: 3
 
 ## Before you begin
 
-Prior to deploying the WhatsApp cluster, you must gather some information from the [WhatsApp Business dashboard](https://business.facebook.com/), including:
+Prior to deploying the WhatsApp cluster, you must gather some information from the **Settings** page on the [WhatsApp Business dashboard](https://business.facebook.com/settings), including:
 
 WhatsApp Business Account ID
 
-1. Select Business Info > Business Settings.
-2. Your Business ID is located below Business Manager Account Name.
+1. Navigate to your [business settings](https://business.facebook.com/settings) page and select **Accounts > WhatsApp Accounts**.
+2. Select the WhatsApp Business account you are provisioning.
+3. Your WhatsApp Business Account ID is located at the top of the page, below WhatsApp Business Account Name.
 
 Phone Number
 
-1. Navigate to Phone Numbers.
-2. Locate the desired phone number in the list.
+1. Navigate to your [business settings](https://business.facebook.com/settings) page and select **Accounts > WhatsApp Accounts**.
+2. Select the WhatsApp Business account you are provisioning.
+3. Under the **Settings** tab, open **WhatsApp Manager > Phone numbers**.
+4. Locate the desired phone number in the list.
 
 Certificate (associated with your phone number)
 
-1. Navigate to Phone Numbers.
-2. Locate the desired phone number in the list.
-3. Click the View button (in the Certificate column).
-4. Copy the associated certificate to your clipboard and paste it in a separate document. You will need it in a subsequent step.
+1. Navigate to your [business settings](https://business.facebook.com/settings) page and select **Accounts > WhatsApp Accounts**.
+2. Select the WhatsApp Business account you are provisioning.
+3. Under the **Settings** tab, open **WhatsApp Manager > Phone numbers**.
+4. Locate the desired phone number in the list.
+5. Click the **View** button (in the **Certificate** column).
+6. Copy the associated certificate to your clipboard and paste it in a separate document. You will need it in a subsequent step.
 
 ## Install CLI
 

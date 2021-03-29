@@ -7,18 +7,13 @@ description: In this step you will authenticate to the Vonage servers.
 
 Before you can place a call, the Client SDK needs to authenticate to the Vonage servers. The following additions are required to `ViewController.m`.
 
-At the top of the file, import `NexmoClient`.
-
-```objective_c
-#import "ViewController.h"
-#import <NexmoClient/NexmoClient.h>
-```
+> **NOTE:** Notice that, you have already imported `NexmoClient` at the top of the file.
 
 Add a `NXMClient` instance and conformance to the `NXMClientDelegate` to the interface .
 
 ```objective_c
 @interface ViewController () <NXMClientDelegate>
-...
+@property UILabel *connectionStatusLabel;
 @property NXMClient *client;
 @end
 ```

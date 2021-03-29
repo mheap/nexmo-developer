@@ -5,7 +5,7 @@ products:
 
 introduction:
   title: Introduction to this task
-  description: This task shows you how to create a Android chat application using the Android Client SDK.
+  description: This task shows you how to create a Android chat application using the Android Client SDK and Java.
   content: |
     # Introduction
     In this task, you will learn how to create and configure a Client SDK Application and then code an application that enables two users to send messages to each other.
@@ -15,8 +15,6 @@ introduction:
     Finally, you will implement chat functionality in your application, including the ability to view and send messages and be notified when a new message appears in Conversation.
 
     The source code is available on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging-java).
-
-    This tutorial uses NexmoClient version 2.x
 
 prerequisites:
   - create-nexmo-account

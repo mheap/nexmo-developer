@@ -54,7 +54,7 @@ Replace the file contents with the following:
 </LinearLayout>
 ```
 
-You will control the view using code, so you have to store references to the views. Add these properties at the top of the `ManActivity` class:
+You will control the view using code, so you have to store references to the views. Add these properties at the top of the `MainActivity` class:
 
 ```kotlin
 private lateinit var startCallButton: Button
@@ -93,12 +93,13 @@ private fun hangup() {
 ```
 
 You will fill the body of these methods in the following steps of this tutorial.
+
 ## Build and Run
 
-Run the project by pressing the `Ctrl + R` keys.
+Run the project again (`Ctrl + R`).
 
 Notice that buttons are hidden by default:
 
 ![Main screen](/screenshots/tutorials/client-sdk/app-to-phone/main-screen.png)
 
-The state of the connection will be displayed and the `make a call` button will be shown after logging in the user.
+The state of the connection will be displayed and the `MAKE PHONE CALL` button will be shown after logging in the user.
