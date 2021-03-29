@@ -5,15 +5,13 @@ products:
 
 introduction:
   title: Introduction to this task
-  description: This task shows you how to handle an inbound call into your web app using the iOS Client SDK.
+  description: This task shows you how to handle an inbound call into your web app using the iOS Client SDK and Kotlin.
   content: |
     # Introduction
     In this tutorial, you will learn how to create an Android application using Kotlin and the Client SDK, and then write the code to receive an
     inbound <abbr title="Public Switched Telephone Network">PSTN</abbr> call.
 
     The source code is available on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-phone-to-app-kotlin).
-
-    This tutorial uses NexmoClient version 2.x
 
 prerequisites:
 - create-nexmo-account
@@ -27,8 +25,8 @@ tasks:
 - client-sdk/phone-to-app/create-application
 - buy-nexmo-number
 - link-nexmo-number
-- client-sdk/android-shared/create-user-alice
-- client-sdk/android-shared/generate-jwt-alice
+- client-sdk/create-user
+- client-sdk/generate-jwt-alice
 - client-sdk/phone-to-app/create-project
 - client-sdk/phone-to-app/permissions
 - client-sdk/phone-to-app/interface

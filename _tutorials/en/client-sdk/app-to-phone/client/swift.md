@@ -7,18 +7,14 @@ description: In this step you will authenticate to the Vonage servers.
 
 Before you can place a call, the Client SDK needs to authenticate to the Vonage servers. The following additions are required to `ViewController.swift`.
 
-At the top of the file, import `NexmoClient`.
-
-```swift
-import UIKit
-import NexmoClient
-```
+> **NOTE:** Notice that, you have already imported `NexmoClient` at the top of the file.
 
 Add a `NXMClient` instance, below the `callButton`.
 
 ```swift
 class ViewController: UIViewController {
-    ...
+    
+    var connectionStatusLabel = UILabel()
     var callButton = UIButton(type: .roundedRect)
     let client = NXMClient.shared
     ...
