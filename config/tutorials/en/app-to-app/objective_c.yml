@@ -31,9 +31,9 @@ tasks:
   - client-sdk/generate-jwts-alice-and-bob
   - client-sdk/app-to-app/create-project
   - client-sdk/app-to-app/add-permissions
-  - client-sdk/app-to-app/build-main-screen
+  - client-sdk/app-to-app/main-screen
   - client-sdk/app-to-app/create-model
-  - client-sdk/app-to-app/initialize-client
+  - client-sdk/app-to-app/client
   - client-sdk/app-to-app/call-ui
   - client-sdk/app-to-app/receive-call
   - client-sdk/app-to-app/make-call
