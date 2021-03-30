@@ -66,7 +66,7 @@ To start the call after pressing `start call` button add the `startCall` method 
   }
 ```
 
-The above method starts the call. When call is started succesfully (`onSuccess` callback) then `addCallEventListener` listener is added to call instance. This way app can be notified about call status eg. call end.
+The above method starts the call. When the call is started (`onSuccess` callback) then `addCallEventListener` listener is added to a call instance. This way app can be notified about call status e.g. call end.
 
 ## Webhooks
 

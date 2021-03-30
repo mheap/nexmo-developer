@@ -85,7 +85,3 @@ Press `Ctrl + R` buttons to build and run the app.
 After successful user login you will see  `waiting for incoming call` text and `make a call` button:
 
 ![Make a call](/screenshots/tutorials/client-sdk/app-to-app/make-call.png)
-
-/screenshots/tutorials/client-sdk/app-to-app/call-screen-alice.png
-
-
