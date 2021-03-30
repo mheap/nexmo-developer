@@ -12,8 +12,8 @@ When an inbound call is received, Vonage makes a request to a publicly accessibl
 Create a new project directory in a destination of your choice and change into it:
 
 ``` bash
-mkdir phone-to-app-js
-cd phone-to-app-js
+mkdir phone-to-app-objc
+cd phone-to-app-objc
 ```
 
 Inside the folder, initialize a new Node.js project by running this command:
@@ -28,12 +28,6 @@ Next, install the required dependencies:
 
 ``` bash
 npm install express localtunnel --save
-```
-
-Also, install the Client SDK - you will use this later, when building the client application:
-
-``` bash
-npm install nexmo-client --save
 ```
 
 ## Create the server file
@@ -102,7 +96,7 @@ There are 2 parts in the server code above:
 The first part creates an `Express` server and makes it available locally on port `3000`. The server exposes 2 paths:
 
 1. `/voice/answer` is the `answer_url` we mentioned above. It sends back an NCCO as a `JSON` response containing information to connect to an application user. 
-       
+   
 2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the call - - we call this the `event_url`.
 
 

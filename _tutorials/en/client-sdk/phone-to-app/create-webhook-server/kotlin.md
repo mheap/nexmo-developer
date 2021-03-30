@@ -12,8 +12,8 @@ When an inbound call is received, Vonage makes a request to a publicly accessibl
 Create a new project directory in a destination of your choice and change into it:
 
 ``` bash
-mkdir phone-to-app-js
-cd phone-to-app-js
+mkdir phone-to-app-kotlin
+cd phone-to-app-kotlin
 ```
 
 Inside the folder, initialize a new Node.js project by running this command:
@@ -28,12 +28,6 @@ Next, install the required dependencies:
 
 ``` bash
 npm install express localtunnel --save
-```
-
-Also, install the Client SDK - you will use this later, when building the client application:
-
-``` bash
-npm install nexmo-client --save
 ```
 
 ## Create the server file

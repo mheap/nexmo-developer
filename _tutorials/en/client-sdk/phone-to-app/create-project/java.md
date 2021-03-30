@@ -4,30 +4,27 @@ description: In this step you create an Android project and add the Android Clie
 ---
 
 # Create an Android project
-
-## Project overview
-
-You will be building an Android application with single screen:
-
-![](/screenshots/tutorials/client-sdk/android-phone-to-app/nav-graph.png)
-
 ## New Android Project
 
-Open Android Studio and, from the menu, select `File` > `New` > `New Project...`. Select a `Empty Activity` template type and click `Next`.
+Create new `phone-to-app` folder inside `phone-to-app-java` folder:
 
-![](/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png)
+```bash
+mkdir phone-to-app
+```
 
-Enter `phone-to-app` as project name, `com.vonage.tutorial.voice` as package, select `Java` language and press `Finish` button.
+Open Android Studio and, from the menu, select `File` > `New` > `New Project...`. Select an `Empty Activity` template type and click `Next`.
 
-![](/screenshots/tutorials/client-sdk/android-phone-to-app/configure-your-project-java.png)
+![Create project](/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png)
+
+Enter `phone-to-app` as project name, point location to previously created `phone-to-app-java/phone-to-app` folder,  select as `Java` language and press `Finish` button.
 
 You now have a brand new Android Project.
 
-### Add Nexmo dependency
+## Add Client SDK dependency
 
-You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside `allprojects` block in the project-level `build.gradle` file:
+You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside the `allprojects` block within the project-level `build.gradle` file:
 
-![](/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
+![Build gradle](/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
 
 ```groovy
 allprojects {
@@ -42,9 +39,13 @@ allprojects {
 }
 ```
 
-Now add the Client SDK to the project. Add the following dependency in the module level `build.gradle` file:
+> **NOTE** You can use the `Navigate file` action to open any file in the project. Run the keyboard shortcut (Mac: `Shift + Cmd + O` ; Win: `Shift + Ctrl + O`) and type the filename.
 
-![](/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png)
+Now add the Client SDK to the project. Add the following dependency in the module-level `build.gradle` file.:
+
+Now add the Client SDK dependency to the project in the module-level `build.gradle` file:
+
+![Build gradle](/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png)
 
 ```groovy
 dependencies {
@@ -52,45 +53,3 @@ dependencies {
 
     implementation 'com.nexmo.android:client-sdk:2.8.1'
 }
-```
-
-### Add Navigation component dependencies
-
-To navigate between screens you will use [Navigation component](https://developer.android.com/guide/navigation).
-
-To add navigation component dependency define a variable `ext.android_navigation_version` containing version in project-level `build.gradle` file:
-
-![](/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
-
-```groovy
-buildscript {
-    ext.android_navigation_version = '2.3.2'
-    // ...
-}
-```
-In the same file, add a dependency for the Gradle `Safe Args` plugin. This provides type safety when navigating and passing data between destinations.
-
-Add a new `classpath` in the `dependencies` block:
-
-```groovy
-dependencies {
-    // ...
-
-    classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$android_navigation_version"
-}
-```
-
-In the same file, add a navigation component dependencies:
-
-```groovy
-dependencies {
-    // ...
-
-    implementation "androidx.navigation:navigation-fragment:$android_navigation_version"
-    implementation "androidx.navigation:navigation-ui:$android_navigation_version"
-}
-```
-
-Click the `Sync project with Gradle Files` icon to make sure build scripts have been correctly configured:
-
-![](/screenshots/tutorials/client-sdk/android-shared/sync-project-wth-gradle-files.png)
