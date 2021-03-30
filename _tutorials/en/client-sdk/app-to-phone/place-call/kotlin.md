@@ -5,7 +5,7 @@ description: In this step you will place the call.
 
 # Place a call
 
-To start the call after pressing the `MAKE PHONE CALL` button fill the body of the `startCall` method inside `Mainctivity` class:
+To start the call after pressing the `START CALL` button fill the body of the `startCall` method inside `Mainctivity` class:
 
 ```kotlin
 @SuppressLint("MissingPermission")
