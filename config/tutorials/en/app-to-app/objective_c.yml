@@ -45,7 +45,7 @@ conclusion:
 
     # What's next?
 
-    The complete version of the project you just built is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-swift](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-app-objc) folder.
+    The complete version of the project you just built is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-app-swift](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-app-objc) folder.
 
     You can do a lot more with the Client SDK. For an summary, please see the [Client SDK Overview](/client-sdk/overview) or review the [iOS Client SDK documentation](/sdk/stitch/ios/index).
 

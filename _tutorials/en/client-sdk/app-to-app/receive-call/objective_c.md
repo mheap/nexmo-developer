@@ -39,6 +39,8 @@ The `CallViewController` class will be in the foreground and the class handling 
     [alert addAction:[UIAlertAction actionWithTitle:@"Answer" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         self.call = call;
         [call answer:nil];
+        [self setHangUpButtonHidden:NO];
+        [self setStatusLabelText:[NSString stringWithFormat:@"On a call with %@", from]];
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"Reject" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         [call reject:nil];
@@ -60,11 +62,12 @@ When a notification is received `didReceiveCall` is called which in turn calls `
 
 ## The call delegate
 
-Similar to `NXMClient`, `NXMCall` also has a delegate to handle changes to the call. Add conformance for `NXMCallDelegate` to the interface and implement the required functions.
+Similar to `NXMClient`, `NXMCall` also has a delegate to handle changes to the call. Add conformance for `NXMCallDelegate` to the interface, add a call property, and implement the required functions.
 
 ```objective_c
 @interface CallViewController () <NXMCallDelegate>
 ...
+@property (nullable) NXMCall *call;
 @end
 
 
@@ -72,7 +75,9 @@ Similar to `NXMClient`, `NXMCall` also has a delegate to handle changes to the c
 - (void)call:(NXMCall *)call didUpdate:(NXMCallMember *)callMember withStatus:(NXMCallMemberStatus)status {
     switch (status) {
         case NXMCallMemberStatusAnswered:
-            [self setStatusLabelText:[NSString stringWithFormat:@"On a call with %@", callMember.user.name]];
+            if (![callMember.user.name isEqualToString:self.user.name]) {
+                [self setStatusLabelText:[NSString stringWithFormat:@"On a call with %@", callMember.user.name]];
+            }
             break;
         case NXMCallMemberStatusCompleted:
             [self setStatusLabelText:@"Call ended"];

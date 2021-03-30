@@ -69,6 +69,7 @@ At the end of `ViewController.m`, add the `login` function needed by the `setUse
     ...
 
 - (void)login {
+    self.client = NXMClient.shared;
     [self.client setDelegate:self];
     [self.client loginWithAuthToken:self.user.jwt];
 }

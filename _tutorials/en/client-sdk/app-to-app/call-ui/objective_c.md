@@ -13,6 +13,7 @@ This will create a new file called `CallViewController.m`, at the top import `Ne
 
 ```objective_c
 #import "User.h"
+#import "CallViewController.h"
 #import <NexmoClient/NexmoClient.h>
 ```
 
@@ -25,7 +26,7 @@ The call interface will need:
 Open `CallViewController.m` and add them programmatically.
 
 ```objective_c
-@interface CallViewController () <NXMCallDelegate>
+@interface CallViewController ()
 @property UIButton *callButton;
 @property UIButton *hangUpButton;
 @property UILabel *statusLabel;
@@ -39,7 +40,6 @@ Open `CallViewController.m` and add them programmatically.
     self.view.backgroundColor = UIColor.systemBackgroundColor;
     
     self.callButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self.callButton setTitle:[NSString stringWithFormat:@"Call %@", self.user.callPartnerName] forState:UIControlStateNormal];
     self.callButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.callButton];
     
@@ -142,10 +142,7 @@ This defines a custom initializer for the class which has a `User.type` as its p
 
 ```objective_c
 self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleDone target:self action:@selector(logout)];
-[self.callButton setTitle:[NSString stringWithFormat:@"Call %@", self.user.callPartnerName];
-if ([self.user.name isEqualToString:@"Alice"]) {
-    [self.callButton setAlpha:0];
-}
+[self.callButton setTitle:[NSString stringWithFormat:@"Call %@", self.user.callPartnerName] forState:UIControlStateNormal];
 ```
 
 This will hide the call button for Alice since for this demonstration only Bob will be able to make a call to Alice. In a production application the `NCCO` that is returned by your application's answer URL will dynamically return the correct username to avoid this. It also creates a logout button in the navigation bar, add the corresponding `logout` function to the end of `CallViewController.m` 
