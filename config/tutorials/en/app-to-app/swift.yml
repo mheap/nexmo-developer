@@ -27,8 +27,8 @@ prerequisites:
 tasks:
   - client-sdk/app-to-app/create-webhook-server
   - client-sdk/app-to-app/create-application
-  - client-sdk/app-to-app/create-users
-  - client-sdk/app-to-app/generate-jwts
+  - client-sdk/create-users-alice-and-bob
+  - client-sdk/generate-jwts-alice-and-bob
   - client-sdk/app-to-app/create-project
   - client-sdk/app-to-app/add-permissions
   - client-sdk/app-to-app/build-main-screen
