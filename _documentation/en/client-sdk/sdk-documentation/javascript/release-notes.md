@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 7.0.2 - March 30, 2021
+
+### Fixes
+
+- Emit 'call:status:update' event when application offline and call disconnected
+
 ## Version 7.0.1 - February 04, 2021
 
 ### Fixes
