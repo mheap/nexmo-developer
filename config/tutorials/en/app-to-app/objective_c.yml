@@ -36,7 +36,7 @@ tasks:
   - client-sdk/app-to-app/client
   - client-sdk/app-to-app/call-ui
   - client-sdk/app-to-app/receive-call
-  - client-sdk/app-to-app/make-call
+  - client-sdk/app-to-app/place-call
 
 conclusion:
   title: What's next?
