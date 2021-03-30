@@ -43,8 +43,6 @@ allprojects {
 
 Now add the Client SDK to the project. Add the following dependency in the module-level `build.gradle` file.:
 
-Now add the Client SDK dependency to the project in the module-level `build.gradle` file:
-
 ![Build gradle](/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png)
 
 ```groovy

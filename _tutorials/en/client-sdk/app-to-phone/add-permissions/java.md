@@ -32,8 +32,8 @@ To simplify the tutorial, the permissions are requested each time the applicatio
 ```java
 @Override
 protected void onCreate(@Nullable Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
     // request permissions
     String[] callsPermissions = { Manifest.permission.RECORD_AUDIO };
@@ -47,7 +47,7 @@ After pasting the above snippet some of the class references (imports) can be mi
 
 # Run the app
 
-You now launch the app. Use the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When the virtual device is available press the `Launch` button: 
+You now launch the app. Use the physical phone (with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options#enable)) or create a new [Android Virtual Device](https://developer.android.com/studio/run/managing-avds). When the device is available press the `Launch` button: 
 
 ![Launch app](/screenshots/tutorials/client-sdk/android-shared/launch-app.png)
 
