@@ -13,7 +13,7 @@ NexmoClient client = new NexmoClient.Builder().build(this);
 
 # Set connection listener
 
-You have to listen for the st
+Now below client initialization code add connection listener to monitor connection state:
 
 ```java
 client.setConnectionListener((connectionStatus, connectionStatusReason) -> runOnUiThread(() -> connectionStatusTextView.setText(connectionStatus.toString())));
