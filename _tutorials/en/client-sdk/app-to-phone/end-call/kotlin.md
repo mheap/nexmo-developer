@@ -17,7 +17,7 @@ To end the call (hangup) you need to store the reference to the ongoing call obj
 var onGoingCall: NexmoCall? = null
 ```
 
-You need to store ongoing call reference in the `onGoingCall` property and add `addCallEventListener` to notify you when the call ends. In the `MainActivity` update the body of the `startCall` method:
+You need to store ongoing call reference in the `onGoingCall` property and add `addCallEventListener` to notify you when the call ends. In the `MainActivity` update the body of the `startCall` method. Please make sure to replace `PHONE_NUMBER` below with the actual phone number you want to call, in the [E.164](https://developer.nexmo.com/concepts/guides/glossary#e-164-format) format (for example, 447700900000):
 
 ```kotlin
 @SuppressLint("MissingPermission")
