@@ -41,7 +41,7 @@ allprojects {
 
 > **NOTE** You can use the `Navigate file` action to open any file in the project. Run the keyboard shortcut (Mac: `Shift + Cmd + O` ; Win: `Shift + Ctrl + O`) and type the filename.
 
-Now add the Client SDK to the project. Add the following dependency in the module-level `build.gradle` file.:
+Now add the Client SDK to the project. Add the following dependency in the module-level `build.gradle` file:
 
 ![Build gradle](/screenshots/tutorials/client-sdk/android-shared/module-level-build-gradle-file.png)
 
