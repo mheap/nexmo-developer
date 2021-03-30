@@ -44,9 +44,7 @@ private void startCall() {
                     if (callStatus == NexmoCallMemberStatus.COMPLETED || callStatus == NexmoCallMemberStatus.CANCELLED) {
                             onGoingCall = null;
 
-                            runOnUiThread(
-                                    () ->
-                                    {
+                            runOnUiThread(() -> {
                                         endCallButton.setVisibility(View.INVISIBLE);
                                         startCallButton.setVisibility(View.VISIBLE);
                                     }
