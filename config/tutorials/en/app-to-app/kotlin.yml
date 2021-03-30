@@ -34,14 +34,8 @@ tasks:
   - client-sdk/app-to-app/add-permissions
   - client-sdk/app-to-app/main-screen
   - client-sdk/app-to-app/client
-
-  - client-sdk/app-to-app/configure-jwt
-  - client-sdk/android-shared/initialize-client
-  - client-sdk/app-to-app/authenticate-alice-and-bob
-  - client-sdk/app-to-app/build-on-call-screen
-  - client-sdk/app-to-app/build-incoming-call-screen
-  - client-sdk/android-shared/run-app
-
+  - client-sdk/app-to-app/receive-call
+  - client-sdk/app-to-app/make-call
 
 conclusion:
   title: What's next?

@@ -13,7 +13,7 @@ Add `call` property at the top of the `MainActivity` class:
 private NexmoCall call;
 ```
 
-To listen for incoming calls and store call reference add listener at the end of `onCreate` method inside `MainActivity` class:
+To listen for incoming calls add incoming call listener at the end of `onCreate` method inside `MainActivity` class:
 
 ```java
 client.addIncomingCallListener(it -> {
@@ -25,7 +25,7 @@ client.addIncomingCallListener(it -> {
 });
 ```
 
-The app will now listen for the incoming call event. The above code shows the answer and the reject call buttons when the incoming call event is received. 
+The app will now listen for the incoming call event. The above code shows the answer and the reject call buttons when the incoming call event is received. Notice that you are storing `call` reference to interact later with the call.
 
 Before you will be able to perform actions using UI you also need to add listeners to the buttons. Add this code at of the `onCreate` inside `MainActivity` class:
 

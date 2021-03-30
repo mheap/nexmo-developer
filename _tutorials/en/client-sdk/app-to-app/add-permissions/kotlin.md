@@ -31,6 +31,8 @@ To request permissions, add the following code to the `onCreate` method of the `
 
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
     
     // request permissions
     val callsPermissions = arrayOf(Manifest.permission.RECORD_AUDIO)

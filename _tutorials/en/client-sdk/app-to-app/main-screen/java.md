@@ -30,6 +30,7 @@ Replace the file contents with the following:
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
+        android:id="@+id/content"
         tools:context=".MainActivity">
 
     <TextView
@@ -128,10 +129,6 @@ endCallButton = findViewById(R.id.endCallButton);
 
 loginAsAlice.setOnClickListener(v -> loginAsAlice());
 loginAsBob.setOnClickListener(v -> loginAsBob());
-startCallButton.setOnClickListener(v -> startCall());
-answerCallButton.setOnClickListener(v -> answerCall());
-rejectCallButton.setOnClickListener(v -> rejectCall());
-endCallButton.setOnClickListener(v -> endCall());
 ```
 
 To make code compile add these two empty methods in the `MainActivity` class:
@@ -142,23 +139,6 @@ private void loginAsAlice() {
 }
 
 private void loginAsBob() {
-    // TODO: update body
-}
-
-@SuppressLint("MissingPermission")
-private void startCall() {
-    // TODO: update body
-}
-
-private void answerCall() {
-    // TODO: update body
-}
-
-private void rejectCall() {
-    // TODO: update body
-}
-
-private void endCall() {
     // TODO: update body
 }
 ```

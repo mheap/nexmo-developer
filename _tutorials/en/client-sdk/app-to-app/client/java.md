@@ -7,11 +7,11 @@ description: In this step you will initialize Client, so it can be used within t
 
 [NexmoClient](https://developer.nexmo.com/sdk/stitch/android/com/nexmo/client/NexmoClient.html) is the main class used to interact with `Android-Client-SDK`. Prior to usage, you have to initialize the client by providing an instance of the Android [Context](https://developer.android.com/reference/android/content/Context) class. 
 
-At the top of the `MainActivity` class define `client` property that will hold reference to the client and `loggedInUser` property that will hold the name of currently logged in user:
+At the top of the `MainActivity` class define `client` property that will hold the reference to the client and `otherUser` property that will hold the name of 2nd user (the user that call will be made to):
 
 ```java
 private NexmoClient client;
-private String loggedInUser = "";
+private String otherUser = "";
 ```
 
 Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoClient` using the builder:
@@ -35,20 +35,11 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
 
     if (connectionStatus == ConnectionStatus.CONNECTED) {
         runOnUiThread(() -> {
-            startCallButton.setVisibility(View.VISIBLE);
-
-            cleanUI();
+            hideUI();
             connectionStatusTextView.setVisibility(View.VISIBLE);
-
-            if(loggedInUser == "Alice") {
-                startCallButton.setVisibility(View.VISIBLE);
-
-            } else if (loggedInUser == "Bob"){
-                waitingForIncomingCallTextView.setVisibility(View.VISIBLE);
-            }
+            startCallButton.setVisibility(View.VISIBLE);
+            waitingForIncomingCallTextView.setVisibility(View.VISIBLE);
         });
-        
-        return;
     }
 });
 ```
@@ -59,10 +50,10 @@ The above listener allows us to determine that that user has logged in successfu
 Now in the `MainActivity` class add helper method that hides all UI items:
 
 ```java
-private void cleanUI() {
-    LinearLayout content = findViewById(R.id.content)
+private void hideUI() {
+    LinearLayout content = findViewById(R.id.content);
 
-    for(int i =0; i< content.getChildCount(); i++){
+    for (int i = 0; i < content.getChildCount(); i++) {
         View view = content.getChildAt(i);
         view.setVisibility(View.GONE);
     }
@@ -73,13 +64,15 @@ private void cleanUI() {
 
 ```kotlin
 private void loginAsAlice() {
-    loggedInUser = "Alice"
-    client.login("BOB_JWT")
+    otherUser = "Bob";
+
+    client.login("ALICE_JWT")
 }
 
 private void loginAsBob() {
-    loggedInUser = "Bob"
-    client.login("ALICE_JWT")
+    otherUser = "Alice";
+
+    client.login("BOB_JWT")
 }
 ```
 
@@ -89,11 +82,10 @@ private void loginAsBob() {
 
 Press `Ctrl + R` buttons to build and run the app. 
 
-After successful `Alice` login you will see `make a call` button:
+After successful user login you will see  `waiting for incoming call` text and `make a call` button:
 
-![Make a call](/screenshots/tutorials/client-sdk/app-to-app/call-screen-alice.png)
+![Make a call](/screenshots/tutorials/client-sdk/app-to-app/make-call.png)
 
-Launch app again. After successful `Bob` login you will see `Waiting for incoming call` text view:
+/screenshots/tutorials/client-sdk/app-to-app/call-screen-alice.png
 
-![Make a call](/screenshots/tutorials/client-sdk/app-to-app/call-screen-alice.png)
 

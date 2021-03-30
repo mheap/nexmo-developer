@@ -32,6 +32,8 @@ To request permissions, add the following code to the `onCreate` method of the `
 ```java
 @Override
 protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
     
     // request permissions
     String[] callsPermissions = { Manifest.permission.RECORD_AUDIO };

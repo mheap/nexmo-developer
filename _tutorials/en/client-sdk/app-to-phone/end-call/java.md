@@ -22,8 +22,7 @@ You need to store ongoing call reference in the `onGoingCall` property and add `
 ```java
 @SuppressLint("MissingPermission")
 private void startCall() {
-    // Callee number is ignored because it is specified in NCCO config
-    client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, new NexmoRequestListener<NexmoCall>() {
+    client.call("PHONE_NUMBER", NexmoCallHandler.SERVER, new NexmoRequestListener<NexmoCall>() {
         @Override
         public void onError(@NonNull NexmoApiError nexmoApiError) {
 
@@ -32,11 +31,12 @@ private void startCall() {
         @Override
         public void onSuccess(@Nullable NexmoCall call) {
             runOnUiThread(() -> {
+                hideUI();
                 endCallButton.setVisibility(View.VISIBLE);
-                startCallButton.setVisibility(View.INVISIBLE);
             });
 
             onGoingCall = call;
+            
             onGoingCall.addCallEventListener(new NexmoCallEventListener() {
                 @Override
                 public void onMemberStatusUpdated(NexmoCallMemberStatus callStatus, NexmoCallMember nexmoCallMember) {
@@ -44,7 +44,7 @@ private void startCall() {
                         onGoingCall = null;
                         
                         runOnUiThread(() -> {
-                            endCallButton.setVisibility(View.INVISIBLE);
+                            hideUI();
                             startCallButton.setVisibility(View.VISIBLE);
                         }
                     });
