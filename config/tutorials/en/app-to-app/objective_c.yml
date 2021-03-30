@@ -25,7 +25,7 @@ prerequisites:
   - install-xcode
 
 tasks:
-  - client-sdk/phone-to-app/create-ncco
+  - client-sdk/app-to-app/create-webhook-server
   - client-sdk/app-to-app/create-application
   - client-sdk/app-to-app/create-users
   - client-sdk/app-to-app/generate-jwts
