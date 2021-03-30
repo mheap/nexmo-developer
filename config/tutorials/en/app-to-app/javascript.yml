@@ -8,32 +8,30 @@ introduction:
   description: This task shows you how to use make a voice call from a web app to another web app using the Client SDK for JavaScript.
   content: |
     # Introduction
-    In this tutorial, you will learn how to create a Client SDK application and then write the code to make a 
-    phone call from your web app to another web app.
+    In this tutorial, you will learn how to create a Client SDK application and then write the code to make a phone call from your web app to another web app.
 
-    To achieve this, you will create:
+    Two parts are needed to achieve this:
 
     * A web application that will make the app to app voice call using the Client SDK.
-    * A publicly accessible URL that serves instructions, an <abbr title="Nexmo Call Control Object">NCCO</abbr>, on how to handle the call. You will use a GitHub Gist to accomplish this. <a href="https://gist.github.com/" target="_blank">GitHub Gists</a> are a simple way to share code snippets with others.
+    * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
 
-    When the in-app call is triggered from your application, Vonage will use the NCCO from GitHub Gist and forward the call to the destination app.
+    ### Completed project
+    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-app-js](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-app-js) folder.
 
 
 prerequisites:
-- create-nexmo-account
-- install-nodejs
-- client-sdk/install-node-client-sdk
-- install-nexmo-cli-beta
-- join-github
+  - create-nexmo-account
+  - install-nodejs
+  - install-nexmo-cli-beta
 
 tasks:
-- client-sdk/app-to-app/create-ncco
-- client-sdk/app-to-app/create-application
-- client-sdk/app-to-app/create-users
-- client-sdk/app-to-app/generate-jwts
-- client-sdk/app-to-app/call-code
-- client-sdk/app-to-app/receive-code
-- client-sdk/app-to-app/run
+  - client-sdk/app-to-app/create-webhook-server
+  - client-sdk/app-to-app/create-application
+  - client-sdk/create-users-alice-and-bob
+  - client-sdk/generate-jwts-alice-and-bob
+  - client-sdk/app-to-app/make-call
+  - client-sdk/app-to-app/receive-call
+  - client-sdk/app-to-app/run-app
 
 conclusion:
   title: What's next?
@@ -41,7 +39,9 @@ conclusion:
   content: |
 
     # What's next?
-    You can do a lot more with the Client SDK.
+    The complete version of the project you just built is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-app-js](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-app-js) folder.
+
+    You can do a lot more with the Client SDK. For an summary, please see the [Client SDK Overview](/client-sdk/overview) or review the [JS Client SDK documentation](/sdk/stitch/javascript/index).
 
     We want to hear what ideas you have in mind? Contact us at [devrel@vonage.com](mailto:devrel@vonage.com)
 

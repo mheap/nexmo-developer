@@ -5,14 +5,18 @@ description: In this step you learn how to run your app to phone application.
 
 # Run your application
 
-1. Open `index1.html` into a browser tab. This is the **make call** tab.
-3. Start a new Incognito tab (if using Google Chrome), or a new browser instance.
-4. Open `index2.html` into this new tab or instance. This is the **receive call** tab.
+### Make call
 
-In the **make call** tab:
+Open `client_alice.html` into a browser tab. This is the **make call** page.
 
-1. Enter `Bob` into the text box as the user to call.
-2. Click the `Call` button to make the call.
+### Receive call
+
+Start a new browser instance (or an incognito tab (if using Google Chrome) and open `client_bob.html` into this new tab or instance. This is the **receive call** page.
+
+
+### Placing call
+
+In the **make call** page, click the `Call` button to make the call.
 
 In the **receive call** tab:
 
