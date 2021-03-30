@@ -17,6 +17,8 @@ nexmo app:create "App to App Tutorial" --capabilities=voice --keyfile=private.ke
 
 > **NOTE:** An application can be also created using the CLI's [interactive mode](/application/nexmo-cli#interactive-mode). For more details on how to create an application and various available application capabilities please see our [documentation](/application/overview).
 
+> **NOTE:** An application can be also created using the CLI's [interactive mode](/application/nexmo-cli#interactive-mode). For more details on how to create an application and various available application capabilities please see our [documentation](/application/overview).
+
 A file named `.nexmo-app` is created in your project directory and contains the newly created Vonage Application ID and the private key. A private key file named `private.key` is also created.
 
 Make a note of the Application ID that is echoed in your terminal when your application is created:

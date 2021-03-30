@@ -11,9 +11,12 @@ To be able to log in, you will need to add three elements to the screen:
 * A `UIButton` to log in Bob 
 * A `UILabel` to show the connection status.
 
-Open `ViewController.swift` and add it programmatically.
+Open `ViewController.swift` and add it programmatically by replacing the entire file content with the following:
 
 ```swift
+import UIKit
+import NexmoClient
+
 class ViewController: UIViewController {
 
     let loginAliceButton = UIButton(type: .system)
