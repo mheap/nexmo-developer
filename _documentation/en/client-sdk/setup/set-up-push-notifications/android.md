@@ -19,7 +19,7 @@ Let's start with setting up Android project.
 
 ### To add the Client SDK dependency
 
-[Add Client SDK](/client-sdk/setup/add-sdk-to-your-app) to your project.
+[Add Client SDK](/client-sdk/setup/add-sdk-to-your-app/android) to your project.
 
 ### Add Firebase Cloud Messaging dependency
 
