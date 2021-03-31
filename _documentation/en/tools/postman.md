@@ -35,7 +35,7 @@ In the left hand side bar, you will now have a folder/collection for your API, a
 
 For example if you imported the Verify API description, you'd be able to choose "Verify Request" from the left hand bar, and get a ready-made request to use. Go ahead and add the fields you need:
 
-* Your API credentials! For Verify API that's the `api_key` and `api_secret` fields and you can find these details in your account dashboard
+* Your API credentials! For Verify API that's the `API_KEY` and `API_SECRET` fields and you can find these details in your account dashboard
 * The phone number to Verify (remember to use E.164 format)
 * The name of the brand doing the verifying (you can choose anything here as you are only testing things)
 * Set the `format` value in the path parameters section to `json`

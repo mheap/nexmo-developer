@@ -33,10 +33,10 @@ npm install -g nexmo-cli@beta
 
 Set up the Nexmo CLI to use your Vonage API Key and API Secret. You can get these from the [settings page](https://dashboard.nexmo.com/settings) in the Vonage Dashboard.
 
-Run the following command in a terminal, while replacing `api_key` and `api_secret` with your Vonage API key and secret:
+Run the following command in a terminal, while replacing `API_KEY` and `API_SECRET` with your Vonage API key and secret:
 
 ```bash
-nexmo setup api_key api_secret
+nexmo setup API_KEY API_SECRET
 ```
 
 This adds this authentication information to the `.nexmorc` file in your home directory.
