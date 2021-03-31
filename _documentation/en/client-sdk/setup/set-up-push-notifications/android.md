@@ -45,6 +45,8 @@ source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/f
 
 Make sure your service is declared in your `AndroidManifest.xml` (typically `app/src/main/AndroidManifest.xml`) by adding `service` tag inside `application` tag:
 
+![](/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
+
 ```xml
 <service android:name=".MyFirebaseMessagingService">
     <intent-filter>
