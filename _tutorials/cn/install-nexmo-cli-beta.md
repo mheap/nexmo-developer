@@ -14,9 +14,9 @@ npm install nexmo-cli@beta -g
 
 设置 Nexmo CLI 以使用您的 Vonage API 密钥和 API 密码。您可以从 Dashboard 中的[设置页面](https://dashboard.nexmo.com/settings)获取。
 
-在终端运行以下命令，同时将 `api_key` 和 `api_secret` 替换为您自己的值：
+在终端运行以下命令，同时将 `API_KEY` 和 `API_SECRET` 替换为您自己的值：
 
 ```bash
-nexmo setup api_key api_secret
+nexmo setup API_KEY API_SECRET
 ```
 

@@ -17,6 +17,6 @@ Vonage APIキーと APIシークレットを使用するようにNexmo CLIを設
 ターミナルで次のコマンドを実行し、`api_key`および`api_secret`を独自のものに置き換えます：
 
 ```bash
-nexmo setup api_key api_secret
+nexmo setup API_KEY API_SECRET
 ```
 

@@ -49,7 +49,7 @@ For `POST` requests to the SMS API, your API key and secret should be sent as pa
 
 ### Query String
 
-Your API key and secret should be included in the query parameters of requests you make to the Conversion, Number Insight or Developer API. The parameters are called `api_key` and `api_secret` respectively.
+Your API key and secret should be included in the query parameters of requests you make to the Conversion, Number Insight or Developer API. The parameters are called `API_KEY` and `API_SECRET` respectively.
 
 An example of authentication query parameters would be as follows:
 
