@@ -54,9 +54,9 @@ You upload your certificate to the Vonage servers by making a POST request. The 
 
 To use the tool you will need to run it locally or deploy it. You can follow the the instructions in the GitHub project's [README](https://github.com/nexmo-community/ios-push-uploader#running-the-project). You will also need the private key for your Vonage Application. 
 
-Once you have the tool running, enter your Vonage Application ID, private key, and certificate file and upload. The status of your upload will be shown on the page once it is complete. 
+Once you have the tool running, enter your Vonage Application ID, private key file (located in nexmo application folder), and certificate file and click upload. The status of your upload will be shown on the page once it is complete:
 
-![Push Certificate Uploading Tool success](/images/client-sdk/push-notifications/pushupload.png)
+![iOS Push Certificate Uploading Tool success](/images/client-sdk/push-notifications/ios-push-uploader-success.png)
 
 ### Using the Terminal
 
