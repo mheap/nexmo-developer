@@ -91,7 +91,7 @@ Get your Firebase project id from the [Firebase console](https://console.firebas
 
 ### Get Firebase token
 
-Get your Firebase token from the Firebase console. Navigate to `Firebase console ->  Project settings -> Service accounts` and generate a new private key. 
+Get your Firebase token from the [Firebase console](https://console.firebase.google.com/). Navigate to `Firebase console ->  Project settings -> Service accounts` and generate a new private key. 
 
 ![](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-project-settings.png)
 
