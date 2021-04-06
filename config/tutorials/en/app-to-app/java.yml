@@ -44,7 +44,7 @@ conclusion:
 
     # What's next?
 
-    For the complete version please see the Android Studio project in the `app-to-app-java/app-to-app` folder of the [git repository]([Github](https://github.com/nexmo-community/client-sdk-tutorials/) you've cloned.
+    The complete version of the project you just built is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-app-java](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-app-java) folder.
 
     You can do a lot more with the Client SDK. See [Client SDK documentation](/client-sdk/overview) or review
     [Android Client SDK documentation](/sdk/stitch/android/index).
