@@ -28,8 +28,8 @@ application.on('rtcstats:analytics', ({
 ```
 
 - Add logs reporter for remote logging
-- Add custom getStats parser
-- Remove callstats library and implementation
+- Add custom `getStats` parser
+- Remove `callstats` library and implementation
 
 ## Version 7.0.2 - March 30, 2021
 
