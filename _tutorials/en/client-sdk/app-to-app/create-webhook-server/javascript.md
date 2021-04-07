@@ -1,19 +1,19 @@
 ---
 title: Create a webhook server
-description: In this step you learn how to create a suitable webhook server that supports an inbound call from a PSTN phone to an app.
+description: In this step you learn how to create a suitable webhook server that supports an app to app call.
 ---
 
 # Create a webhook server
 
-When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to the [user's](/conversation/concepts/user) app. You do this by extracting the destination user from the `to` query parameter and returning it in your response.
+When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to the [PSTN phone number](/concepts/guides/glossary#virtual-number). You do this by extracting the destination number from the `to` query parameter and returning it in your response.
 
 ## New project
 
 Create a new project directory in a destination of your choice and change into it:
 
 ``` bash
-mkdir phone-to-app-swift
-cd phone-to-app-swift
+mkdir app-to-app-js
+cd app-to-app-js
 ```
 
 Inside the folder, initialize a new Node.js project by running this command:
@@ -28,6 +28,12 @@ Next, install the required dependencies:
 
 ``` bash
 npm install express localtunnel --save
+```
+
+Also, install the Client SDK - you will use this later, when building the client application:
+
+``` bash
+npm install nexmo-client --save
 ```
 
 ## Create the server file
@@ -48,19 +54,26 @@ app.get('/voice/answer', (req, res) => {
   console.log(`  - caller: ${req.query.from}`);
   console.log(`  - callee: ${req.query.to}`);
   console.log('---');
-  res.json([ 
-    { 
-      "action": "talk", 
-      "text": "Please wait while we connect you."
-    },
-    { 
-      "action": "connect",
-      "from": req.query.from, 
-      "endpoint": [ 
-        { "type": "app", "user": "Alice" } 
-      ]
-    }
-  ]);
+  var ncco = [{"action": "talk", "text": "No destination user - hanging up"}];
+  var username = req.query.to;
+  if (username) {
+    ncco = [
+      {
+        "action": "talk",
+        "text": "Connecting you to " + username
+      },
+      {
+        "action": "connect",
+        "endpoint": [
+          {
+            "type": "app",
+            "user": username
+          }
+        ]
+      }
+    ]
+  }
+  res.json(ncco);
 });
 
 app.all('/voice/event', (req, res) => {
@@ -86,19 +99,19 @@ const localtunnel = require('localtunnel');
 })();
 ```
 
-> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes).
-
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice, containing letters, numbers, underscores or dashes.
 
 There are 2 parts in the server code above:
-
 
 ### The Express server
 
 The first part creates an `Express` server and makes it available locally on port `3000`. The server exposes 2 paths:
 
-1. `/voice/answer` is the `answer_url` we mentioned above. It sends back an NCCO as a `JSON` response containing information to connect to an application user. 
-       
-2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the call - - we call this the `event_url`.
+1. `/voice/answer` is the `answer_url` we mentioned above. It sends back a `JSON` response containing the destination number for the call. 
+   
+    Notice, that the `number` is extracted from the `req.query.to` parameter that Vonage is sending as part of the request. The dynamically built NCCO then forwards the call to the destination phone using a `connect` action.
+
+2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the call - we call this the `event_url`.
 
 
 ### The `localtunnel`  integration

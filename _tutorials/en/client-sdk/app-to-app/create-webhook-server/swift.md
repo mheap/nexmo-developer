@@ -1,6 +1,6 @@
 ---
 title: Create a webhook server
-description: In this step you learn how to create a suitable webhook server that supports an inbound call from a PSTN phone to an app.
+description: In this step you learn how to create a suitable webhook server that supports an app to app call.
 ---
 
 # Create a webhook server
@@ -12,8 +12,8 @@ When an inbound call is received, Vonage makes a request to a publicly accessibl
 Create a new project directory in a destination of your choice and change into it:
 
 ``` bash
-mkdir phone-to-app-swift
-cd phone-to-app-swift
+mkdir app-to-app-swift
+cd app-to-app-swift
 ```
 
 Inside the folder, initialize a new Node.js project by running this command:
@@ -54,14 +54,18 @@ app.get('/voice/answer', (req, res) => {
       "text": "Please wait while we connect you."
     },
     { 
-      "action": "connect",
-      "from": req.query.from, 
+      "action": "connect", 
       "endpoint": [ 
-        { "type": "app", "user": "Alice" } 
+        { "type": "app", "user": req.query.to } 
       ]
     }
   ]);
 });
+
+if(subdomain == "SUBDOMAIN") {
+  console.log('\n\t🚨🚨🚨 Please change the SUBDOMAIN value');
+  return false;
+}
 
 app.all('/voice/event', (req, res) => {
   console.log('EVENT:');
@@ -69,11 +73,6 @@ app.all('/voice/event', (req, res) => {
   console.log('---');
   res.sendStatus(200);
 });
-
-if(subdomain == "SUBDOMAIN") {
-  console.log('\n\t🚨🚨🚨 Please change the SUBDOMAIN value');
-  return false;
-}
 app.listen(3000);
 
 const localtunnel = require('localtunnel');
@@ -96,8 +95,10 @@ There are 2 parts in the server code above:
 
 The first part creates an `Express` server and makes it available locally on port `3000`. The server exposes 2 paths:
 
-1. `/voice/answer` is the `answer_url` we mentioned above. It sends back an NCCO as a `JSON` response containing information to connect to an application user. 
-       
+1. `/voice/answer` is the `answer_url` we mentioned above. It sends back a `JSON` response containing the destination user for the call. 
+   
+    Notice, that the `user` is extracted from the `req.query.to` parameter that Vonage is sending as part of the request. The dynamically built NCCO then forwards the call to the destination phone using a `connect` action.
+
 2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the call - - we call this the `event_url`.
 
 

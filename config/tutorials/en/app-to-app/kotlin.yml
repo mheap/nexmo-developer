@@ -1,40 +1,41 @@
+title: Making an app to app voice call
 description: Make a voice call from an Android app to the same Android app installed on other device using the Android Client SDK.
 products:
   - client-sdk
 
 introduction:
   title: Introduction to this task
-  description: This task shows you how to use make a phone call from an Android to another Android app app using the Android Client SDK and Kotlin.
+  description: This task shows you how to use make a phone call from an Android to another Android app app using the Android Client SDK and kotlin.
   content: |
     # Introduction
-    In this tutorial, you will learn how to create an Android application using Kotlin and the Nexmo Android Client SDK, and then write the code to make a phone call from your Android app to another Android app.
+    In this tutorial, you will learn how to create an Android application using kotlin and the Nexmo Android Client SDK, and then write the code to make a phone call from your Android app to another Android app.
     The source code is available on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-app-to-app-kotlin).
+
+    Two parts are needed to achieve this:
+
+    * An Android application that will make the voice call and listen for incomming calls using the Client SDK.
+    * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
+
+    ### Completed project
+    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-app-kotlin](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-app-kotlin) folder.
 
 prerequisites:
   - create-nexmo-account
   - install-nodejs
   - install-nexmo-cli-beta
   - install-android-studio
-  - join-github
 
 tasks:
-  - client-sdk/app-to-app/create-ncco
+  - client-sdk/app-to-app/create-webhook-server
   - client-sdk/app-to-app/create-application
-  - client-sdk/android-shared/create-users-alice-and-bob
-  - client-sdk/android-shared/generate-jwt-alice-and-bob
+  - client-sdk/create-users-alice-and-bob
+  - client-sdk/generate-jwts-alice-and-bob
   - client-sdk/app-to-app/create-project
-  - client-sdk/android-shared/add-dependencies
-  - client-sdk/app-to-app/create-screens
-  - client-sdk/app-to-app/setup-navigation
   - client-sdk/app-to-app/add-permissions
-  - client-sdk/app-to-app/configure-jwt
-  - client-sdk/android-shared/initialize-client
-  - client-sdk/app-to-app/authenticate-alice-and-bob
-  - client-sdk/app-to-app/build-main-screen
-  - client-sdk/app-to-app/build-on-call-screen
-  - client-sdk/app-to-app/build-incoming-call-screen
-  - client-sdk/android-shared/run-app
-
+  - client-sdk/app-to-app/main-screen
+  - client-sdk/app-to-app/client
+  - client-sdk/app-to-app/receive-call
+  - client-sdk/app-to-app/place-call
 
 conclusion:
   title: What's next?
@@ -42,13 +43,9 @@ conclusion:
   content: |
 
     # What's next?
-
-    For the complete version please see the Android Studio project in the `kotlin-completed` folder of 
-    the [git repository](https://github.com/nexmo-community/client-sdk-android-tutorial-voice-app-to-app-kotlin) you've cloned.
+    The complete version of the project you just built is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-app-kotlin](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-app-kotlin) folder.
 
     You can do a lot more with the Client SDK. See [Client SDK documentation](/client-sdk/overview) or review
     [Android Client SDK documentation](/sdk/stitch/android/index).
 
     We want to hear what ideas you have in mind? Contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>
-
-    

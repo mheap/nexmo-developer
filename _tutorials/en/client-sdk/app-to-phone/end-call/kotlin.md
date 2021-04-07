@@ -22,12 +22,11 @@ You need to store ongoing call reference in the `onGoingCall` property and add `
 ```kotlin
 @SuppressLint("MissingPermission")
 fun startCall() {
-    // Callee number is ignored because it is specified in NCCO config
-    client.call("IGNORED_NUMBER", NexmoCallHandler.SERVER, object : NexmoRequestListener<NexmoCall> {
+    client.call("PHONE_NUMBER", NexmoCallHandler.SERVER, object : NexmoRequestListener<NexmoCall> {
         override fun onSuccess(call: NexmoCall?) {
             runOnUiThread { 
+                hideUI()
                 endCallButton.visibility = View.VISIBLE
-                startCallButton.visibility = View.INVISIBLE
             }
 
             onGoingCall = call
@@ -38,7 +37,7 @@ fun startCall() {
                         onGoingCall = null
                         
                         runOnUiThread { 
-                            endCallButton.visibility = View.INVISIBLE
+                            hideUI()
                             startCallButton.visibility = View.VISIBLE
                         }
                     }

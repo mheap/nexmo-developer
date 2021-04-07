@@ -119,9 +119,6 @@ This defines a custom initializer for the class which has a `User.type` as its p
 navigationItem.leftBarButtonItem = 
 UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(self.logout))
 callButton.setTitle("Call \(user.callPartnerName)", for: .normal)
-if user.name == "Alice" {
-    callButton.alpha = 0
-}
 ```
 
 This will hide the call button for Alice since for this demonstration only Bob will be able to make a call to Alice. In a production application the `NCCO` that is returned by your application's answer URL will dynamically return the correct username to avoid this. It also creates a logout button in the navigation bar, add the corresponding `logout` function to the end of `CallViewController.swift` 

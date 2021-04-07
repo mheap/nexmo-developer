@@ -1,29 +1,23 @@
 ---
-title: Create a Vonage application
-description: In this step you learn how to create a Vonage application.
+title: Create a Vonage Application
+description: In this step you learn how to create a Vonage Application.
 ---
 
-# Create your Vonage application
+# Create your Vonage Application
 
-You now need to create a Vonage [Application](/conversation/concepts/application). In this step you create an application capable of handling voice use cases.
+In this step you will create a Vonage [Application](/conversation/concepts/application) capable of in-app voice communication use cases.
 
-**1.** Create your project directory if you've not already done so, run the following command in your terminal:
+Open a new terminal and, if required, navigate to your project directory.
 
-``` shell
-mkdir vonage-tutorial
-```
-
-**2.** Change into the project directory.
+Create a Vonage application by copying and pasting the command below into terminal Make sure to change the values of `--voice-answer-url` and `--voice-event-url` arguments, by replacing `SUBDOMAIN` with the actual value used in the previous step:
 
 ``` shell
-cd vonage-tutorial
+nexmo app:create "App to App Tutorial" --capabilities=voice --keyfile=private.key  --voice-answer-url=https://SUBDOMAIN.loca.lt/voice/answer --voice-event-url=https://SUBDOMAIN.loca.lt/voice/event 
 ```
 
-**3.** Create a Vonage application by copying and pasting the command below into terminal Make sure to change the value of `--voice-answer-url` argument by replacing `GIST-URL` with the gist URL from the previous step.
+> **NOTE:** An application can be also created using the CLI's [interactive mode](/application/nexmo-cli#interactive-mode). For more details on how to create an application and various available application capabilities please see our [documentation](/application/overview).
 
-``` shell
-nexmo app:create "App to App Tutorial" --capabilities=voice --keyfile=private.key  --voice-event-url=https://example.com/ --voice-answer-url=GIST-URL
-```
+> **NOTE:** An application can be also created using the CLI's [interactive mode](/application/nexmo-cli#interactive-mode). For more details on how to create an application and various available application capabilities please see our [documentation](/application/overview).
 
 A file named `.nexmo-app` is created in your project directory and contains the newly created Vonage Application ID and the private key. A private key file named `private.key` is also created.
 
@@ -31,6 +25,5 @@ Make a note of the Application ID that is echoed in your terminal when your appl
 
 ![](/screenshots/tutorials/client-sdk/nexmo-application-created.png)
 
-> **NOTE:** For more details on how to create an application and various available application capabilities please see our [documentation](/application/overview).
 
-> **NOTE:** You can also obtain information about your application, including the Application ID, in the [Dashboard](https://dashboard.nexmo.com/voice/your-applications).
+> **NOTE:** Information about your application, including the Application ID, can also be found in the [Dashboard](https://dashboard.nexmo.com/voice/your-applications).

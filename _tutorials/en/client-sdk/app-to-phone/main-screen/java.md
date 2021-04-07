@@ -91,7 +91,7 @@ You will fill the body of these methods in the following steps of this tutorial.
 
 ## Build and Run
 
-Run the project again (`Ctrl + R`). 
+Run the project again (`Ctrl + R`).
 
 Notice that buttons are hidden by default:
 

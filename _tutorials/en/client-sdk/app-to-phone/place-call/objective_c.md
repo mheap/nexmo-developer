@@ -22,7 +22,7 @@ Please make sure to replace `PHONE_NUMBER` below with the actual phone number yo
 
 ```objective_c
 - (void)callButtonPressed {
-    if (self.call) {
+    if (!self.call) {
         [self placeCall];
     } else {
         [self endCall];
@@ -37,7 +37,9 @@ Please make sure to replace `PHONE_NUMBER` below with the actual phone number yo
         }
         
         self.call = call;
-        [self.callButton setTitle:@"End call" forState:UIControlStateNormal];
+        dispatch_async(dispatch_get_main_queue(), ^{
+          [self.callButton setTitle:@"End call" forState:UIControlStateNormal];
+        });
     }];
 }
 
