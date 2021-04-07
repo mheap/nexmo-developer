@@ -6,6 +6,31 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 7.1.0 - April 07, 2021
+
+### Changes
+
+- `rtcstats:report` is deprecated. Please use `rtcstats:analytics`instead
+
+```ts
+application.on('rtcstats:analytics', ({
+  type: 'mos' || 'mos_report',
+  mos: string,
+  rtc_id: string,
+  mos_report?: {
+    average: string,
+    last: string,
+    max: string,
+    min: string
+  },
+  report?: RTCStatsReport
+}) => {}
+```
+
+- Add logs reporter for remote logging
+- Add custom getStats parser
+- Remove callstats library and implementation
+
 ## Version 7.0.2 - March 30, 2021
 
 ### Fixes
