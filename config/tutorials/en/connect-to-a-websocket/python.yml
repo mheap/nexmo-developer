@@ -1,5 +1,5 @@
 ---
-title: Call a WebSocket
+title: Connect to a WebSocket
 description: Connect an inbound call to a WebSocket with the Voice API
 products:
   - voice/voice-api
