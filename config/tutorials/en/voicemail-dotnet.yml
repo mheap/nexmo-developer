@@ -1,4 +1,4 @@
-title: How to Build a Voicemail with .NET
+title: Build a Voicemail
 products:
  - voice/voice-api
 description: A tutorial showing you how to build an app that records incoming phone calls with .NET
