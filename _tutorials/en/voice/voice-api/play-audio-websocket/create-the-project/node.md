@@ -15,7 +15,7 @@ $ npm init
 
 Press [Enter] to accept each of the defaults.
 
-Then, install the [express](https://expressjs.com) web application framework, [express-ws](https://www.npmjs.com/package/express-ws) and [wavefile](https://www.npmjs.com/package/wavefile) packages:
+Then, install the [express](https://expressjs.com) web application framework, [express-ws](https://www.npmjs.com/package/express-ws) and [WaveFile](https://www.npmjs.com/package/wavefile) packages:
 
 ```sh
 $ npm install express express-ws wavefile
