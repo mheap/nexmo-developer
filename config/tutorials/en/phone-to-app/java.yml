@@ -1,6 +1,6 @@
 title: Receiving a phone call in-app
 description: You receive a call from a phone to your app
-products: 
+products:
   - client-sdk
 
 introduction:
@@ -50,6 +50,6 @@ conclusion:
     You can do a lot more with the Client SDK. See [Client SDK documentation](/client-sdk/overview) or review
     [Android Client SDK documentation](/sdk/stitch/android/index).
 
-    We want to hear what ideas you have in mind? Contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>
+    We want to hear what ideas you have in mind! Contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>
 
-   
+
