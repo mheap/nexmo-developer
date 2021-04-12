@@ -37,7 +37,7 @@ If you do not have one already, create a class (service) that extends `FirebaseM
 
 In order for Vonage API application to be able to send push notifications to a device, the Vonage server has to know the device `InstanceID`.
 
-In your class that extends [FirebaseMessagingService](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessagingService),  override `onNewToken()` method and update the `NexmoClient` by passing a new `token`:
+In your class that extends [`FirebaseMessagingService`](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessagingService),  override `onNewToken()` method and update the `NexmoClient` by passing a new `token`:
 
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/firebase-new-token'
