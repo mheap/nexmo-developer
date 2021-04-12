@@ -35,9 +35,9 @@ source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/d
 
 If you do not have one already, create a class (service) that extends `FirebaseMessagingService`. 
 
-In order for Vonage API application to be able to send push notifications to a device, the Vonage server has to know the device `token`, also known as `InstanceID`.
+In order for Vonage API application to be able to send push notifications to a device, the Vonage server has to know the device `InstanceID`.
 
-In your class that extends `FirebaseMessagingService`,  override `onNewToken()` method and update the `NexmoClient` by passing new `token`:
+In your class that extends [FirebaseMessagingService](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessagingService),  override `onNewToken()` method and update the `NexmoClient` by passing a new `token`:
 
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/firebase-new-token'
@@ -74,12 +74,13 @@ source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/f
 To connect Vonage backend push service with Firebase you will need the following:
 
 1. Vonage API Application id
+1. Vonage Application private key
 3. Firebase project id
 4. Firebase token
 
 ### Get Vonage application Id
 
-Obtain your Vonage API Application id. You can access the existing application in the [dashboard](https://dashboard.nexmo.com/voice/your-applications). If you don't have an application already you can create the new application via [Nexmo CLI](/client-sdk/setup/create-your-application).
+Obtain your Vonage API Application id. You can access the existing applications in the [dashboard](https://dashboard.nexmo.com/voice/your-applications). If you don't have an application already you can create the new application via [Nexmo CLI](/client-sdk/setup/create-your-application).
 
 ### Get Firebase project Id
 
@@ -89,24 +90,28 @@ Get your Firebase project id from the [Firebase console](https://console.firebas
 
 ![](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-project-id.png)
 
-### Get Firebase token
+### Get Firebase Server Key
 
-Get your Firebase token from the [Firebase console](https://console.firebase.google.com/). Navigate to `Firebase console ->  Project settings -> Service accounts` and generate a new private key. 
+Get your Firebase Server Key from the [Firebase console](https://console.firebase.google.com/). Navigate to `Firebase console ->  Project settings -> Service accounts` and generate a new private key. 
 
 ![](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-project-settings.png)
 
 ![](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-token.png)
 
-## Link the Vonage backend push service with the Firebase application
+## Connect Vonage API application to Firebase
 
-You link Vonage backend push service with the Firebase application by making a POST request. You can to this request using Upload Tool or making a POST request directly.
+You connect Vonage backend push service with the Firebase application by making a POST request. You can to this request using Upload Tool or making a POST request directly.
+
 ### Using the Upload Tool
 
 The Android Push Certificate Uploading Tool, available on [GitHub](https://github.com/nexmo-community/android-push-uploader), does so with a user interface.
 
-Once you have the tool running, enter your Vonage Application ID, private key file (located in nexmo application folder), Firebase project id, Firebase token and click upload. The status of your upload will be shown on the page once it is complete:
+To use the tool you will need to run it locally or deploy it. You can follow the the instructions in the GitHub project's [README](https://github.com/nexmo-community/android-push-uploader#running-the-project). You will also need the private key for your Vonage Application. 
+
+Once you have the tool running, enter your Vonage Application ID, private key file, Firebase project id, Firebase Server Key and click upload. The status of your upload will be shown on the page once it is complete:
 
 ![Android Push Certificate Uploading Tool success](/images/client-sdk/push-notifications/android-push-uploader-success.png)
+
 ### Using the Terminal
 
 To link the Vonage backend push service with the Firebase application you need to make a single POST request. Before making request you will have to generate Vonage developer JWT (above upload tool generates this JWT under the hood).
@@ -125,18 +130,18 @@ nexmo jwt:generate ./private.key exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/u
 
 > **NOTE:** More details on how to generate a JWT can be found in the [setup guide](/tutorials/client-sdk-generate-test-credentials#generate-a-user-jwt).
 
-Fill `VONAGE_APP_ID`, `VONAGE_DEV_JWT`, `FIREBASE_PROJECT_ID` and `FIREBASE_TOKEN` with previously obtained values and run the below command to fire the request:
+Fill `VONAGE_APP_ID`, `VONAGE_DEV_JWT`, `FIREBASE_PROJECT_ID` and `FIREBASE_SERVER_KEY` with previously obtained values and run the below command to fire the request:
 
 ```sh
 VONAGE_APP_ID=
 VONAGE_DEV_JWT=
 FIREBASE_PROJECT_ID=
-FIREBASE_TOKEN=
+FIREBASE_SERVER_KEY=
 
 curl -v -X PUT \
    -H "Authorization: Bearer $VONAGE_DEV_JWT" \
    -H "Content-Type: application/json" \
-   -d "{\"token\":\"$FIREBASE_TOKEN\", \"projectId\":\"$FIREBASE_PROJECT_ID\"}" \
+   -d "{\"token\":\"$FIREBASE_SERVER_KEY\", \"projectId\":\"$FIREBASE_PROJECT_ID\"}" \
    https://api.nexmo.com/v1/applications/$VONAGE_APP_ID/push_tokens/android  
 ```
 
