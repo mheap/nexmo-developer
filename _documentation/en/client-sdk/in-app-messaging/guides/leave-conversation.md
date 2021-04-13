@@ -16,3 +16,10 @@ Given a conversation you are already a member of, you can stop being an active m
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/leave-conversation
 ```
+
+## Reference
+
+* [Client SDK Reference - Web](/sdk/client-sdk/javascript)
+* [Client SDK Reference - iOS](/sdk/client-sdk/ios)
+* [Client SDK Reference - Android](/sdk/client-sdk/android)
+* [Client SDK Samples - Android](https://github.com/nexmo-community/client-sdk-android-samples)

@@ -44,3 +44,10 @@ To see updates on the state of a call, for example, to know if the other member 
 source: '_tutorials_tabbed_content/client-sdk/guides/make-call/listen-to-call-events'
 frameless: false
 ```
+
+## Reference
+
+* [Client SDK Reference - Web](/sdk/client-sdk/javascript)
+* [Client SDK Reference - iOS](/sdk/client-sdk/ios)
+* [Client SDK Reference - Android](/sdk/client-sdk/android)
+* [Client SDK Samples - Android](https://github.com/nexmo-community/client-sdk-android-samples)

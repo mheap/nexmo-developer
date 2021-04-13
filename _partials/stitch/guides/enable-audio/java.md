@@ -200,3 +200,8 @@ private String getConversationLine(NexmoMediaEvent mediaEvent) {
 ## Build and run
 
 Press `Cmd + R` to build and run again. Once logged in you can enable or disable audio. To test it out you can run the app on two different devices.
+
+## Reference
+
+* [Client SDK Reference - Android](/sdk/client-sdk/android)
+* [Client SDK Samples - Android](https://github.com/nexmo-community/client-sdk-android-samples)
