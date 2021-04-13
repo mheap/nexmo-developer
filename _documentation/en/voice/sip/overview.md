@@ -80,7 +80,7 @@ Connections using TLS 1.2 are accepted. Older protocols are disabled as they are
 You can use either [Real-time Transport Protocol](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) (RTP) or [Secure Real-time Transport Protocol](https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol) (SRTP) for the media exchange with Vonage.
 If there are security and privacy concerns, we highly recommend the use of SIP over TLS, so that the entire communication can be secured.
 
-For outbound calls, your SIP endpoint must negotiate SRTP automatically in the standard way. 
+For outbound calls, your SIP endpoint must negotiate SRTP automatically in the standard way. For inbound calls, see configuration details below.
 
 > **Note**: Vonage supports a single crypto suite **AES_CM_128_HMAC_SHA1_80**
 
