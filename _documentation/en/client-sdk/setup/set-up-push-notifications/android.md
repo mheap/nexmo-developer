@@ -100,7 +100,7 @@ Get your Firebase Server Key from the [Firebase console](https://console.firebas
 
 ## Connect Vonage API application to Firebase
 
-You connect Vonage backend push service with the Firebase application by making a POST request. You can to this request using Upload Tool or making a POST request directly.
+You connect Vonage backend push service with the Firebase application by making a POST request. You can to this request using the Upload Tool or making a POST request directly.
 
 ### Using the Upload Tool
 
