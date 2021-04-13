@@ -69,12 +69,12 @@ source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/f
 
 > **NOTE:** In order to apply any methods on the `NexmoClient` object (for example answer a call, hangup, and so on), the `NexmoClient` has to be initialized and the user has to be [logged in](/client-sdk/getting-started/add-sdk-to-your-app/android) to it.
 
-## Link Vonage backend push service to Firebase
+## Connect Vonage backend push service to Firebase
 
 To connect Vonage backend push service with Firebase you will need the following:
 
 1. Vonage API Application id
-1. Vonage Application private key
+1. Vonage Application private key (upload tool method) or Vonage developer JWT (terminal method)
 3. Firebase project id
 4. Firebase token
 
@@ -114,7 +114,7 @@ Once you have the tool running, enter your Vonage Application ID, private key fi
 
 ### Using the Terminal
 
-To link the Vonage backend push service with the Firebase application you need to make a single POST request. Before making request you will have to generate Vonage developer JWT (above upload tool generates this JWT under the hood).
+To connect the Vonage backend push service with the Firebase application you need to make a single POST request. Before making request you will have to generate Vonage developer JWT (above upload tool generates this JWT under the hood).
 
 > **NOTE** [JWTs](https://jwt.io) are used to authenticate a user into the Client SDK.
 
@@ -144,6 +144,8 @@ curl -v -X PUT \
    -d "{\"token\":\"$FIREBASE_SERVER_KEY\", \"projectId\":\"$FIREBASE_PROJECT_ID\"}" \
    https://api.nexmo.com/v1/applications/$VONAGE_APP_ID/push_tokens/android  
 ```
+
+> **NOTE** There is no validation at this endpoint. The `200` return code means that Vonage got the data and stored it but hasn't checked that values are valid.
 
 If all the values are correct you should see `200` response code in the terminal.
 

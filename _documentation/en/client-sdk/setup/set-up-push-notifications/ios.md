@@ -75,6 +75,8 @@ curl -v -X PUT \
    https://api.nexmo.com/v1/applications/$app_id/push_tokens/ios
 ```
 
+> **NOTE** There is no validation at this endpoint. The `200` return code means that Vonage got the data and stored it but hasn't checked that values are valid.
+
 ## Integrate push notifications in your application
 
 VoIP push notifications are suitable for VoIP apps. Among other benefits, it allows you to receive notifications even when the app is terminated.
