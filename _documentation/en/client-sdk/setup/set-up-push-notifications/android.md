@@ -104,7 +104,7 @@ You connect Vonage backend push service with the Firebase application by making 
 
 ### Using the Upload Tool
 
-The Android Push Certificate Uploading Tool, available on [GitHub](https://github.com/nexmo-community/android-push-uploader), does so with a user interface.
+The Android Push Certificate Uploading Tool, available on [GitHub](https://github.com/nexmo-community/android-push-uploader), allows you to upload with a user interface.
 
 To use the tool you will need to run it locally or deploy it. You can follow the the instructions in the GitHub project's [README](https://github.com/nexmo-community/android-push-uploader#running-the-project). You will also need the private key for your Vonage Application. 
 
