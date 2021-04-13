@@ -40,3 +40,5 @@ app.ws('/socket', (ws, req) => {
 ```
 
 The route loads an audio file from disk, you can download the same one from [GitHub](https://github.com/nexmo-community/voice-api-web-socket-audio/raw/main/sound.wav), uses the WaveFile library to change the sample rate and bit depth for the Voice API. Next it gets the audio samples from the first channel of audio, and uses the function from earlier to change the size of the binary audio data array. Finally the binary audio data is iterated over and sent to the call via the WebSocket with the `send()` function.
+
+> **NOTE:** [Vonage will only buffer 1024 messages](https://developer.vonage.com/voice/voice-api/guides/websockets#writing-audio-to-the-websocket) which should be enough for around 20 seconds of audio, if your file is longer than this you should implement a delay of 18-19ms between each message.

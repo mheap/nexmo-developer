@@ -22,7 +22,7 @@ prerequisites:
   - install-nexmo-cli
 tasks:
   - buy-nexmo-number
-  - voice/voice-api/call-a-websocket/create-voice-application
+  - voice/voice-api/play-audio-websocket/create-voice-application
   - link-nexmo-number
   - voice/voice-api/play-audio-websocket/create-the-project
   - voice/voice-api/play-audio-websocket/write-answer-webhook
