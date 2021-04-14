@@ -138,6 +138,7 @@ Option | Description | Required
 -- | -- | --
 `endpoint` | Array of `endpoint` objects to connect to. Currently supports a **maximum** of one `endpoint` object. [Available endpoint types](#endpoint-types-and-values) | Yes
 `from` | A number in [E.164](https://en.wikipedia.org/wiki/E.164) format that identifies the caller.§§ This must be one of your Vonage virtual numbers, another value will result in the caller ID being unknown. If the caller is an app user, this option should be omitted.| No
+`randomFromNumber` | Set to `true` to use random phone number as `from`. The number will be selected from the list of the numbers assigned to the current application. | No
 `eventType` | Set to `synchronous` to: <ul class="Vlt-list Vlt-list--simple"><li>make the `connect` action synchronous</li><li>enable `eventUrl` to return an NCCO that overrides the current NCCO when a call moves to specific states.</li></ul> | No
 `timeout` |  If the call is unanswered, set the number in seconds before Vonage stops ringing `endpoint`. The default value is `60`.
 `limit` | Maximum length of the call in seconds. The default and maximum value is `7200` seconds (2 hours). | No
