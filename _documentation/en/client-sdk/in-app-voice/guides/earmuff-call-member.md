@@ -19,3 +19,10 @@ Earmuff a member to disables the member from hearing other members. You can earm
 ```tabbed_content
 source:  _tutorials_tabbed_content/client-sdk/guides/earmuff-call-member
 ```
+
+## Reference
+
+* [Client SDK Reference - Web](/sdk/client-sdk/javascript)
+* [Client SDK Reference - iOS](/sdk/client-sdk/ios)
+* [Client SDK Reference - Android](/sdk/client-sdk/android)
+* [Client SDK Samples - Android](https://github.com/nexmo-community/client-sdk-android-samples)

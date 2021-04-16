@@ -34,3 +34,10 @@ A `image` conversation event will be received when a member sends an image to a 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-images
 ```
+
+## Reference
+
+* [Client SDK Reference - Web](/sdk/client-sdk/javascript)
+* [Client SDK Reference - iOS](/sdk/client-sdk/ios)
+* [Client SDK Reference - Android](/sdk/client-sdk/android)
+* [Client SDK Samples - Android](https://github.com/nexmo-community/client-sdk-android-samples)

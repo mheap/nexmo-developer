@@ -30,3 +30,10 @@ Preceding pages can also be retrieved using a similar technique:
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/handling-pagnation/load-prev-event-page
 ```
+
+## Reference
+
+* [Client SDK Reference - Web](/sdk/client-sdk/javascript)
+* [Client SDK Reference - iOS](/sdk/client-sdk/ios)
+* [Client SDK Reference - Android](/sdk/client-sdk/android)
+* [Client SDK Samples - Android](https://github.com/nexmo-community/client-sdk-android-samples)

@@ -27,3 +27,10 @@ Given a conversation you are already a member of, `text:seen` events will be rec
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/seen-receipt
 ```
+
+## Reference
+
+* [Client SDK Reference - Web](/sdk/client-sdk/javascript)
+* [Client SDK Reference - iOS](/sdk/client-sdk/ios)
+* [Client SDK Reference - Android](/sdk/client-sdk/android)
+* [Client SDK Samples - Android](https://github.com/nexmo-community/client-sdk-android-samples)
