@@ -21,7 +21,7 @@ If Vonage does not get a response within these time frames it will retry the req
 
 ## Regions
 
-The Vonage Voice API resides in four geographic data centers. Phone numbers are associated with the closest data center: US East Coast, Texas, London, Amsterdam or Singapore. API requests are routed to the closest data center to the requesting client. However, a call currently only exists in a single region, this means that if you are receiving a call on a number connected to Singapore but making an API request from a server hosted in the US it will return a 404.
+The Vonage Voice API resides in five geographic data centers. Phone numbers are associated with the closest data center: US East Coast, Texas, London, Amsterdam or Singapore. API requests are routed to the closest data center to the requesting client. However, a call currently only exists in a single region, this means that if you are receiving a call on a number connected to Singapore but making an API request from a server hosted in the US it will return a 404.
 
 You can work around this issue by sending your API request to the correct region, either:
 
