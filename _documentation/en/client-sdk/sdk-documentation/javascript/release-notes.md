@@ -41,7 +41,7 @@ conversation.getMyMember().then((member) => {
 });
 ```
 
-- Add `getMember()` function to fetch a conversation member by his `member_id`
+- Add `getMember()` function to fetch a conversation member by `member_id`
 
 ```javascript
 conversation.getMember("MEM-id").then((member) => {
