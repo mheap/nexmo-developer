@@ -221,10 +221,8 @@ After the initial acknowledgement response, the console should display informati
   },
   "valid_number": "valid",
   "reachable": "reachable",
-  "ported": "not_ported",
-  "roaming": {
-    "status": "not_roaming"
-  }
+  "ported": null,
+  "roaming": "unknown"
 }
 ```
 
