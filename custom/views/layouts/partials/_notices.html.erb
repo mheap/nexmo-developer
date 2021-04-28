@@ -1,0 +1,87 @@
+<style>
+
+@media only screen and (max-width: 576px) {
+  .banner {
+    justify-content: center;
+    flex-direction: row;
+  }
+  .banner .Nxd-logo {
+    margin-bottom: 12px;
+  }
+
+  .banner .banner-content {
+    margin-bottom: 12px;
+  }
+}
+
+.Vlt-main .banner {
+  margin-bottom: 24px;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+    background: #871FFF;
+    color: white !important;
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    }
+
+    .banner .Nxd-logo {
+      flex: 0 1 auto;
+      margin-right: 24px;
+    }
+
+    .banner .Nxd-product__separator {
+      color: white;
+    }
+
+    .banner .event-name {
+      color: white;
+      margin-bottom: 0;
+      font-size: 2rem;
+      display:block;
+      font-weight: bold;
+    }
+    .banner small {
+      margin-top: -8px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .banner-content {
+      font-size: 1.8rem;
+      max-width: 650px;
+    }
+
+    .hidden{
+      visibility: hidden;
+    }
+
+</style>
+
+<div class="banner">
+  <div class="Nxd-logo">
+    <a target="_blank" href="#" id="logo" class="Nxd-logo__image">
+    <%= image_tag asset_pack_path('media/logos/vonage-logo-collapsed--white.svg'), alt:'Nexmo Developer Logo' %>
+
+    <hr class="Nxd-product__separator">
+    <div class="Vlt-white">
+      <span class="event-name">Join our</br> new community</span>
+    </div>
+    </a>
+  </div>
+  <div class="banner-content">
+    <b>Want to meet other developers using Vonage APIs?</b><br/>
+    Connect with our team, see what others are building, find developer events, learn about contests and more on our new developer community hub.
+  </div>
+  <div class="banner-cta hidden">
+    <a target="_blank" href="#" class="Vlt-btn Vlt-btn--secondary">Join Now!</a>
+  </div>
+  </div>
+</div>
