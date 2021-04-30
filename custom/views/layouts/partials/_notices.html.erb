@@ -23,63 +23,64 @@
 }
 
 .Nxd-landing-page.container {
-/*   margin-top: 50px;
-   margin-bottom: 50px;*/
-   /*margin-left: 0;*/
    margin: 50px auto 0;
 }
 
 
 .banner {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: stretch;
-    align-items: center;
-    background: #871FFF;
-    color: white !important;
-    max-width: 1200px;
-    margin: auto;
-    padding: 24px;
-    }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  background: #871FFF;
+  color: white !important;
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+}
 
-    .banner .Nxd-logo {
-      flex: 0 1 auto;
-      margin-right: 24px;
-    }
+.banner .Nxd-logo {
+  flex: 0 1 auto;
+  margin-right: 24px;
+}
 
-    .banner .Nxd-product__separator {
-      color: white;
-    }
+.banner .Nxd-logo img {
+  height: 70px;
+}
 
-    .banner .event-name {
-      color: white;
-      margin-bottom: 0;
-      font-size: 2rem;
-      display:block;
-      font-weight: bold;
-    }
-    .banner small {
-      margin-top: -8px;
-      color: white;
-      font-weight: bold;
-    }
+.banner .Nxd-product__separator {
+  color: white;
+}
 
-    .banner-content {
-      font-size: 1.8rem;
-      max-width: 650px;
-    }
+.banner .event-name {
+  color: white;
+  margin-bottom: 0;
+  font-size: 2rem;
+  display:block;
+  font-weight: bold;
+}
+.banner small {
+  margin-top: -8px;
+  color: white;
+  font-weight: bold;
+}
 
-    .hidden{
-      visibility: hidden;
-    }
+.banner-content {
+  font-size: 1.8rem;
+  max-width: 650px;
+}
+
+.hidden{
+  visibility: hidden;
+}
 
 </style>
 
 <div class="banner">
   <div class="Nxd-logo">
-    <%= image_tag asset_pack_path('media/logos/vonage-logo-collapsed--white.svg'), alt:'Nexmo Developer Logo' %>
+    <%= image_tag '/images/Vonage_MovingPerson.svg', alt:'Nexmo Developer Logo' %>
 
     <hr class="Nxd-product__separator">
     <div class="Vlt-white">
