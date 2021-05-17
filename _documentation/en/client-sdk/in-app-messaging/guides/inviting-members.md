@@ -44,3 +44,9 @@ Users can be invited to join conversation - their username will be used:
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/inviting-members/invite
 ```
 
+## Reference
+
+* [Client SDK Reference - Web](/sdk/client-sdk/javascript)
+* [Client SDK Reference - iOS](/sdk/client-sdk/ios)
+* [Client SDK Reference - Android](/sdk/client-sdk/android)
+* [Client SDK Samples - Android](https://github.com/nexmo-community/client-sdk-android-samples)

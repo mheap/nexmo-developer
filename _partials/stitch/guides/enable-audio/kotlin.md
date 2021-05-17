@@ -43,7 +43,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 You will now need to add two buttons for the user to enable and disable audio. Open the `app/src/main/res/layout/fragment_chat.xml` file and add two new buttons (`enableMediaButton` and `disableMediaButton`) right below `sendMessageButton`. 
 
-``` xml
+```xml
 <!--...-->
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -177,7 +177,8 @@ private var conversationEvents = Observer<List<NexmoEvent>?> { events ->
 ```
 
 Now add `getConversationLine` method needs to support `NexmoMediaEvent` type as well:
-```
+
+```kotlin
 private String getConversationLine(NexmoMediaEvent mediaEvent) {
     String user = mediaEvent.getFromMember().getUser().getName();
     return user + "  media state: " + mediaEvent.getMediaState();
@@ -187,3 +188,8 @@ private String getConversationLine(NexmoMediaEvent mediaEvent) {
 ## Build and run
 
 Press `Cmd + R` to build and run again. Once logged in you can enable or disable audio. To test it out you can run the app on two different devices.
+
+## Reference
+
+* [Client SDK Reference - Android](/sdk/client-sdk/android)
+* [Client SDK Samples - Android](https://github.com/nexmo-community/client-sdk-android-samples)

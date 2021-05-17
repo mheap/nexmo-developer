@@ -133,3 +133,7 @@ In the process events function you will need to add a clause for a `NXMMediaEven
 Press `Cmd + R` to build and run again. Once logged in you can enable or disable audio. To test it out you can run the app on two different simulators/devices.
 
 ![Enable media](/images/client-sdk/ios-enable-media.png)
+
+## Reference
+
+* [Client SDK Reference - iOS](/sdk/client-sdk/ios)

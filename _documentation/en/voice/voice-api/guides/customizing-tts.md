@@ -164,29 +164,31 @@ The `say-as` tag has a required attribute: `interpret-as`. That attribute must c
 
 Value of `interpret-as`  | Effect on spoken text
 --|--
-`character`/`spell-out` | Spells each letter out, for example: `I-A-T-A`.
-`cardinal`/`number` | Pronounces the value as a number. For example, "974" would be pronounced "nine hundred and seventy four".
+`character` | Spells each letter out, for example: `I-A-T-A`.
+`cardinal` | Pronounces the value as a number. For example, "974" would be pronounced "nine hundred and seventy four".
 `ordinal` | Pronounces the number as an ordinal. For example, "1" would be pronounced "first" and "33" would be pronounced "thirty-third".
 `digits` | Reads the specified numbers out as digits. For example, "747" would be pronounced "seven four seven" and not "seven hundred and forty seven".
 `fraction` | Reads the numbers out as a fraction. For example, "1/3" would be pronounced "one third" and "2 4/10" would be pronounced "two and four tenths".
 `unit` | Reads the specified number out as a unit. The value must be a number followed by a unit of measure with no space between the two. For example: "1m".
 `date` | Specify how to pronounce dates. See the section below on [date formatting](#date-formatting).
 `time` | Pronounces time durations in minutes and seconds. For example: `1'30"` is read as "one minute and thirty seconds".
-`address` | Reads out a street address with appropriate breaks.
 `expletive` | Replaces the content with a "bleep" to censor expletives. You can use this to automatically substitute filtered swear words.
 `telephone` | Reads out a telephone number with appropriate breaks.
+`address` | Reads out a street address with appropriate breaks. 
+
+> **Note**: Not all the voice styles support `address` option.
 
 An example:
 
 ```xml
 <speak>
-On the <say-as interpret-as="ordinal">1</say-as> day of Christmas,
-come to <say-as interpret-as="address">123 Main Street</say-as>.
-<say-as interpret-as="spell-out">RSVP</say-as> for a mince pie.
+Your number is <say-as interpret-as='cardinal'>10</say-as>. 
+You are <say-as interpret-as='ordinal'>10</say-as> in line. 
+The digits for ten are <say-as interpret-as='digits'>10</say-as>.
 </speak>
 ```
 
-🔈[https://nexmo-developer-production.s3.amazonaws.com/assets/ssml/09-interpret-as.mp3]
+🔈[/audio/tts-samples/09-interpret-as.mp3]
 
 #### Date formatting
 
