@@ -11,10 +11,11 @@ If a Vonage Application has `rtc` as a capability, it will receive the dispatche
 
 Event type | Description
 ----|----
-_Audio_|
-`leg:status:update` |
-`app:knocking:cancel` | 
+_General_|
 `app:knocking` | 
+`app:knocking:cancel` | 
+`leg:status:update` |
+_Audio_|
 `audio:dtmf` | DTMF tone is received into the Leg.
 `audio:earmuff:off` | Leg is unearmuffed.
 `audio:earmuff:on` | Leg is earmuffed.
