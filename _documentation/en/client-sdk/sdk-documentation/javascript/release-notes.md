@@ -6,6 +6,13 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.0.3 - May 18, 2021
+
+### Fixes
+
+- Fix out of order internal events processing in the events queue
+- Fix deprecation warning message for `rtcstats:report`
+
 ## Version 7.1.0 - April 07, 2021
 
 ### Changes
