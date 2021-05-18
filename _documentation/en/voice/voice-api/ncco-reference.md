@@ -311,7 +311,7 @@ Option | Description | Required
 Option | Description | Required
 -- | -- | --
 `uuid` | The unique ID of the Call leg for the user to capture the speech of, defined as an array with a single element. The first joined leg of the call by default. | No
-`endOnSilence` | Controls how long the system will wait after user stops speaking to decide the input is completed. The default value is `2` (seconds). The range of possible values is between 1 second and 10 seconds. | No
+`endOnSilence` | Controls how long the system will wait after user stops speaking to decide the input is completed. The default value is `2.0` (seconds). The range of possible values is between `0.4` seconds and `10.0` seconds. | No
 `language` | Expected language of the user's speech. Format: BCP-47. Default: `en-US`. [List of supported languages](/voice/voice-api/guides/asr#language). | No
 `context` | Array of hints (strings) to improve recognition quality if certain words are expected from the user. | No
 `startTimeout` | Controls how long the system will wait for the user to start speaking. The range of possible values is between 1 second and 10 seconds. | No
