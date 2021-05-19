@@ -179,7 +179,7 @@ Value | Description
 Value | Description
 -- | --
 `type` | The endpoint type: `sip` for SIP.
-`uri` | the SIP URI to the endpoint you are connecting to in the format `sip:rebekka@sip.example.com`.
+`uri` | the SIP URI to the endpoint you are connecting to in the format `sip:rebekka@sip.example.com`. To use [TLS and/or SRTP](/voice/sip/overview#protocols), include respectively `transport=tls` or `media=srtp` to the URL with the semicolon `;` as a delimiter, for example: `sip:rebekka@sip.example.com;transport=tls;media=srtp`. 
 `headers` | `key` => `value` string pairs containing any metadata you need e.g. `{ "location": "New York City", "occupation": "developer" }`
 
 #### VBC - the Vonage Business Cloud (VBC) extension to connect to
