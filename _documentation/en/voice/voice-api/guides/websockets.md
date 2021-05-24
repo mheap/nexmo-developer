@@ -49,7 +49,7 @@ To instruct Vonage to connect to a WebSocket your application server must return
                 "content-type": "audio/l16;rate=16000",
                 "headers": {
                     "language": "en-GB",                    
-                    "callerId": "447700900123"
+                    "caller-id": "447700900123"
                 }
            }
        ]
@@ -63,7 +63,7 @@ Field | Example | Description
  -- | -- | --
 `uri` | `wss://example.com/socket` | The endpoint of your WebSocket server that Vonage will connect to
 `content-type` | `audio/l16;rate=16000` | A string representing the audio sampling rate, either `audio/l16;rate=16000` or `audio/l16;rate=8000`. Most real-time transcription services work best with audio at 8kHz.
-`headers` | `{ 'language': 'en-GB', 'callerId': '447700900123' }` | An object of key/value pairs with additional optional properties to send to your Websocket server, with a maximum length of 512 bytes.
+`headers` | `{ 'language': 'en-GB', 'caller-id': '447700900123' }` | An object of key/value pairs with additional optional properties to send to your Websocket server, with a maximum length of 512 bytes.
 
 You can find all the data fields for an NCCO at the [NCCO Reference Guide](/voice/voice-api/ncco-reference).
 
@@ -95,7 +95,7 @@ Consider the following `connect` action example:
               "content-type": "audio/l16;rate=16000", 
               "headers": {
                  "language": "en-GB",
-                 "callerId": "447700900123"
+                 "caller-id": "447700900123"
               }
            }
        ]
@@ -110,7 +110,7 @@ This results in the following JSON in the first message on the WebSocket:
     "event":"websocket:connected",
     "content-type":"audio/l16;rate=16000",
     "language": "en-GB",
-    "callerId": "447700900123"
+    "caller-id": "447700900123"
 }
 ```
 After the initial text message subsequent messages on the WebSocket can be text or binary.
@@ -159,7 +159,7 @@ Within WebSockets particularly, you can also set custom metadata in your event c
 
 ### Fallback Options
 
-A common use case for custom metadata is providing useful information for fallback options. For example, you way want to include the original `from` number in the fallback event as `callerId`. To do that, use the `headers` parameter in the `connect` action as described above. This information is then included in the event webhook payload as follows:
+A common use case for custom metadata is providing useful information for fallback options. For example, you way want to include the original `from` number in the fallback event as `caller-id`. To do that, use the `headers` parameter in the `connect` action as described above. This information is then included in the event webhook payload as follows:
 
 ``` json
 {
@@ -170,7 +170,7 @@ A common use case for custom metadata is providing useful information for fallba
   "status": "disconnected",
   "timestamp": "2020-03-31T12:00:00.000Z",
   "headers": {
-    "callerId": "447700900123"
+    "caller-id": "447700900123"
   }
 }
 ```
@@ -196,7 +196,7 @@ To receive this event, you must include the `eventType: synchronous` in your `co
         "uri": "wss://example.com/socket",
         "content-type": "audio/l16;rate=16000",
         "headers": {
-            "callerId": "447700900123"
+            "caller-id": "447700900123"
         }        
       }
     ]
@@ -215,7 +215,7 @@ You can then return a new NCCO in the response with the required fallback action
   "status": "unanswered",
   "timestamp": "2020-03-31T12:00:00.000Z",
   "headers": {
-    "callerId": "447700900123"
+    "caller-id": "447700900123"
   }  
 }
 ```
