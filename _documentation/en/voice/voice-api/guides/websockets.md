@@ -277,7 +277,7 @@ Use the following resources to help you make the most of WebSockets in your Voic
         * [Google DialogFlow](https://github.com/nexmo-se/nexmo-dialogflow)
     * Real-time transcription
         * [Amazon Transcribe](https://github.com/nexmo-community/transcribe-comprehend-multi-sub)
-        * [Google Speech-to-Text](https://github.com/nexmo-community/voice-google-speechtotext-js])
+        * [Google Speech-to-Text](https://github.com/nexmo-community/voice-google-speechtotext-js)
         * [IBM Watson](https://github.com/nexmo-community/voice-ibm-speechtotext-py)        
         * [Microsoft Azure](https://github.com/nexmo-community/voice-azure-speechtotext-py)
     * Sentiment Analysis
