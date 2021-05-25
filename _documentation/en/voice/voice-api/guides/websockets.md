@@ -233,7 +233,10 @@ If the connection is dropped by your application, you will receive an event on y
   "uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
   "conversation_uuid": "CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
   "status": "disconnected",
-  "timestamp": "2020-03-31T12:00:00.000Z"
+  "timestamp": "2020-03-31T12:00:00.000Z",
+  "headers": {
+    "caller-id": "447700900123"
+  }
 }
 ```
 
