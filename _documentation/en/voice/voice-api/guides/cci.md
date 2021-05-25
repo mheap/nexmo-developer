@@ -68,6 +68,8 @@ Use a similar approach to perform real-time analysis of the conversation between
 
 ![CCI Analytics](/images/voice-api/cci_analytics.png)
 
+Learn how to implement transcription and sentiment analysis with Amazon Transcribe and Comprehend from [this article](https://learn.vonage.com/blog/2021/05/17/processing-voice-calls-with-amazon-transcribe-comprehend/).
+
 ### Post-call Analytics
 
 The Vonage Voice API enables you to [record](/voice/voice-api/guides/recording) the conversation or a part of the conversation with minimal effort, depending on your call flow and the use case. Because you can record across [multiple channels](/voice/voice-api/guides/recording#multi-channel-recording), the audio file can be further processed by various analytics services. Check our detailed tutorial to learn how to [transcribe the recording using Amazon Transcribe](/use-cases/trancribe-amazon-api).
