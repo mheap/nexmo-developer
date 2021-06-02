@@ -286,6 +286,25 @@ page:
                   </ul>
                 </div>
               </div>
+              <div class="profile">
+                <a href="https://flowcv.me/sirsuccess">
+                  <img src="https://res.cloudinary.com/sirsuccess/image/upload/v1622597857/amani_kanu/Amani_Kanu_Associate_Software_Engineer_Project_y1zqoo.jpg" alt="Amani Kanu Avatar">
+                </a>
+                <div class="main">
+                  <h3>Amani Kanu</h3>
+                  <p>An experienced software engineer who loves thinking through problems to provide a robust software solution. Javascript and frontend lover. A community builder. a computer science graduate, ML and AI enthusiast.</p>
+                  <ul class="meta">
+                  <li>
+                      <a href="https://twitter.com/AmaniKanu"><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-twitter"></use></svg> AmaniKanu</a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/sirsuccess"><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-github"></use></svg> sirsuccess</a>
+                    </li>
+                    <li><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-world"></use></svg> Lagos, Nigeria
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
               <div class="profile">
                 <a href="https://www.maryjostaebler.com">
