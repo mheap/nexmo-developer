@@ -6,6 +6,41 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 3.0.0 - Jun 1, 2021
+
+### Added
+
+- Added `NexmoMemberSummary` returned by `conversation.getMembers(pageSize, order, listener)` (paginated), representing a subset member information.
+- Added `memberEvent.getInvitedBy()` that represents the inviter name, if exists.
+- Added `NexmoEventEmbeddedInfo` to all events returned by `event.getEmbeddedInfo()` and containing the `NexmoUser` linked to the event.
+- Added `conversation.getMember(memberId, listener)` returning the member given its identifier.
+
+### Enhancements
+
+- Improve the javadoc documentation.
+- Improve `callServer` setup time by pre-warming leg.
+- Disable media after RTC hangup event.
+
+### Breaking changes
+
+- Removed `NexmoCallMember`, replaced with `NexmoMember`.
+- Removed `callMember.getCallStatus()`, moved to `call.getMemberCallStatus(member)`.
+- Removed `callMember.mute(boolean, listener)` moved to `member.enableMute(listener)` and `member.disableMute(listener)`.
+- Removed `callMember.earmuff(boolean, listener)` moved to `member.enableEarmuff(listener)` and `member.enableEarmuff(listener)`.
+- Removed `conversation.getAllMembers()` moved to `conversation.getMembers()` (paginated).
+- Renamed `call.getCallMembers()` to `call.getAllMembers()`.
+- Renamed `call.getMyCallMember()` to `call.getMyMember()`.
+- The `legs` endpoint should be included in `acl` paths on `JWT` token creation.
+
+```json
+"acl": {
+  "paths": {
+    ...,
+    "/*/legs/**": {}
+  }
+}
+```
+
 ## Version 2.8.1 - Dec 14, 2020
 
 ### Enhancements
