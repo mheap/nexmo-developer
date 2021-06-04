@@ -76,7 +76,7 @@ To handle member related events (member invited, joined or left) you need to fil
 
 ```java
 private String getConversationLine(NexmoMemberEvent memberEvent) {
-    String user = memberEvent.getMember().getUser().getName();
+    String user = memberEvent.getEmbeddedInfo().getUser().getName();
 
     switch (memberEvent.getState()) {
         case JOINED:
@@ -97,7 +97,7 @@ Above method converts `NexmoMemberEvent` to a `String` that will be displayed as
 
 ```java
 private String getConversationLine(NexmoTextEvent textEvent) {
-    String user = textEvent.getFromMember().getUser().getName();
+    String user = textEvent.getEmbeddedInfo().getUser().getName();
     return user + "  said: " + textEvent.getText();
 }
 ```

@@ -4,22 +4,16 @@ language: kotlin
 ---
 
 ```kotlin
-val muteListener = object : NexmoRequestListener<NexmoCallMember> {
-    override fun onSuccess(callMember: NexmoCallMember?) {
-        Log.d("TAG", "Member muted $callMember")
+private val muteListener = object : NexmoRequestListener<Void> {
+    override fun onError(apiError: NexmoApiError) {
+        Timber.d("Error: Mute member ${apiError.message}")
     }
 
-    override fun onError(apiError: NexmoApiError) {
-        Log.d("TAG", "Error: Mute member ${apiError.message}")
+    override fun onSuccess(result: Void?) {
+        Timber.d("Member muted")
     }
 }
 
-// Mute member
-callMember.mute(true, muteListener)
-
-// Mute my member
-call?.myCallMember?.mute(true, muteListener)
-
-// Mute whole call
-call?.mute(true)
+val nexmoMember = call?.allMembers?.firstOrNull()
+nexmoMember?.enableMute(muteListener)
 ```

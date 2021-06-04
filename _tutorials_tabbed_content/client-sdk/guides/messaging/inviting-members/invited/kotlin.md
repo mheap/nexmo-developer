@@ -5,16 +5,16 @@ language: kotlin
 
 ```kotlin
 private val memberEventListener = object : NexmoMemberEventListener {
-    override fun onMemberInvited(memberEvent: NexmoMemberEvent) {
-        Log.d("TAG", "Member ${memberEvent.member.user.name} invited to the conversation")
-        
+    override fun onMemberInvited(event: NexmoMemberEvent, member: NexmoMemberSummary) {    
+        Log.d("TAG", "Member ${event.embeddedInfo.user.name} invited to the conversation");
+
         // Join user to the conversation (accept the invitation)
-        conversation?.join(memberEvent.member.user.name, joinConversationListener)
+        conversation?.join(event.embeddedInfo.user.name, joinConversationListener)
     }
 
-    override fun onMemberAdded(memberEvent: NexmoMemberEvent) {}
+    override fun onMemberAdded(event: NexmoMemberEvent, member: NexmoMemberSummary) {}
     
-    override fun onMemberRemoved(memberEvent: NexmoMemberEvent) {}
+    override fun onMemberRemoved(event: NexmoMemberEvent, member: NexmoMemberSummary) {}
 }
 
 private val joinConversationListener = object: NexmoRequestListener<String>{

@@ -4,22 +4,18 @@ language: java
 ---
 
 ```java
- NexmoRequestListener<NexmoCallMember> earmuffListener = new NexmoRequestListener<NexmoCallMember>() {
+ private NexmoRequestListener<Void> earmuffListener = new NexmoRequestListener<Void>() {
     @Override
-    public void onSuccess(NexmoCallMember callMember) {
-        Log.d("TAG", "Member earmuff " + callMember);
+    public void onError(NexmoApiError apiError) {
+        Timber.d("Error: Earmuff member " + apiError.getMessage());
     }
 
     @Override
-    public void onError(NexmoApiError apiError) {
-        Log.d("TAG", "Error: Earmuff member " + apiError.getMessage());
+    public void onSuccess(@Nullable Void result) {
+        Timber.d("Member earmuff ");
     }
 };
 
-// Earmuff member
-NexmoCallMember callMember = call.getCallMembers().iterator().next();
-callMember.earmuff(true, earmuffListener);
-
-// Earmuff my member
-call.getMyCallMember().earmuff(true, earmuffListener);
+NexmoMember nexmoMember = call.getAllMembers().get(0);
+nexmoMember.enableEarmuff(earmuffListener);
 ```

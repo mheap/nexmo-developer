@@ -22,7 +22,7 @@ private NexmoMessageEventListener messageListener = new NexmoMessageEventListene
 
     @Override
     public void onTypingEvent(@NonNull NexmoTypingEvent typingEvent) {
-        String userName = typingEvent.getFromMember().getUser().getName();
+        String userName = typingEvent.getEmbeddedInfo().getUser().getName();
 
         String typingState;
 

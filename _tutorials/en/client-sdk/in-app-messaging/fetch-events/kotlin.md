@@ -55,7 +55,7 @@ To handle member related events (member invited, joined or left) you need to fil
 
 ```kotlin
 private fun getConversationLine(memberEvent: NexmoMemberEvent): String {
-    val user = memberEvent.member.user.name
+    val user = memberEvent.embeddedInfo.user.name
 
     return when (memberEvent.state) {
         NexmoMemberState.JOINED -> "$user joined"
@@ -70,7 +70,7 @@ Above method converts `NexmoMemberEvent` to a `String` that will be displayed as
 
 ```kotlin
 private fun getConversationLine(textEvent: NexmoTextEvent): String {
-    val user = textEvent.fromMember.user.name
+    val user = textEvent.embeddedInfo.user.name
     return "$user said: ${textEvent.text}"
 }
 ```

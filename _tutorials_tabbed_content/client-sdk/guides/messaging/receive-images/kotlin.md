@@ -8,7 +8,7 @@ private val messageListener = object : NexmoMessageEventListener {
     override fun onTypingEvent(typingEvent: NexmoTypingEvent) {}
 
     override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {
-        val userName = attachmentEvent.fromMember.user.name
+        val userName = attachmentEvent.getEmbeddedInfo.user.name
 
         Log.d("TAG", "Image event received. User $userName")
 

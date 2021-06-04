@@ -6,7 +6,7 @@ language: kotlin
 ```kotlin
 private val messageListener = object : NexmoMessageEventListener {
     override fun onTypingEvent(typingEvent: NexmoTypingEvent) {
-        val userName = typingEvent.fromMember.user.name
+        val userName = typingEvent.getEmbeddedInfo.user.name
         val typingState = if(typingEvent.state == NexmoTypingState.ON) "typing" else "not typing"
 
         Log.d("TAG", "User $userName is $typingState")

@@ -46,7 +46,7 @@ To add navigation component dependency define a variable `ext.android_navigation
 
 ```groovy
 buildscript {
-    ext.android_navigation_version = '2.3.2'
+    ext.android_navigation_version = '2.3.5'
 
     // ...
 }
