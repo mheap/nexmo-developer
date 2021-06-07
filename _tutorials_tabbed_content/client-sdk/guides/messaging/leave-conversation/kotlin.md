@@ -4,7 +4,7 @@ language: kotlin
 ---
 
 ```kotlin
-conversation.kick("memberName", object : NexmoRequestListener<Any> {
+conversation.kick("memberId", object : NexmoRequestListener<Any> {
     override fun onSuccess(p0: Any?) {
         Log.d("TAG", "User kick success")
     }
