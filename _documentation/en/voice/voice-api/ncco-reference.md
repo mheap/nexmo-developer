@@ -235,6 +235,14 @@ Option | Description | Required
 
 The audio stream referred to should be a file in MP3 or WAV format. If you have issues with the file playing, please encode it to the following technical specification: [What kind of prerecorded audio files can I use?](https://help.nexmo.com/hc/en-us/articles/115007447567)
 
+> If you play the same audio file multiple times (using the same recording in many calls), consider adding [Cache-Control](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) header to the URL response with proper values, for example
+>
+> ```
+> Cache-Control: public, max-age=360000
+> ```
+>
+> so that the file would be stored in a cache on Vonage side instead of downloading it each time, which may significantly improve performance and user experience. Caching supported for both HTTP and HTTPS URLs.
+
 ## Input
 
 You can use the `input` action to collect digits or speech input by the person you are calling. This action is synchronous, Vonage processes the input and forwards it in the [parameters](#input-return-parameters) sent to the `eventUrl` webhook endpoint you configure in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the Call based on the user input. You could use this functionality to create an Interactive Voice Response (IVR). For example, if your user presses *4* or says "Sales", you return a [connect](#connect) NCCO that forwards the call to your sales department.
