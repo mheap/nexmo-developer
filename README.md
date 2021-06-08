@@ -48,12 +48,6 @@ The project can be run on your laptop, either directly or using Docker. These in
 
 ### Setup for running directly on your laptop
 
-Before you start, you need to make sure that you have:
-
-- [Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/) + [bundler](https://bundler.io/)
-- [PostgreSQL](https://www.postgresql.org/download/)
-- [Git](https://git-scm.com/download/mac)
-
 #### System Setup (OSX)
 
 1. Install Homebrew
