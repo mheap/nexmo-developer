@@ -11,10 +11,10 @@ Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoCl
 
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    NexmoClient.Builder().build(this)
     
     // ...
-
-    NexmoClient.Builder().build(this)
 }
 ```
 
