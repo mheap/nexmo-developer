@@ -141,7 +141,9 @@ object NavManager {
     }
 
     fun navigate(navDirections: NavDirections) {
-        navController.navigate(navDirections)
+        Handler(Looper.getMainLooper()).post(Runnable {
+            navController.navigate(navDirections)
+        })
     }
 
     fun popBackStack(@IdRes destinationId: Int, inclusive: Boolean) {
