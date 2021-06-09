@@ -10,7 +10,7 @@ private NexmoMessageEventListener messageListener = new NexmoMessageEventListene
 
     @Override
     public void onAttachmentEvent(@NonNull NexmoAttachmentEvent attachmentEvent) {
-        String userName = attachmentEvent.getFromMember().getUser().getName();
+        String userName = attachmentEvent.getEmbeddedInfo().getUser().getName();
 
         Log.d("TAG", "Image event received. User " +  userName);
 

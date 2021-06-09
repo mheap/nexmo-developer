@@ -180,8 +180,8 @@ Now add `getConversationLine` method needs to support `NexmoMediaEvent` type as 
 
 ```kotlin
 private String getConversationLine(NexmoMediaEvent mediaEvent) {
-    String user = mediaEvent.getFromMember().getUser().getName();
-    return user + "  media state: " + mediaEvent.getMediaState();
+    String user = mediaEvent.embeddedInfo.user.name;
+    return "$user media state: ${mediaEvent.mediaState}"
 }
 ```
 

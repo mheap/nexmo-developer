@@ -10,7 +10,7 @@ private val messageListener = object : NexmoMessageEventListener {
     override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {}
 
     override fun onTextEvent(textEvent: NexmoTextEvent) {
-        val userName = textEvent.fromMember.user.name
+        val userName = textEvent.getEmbeddedInfo.user.name
         val text = textEvent.text
 
         Log.d("TAG", "Message received. User $userName : $text")

@@ -12,7 +12,7 @@ private val messageListener = object : NexmoMessageEventListener {
     override fun onTextEvent(textEvent: NexmoTextEvent) {}
 
     override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {
-        val userName = seenEvent.fromMember.user.name
+        val userName = seenEvent.getEmbeddedInfo.user.name
 
         Log.d("TAG", "Event ${seenEvent.initialEventId()} seen by User $userName")
     }

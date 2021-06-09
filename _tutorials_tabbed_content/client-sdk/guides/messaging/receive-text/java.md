@@ -8,7 +8,7 @@ NexmoMessageEventListener messageListener = new NexmoMessageEventListener() {
 
     @Override
     public void onTextEvent(@NonNull NexmoTextEvent textEvent) {
-        String userName = textEvent.getFromMember().getUser().getName();
+        String userName = textEvent.getEmbeddedInfo().getUser().getName();
         String text = textEvent.getText();
 
         Log.d("TAG", "Message received. User " + userName + " : " + text);

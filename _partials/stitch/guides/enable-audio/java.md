@@ -192,7 +192,7 @@ Now add `getConversationLine` method needs to support `NexmoMediaEvent` type as 
 
 ```java
 private String getConversationLine(NexmoMediaEvent mediaEvent) {
-    String user = mediaEvent.getFromMember().getUser().getName();
+    String user = mediaEvent.getEmbeddedInfo().getUser().getName();
     return user + " media state: " + mediaEvent.getMediaState();
 }
 ```
