@@ -235,13 +235,13 @@ Option | Description | Required
 
 The audio stream referred to should be a file in MP3 or WAV format. If you have issues with the file playing, please encode it to the following technical specification: [What kind of prerecorded audio files can I use?](https://help.nexmo.com/hc/en-us/articles/115007447567)
 
-> If you play the same audio file multiple times (using the same recording in many calls), consider adding [Cache-Control](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) header to the URL response with proper values, for example
+> If you play the same audio file multiple times, for example using the same recording in many calls, consider adding a [Cache-Control](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) header to the URL response with proper values.
 >
 > ```
 > Cache-Control: public, max-age=360000
 > ```
 >
-> so that the file would be stored in a cache on Vonage side instead of downloading it each time, which may significantly improve performance and user experience. Caching supported for both HTTP and HTTPS URLs.
+> This allows Vonage to cache your audio file instead of downloading it each time, which may significantly improve performance and user experience. Caching is supported for both HTTP and HTTPS URLs.
 
 ## Input
 
