@@ -60,7 +60,7 @@ You can specify any additional headers you need when sending a SIP Request. Any 
 
 You can use the Voice API NCCO `connect` action to connect a call to your SIP endpoints. 
 
-You may also send Custom SIP Headers to your SIP endpoints using the VAPI NCCO `connect` action.
+You may also send Custom SIP Headers to your SIP endpoints using the Voice API NCCO `connect` action.
 
 The detailed documentation is [here](/voice/voice-api/ncco-reference#connect).
 
