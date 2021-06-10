@@ -58,7 +58,11 @@ You can specify any additional headers you need when sending a SIP Request. Any 
 
 ## Receiving Calls From Vonage
 
-You can use the Voice API NCCO connect action to connect a call to your SIP endpoints. The detailed documentation is [here](/voice/voice-api/ncco-reference#connect).
+You can use the Voice API NCCO `connect` action to connect a call to your SIP endpoints. 
+
+You may also send Custom SIP Headers to your SIP endpoints using the VAPI NCCO `connect` action.
+
+The detailed documentation is [here](/voice/voice-api/ncco-reference#connect).
 
 ## SIP Connect
 
