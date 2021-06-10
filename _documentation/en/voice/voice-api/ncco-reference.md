@@ -179,8 +179,10 @@ Value | Description
 Value | Description
 -- | --
 `type` | The endpoint type: `sip` for SIP.
-`uri` | the SIP URI to the endpoint you are connecting to in the format `sip:rebekka@sip.example.com`. To use [TLS and/or SRTP](/voice/sip/overview#protocols), include respectively `transport=tls` or `media=srtp` to the URL with the semicolon `;` as a delimiter, for example: `sip:rebekka@sip.example.com;transport=tls;media=srtp`. 
-`headers` | `key` => `value` string pairs containing any metadata you need e.g. `{ "location": "New York City", "occupation": "developer" }`
+`uri` | The SIP URI to the endpoint you are connecting to in the format `sip:rebekka@sip.example.com`. To use [TLS and/or SRTP](/voice/sip/overview#protocols), include respectively `transport=tls` or `media=srtp` to the URL with the semicolon `;` as a delimiter, for example: `sip:rebekka@sip.example.com;transport=tls;media=srtp`. 
+`headers` | `key` => `value` string pairs containing any metadata you need e.g. `{ "location": "New York City", "occupation": "developer" }`. The headers are transmitted as part of the SIP INVITE as `X-key: value` headers. So in the example, these headers are sent: `X-location: New York City` and `X-occupation: developer`. 
+
+> To understand how your application can receive and handle SIP Custom Headers instead, check the following page on [Programmable SIP](/voice/sip/concepts/programmable-sip#custom-sip-headers)
 
 #### VBC - the Vonage Business Cloud (VBC) extension to connect to
 
