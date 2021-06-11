@@ -27,7 +27,7 @@ Typing Indicators are used to notify conversation members (of the same conversat
 
 ### Send typing state events
 
-Set the current typing (on/off) state of the member when a given member starts or stops typing a text message:
+Set the Member's current typing (on/off) state when they start or stop typing a text message:
 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/typing-indicators-producer
@@ -35,7 +35,7 @@ source: _tutorials_tabbed_content/client-sdk/guides/messaging/typing-indicators-
 
 ### Listen for the state of other members
 
-The above call will produce typing (on/off) event that will be received by other members:
+The following will listen for the typing (on/off) events created by the above calls:
 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/typing-indicators-consumer
