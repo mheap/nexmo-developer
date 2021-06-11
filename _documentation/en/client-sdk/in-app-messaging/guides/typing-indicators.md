@@ -18,17 +18,27 @@ source: _partials/client-sdk/messaging/chat-app-tutorial-note.md
 
 This guide will make use of the following concepts:
 
-- **Conversation Events** - `text:typing:on` and `text:typing:off` events that fire on a Conversation, after you are a Member
+- **Conversation Events** - `text:typing:on` (start typying) and `text:typing:off` (stop typying) events that fire on a Conversation, after you are a Member
 
 
 ## Typing Indicators
 
-Given a conversation you are already a member of, a `text:typing:on` event will be received when a member starts typing a `text` message. 
+Typing Indicators are used to notify conversation members (of the same conversation) on whatever or not user is currently typing a text message.
 
-Similarly, a `text:typing:off` event will be received when a member stops typing.
+### Send typying state events
+
+Set the current typying (on/off) state of the member when a given member starts or stops typing a text message:
 
 ```tabbed_content
-source: _tutorials_tabbed_content/client-sdk/guides/messaging/typing-indicators
+source: _tutorials_tabbed_content/client-sdk/guides/messaging/typing-indicators-producer
+```
+
+### Listen for the state of other members
+
+The above call will produce typing (on/off) event that will be received by other members:
+
+```tabbed_content
+source: _tutorials_tabbed_content/client-sdk/guides/messaging/typing-indicators-consumer
 ```
 
 ## Reference
