@@ -23,7 +23,7 @@ This guide will make use of the following concepts:
 
 ## Typing Indicators
 
-Typing Indicators are used to notify conversation members on whether or not member is currently typing a text message.
+Typing Indicators are used to notify conversation members on whether or not a member is currently typing a text message.
 
 ### Send typing state events
 
