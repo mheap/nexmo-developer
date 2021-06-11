@@ -7,6 +7,6 @@ language: java
 // call this when a member starts typing
 conversation.startTyping();
 
-// call this when member stops typing
+// call this when a member stops typing
 conversation.stopTyping();
 ```
