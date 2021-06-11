@@ -8,6 +8,6 @@ menu_weight: 2
 // call this when a member starts typing
 [conversation sendStartTyping:^(NSError * _Nullable error) completionHandler];
 
-// call this when member stops typing
+// call this when a member stops typing
 [conversation sendStopTyping:^(NSError * _Nullable error) completionHandler];
 ```
