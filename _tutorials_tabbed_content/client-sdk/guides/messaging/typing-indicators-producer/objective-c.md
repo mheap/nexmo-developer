@@ -5,9 +5,9 @@ menu_weight: 2
 ---
 
 ```objective_c
-// call this when users starts typing
+// call this when member starts typing
 [conversation sendStartTyping:^(NSError * _Nullable error) completionHandler];
 
-// call this when members stops typing
+// call this when member stops typing
 [conversation sendStopTyping:^(NSError * _Nullable error) completionHandler];
 ```
