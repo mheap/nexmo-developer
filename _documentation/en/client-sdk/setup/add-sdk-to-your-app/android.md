@@ -37,7 +37,7 @@ source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/dependencies
 
 ### Set Java 1.8
 
-Set Java 1.8 in your app level `build.gradle` file or `build.gradle.kts` (typically `app/build.gradle` or typically `app/build.gradle.kts`):
+Set Java 1.8 in your app level `build.gradle` or `build.gradle.kts` file (typically `app/build.gradle` or `app/build.gradle.kts`):
 
  ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/gradlejava18'
