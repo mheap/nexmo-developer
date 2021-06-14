@@ -19,7 +19,11 @@ Open your Android project codebase in your IDE.
 
 ### Add dependencies
 
-First, you need to add a custom Maven URL repository to your Gradle configuration. Add the following URL in your project-level `build.gradle` file:
+First, you need to add a custom Maven URL repository to your Gradle configuration. 
+
+> NOTE:  There are two languages used to define Gradle build scripts - Groovy (`build.gradle` file) and Kotlin Gradle Script (`build.gradle.kts` file). Kotlin-Android project may still use Groovy as the language for the build scripts. Please check the file extension to determine the language for the build script files.
+
+Add the following URL in your project-level `build.gradle` or `build.gradle.kts` file:
 
  ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/maven'
@@ -33,7 +37,7 @@ source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/dependencies
 
 ### Set Java 1.8
 
-Set Java 1.8 in your app level `build.gradle` file (typically `app/build.gradle`):
+Set Java 1.8 in your app level `build.gradle` file or `build.gradle.kts` (typically `app/build.gradle` or typically `app/build.gradle.kts`):
 
  ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/gradlejava18'
