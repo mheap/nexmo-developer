@@ -21,7 +21,7 @@ Open your Android project codebase in your IDE.
 
 First, you need to add a custom Maven URL repository to your Gradle configuration. 
 
-> NOTE:  There are two languages used to define Gradle build scripts - Groovy (`build.gradle` file) and Kotlin Gradle Script (`build.gradle.kts` file). Kotlin-Android project may still use Groovy as the language for the build scripts. Please check the file extension to determine the language for the build script files.
+> NOTE:  There are two languages used to define Gradle build scripts - Groovy (`build.gradle` file) and Kotlin Gradle Script (`build.gradle.kts` file). A Kotlin-Android project may still use Groovy as the language for the build scripts. Please check the file extension to determine the language for the build script files.
 
 Add the following URL in your project-level `build.gradle` or `build.gradle.kts` file:
 
