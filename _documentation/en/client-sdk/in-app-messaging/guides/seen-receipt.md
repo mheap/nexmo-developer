@@ -19,6 +19,13 @@ This guide will make use of the following concepts:
 
 - **Conversation Events** - `text:seen` events that fire on a Conversation, after you are a Member
 
+## Set TextEvent to seen
+
+There is the `seen()` method on a TextEvent that will set its status to seen. The following code snippet will set a text's status to seen once a text event happens in the conversation.
+
+```tabbed_content
+source: _tutorials_tabbed_content/client-sdk/guides/messaging/seen-set-status
+```
 
 ## Text Seen Receipt
 
