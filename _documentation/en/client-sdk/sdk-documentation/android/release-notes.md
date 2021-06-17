@@ -6,6 +6,13 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 3.0.1 - Jun 16, 2021
+
+### Enhancements
+
+- Fixed a bug on DTMF dispatch of a callback to event_url
+- Fixed a bug of not receiving typing events from Web to Android
+
 ## Version 3.0.0 - Jun 1, 2021
 
 ### Added
