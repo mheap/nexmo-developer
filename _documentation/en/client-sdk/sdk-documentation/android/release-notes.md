@@ -35,6 +35,7 @@ navigation_weight: 0
 - Removed `callMember.mute(boolean, listener)` moved to `member.enableMute(listener)` and `member.disableMute(listener)`.
 - Removed `callMember.earmuff(boolean, listener)` moved to `member.enableEarmuff(listener)` and `member.enableEarmuff(listener)`.
 - Removed `conversation.getAllMembers()` moved to `conversation.getMembers()` (paginated).
+- Removed `NexmoConversationListener.onMemberUpdated`, replaced with `NexmoMemberEventListener` that provide `onMemberInvited`, `onMemberAdded`, `onMemberRemoved` subscribing by `conversation.addMemberEventListener()`.
 - Renamed `call.getCallMembers()` to `call.getAllMembers()`.
 - Renamed `call.getMyCallMember()` to `call.getMyMember()`.
 - The `legs` endpoint should be included in `acl` paths on `JWT` token creation.
