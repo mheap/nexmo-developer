@@ -12,6 +12,13 @@ navigation_weight: 0
 
 - Fix bug on `DTMF` dispatch of callback to `event_url`
 
+## Version 8.0.3 - May 18, 2021
+
+### Fixes
+
+- Fix out of order internal events processing in the events queue
+- Fix deprecation warning message for `rtcstats:report`
+
 ## Version 8.0.1 - April 29, 2021
 
 ### Fixes
