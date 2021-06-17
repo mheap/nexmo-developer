@@ -6,18 +6,18 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.0.4 - June 16, 2021
+
+### Fixes
+
+- Fix bug on `DTMF` dispatch of callback to `event_url`
+
 ## Version 8.0.1 - April 29, 2021
 
 ### Fixes
 
 - Update Typescript definitions
 - Fix bug on IP-IP call scenario involving Native SDKs (not populating properly the `Conversation.members` Map)
-
-## Version 8.0.4 - June 16, 2021
-
-### Fixes
-
-- Fix bug on `DTMF` dispatch of callback to `event_url`
 
 ## Version 7.1.0 - April 07, 2021
 
