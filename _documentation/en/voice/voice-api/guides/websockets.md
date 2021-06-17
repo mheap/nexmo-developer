@@ -276,7 +276,7 @@ Use the following resources to help you make the most of WebSockets in your Voic
     * [Socket phone](https://github.com/nexmo-community/socketphone): Connect a Vonage WebSocket call to your local machine
 * AI Connectors:
     * Voice Bots
-        * [Amazon Lex](https://github.com/nexmo/lex-connector)
+        * [Amazon Lex](https://github.com/nexmo-community/lex-reference-connection), see also [sample app](https://github.com/nexmo-community/lex-sample-voice-application) and [tutorial](https://learn.vonage.com/blog/2021/03/10/connecting-voice-calls-to-an-amazon-lex-bot/)
         * [Google Dialogflow](https://github.com/nexmo-se/nexmo-dialogflow)
     * Real-time transcription
         * [Amazon Transcribe](https://github.com/nexmo-community/transcribe-comprehend-multi-sub)
@@ -288,6 +288,7 @@ Use the following resources to help you make the most of WebSockets in your Voic
         * [IBM Watson](https://github.com/nexmo-community/sentiment-analysis-websockets)
 * Blog articles:
     * [Processing Voice Calls With Amazon Transcribe & Comprehend](https://learn.vonage.com/blog/2021/05/17/processing-voice-calls-with-amazon-transcribe-comprehend/)
+    * [Connecting Voice Calls to an Amazon Lex Bot](https://learn.vonage.com/blog/2021/03/10/connecting-voice-calls-to-an-amazon-lex-bot/)
     * [How to Make and Receive Phone Calls with Nuxt.js](https://learn.vonage.com/blog/2020/03/02/how-make-receive-phone-calls-with-nuxt-js-dr/)
     * [Creating a WebSocket Server with the Spark Framework](https://learn.vonage.com/blog/2018/10/15/create-websocket-server-spark-framework-dr/)
     * [Creating a WebSocket Server with Spring Boot](https://learn.vonage.com/blog/2018/10/08/create-websocket-server-spring-boot-dr/)
