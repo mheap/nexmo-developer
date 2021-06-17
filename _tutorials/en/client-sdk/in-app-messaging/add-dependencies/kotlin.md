@@ -15,7 +15,7 @@ You need to add a custom Maven URL repository to your Gradle configuration. Add 
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         
         maven {
             url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
@@ -32,7 +32,7 @@ Now add the Client SDK to the project. Add the following dependency in the modul
 dependencies {
     // ...
 
-    implementation 'com.nexmo.android:client-sdk:2.8.1'
+    implementation 'com.nexmo.android:client-sdk:3.0.0'
 }
 ```
 
@@ -46,7 +46,7 @@ To add navigation component dependency define a variable `ext.android_navigation
 
 ```groovy
 buildscript {
-    ext.android_navigation_version = '2.3.2'
+    ext.android_navigation_version = '2.3.5'
 
     // ...
 }

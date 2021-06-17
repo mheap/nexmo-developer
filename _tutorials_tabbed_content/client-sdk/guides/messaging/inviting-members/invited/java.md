@@ -6,18 +6,18 @@ language: java
 ```java
 NexmoMemberEventListener memberEventListener = new NexmoMemberEventListener() {
     @Override
-    public void onMemberInvited(@NonNull NexmoMemberEvent memberEvent) {
-        Log.d("TAG", "Member " + memberEvent.member.user.name + " invited to the conversation");
+    public void onMemberInvited(@NonNull @NotNull NexmoMemberEvent event, @NonNull @NotNull NexmoMemberSummary member) {
+        Log.d("TAG", "Member " + event.embeddedInfo().getUser().getName() + " invited to the conversation");
 
         // Join user to the conversation (accept the invitation)
-        conversation.join(memberEvent.getMember().getUser().getName(), joinConversationListener);
+        conversation.join(event.embeddedInfo().getUser().getName(), joinConversationListener);
     }
 
     @Override
-    public void onMemberAdded(@NonNull NexmoMemberEvent memberEvent) {}
+    public void onMemberAdded(@NonNull @NotNull NexmoMemberEvent event, @NonNull @NotNull NexmoMemberSummary member) {}
 
     @Override
-    public void onMemberRemoved(@NonNull NexmoMemberEvent memberEvent) {}
+    public void onMemberRemoved(@NonNull @NotNull NexmoMemberEvent event, @NonNull @NotNull NexmoMemberSummary member) {}
 };
 
 NexmoRequestListener<String> joinConversationListener = new NexmoRequestListener<String>() {

@@ -4,12 +4,16 @@ language: kotlin
 ---
 
 ```kotlin
-// Unmute member
-callMember.mute(false, muteListener)
+private val muteListener = object : NexmoRequestListener<Void> {
+    override fun onError(apiError: NexmoApiError) {
+        Timber.d("Error: Unmute member ${apiError.message}")
+    }
 
-// Unmute my member
-call?.myCallMember?.mute(false, muteListener)
+    override fun onSuccess(result: Void?) {
+        Timber.d("Member unmuted")
+    }
+}
 
-// Unmute whole call
-call?.mute(false)
+val nexmoMember = call?.myMember
+nexmoMember?.disableMute(muteListener)
 ```

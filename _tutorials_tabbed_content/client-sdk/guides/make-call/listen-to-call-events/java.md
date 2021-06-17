@@ -6,23 +6,23 @@ language: java
 ```java
 NexmoCallEventListener callEventListener = new NexmoCallEventListener() {
     @Override
-    public void onMemberStatusUpdated(NexmoCallMemberStatus $memberStatus, NexmoCallMember callMember) {
-        Log.d("TAG", "onMemberStatusUpdated(): status: " + $memberStatus + " callMember: " + callMember);
+    public void onMemberStatusUpdated(NexmoCallMemberStatus $memberStatus, NexmoMember nexmoMember) {
+        Log.d("TAG", "onMemberStatusUpdated(): status: " + $memberStatus + " nexmoMember: " + nexmoMember);
     }
 
     @Override
-    public void onMuteChanged(NexmoMediaActionState muteState, NexmoCallMember callMember) {
-        Log.d("TAG", "NexmoMediaActionState(): muteState: " + muteState + ", callMember: " + callMember);
+    public void onMuteChanged(NexmoMediaActionState muteState, NexmoMember nexmoMember) {
+        Log.d("TAG", "NexmoMediaActionState(): muteState: " + muteState + ", nexmoMember: " + nexmoMember);
     }
 
     @Override
-    public void onEarmuffChanged(NexmoMediaActionState earmuffState, NexmoCallMember callMember) {
-        Log.d("TAG", "onEarmuffChanged(): earmuffState: " + earmuffState + ", callMember: " + callMember);
+    public void onEarmuffChanged(NexmoMediaActionState earmuffState, NexmoMember nexmoMember) {
+        Log.d("TAG", "onEarmuffChanged(): earmuffState: " + earmuffState + ", nexmoMember: " + nexmoMember);
     }
 
     @Override
-    public void onDTMF(String digit, NexmoCallMember callMember) {
-        Log.d("TAG", "onDTMF(): digit:" + digit + ", callMember: " + callMember);
+    public void onDTMF(String digit, NexmoMember nexmoMember) {
+        Log.d("TAG", "onDTMF(): digit:" + digit + ", nexmoMember: " + nexmoMember);
     }
 };
 

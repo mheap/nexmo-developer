@@ -22,8 +22,11 @@ T-Mobile and AT&T’s new code of conduct prohibits the use of shared originator
 To learn more about 10 DLC including important dates and carrier-specific information, see the knowledge base.
 
 If you have decided moving to 10 DLC is right for your campaigns, you must:
+    
     1. [Register your brand](#register-a-brand)
-    2. Register a campaign (coming soon)
+
+    2. [Register a campaign] (#register-a-campaign)
+
     3. Link a number (coming soon)
 
 ## Register a brand

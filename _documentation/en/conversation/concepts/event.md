@@ -11,8 +11,11 @@ If a Vonage Application has `rtc` as a capability, it will receive the dispatche
 
 Event type | Description
 ----|----
-`app:knocking:cancel` | 
+_General_|
 `app:knocking` | 
+`app:knocking:cancel` | 
+`leg:status:update` |
+_Audio_|
 `audio:dtmf` | DTMF tone is received into the Leg.
 `audio:earmuff:off` | Leg is unearmuffed.
 `audio:earmuff:on` | Leg is earmuffed.
@@ -25,39 +28,46 @@ Event type | Description
 `audio:record:done` | 
 `audio:record` | Call is being recorded.
 `audio:ringing:start` | 
+`audio:ringing:stop` | 
+`audio:asr:done` |
+`audio:asr:record:done` |
 `audio:say:stop` | 
 `audio:say:done` | 
 `audio:say` | 
 `audio:speaking:on` | 
-`audio:speaking:off` |  
-`conversation:created` | new Conversation is created.
-`conversation:deleted` | Conversation object is deleted.
-`conversation:updated` | Conversation object is updated.
-`member:invited` | Member is invited into a Conversation.
-`member:joined` | Member joins a Conversation.
-`member:left` | Member leaves a Conversation.
-`member:media` | 
-`event:delete` | Event object is deleted.
-`image:delivered` | Image is delivered.
-`image:seen` | Image is viewed by the recipient.
-`image` | Image is uploaded.
-`rtc:status` | 
-`rtc:transfer` | 
-`rtc:hangup` | 
-`rtc:terminate` | 
-`sip:status` | 
-`sip:answered` | SIP call is answered.
-`sip:machine` | When the entity answering the SIP call is a machine.
-`sip:hangup` | User on a SIP Call hangs up.
-`sip:ringing` | SIP call starts ringing, such as when Vonage makes an Outbound Call.
+`audio:speaking:off` |
+_Text_ |
 `text:seen` | Text message is seen by the recipient.
 `text:delivered` | Text message is delivered to the recipient.
 `text` | new In App Text  message was created.
 `text:update` | Text message was updated.
 `text:typing:on` | Member is typing.
 `text:typing:off` |  Member stops typing.
-`video:mute:off` | Member video is unmuted.
-`video:mute:on` | Member video is muted
+_Image_ |
+`image:delivered` | Image is delivered.
+`image:seen` | Image is viewed by the recipient.
+`image` | Image is uploaded.
+_Conversation_ |
+`conversation:created` | new Conversation is created.
+`conversation:deleted` | Conversation object is deleted.
+`conversation:updated` | Conversation object is updated.
+_Member_ |
+`member:invited` | Member is invited into a Conversation.
+`member:joined` | Member joins a Conversation.
+`member:left` | Member leaves a Conversation.
+`member:media` |
+_RTC_ |
+`rtc:status` | 
+`rtc:transfer` | 
+`rtc:hangup` | 
+`rtc:terminate` | 
+`rtc:answered` | 
+_SIP_ |
+`sip:status` | 
+`sip:answered` | SIP call is answered.
+`sip:machine` | When the entity answering the SIP call is a machine.
+`sip:hangup` | User on a SIP Call hangs up.
+`sip:ringing` | SIP call starts ringing, such as when Vonage makes an Outbound Call.
 
 ## Handling Events
 

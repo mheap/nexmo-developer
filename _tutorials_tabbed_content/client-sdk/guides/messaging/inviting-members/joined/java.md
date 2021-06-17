@@ -10,7 +10,7 @@ NexmoMemberEventListener memberEventListener = new NexmoMemberEventListener() {
 
     @Override
     public void onMemberAdded(@NonNull NexmoMemberEvent memberEvent) {
-        Log.d("TAG", "Member " + memberEvent.getMember().getUser().getName() + " added the conversation");
+        Log.d("TAG", "Member " + memberEvent.getEmbeddedInfo().getUser().getName() + " added the conversation");
     }
 
     @Override
