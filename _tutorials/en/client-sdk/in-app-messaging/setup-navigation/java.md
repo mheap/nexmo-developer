@@ -128,7 +128,12 @@ public final class NavManager {
     }
 
     public void navigate(NavDirections navDirections) {
-        navController.navigate(navDirections);
+        new Handler(Looper.getMainLooper()).post(new Runnable() {
+            @Override
+            public void run() {
+                navController.navigate(navDirections);
+            }
+        });
     }
 }
 ```

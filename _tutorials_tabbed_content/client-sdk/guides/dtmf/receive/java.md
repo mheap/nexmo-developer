@@ -21,17 +21,17 @@ NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<NexmoCal
 NexmoCallEventListener callEventListener = new NexmoCallEventListener() {
 
     @Override
-    public void onMemberStatusUpdated(NexmoCallMemberStatus $memberStatus, NexmoCallMember callMember) {}
+    public void onMemberStatusUpdated(NexmoCallMemberStatus $memberStatus, NexmoMember nexmoMember) {}
 
     @Override
-    public void onMuteChanged(NexmoMediaActionState muteState, NexmoCallMember callMember) {}
+    public void onMuteChanged(NexmoMediaActionState muteState, NexmoMember nexmoMember) {}
 
     @Override
-    public void onEarmuffChanged(NexmoMediaActionState earmuffState, NexmoCallMember callMember) {}
+    public void onEarmuffChanged(NexmoMediaActionState earmuffState, NexmoMember nexmoMember) {}
 
     @Override
-    public void onDTMF(String digit, NexmoCallMember callMember) {
-        Log.d("TAG", "onDTMF(): digit:" + digit + ", callMember: " + callMember);
+    public void onDTMF(String digit, NexmoMember nexmoMember) {
+        Log.d("TAG", "onDTMF(): digit:" + digit + ", nexmoMember: " + nexmoMember);
     }
 };
 

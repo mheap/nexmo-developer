@@ -54,7 +54,7 @@ If you want to enhance your IVR with natural language understanding (NLU), you m
 
 ![Voice Bot](/images/voice-api/cci_bot.png)
 
-For a quick implementation, clone the reference [Lex Connector](https://github.com/Nexmo/lex-connector) application, which has everything you need to connect the voice calls to your Lex bot.
+For a quick implementation, clone the reference [Lex Connector](https://github.com/nexmo-community/lex-reference-connection) application, which has everything you need to connect the voice calls to your Lex bot and follow this [tutorial](https://learn.vonage.com/blog/2021/03/10/connecting-voice-calls-to-an-amazon-lex-bot/).
 
 Furthermore, when your bot detects user intent to have a conversation with a human agent, your application may send a [transfer](/voice/voice-api/code-snippets/transfer-a-call) request to the Vonage API, and it will connect the user to your Contact Center:
 
@@ -67,6 +67,8 @@ Provide full context of the bot conversation to your CC by connecting directly t
 Use a similar approach to perform real-time analysis of the conversation between the user and the agent: the user is connected to your contact center through the Vonage voice platform with the [`connect`](/voice/voice-api/ncco-reference#connect) action sent from your application, then another `connect`action is used to establish a [WebSocket](/voice/voice-api/guides/websockets) connection for sending the call media to your app, which then sends it to the analytics engine. Your application may then send the results of the analysis, such as sentiment or call hints to the agent to some widget on your agent's screen. You could embed this widget in your contact center user interface or use it in a standalone application:
 
 ![CCI Analytics](/images/voice-api/cci_analytics.png)
+
+Learn how to implement transcription and sentiment analysis with Amazon Transcribe and Comprehend from [this article](https://learn.vonage.com/blog/2021/05/17/processing-voice-calls-with-amazon-transcribe-comprehend/).
 
 ### Post-call Analytics
 

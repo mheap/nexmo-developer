@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.0.4 - June 16, 2021
+
+### Fixes
+
+- Fix bug on `DTMF` dispatch of callback to `event_url`
+
 ## Version 8.0.3 - May 18, 2021
 
 ### Fixes

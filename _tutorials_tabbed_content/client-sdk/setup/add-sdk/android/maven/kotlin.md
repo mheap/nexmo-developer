@@ -9,7 +9,7 @@ language: kotlin
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven("https://artifactory.ess-dev.com/artifactory/gradle-dev-local")
     }
 } 

@@ -12,10 +12,10 @@ Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoCl
 ```java
 @Override
 protected void onCreate(@Nullable Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    new NexmoClient.Builder().build(this);
     
     // ...
-
-    new NexmoClient.Builder().build(this);
 }
 ```
 
