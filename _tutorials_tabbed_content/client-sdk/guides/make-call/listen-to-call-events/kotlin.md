@@ -5,20 +5,20 @@ language: kotlin
 
 ```kotlin
 val callEventListener = object : NexmoCallEventListener {
-    override fun onDTMF(digit: String?, callMember: NexmoCallMember?) {
-        Log.d("TAG", "onDTMF(): digit: $digit, callMember: $callMember")
+    override fun onDTMF(digit: String?, nexmoMember: NexmoMember?) {
+        Log.d("TAG", "onDTMF(): digit: $digit, nexmoMember: $nexmoMember")
     }
 
-    override fun onMemberStatusUpdated(memberStatus: NexmoCallMemberStatus?, callMember: NexmoCallMember?) {
-        Log.d("TAG", "onMemberStatusUpdated(): status: $memberStatus, callMember: $callMember")
+    override fun onMemberStatusUpdated(memberStatus: NexmoCallMemberStatus?, nexmoMember: NexmoMember?) {
+        Log.d("TAG", "onMemberStatusUpdated(): status: $memberStatus, nexmoMember: $nexmoMember")
     }
 
-    override fun onMuteChanged(muteState: NexmoMediaActionState?, callMember: NexmoCallMember?) {
-        Log.d("TAG", ":NexmoMediaActionState(): muteState: $muteState, callMember: $callMember")
+    override fun onMuteChanged(muteState: NexmoMediaActionState?, nexmoMember: NexmoMember?) {
+        Log.d("TAG", ":NexmoMediaActionState(): muteState: $muteState, nexmoMember: $nexmoMember")
     }
 
-    override fun onEarmuffChanged(earmuffState: NexmoMediaActionState?, callMember: NexmoCallMember?) {
-        Log.d("TAG", "onEarmuffChanged(): earmuffState: $earmuffState, callMember: $callMember")
+    override fun onEarmuffChanged(earmuffState: NexmoMediaActionState?, nexmoMember: NexmoMember?) {
+        Log.d("TAG", "onEarmuffChanged(): earmuffState: $earmuffState, nexmoMember: $nexmoMember")
     }
 }
 

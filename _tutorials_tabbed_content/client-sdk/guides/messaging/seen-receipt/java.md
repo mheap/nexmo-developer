@@ -16,7 +16,7 @@ private NexmoMessageEventListener messageListener = new NexmoMessageEventListene
 
     @Override
     public void onSeenReceipt(@NonNull NexmoSeenEvent seenEvent) {
-        String userName = seenEvent.getFromMember().getUser().getName();
+        String userName = seenEvent.getEmbeddedInfo().getUser().getName();
 
         Log.d("TAG", "Event " + seenEvent.initialEventId() + "seen by User " + userName);
     }

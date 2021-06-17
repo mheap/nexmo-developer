@@ -1,6 +1,6 @@
 ---
 title: WebSockets
-description: You can connect the audio of a call to a websocket to work with it in real time.
+description: You can connect the audio of a call to a WebSocket to work with it in real time.
 navigation_weight: 7
 ---
 
@@ -8,7 +8,7 @@ navigation_weight: 7
 
 This guide introduces you to WebSockets and how and why you might want to use them in your Vonage Voice API applications.
 
-> For sample applications and other resources see [further reading](#further-reading).
+> For sample applications and AI connectors, see [further reading](#further-reading).
 
 
 ## What is a WebSocket?
@@ -19,11 +19,9 @@ Using Vonage’s Voice API, you can connect phone calls to WebSocket endpoints. 
 
 This enables some really innovative use cases, such as:
 
-* Recording, transcribing or otherwise analyzing calls using third party solutions. For example: performing sentiment analysis in call centers to determine customer satisfaction.
-* Automating outbound calls with bots to perform tasks such as restaurant booking or more complex ones, such as requesting information from field experts.
-* Using an "expert" bot that accepts inbound calls and provides tailored advice. For example, a doctor in a remote area can call a medical expert bot and get access to the same medical advice available to specialists in big cities.
-* Including artificial intelligence engines in conference calls to enable better decision making.
-
+* Recording, transcribing or otherwise analyzing calls using third party solutions. For example: performing [sentiment analysis](https://learn.vonage.com/blog/2021/05/17/processing-voice-calls-with-amazon-transcribe-comprehend/) in call centers to determine customer satisfaction.
+* Automating calls with bots to perform tasks such as [food ordering](https://www.vonage.com/resources/customers/novo-labs/) or requesting information from field experts.
+* Including [artificial intelligence](/voice/voice-api/guides/cci) engines in conference calls to enable better decision making.
 
 ## Working with WebSockets
 
@@ -50,13 +48,8 @@ To instruct Vonage to connect to a WebSocket your application server must return
                 "uri": "wss://example.com/socket",
                 "content-type": "audio/l16;rate=16000",
                 "headers": {
-                    "name": "J Doe",
-                    "age": 40,
-                    "address": {
-                        "line_1": "Apartment 14",
-                        "line_2": "123 Example Street",
-                        "city": "New York City"
-                    }
+                    "language": "en-GB",                    
+                    "caller-id": "447700900123"
                 }
            }
        ]
@@ -70,7 +63,7 @@ Field | Example | Description
  -- | -- | --
 `uri` | `wss://example.com/socket` | The endpoint of your WebSocket server that Vonage will connect to
 `content-type` | `audio/l16;rate=16000` | A string representing the audio sampling rate, either `audio/l16;rate=16000` or `audio/l16;rate=8000`. Most real-time transcription services work best with audio at 8kHz.
-`headers` | `{ 'name': 'J Doe', 'age': 40 }` | An object of key/value pairs with additional optional properties to send to your Websocket server, with a maximum length of 512 bytes.
+`headers` | `{ 'language': 'en-GB', 'caller-id': '447700900123' }` | An object of key/value pairs with additional optional properties to send to your Websocket server, with a maximum length of 512 bytes.
 
 You can find all the data fields for an NCCO at the [NCCO Reference Guide](/voice/voice-api/ncco-reference).
 
@@ -102,7 +95,7 @@ Consider the following `connect` action example:
               "content-type": "audio/l16;rate=16000", 
               "headers": {
                  "language": "en-GB",
-                 "callerID": "447700900123"
+                 "caller-id": "447700900123"
               }
            }
        ]
@@ -117,7 +110,7 @@ This results in the following JSON in the first message on the WebSocket:
     "event":"websocket:connected",
     "content-type":"audio/l16;rate=16000",
     "language": "en-GB",
-    "callerID": "447700900123"
+    "caller-id": "447700900123"
 }
 ```
 After the initial text message subsequent messages on the WebSocket can be text or binary.
@@ -135,11 +128,7 @@ Each message will be a 20ms sample of the audio from the call. If you choose the
 | 8000 | 160 | 160 x 2 = 320 |
 | 16000 | 320 | 320 x 2 = 640 |
 
-### JSON messages
-
-Various JSON text-based messages may be sent at any point in the call, developers should handle these appropriately and examine the `event` field to determine the message type and if it is of interest.
-
-### DTMF events
+### JSON DTMF messages
 
 If any party on the call connected to the websocket sends a [DTMF](/concepts/guides/glossary#dtmf) tone this will trigger an event on the websocket, this event is a *text* message with a JSON payload, it will be interleaved between the audio frames and have the following format:
 
@@ -166,25 +155,29 @@ Event data is sent to the `eventURL` as with all voice applications. This is a `
 
 Event callbacks are documented in the [Webhook Reference Guide](/voice/voice-api/webhook-reference). In the guide you can find all the types of webhooks and the parameters each webhook sends as part of its payload.
 
-Within WebSockets particularly, you can also set custom metadata in your event callback.
-
-### Custom Metadata
-
-WebSockets have the ability to include custom metadata set by the user. Any custom metadata set in the WebSocket will be displayed in the `headers` field in the event callback payload. The `headers` field is also present in every other Voice API callback event as an empty object. The only time it will contain data is when it is set by the user for a WebSocket connection.
-
-A common use case for custom metadata is providing useful information for fallback options. For example, you way want to include the original `from` number in the fallback event. You can set it with the following inside your `connect` NCCO action:
-
-```json
- "headers": {
-    "original_from": "15551234567"
-}
-```
-
-More examples of using custom metadata inside the `headers` field is found in the following section on fallback options.
+Within WebSockets particularly, you can also set custom metadata in your event callback with the `headers` parameter. 
 
 ### Fallback Options
 
+A common use case for custom metadata is providing useful information for fallback options. For example, you way want to include the original `from` number in the fallback event as `caller-id`. To do that, use the `headers` parameter in the `connect` action as described above. This information is then included in the event webhook payload as follows:
+
+``` json
+{
+  "from": "442079460000",
+  "to": "wss://example.com/socket",
+  "uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+  "conversation_uuid": "CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+  "status": "disconnected",
+  "timestamp": "2020-03-31T12:00:00.000Z",
+  "headers": {
+    "caller-id": "447700900123"
+  }
+}
+```
+
 You can also be notified via an event when a connection to a WebSocket cannot be established or if the application terminates the WebSocket connection for any reason.
+
+#### Connection cannot be established
 
 To receive this event, you must include the `eventType: synchronous` in your `connect` action:
 
@@ -201,21 +194,17 @@ To receive this event, you must include the `eventType: synchronous` in your `co
       {
         "type": "websocket",
         "uri": "wss://example.com/socket",
-        "content-type": "audio/l16;rate=16000"
+        "content-type": "audio/l16;rate=16000",
+        "headers": {
+            "caller-id": "447700900123"
+        }        
       }
     ]
   }
 ]
 ```
 
-You can then return a new NCCO in the response with the required fallback actions. For example, if you cannot establish a connection, you might want to play a message to the caller or transfer the call.
-
-If you do not return an NCCO, the next action in the original NCCO will be processed. If there are no further actions in the original NCCO, the call will complete.
-
-
-### Connection cannot be established
-
-In the event of a connection failure, the event `status` will be one of `failed` or `unanswered`. For example:
+You can then return a new NCCO in the response with the required fallback actions. For example, if you cannot establish a connection, you might want to play a message to the caller or transfer the call. In the event of a connection failure, the event `status` will be one of `failed` or `unanswered`. For example:
 
 ``` json
 {
@@ -224,13 +213,16 @@ In the event of a connection failure, the event `status` will be one of `failed`
   "uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
   "conversation_uuid": "CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
   "status": "unanswered",
-  "timestamp": "2020-03-31T12:00:00.000Z"
+  "timestamp": "2020-03-31T12:00:00.000Z",
+  "headers": {
+    "caller-id": "447700900123"
+  }  
 }
 ```
 
-You can return a new NCCO in your webhook response to handle the failed connection attempt.
+You can return a new NCCO in your webhook response to handle the failed connection attempt. If you do not return an NCCO, the next action in the original NCCO will be processed. If there are no further actions in the original NCCO, the call will complete.
 
-### Websocket disconnected
+#### Websocket disconnected
 
 If the connection is dropped by your application, you will receive an event on your `eventUrl` webhook with a `status` of `disconnected`:
 
@@ -241,7 +233,10 @@ If the connection is dropped by your application, you will receive an event on y
   "uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
   "conversation_uuid": "CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
   "status": "disconnected",
-  "timestamp": "2020-03-31T12:00:00.000Z"
+  "timestamp": "2020-03-31T12:00:00.000Z",
+  "headers": {
+    "caller-id": "447700900123"
+  }
 }
 ```
 
@@ -261,75 +256,40 @@ PUT https://api.nexmo.com/v1/calls/aaaaaaaa-bbbb-cccc-dddd-0123456789ab
 
 This method does not raise a `disconnected` event. Therefore, if you do receive a `disconnected` event you can reliably assume that it is an unintentional disconnection and fallback appropriately. You can also use the [Fallback URL webhook](/voice/voice-api/webhook-reference#fallback-url) with this approach.
 
-### Adding context to events
-
-In fallback scenarios, some additional information in the callback payload might be helpful. You can use the `headers` parameter in the NCCO's `connect` action for this.
-
-The following example uses `headers` to include the `from` number of the incoming PSTN call leg:
-
-``` json
-[
-  {
-    "action": "connect",
-    "eventType": "synchronous",
-    "eventUrl": [
-      "https://example.com/events"
-    ],
-    "from": "447700900000",
-    "endpoint": [
-      {
-        "type": "websocket",
-        "uri": "wss://example.com/socket",
-        "content-type": "audio/l16;rate=16000",
-        "headers": {
-          "original_from": "15551234567"
-        }
-      }
-    ]
-  }
-]
-```
-
-This information is then included in the event webhook payload as follows:
-
-``` json
-{
-  "from": "442079460000",
-  "to": "wss://example.com/socket",
-  "uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-  "conversation_uuid": "CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-  "status": "disconnected",
-  "timestamp": "2020-03-31T12:00:00.000Z",
-  "headers": {
-    "original_from": "15551234567"
-  }
-}
-```
-
-
 ## Further reading
 
 Use the following resources to help you make the most of WebSockets in your Voice API applications:
 
-* Webinars:
-  * [Getting started with WebSockets](https://www.nexmo.com/blog/2017/02/15/webinar-getting-started-nexmo-voice-websockets-dr/)
-  * [Add sentiment analysis to your inbound call flow with IBM Watson and Vonage webinar](https://attendee.gotowebinar.com/recording/7952180850491069704) and the accompanying [source code](https://github.com/nexmo-community/sentiment-analysis-websockets)
-* Tutorials:
-    * Create a WebSocket echo server:
-        * [Node](/tutorials/voice-call-websocket-node)
-        * [Python](/tutorials/voice-call-websocket-python)
+* [Getting started with WebSockets](https://www.nexmo.com/blog/2017/02/15/webinar-getting-started-nexmo-voice-websockets-dr/) Webinar
+* Tutorial: Create a WebSocket echo server
+    * [Node](/voice/voice-api/tutorials/connect-to-a-websocket/introduction/node)
+    * [Python](/voice/voice-api/tutorials/connect-to-a-websocket/introduction/python)
 * Demo apps:
-  * [Browser audio demo](https://github.com/nexmo-community/audiosocket-demo): Send conference call audio to a web browser using WebSockets and the browser Web Audio API (Python)
-  * WebSocket recorder demo: Receive binary from a WebSocket, store it in a file and then convert it to WAV 
+    * [Browser audio demo](https://github.com/nexmo-community/audiosocket-demo): Send conference call audio to a web browser using WebSockets and the browser Web Audio API (Python)
+    * WebSocket recorder demo: Receive binary from a WebSocket, store it in a file and then convert it to WAV 
   format.
-      * [Node](https://github.com/nexmo-community/node-websocket-recorder)
-      * [Python](https://github.com/nexmo-community/python-websocket-recorder)
-      * [.NET](https://github.com/nexmo-community/NET-Fleck-Websocket-recorder)
+        * [Node](https://github.com/nexmo-community/node-websocket-recorder)
+        * [Python](https://github.com/nexmo-community/python-websocket-recorder)
+        * [.NET](https://github.com/nexmo-community/NET-Fleck-Websocket-recorder)
 
-  * [Audio socket framework](https://github.com/nexmo-community/audiosocket_framework): A useful starting point for interfacing between Vonage and an AI bot platform
-  * [Realtime transcription using Microsoft Azure](https://github.com/nexmo-community/voice-microsoft-speechtotext)
-  * [Socket phone](https://github.com/nexmo-community/socketphone): Connect a Vonage WebSocket call to your local machine
-* Documentation:
-  * [Voice API Reference](https://developer.nexmo.com/api/voice.v2)
-
-
+    * [Audio socket framework](https://github.com/nexmo-community/audiosocket_framework): A useful starting point for interfacing between Vonage and an AI bot platform
+    * [Socket phone](https://github.com/nexmo-community/socketphone): Connect a Vonage WebSocket call to your local machine
+* AI Connectors:
+    * Voice Bots
+        * [Amazon Lex](https://github.com/nexmo-community/lex-reference-connection), see also [sample app](https://github.com/nexmo-community/lex-sample-voice-application) and [tutorial](https://learn.vonage.com/blog/2021/03/10/connecting-voice-calls-to-an-amazon-lex-bot/)
+        * [Google Dialogflow](https://github.com/nexmo-se/nexmo-dialogflow)
+    * Real-time transcription
+        * [Amazon Transcribe](https://github.com/nexmo-community/transcribe-comprehend-multi-sub)
+        * [Google Speech-to-Text](https://github.com/nexmo-community/voice-google-speechtotext-js)
+        * [IBM Watson](https://github.com/nexmo-community/voice-ibm-speechtotext-py)        
+        * [Microsoft Azure](https://github.com/nexmo-community/voice-azure-speechtotext-py)
+    * Sentiment Analysis
+        * [Amazon Comprehend](https://github.com/nexmo-community/transcribe-comprehend-multi-sub)
+        * [IBM Watson](https://github.com/nexmo-community/sentiment-analysis-websockets)
+* Blog articles:
+    * [Processing Voice Calls With Amazon Transcribe & Comprehend](https://learn.vonage.com/blog/2021/05/17/processing-voice-calls-with-amazon-transcribe-comprehend/)
+    * [Connecting Voice Calls to an Amazon Lex Bot](https://learn.vonage.com/blog/2021/03/10/connecting-voice-calls-to-an-amazon-lex-bot/)
+    * [How to Make and Receive Phone Calls with Nuxt.js](https://learn.vonage.com/blog/2020/03/02/how-make-receive-phone-calls-with-nuxt-js-dr/)
+    * [Creating a WebSocket Server with the Spark Framework](https://learn.vonage.com/blog/2018/10/15/create-websocket-server-spark-framework-dr/)
+    * [Creating a WebSocket Server with Spring Boot](https://learn.vonage.com/blog/2018/10/08/create-websocket-server-spring-boot-dr/)
+    * [Real-time Call Transcription Using IBM Watson and Python](https://learn.vonage.com/blog/2017/10/03/real-time-call-transcription-ibm-watson-python-dr/)

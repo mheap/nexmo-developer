@@ -9,7 +9,7 @@ language: groovy
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven {
             url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
         }

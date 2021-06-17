@@ -35,28 +35,28 @@ private fun processEvents(events: List<NexmoEvent>) {
 }
 
 private fun getEventText(typingEvent: NexmoTypingEvent): String {
-    val user = typingEvent.fromMember.user.name
+    val user = typingEvent.getEmbeddedInfo.user.name
     val typingState = if (typingEvent.state == NexmoTypingState.ON) "typing" else "not typing"
     return "$user is $typingState"
 }
 
 private fun getEventText(deliveredEvent: NexmoDeliveredEvent): String {
-    val user = deliveredEvent.fromMember.user.name
+    val user = deliveredEvent.getEmbeddedInfo.user.name
     return "Event from $user with id ${deliveredEvent.initialEventId()} delivered at ${deliveredEvent.creationDate}"
 }
 
 private fun getEventText(seenEvent: NexmoSeenEvent): String {
-    val user = seenEvent.fromMember.user.name
+    val user = seenEvent.getEmbeddedInfo.user.name
     return "$user saw event with id ${seenEvent.initialEventId()} at ${seenEvent.creationDate}"
 }
 
 private fun getEventText(textEvent: NexmoTextEvent): String {
-    val user = textEvent.fromMember.user.name
+    val user = textEvent.getEmbeddedInfo.user.name
     return "$user said: ${textEvent.text}"
 }
 
 private fun getEventText(memberEvent: NexmoMemberEvent): String {
-    val user = memberEvent.member.user.name
+    val user = memberEvent.getEmbeddedInfo.user.name
 
     return when (memberEvent.state) {
         NexmoMemberState.JOINED -> "$user joined"

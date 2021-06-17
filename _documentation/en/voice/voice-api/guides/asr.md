@@ -69,6 +69,7 @@ Typically, ASR is used in conjunction with an audio message playing to the user.
         "credit",
         "account"
       ],
+      "endOnSilence": 0.5,
       "saveAudio": true      
     }
   }
