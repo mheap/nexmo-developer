@@ -277,7 +277,6 @@ Use the following resources to help you make the most of WebSockets in your Voic
 * AI Connectors:
     * Voice Bots
         * [Amazon Lex](https://github.com/nexmo-community/lex-reference-connection), see also [sample app](https://github.com/nexmo-community/lex-sample-voice-application) and [tutorial](https://learn.vonage.com/blog/2021/03/10/connecting-voice-calls-to-an-amazon-lex-bot/)
-        * [Google Dialogflow](https://github.com/nexmo-se/nexmo-dialogflow)
     * Real-time transcription
         * [Amazon Transcribe](https://github.com/nexmo-community/transcribe-comprehend-multi-sub)
         * [Google Speech-to-Text](https://github.com/nexmo-community/voice-google-speechtotext-js)
