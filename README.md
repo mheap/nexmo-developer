@@ -23,7 +23,7 @@ yarn spellcheck
 Or if you're using Docker:
 
 ```
-docker-compose exec web yarn spellcheck
+docker-compose exec web yarn spellcheck db:migrate
 ```
 
 If there is a word that isn't in the dictionary but is correct to use, add it to the `.spelling` file (there's a lot of exceptions in there, including `Vonage`!)
