@@ -10,7 +10,7 @@ You want your users to see all the messages in the Conversation. You can achieve
 In the case where the number of messages are more than the page size of the request, you can use `getNext()` to receive the next page. More information on `getNext()` can be found in the [documentation](https://developer.nexmo.com/sdk/stitch/javascript/EventsPage.html#getNext). This function is called when the Load Previous Messages button is clicked. Place this code after the `loginForm` event listener and before the `run` function.
 
 ```javascript
-loadMessagesButton.addEventListener('click', async (event) => {
+loadMessagesButton.addEventListener("click", async (event) => {
   // Get next page of events
   let nextEvents = await listedEvents.getNext();
   listMessages(nextEvents);
@@ -42,13 +42,14 @@ function listMessages(events) {
   listedEvents = events;
 
   events.items.forEach(event => {
-    const formattedMessage = formatMessage(conversation.members.get(event.from), event, conversation.me);
+    let sender = { displayName: event._embedded.from_user.display_name, memberId: event.from, userName: event._embedded.from_user.name, userId: event._embedded.from_user.id };
+    const formattedMessage = formatMessage(sender, event, conversation.me);
     messages = formattedMessage + messages;
   });
 
   // Update UI
   messageFeed.innerHTML = messages + messageFeed.innerHTML;
-  messagesCountSpan.textContent = `${messagesCount}`;
+  messagesCountSpan.textContent = messagesCount;
   messageDateSpan.textContent = messageDate;
 }
 ```
@@ -58,18 +59,19 @@ In this example, you will use the identity of the user to distinguish between me
 ```javascript
 function formatMessage(sender, message, me) {
   const rawDate = new Date(Date.parse(message.timestamp));
-  const formattedDate = moment(rawDate).calendar();
+  const options = { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" };
+  const formattedDate = rawDate.toLocaleDateString(undefined, options);
   let text = '';
   messagesCount++;
   messageDate = formattedDate;
 
   if (message.from !== me.id) {
-    text = `<span style="color:red">${sender.user.name} (${formattedDate}): <b>${message.body.text}</b></span>`;
+    text = `<span style="color:red">${sender.userName.replace(/</g,"&lt;")} (${formattedDate}): <b>${message.body.text.replace(/</g,"&lt;")}</b></span>`;
   } else {
-    text = `me (${formattedDate}): <b>${message.body.text}</b>`;
+    text = `me (${formattedDate}): <b>${message.body.text.replace(/</g,"&lt;")}</b>`;
   }
 
-  return text + '<br />';
+  return text + "<br />";
 
 }
 ```
@@ -78,11 +80,11 @@ Now that you have implemented a way to show messages on the page, add the follow
 
 ```javascript
 // Update the UI to show which user we are
-document.getElementById('sessionName').innerHTML = conversation.me.user.name + "'s messages"
+document.getElementById("sessionName").textContent = conversation.me.user.name + "'s messages"
 
 // Load events that happened before the page loaded
-  let initialEvents = await conversation.getEvents({ event_type: "text", page_size: 10, order:"desc" });
-  listMessages(initialEvents);
+let initialEvents = await conversation.getEvents({ event_type: "text", page_size: 10, order:"desc" });
+listMessages(initialEvents);
 
 ```
 
@@ -90,9 +92,9 @@ Finally, you need to set up an event listener for any new incoming messages. You
 
 ```javascript
   // Any time there's a new text event, add it as a message
-  conversation.on('text', (sender, event) => {
+  conversation.on("text", (sender, event) => {
     const formattedMessage = formatMessage(sender, event, conversation.me);
     messageFeed.innerHTML = messageFeed.innerHTML +  formattedMessage;
-    messagesCountSpan.textContent = `${messagesCount}`;
+    messagesCountSpan.textContent = messagesCount;
   });
 ```
