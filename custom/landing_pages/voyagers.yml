@@ -404,7 +404,25 @@ page:
                 </div>
               </div>
 
-
+              <div class="profile">
+                <a href="https://github.com/tolopsy">
+                  <img src="https://res.cloudinary.com/tolulope/image/upload/v1624831837/Personal/tolulope-picture-square_fwtskx.jpg" alt="Tolulope Olanrewaju Abayomi">
+                </a>
+                <div class="main">
+                  <h3>Tolulope Olanrewaju</h3>
+                  <p>Backend and Mobile Software Engineer. I love building communication tools and cross-platform customer facing applications.</p>
+                  <ul class="meta">
+                    <li>
+                      <a href="https://twitter.com/tooluuwaa"><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-twitter"></use></svg> tooluuwaa</a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/tolopsy"><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-github"></use></svg> tolopsy</a>
+                    </li>
+                    <li><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-world"></use></svg> Lagos, Nigeria
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
   - row:
     - column:
