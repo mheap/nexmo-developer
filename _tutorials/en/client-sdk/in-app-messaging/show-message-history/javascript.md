@@ -42,7 +42,7 @@ function listMessages(events) {
   listedEvents = events;
 
   events.items.forEach(event => {
-    let sender = { displayName: event._embedded.from_user.display_name, memberId: event.from, userName: event._embedded.from_user.name, userId: event._embedded.from_user.id };
+    const sender = { displayName: event._embedded.from_user.display_name, memberId: event.from, userName: event._embedded.from_user.name, userId: event._embedded.from_user.id };
     const formattedMessage = formatMessage(sender, event, conversation.me);
     messages = formattedMessage + messages;
   });
