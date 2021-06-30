@@ -32,7 +32,7 @@ Add the following to the bottom of your `run` function:
 ```javascript
 conversation.on("text:typing:on", (data, event) => {
   if (conversation.me.id !== data.memberId) {
-    status.innerText = data.displayName + " is typing...";
+    status.innerText = data.userName + " is typing...";
   }
 });
 

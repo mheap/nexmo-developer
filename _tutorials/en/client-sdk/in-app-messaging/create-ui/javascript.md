@@ -34,7 +34,6 @@ Create a file named `index.html` in your project directory with the following co
     #login,
     #messages {
       width: 80%;
-      height: 500px;
     }
 
     form input[type=text] {
@@ -61,6 +60,8 @@ Create a file named `index.html` in your project directory with the following co
       font-size: 18px;
       padding-bottom: 20px;
       line-height: 22pt;
+      height: 300px;
+      overflow-y: auto;
     }
 
     #status {
