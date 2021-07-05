@@ -27,12 +27,21 @@ Given a conversation you are already a member of:
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/send-images
 ```
 
-## Receive an Image
+## Receive an Image URL
 
 A `image` conversation event will be received when a member sends an image to a conversation:
 
 ```tabbed_content
-source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-images
+source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-image-urls
+```
+
+## Download images
+
+The JWT is required for the image download. This is the same JWT used to login the user. JWT is passed as an Authorization header (`Authorization: Bearer JWT` format).
+Various image libraries are handling request headers differently:
+
+```tabbed_content
+source: _tutorials_tabbed_content/client-sdk/guides/messaging/download-images
 ```
 
 ## Reference
