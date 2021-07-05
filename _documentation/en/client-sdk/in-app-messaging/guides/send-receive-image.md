@@ -37,8 +37,9 @@ source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-image-urls
 
 ## Download images
 
-The JWT is required for the image download. This is the same JWT used to login the user. JWT is passed as an Authorization header (`Authorization: Bearer JWT` format).
-Various image libraries are handling request headers differently:
+To download image you should add JWT to the image retrieval request. JWT is passed as an Authorization header (`Authorization: Bearer JWT` format). This is the JWT that was used to login the user. 
+
+Various image libraries are handling request headers differently, so below you will fin example for the most popular libraries:
 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/download-images
