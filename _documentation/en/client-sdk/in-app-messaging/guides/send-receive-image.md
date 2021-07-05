@@ -27,12 +27,28 @@ Given a conversation you are already a member of:
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/send-images
 ```
 
-## Receive an Image
+## Receive an Image URL
 
 A `image` conversation event will be received when a member sends an image to a conversation:
 
 ```tabbed_content
-source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-images
+source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-image-urls
+```
+
+## Download images from Vonage
+
+### Web client
+
+To download an image you need you use the [fetch image](https://developer.nexmo.com/sdk/stitch/javascript/ImageEvent.html#fetchImage__anchor) method.
+
+### Mobile client (Android, iOS)
+
+To download an image you need to add JWT to the image retrieval request. The JWT is passed as an Authorization header (`Authorization: Bearer <JWT>` format). This is the JWT that was used to log in the user. 
+
+Various image libraries are handling request headers differently, so below you will full example for the most popular libraries:
+
+```tabbed_content
+source: _tutorials_tabbed_content/client-sdk/guides/messaging/download-images
 ```
 
 ## Reference
