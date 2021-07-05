@@ -37,7 +37,7 @@ source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-image-urls
 
 ## Download images
 
-To download image you should add JWT to the image retrieval request. JWT is passed as an Authorization header (`Authorization: Bearer JWT` format). This is the JWT that was used to login the user. 
+To download an image from Vonage you need to add JWT to the image retrieval request. The JWT is passed as an Authorization header (`Authorization: Bearer <JWT>` format). This is the JWT that was used to log in the user. 
 
 Various image libraries are handling request headers differently, so below you will fin example for the most popular libraries:
 
