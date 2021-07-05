@@ -35,9 +35,15 @@ A `image` conversation event will be received when a member sends an image to a 
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-image-urls
 ```
 
-## Download images
+## Download images from Vonage
 
-To download an image from Vonage you need to add JWT to the image retrieval request. The JWT is passed as an Authorization header (`Authorization: Bearer <JWT>` format). This is the JWT that was used to log in the user. 
+### Web client
+
+To download an image you need you use the [fetch image](https://developer.nexmo.com/sdk/stitch/javascript/ImageEvent.html#fetchImage__anchor) method.
+
+### Mobile client (Android, iOS)
+
+To download an image you need to add JWT to the image retrieval request. The JWT is passed as an Authorization header (`Authorization: Bearer <JWT>` format). This is the JWT that was used to log in the user. 
 
 Various image libraries are handling request headers differently, so below you will full example for the most popular libraries:
 
