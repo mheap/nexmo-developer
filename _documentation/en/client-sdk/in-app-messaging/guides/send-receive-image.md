@@ -45,7 +45,7 @@ To download an image you need you use the [fetch image](https://developer.nexmo.
 
 To download an image you need to add JWT to the image retrieval request. The JWT is passed as an Authorization header (`Authorization: Bearer <JWT>` format). This is the JWT that was used to log in the user. 
 
-Various image libraries are handling request headers differently, so below you will full example for the most popular libraries:
+Various image libraries are handling request headers differently, so below you will full example for the most popular libraries. Notice the JWT being set as the `Authorization` header for the request:
 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/download-images

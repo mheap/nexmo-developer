@@ -4,7 +4,7 @@ language: objective_c
 menu_weight: 2
 ---
 
-You can download the image using `URLSession`, notice the JWT being set as the `Authorization` header for the request:
+You can download the image using `URLSession`:
 
 ```objective_c
 - (void)loadImageWithURLString:(NSString *)urlString

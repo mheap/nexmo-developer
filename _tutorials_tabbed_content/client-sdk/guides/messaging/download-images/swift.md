@@ -4,7 +4,7 @@ language: swift
 menu_weight: 1
 ---
 
-You can download the image using `URLSession`, notice the JWT being set as the `Authorization` header for the request:
+You can download the image using `URLSession`:
 
 ```swift
 func loadImage(urlString: String, token: String, completionHandler: @escaping (UIImage?) -> Void) {
