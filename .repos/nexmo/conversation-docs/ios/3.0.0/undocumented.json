@@ -1,0 +1,89 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/NXMMember.h",
+      "line": 38,
+      "symbol": "NXMMember.-enableMute",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/NXMMember.h",
+      "line": 39,
+      "symbol": "NXMMember.-disableMute",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/NXMMemberSummary.h",
+      "line": 13,
+      "symbol": "NXMMemberSummary",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/NXMMemberSummary.h",
+      "line": 15,
+      "symbol": "NXMMemberSummary.conversationUuid",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/NXMMemberSummary.h",
+      "line": 16,
+      "symbol": "NXMMemberSummary.memberUuid",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/NXMMemberSummary.h",
+      "line": 17,
+      "symbol": "NXMMemberSummary.user",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/NXMMemberSummary.h",
+      "line": 18,
+      "symbol": "NXMMemberSummary.state",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Pages/NXMMembersSummaryPage.h",
+      "line": 11,
+      "symbol": "NXMMembersSummaryPage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Pages/NXMMembersSummaryPage.h",
+      "line": 16,
+      "symbol": "NXMMembersSummaryPage.memberSummaries",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Pages/NXMMembersSummaryPage.h",
+      "line": 21,
+      "symbol": "NXMMembersSummaryPage.-nextPage:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Pages/NXMMembersSummaryPage.h",
+      "line": 26,
+      "symbol": "NXMMembersSummaryPage.-previousPage:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/User/NXMUser.h",
+      "line": 25,
+      "symbol": "NXMUser.imageUrl",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios"
+}
