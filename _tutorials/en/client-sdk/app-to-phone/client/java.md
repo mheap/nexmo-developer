@@ -37,7 +37,7 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
 });
 ```
 
- The above listener allows us to determine that that user has logged in successfully and show the `START CALL` button. 
+ The above listener allows to determine that that user has logged in successfully and show the chat UI. 
  
  Finally add the code to login the user. Please make sure to replace `ALICE_JWT` with the JWT you created during a previous step:
 

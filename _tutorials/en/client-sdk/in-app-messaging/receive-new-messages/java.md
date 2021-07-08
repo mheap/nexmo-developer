@@ -7,53 +7,50 @@ description: In this step you display any new messages
 
 You can display incoming messages by implementing the conversation listener.
 
-
-Now, locate the `private NexmoMessageEventListener messageListener` property in the `ChatViewModel` class and implement conversation listener `onTextEvent` method:
-
-```java
-private NexmoMessageEventListener messageListener = new NexmoMessageEventListener() {
-    @Override
-    public void onTextEvent(@NonNull NexmoTextEvent textEvent) {
-        updateConversation(textEvent);
-    }
-
-    @Override
-    public void onAttachmentEvent(@NonNull NexmoAttachmentEvent attachmentEvent) {
-
-    }
-
-    @Override
-    public void onEventDeleted(@NonNull NexmoDeletedEvent deletedEvent) {
-
-    }
-
-    @Override
-    public void onSeenReceipt(@NonNull NexmoSeenEvent seenEvent) {
-
-    }
-
-    @Override
-    public void onDeliveredReceipt(@NonNull NexmoDeliveredEvent deliveredEvent) {
-
-    }
-
-    @Override
-    public void onTypingEvent(@NonNull NexmoTypingEvent typingEvent) {
-
-    }
-};
-```
-
-Now each time a new message is received `public void onTextEvent(@NonNull NexmoTextEvent textEvent)` listener is called, the new message will be passed to `updateConversation(` method and dispatched to the view via `conversationEvents` `LiveData` (same `LiveData` used to dispatch all the messages after loading conversation events).
-
-The last thing to do is to make sure that all listeners are removed when `ChatViewModel` is destroyed, for example, when the user navigates back. Fill the body of the `onCleared()` method in the `ChatViewModel` class.
+Now, locate the `getConversation` method and add `addMessageEventListener` call:
 
 ```java
-@Override
-protected void onCleared() {
-    conversation.removeMessageEventListener(messageListener);
+private void getConversation() {
+    client.getConversation(CONVERSATION_ID, new NexmoRequestListener<NexmoConversation>() {
+        @Override
+        public void onSuccess(@Nullable NexmoConversation conversation) {
+            MainActivity.this.conversation = conversation;
+            getConversationEvents(conversation);
+
+            conversation.addMessageEventListener(new NexmoMessageEventListener() {
+                @Override
+                public void onTextEvent(@NonNull NexmoTextEvent textEvent) {
+                    conversationEvents.add(textEvent);
+                    updateConversationView();
+                }
+
+                @Override
+                public void onAttachmentEvent(@NonNull NexmoAttachmentEvent attachmentEvent) {}
+
+                @Override
+                public void onEventDeleted(@NonNull NexmoDeletedEvent deletedEvent) {}
+
+                @Override
+                public void onSeenReceipt(@NonNull NexmoSeenEvent seenEvent) {}
+
+                @Override
+                public void onDeliveredReceipt(@NonNull NexmoDeliveredEvent deliveredEvent) {}
+
+                @Override
+                public void onTypingEvent(@NonNull NexmoTypingEvent typingEvent) {}
+            });
+        }
+
+        @Override
+        public void onError(@NonNull NexmoApiError apiError) {
+            MainActivity.this.conversation = null;
+            Toast.makeText(MainActivity.this, "Error: Unable to load conversation", Toast.LENGTH_SHORT);
+        }
+    });
 }
 ```
+
+Each time a new message is received `public void onTextEvent(@NonNull NexmoTextEvent textEvent)` listener is called, the new message will be added to the `conversationEvents` collection and `updateConversationView` method will be called to reflect the changes.
 
 # Run the app
 

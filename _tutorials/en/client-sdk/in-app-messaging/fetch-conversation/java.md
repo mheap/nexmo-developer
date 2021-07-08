@@ -5,31 +5,34 @@ description: In this step you join your Users to your Conversation
 
 # Fetch the Conversation
 
-Inside `ChatViewModel` class, locate the following line and fill in the `getConversation()` method implementation:
+Inside `MainActivity` class add the `conversation` property:
+
+```java
+private NexmoConversation conversation;
+```
+
+Now add the `getConversation()` method:
 
 ```java
 private void getConversation() {
-    client.getConversation(Config.CONVERSATION_ID, new NexmoRequestListener<NexmoConversation>() {
+    client.getConversation(CONVERSATION_ID, new NexmoRequestListener<NexmoConversation>() {
         @Override
         public void onSuccess(@Nullable NexmoConversation conversation) {
-            ChatViewModel.this.conversation = conversation;
-
-            if (ChatViewModel.this.conversation != null) {
-                getConversationEvents(ChatViewModel.this.conversation);
-                ChatViewModel.this.conversation.addMessageEventListener(messageListener);
-            }
+            MainActivity.this.conversation = conversation;
         }
 
         @Override
         public void onError(@NonNull NexmoApiError apiError) {
-            ChatViewModel.this.conversation = null;
-            _errorMessage.postValue("Error: Unable to load conversation " + apiError.getMessage());
+            MainActivity.this.conversation = null;
+            Toast.makeText(MainActivity.this, "Error: Unable to load conversation", Toast.LENGTH_SHORT);
         }
     });
 }
 ```
 
-Notice the use of the `client` - this references the exact same object as the  `client` referred in the `LoginViewModel` (instance is also retrieved by `NexmoClient.get()`).
+Please make sure to replace `CONVERSATION_ID` with the conversation id you created during a previous step.
+
+The above method loads the conversation and stores it in the `conversation` property.
 
 > **Note:** Conversation id is retrieved from `Config.CONVERSATION_ID` provided in the previous step.
 

@@ -7,19 +7,24 @@ description: In this step you will send a message to the conversation
 
 Time to send the first message.
 
-Inside `ChatViewModel` class, locate the `onSendMessage` method and fill its body:
+Update the body of the `sendMessge` method:
 
 ```java
-public void onSendMessage(String message) {
-    if (conversation == null) {
-        _errorMessage.postValue("Error: Conversation does not exist");
+private  void sendMessage() {
+    String message = messageEditText.getText().toString();
+
+    if (message.trim().isEmpty()) {
+        Toast.makeText(this, "Message is blank", Toast.LENGTH_SHORT).show();
         return;
     }
+
+    messageEditText.setText("");
+    hideKeyboard();
 
     conversation.sendText(message, new NexmoRequestListener<Void>() {
         @Override
         public void onError(@NonNull NexmoApiError apiError) {
-
+            Toast.makeText(MainActivity.this, "Error sending message", Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -30,6 +35,22 @@ public void onSendMessage(String message) {
 }
 ```
 
-> **NOTE:** Inside `ChatFragment` class, contains `sendMessageButton listener` that was written for you. This method is called when user click `send` button. If message text exists above `viewModel.onSendMessage()` method is called.
+The above method hides the keyboard, clears the text field and sends the message.
 
-You'll notice that, although the message was sent, the conversation doesn't include it. It is possible to call the `getConversationEvents()` method after the message is sent, but the SDK provides a better way to handle this scenario. Let's do that in the next step.
+Now in the `MainActivity ` add the missing `hideKeyboard` method - the utility method that hides Android system keyboard:
+
+```java
+private void hideKeyboard() {
+    InputMethodManager inputMethodManager = ContextCompat.getSystemService(this, InputMethodManager.class);
+
+    View view = getCurrentFocus();
+
+    if (view == null) {
+        view = new View(this);
+    }
+
+    inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+}
+```
+
+You'll notice that, although the message was sent, the conversation doesn't include it. Let's do that in the next step.
