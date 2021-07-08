@@ -6,9 +6,9 @@ menu_weight: 4
 
 ```swift
 //Mute Member
-member.mute(true)
+member.enableMute()
 
 //Mute my Member
-call.myCallMember.mute(true)
+call.myMember?.enableMute()
 
 ```
