@@ -5,7 +5,7 @@ description: In this step you display any messages already sent as part of this 
 
 # Fetch conversation events
 
-Add `getConversationEvents(conversation);` call inside `getConversationEvents()`:
+Add `getConversationEvents(conversation);` call inside `onSucess` callback inside `getConversationEvents()` method:
 
 ```java
 private void getConversation() {
@@ -23,6 +23,12 @@ private void getConversation() {
         }
     });
 }
+```
+
+Add `conversationEvents` method to store conversation events:
+
+```java
+private ArrayList<NexmoEvent> conversationEvents = new ArrayList<>();
 ```
 
 Add `getConversationEvents` method to retrieve conversation events:
@@ -102,7 +108,22 @@ private void updateConversationView() {
         }
 
         conversationTextView.setText(conversation);
+    }
 }
+```
+
+Events are stored in the `conversationEvents` property. You should remove these events after the logout. Update the body of the `setConnectionListener` and call `conversationEvents.clear`:
+
+```java
+client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
+    if (connectionStatus == NexmoConnectionListener.ConnectionStatus.CONNECTED) {
+        // ...
+    } else if (connectionStatus == NexmoConnectionListener.ConnectionStatus.DISCONNECTED) {
+        // ...
+
+        conversationEvents.clear();
+    }
+});
 ```
 
 > **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoTextEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).

@@ -1,5 +1,5 @@
 ---
-title: Build main screen IGORDO
+title: Build main screen
 description: In this step you build main screen.
 ---
 
@@ -155,7 +155,3 @@ conversationTextView = findViewById(R.id.conversationTextView)
 ## Build and Run
 
 Run the project again (`Ctrl + R`).
-
-Notice that all buttons are visible by default:
-
-![Main screen](/screenshots/tutorials/client-sdk/app-to-phone/main-screen.png)

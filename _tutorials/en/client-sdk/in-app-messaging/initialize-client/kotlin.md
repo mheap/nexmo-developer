@@ -13,37 +13,48 @@ At the top of the `MainActivity` class define `client` property that will hold r
 private lateinit var client: NexmoClient
 ```
 
+> **NOTE:** You can enable additional `Logcat` logging by using `logLevel()` method of the builder, for example, `NexmoClient.Builder().logLevel(ILogger.eLogLevel.SENSITIVE).build(this)`
+
 Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoClient` using the builder:
 
 ```kotlin
 client = NexmoClient.Builder().build(this)
 ```
 
+IDE will display warning about unresolved reference:
+
+![](/screenshots/tutorials/client-sdk/android-shared/missing-import-kotlin.png)
+
+Put caret on the red text and press `Alt + Enter` to import the reference.
+
 Now below client initialization code add connection listener to monitor connection state:
 
 ```kotlin
-client.setConnectionListener { connectionStatus, _ ->
-    runOnUiThread { connectionStatusTextView.text = connectionStatus.toString() }
+client.setConnectionListener(NexmoConnectionListener { connectionStatus: ConnectionStatus, _: ConnectionStatusReason? ->
+        if (connectionStatus == ConnectionStatus.CONNECTED) {
+            getConversation()
 
-    if (connectionStatus == ConnectionStatus.CONNECTED) {
-        runOnUiThread { startCallButton.visibility = View.VISIBLE }
-
-        return@setConnectionListener
-    }
-}
+            Toast.makeText(this, "User connected", Toast.LENGTH_SHORT)
+        } else if (connectionStatus == ConnectionStatus.DISCONNECTED) {
+            Toast.makeText(this, "User disconnected", Toast.LENGTH_SHORT)
+            
+            runOnUiThread {
+                chatContainer.visibility = View.GONE
+                loginContainer.visibility = View.VISIBLE
+            }
+        }
+    })
 ```
 
- The above listener allows to determine that that user has logged in successfully and show the `START CALL` button. 
+The above listener allows determining that that user has logged in successfully and show the chat UI. 
  
- Finally add the code to login the user. Please make sure to replace `ALICE_JWT` with the JWT you created during a previous step:
+Add empty `getConversation` method. You will update it in the following steps:
 
 ```kotlin
-client.login("ALICE_JWT")
+private fun getConversation() { }
 ```
 
- The above listener allows to determine that that user has logged in successfully and show the chat UI. 
- 
- Add the code to login the user at the bottom of the `onCreate` method. Please make sure to replace `ALICE_JWT` and `BOB_JWT` with the JWT you created during a previous step:
+ Add the code to login the users at the bottom of the `onCreate` method. Please make sure to replace `ALICE_JWT` and `BOB_JWT` with the JWT you created during a previous step:
 
 ```kotlin
 findViewById<View>(R.id.loginAsAliceButton).setOnClickListener {
@@ -65,14 +76,10 @@ findViewById<View>(R.id.loginAsBobButton).setOnClickListener {
 }
 ```
 
-Finally add the code to logout the user:
+Finally in the same method add the code to logout the user:
 
 ```kotlin
 findViewById<View>(R.id.logoutButton).setOnClickListener { client.logout() }
 ```
-
-> **NOTE:** You can enable additional `Logcat` logging by using `logLevel()` method of the builder, for example, `NexmoClient.Builder().logLevel(ILogger.eLogLevel.SENSITIVE).build(this)`
-
-![](/screenshots/tutorials/client-sdk/android-shared/missing-import-kotlin.png)
 
 Run `Build` > `Make project` to make sure the project is compiling.

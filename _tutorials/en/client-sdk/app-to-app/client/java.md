@@ -25,6 +25,12 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
+IDE will display a warning about the unresolved reference:
+
+![](/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png)
+
+Put caret on the red text and press `Alt + Enter` to import the reference.
+
 Now below client initialization code add connection listener to monitor connection state:
 
 ```java

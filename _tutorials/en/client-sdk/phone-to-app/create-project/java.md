@@ -49,5 +49,11 @@ Now add the Client SDK to the project. Add the following dependency in the modul
 dependencies {
     // ...
 
-    implementation 'com.nexmo.android:client-sdk:3.0.0'
+    implementation 'com.nexmo.android:client-sdk:3.0.1'
 }
+```
+
+Enable `jetifier` in the `gradle.properties` file by adding the below line:
+```
+android.enableJetifier=true
+```

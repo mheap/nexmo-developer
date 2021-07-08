@@ -19,27 +19,40 @@ Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoCl
 client = new NexmoClient.Builder().build(this);
 ```
 
+IDE will display warning about unresolved reference:
+
+![](/screenshots/tutorials/client-sdk/android-shared/missing-import-kotlin.png)
+
+Put caret on the red text and press `Alt + Enter` to import the reference.
+
 Now below client initialization code add connection listener to monitor connection state:
 
 ```java
 client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
-    runOnUiThread(() -> {
-        connectionStatusTextView.setText(connectionStatus.toString());
-    });
-
-    if (connectionStatus == ConnectionStatus.CONNECTED) {
-        runOnUiThread(() -> {
-            startCallButton.setVisibility(View.VISIBLE);
-        });
+    if (connectionStatus == NexmoConnectionListener.ConnectionStatus.CONNECTED) {
+        Toast.makeText(this, "User connected", Toast.LENGTH_SHORT);
         
-        return;
+        getConversation();
+    } else if (connectionStatus == NexmoConnectionListener.ConnectionStatus.DISCONNECTED) {
+        Toast.makeText(this, "User disconnected", Toast.LENGTH_SHORT);
+        
+        runOnUiThread(() -> {
+            chatContainer.setVisibility(View.GONE);
+            loginContainer.setVisibility(View.VISIBLE);
+        });
     }
 });
 ```
 
- The above listener allows to determine that that user has logged in successfully and show the chat UI. 
+ The above listener allows determining that that user has logged in successfully and show the chat UI. 
  
- Add the code to login the user at the bottom of the `onCreate` method. Please make sure to replace `ALICE_JWT` and `BOB_JWT` with the JWT you created during a previous step:
+ Add empty `getConversation` method. You will update it in the following steps:
+
+```java
+private void getConversation() { }
+```
+
+ Add the code to login the users at the bottom of the `onCreate` method. Please make sure to replace `ALICE_JWT` and `BOB_JWT` with the JWT you created during a previous step:
 
 ```java
 findViewById(R.id.loginAsAliceButton).setOnClickListener(it -> {
@@ -55,18 +68,10 @@ findViewById(R.id.loginAsBobButton).setOnClickListener(it -> {
 });
 ```
 
-Finally add the code to logout the user:
+Finally in the same method add the code to logout the user:
 
 ```java
 findViewById(R.id.logoutButton).setOnClickListener(it -> client.logout());
 ```
-
-> **NOTE:** You can enable additional `Logcat` logging by using `logLevel()` method of the builder, for example, `NexmoClient.Builder().logLevel(ILogger.eLogLevel.SENSITIVE).build(this)`
-
-The above listener allows to determine that that user has logged in successfully and show the START CALL button.
-
-Finally add the code to login the user. Please make sure to replace `ALICE_JWT` with the JWT you created during a previous step:
-
-![](/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png)
 
 Run `Build` > `Make project` to make sure the project is compiling.

@@ -5,7 +5,7 @@ description: In this step you display any messages already sent as part of this 
 
 # Fetch conversation events
 
-Add `getConversationEvents(conversation);` call inside `getConversationEvents()`:
+Add `getConversationEvents(conversation);` call inside `onSucess` callback inside `getConversationEvents()` method:
 
 ```kotlin
 private fun getConversation() {
@@ -24,6 +24,12 @@ private fun getConversation() {
         }
     })
 }
+```
+
+Add `conversationEvents` method to store conversation events:
+
+```kotlin
+private val conversationEvents = mutableListOf<NexmoEvent>()
 ```
 
 Add `getConversationEvents` method to retrieve conversation events:
@@ -83,6 +89,20 @@ Above method adds events to `conversationEvents` collection and updates the view
         lines.joinToString(separator = "\n")
     }
 }
+```
+
+Events are stored in the `conversationEvents` property. You should remove these events after the logout. Update the body of the `setConnectionListener` and call `conversationEvents.clear`:
+
+```kotlin
+client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
+    if (connectionStatus == NexmoConnectionListener.ConnectionStatus.CONNECTED) {
+        //...
+    } else if (connectionStatus == NexmoConnectionListener.ConnectionStatus.DISCONNECTED) {
+        //...
+
+        conversationEvents.clear();
+    }
+});
 ```
 
 > **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoTextEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).

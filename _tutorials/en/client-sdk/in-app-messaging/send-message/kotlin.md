@@ -7,7 +7,13 @@ description: In this step you will send a message to the conversation
 
 Time to send the first message.
 
-Update the body of the `sendMessge` method:
+To send a message register a callback inside `onCreate` method:
+
+```kotlin
+findViewById<View>(R.id.sendMessageButton).setOnClickListener { sendMessage() }
+```
+
+Add `sendMessge` method inside `MainActivity`:
 
 ```kotlin
 private fun sendMessage() {

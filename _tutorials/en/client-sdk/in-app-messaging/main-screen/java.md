@@ -1,5 +1,5 @@
 ---
-title: Build main screen IGORDO
+title: Build main screen
 description: In this step you build main screen.
 ---
 
@@ -157,7 +157,6 @@ Now you need to assign views to previously added properties. Add below code to t
 
 
 ```java
-private void initViews() {
 chatContainer = findViewById(R.id.chatContainer);
 loginContainer = findViewById(R.id.loginContainer);
 messageEditText = findViewById(R.id.messageEditText);
@@ -167,7 +166,3 @@ conversationTextView = findViewById(R.id.conversationTextView);
 ## Build and Run
 
 Run the project again (`Ctrl + R`).
-
-Notice that all buttons are visible by default:
-
-![Main screen](/screenshots/tutorials/client-sdk/app-to-phone/main-screen.png)

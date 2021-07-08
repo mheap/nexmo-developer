@@ -16,7 +16,7 @@ Open Android Studio and, from the menu, select `File` > `New` > `New Project...`
 
 ![Create project](/screenshots/tutorials/client-sdk/android-shared/create-project-empty-activity.png)
 
-Enter `in-app-messaging` as project name, point location to previously created `in-app-messaging-kotlin/in-app-messaging` folder, select as `Kotlin` language and press `Finish` button.
+Enter `in-app-messaging` as project name and select as `Kotlin` language and press `Finish` button.
 
 You now have a brand new Android Project.
 
@@ -49,5 +49,12 @@ Now add the Client SDK to the project. Add the following dependency in the modul
 dependencies {
     // ...
 
-    implementation 'com.nexmo.android:client-sdk:3.0.0'
+    implementation 'com.nexmo.android:client-sdk:3.0.1'
 }
+```
+
+Enable `jetifier` in the `gradle.properties` file by adding the below line:
+
+```
+android.enableJetifier=true
+```

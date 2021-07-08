@@ -11,7 +11,7 @@ Inside `MainActivity` class add the `conversation` property:
 private NexmoConversation conversation;
 ```
 
-Now add the `getConversation()` method:
+Update body of the `getConversation()` method:
 
 ```java
 private void getConversation() {

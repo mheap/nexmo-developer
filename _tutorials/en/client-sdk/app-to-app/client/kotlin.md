@@ -5,7 +5,7 @@ description: In this step you will initialize Client, so it can be used within t
 
 # Initialize the client
 
-[NexmoClient](https://developer.nexmo.com/sdk/stitch/android/com/nexmo/client/NexmoClient.html) is the main class used to interact with `Android-Client-SDK`. Prior to usage, you have to initialize the client by providing an instance of the Android [Context](https://developer.android.com/reference/android/content/Context) class. 
+[NexmoClient](https://developer.nexmo.com/sdk/stitch/android/com/nexmo/client/NexmoClient.html) is the main class used to interact with `Android-Client-SDK`. Prior to usage, you have to initialize the client by providing an instance of the Android [Context](https://developer.android.com/reference/android/content/Context) class.
 
 At the top of the `MainActivity` class define `client` property that will hold the reference to the client and `otherUser` property that will hold the name of 2nd user (the user that call will be made to):
 
@@ -19,6 +19,12 @@ Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoCl
 ```kotlin
 client = NexmoClient.Builder().build(this)
 ```
+
+IDE will display a warning about the unresolved reference:
+
+![](/screenshots/tutorials/client-sdk/android-shared/missing-import-kotlin.png)
+
+Put caret on the red text and press `Alt + Enter` to import the reference.
 
 Now below client initialization code add connection listener to monitor connection state:
 

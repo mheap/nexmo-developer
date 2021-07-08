@@ -8,10 +8,10 @@ description: In this step you join your Users to your Conversation
 Inside `MainActivity` class add the `conversation` property:
 
 ```java
-private NexmoConversation conversation;
+private var conversation: NexmoConversation? = null
 ```
 
-Now add the `getConversation()` method:
+Update body of the `getConversation()` method:
 
 ```kotlin
 private fun getConversation() {
