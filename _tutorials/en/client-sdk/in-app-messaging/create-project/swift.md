@@ -83,7 +83,7 @@ The latest version of the library will be added to your project:
 ```
 Analyzing dependencies
 Downloading dependencies
-Installing NexmoClient (2.2.1)
+Installing NexmoClient (3.0.0)
 Generating Pods project
 Integrating client project
 
