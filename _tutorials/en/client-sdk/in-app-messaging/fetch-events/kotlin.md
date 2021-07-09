@@ -59,36 +59,36 @@ Above method adds events to `conversationEvents` collection and updates the view
 
 ```kotlin
 private fun updateConversationView() {
-        val lines = ArrayList<String>()
+    val lines = ArrayList<String>()
 
-        for (event in conversationEvents) {
-            var line = when (event) {
-                is NexmoMemberEvent -> {
-                    val userName = event.embeddedInfo.user.name
+    for (event in conversationEvents) {
+        var line = when (event) {
+            is NexmoMemberEvent -> {
+                val userName = event.embeddedInfo.user.name
 
-                    when (event.state) {
-                        NexmoMemberState.JOINED -> "$userName joined"
-                        NexmoMemberState.INVITED -> "$userName invited"
-                        NexmoMemberState.LEFT -> "$userName left"
-                        NexmoMemberState.UNKNOWN -> "Error: Unknown member event state"
-                    }
-                }
-                is NexmoTextEvent -> {
-                    "${event.embeddedInfo.user.name} said: ${event.text}"
-                } else -> {
-                    "Unsupported event ${event.eventType}"
+                when (event.state) {
+                    NexmoMemberState.JOINED -> "$userName joined"
+                    NexmoMemberState.INVITED -> "$userName invited"
+                    NexmoMemberState.LEFT -> "$userName left"
+                    NexmoMemberState.UNKNOWN -> "Error: Unknown member event state"
                 }
             }
-            lines.add(line)
+            is NexmoTextEvent -> {
+                "${event.embeddedInfo.user.name} said: ${event.text}"
+            } else -> {
+                "Unsupported event ${event.eventType}"
+            }
         }
-
-        // Production application should utilise RecyclerView to provide better UX
-        conversationTextView.text = if (lines.isNullOrEmpty()) {
-            "Conversation has No messages"
-        } else {
-            lines.joinToString(separator = "\n")
-        }
+        lines.add(line)
     }
+
+    // Production application should utilise RecyclerView to provide better UX
+    conversationTextView.text = if (lines.isNullOrEmpty()) {
+        "Conversation has No messages"
+    } else {
+        lines.joinToString(separator = "\n")
+    }
+}
 ```
 
 Events are stored in the `conversationEvents` property. You should remove these events after the logout. Update the body of the `setConnectionListener` and call `conversationEvents.clear`:
