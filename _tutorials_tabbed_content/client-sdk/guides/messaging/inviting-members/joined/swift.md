@@ -15,7 +15,7 @@ extension ViewController: NXMConversationDelegate {
     }
     func conversation(_ conversation: NXMConversation, didReceive event: NXMMemberEvent) {
         if event.state == .joined {
-            NSLog("\(event.member.user.name) joined.")
+            NSLog("\(event.embeddedInfo?.user.name) joined.")
         }
     }
 }

@@ -79,6 +79,8 @@ class ChatViewController: UIViewController {
             addConversationLine("\(event.member.user.name) joined.")
         case .left:
             addConversationLine("\(event.member.user.name) left.")
+        case .unknown:
+             fatalError("Unknown member event state.")
         @unknown default:
             fatalError("Unknown member event state.")
         }
@@ -86,7 +88,7 @@ class ChatViewController: UIViewController {
 
     func showTextEvent(event: NXMTextEvent) {
         if let message = event.text {
-            addConversationLine("\(event.fromMember?.user.name ?? "A user") said: '\(message)'")
+            addConversationLine("\(event.embeddedInfo?.user.name ?? "A user") said: '\(message)'")
         }
     }
 

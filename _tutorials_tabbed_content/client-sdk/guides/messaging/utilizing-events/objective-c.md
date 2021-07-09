@@ -29,19 +29,19 @@ Below is an example of using the function to retrieve member and text events fol
 - (void)showMemberEvent:(NXMMemberEvent *)event {
     switch (event.state) {
         case NXMMemberStateInvited:
-            NSLog(@"%@", [NSString stringWithFormat:@"%@ was invited", event.member.user.name]);
+            NSLog(@"%@", [NSString stringWithFormat:@"%@ was invited", event.embeddedInfo.user.name]);
             break;
         case NXMMemberStateJoined:
-            NSLog(@"%@", [NSString stringWithFormat:@"%@ joined", event.member.user.name]);
+            NSLog(@"%@", [NSString stringWithFormat:@"%@ joined", event.embeddedInfo.user.name]);
             break;
         case NXMMemberStateLeft:
-            NSLog(@"%@", [NSString stringWithFormat:@"%@ left", event.member.user.name]);
+            NSLog(@"%@", [NSString stringWithFormat:@"%@ left", event.embeddedInfo.user.name]);
             break;
     }
 }
 
 - (void)showTextEvent:(NXMTextEvent *)event {
-    NSString *message = [NSString stringWithFormat:@"%@ said %@", event.fromMember.user.name, event.text];
+    NSString *message = [NSString stringWithFormat:@"%@ said %@", event.embeddedInfo.user.name, event.text];
     NSLog(@"%@", message);
 }
 ```

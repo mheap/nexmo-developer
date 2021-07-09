@@ -14,7 +14,7 @@ Have a `ViewController`, or similar, conform to `NXMConversationDelegate` and im
 }
 - (void)conversation:(NXMConversation *)conversation didReceiveMemberEvent:(NXMMemberEvent *)event {
     if (event.state == NXMMemberStateJoined) {
-        NSLog(@"%@ joined", event.member.user.name);
+        NSLog(@"%@ joined", event.embeddedInfo.user.name);
     }
 }
 ```

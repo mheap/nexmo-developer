@@ -32,11 +32,11 @@ conversation.getEventsPage(withSize: 20, order: .asc) { (error, eventsPage) in
 func showMemberEvent(event: NXMMemberEvent) {
     switch event.state {
     case .invited:
-        print("\(event.member.user.name) was invited.")
+        print("\(event.embeddedInfo?.user.name) was invited.")
     case .joined:
-        print("\(event.member.user.name) joined.")
+        print("\(event.embeddedInfo?.user.name) joined.")
     case .left:
-        print("\(event.member.user.name) left.")
+        print("\(event.embeddedInfo?.user.name) left.")
     @unknown default:
         fatalError("Unknown member event state.")
     }
@@ -44,7 +44,7 @@ func showMemberEvent(event: NXMMemberEvent) {
     
 func showTextEvent(event: NXMTextEvent) {
     if let message = event.text {
-        print("\(event.fromMember?.user.name ?? "A user") said: '\(message)'")
+        print("\(event.embeddedInfo?.user.name ?? "A user") said: '\(message)'")
     }
 }
 ```
