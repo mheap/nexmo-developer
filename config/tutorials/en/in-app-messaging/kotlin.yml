@@ -48,6 +48,7 @@ conclusion:
     For the complete version please see the Android Studio project on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging-kotlin).
 
     You can do a lot more with the Client SDK:
+    - to enable audio read this [guide](/client-sdk/in-app-voice/guides/enable-audio/kotlin)
     - read the [Client SDK documentation](/client-sdk/overview)
     - review the [Android Client SDK documentation](/sdk/stitch/android/index)
     - try the [Client SDK Android Samples](https://github.com/nexmo-community/client-sdk-android-samples) repository
