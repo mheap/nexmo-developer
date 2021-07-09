@@ -30,55 +30,38 @@ Add new entry in the `app/src/AndroidManifest.xml` file (below last `<uses-permi
 
 ### Request permission on application start
 
-Request permissions inside the `onViewCreated` method of the `LoginFragment` class:
+Request permissions inside the `onCreate` method of the `MainActivity` class:
 
 ``` java
-@Override
-public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-    // ...
-
-    String[] callsPermissions = { Manifest.permission.RECORD_AUDIO };
-    ActivityCompat.requestPermissions(this, callsPermissions, 123);
-}
+String[] callsPermissions = { Manifest.permission.RECORD_AUDIO };
+ActivityCompat.requestPermissions(this, callsPermissions, 123);
 ```
 
 ## Add audio UI
 
-You will now need to add two buttons for the user to enable and disable audio. Open the `app/src/main/res/layout/fragment_chat.xml` file and add two new buttons (`enableMediaButton` and `disableMediaButton`) right below `sendMessageButton`. 
+You will now need to add two buttons for the user to enable and disable audio. Open the `app/src/main/res/layout/activity_main.xml` file and add two new buttons (`enableMediaButton` and `disableMediaButton`) right below `logoutButton` button: 
 
 ``` xml
 <!--...-->
-
-<androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/chatContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+<Button
+        android:id="@+id/enableMediaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/conversationEventsScrollView"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        tools:visibility="visible">
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Enable Audio" />
 
-    <Button
-            android:id="@+id/enableMediaButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/conversationEventsScrollView"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Enable Audio" />
-
-    <Button
-            android:id="@+id/disableMediaButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/conversationEventsScrollView"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone"
-            android:text="Disable Audio"
-            tools:visibility="visible"/>
+<Button
+        android:id="@+id/disableMediaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/conversationEventsScrollView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:text="Disable Audio"
+        tools:visibility="visible"/>
 <!--...-->
 ```
 
@@ -89,111 +72,56 @@ private Button enableMediaButton;
 private Button disableMediaButton;
 ```
 
-retrieve the buttons' reference by adding `findViewById` calls in the `onViewCreated` method:
+retrieve the buttons' reference by adding `findViewById` calls in the `onCreate` method:
 
 ```java
-public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-
-    //...
-    enableMediaButton = view.findViewById(R.id.enableMediaButton);
-    disableMediaButton = view.findViewById(R.id.disableMediaButton);
-}
+enableMediaButton = view.findViewById(R.id.enableMediaButton);
+disableMediaButton = view.findViewById(R.id.disableMediaButton);
 ```
 
-Add click event listeners for the buttons, inside the `onViewCreated` method:
+Add click event listeners for the buttons, inside the `onCreate` method:
 
 ```java
 enableMediaButton.setOnClickListener(it -> {
-    viewModel.enableMedia();
+    conversation.enableMedia();
     enableMediaButton.setVisibility(View.GONE);
     disableMediaButton.setVisibility(View.VISIBLE);
 });
 
 disableMediaButton.setOnClickListener(it -> {
-    viewModel.disableMedia();
+    conversation.disableMedia();
     enableMediaButton.setVisibility(View.VISIBLE);
     disableMediaButton.setVisibility(View.GONE);
 });
-```
-
-Add two methods to `ChatViewModel`:
-
-```java
-public void disableMedia() {
-    conversation.disableMedia();
-}
-
-@SuppressLint("MissingPermission")
-public void enableMedia() {
-    conversation.enableMedia();
-}
 ```
 
 > **NOTE:** When enabling audio in a conversation establishes an audio leg for a member of the conversation. The audio is only streamed to other members of the conversation who have also enabled audio.
 
 ## Display audio events
 
-When enabling media, `NexmoMediaEvent` events are sent to the conversation. To display these events you will need to add a `NexmoMediaEventListener`. Replace the whole `getConversation` method in the `ChatViewModel`:
+When enabling media, `NexmoMediaEvent` events are sent to the conversation. To display these events you will need to add a `NexmoMediaEventListener`. Add the `NexmoMediaEventListener` below `addMessageEventListener` inside `getConversation` method:
 
 ```java
-private void getConversation() {
-    client.getConversation(Config.CONVERSATION_ID, new NexmoRequestListener<NexmoConversation>() {
-        @Override
-        public void onSuccess(@Nullable NexmoConversation conversation) {
-            ChatViewModel.this.conversation = conversation;
+conversation.addMediaEventListener(new NexmoMediaEventListener() {
+    @Override
+    public void onMediaEnabled(@NonNull NexmoMediaEvent nexmoMediaEvent) {
+        updateConversation(nexmoMediaEvent);
+    }
 
-            if (ChatViewModel.this.conversation != null) {
-                getConversationEvents(ChatViewModel.this.conversation);
-                ChatViewModel.this.conversation.addMessageEventListener(messageListener);
-
-                ChatViewModel.this.conversation.addMediaEventListener(new NexmoMediaEventListener() {
-                    @Override
-                    public void onMediaEnabled(@NonNull NexmoMediaEvent nexmoMediaEvent) {
-                        updateConversation(nexmoMediaEvent);
-                    }
-
-                    @Override
-                    public void onMediaDisabled(@NonNull NexmoMediaEvent nexmoMediaEvent) {
-                        updateConversation(nexmoMediaEvent);
-                    }
-                });
-            }
-        }
-
-        @Override
-        public void onError(@NonNull NexmoApiError apiError) {
-            ChatViewModel.this.conversation = null;
-            _errorMessage.postValue("Error: Unable to load conversation " + apiError.getMessage());
-        }
-    });
-}
+    @Override
+    public void onMediaDisabled(@NonNull NexmoMediaEvent nexmoMediaEvent) {
+        updateConversation(nexmoMediaEvent);
+    }
+});
 ```
 
-The `conversationEvents` observer inside `ChatFragment` must support the `NexmoMediaEvent` type. Add a new branch to the if statement:
+Add supporf of the `NexmoMediaEvent` inside `updateConversationView` method by adding new branch to `if-else` statement:
 
 ```java
-private Observer<ArrayList<NexmoEvent>> conversationEvents = events -> {
-
-        //...
-
-        if (event instanceof NexmoMemberEvent) {
-            line = getConversationLine((NexmoMemberEvent) event);
-        } else if (event instanceof NexmoTextEvent) {
-            line = getConversationLine((NexmoTextEvent) event);
-        } else if (event instanceof NexmoMediaEvent) {
-            line = getConversationLine((NexmoMediaEvent) event);
-        }
-
-        //...
-    };
-```
-
-Now add `getConversationLine` method needs to support `NexmoMediaEvent` type as well:
-
-```java
-private String getConversationLine(NexmoMediaEvent mediaEvent) {
-    String user = mediaEvent.getEmbeddedInfo().getUser().getName();
-    return user + " media state: " + mediaEvent.getMediaState();
+else if (event instanceof NexmoMediaEvent) {
+    NexmoMediaEvent nexmoMediaEvent = (NexmoMediaEvent) event;
+    String userName = nexmoMediaEvent.getEmbeddedInfo().getUser().getName();
+    line = userName + "media state: " + nexmoMediaEvent.getMediaState();
 }
 ```
 
