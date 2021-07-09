@@ -48,7 +48,7 @@ class CallViewController: UIViewController {
     
     private func displayIncomingCallAlert(call: NXMCall) {
         var from = "Unknown"
-        if let otherParty = call.otherCallMembers.firstObject as? NXMCallMember {
+        if let otherParty = call.allMembers.firstObject {
             from = otherParty.user.name
         }
 
@@ -89,7 +89,7 @@ Similar to `NXMClient`, `NXMCall` also has a delegate to handle changes to the c
 
 ```swift
 extension CallViewController: NXMCallDelegate {
-    func call(_ call: NXMCall, didUpdate callMember: NXMCallMember, with status: NXMCallMemberStatus) {
+    func call(_ call: NXMCall, didUpdate callMember: NXMMember, with status: NXMCallMemberStatus) {
         switch status {
         case .answered:
             guard callMember.user.name != self.user.name else { return }
@@ -107,7 +107,7 @@ extension CallViewController: NXMCallDelegate {
         setStatusLabelText(error.localizedDescription)
     }
 
-    func call(_ call: NXMCall, didUpdate callMember: NXMCallMember, isMuted muted: Bool) {}
+    func call(_ call: NXMCall, didUpdate callMember: NXMMember, isMuted muted: Bool) {}
 }
 ```
 
