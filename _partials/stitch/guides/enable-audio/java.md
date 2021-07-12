@@ -115,7 +115,7 @@ conversation.addMediaEventListener(new NexmoMediaEventListener() {
 });
 ```
 
-Add supporf of the `NexmoMediaEvent` inside `updateConversationView` method by adding new branch to `if-else` statement:
+Add support of the `NexmoMediaEvent` inside `updateConversationView` method by adding new branch to `if-else` statement:
 
 ```java
 else if (event instanceof NexmoMediaEvent) {
