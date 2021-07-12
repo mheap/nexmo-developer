@@ -13,6 +13,12 @@ Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoCl
 val client = NexmoClient.Builder().build(this)
 ```
 
+IDE will display a warning about the unresolved reference:
+
+![](/screenshots/tutorials/client-sdk/android-shared/missing-import-kotlin.png)
+
+Put caret on the red text and press `Alt + Enter` to import the reference.
+
 Now below client initialization code add connection listener to monitor connection state:
 
 ```kotlin

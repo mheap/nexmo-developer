@@ -30,52 +30,38 @@ Add new entry in the `app/src/AndroidManifest.xml` file (below last `<uses-permi
 
 ### Request permission on application start
 
-Add `requestCallPermissions` method inside `LoginFragment` class.
+Request permissions inside the `onCreate` method of the `MainActivity` class:
 
 ```kotlin
-override fun onCreate(savedInstanceState: Bundle?) {
-    val callsPermissions = arrayOf(Manifest.permission.RECORD_AUDIO)
-    ActivityCompat.requestPermissions(this, callsPermissions, 123)
-}
+val callsPermissions = arrayOf(Manifest.permission.RECORD_AUDIO)
+ActivityCompat.requestPermissions(this, callsPermissions, 123)
 ```
 
 ## Add audio UI
 
-You will now need to add two buttons for the user to enable and disable audio. Open the `app/src/main/res/layout/fragment_chat.xml` file and add two new buttons (`enableMediaButton` and `disableMediaButton`) right below `sendMessageButton`. 
+You will now need to add two buttons for the user to enable and disable audio. Open the `app/src/main/res/layout/activity_main.xml` file and add two new buttons (`enableMediaButton` and `disableMediaButton`) right below `logoutButton` button:
 
 ```xml
 <!--...-->
-
-<androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/chatContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+<Button
+        android:id="@+id/enableMediaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/conversationEventsScrollView"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        tools:visibility="visible">
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Enable Audio" />
 
-    <Button
-            android:id="@+id/enableMediaButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/conversationEventsScrollView"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Enable Audio" />
-
-    <Button
-            android:id="@+id/disableMediaButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/conversationEventsScrollView"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone"
-            android:text="Disable Audio"
-            tools:visibility="visible"/>
+<Button
+        android:id="@+id/disableMediaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/conversationEventsScrollView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:text="Disable Audio"
+        tools:visibility="visible"/>
 <!--...-->
 ```
 
@@ -84,43 +70,26 @@ private lateinit var enableMediaButton: Button
 private lateinit var disableMediaButton: Button
 ```
 
-retrieve the buttons' reference by adding `findViewById` calls in the `onViewCreated` method:
+retrieve the buttons' reference by adding `findViewById` calls in the `onCreate` method:
 
 ```java
-public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-
-    //...
-    enableMediaButton = view.findViewById(R.id.enableMediaButton)
-    disableMediaButton = view.findViewById(R.id.disableMediaButton)
-}
+enableMediaButton = view.findViewById(R.id.enableMediaButton)
+disableMediaButton = view.findViewById(R.id.disableMediaButton)
 ```
 
-Add click event listeners for the buttons, inside the `onViewCreated` method:
+Add click event listeners for the buttons, inside the `onCreate` method:
 
 ```kotlin
 enableMediaButton.setOnClickListener {
-    viewModel.enableMedia()
+    conversation?.enableMedia()
     enableMediaButton.visibility = View.GONE
     disableMediaButton.visibility = View.VISIBLE
 }
 
 disableMediaButton.setOnClickListener {
-    viewModel.disableMedia()
+    conversation?.disableMedia()
     enableMediaButton.visibility = View.VISIBLE
     disableMediaButton.visibility = View.GONE
-}
-```
-
-Add two methods to `ChatViewModel`:
-
-```kotlin
-fun disableMedia() {
-    conversation?.disableMedia()
-}
-
-@SuppressLint("MissingPermission")
-fun enableMedia() {
-    conversation?.enableMedia()
 }
 ```
 
@@ -128,60 +97,30 @@ fun enableMedia() {
 
 ## Display audio events
 
-When enabling media, `NexmoMediaEvent` events are sent to the conversation. To display these events you will need to add a `NexmoMediaEventListener`. Replace the whole `getConversation` method in the `ChatViewModel`:
+When enabling media, `NexmoMediaEvent` events are sent to the conversation. To display these events you will need to add a `NexmoMediaEventListener`. Add the `NexmoMediaEventListener` below `addMessageEventListener` inside `getConversation` method:
 
 ```kotlin
-private fun getConversation() {
-    client.getConversation(Config.CONVERSATION_ID, object : NexmoRequestListener<NexmoConversation> {
-        override fun onSuccess(conversation: NexmoConversation?) {
-            this@ChatViewModel.conversation = conversation
-
-            conversation?.let {
-                getConversationEvents(it)
-                it.addMessageEventListener(messageListener)
-
-                it.addMediaEventListener(object : NexmoMediaEventListener {
-                    override fun onMediaEnabled(mediaEvent: NexmoMediaEvent) {
-                        updateConversation(mediaEvent)
-                    }
-
-                    override fun onMediaDisabled(mediaEvent: NexmoMediaEvent) {
-                        updateConversation(mediaEvent)
-                    }
-                })
-            }
-        }
-
-        override fun onError(apiError: NexmoApiError) {
-            this@ChatViewModel.conversation = null
-            _errorMessage.postValue("Error: Unable to load conversation ${apiError.message}")
-        }
-    })
-}
-```
-
-The `conversationEvents` observer have to support newly added `NexmoMediaEvent` type. Add new branch to the if statement:
-
-```kotlin
-private var conversationEvents = Observer<List<NexmoEvent>?> { events ->
-    val events = events?.mapNotNull {
-        when (it) {
-            is NexmoMemberEvent -> getConversationLine(it)
-            is NexmoTextEvent -> getConversationLine(it)
-            is NexmoMediaEvent -> getConversationLine(it)
-            else -> null
-        }
+conversation.addMediaEventListener(new NexmoMediaEventListener() {
+    @Override
+    public void onMediaEnabled(@NonNull NexmoMediaEvent nexmoMediaEvent) {
+        conversationEvents.add(nexmoMediaEvent);
+        updateConversationView();
     }
 
-    // ...
+    @Override
+    public void onMediaDisabled(@NonNull NexmoMediaEvent nexmoMediaEvent) {
+        conversationEvents.add(nexmoMediaEvent);
+        updateConversationView();
+    }
+});
 ```
 
-Now add `getConversationLine` method needs to support `NexmoMediaEvent` type as well:
+Add support of the `NexmoMediaEvent` inside `updateConversationView` method by adding new branch to `when` statement:
 
 ```kotlin
-private String getConversationLine(NexmoMediaEvent mediaEvent) {
-    String user = mediaEvent.embeddedInfo.user.name;
-    return "$user media state: ${mediaEvent.mediaState}"
+is NexmoMediaEvent -> {
+    val userName = event.embeddedInfo.user.name
+    userName + "media state: " + event.mediaState
 }
 ```
 

@@ -7,25 +7,47 @@ description: In this step you will send a message to the conversation
 
 Time to send the first message.
 
-Inside `ChatViewModel` class, locate the `onSendMessage` method and fill its body:
+To send a message register a callback inside `onCreate` method:
 
 ```kotlin
-fun onSendMessage(message: String) {
-    if (conversation == null) {
-        _errorMessage.postValue("Error: Conversation does not exist")
+findViewById<View>(R.id.sendMessageButton).setOnClickListener { sendMessage() }
+```
+
+Add `sendMessge` method inside `MainActivity`:
+
+```kotlin
+private fun sendMessage() {
+    val message = messageEditText.text.toString()
+
+    if (message.trim { it <= ' ' }.isEmpty()) {
+        Toast.makeText(this, "Message is blank", Toast.LENGTH_SHORT).show()
         return
     }
 
-    conversation?.sendText(message, object : NexmoRequestListener<Void> {
-        override fun onSuccess(p0: Void?) {
+    messageEditText.setText("")
+    hideKeyboard()
+
+    conversation?.sendText(message, object : NexmoRequestListener<Void?> {
+        override fun onError(apiError: NexmoApiError) {
+            Toast.makeText(this@MainActivity, "Error sending message", Toast.LENGTH_SHORT).show()
         }
 
-        override fun onError(apiError: NexmoApiError) {
-        }
+        override fun onSuccess(aVoid: Void?) {}
     })
 }
 ```
 
-> **NOTE:** Inside `ChatFragment` class, contains `sendMessageButton listener` that was written for you. This method is called when user click `send` button. If message text exists above `viewModel.onSendMessage()` method is called.
+The above method hides the keyboard, clears the text field and sends the message.
 
-You'll notice that, although the message was sent, the conversation doesn't include it. It is possible to call the `getConversationEvents()` method after the message is sent, but the SDK provides a better way to handle this scenario. Let's do that in the next step.
+Now in the `MainActivity ` add the missing `hideKeyboard` method - the utility method that hides Android system keyboard:
+
+```kotlin
+private fun hideKeyboard() {
+    val inputMethodManager = ContextCompat.getSystemService(this, InputMethodManager::class.java)
+
+    val view = currentFocus ?: View(this)
+    inputMethodManager?.hideSoftInputFromWindow(view.windowToken, 0)
+}
+```
+
+You'll notice that, although the message was sent, the conversation doesn't include it. Let's do that in the next step.

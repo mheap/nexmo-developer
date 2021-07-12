@@ -19,6 +19,12 @@ Locate the `onCreate` method in the `MainActivity` class and initialize `NexmoCl
 client = new NexmoClient.Builder().build(this);
 ```
 
+IDE will display a warning about the unresolved reference:
+
+![](/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png)
+
+Put caret on the red text and press `Alt + Enter` to import the reference.
+
 Now below client initialization code add connection listener to monitor connection state:
 
 ```java
@@ -37,7 +43,7 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
 });
 ```
 
- The above listener allows us to determine that that user has logged in successfully and show the `START CALL` button. 
+ The above listener allows to determine that that user has logged in successfully and show the chat UI. 
  
  Finally add the code to login the user. Please make sure to replace `ALICE_JWT` with the JWT you created during a previous step:
 

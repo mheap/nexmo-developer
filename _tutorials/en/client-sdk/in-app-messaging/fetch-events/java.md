@@ -5,7 +5,33 @@ description: In this step you display any messages already sent as part of this 
 
 # Fetch conversation events
 
-Inside `ChatViewModel` class, locate the `getConversationEvents()` method and paste its implementation:
+Add `getConversationEvents(conversation);` call inside `onSucess` callback inside `getConversationEvents()` method:
+
+```java
+private void getConversation() {
+    client.getConversation(CONVERSATION_ID, new NexmoRequestListener<NexmoConversation>() {
+        @Override
+        public void onSuccess(@Nullable NexmoConversation conversation) {
+            MainActivity.this.conversation = conversation;
+            getConversationEvents(conversation);
+        }
+
+        @Override
+        public void onError(@NonNull NexmoApiError apiError) {
+            MainActivity.this.conversation = null;
+            Toast.makeText(MainActivity.this, "Error: Unable to load conversation", Toast.LENGTH_SHORT);
+        }
+    });
+}
+```
+
+Add `conversationEvents` method to store conversation events:
+
+```java
+private ArrayList<NexmoEvent> conversationEvents = new ArrayList<>();
+```
+
+Add `getConversationEvents` method to retrieve conversation events:
 
 ```java
 private void getConversationEvents(NexmoConversation conversation) {
@@ -13,29 +39,30 @@ private void getConversationEvents(NexmoConversation conversation) {
             new NexmoRequestListener<NexmoEventsPage>() {
                 @Override
                 public void onSuccess(@Nullable NexmoEventsPage nexmoEventsPage) {
-                    _conversationEvents.postValue(new ArrayList<>(nexmoEventsPage.getPageResponse().getData()));
+                    conversationEvents.addAll(nexmoEventsPage.getPageResponse().getData());
+                    updateConversationView();
+
+                    runOnUiThread(() -> {
+                        chatContainer.setVisibility(View.VISIBLE);
+                        loginContainer.setVisibility(View.GONE);
+                    });
                 }
 
                 @Override
                 public void onError(@NonNull NexmoApiError apiError) {
-                    _errorMessage.postValue("Error: Unable to load conversation events " + apiError.getMessage());
+                    Toast.makeText(MainActivity.this, "Error: Unable to load conversation events", Toast.LENGTH_SHORT);
                 }
             });
 }
 ```
 
-Once the events are retrieved (or an error is returned), we're updating the view (`ChatFragment`) to reflect the new data.
-
-> **NOTE:** We are using two `LiveData` streams. `conversationEvents` to post successful API response and `_errorMessage` to post returned error.
-
-Let's make our view react to the new data. Inside `ChatFragment` locate the `conversationEvents` property and add this code to handle our conversation history:
+Above method adds events to `conversationEvents` collection and updates the view. Now add the missing `updateConversationView` method:
 
 ```java
-private Observer<ArrayList<NexmoEvent>> conversationEvents = events -> {
-
+private void updateConversationView() {
     ArrayList<String> lines = new ArrayList<>();
 
-    for (NexmoEvent event : events) {
+    for (NexmoEvent event : conversationEvents) {
         if (event == null) {
             continue;
         }
@@ -43,63 +70,60 @@ private Observer<ArrayList<NexmoEvent>> conversationEvents = events -> {
         String line = "";
 
         if (event instanceof NexmoMemberEvent) {
-            line = getConversationLine((NexmoMemberEvent) event);
+            NexmoMemberEvent memberEvent = (NexmoMemberEvent) event;
+            String userName = memberEvent.getEmbeddedInfo().getUser().getName();
+
+            switch (memberEvent.getState()) {
+                case JOINED:
+                    line = userName + " joined";
+                    break;
+                case INVITED:
+                    line = userName + " invited";
+                    break;
+                case LEFT:
+                    line = userName + " left";
+                    break;
+                case UNKNOWN:
+                    line = "Error: Unknown member event state";
+                    break;
+            }
         } else if (event instanceof NexmoTextEvent) {
-            line = getConversationLine((NexmoTextEvent) event);
+            NexmoTextEvent textEvent = (NexmoTextEvent) event;
+            String userName = textEvent.getEmbeddedInfo().getUser().getName();
+            line = userName + "  said: " + textEvent.getText();
         }
 
         lines.add(line);
     }
 
     // Production application should utilise RecyclerView to provide better UX
-    if (events.isEmpty()) {
-        conversationEventsTextView.setText("Conversation has no events");
+    if (lines.isEmpty()) {
+        conversationTextView.setText("Conversation has no events");
     } else {
 
-        String conversationEvents = "";
+        String conversation = "";
 
         for (String line : lines) {
-            conversationEvents += line + "\n";
+            conversation += line + "\n";
         }
 
-        conversationEventsTextView.setText(conversationEvents);
+        conversationTextView.setText(conversation);
     }
-
-    progressBar.setVisibility(View.GONE);
-    chatContainer.setVisibility(View.VISIBLE
-
-    );
-};
-```
-
-To handle member related events (member invited, joined or left) you need to fill the body of the `fun getConversationLine(memberEvent: NexmoMemberEvent)` method:
-
-```java
-private String getConversationLine(NexmoMemberEvent memberEvent) {
-    String user = memberEvent.getEmbeddedInfo().getUser().getName();
-
-    switch (memberEvent.getState()) {
-        case JOINED:
-            return user + " joined";
-        case INVITED:
-            return user + " invited";
-        case LEFT:
-            return user + " left";
-        case UNKNOWN:
-            return "Error: Unknown member event state";
-    }
-
-    return "";
 }
 ```
 
-Above method converts `NexmoMemberEvent` to a `String` that will be displayed as a single line in the chat conversation. Similar conversion need to be done for `NexmoTextEvent`. Let's fill the body of the `getConversationLine(textEvent: NexmoTextEvent)` method:
+Events are stored in the `conversationEvents` property. You should remove these events after the logout. Update the body of the `setConnectionListener` and call `conversationEvents.clear`:
 
 ```java
-private String getConversationLine(NexmoTextEvent textEvent) {
-    String user = textEvent.getEmbeddedInfo().getUser().getName();
-    return user + "  said: " + textEvent.getText();
-}
+client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
+    if (connectionStatus == NexmoConnectionListener.ConnectionStatus.CONNECTED) {
+        // ...
+    } else if (connectionStatus == NexmoConnectionListener.ConnectionStatus.DISCONNECTED) {
+        // ...
+
+        conversationEvents.clear();
+    }
+});
 ```
 
 > **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoTextEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).
