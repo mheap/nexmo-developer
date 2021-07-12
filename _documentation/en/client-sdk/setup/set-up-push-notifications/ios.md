@@ -9,8 +9,8 @@ On incoming events such as a new message, or an incoming call, the user often ex
 
 There are two types of push notifications that you can use:
 
-* VoIP push *([PushKit](https://developer.apple.com/documentation/pushkit))* - the better fit for applications that use Vonage In-App Voice functionality. ([_Jump to section_](http://localhost:3000/client-sdk/setup/set-up-push-notifications/ios#integrate-voip-push-notifications-in-your-application))
-* Regular push *([UserNotifications](https://developer.apple.com/documentation/usernotifications))* - the better fit for applications that use Vonage In-App Chat functionality. ([_Jump to section_](http://localhost:3000/client-sdk/setup/set-up-push-notifications/ios#integrate-regular-push-notifications-in-your-application))
+* VoIP push *([PushKit](https://developer.apple.com/documentation/pushkit))* - the better fit for applications that use Vonage In-App Voice functionality. ([_Jump to section_](/client-sdk/setup/set-up-push-notifications/ios#integrate-voip-push-notifications-in-your-application))
+* Regular push *([UserNotifications](https://developer.apple.com/documentation/usernotifications))* - the better fit for applications that use Vonage In-App Chat functionality. ([_Jump to section_](/client-sdk/setup/set-up-push-notifications/ios#integrate-regular-push-notifications-in-your-application))
 
 ## Create a push certificate
 
