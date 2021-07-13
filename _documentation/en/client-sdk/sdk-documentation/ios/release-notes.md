@@ -6,6 +6,17 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.0.1 - 2021-07-12
+
+### Fixed
+
+- Sending DTMF during calls.
+- Prewarmed media termination.
+
+### Changed
+
+- `NXMMemberEvent`'s `member` substituted with `memberId`.
+
 ## 3.0.0 - 2021-07-01
 
 ### Added
