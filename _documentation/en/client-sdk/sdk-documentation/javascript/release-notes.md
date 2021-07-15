@@ -6,6 +6,13 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.0.5 - July 15, 2021
+
+### Fixes
+
+- Fix the `from` for member events
+- Update npm dependencies including `socket-io`
+
 ## Version 8.0.4 - June 16, 2021
 
 ### Fixes
