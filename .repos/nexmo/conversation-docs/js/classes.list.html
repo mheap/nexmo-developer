@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
 	<title>DocStrap Classes</title>
 
 	<!--[if lt IE 9]>
@@ -21,13 +20,8 @@
 <div class="container">
 	<div class="navbar-header">
 		<a class="navbar-brand" href="index.html">DocStrap</a>
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-        </button>
 	</div>
-	<div class="navbar-collapse collapse" id="topNavigation">
+	<div class="navbar-collapse">
 		<ul class="nav navbar-nav">
 			
 			<li class="dropdown">
@@ -45,25 +39,12 @@
 			</li>
 			
 		</ul>
-        
-            <div class="col-sm-3 col-md-3">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        
 	</div>
-
 </div>
 </div>
 
 
-<div class="container" id="toc-content">
+<div class="container">
 <div class="row">
 
 	
@@ -342,7 +323,7 @@
         
         <p class="code-caption">listen for nxmCall status changed events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;call:status:changed&quot;,(nxmCall) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;call:status:changed&quot;,(nxmCall) =&gt; {
    console.log(&quot;call: &quot; + nxmCall.status);
  });</pre>
 
@@ -675,7 +656,7 @@
         
         <p class="code-caption">listen for member call events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;member:call&quot;, (member, nxmCall) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;member:call&quot;, (member, nxmCall) =&gt; {
    console.log(&quot;NXMCall &quot;, nxmCall);
  });</pre>
 
@@ -850,7 +831,7 @@
         
         <p class="code-caption">listen for member invited events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;member:invited&quot;,(member, event) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;member:invited&quot;,(member, event) =&gt; {
    console.log(&quot;Invited to the conversation: &quot; + event.conversation.display_name || event.conversation.name);
    // identify the sender.
    console.log(&quot;Invited by: &quot; + member.invited_by);
@@ -1031,7 +1012,7 @@
         
         <p class="code-caption">listen for member joined events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;member:joined&quot;,(member, event) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;member:joined&quot;,(member, event) =&gt; {
    console.log(&quot;JOINED&quot;, &quot;Joined conversation: &quot; + event.conversation.display_name || event.conversation.name);
  });</pre>
 
@@ -1151,7 +1132,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-477">line 477</a>
+				 <a href="application.js.html#sunlight-1-line-479">line 479</a>
 			</li>
 		</ul>
 	</dd>
@@ -1182,7 +1163,7 @@
         
         <p class="code-caption">listen for changes in the synchronisation progress events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;sync:progress&quot;,(status) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;sync:progress&quot;,(status) =&gt; {
 	  console.log(status.sync_progress);
  });</pre>
 
@@ -1327,7 +1308,7 @@ A member has unmuted their audio</p>
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-507">line 507</a>
+				 <a href="sdk.js.html#sunlight-1-line-500">line 500</a>
 			</li>
 		</ul>
 	</dd>
@@ -1504,7 +1485,7 @@ A Member has muted their audio</p>
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-493">line 493</a>
+				 <a href="sdk.js.html#sunlight-1-line-486">line 486</a>
 			</li>
 		</ul>
 	</dd>
@@ -1887,7 +1868,7 @@ A Member has muted their audio</p>
         
         <p class="code-caption">listen for image events</p>
     
-    <pre class="sunlight-highlight-javascript">conversation.on(&quot;image&quot;, (sender, image) =&gt; {
+    <pre class="sunlight-highlight-javascript"> conversation.on(&quot;image&quot;, (sender, image) =&gt; {
    console.log(sender,image);
    // Identify if your own imageEvent or someone else&#x27;s.
    if (image.from !== conversation.me.id){
@@ -2066,7 +2047,7 @@ A Member has muted their audio</p>
         
         <p class="code-caption">listen for text events</p>
     
-    <pre class="sunlight-highlight-javascript">conversation.on(&quot;text&quot;,(sender, message) =&gt; {
+    <pre class="sunlight-highlight-javascript"> conversation.on(&quot;text&quot;,(sender, message) =&gt; {
    console.log(sender, message);
    // Identify your own message.
    if (message.from === conversation.me.id){
@@ -2216,7 +2197,7 @@ A Member has muted their audio</p>
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-460">line 460</a>
+				 <a href="sdk.js.html#sunlight-1-line-457">line 457</a>
 			</li>
 		</ul>
 	</dd>
@@ -2249,11 +2230,8 @@ A Member has muted their audio</p>
     
     <pre class="sunlight-highlight-javascript">conversation.on(&quot;image:seen&quot;, (member, image) =&gt; {
  console.log(image);
- // Get the list of Members that have seen this event
- for (let member_id in image.state.seen_by) {
-   if (conversation.me.id !== member_id) {
-     console.log(conversation.members.get(member_id).name);
-   };
+ if (conversation.me.id !== member.memberId) {
+   console.log(member);
  };
 });</pre>
 
@@ -2580,7 +2558,7 @@ A Member has muted their audio</p>
         <p class="code-caption">get the name of the invited Member</p>
     
     <pre class="sunlight-highlight-javascript">conversation.on(&quot;member:invited&quot;, (member, event) =&gt; {
- console.log(member.user.name + &quot; invited to the conversation&quot;);
+ console.log(member.userName + &quot; invited to the conversation&quot;);
 });</pre>
 
 
@@ -2756,7 +2734,7 @@ A Member has muted their audio</p>
     
     <pre class="sunlight-highlight-javascript">conversation.on(&quot;member:joined&quot;, (member, event) =&gt; {
  console.log(event.id)
- console.log(member.user.name+ &quot; joined the conversation&quot;);
+ console.log(member.userName+ &quot; joined the conversation&quot;);
 });</pre>
 
 
@@ -2931,7 +2909,7 @@ A Member has muted their audio</p>
         <p class="code-caption">get the username of the Member that left</p>
     
     <pre class="sunlight-highlight-javascript">conversation.on(&quot;member:left&quot;, (member , event) =&gt; {
- console.log(member.user.name + &quot; left&quot;);
+ console.log(member.userName + &quot; left&quot;);
  console.log(event.body.reason);
 });</pre>
 
@@ -3125,7 +3103,7 @@ A Member has muted their audio</p>
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-477">line 477</a>
+				 <a href="sdk.js.html#sunlight-1-line-471">line 471</a>
 			</li>
 		</ul>
 	</dd>
@@ -3157,7 +3135,6 @@ A Member has muted their audio</p>
         <p class="code-caption">get every Member's media change events </p>
     
     <pre class="sunlight-highlight-javascript">conversation.on(&quot;member:media&quot;, (member, event) =&gt; {
- console.log(member.media.audio_settings.enabled); //true
  console.log(event.body.media); //{&quot;audio&quot;: true, &quot;audio_settings&quot;: {&quot;enabled&quot;: true, &quot;muted&quot;: false, &quot;earmuffed&quot;: false}}
 });</pre>
 
@@ -3334,11 +3311,8 @@ A Member has muted their audio</p>
     
     <pre class="sunlight-highlight-javascript">conversation.on(&quot;text:seen&quot;, (member, text) =&gt; {
  console.log(text);
- // Get the list of members that have seen this event
- for (let member_id in text.state.seen_by) {
-   if (conversation.me.id !== member_id) {
-     console.log(conversation.members.get(member_id).name);
-   }
+ if (conversation.me.id !== member.memberId) {
+   console.log(member);
  }
 });</pre>
 
@@ -3514,7 +3488,7 @@ A Member has muted their audio</p>
         <p class="code-caption">get the display name of the Member that stopped typing</p>
     
     <pre class="sunlight-highlight-javascript">conversation.on(&quot;text:typing:off&quot;, (member, event) =&gt; {
- console.log(member.display_name + &quot; stopped typing...&quot;);
+ console.log(member.displayName + &quot; stopped typing...&quot;);
 });</pre>
 
 
@@ -3689,7 +3663,7 @@ A Member has muted their audio</p>
         <p class="code-caption">get the display name of the Member that is typing</p>
     
     <pre class="sunlight-highlight-javascript">conversation.on(&quot;text:typing:on&quot;, (member, event) =&gt; {
- console.log(member.display_name + &quot; is typing...&quot;);
+ console.log(member.displayName + &quot; is typing...&quot;);
 });</pre>
 
 
@@ -4093,7 +4067,7 @@ A Member has muted their audio</p>
         
         <p class="code-caption">Listen for websocket connecting event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;connecting&quot;, () =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;connecting&quot;, () =&gt; {
      console.log(&quot;connecting&quot;);
     });</pre>
 
@@ -4191,7 +4165,7 @@ A Member has muted their audio</p>
         
         <p class="code-caption">Listen for websocket disconnect event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;disconnect&quot;, () =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;disconnect&quot;, () =&gt; {
      console.log(&quot;disconnect&quot;);
     });</pre>
 
@@ -4289,7 +4263,7 @@ A Member has muted their audio</p>
         
         <p class="code-caption">Listen for websocket error event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;error&quot;, (error) =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;error&quot;, (error) =&gt; {
      console.log(&quot;error&quot;, error);
     });</pre>
 
@@ -4387,7 +4361,7 @@ A Member has muted their audio</p>
         
         <p class="code-caption">Listen for websocket ready event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;ready&quot;, () =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;ready&quot;, () =&gt; {
      console.log(&quot;connection ready&quot;);
     });</pre>
 
@@ -4485,7 +4459,7 @@ A Member has muted their audio</p>
         
         <p class="code-caption">Listen for websocket reconnect event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;reconnect&quot;, (retry_number) =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;reconnect&quot;, (retry_number) =&gt; {
      console.log(&quot;reconnect&quot;, retry_number);
     });</pre>
 
@@ -4583,7 +4557,7 @@ A Member has muted their audio</p>
         
         <p class="code-caption">Listen for websocket reconnecting event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;reconnecting&quot;, (retry_number): void =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;reconnecting&quot;, (retry_number): void =&gt; {
      console.log(&quot;reconnecting&quot;, retry_number);
     });</pre>
 
@@ -4607,28 +4581,12 @@ A Member has muted their audio</p>
 
 	
 		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+			<div id="toc" class="col-md-3"></div>
 		</div>
 	
 
 </div>
 </div>
-
-
-    <div class="modal fade" id="searchResults">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Search results</h4>
-          </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div>
 
 
 <footer>
@@ -4640,18 +4598,15 @@ A Member has muted their audio</p>
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	
-		on Wed Jun 16th 2021
-	
-	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+	on Thu Jul 15th 2021 using the <a
+	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
 
+<!--<script src="scripts/sunlight.js"></script>-->
 <script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/bootstrap-dropdown.js"></script>
 <script src="scripts/toc.js"></script>
-
-    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
-
 
 <script>
 $( function () {
@@ -4661,7 +4616,7 @@ $( function () {
 		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
 	} );
 
-	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
 		var $this = $( this );
 
 		var example = $this.find( "code" );
@@ -4692,25 +4647,26 @@ $( function () {
 		enableDoclinks : true
 	} );
 
-	$.catchAnchorLinks( {
-        navbarOffset: 10
-	} );
 	$( "#toc" ).toc( {
 		anchorName  : function ( i, heading, prefix ) {
-			return $( heading ).attr( "id" ) || ( prefix + i );
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
 		},
-		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		selectors   : "h1,h2,h3,h4",
 		showAndHide : false,
+                navbarOffset: 10,
 		smoothScrolling: true
 	} );
 
+	$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
 	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
 	$( '.dropdown-toggle' ).dropdown();
+	//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
 
-    $( "table" ).each( function () {
-      var $this = $( this );
-      $this.addClass('table');
-    } );
+  $( "table" ).each( function () {
+    var $this = $( this );
+    $this.addClass('table');
+  } );
 
 } );
 </script>
@@ -4721,14 +4677,6 @@ $( function () {
 
 
 <!--Google Analytics-->
-
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            SearcherDisplay.init();
-        });
-    </script>
 
 
 </body>

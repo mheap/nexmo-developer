@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
 	<title>DocStrap Class: Application</title>
 
 	<!--[if lt IE 9]>
@@ -21,13 +20,8 @@
 <div class="container">
 	<div class="navbar-header">
 		<a class="navbar-brand" href="index.html">DocStrap</a>
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-        </button>
 	</div>
-	<div class="navbar-collapse collapse" id="topNavigation">
+	<div class="navbar-collapse">
 		<ul class="nav navbar-nav">
 			
 			<li class="dropdown">
@@ -45,25 +39,12 @@
 			</li>
 			
 		</ul>
-        
-            <div class="col-sm-3 col-md-3">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        
 	</div>
-
 </div>
 </div>
 
 
-<div class="container" id="toc-content">
+<div class="container">
 <div class="row">
 
 	
@@ -265,7 +246,7 @@ user's invitations</p>
         
         <p class="code-caption">Accessing the list of conversations</p>
     
-    <pre class="sunlight-highlight-javascript">rtc.login(token).then((application) =&gt; {
+    <pre class="sunlight-highlight-javascript"> rtc.login(token).then((application) =&gt; {
    console.log(application.conversations);
    console.log(application.me.name, application.me.id);
  }).catch((error) =&gt; {
@@ -296,7 +277,7 @@ user's invitations</p>
             
 <hr>
 <dt class="name" id=".CONVERSATION_API_VERSION">
-    <h4 id=".CONVERSATION_API_VERSION"><span class="type-signature">&lt;static, readonly> </span>CONVERSATION_API_VERSION<span class="type-signature"> :string</span></h4>
+    <h4><span class="type-signature">&lt;static, readonly> </span>CONVERSATION_API_VERSION<span class="type-signature"> :string</span></h4>
 
     
 </dt>
@@ -447,7 +428,7 @@ user's invitations</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-549">line 549</a>
+				 <a href="application.js.html#sunlight-1-line-551">line 551</a>
 			</li>
 		</ul>
 	</dd>
@@ -474,7 +455,7 @@ user's invitations</p>
             
 <hr>
 <dt>
-    <h4 class="name" id="callServer"><span class="type-signature">&lt;async> </span>callServer(user [, type])</h4>
+    <h4 class="name" id="callServer"><span class="type-signature">&lt;async> </span>callServer(user, <span class="optional">type</span>)</h4>
     
     
 </dt>
@@ -638,7 +619,7 @@ listen for it with application.on(&quot;call:status:changed&quot;)</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-306">line 306</a>
+				 <a href="application.js.html#sunlight-1-line-308">line 308</a>
 			</li>
 		</ul>
 	</dd>
@@ -689,7 +670,7 @@ listen for it with application.on(&quot;call:status:changed&quot;)</p>
         
         <p class="code-caption">Create a call to a phone</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;call:status:changed&quot;, (nxmCall) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;call:status:changed&quot;, (nxmCall) =&gt; {
    if (nxmCall.status === nxmCall.CALL_STATUS.STARTED) {
 		  console.log(&#x27;the call has started&#x27;);
 		}
@@ -852,7 +833,7 @@ Result added (or updated) in this.conversations</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-386">line 386</a>
+				 <a href="application.js.html#sunlight-1-line-388">line 388</a>
 			</li>
 		</ul>
 	</dd>
@@ -909,7 +890,7 @@ Result added (or updated) in this.conversations</p>
         
         <p class="code-caption">Get a conversation</p>
     
-    <pre class="sunlight-highlight-javascript">application.getConversation(id).then((conversation) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.getConversation(id).then((conversation) =&gt; {
      console.log(&quot;Retrieved conversation: &quot;, conversation);
  }).catch((error) =&gt; {
    console.error(error);
@@ -1155,7 +1136,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-462">line 462</a>
+				 <a href="application.js.html#sunlight-1-line-464">line 464</a>
 			</li>
 		</ul>
 	</dd>
@@ -1212,7 +1193,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
         
         <p class="code-caption">Get Conversations</p>
     
-    <pre class="sunlight-highlight-javascript">application.getConversations({ page_size: 20 }).then((conversations_page) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.getConversations({ page_size: 20 }).then((conversations_page) =&gt; {
    conversations_page.items.forEach(conversation =&gt; {
      render(conversation)
    })
@@ -1333,7 +1314,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-529">line 529</a>
+				 <a href="application.js.html#sunlight-1-line-531">line 531</a>
 			</li>
 		</ul>
 	</dd>
@@ -1384,7 +1365,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
         
         <p class="code-caption">Get User details</p>
     
-    <pre class="sunlight-highlight-javascript">application.getUser(id).then((user) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.getUser(id).then((user) =&gt; {
    console.log(&#x27;User details: &#x27;user);
  }).catch((error) =&gt; {
      console.error(error);
@@ -1503,7 +1484,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-268">line 268</a>
+				 <a href="application.js.html#sunlight-1-line-270">line 270</a>
 			</li>
 		</ul>
 	</dd>
@@ -1558,7 +1539,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
         
         <p class="code-caption">Create a call with users</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;call:status:changed&quot;, (nxmCall) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;call:status:changed&quot;, (nxmCall) =&gt; {
    if (nxmCall.status === nxmCall.CALL_STATUS.STARTED) {
 		  console.log(&#x27;the call has started&#x27;);
 		}
@@ -1578,7 +1559,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
             
 <hr>
 <dt>
-    <h4 class="name" id="newConversation"><span class="type-signature">&lt;async> </span>newConversation( [params])</h4>
+    <h4 class="name" id="newConversation"><span class="type-signature">&lt;async> </span>newConversation(<span class="optional">params</span>)</h4>
     
     
 </dt>
@@ -1770,7 +1751,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-336">line 336</a>
+				 <a href="application.js.html#sunlight-1-line-338">line 338</a>
 			</li>
 		</ul>
 	</dd>
@@ -1827,7 +1808,7 @@ The conversation name must be unique per application.</p>
         
         <p class="code-caption">Create a conversation and join</p>
     
-    <pre class="sunlight-highlight-javascript">application.newConversation().then((conversation) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.newConversation().then((conversation) =&gt; {
    //join the created conversation
    conversation.join().then((member) =&gt; {
      //Get the user&#x27;s member belonging in this conversation.
@@ -1846,7 +1827,7 @@ The conversation name must be unique per application.</p>
             
 <hr>
 <dt>
-    <h4 class="name" id="newConversationAndJoin"><span class="type-signature">&lt;async> </span>newConversationAndJoin( [params])</h4>
+    <h4 class="name" id="newConversationAndJoin"><span class="type-signature">&lt;async> </span>newConversationAndJoin(<span class="optional">params</span>)</h4>
     
     
 </dt>
@@ -2038,7 +2019,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-366">line 366</a>
+				 <a href="application.js.html#sunlight-1-line-368">line 368</a>
 			</li>
 		</ul>
 	</dd>
@@ -2095,7 +2076,7 @@ The conversation name must be unique per application.</p>
         
         <p class="code-caption">Create a conversation and join</p>
     
-    <pre class="sunlight-highlight-javascript">application.newConversationAndJoin().then((conversation) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.newConversationAndJoin().then((conversation) =&gt; {
    console.log(&quot;Joined as &quot; + conversation.me.display_name);
  }).catch((error) =&gt; {
    console.error(&quot;Error creating a conversation and joining &quot;, error);
@@ -2164,7 +2145,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-491">line 491</a>
+				 <a href="application.js.html#sunlight-1-line-493">line 493</a>
 			</li>
 		</ul>
 	</dd>
@@ -2302,7 +2283,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-195">line 195</a>
+				 <a href="application.js.html#sunlight-1-line-197">line 197</a>
 			</li>
 		</ul>
 	</dd>
@@ -2513,7 +2494,7 @@ The conversation name must be unique per application.</p>
         
         <p class="code-caption">listen for nxmCall status changed events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;call:status:changed&quot;,(nxmCall) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;call:status:changed&quot;,(nxmCall) =&gt; {
    console.log(&quot;call: &quot; + nxmCall.status);
  });</pre>
 
@@ -2846,7 +2827,7 @@ The conversation name must be unique per application.</p>
         
         <p class="code-caption">listen for member call events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;member:call&quot;, (member, nxmCall) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;member:call&quot;, (member, nxmCall) =&gt; {
    console.log(&quot;NXMCall &quot;, nxmCall);
  });</pre>
 
@@ -3021,7 +3002,7 @@ The conversation name must be unique per application.</p>
         
         <p class="code-caption">listen for member invited events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;member:invited&quot;,(member, event) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;member:invited&quot;,(member, event) =&gt; {
    console.log(&quot;Invited to the conversation: &quot; + event.conversation.display_name || event.conversation.name);
    // identify the sender.
    console.log(&quot;Invited by: &quot; + member.invited_by);
@@ -3202,7 +3183,7 @@ The conversation name must be unique per application.</p>
         
         <p class="code-caption">listen for member joined events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;member:joined&quot;,(member, event) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;member:joined&quot;,(member, event) =&gt; {
    console.log(&quot;JOINED&quot;, &quot;Joined conversation: &quot; + event.conversation.display_name || event.conversation.name);
  });</pre>
 
@@ -3322,7 +3303,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-477">line 477</a>
+				 <a href="application.js.html#sunlight-1-line-479">line 479</a>
 			</li>
 		</ul>
 	</dd>
@@ -3353,7 +3334,7 @@ The conversation name must be unique per application.</p>
         
         <p class="code-caption">listen for changes in the synchronisation progress events on Application level</p>
     
-    <pre class="sunlight-highlight-javascript">application.on(&quot;sync:progress&quot;,(status) =&gt; {
+    <pre class="sunlight-highlight-javascript"> application.on(&quot;sync:progress&quot;,(status) =&gt; {
 	  console.log(status.sync_progress);
  });</pre>
 
@@ -3377,28 +3358,12 @@ The conversation name must be unique per application.</p>
 
 	
 		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+			<div id="toc" class="col-md-3"></div>
 		</div>
 	
 
 </div>
 </div>
-
-
-    <div class="modal fade" id="searchResults">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Search results</h4>
-          </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div>
 
 
 <footer>
@@ -3410,18 +3375,15 @@ The conversation name must be unique per application.</p>
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	
-		on Wed Jun 16th 2021
-	
-	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+	on Thu Jul 15th 2021 using the <a
+	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
 
+<!--<script src="scripts/sunlight.js"></script>-->
 <script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/bootstrap-dropdown.js"></script>
 <script src="scripts/toc.js"></script>
-
-    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
-
 
 <script>
 $( function () {
@@ -3431,7 +3393,7 @@ $( function () {
 		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
 	} );
 
-	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
 		var $this = $( this );
 
 		var example = $this.find( "code" );
@@ -3462,25 +3424,26 @@ $( function () {
 		enableDoclinks : true
 	} );
 
-	$.catchAnchorLinks( {
-        navbarOffset: 10
-	} );
 	$( "#toc" ).toc( {
 		anchorName  : function ( i, heading, prefix ) {
-			return $( heading ).attr( "id" ) || ( prefix + i );
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
 		},
-		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		selectors   : "h1,h2,h3,h4",
 		showAndHide : false,
+                navbarOffset: 10,
 		smoothScrolling: true
 	} );
 
+	$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
 	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
 	$( '.dropdown-toggle' ).dropdown();
+	//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
 
-    $( "table" ).each( function () {
-      var $this = $( this );
-      $this.addClass('table');
-    } );
+  $( "table" ).each( function () {
+    var $this = $( this );
+    $this.addClass('table');
+  } );
 
 } );
 </script>
@@ -3491,14 +3454,6 @@ $( function () {
 
 
 <!--Google Analytics-->
-
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            SearcherDisplay.init();
-        });
-    </script>
 
 
 </body>
