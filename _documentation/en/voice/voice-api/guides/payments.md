@@ -1,7 +1,7 @@
 ---
 title: Payments over the Phone
 description: Take payments during phone calls in a PCI compliant secure way
-navigation_weight:11
+navigation_weight: 11
 ---
 
 # Payments over the Phone [Developer Preview]
@@ -42,7 +42,7 @@ This will trigger the IVR flow with the following prompts:
 - _Please enter for digits of your card expiration date_
 - _Please enter you three digits security code_
 
-In case the user enters the card data correclty, they will be charged for $9.99 and your application will get the following callback:
+In case the user enters the card data correctly, they will be charged for $9.99 and your application will get the following callback:
 
 ```json
 {
