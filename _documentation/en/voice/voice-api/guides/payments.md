@@ -6,9 +6,9 @@ navigation_weight: 11
 
 # Payments over the Phone [Developer Preview]
 
-_introduction here_
+There are various scenarios when you may want to charge the user during the phone call, for example, automated order processing, subscription renewal, debt collection. To do that securely with credit cards, the application which deals with sensitive card data (numbers, expiration dates, security codes) must follow PCI compliance rules. Vonage Voice API provides you with the option to seamlessly embed secure payment processing into the call flow using [NCCO](https://developer.vonage.com/voice/voice-api/guides/ncco) syntax.
 
-> Payments over the Phone are currently offered as [Developer Preview](/product-lifecycle/dev-preview). The feature can be used in your projects for supported scenarios (see below). The following limitations apply:
+> Payments over the Phone are currently offered as [Developer Preview](https://developer.vonage.com/product-lifecycle/dev-preview). The feature can be used in your projects for supported scenarios (see below). The following limitations apply:
 <ul style='list-style:disc;margin-left:16px;margin-top:16px;'><li style='margin-bottom:16px;'>payment gateway configuration is being done by request,</li>
 <li style='margin-bottom:16px;'>`pay` action supported for inbound calls only,</li>
 <li style='margin-bottom:16px;'>US dollars supported as the only currency,</li>
@@ -18,6 +18,12 @@ _introduction here_
 
 ## Preliminary Configuration
 
+*For testing*
+
+Please contact [vcp.product.voice@vonage.com](mailto:vcp.product.voice@vonage.com) providing the list of email addresses or the persons participating in the testing process, to get preconfigured account and Voice application.
+
+*For customers*
+
 To start, you should have your Stripe account ready. If you don't have an account yet, sign up [here](https://dashboard.stripe.com/register).
 
 In [Developer Preview](https://developer.vonage.com/product-lifecycle/dev-preview), Vonage will set up your payment gateway connector for you. [Contact Support](https://help.nexmo.com/hc/en-us/requests/new) to get it configured.
@@ -26,7 +32,7 @@ Your application should have Payments over the Phone capability enabled. In Deve
 
 ## Pay Action
 
-To start the secure payment IVR, use `pay` [NCCO action](/voice/voice-api/guides/ncco):
+To start the secure payment IVR, use `pay` [NCCO action](https://developer.vonage.com/voice/voice-api/guides/ncco):
 
 ```json
 [
@@ -58,7 +64,7 @@ In case the user enters the card data correctly, they will be charged for $9.99 
 
 and you will see the transaction in your [Stripe dashboard](https://dashboard.stripe.com/).
 
-> In Developer Preview, `pay` action is only applicable for inbound calls and the first [leg of the conversation](/voice/voice-api/guides/legs-conversations) (the inbound one).
+> In Developer Preview, `pay` action is only applicable for inbound calls and the first [leg of the conversation](https://developer.vonage.com/voice/voice-api/guides/legs-conversations) (the inbound one).
 
 If the user doesn't enter the card number, expiration date or security code within 10 seconds, the prompt will be played one more time giving the user another try. If the user enters any of the card information incorrectly, or doesn't enter anything after the second prompt, the following callback is sent to the application:
 
@@ -169,8 +175,8 @@ You can change the default IVR prompts to custom ones, including the prompts pla
 ```
 
 ## Further Reading
-* [NCCO Reference](/voice/voice-api/ncco-reference#pay),
-* [Webhook Reference](/voice/voice-api/webhook-reference#pay),
-* [Contact Center Intelligence](/voice/voice-api/guides/cci) Guide.
+* [NCCO Reference](https://developer.vonage.com/voice/voice-api/ncco-reference#pay),
+* [Webhook Reference](https://developer.vonage.com/voice/voice-api/webhook-reference#pay),
+* [Contact Center Intelligence](https://developer.vonage.com/voice/voice-api/guides/cci) Guide.
 
 > We appreciate your feedback! Do you need more currencies, payment gateways, outbound calls or any other `pay` action improvements? Please drop us a note at [vcp.product.voice@vonage.com](vcp.product.voice@vonage.com)!
