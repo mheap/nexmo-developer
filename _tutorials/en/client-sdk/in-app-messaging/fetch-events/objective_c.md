@@ -31,7 +31,7 @@ Add the functions to get the conversation, events and process those events a the
 
 ```objective_c
 - (void)getConversation {
-    [self.client getConversationWithUuid:self.user.conversationId completionHandler:^(NSError * _Nullable error, NXMConversation * _Nullable conversation) {
+    [self.client getConversationWithUuid:self.user.conversationId completion:^(NSError * _Nullable error, NXMConversation * _Nullable conversation) {
         self.conversation = conversation;
         if (conversation) {
             [self getEvents];
@@ -73,11 +73,14 @@ Add the functions to get the conversation, events and process those events a the
         case NXMMemberStateLeft:
             [self addConversationLine:[NSString stringWithFormat:@"%@ left", event.member.user.name]];
             break;
+        case NXMMemberStateUnknown:
+             [NSException raise:@"UnknownMemberState" format:@"Member state is unknown"];
+             break;
     }
 }
 
 - (void)showTextEvent:(NXMTextEvent *)event {
-    NSString *message = [NSString stringWithFormat:@"%@ said %@", event.fromMember.user.name, event.text];
+    NSString *message = [NSString stringWithFormat:@"%@ said %@", event.embeddedInfo.user.name, event.text];
     [self addConversationLine:message];
 }
 

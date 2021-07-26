@@ -5,9 +5,9 @@ menu_weight: 5
 ---
 
 ```objective_c
-[callMember mute:NO];
+//Unmute Member
+[member disableMute];
 
 //Unmute my Member
-[myCall.myCallMember mute:NO];
-
+[myCall.myMember disableMute];
 ```

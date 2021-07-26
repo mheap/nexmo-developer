@@ -5,9 +5,10 @@ menu_weight: 4
 ---
 
 ```swift
-member.mute(false)
+//Umute Member
+member.disableMute()
 
 //Unmute my Member
-call.myCallMember.mute(false)
+call.myMember?.disableMute()
 
 ```

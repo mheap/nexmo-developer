@@ -10,7 +10,7 @@ Vonage APIs support different authentication methods depending on which product 
 API | API Key and Secret (Query String) | API Key and Secret (Header) | JSON Web Token (JWT)
 -- | -- | -- | -- | --
 [SMS](/api/sms) | ✅ | ❌ | ❌
-[Voice](/api/voice) | ❌ | ❌ | ✅
+[Voice](/api/voice)¹ | ❌ | ❌ | ✅
 [Verify](/api/verify) | ✅ | ❌ | ❌ 
 [Number Insight](/api/number-insight) | ✅ | ❌ | ❌
 [Conversion](/api/conversion) | ✅ | ❌ | ❌
@@ -22,6 +22,8 @@ API | API Key and Secret (Query String) | API Key and Secret (Header) | JSON Web
 [Media](/api/media) | ✅ | ❌ | ❌
 [Conversation](/api/conversation) | ❌ | ❌ | ✅ 
 [Reports](/api/reports) | ❌ | ✅ | ❌ 
+
+¹ SIP Trunking uses [Digest Authentication](https://developer.vonage.com/voice/sip/overview#authentication) method with the API Key as user and API Secret as password.
 
 ## Contents
 

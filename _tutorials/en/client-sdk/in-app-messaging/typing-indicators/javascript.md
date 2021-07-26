@@ -30,13 +30,13 @@ When your application detects that a user has either started or stopped typing, 
 Add the following to the bottom of your `run` function:
 
 ```javascript
-conversation.on("text:typing:on", (data) => {
-  if (data.user.id !== data.conversation.me.user.id) {
-    status.innerHTML = data.user.name + " is typing...";
+conversation.on("text:typing:on", (data, event) => {
+  if (conversation.me.id !== data.memberId) {
+    status.innerText = data.userName + " is typing...";
   }
 });
 
 conversation.on("text:typing:off", (data) => {
-  status.innerHTML = "";
+  status.innerText = "";
 });
 ```

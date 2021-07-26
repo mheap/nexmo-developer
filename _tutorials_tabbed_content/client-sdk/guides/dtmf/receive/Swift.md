@@ -8,7 +8,7 @@ The DTMF events will be received in the implementation of the `dtmfReceived(_, c
 
 
 ```swift
-func dtmfReceived(_ dtmf: String, callMember: NXMCallMember) {
-  print("DTMF received:`\(dtmf)` from `\(String(describing: callMember.user.name))`")
+func call(_ call: NXMCall, didReceive dtmf: String, from member: NXMMember?) {
+    print("DTMF received:`\(dtmf)` from `\(String(describing: member?.user.name))`")
 }
 ```

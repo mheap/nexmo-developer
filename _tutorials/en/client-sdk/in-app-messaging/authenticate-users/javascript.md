@@ -14,15 +14,15 @@ const USER1_JWT = '';
 const USER2_JWT = '';
 const CONVERSATION_ID = '';
 
-const messageTextarea = document.getElementById('messageTextarea');
-const messageFeed = document.getElementById('messageFeed');
-const sendButton = document.getElementById('send');
-const loginForm = document.getElementById('login');
-const status = document.getElementById('status');
+const messageTextarea = document.getElementById("messageTextarea");
+const messageFeed = document.getElementById("messageFeed");
+const sendButton = document.getElementById("send");
+const loginForm = document.getElementById("login");
+const status = document.getElementById("status");
 
-const loadMessagesButton = document.getElementById('loadMessages');
-const messagesCountSpan = document.getElementById('messagesCount');
-const messageDateSpan = document.getElementById('messageDate');
+const loadMessagesButton = document.getElementById("loadMessages");
+const messagesCountSpan = document.getElementById("messagesCount");
+const messageDateSpan = document.getElementById("messageDate");
 
 let conversation;
 let listedEvents;
@@ -43,12 +43,12 @@ function authenticate(username) {
 You'll also need to add an event listener to the `login` form to fetch the user's JWT and pass it in to the `run` function. The `run` function doesn't do anything yet, but at this point you have a valid user JWT to start building your application.
 
 ```javascript
-loginForm.addEventListener('submit', (event) => {
+loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const userToken = authenticate(document.getElementById('username').value);
+  const userToken = authenticate(document.getElementById("username").value);
   if (userToken) {
-    document.getElementById('messages').style.display = 'block';
-    document.getElementById('login').style.display = 'none';
+    document.getElementById("messages").style.display = "block";
+    document.getElementById("login").style.display = "none";
     run(userToken);
   }
 });

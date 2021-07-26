@@ -54,7 +54,7 @@ If you want to enhance your IVR with natural language understanding (NLU), you m
 
 ![Voice Bot](/images/voice-api/cci_bot.png)
 
-For a quick implementation, clone the reference [Lex Connector](https://github.com/Nexmo/lex-connector) application, which has everything you need to connect the voice calls to your Lex bot.
+For a quick implementation, clone the reference [Lex Connector](https://github.com/nexmo-community/lex-reference-connection) application, which has everything you need to connect the voice calls to your Lex bot and follow this [tutorial](https://learn.vonage.com/blog/2021/03/10/connecting-voice-calls-to-an-amazon-lex-bot/).
 
 Furthermore, when your bot detects user intent to have a conversation with a human agent, your application may send a [transfer](/voice/voice-api/code-snippets/transfer-a-call) request to the Vonage API, and it will connect the user to your Contact Center:
 

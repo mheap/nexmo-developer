@@ -118,9 +118,9 @@ func processEvents() {
 
 func showMediaEvent(event: NXMMediaEvent) {
     if event.isEnabled {
-        addConversationLine("\(event.fromMember?.user.name ?? "A user") enabled audio")
+        addConversationLine("\(event.embeddedInfo?.user.name ?? "A user") enabled audio")
     } else {
-        addConversationLine("\(event.fromMember?.user.name ?? "A user") disabled audio")
+        addConversationLine("\(event.embeddedInfo?.user.name ?? "A user") disabled audio")
     }
 }
 ```

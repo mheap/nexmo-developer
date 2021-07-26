@@ -23,7 +23,7 @@ yarn spellcheck
 Or if you're using Docker:
 
 ```
-docker-compose exec web yarn spellcheck
+docker-compose exec web yarn spellcheck db:migrate
 ```
 
 If there is a word that isn't in the dictionary but is correct to use, add it to the `.spelling` file (there's a lot of exceptions in there, including `Vonage`!)
@@ -48,65 +48,70 @@ The project can be run on your laptop, either directly or using Docker. These in
 
 ### Setup for running directly on your laptop
 
-Before you start, you need to make sure that you have:
-
-- [Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/) + [bundler](https://bundler.io/)
-- [PostgreSQL](https://www.postgresql.org/download/)
-
 #### System Setup (OSX)
 
-Install Homebrew
+1. Install Homebrew
 
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+    ```bash
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
 
-Install required packages, create database and configure `git`.
+2. Install required packages, create database and configure `git`.
 
-Note: A default database is created for you when you run the `db:setup` script. If you'd like to create and
+    Note: A default database is created for you when you run the `db:setup` script. If you'd like to create and
 use a different database or user, use `createdb database_name_here` or `createuser username_here` and make sure your
 `.env` file is updated accordingly (See [.env.example](https://github.com/Nexmo/nexmo-developer/blob/master/.env.example)).
+    
+    ```bash
+    brew install postgres rbenv git nvm redis
+    brew services start postgresql
+    brew services start redis
+    
+    git config --global user.name "NAME"
+    git config --global user.email "user.name@vonage.com"
+    ```
 
-```bash
-brew install postgres rbenv git nvm redis
-brew services start postgresql
-brew services start redis
+3. Generate an SSH key for authentication
 
+    ```bash
+    ssh-keygen -t rsa
+    cat .ssh/id_rsa.pub # Add to GitHub
+    ```
 
-git config --global user.name "NAME"
-git config --global user.email "user.name@vonage.com"
-```
+4. Clone ADP to your local machine:
 
-Generate an SSH key for authentication
+    ```bash
+    git clone git@github.com:Nexmo/nexmo-developer.git
+    cd nexmo-developer
+    ```
 
-```bash
-ssh-keygen -t rsa
-cat .ssh/id_rsa.pub # Add to GitHub
-```
+4. Copy the contents of the example file: `cp .env.example .env` and check if it worked by running `cat .env` (it should produce an output)
+5. Open the file: `code .env`, find the redis line (probably line 35) and comment it out
 
-Clone ADP to your local machine
+5. Install the correct versions of ruby, as well as dependencies:
 
-```bash
-git clone git@github.com:Nexmo/nexmo-developer.git
-cd nexmo-developer
-cp .env.example .env
-```
+    ```bash
+    rbenv install 2.7.2
+    rbenv global 2.7.2
+    gem install bundle
+    bundle install
+    ```
 
-Install the correct versions of ruby
-```
-rbenv install 2.7.2
-rbenv global 2.7.2
-gem install bundle
-bundle install
-```
+   - If you're getting error `rbenv: commend not found` run `brew update && brew update ruby-build`.
+   - If you're getting `ruby-build definition not found 2.7.2`, you need to update the xcode: `xcode-select --install`
+   - **NOTE**: If you use `rvm`: `rvm --default use 2.7.2 && gem install bundle && bundle install`
 
-Edit the `.env` file as appropriate for your platform.  Then, run the following:
+6. Set up access to submodules: `git submodule init && git submodule update` and then `git config --global submodule.recurse true`
+7. Start postgres: `brew services start postgresql` and if that doesn't work `brew services restart postgresql`.
+   - If you're getting "PG::ConnectionBad - could not connect to server: Connection refused", you can try installing the correct version or re-install postgres: `brew uninstall postgresql && rm -rf /usr/local/bin/postgres && rm -rf .psql_history .psqlrc .psql.local .pgpass .psqlrc.local && brew update && brew install postgres`
 
-```bash
-bundle exec nexmo-developer --docs=`pwd`
-```
+8. Start the local server: 
 
-You should now be able to see the site on http://localhost:3000/
+    ```bash
+    OAS_PATH=“pwd/_open_api/api_specs/definitions” bundle exec nexmo-developer --docs=`pwd` --rake-ci`
+    ```
+
+    You should now be able to see the site on http://localhost:3000/
 
 ### Setting up with Docker
 

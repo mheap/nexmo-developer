@@ -25,19 +25,19 @@ Add the current `ViewController`, or similar, as a delegate for the `call` befor
 
 //MARK:- NXMCallDelegate
 
-- (void)call:(nonnull NXMCall *)call didUpdate:(nonnull NXMCallMember *)callMember withStatus:(NXMCallMemberStatus)status {
-    // handle call status updates
+- (void)call:(nonnull NXMCall *)call didUpdate:(nonnull NXMMember *)member withStatus:(NXMCallMemberStatus)status {
+    // Handle call status updates
     ...
 }
 
-- (void)call:(nonnull NXMCall *)call didUpdate:(nonnull NXMCallMember *)callMember isMuted:(BOOL)muted {
-    // handle call member muting updates
+- (void)call:(nonnull NXMCall *)call didUpdate:(nonnull NXMMember *)member isMuted:(BOOL)muted {
+    // Handle member muting updates
     ...
 }
 
 - (void)call:(nonnull NXMCall *)call didReceive:(nonnull NSError *)error {
     NSLog(@"call error: %@", [error localizedDescription]);
-    // handle call errors
+    // Handle call errors
     ...
 }
 

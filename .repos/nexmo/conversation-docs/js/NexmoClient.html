@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
 	<title>DocStrap Class: NexmoClient</title>
 
 	<!--[if lt IE 9]>
@@ -21,49 +20,31 @@
 <div class="container">
 	<div class="navbar-header">
 		<a class="navbar-brand" href="index.html">DocStrap</a>
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-        </button>
 	</div>
-	<div class="navbar-collapse collapse" id="topNavigation">
+	<div class="navbar-collapse">
 		<ul class="nav navbar-nav">
 			
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li>
+					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:rtcstats:report">Application#rtcstats:report</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
+					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
 				</ul>
 			</li>
 			
 		</ul>
-        
-            <div class="col-sm-3 col-md-3">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        
 	</div>
-
 </div>
 </div>
 
 
-<div class="container" id="toc-content">
+<div class="container">
 <div class="row">
 
 	
@@ -335,7 +316,7 @@
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">RTCStatsConfig</span>
 
 
 
@@ -350,7 +331,7 @@
                 </td>
             
 
-            <td class="description last"><p>set reporting for stream statistics (Websocket or internal event emit)</p>
+            <td class="description last"><p>set reporting for stream statistics (Internal event emit)</p>
                 <h6 class="method-params-label method-subparams-label">Properties</h6>
                 
 
@@ -378,34 +359,6 @@
 
         <tr>
             
-                <td class="name"><code>ws_url</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>endpoint (websocket) to send rtc stats.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>emit_events</code></td>
             
 
@@ -429,7 +382,157 @@
                 </td>
             
 
-            <td class="description last"><p>receive rtcstats:report event</p></td>
+            <td class="description last"><p>receive rtcstats:report event (deprecated)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>emit_rtc_analytics</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>receive rtcstats:analytics event</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>emit_interval</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    1000
+                
+                </td>
+            
+
+            <td class="description last"><p>interval in ms for rtcstats:report and rtcstats:analytics</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>remote_collection</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last"><p>collect client logs internally</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>remote_collection_url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    'gollum_url'
+                
+                </td>
+            
+
+            <td class="description last"><p>url for collecting client logs internally</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>remote_collection_interval</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    5000
+                
+                </td>
+            
+
+            <td class="description last"><p>interval in ms to collect client logs internally</p></td>
         </tr>
 
     
@@ -782,148 +885,6 @@
             
 
             <td class="description last"><p>urls for iceServers</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>callstats</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>configure callstats.io integration</p>
-                <h6 class="method-params-label method-subparams-label">Properties</h6>
-                
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>enabled</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>AppID</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>your callstats AppID</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>AppSecret</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>your callstats AppSecret</p></td>
         </tr>
 
     
@@ -1506,7 +1467,7 @@
             
 <hr>
 <dt class="name" id=".DISCONNECT_REASON">
-    <h4 id=".DISCONNECT_REASON"><span class="type-signature">&lt;static, readonly> </span>DISCONNECT_REASON<span class="type-signature"> :string</span></h4>
+    <h4><span class="type-signature">&lt;static, readonly> </span>DISCONNECT_REASON<span class="type-signature"> :string</span></h4>
 
     
 </dt>
@@ -1687,7 +1648,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-761">line 761</a>
+				 <a href="sdk.js.html#sunlight-1-line-713">line 713</a>
 			</li>
 		</ul>
 	</dd>
@@ -1769,7 +1730,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-750">line 750</a>
+				 <a href="sdk.js.html#sunlight-1-line-702">line 702</a>
 			</li>
 		</ul>
 	</dd>
@@ -1857,7 +1818,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-743">line 743</a>
+				 <a href="sdk.js.html#sunlight-1-line-695">line 695</a>
 			</li>
 		</ul>
 	</dd>
@@ -1995,7 +1956,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-583">line 583</a>
+				 <a href="sdk.js.html#sunlight-1-line-565">line 565</a>
 			</li>
 		</ul>
 	</dd>
@@ -2052,7 +2013,7 @@
         
         <p class="code-caption">Log in to the Client and return the Application</p>
     
-    <pre class="sunlight-highlight-javascript">rtc.login(token).then((application) =&gt; {
+    <pre class="sunlight-highlight-javascript"> rtc.login(token).then((application) =&gt; {
    console.log(application);
  }).catch((error) =&gt; {
    console.log(error);
@@ -2121,7 +2082,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-691">line 691</a>
+				 <a href="sdk.js.html#sunlight-1-line-643">line 643</a>
 			</li>
 		</ul>
 	</dd>
@@ -2178,7 +2139,7 @@
         
         <p class="code-caption">Log out of the Client</p>
     
-    <pre class="sunlight-highlight-javascript">rtc.logout().then((response) =&gt; {
+    <pre class="sunlight-highlight-javascript"> rtc.logout().then((response) =&gt; {
    console.log(response);
  }).catch((error) =&gt; {
    console.log(error);
@@ -2255,7 +2216,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-209">line 209</a>
+				 <a href="sdk.js.html#sunlight-1-line-198">line 198</a>
 			</li>
 		</ul>
 	</dd>
@@ -2286,7 +2247,7 @@
         
         <p class="code-caption">Listen for websocket connecting event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;connecting&quot;, () =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;connecting&quot;, () =&gt; {
      console.log(&quot;connecting&quot;);
     });</pre>
 
@@ -2353,7 +2314,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-222">line 222</a>
+				 <a href="sdk.js.html#sunlight-1-line-211">line 211</a>
 			</li>
 		</ul>
 	</dd>
@@ -2384,7 +2345,7 @@
         
         <p class="code-caption">Listen for websocket disconnect event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;disconnect&quot;, () =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;disconnect&quot;, () =&gt; {
      console.log(&quot;disconnect&quot;);
     });</pre>
 
@@ -2451,7 +2412,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-264">line 264</a>
+				 <a href="sdk.js.html#sunlight-1-line-253">line 253</a>
 			</li>
 		</ul>
 	</dd>
@@ -2482,7 +2443,7 @@
         
         <p class="code-caption">Listen for websocket error event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;error&quot;, (error) =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;error&quot;, (error) =&gt; {
      console.log(&quot;error&quot;, error);
     });</pre>
 
@@ -2549,7 +2510,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-194">line 194</a>
+				 <a href="sdk.js.html#sunlight-1-line-183">line 183</a>
 			</li>
 		</ul>
 	</dd>
@@ -2580,7 +2541,7 @@
         
         <p class="code-caption">Listen for websocket ready event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;ready&quot;, () =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;ready&quot;, () =&gt; {
      console.log(&quot;connection ready&quot;);
     });</pre>
 
@@ -2647,7 +2608,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-238">line 238</a>
+				 <a href="sdk.js.html#sunlight-1-line-227">line 227</a>
 			</li>
 		</ul>
 	</dd>
@@ -2678,7 +2639,7 @@
         
         <p class="code-caption">Listen for websocket reconnect event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;reconnect&quot;, (retry_number) =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;reconnect&quot;, (retry_number) =&gt; {
      console.log(&quot;reconnect&quot;, retry_number);
     });</pre>
 
@@ -2745,7 +2706,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-251">line 251</a>
+				 <a href="sdk.js.html#sunlight-1-line-240">line 240</a>
 			</li>
 		</ul>
 	</dd>
@@ -2776,7 +2737,7 @@
         
         <p class="code-caption">Listen for websocket reconnecting event </p>
     
-    <pre class="sunlight-highlight-javascript">rtc.on(&quot;reconnecting&quot;, (retry_number): void =&gt; {
+    <pre class="sunlight-highlight-javascript">    rtc.on(&quot;reconnecting&quot;, (retry_number): void =&gt; {
      console.log(&quot;reconnecting&quot;, retry_number);
     });</pre>
 
@@ -2800,28 +2761,12 @@
 
 	
 		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+			<div id="toc" class="col-md-3"></div>
 		</div>
 	
 
 </div>
 </div>
-
-
-    <div class="modal fade" id="searchResults">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Search results</h4>
-          </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div>
 
 
 <footer>
@@ -2832,19 +2777,16 @@
 	</span>
 
 <span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a>
-	
-		on Tue Feb 2nd 2021
-	
-	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
+	on Thu Jul 15th 2021 using the <a
+	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
 
+<!--<script src="scripts/sunlight.js"></script>-->
 <script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/bootstrap-dropdown.js"></script>
 <script src="scripts/toc.js"></script>
-
-    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
-
 
 <script>
 $( function () {
@@ -2854,7 +2796,7 @@ $( function () {
 		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
 	} );
 
-	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
 		var $this = $( this );
 
 		var example = $this.find( "code" );
@@ -2885,25 +2827,26 @@ $( function () {
 		enableDoclinks : true
 	} );
 
-	$.catchAnchorLinks( {
-        navbarOffset: 10
-	} );
 	$( "#toc" ).toc( {
 		anchorName  : function ( i, heading, prefix ) {
-			return $( heading ).attr( "id" ) || ( prefix + i );
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
 		},
-		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		selectors   : "h1,h2,h3,h4",
 		showAndHide : false,
+                navbarOffset: 10,
 		smoothScrolling: true
 	} );
 
+	$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
 	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
 	$( '.dropdown-toggle' ).dropdown();
+	//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
 
-    $( "table" ).each( function () {
-      var $this = $( this );
-      $this.addClass('table');
-    } );
+  $( "table" ).each( function () {
+    var $this = $( this );
+    $this.addClass('table');
+  } );
 
 } );
 </script>
@@ -2914,14 +2857,6 @@ $( function () {
 
 
 <!--Google Analytics-->
-
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            SearcherDisplay.init();
-        });
-    </script>
 
 
 </body>

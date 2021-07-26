@@ -8,7 +8,7 @@ menu_weight: 1
   {
     "action": "conversation",
     "name": "nexmo-conference-standard",
-    "record": "true"
+    "record": true
   }
 ]
 ```

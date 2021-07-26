@@ -18,6 +18,8 @@ introduction:
     ### Completed project
     If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-objc](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-objc) folder.
 
+    *This tutorial uses NexmoClient version 3.0.0*
+
 
 prerequisites:
 - create-nexmo-account
@@ -45,8 +47,6 @@ conclusion:
 
     For completeness, the project you've built as part of this tutorial is also available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-objc](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-objc) folder.
 
-    And... you can do a lot more with the Client SDK.
+    You can do a lot more with the Client SDK. For an summary, please see the [Client SDK Overview](/client-sdk/overview) or review the [iOS Client SDK documentation](/client-sdk/sdk-documentation/ios).
 
     We want to hear what ideas you have in mind! Contact us at [devrel@vonage.com](mailto:devrel@vonage.com)
-
-    See [Client SDK documentation](/client-sdk/overview).

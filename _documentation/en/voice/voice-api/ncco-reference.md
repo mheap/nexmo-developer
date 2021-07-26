@@ -5,7 +5,7 @@ description: The Nexmo Call Control Objects used to manage your Voice API calls.
 
 # NCCO reference
 
-A Call Control Object (NCCO) is a JSON array that you use to control the flow of a Voice API call. For your NCCO to execute correctly, the JSON objects must be valid.
+A Call Control Object (NCCO) is represented by a JSON array. You can use it to control the flow of a Voice API call. For your NCCO to execute correctly, the JSON objects must be valid.
 
 While developing and testing NCCOs, you can use the Voice Playground to try out NCCOs interactively. You can [read more about it in the Voice API Overview](/voice/voice-api/overview#voice-playground) or [go directly to the Voice Playground in the Dashboard](https://dashboard.nexmo.com/voice/playground).
 
@@ -25,7 +25,7 @@ Action | Description | Synchronous
 [input](#input) | Collect digits or capture speech input from the person you are calling. | Yes
 [notify](#notify) | Send a request to your application to track progress through an NCCO | Yes
 
-> **Note**: [Connect an inbound call](/voice/voice-api/code-snippets/connect-an-inbound-call) provides an example of how to serve your NCCOs to Vonage after a Call or Conference is initiated
+> **Note**: [Connect an inbound call](/voice/voice-api/code-snippets/connect-an-inbound-call) provides an example of how to serve your NCCOs to Vonage after a Call or Conference is initiated.
 
 ## Record
 
@@ -63,9 +63,9 @@ Option | Description | Required
 `split` | Record the sent and received audio in separate channels of a stereo recording—set to `conversation` to enable this.|No
 `channels` | The number of channels to record (maximum `32`). If the number of participants exceeds `channels` any additional participants will be added to the last channel in file. split `conversation` must also be enabled.| No
 `endOnSilence` | Stop recording after n seconds of silence. Once the recording is stopped the recording data is sent to `event_url`. The range of possible values is 3<=`endOnSilence`<=10. | No
-`endOnKey` | Stop recording when a digit is pressed on the handset. Possible values are: `*`, `#` or any single digit e.g. `9` | No
-`timeOut` | The maximum length of a recording in seconds. One the recording is stopped the recording data is sent to `event_url`. The range of possible values is between `3` seconds and `7200` seconds (2 hours) | No
-`beepStart` | Set to `true` to play a beep when a recording starts | No
+`endOnKey` | Stop recording when a digit is pressed on the handset. Possible values are: `*`, `#` or any single digit e.g. `9`. | No
+`timeOut` | The maximum length of a recording in seconds. One the recording is stopped the recording data is sent to `event_url`. The range of possible values is between `3` seconds and `7200` seconds (2 hours). | No
+`beepStart` | Set to `true` to play a beep when a recording starts. | No
 `eventUrl` | The URL to the webhook endpoint that is called asynchronously when a recording is finished. If the message recording is hosted by Vonage, this webhook contains the [URL you need to download the recording and other meta data](#recording_return_parameters). | No
 `eventMethod` | The HTTP method used to make the request to `eventUrl`. The default value is `POST`. | No
 
@@ -89,9 +89,9 @@ Possible return parameters are:
  Name | Description
  -- | --
  `recording_uuid` | The unique ID for the Call. <br>**Note**: `recording_uuid` is not the same as the file uuid in *recording_url*.
- `recording_url` | The  URL to the file containing the Call recording
- `start_time`  | The time the recording started in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. For example `2020-01-01T12:00:00Z`
- `end_time`  | The time the recording finished in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. For example `2020-01-01T12:00:00Z`
+ `recording_url` | The  URL to the file containing the Call recording.
+ `start_time`  | The time the recording started in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. For example `2020-01-01T12:00:00Z`.
+ `end_time`  | The time the recording finished in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. For example `2020-01-01T12:00:00Z`.
  `size` | The size of the recording at *recording_url* in bytes. For example: `603423`
  `conversation_uuid` | The unique ID for this Call.
 
@@ -115,7 +115,7 @@ Option | Description | Required
 `musicOnHoldUrl` | A URL to the *mp3* file to stream to participants until the conversation starts. By default the conversation starts when the first person calls the virtual number associated with your Voice app. To stream this mp3 before the moderator joins the conversation, set *startOnEnter* to *false* for all users other than the moderator. | No
 `startOnEnter` | The default value of *true* ensures that the conversation starts when this caller joins conversation `name`. Set to *false* for attendees in a moderated conversation. | No
 `endOnExit` | Specifies whether a moderated conversation ends when the moderator hangs up. This is set to *false* by default, which means that the conversation only ends when the last remaining participant hangs up, regardless of whether the moderator is still on the call. Set `endOnExit` to *true* to terminate the conversation when the moderator hangs up. | No
-`record` | Set to *true* to record this conversation. For standard conversations, recordings start when one or more attendees connects to the conversation. For moderated conversations, recordings start when the moderator joins. That is, when an NCCO is executed for the named conversation where *startOnEnter* is set to *true*. When the recording is terminated, the URL you download the recording from is sent to the event URL. You can override the default recording event URL and default HTTP method by providing custom `eventUrl` and `eventMethod` options in the `conversation` action definition. <br>By default audio is recorded in MP3 format. See the [recording](/voice/voice-api/guides/recording#file-formats) guide for more details | No
+`record` | Set to *true* to record this conversation. For standard conversations, recordings start when one or more attendees connects to the conversation. For moderated conversations, recordings start when the moderator joins. That is, when an NCCO is executed for the named conversation where *startOnEnter* is set to *true*. When the recording is terminated, the URL you download the recording from is sent to the event URL. You can override the default recording event URL and default HTTP method by providing custom `eventUrl` and `eventMethod` options in the `conversation` action definition. <br>By default audio is recorded in MP3 format. See the [recording](/voice/voice-api/guides/recording#file-formats) guide for more details. | No
 `canSpeak` | A list of leg UUIDs that this participant can be heard by. If not provided, the participant can be heard by everyone. If an empty list is provided, the participant will not be heard by anyone | No
 `canHear` | A list of leg UUIDs that this participant can hear. If not provided, the participant can hear everyone. If an empty list is provided, the participant will not hear any other participants| No
 `mute` | Set to *true* to mute the participant. The audio from the participant will not be played to the conversation and will not be recorded. When using `canSpeak`, the `mute` parameter is not supported. | No
@@ -136,9 +136,9 @@ You can use the following options to control a `connect` action:
 
 Option | Description | Required
 -- | -- | --
-`endpoint` | Array of `endpoint` objects to connect to. Currently supports a **maximum** of one `endpoint` object. [Available endpoint types](#endpoint-types-and-values) | Yes
+`endpoint` | Array of `endpoint` objects to connect to. Currently supports a **maximum** of one `endpoint` object. [Available endpoint types](#endpoint-types-and-values). | Yes
 `from` | A number in [E.164](https://en.wikipedia.org/wiki/E.164) format that identifies the caller.§§ This must be one of your Vonage virtual numbers, another value will result in the caller ID being unknown. If the caller is an app user, this option should be omitted.| No
-`randomFromNumber` | Set to `true` to use a  random phone number as `from`. The number will be selected from the list of the numbers assigned to the current application. `randomFromNumber: true` cannot be used together with `from`. The default value is `false` | No
+`randomFromNumber` | Set to `true` to use a  random phone number as `from`. The number will be selected from the list of the numbers assigned to the current application. `randomFromNumber: true` cannot be used together with `from`. The default value is `false`. | No
 `eventType` | Set to `synchronous` to: <ul class="Vlt-list Vlt-list--simple"><li>make the `connect` action synchronous</li><li>enable `eventUrl` to return an NCCO that overrides the current NCCO when a call moves to specific states.</li></ul> | No
 `timeout` |  If the call is unanswered, set the number in seconds before Vonage stops ringing `endpoint`. The default value is `60`.
 `limit` | Maximum length of the call in seconds. The default and maximum value is `7200` seconds (2 hours). | No
@@ -163,7 +163,7 @@ Value | Description
 Value | Description
 -- | --
 `type` | The endpoint type: `app` for an [application](/client-sdk/setup/create-your-application).
-`user` | The username of the user to connect to. This username must have been [added as a user](/api/conversation#createUser)
+`user` | The username of the user to connect to. This username must have been [added as a user](/api/conversation#createUser).
 
 #### WebSocket - the WebSocket to connect to
 
@@ -172,15 +172,17 @@ Value | Description
 `type` | The endpoint type: `websocket` for a WebSocket.
 `uri` | The URI to the websocket you are streaming to.
 `content-type` | the internet media type for the audio you are streaming. Possible values are: `audio/l16;rate=16000` or `audio/l16;rate=8000`.
-`headers` | a JSON object containing any metadata you want. See [connecting to a websocket](/voice/voice-api/guides/websockets#connecting-to-a-websocket) for example headers
+`headers` | a JSON object containing any metadata you want. See [connecting to a websocket](/voice/voice-api/guides/websockets#connecting-to-a-websocket) for example headers.
 
 #### SIP - the SIP endpoint to connect to
 
 Value | Description
 -- | --
 `type` | The endpoint type: `sip` for SIP.
-`uri` | the SIP URI to the endpoint you are connecting to in the format `sip:rebekka@sip.example.com`. To use [TLS and/or SRTP](/voice/sip/overview#protocols), include respectively `transport=tls` or `media=srtp` to the URL with the semicolon `;` as a delimiter, for example: `sip:rebekka@sip.example.com;transport=tls;media=srtp`. 
-`headers` | `key` => `value` string pairs containing any metadata you need e.g. `{ "location": "New York City", "occupation": "developer" }`
+`uri` | The SIP URI to the endpoint you are connecting to in the format `sip:rebekka@sip.example.com`. To use [TLS and/or SRTP](/voice/sip/overview#protocols), include respectively `transport=tls` or `media=srtp` to the URL with the semicolon `;` as a delimiter, for example: `sip:rebekka@sip.example.com;transport=tls;media=srtp`. 
+`headers` | `key` => `value` string pairs containing any metadata you need e.g. `{ "location": "New York City", "occupation": "developer" }`. The headers are transmitted as part of the SIP INVITE as `X-key: value` headers. So in the example, these headers are sent: `X-location: New York City` and `X-occupation: developer`. 
+
+> To understand how your application can receive and handle SIP Custom Headers instead, check the following page on [Programmable SIP](/voice/sip/concepts/programmable-sip#custom-sip-headers)
 
 #### VBC - the Vonage Business Cloud (VBC) extension to connect to
 
@@ -230,10 +232,18 @@ Option | Description | Required
 -- | -- | --
 `streamUrl` | An array containing a single URL to an mp3 or wav (16-bit) audio file to stream to the Call or Conversation. | Yes
 `level` |  Set the audio level of the stream in the range -1 >=level<=1 with a precision of 0.1. The default value is *0*. | No
-`bargeIn` | Set to `true` so this action is terminated when the user interacts with the application either with DTMF or ASR voice input. Use this feature to enable users to choose an option without having to listen to the whole message in your [Interactive Voice Response (IVR](/voice/guides/interactive-voice-response) ). If you set `bargeIn` to `true` on one more Stream actions then the next non-stream action in the NCCO stack **must** be an `input` action. The default value is `false`.<br /><br />Once `bargeIn` is set to `true` it will stay `true` (even if `bargeIn: false` is set in a following action) until an `input` action is encountered | No
+`bargeIn` | Set to `true` so this action is terminated when the user interacts with the application either with DTMF or ASR voice input. Use this feature to enable users to choose an option without having to listen to the whole message in your [Interactive Voice Response (IVR](/voice/guides/interactive-voice-response) ). If you set `bargeIn` to `true` on one more Stream actions then the next non-stream action in the NCCO stack **must** be an `input` action. The default value is `false`.<br /><br />Once `bargeIn` is set to `true` it will stay `true` (even if `bargeIn: false` is set in a following action) until an `input` action is encountered. | No
 `loop` | The number of times `audio` is repeated before the Call is closed. The default value is `1`. Set to `0` to loop infinitely. | No
 
 The audio stream referred to should be a file in MP3 or WAV format. If you have issues with the file playing, please encode it to the following technical specification: [What kind of prerecorded audio files can I use?](https://help.nexmo.com/hc/en-us/articles/115007447567)
+
+> If you play the same audio file multiple times, for example using the same recording in many calls, consider adding a [Cache-Control](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) header to the URL response with proper values.
+>
+> ```
+> Cache-Control: public, max-age=360000
+> ```
+>
+> This allows Vonage to cache your audio file instead of downloading it each time, which may significantly improve performance and user experience. Caching is supported for both HTTP and HTTPS URLs.
 
 ## Input
 
@@ -395,6 +405,6 @@ Use the `notify` action to send a custom payload to your event URL. Your webhook
 
 Option | Description | Required
 -- | -- | --
-`payload` | The JSON body to send to your event URL | Yes
-`eventUrl` | The URL to send events to. If you return an NCCO when you receive a notification, it will replace the current NCCO | Yes
-`eventMethod` | The HTTP method to use when sending `payload` to your `eventUrl` | No
+`payload` | The JSON body to send to your event URL. | Yes
+`eventUrl` | The URL to send events to. If you return an NCCO when you receive a notification, it will replace the current NCCO. | Yes
+`eventMethod` | The HTTP method to use when sending `payload` to your `eventUrl`. | No

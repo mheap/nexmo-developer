@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Classes" class="dashAnchor"></a>
+    <a title="Classes  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">NexmoClient 3.0.0 Docs</a> (100% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">NexmoClient Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Classes  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NXMCall.html">NXMCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMChannel.html">NXMChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMClient.html">NXMClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMClientConfig.html">NXMClientConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMConversation.html">NXMConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMConversationsPage.html">NXMConversationsPage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMDirection.html">NXMDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMEventsPage.html">NXMEventsPage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMHelper.html">NXMHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMLeg.html">NXMLeg</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMLogger.html">NXMLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMMember.html">NXMMember</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMMemberSummary.html">NXMMemberSummary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMMembersSummaryPage.html">NXMMembersSummaryPage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMPage.html">NXMPage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMPushPayload.html">NXMPushPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMUser.html">NXMUser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@NXMErrorDomain">NXMErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@NexmoClientVersionNumber">NexmoClientVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@NexmoClientVersionString">NexmoClientVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/NXMAttachmentType.html">NXMAttachmentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMCallHandler.html">NXMCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMCallMemberStatus.html">NXMCallMemberStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMConnectionStatus.html">NXMConnectionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMConnectionStatusReason.html">NXMConnectionStatusReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMDirectionType.html">NXMDirectionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMErrorCode.html">NXMErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMEventType.html">NXMEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMLegStatus.html">NXMLegStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMLegType.html">NXMLegType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMLoggerLevel.html">NXMLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMediaStreamType.html">NXMMediaStreamType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMediaType.html">NXMMediaType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMemberState.html">NXMMemberState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMemberUpdateType.html">NXMMemberUpdateType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMessageStatusType.html">NXMMessageStatusType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMPageOrder.html">NXMPageOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMPushTemplate.html">NXMPushTemplate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMSipStatus.html">NXMSipStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMTextTypingEventStatus.html">NXMTextTypingEventStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/NXMCallDelegate.html">NXMCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/NXMClientDelegate.html">NXMClientDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/NXMConversationDelegate.html">NXMConversationDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:NXMBlocks.h@T@NXMCompletionCallback">NXMCompletionCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:NXMBlocks.h@T@NXMErrorCallback">NXMErrorCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallback">NXMSuccessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallbackWithId">NXMSuccessCallbackWithId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallbackWithObject">NXMSuccessCallbackWithObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallbackWithObjects">NXMSuccessCallbackWithObjects</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMCall"></a>
+                    <a name="//apple_ref/objc/Class/NXMCall" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMCall">NXMCall</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The NXMCall class is a <code><a href="Classes/NXMConversation.html">NXMConversation</a></code> for phone calls.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    NXMCall can be and incoming call or outgoing call.
+
+</div>
+
+                        <a href="Classes/NXMCall.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMCall</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMCall</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMDirection"></a>
+                    <a name="//apple_ref/objc/Class/NXMDirection" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMDirection">NXMDirection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Directional data from Conversation Service (Conversation API).</p>
+
+                        <a href="Classes/NXMDirection.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMDirection</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMDirection</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMChannel"></a>
+                    <a name="//apple_ref/objc/Class/NXMChannel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMChannel">NXMChannel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The NXMChannel is how the user connects to the <code><a href="Classes/NXMConversation.html">NXMConversation</a></code>.</p>
+
+                        <a href="Classes/NXMChannel.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMChannel</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMChannel</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMClient"></a>
+                    <a name="//apple_ref/objc/Class/NXMClient" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMClient">NXMClient</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You use a NXMClient instance to utilise the services provided by the Conversation API in your app.</p>
+
+<p>A session is the period during which your app is connected to NexmoConversation API. Sessions are established for the length of time given when the authToken was created.</p>
+
+<p>Tokens also have a lifetime and can optionally be one-shot which will allow a single login only, before
+the authToken becomes invalid for another login attempt. If the authToken is revoked while a session is active the session may be terminated by the server.
+It is only possible to have a single session active over a socket.io connection at a time.
+Session multiplexing is not supported.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The connection uses socket.io for both web and mobile clients. Upon a successful socket.io connection the client needs to authenticate itself. This is achieved by sending a login request via <code><a href="Classes/NXMClient.html#/c:objc(cs)NXMClient(im)loginWithAuthToken:">-[NXMClient loginWithAuthToken:]</a></code> and get the answer in the delegate <code><a href="Classes/NXMClient.html#/c:objc(cs)NXMClient(im)setDelegate:">-[NXMClient setDelegate:]</a></code>.</p>
+
+</div><div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Unless otherwise specified, all the methods invoked by this client are executed asynchronously.</p>
+
+</div>
+
+<p>For the security of your Nexmo account, you should not embed directly your credentials authToken as strings in the app you submit to the App Store.</p>
+
+<p>Remember to logout when needed in order to remove current user and disconnect from the underlying connection. Example usage:</p>
+<pre class="highlight objective_c"><code><span class="p">[</span><span class="n">myClient</span> <span class="nf">logout</span><span class="p">];</span>
+</code></pre>
+
+                        <a href="Classes/NXMClient.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMClient</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMClient</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMClientConfig"></a>
+                    <a name="//apple_ref/objc/Class/NXMClientConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMClientConfig">NXMClientConfig</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Object containing NXMClient endpoints configuration.</p>
+
+                        <a href="Classes/NXMClientConfig.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMClientConfig</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMClientConfig</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMConversation"></a>
+                    <a name="//apple_ref/objc/Class/NXMConversation" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMConversation">NXMConversation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The NXMConversation object represent a conversation.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    NXMConversation can be used for messaging and media.
+
+</div>
+
+                        <a href="Classes/NXMConversation.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMConversation</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMConversation</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMHelper"></a>
+                    <a name="//apple_ref/objc/Class/NXMHelper" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMHelper">NXMHelper</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Helper methods.</p>
+
+                        <a href="Classes/NXMHelper.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMHelper</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMHelper</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMLeg"></a>
+                    <a name="//apple_ref/objc/Class/NXMLeg" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMLeg">NXMLeg</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The NXMLeg object represent the member media state</p>
+
+                        <a href="Classes/NXMLeg.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMLeg</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMLeg</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMLogger"></a>
+                    <a name="//apple_ref/objc/Class/NXMLogger" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMLogger">NXMLogger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A class used to configure the logging settings of the SDK.</p>
+
+                        <a href="Classes/NXMLogger.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMLogger</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMLogger</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMMember"></a>
+                    <a name="//apple_ref/objc/Class/NXMMember" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMMember">NXMMember</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The NXMMember class represents a Member of a Conversation (<code><a href="Classes/NXMConversation.html">NXMConversation</a></code>). In order for a User to communicate through a Conversation they must join the Conversation through a membership.</p>
+
+                        <a href="Classes/NXMMember.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMMember</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMMember</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMMemberSummary"></a>
+                    <a name="//apple_ref/objc/Class/NXMMemberSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMMemberSummary">NXMMemberSummary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An individual conversation member.
+Use this class to retrieve information about a NXMMemberSummary and display member info.</p>
+
+                        <a href="Classes/NXMMemberSummary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMMemberSummary</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMMemberSummary</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMPushPayload"></a>
+                    <a name="//apple_ref/objc/Class/NXMPushPayload" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMPushPayload">NXMPushPayload</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A class representing the payload from an incoming push notification.</p>
+
+                        <a href="Classes/NXMPushPayload.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMPushPayload</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMPushPayload</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMConversationsPage"></a>
+                    <a name="//apple_ref/objc/Class/NXMConversationsPage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMConversationsPage">NXMConversationsPage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Conversations in your application are paginated so the NXMConversationsPage class provides a way to traverse them.</p>
+
+                        <a href="Classes/NXMConversationsPage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMConversationsPage</span> <span class="p">:</span> <span class="nc"><a href="Classes/NXMPage.html">NXMPage</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMConversationsPage</span> <span class="p">:</span> <span class="kt"><a href="Classes/NXMPage.html">NXMPage</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMEventsPage"></a>
+                    <a name="//apple_ref/objc/Class/NXMEventsPage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMEventsPage">NXMEventsPage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The events on an <code><a href="Classes/NXMConversation.html">NXMConversation</a></code> are paginated so the NXMEventsPage class provides a way to traverse a Conversation&rsquo;s events.</p>
+
+                        <a href="Classes/NXMEventsPage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMEventsPage</span> <span class="p">:</span> <span class="nc"><a href="Classes/NXMPage.html">NXMPage</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMEventsPage</span> <span class="p">:</span> <span class="kt"><a href="Classes/NXMPage.html">NXMPage</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMMembersSummaryPage"></a>
+                    <a name="//apple_ref/objc/Class/NXMMembersSummaryPage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMMembersSummaryPage">NXMMembersSummaryPage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The member summaries on an <code><a href="Classes/NXMConversation.html">NXMConversation</a></code> are paginated so the NXMMembersSummaryPage class provides a way to traverse a Conversation&rsquo;s member summaries.</p>
+
+                        <a href="Classes/NXMMembersSummaryPage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMMembersSummaryPage</span> <span class="p">:</span> <span class="nc"><a href="Classes/NXMPage.html">NXMPage</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMMembersSummaryPage</span> <span class="p">:</span> <span class="kt"><a href="Classes/NXMPage.html">NXMPage</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMPage"></a>
+                    <a name="//apple_ref/objc/Class/NXMPage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMPage">NXMPage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A base class for paginating objects, used in <code><a href="Classes/NXMEventsPage.html">NXMEventsPage</a></code> and <code><a href="Classes/NXMConversationsPage.html">NXMConversationsPage</a></code>.</p>
+
+                        <a href="Classes/NXMPage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMPage</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMPage</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMUser"></a>
+                    <a name="//apple_ref/objc/Class/NXMUser" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMUser">NXMUser</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The NXMUser class represents a User. A User identifies a unique Nexmo user in the context of a Nexmo Application.</p>
+
+                        <a href="Classes/NXMUser.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMUser</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMUser</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external">Nexmo</a>. All rights reserved. (Last updated: 2021-07-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

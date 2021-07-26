@@ -4,24 +4,18 @@ language: java
 ---
 
 ```java
-NexmoRequestListener<NexmoCallMember> muteListener = new NexmoRequestListener<NexmoCallMember>() {
-    @Override
-    public void onSuccess(NexmoCallMember callMember) {
-        Timber.d("Member muted " + callMember);
-    }
-
+private NexmoRequestListener<Void> muteListener = new NexmoRequestListener<Void>() {
     @Override
     public void onError(NexmoApiError apiError) {
         Timber.d("Error: Mute member " + apiError.getMessage());
     }
+
+    @Override
+    public void onSuccess(@Nullable @org.jetbrains.annotations.Nullable Void result) {
+        Timber.d("Member muted");
+    }
 };
 
-// Mute member
-callMember.mute(true, muteListener);
-
-// Mute my member
-call.getMyCallMember().mute(true, muteListener);
-
-// Mute whole call
-call.mute(true);
+NexmoMember nexmoMember = call.getMyMember();
+nexmoMember.enableMute(muteListener);
 ```

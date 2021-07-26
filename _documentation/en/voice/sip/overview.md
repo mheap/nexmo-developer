@@ -27,6 +27,8 @@ If your system is not enabled for [Service records](https://en.wikipedia.org/wik
 
 - `sip-eu1.nexmo.com` (London)
 - `sip-eu2.nexmo.com` (London)
+- `sip-eu-2-1.nexmo.com` (Amsterdam)
+- `sip-eu-2-2.nexmo.com` (Amsterdam)
 - `sip-ap1.nexmo.com` (Singapore)
 - `sip-ap2.nexmo.com` (Singapore)
 - `sip-us-2-1.nexmo.com` (Dallas)

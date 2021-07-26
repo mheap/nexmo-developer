@@ -6,6 +6,53 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.0.1 - 2021-07-12
+
+### Fixed
+
+- Sending DTMF during calls.
+- Prewarmed media termination.
+
+### Changed
+
+- `NXMMemberEvent`'s `member` substituted with `memberId`.
+
+## 3.0.0 - 2021-07-01
+
+### Added
+
+- Added `NXMMemberSummary` returned by `[NXMConversation getMembersPageWithPageSize:order:completion:]` (paginated), representing a subset of member's information.
+- Added `NXMMemberEvent`'s `invitedBy` that represents the inviter name, if exists.
+- Added `NXMEventEmbeddedInfo` to all events returned by `NXMEvent`'s `embeddedInfo` and containing the `NXMUser` linked to the event.
+- Added `[NXMConversation getMemberWithMemberUuid:completion:]` returning the member given its identifier.
+
+### Enhancements
+
+- Allow 1K members on a conversation.
+- Improved `callServer` setup time by pre-warming leg.
+- Disabled media after RTC hangup event.
+- Fixed text typing events handling.
+
+### Breaking changes
+
+- Removed `NXMCallMember`, replaced with `NXMMember`.
+- Removed `NXMCallMember`'s `status`, moved to `[NXMCall callStatusForMember:member:]`.
+- Removed `[NXMCallMember mute:]` converted into `[NXMMember enableMute]` and `[NXMMember disableMute]`.
+- Removed `NXMConversation`'s `allMembers` (replaced with `[NXMConversation getMembersPageWithPageSize:order:completion:]` (paginated)).
+- Removed `[NXMConversationUpdateDelegate conversation:didUpdateMember:withType:]`, replaced with `[NXMConversationDelegate conversation:didReceiveMemberEvent:]` with the following possible states: `NXMMemberStateInvited`, `NXMMemberStateJoined` and  `NXMMemberStateLeft`. Can be subscribed to using `NXMConversation`'s `delegate`.
+- Renamed `NXMCall`'s `otherCallMembers` to `allMembers`.
+- Renamed `NXMCall`'s `myCallMember` to `myMember`.
+- The `legs` endpoint should be included in `acl` paths on `JWT` token creation.
+
+```json
+"acl": {
+  "paths": {
+    ...,
+    "/*/legs/**": {}
+  }
+}
+```
+
 ## 2.5.0 - 2020-11-23
 
 ### Changed

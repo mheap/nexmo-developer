@@ -5,30 +5,32 @@ description: In this step you join your Users to your Conversation
 
 # Fetch the Conversation
 
-Inside `ChatViewModel` class, locate the following line and fill in the `getConversation()` method implementation:
+Inside `MainActivity` class add the `conversation` property:
+
+```java
+private var conversation: NexmoConversation? = null
+```
+
+Update body of the `getConversation()` method:
 
 ```kotlin
 private fun getConversation() {
-    client.getConversation(Config.CONVERSATION_ID, object : NexmoRequestListener<NexmoConversation> {
-
+    client.getConversation(CONVERSATION_ID, object : NexmoRequestListener<NexmoConversation?> {
         override fun onSuccess(conversation: NexmoConversation?) {
-            this@ChatViewModel.conversation = conversation
-
-            conversation?.let {
-                it.addMessageEventListener(messageListener)
-                getConversationEvents(it)
-            }
+            this@MainActivity.conversation = conversation
         }
 
         override fun onError(apiError: NexmoApiError) {
-            this@ChatViewModel.conversation = null
-            _errorMessage.postValue("Error: Unable to load conversation ${apiError.message}")
+            conversation = null
+            Toast.makeText(this@MainActivity, "Error: Unable to load conversation", Toast.LENGTH_SHORT)
         }
     })
 }
 ```
 
-Notice the use of the `client` - this references the exact same object as the  `client` referred in the `LoginViewModel` (instance is also retrieved by `NexmoClient.get()`).
+Please make sure to replace `CONVERSATION_ID` with the conversation id you created during a previous step.
+
+The above method loads the conversation using `client.getConversation` and then it loads all events from the conversation.
 
 > **Note:** Conversation id is retrieved from `Config.CONVERSATION_ID` provided in the previous step.
 

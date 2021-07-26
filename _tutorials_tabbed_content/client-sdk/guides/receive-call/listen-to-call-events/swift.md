@@ -18,19 +18,19 @@ call.answer { [weak self] error in
 ```swift
 extension ViewController: NXMCallDelegate {
 
-    func call(_ call: NXMCall, didUpdate callMember: NXMCallMember, with status: NXMCallMemberStatus) {
-        // handle call status updates
+    func call(_ call: NXMCall, didUpdate member: NXMMember, with status: NXMCallMemberStatus) {
+        // Handle call status updates
         ...
     }
     
-    func call(_ call: NXMCall, didUpdate callMember: NXMCallMember, isMuted muted: Bool) {
-        // handle call member muting updates
+    func call(_ call: NXMCall, didUpdate member: NXMMember, isMuted muted: Bool) {
+        // Handle member muting updates
         ...
     }
     
     func call(_ call: NXMCall, didReceive error: Error) {
         print("call error: \(error.localizedDescription)")
-        // handle call errors
+        // Handle call errors
         ...
     }
     

@@ -6,6 +6,78 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.0.5 - July 15, 2021
+
+### Fixes
+
+- Fix the `from` for member events
+- Update `npm` dependencies including `socket-io`
+
+## Version 8.0.4 - June 16, 2021
+
+### Fixes
+
+- Fix bug on `DTMF` dispatch of callback to `event_url`
+
+## Version 8.0.3 - May 18, 2021
+
+### Fixes
+
+- Fix out of order internal events processing in the events queue
+- Fix deprecation warning message for `rtcstats:report`
+
+## Version 8.0.1 - April 29, 2021
+
+### Fixes
+
+- Update Typescript definitions
+- Fix bug on IP-IP call scenario involving Native SDKs (not populating properly the `Conversation.members` Map)
+
+## Version 8.0.0 - April 27, 2021
+
+### Breaking changes
+
+- Deprecate `Conversation.members` Map (it will be populated only on a call scenario)
+- Conversation events will be emitted with a subset information of the Member
+
+```javascript
+conversation.on("any:event", ({memberId, userId, userName, displayName, imageUrl, customData}, event) => {});
+```
+
+### Changes
+
+- Add paginated `getMembers()` function to retrieve the members of a conversation
+
+```javascript
+conversation.getMembers().then((members_page) => {
+  members_page.items.forEach(member => {
+    render(member);
+  })
+}).catch((error) => {
+  console.error("error getting the members ", error);
+});
+```
+
+- Add `getMyMember()` function to retrieve our own member in a conversation
+
+```javascript
+conversation.getMyMember().then((member) => {
+  render(member);
+}).catch((error) => {
+  console.error("error getting my member", error);
+});
+```
+
+- Add `getMember()` function to fetch a conversation member by `member_id`
+
+```javascript
+conversation.getMember("MEM-id").then((member) => {
+  render(member);
+}).catch((error) => {
+  console.error("error getting member", error);
+});
+```
+
 ## Version 7.1.0 - April 07, 2021
 
 ### Changes

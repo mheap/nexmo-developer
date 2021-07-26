@@ -30,14 +30,9 @@ tasks:
   - client-sdk/in-app-messaging/add-users-to-conversation
   - client-sdk/generate-jwts-alice-and-bob
   - client-sdk/in-app-messaging/create-project
-  - client-sdk/in-app-messaging/add-dependencies
-  - client-sdk/in-app-messaging/create-screens
-  - client-sdk/in-app-messaging/setup-navigation
   - client-sdk/in-app-messaging/add-permissions
-  - client-sdk/in-app-messaging/configure-jwts-and-conversation-id
+  - client-sdk/in-app-messaging/main-screen
   - client-sdk/in-app-messaging/initialize-client
-  - client-sdk/in-app-messaging/authenticate-alice-and-bob
-  - client-sdk/in-app-messaging/build-chat-screen
   - client-sdk/in-app-messaging/fetch-conversation
   - client-sdk/in-app-messaging/fetch-events
   - client-sdk/in-app-messaging/send-message
@@ -53,6 +48,8 @@ conclusion:
     For the complete version please see the Android Studio project on [GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging-kotlin).
 
     You can do a lot more with the Client SDK:
+    
+    - to enable audio read this [guide](/client-sdk/in-app-voice/guides/enable-audio/kotlin)
     - read the [Client SDK documentation](/client-sdk/overview)
     - review the [Android Client SDK documentation](/sdk/stitch/android/index)
     - try the [Client SDK Android Samples](https://github.com/nexmo-community/client-sdk-android-samples) repository

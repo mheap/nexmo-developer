@@ -25,6 +25,12 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
+IDE will display a warning about the unresolved reference:
+
+![](/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png)
+
+Put caret on the red text and press `Alt + Enter` to import the reference.
+
 Now below client initialization code add connection listener to monitor connection state:
 
 ```java
@@ -44,7 +50,7 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
 });
 ```
 
-The above listener allows us to determine that that user has logged in successfully. After successful login based on the user name, the app will show `start call` button (for `Alice`) or `Waiting for incoming call` text (for `Bob`).
+The above listener allows to determine that that user has logged in successfully. After successful login based on the user name, the app will show `start call` button (for `Alice`) or `Waiting for incoming call` text (for `Bob`).
 
 
 Now in the `MainActivity` class add helper method that hides all UI items:

@@ -7,36 +7,40 @@ description: In this step you display any new messages
 
 You can display incoming messages by implementing the conversation listener.
 
-
-Now, locate the `private val messageListener = object : NexmoMessageEventListener` property in the `ChatViewModel` class and implement conversation listener `onTextEvent` method:
+Now, locate the `getConversation` method and add `addMessageEventListener` call:
 
 ```kotlin
-private val messageListener = object : NexmoMessageEventListener {
-    override fun onTypingEvent(typingEvent: NexmoTypingEvent) {}
+private fun getConversation() {
+    client.getConversation(CONVERSATION_ID, object : NexmoRequestListener<NexmoConversation?> {
+        override fun onSuccess(conversation: NexmoConversation?) {
+            this@MainActivity.conversation = conversation
 
-    override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {}
+            conversation?.let {
+                getConversationEvents(it)
+                it.addMessageEventListener(object : NexmoMessageEventListener {
+                    override fun onTextEvent(textEvent: NexmoTextEvent) {
+                        conversationEvents.add(textEvent)
+                        updateConversationView()
+                    }
 
-    override fun onTextEvent(textEvent: NexmoTextEvent) {
-        updateConversation(textEvent)
-    }
+                    override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {}
+                    override fun onEventDeleted(deletedEvent: NexmoDeletedEvent) {}
+                    override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {}
+                    override fun onDeliveredReceipt(deliveredEvent: NexmoDeliveredEvent) {}
+                    override fun onTypingEvent(typingEvent: NexmoTypingEvent) {}
+                })
+            }
+        }
 
-    override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {}
-
-    override fun onEventDeleted(deletedEvent: NexmoDeletedEvent) {}
-
-    override fun onDeliveredReceipt(deliveredEvent: NexmoDeliveredEvent) {}
+        override fun onError(apiError: NexmoApiError) {
+            conversation = null
+            Toast.makeText(this@MainActivity, "Error: Unable to load conversation", Toast.LENGTH_SHORT)
+        }
+    })
 }
 ```
 
 Now each time a new message is received `onTextEvent(textEvent: NexmoTextEvent)` listener is called, the new message will be passed to `updateConversation` method and dispatched to the view via `conversationEvents` `LiveData` (same `LiveData` used to dispatch all the messages after loading conversation events).
-
-The last thing to do is to make sure that all listeners are removed when `ChatViewModel` is destroyed, for example, when the user navigates back. Fill the body of the `onCleared()` method in the `ChatViewModel` class.
-
-```kotlin
-override fun onCleared() {
-    conversation?.removeMessageEventListener(messageListener)
-}
-```
 
 # Run the app
 

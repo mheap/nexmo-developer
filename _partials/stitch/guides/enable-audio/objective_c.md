@@ -121,9 +121,9 @@ In the process events function you will need to add a clause for a `NXMMediaEven
 
 - (void) showMediaEvent:(NXMMediaEvent *)event {
     if (event.isEnabled) {
-        [self addConversationLine:[NSString stringWithFormat:@"%@ enabled audio", event.fromMember.user.name]];
+        [self addConversationLine:[NSString stringWithFormat:@"%@ enabled audio", event.embeddedInfo.user.name]];
     } else {
-        [self addConversationLine:[NSString stringWithFormat:@"%@ disabled audio", event.fromMember.user.name]];
+        [self addConversationLine:[NSString stringWithFormat:@"%@ disabled audio", event.embeddedInfo.user.name]];
     }
 }
 ```
