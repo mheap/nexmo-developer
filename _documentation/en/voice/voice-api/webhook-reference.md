@@ -15,6 +15,10 @@ Vonage uses webhooks alongside its Voice API to enable your application to inter
 
 For more general information, check out our [webhooks guide](/concepts/guides/webhooks).
 
+## Signed Webhooks
+
+Signed webhooks are a way to verify that the request is coming from Vonage and its payload has not been tampered with during transit. Voice API, as well as [Messages](/messages/overview) and [Dispatch](/dispatch/overview) APIs, supports signed callbacks by default. See [Decoding signed webhooks](/concepts/guides/webhooks#decoding-signed-webhooks) to learn how to decode an incoming JWT signature.
+
 ## Answer Webhook
 
 When an incoming call is answered, an HTTP request is sent to the `answer_url` you specified when setting up the application. For outgoing calls, specify the `answer_url` when you make the call.
