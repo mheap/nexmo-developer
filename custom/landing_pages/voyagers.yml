@@ -414,18 +414,19 @@ page:
                   <h3>Amani Kanu</h3>
                   <p>An experienced software engineer who loves thinking through problems to provide a robust software solution. Javascript and frontend lover. A community builder. Computer science graduate, and AI enthusiast.</p>
                   <ul class="meta">
-                  <li>
+                    <li>
                       <a href="https://twitter.com/AmaniKanu"><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-twitter"></use></svg> AmaniKanu</a>
                     </li>
                     <li>
                       <a href="https://github.com/sirsuccess"><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-github"></use></svg> sirsuccess</a>
-                 </li>
+                    </li>
                     <li><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-world"></use></svg> Lagos, Nigeria
                     </li>
                   </ul>
                 </div>
-                </div>
-                <div class="profile">
+              </div>
+               
+              <div class="profile">
                 <a href="https://github.com/tolopsy">
                   <img src="https://res.cloudinary.com/tolulope/image/upload/v1624831837/Personal/tolulope-picture-square_fwtskx.jpg" alt="Tolulope Olanrewaju Abayomi">
                 </a>
