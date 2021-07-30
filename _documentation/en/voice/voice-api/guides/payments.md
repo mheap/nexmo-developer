@@ -20,7 +20,7 @@ There are various scenarios when you may want to charge the user during the phon
 
 To start, you should have your Stripe account ready. If you don't have an account yet, [sign up here](https://dashboard.stripe.com/register).
 
-> In [Developer Preview](/product-lifecycle/dev-preview), Vonage will set up your payment gateway connector for you. [Contact Support](https://help.nexmo.com/hc/en-us/requests/new) to get it configured.
+> In [Developer Preview](/product-lifecycle/dev-preview), Vonage will set up your payment gateway connector for you. [Contact us](mailto:pay.voice@vonage.com) to get it configured.
 
 Your application should have Payments over the Phone capability enabled. 
 
@@ -175,4 +175,4 @@ You can change the default IVR prompts to custom ones, including the prompts pla
 * [Webhook Reference](/voice/voice-api/webhook-reference#pay),
 * [Contact Center Intelligence](/voice/voice-api/guides/cci) Guide.
 
-> We appreciate your feedback! Do you need more currencies, payment gateways, outbound calls or any other `pay` action improvements? Please drop us a note at [vcp.product.voice@vonage.com](mailto:vcp.product.voice@vonage.com)!
+> We appreciate your feedback! Do you need more currencies, payment gateways, outbound calls or any other `pay` action improvements? Please drop us a note at [pay.voice@vonage.com](mailto:pay.voice@vonage.com)!
