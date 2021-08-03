@@ -24,7 +24,98 @@ To start, you should have your Stripe account ready. If you don't have an accoun
 
 Your application should have Payments over the Phone capability enabled. 
 
-> In Developer Preview, that will be done by Vonage following the same Support request.
+### Get Application
+
+Retrieve your application data with a [Get an application](/api/application.v2#getApplication) HTTP request using [Postman](/tools/postman) or another HTTP client of your choice:
+
+```http
+GET https://api.nexmo.com/v2/applications/YOUR_APPLICATION_ID
+```
+
+Copy the response body:
+
+```json
+{
+    "id": "YOUR_APPLICATION_ID",
+    "name": "My app",
+    "keys": {
+        "public_key": "YOUR_PUBLIC_KEY"
+    },
+    "capabilities": {
+        "voice": {
+            "webhooks": {
+                "event_url": {
+                    "address": "https://example.com",
+                    "http_method": "POST"
+                },
+                "fallback_answer_url": {
+                    "address": "",
+                    "http_method": "GET"
+                },
+                "answer_url": {
+                    "address": "https://example.com",
+                    "http_method": "GET"
+                }
+            }
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "/v2/applications/YOUR_APPLICATION_ID"
+        }
+    }
+}
+```
+
+> Unlike Voice API, the Applications API uses [header-based API Key and Secret Authentication] (https://developer.nexmo.com/concepts/guides/authentication#header-based-api-key-and-secret-authentication), which means you should use a [Base64](https://tools.ietf.org/html/rfc4648#section-4) encoded API key and secret joined by a colon in the `Authorization` header of the HTTP request.
+
+### Update Application
+
+Update your application with a [Update an application](https://developer.nexmo.com/api/application.v2#updateApplication) HTTP request:
+
+```http
+PUT https://api.nexmo.com/v2/applications/YOUR_APPLICATION_ID
+```
+
+Use the response JSON from the previous step as the request body with the addition of the `signed_callbacks` parameter:
+
+```json
+{
+    "id": "YOUR_APPLICATION_ID",
+    "name": "My app",
+    "keys": {
+        "public_key": "YOUR_PUBLIC_KEY"
+    },
+    "capabilities": {
+        "voice": {
+            "webhooks": {
+                "event_url": {
+                    "address": "https://example.com",
+                    "http_method": "POST"
+                },
+                "fallback_answer_url": {
+                    "address": "",
+                    "http_method": "GET"
+                },
+                "answer_url": {
+                    "address": "https://example.com",
+                    "http_method": "GET"
+                }
+            },
+            "payment_enabled": true
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "/v2/applications/YOUR_APPLICATION_ID"
+        }
+    }
+}
+```
+
+You can make a `GET` request from step one again to ensure the parameter is applied (it should be returned in the response).
+
+> Developer Preview limitation: if you change any parameter of your application via [Dashboard](https://dashboard.nexmo.com), the `payment_enabled` parameter will be dropped, and the feature will be inactivated, so you have to go through the activation steps again to turn it back on.
 
 ## Pay Action
 
