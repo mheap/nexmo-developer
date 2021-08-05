@@ -10,11 +10,11 @@ There are various scenarios when you may want to charge the user during the phon
 
 > Payments over the Phone are currently offered as [Developer Preview](/product-lifecycle/dev-preview). The feature can be used in your projects for supported scenarios (see below). The following limitations apply:
 <ul style='list-style:disc;margin-left:16px;margin-top:16px;'><li style='margin-bottom:16px;'>payment gateway configuration is being done by request,</li>
-<li style='margin-bottom:16px;'>`pay` action supported for inbound calls only,</li>
-<li style='margin-bottom:16px;'>US dollars supported as the only currency,</li>
-<li style='margin-bottom:16px;'>Visa and Mastercard cards supported only,</li>
-<li style='margin-bottom:16px;'>[Stripe](https://www.stripe.com) supported as the only payment gateway,</li>
-<li style='margin-bottom:16px;'>the feature is supported free of extra charge during Developer Preview.</li></ul>
+<li style='margin-bottom:16px;'>The `pay` action supported for inbound calls only</li>
+<li style='margin-bottom:16px;'>US dollars are the only supported currency</li>
+<li style='margin-bottom:16px;'>Only Mastercard and Visa cards supported</li>
+<li style='margin-bottom:16px;'>[Stripe](https://www.stripe.com) is the only supported payment gateway</li>
+<li style='margin-bottom:16px;'>The feature is supported free of extra charge during Developer Preview.</li></ul>
 
 ## Preliminary Configuration
 
@@ -77,7 +77,7 @@ Update your application with a [Update an application](https://developer.nexmo.c
 PUT https://api.nexmo.com/v2/applications/YOUR_APPLICATION_ID
 ```
 
-Use the response JSON from the previous step as the request body with the addition of the `signed_callbacks` parameter:
+Use the response JSON from the previous step as the request body with the addition of the `payment_enabled` parameter:
 
 ```json
 {
