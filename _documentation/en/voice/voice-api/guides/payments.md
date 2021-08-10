@@ -20,7 +20,7 @@ There are various scenarios when you may want to charge the user during the phon
 
 To start, you should have your Stripe account ready. If you don't have an account yet, [sign up here](https://dashboard.stripe.com/register).
 
-> In [Developer Preview](/product-lifecycle/dev-preview), Vonage will set up your payment gateway connector for you. [Contact us](mailto:pay.voice@vonage.com) to get it configured.
+> In [Developer Preview](/product-lifecycle/dev-preview), Vonage will set up your payment gateway connector for you. [Contact us](mailto:pay.voice@vonage.com) to get it configured. Once this is done, continue with the following steps.
 
 Your application should have Payments over the Phone capability enabled. 
 
