@@ -121,7 +121,7 @@ UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(s
 callButton.setTitle("Call \(user.callPartnerName)", for: .normal)
 ```
 
-This will hide the call button for Alice since for this demonstration only Bob will be able to make a call to Alice. In a production application the `NCCO` that is returned by your application's answer URL will dynamically return the correct username to avoid this. It also creates a logout button in the navigation bar, add the corresponding `logout` function to the end of `CallViewController.swift` 
+It sets the title of the view controller and creates a logout button in the navigation bar. Add the corresponding `logout` function to the end of `CallViewController.swift` 
 
 ```swift 
 class CallViewController: UIViewController {
