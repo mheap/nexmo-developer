@@ -38,12 +38,13 @@ npm install nexmo-client --save
 
 ## Create the server file
 
-Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace `SUBDOMAIN` with an actual value. The value used will become part of the URLs you will set as webhooks in the next step.
+Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace  `NUMBER` with your Vonage number. As well as `SUBDOMAIN` with an actual value. The value used will become part of the URLs you will set as webhooks in the next step.
 
 ``` javascript
 'use strict';
 
 const subdomain = 'SUBDOMAIN';
+const vonageNumber = 'NUMBER';
 
 const express = require('express')
 const app = express();
@@ -59,7 +60,8 @@ app.get('/voice/answer', (req, res) => {
       "text": "Please wait while we connect you."
     },
     { 
-      "action": "connect", 
+      "action": "connect",
+      "from": vonageNumber,
       "endpoint": [ 
         { "type": "phone", "number": req.query.to } 
       ]
@@ -78,6 +80,10 @@ if(subdomain == "SUBDOMAIN") {
   console.log('\n\t🚨🚨🚨 Please change the SUBDOMAIN value');
   return false;
 }
+if(vonageNumber == "NUMBER") {
+  console.log('\n\t🚨🚨🚨 Please change the NUMBER value');
+  return false;
+}
 app.listen(3000);
 
 const localtunnel = require('localtunnel');
@@ -90,7 +96,7 @@ const localtunnel = require('localtunnel');
 })();
 ```
 
-> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes).
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes) and `NUMBER` with your Vonage number.
 
 
 There are 2 parts in the server code above:

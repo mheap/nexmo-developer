@@ -23,6 +23,8 @@ prerequisites:
 - create-nexmo-account
 - install-nodejs
 - install-nexmo-cli-beta
+- buy-nexmo-number
+- link-nexmo-number
 
 tasks:
 - client-sdk/app-to-phone/create-webhook-server

@@ -19,22 +19,24 @@ introduction:
     If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-java](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-java) folder.
 
 prerequisites:
-  - create-nexmo-account
-  - install-nodejs
-  - install-nexmo-cli-beta
-  - install-android-studio
+- create-nexmo-account
+- install-nodejs
+- install-nexmo-cli-beta
+- buy-nexmo-number
+- link-nexmo-number
+- install-android-studio
 
 tasks:
-  - client-sdk/app-to-phone/create-webhook-server
-  - client-sdk/app-to-phone/create-application
-  - client-sdk/create-user-alice
-  - client-sdk/generate-jwt-alice
-  - client-sdk/app-to-phone/create-project
-  - client-sdk/app-to-phone/add-permissions
-  - client-sdk/app-to-phone/main-screen
-  - client-sdk/app-to-phone/client
-  - client-sdk/app-to-phone/place-call
-  - client-sdk/app-to-phone/end-call
+- client-sdk/app-to-phone/create-webhook-server
+- client-sdk/app-to-phone/create-application
+- client-sdk/create-user-alice
+- client-sdk/generate-jwt-alice
+- client-sdk/app-to-phone/create-project
+- client-sdk/app-to-phone/add-permissions
+- client-sdk/app-to-phone/main-screen
+- client-sdk/app-to-phone/client
+- client-sdk/app-to-phone/place-call
+- client-sdk/app-to-phone/end-call
 
 conclusion:
   title: What's next?
