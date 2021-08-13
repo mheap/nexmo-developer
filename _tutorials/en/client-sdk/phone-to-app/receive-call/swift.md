@@ -23,10 +23,7 @@ When the application receives a call you will want to give the option to accept 
 class ViewController: UIViewController {
     ...
     func displayIncomingCallAlert(call: NXMCall) {
-        var from = "Unknown"
-        if let otherParty = call.allMembers.firstObject {
-            from = otherParty.channel?.from.data ?? "Unknown"
-        }
+        let from = call.myMember?.channel?.from.data ?? "Unknown"
         
         let alert = UIAlertController(title: "Incoming call from", message: from, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Answer", style: .default, handler: { _ in

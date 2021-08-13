@@ -33,7 +33,7 @@ The `CallViewController` class will be in the foreground and the class handling 
 }
 
 - (void)displayIncomingCallAlert:(NXMCall *)call {
-    NSString *from = call.allMembers.firstObject.user.name
+    NSString *from = call.myMember.channel.from.data;
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Incoming call from" message:from preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"Answer" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
