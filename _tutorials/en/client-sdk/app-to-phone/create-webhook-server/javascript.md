@@ -38,7 +38,7 @@ npm install nexmo-client --save
 
 ## Create the server file
 
-Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace  `NUMBER` with your Vonage number. As well as `SUBDOMAIN` with an actual value. The value used will become part of the URLs you will set as webhooks in the next step.
+Inside your project folder, create a file named `server.js` and add the code as shown below - please make sure to replace  `NUMBER` with your Vonage number (in [E.164](https://en.wikipedia.org/wiki/E.164) format), as well as `SUBDOMAIN` with an actual value. The value used will become part of the URLs you will set as webhooks in the next step.
 
 ``` javascript
 'use strict';
@@ -96,7 +96,7 @@ const localtunnel = require('localtunnel');
 })();
 ```
 
-> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes) and `NUMBER` with your Vonage number.
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes) and `NUMBER` with your Vonage number in [E.164](https://en.wikipedia.org/wiki/E.164) format (e.g. 447700900000).
 
 
 There are 2 parts in the server code above:
