@@ -5,7 +5,7 @@ description: In this step you learn how to receive an in-app call
 
 # Receiving a call
 
-Now that the calling interface is built, you can now add the code needed receive a call. The `NXMClientDelegate` has a function that is called when there is an incoming call. Add an implementation for it in the `NXMClientDelegate` extension in the `ViewController.m` file.
+Now that the calling interface is built, you can now add the code needed to receive a call. The `NXMClientDelegate` has a function that is called when there is an incoming call. Add an implementation for it in the `NXMClientDelegate` extension in the `ViewController.m` file.
 
 ```objective_c
 - (void)client:(NXMClient *)client didReceiveCall:(NXMCall *)call {
@@ -33,7 +33,7 @@ The `CallViewController` class will be in the foreground and the class handling 
 }
 
 - (void)displayIncomingCallAlert:(NXMCall *)call {
-    NSString *from = call.allMembers.firstObject.user.name
+    NSString *from = call.myMember.channel.from.data;
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Incoming call from" message:from preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"Answer" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

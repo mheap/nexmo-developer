@@ -37,7 +37,7 @@ The `makeCall` function uses the `NXMClient` instance to make the call. The Clie
 
 > **NOTE:** Also, please make sure that the webhook server you built in the previous steps is still running. 
 
-Press `Cmd + R` to build and run again. You now have a functioning call app! To test it out you can run the app on two different simulators/devices, and call the device logged in as the Alice user from the device logged in as the Bob user:
+Press `Cmd + R` to build and run again. You now have a functioning call app! To test it out you can run the app on two different simulators/devices, and make calls between the two users:
 
 ![Sent messages](/images/client-sdk/ios-in-app-voice/active-call.png)
 

@@ -145,7 +145,7 @@ self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@
 [self.callButton setTitle:[NSString stringWithFormat:@"Call %@", self.user.callPartnerName] forState:UIControlStateNormal];
 ```
 
-This will hide the call button for Alice since for this demonstration only Bob will be able to make a call to Alice. In a production application the `NCCO` that is returned by your application's answer URL will dynamically return the correct username to avoid this. It also creates a logout button in the navigation bar, add the corresponding `logout` function to the end of `CallViewController.m` 
+It sets the title of the view controller and creates a logout button in the navigation bar. Add the corresponding `logout` function to the end of `CallViewController.m` 
 
 ```objective_c 
 @implementation ChatViewController
