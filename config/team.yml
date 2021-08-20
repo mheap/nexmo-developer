@@ -26,7 +26,6 @@ current:
   - name: 'Dwane Hemmings'
     email: 'dwane.hemmings@vonage.com'
     twitter: 'dwaneio'
-    twitter: 'michaeljolley'
   - name: 'Nick Iati'
     email: 'nick.iati@vonage.com'
     role: 'Technical Writer'
@@ -35,6 +34,7 @@ current:
     role: 'Online Community Manager'
   - name: "Mofi Rahman"
     email: "mofi.rahman@vonage.com"
+    role: "Senior Developer Advocate"
     twitter: "moficodes"
   - name: "Abdul Ajetunmobi"
     email: "abdul.ajetunmobi@vonage.com"
