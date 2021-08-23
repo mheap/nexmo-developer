@@ -434,7 +434,7 @@ The following options can be used to control an `pay` action:
 
 Option | Description | Required
 -- | -- | --
-`amount` | Charge amount in US dollars. Omit to tokenize the card information and create a charge later using token returned in the callback. See also [Webhook Reference](/voice/voice-api/webhook-reference) | No
+`amount` | Charge amount in US dollars. Omit to tokenize the card information and create a charge later using token returned in the callback. See also [Webhook Reference](/voice/voice-api/webhook-reference#payment) | No
 `eventUrl` | The URL to the webhook endpoint that is called asynchronously when payment is finished. | No
 `prompts` | Array of [Prompt settings](#prompts-text-settings) | No
 `voice` | [Text to speech voice settings](#prompts-voice-settings) | No
