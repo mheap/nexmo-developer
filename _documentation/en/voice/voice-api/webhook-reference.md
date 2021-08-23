@@ -83,6 +83,7 @@ The format of the data included depends on which event has occurred:
 * [`record`](#record)
 * [`input`](#input)
 * [`transfer`](#transfer)
+* [`payment`](#payment)
 
 ### Started
 
@@ -352,6 +353,22 @@ Field | Example | Description
 `conversation_uuid_to` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The conversation ID that the leg was transferred to
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
+
+[Back to event webhooks list](#event-webhook)
+
+### Payment
+
+This webhook is sent by Vonage when an NCCO with an action of "[pay](/voice/voice-api/ncco-reference#pay)" has finished.
+
+Field | Example | Description
+-- | -- | --
+`from` | `447700900000` | The number the call came from
+`to` | `447700900000` | The number the call was made to
+`uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
+`conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
+`token` | `seti_aaaaaaaabbbbccccdddd1234` | Card token for further transaction. Returned only when `amount` in `pay` action is omitted or set to `0`.
+`status` | `success` | Payment operation status. Possible values: `success`, `failure`
+`timestamp` | `2021-08-23T15:27:46.479Z` | Timestamp (ISO 8601 format)
 
 [Back to event webhooks list](#event-webhook)
 
