@@ -468,6 +468,7 @@ Option | Description | Required
 `text` | Error prompt text, for example, "Invalid credit card number. Please try again". | Yes 
 
 Error prompts example:
+
 ```json
 {
   "type": "ExpirationDate",
