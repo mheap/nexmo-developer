@@ -55,19 +55,20 @@ The project can be run on your laptop, either directly or using Docker. These in
 
 2.  Install required packages, create database and configure `git`.
 
-        Note: A default database is created for you when you run the `db:setup` script. If you'd like to create and
+    > Note: A default database is created for you when you run the `db:setup` script. If you'd like to create and use a different database or user, use `createdb database_name_here` or `createuser username_here` and make sure your `.env` file is updated accordingly (See [.env.example](https://github.com/Nexmo/nexmo-developer/blob/master/.env.example)).
 
-    use a different database or user, use `createdb database_name_here` or `createuser username_here` and make sure your
-    `.env` file is updated accordingly (See [.env.example](https://github.com/Nexmo/nexmo-developer/blob/master/.env.example)).
+    ```bash
+    brew install postgres rbenv git nvm redis
+    brew services start postgresql
+    brew services start redis
+    ```
 
-        ```bash
-        brew install postgres rbenv git nvm redis
-        brew services start postgresql
-        brew services start redis
-
-        git config --global user.name "NAME"
-        git config --global user.email "user.name@vonage.com"
-        ```
+    If you have not already, update git config with your name and email address.
+    
+    ```
+    git config --global user.name "NAME"
+    git config --global user.email "user.name@vonage.com"
+    ```
 
 3.  Generate an SSH key for authentication
 
@@ -95,14 +96,14 @@ The project can be run on your laptop, either directly or using Docker. These in
     bundle install
     ```
 
-    - If you're getting error `rbenv: commend not found` run `brew update && brew update ruby-build`.
-    - If you're getting `ruby-build definition not found 2.7.2`, you need to update the xcode: `xcode-select --install`
-    - **NOTE**: If you use `rvm`: `rvm --default use 2.7.2 && gem install bundle && bundle install`
+    -   If you're getting error `rbenv: commend not found` run `brew update && brew update ruby-build`.
+    -   If you're getting `ruby-build definition not found 2.7.2`, you need to update the xcode: `xcode-select --install`
+    -   **NOTE**: If you use `rvm`: `rvm --default use 2.7.2 && gem install bundle && bundle install`
 
 8.  Set up access to submodules: `git submodule init && git submodule update` and then `git config --global submodule.recurse true`
 9.  Start postgres: `brew services start postgresql` and if that doesn't work `brew services restart postgresql`.
 
-    - If you're getting "PG::ConnectionBad - could not connect to server: Connection refused", you can try installing the correct version or re-install postgres: `brew uninstall postgresql && rm -rf /usr/local/bin/postgres && rm -rf .psql_history .psqlrc .psql.local .pgpass .psqlrc.local && brew update && brew install postgres`
+    -   If you're getting `PG::ConnectionBad - could not connect to server: Connection refused`, you can try installing the correct version or re-install postgres: `brew uninstall postgresql && rm -rf /usr/local/bin/postgres && rm -rf .psql_history .psqlrc .psql.local .pgpass .psqlrc.local && brew update && brew install postgres`
 
 10. Start the local server:
 
@@ -121,13 +122,21 @@ $ git clone git@github.com:Nexmo/nexmo-developer.git
 $ cd nexmo-developer
 ```
 
-Set up access to submodules: `git submodule init && git submodule update` and then `git config --global submodule.recurse true`
+Set up access to submodules: 
+```
+git submodule init && git submodule update` and then `git config --global submodule.recurse true
+```
+
+Start docker-compose:
 
 ```bash
 $ docker-compose up
 ```
 
-Once `docker-compose up` has stopped returning output, open a new terminal and run `docker-compose run web bundle exec rake db:migrate`.
+Once `docker-compose up` has stopped returning output, open a new terminal and run 
+```
+docker-compose run web bundle exec rake db:migrate
+```
 
 At this point, open your browser to http://localhost:3000/ and you should see the homepage. The first time you click on `Documentation` it might take 5 seconds or so, but any further page loads will be almost instantaneous.
 
