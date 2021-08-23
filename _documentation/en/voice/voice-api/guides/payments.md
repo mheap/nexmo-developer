@@ -24,7 +24,7 @@ To start, you should have your Stripe account ready. If you don't have an accoun
 
 > In [Developer Preview](/product-lifecycle/dev-preview), Vonage will set up your payment gateway connector for you. [Contact us](mailto:pay.voice@vonage.com) to get it configured. Once this is done, continue with the following steps.
 
-To process payments with Voice API, activate direct card information processing on your Stripe account. To do that, go to [Stripe Dashboard Integration Settings](https://dashboard.stripe.com/settings/integration) and turn the **Handle card information directly** switch on. In the dialog appearing, tick all the checkmarks and select "I collect payment information securely through a PCI compliant third party vendor":
+To process payments with Voice API, activate direct card information processing on your Stripe account. To do that, go to [Stripe Dashboard Integration Settings](https://dashboard.stripe.com/settings/integration) and turn the **Handle card information directly** switch on. In the dialog appearing, check all the boxes and select "I collect payment information securely through a PCI compliant third party vendor":
 
 ![Integration](/images/voice-api/payments_integration.png)
 
