@@ -90,6 +90,8 @@ navigation_overrides:
         asr:
         signed-webhooks:
           label: 'Beta'
+        payments:
+          label: 'Dev Preview'        
     sip:
       concepts:
         programmable-sip:
