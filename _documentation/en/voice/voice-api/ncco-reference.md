@@ -24,6 +24,7 @@ Action | Description | Synchronous
 [stream](#stream) | Send audio files to a Conversation. | Yes, unless *bargeIn=true*
 [input](#input) | Collect digits or capture speech input from the person you are calling. | Yes
 [notify](#notify) | Send a request to your application to track progress through an NCCO | Yes
+[pay](#pay) [Developer Preview] | Ask the user for card details and process payment. See the [Guide](/voice/voice-api/guides/payments) for more details | Yes
 
 > **Note**: [Connect an inbound call](/voice/voice-api/code-snippets/connect-an-inbound-call) provides an example of how to serve your NCCOs to Vonage after a Call or Conference is initiated.
 
@@ -408,3 +409,76 @@ Option | Description | Required
 `payload` | The JSON body to send to your event URL. | Yes
 `eventUrl` | The URL to send events to. If you return an NCCO when you receive a notification, it will replace the current NCCO. | Yes
 `eventMethod` | The HTTP method to use when sending `payload` to your `eventUrl`. | No
+
+## Pay
+
+The `pay` action collects credit card information with DTMF input in a secure ([PCI-DSS compliant](https://www.pcisecuritystandards.org/pci_security/)) way. See [Payments over the Phone](/voice/voice-api/guides/payments) guide to learn more.
+
+```json
+[
+  {
+    "action": "talk",
+    "text": "Thank you for your order, we will charge 9 dollars 99 cents now"
+  },
+  {
+    "action": "pay",
+    "eventUrl": [
+      "https://example.com/pay"
+    ],
+    "amount": 9.99
+  }
+]
+```
+
+The following options can be used to control an `pay` action:
+
+Option | Description | Required
+-- | -- | --
+`amount` | Charge amount in US dollars, decimal value > `0`. | Yes
+`eventUrl` | The URL to the webhook endpoint that is called asynchronously when payment is finished. | No
+`prompts` | Array of [Prompt settings](#prompts-text-settings) | No
+`voice` | [Text to speech voice settings](#prompts-voice-settings) | No
+
+### Prompts Voice Settings
+Option | Description | Required
+-- | -- | --
+`language` | The language ([BCP-47](https://tools.ietf.org/html/bcp47) format) for the prompts. Default: `en-US`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No 
+`style` | The vocal style (vocal range, tessitura and timbre). Default: `0`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No 
+
+### Prompts Text Settings
+Option | Description | Required
+-- | -- | --
+`type` | Prompt type. Possible values: `CardNumber`, `ExpirationDate`, `SecurityCode` | Yes
+`text` | Prompt text, for example, "Enter your card number". | Yes 
+`errors` | [Error prompts settings](#error-prompts). | Yes
+
+### Error Prompts
+Possible errors depend on prompt `type` (see above):
+Prompt Type | Error Type | Description 
+-- | -- | --
+`CardNumber` | `InvalidCardType` | The type of the card entered is not in the list of allowed card types
+`CardNumber`| `InvalidCardNumber` | The card number entered is not correct
+`ExpirationDate` | `InvalidExpirationDate` | Invalid month number or date in the past
+`SecurityCode` | `InvalidSecurityCode` | Security code validation did not pass
+`CardNumber`, `ExpirationDate`, `Security` | `Timeout` | No user input during 10 seconds
+
+Option | Description | Required
+-- | -- | --
+`text` | Error prompt text, for example, "Invalid credit card number. Please try again". | Yes 
+
+Error prompts example:
+
+```json
+{
+  "type": "ExpirationDate",
+  "text": "Please enter expiration date",
+  "errors": {
+    "InvalidExpirationDate": {
+      "text": "Invalid expiration date. Please try again"
+    },
+    "Timeout": {
+      "text": "Please enter your 4 digit credit card expiration date"
+    }
+  }
+}
+```
