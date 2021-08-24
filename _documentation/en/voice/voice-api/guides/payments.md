@@ -271,7 +271,7 @@ You can change the default IVR prompts to custom ones, including the prompts pla
 
 ## Further Reading
 * [NCCO Reference](/voice/voice-api/ncco-reference#pay),
-* [Webhook Reference](/voice/voice-api/webhook-reference#pay),
+* [Webhook Reference](/voice/voice-api/webhook-reference#payment),
 * [Contact Center Intelligence](/voice/voice-api/guides/cci) Guide.
 
 > We appreciate your feedback! Do you need more currencies, payment gateways, outbound calls or any other `pay` action improvements? Please drop us a note at [pay.voice@vonage.com](mailto:pay.voice@vonage.com)!
