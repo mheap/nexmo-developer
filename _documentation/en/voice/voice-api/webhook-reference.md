@@ -366,7 +366,6 @@ Field | Example | Description
 `to` | `447700900000` | The number the call was made to
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
-`token` | `seti_aaaaaaaabbbbccccdddd1234` | Card token for further transaction. Returned only when `amount` in `pay` action is omitted or set to `0`.
 `status` | `success` | Payment operation status. Possible values: `success`, `failure`
 `timestamp` | `2021-08-23T15:27:46.479Z` | Timestamp (ISO 8601 format)
 
