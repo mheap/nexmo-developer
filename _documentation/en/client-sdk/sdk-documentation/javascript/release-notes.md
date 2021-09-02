@@ -20,7 +20,7 @@ application.reconnectCall("conversation_id", "rtc_id").then((nxmCall) => {
 });
 ```
 
-- Add optional param `reconnectRtcId` to media `enable()` function to reconnect media to call
+- Add optional parameter `reconnectRtcId` to media `enable()` function to reconnect media to call
 
 ```javascript
 conversation.media.enable({ reconnectRtcId: "UUID" }).then((stream) => {
