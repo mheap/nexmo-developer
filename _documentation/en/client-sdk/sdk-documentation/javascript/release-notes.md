@@ -33,7 +33,11 @@ conversation.media.enable({ reconnectRtcId: "UUID" }).then((stream) => {
 - Add `custom_data` object in `callServer` function
 
 ```javascript
-application.callServer("<phone_number>", "phone", { field1: "test" });
+application.callServer("<phone_number>", "phone", { field1: "test" }).then((nxmCall) => {
+    console.log(nxmCall);
+}).catch((error) => {
+    console.error(error);
+});
 ```
 
 - Add `apiKey`, `applicationId`, `conversationId` and `conversationName` when available in `rtcstats` analytics reports
