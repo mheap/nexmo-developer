@@ -6,6 +6,46 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.1.0 - September 02, 2021
+
+### New
+
+- Add `reconnectCall` function allowing users to reconnect to a call within 20 seconds if browser tab closed
+
+```javascript
+application.reconnectCall("conversation_id", "rtc_id").then((nxmCall) => {
+  console.log(nxmCall);
+}).catch((error) => {
+  console.error(error);
+});
+```
+
+- Add optional parameter `reconnectRtcId` to media `enable()` function to reconnect media to call
+
+```javascript
+conversation.media.enable({ reconnectRtcId: "UUID" }).then((stream) => {
+  console.log(stream)
+}).catch((error) => {
+  console.error("error renabling media", error);
+});
+```
+
+- Add `custom_data` object in `callServer` function
+
+```javascript
+application.callServer("<phone_number>", "phone", { field1: "test" }).then((nxmCall) => {
+  console.log(nxmCall);
+}).catch((error) => {
+  console.error(error);
+});
+```
+
+- Add `apiKey`, `applicationId`, `conversationId` and `conversationName` when available in `rtcstats` analytics reports
+
+### Fixes
+
+- Fix bug in call transfer where `transferred_from` was undefined
+
 ## Version 8.0.5 - July 15, 2021
 
 ### Fixes
