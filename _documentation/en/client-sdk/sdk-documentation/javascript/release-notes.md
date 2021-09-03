@@ -34,7 +34,7 @@ conversation.media.enable({ reconnectRtcId: "UUID" }).then((stream) => {
 
 ```javascript
 application.callServer("<phone_number>", "phone", { field1: "test" }).then((nxmCall) => {
-    console.log(nxmCall);
+  console.log(nxmCall);
 }).catch((error) => {
     console.error(error);
 });
