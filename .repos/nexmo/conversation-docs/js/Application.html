@@ -428,7 +428,7 @@ user's invitations</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-551">line 551</a>
+				 <a href="application.js.html#sunlight-1-line-585">line 585</a>
 			</li>
 		</ul>
 	</dd>
@@ -455,7 +455,7 @@ user's invitations</p>
             
 <hr>
 <dt>
-    <h4 class="name" id="callServer"><span class="type-signature">&lt;async> </span>callServer(user, <span class="optional">type</span>)</h4>
+    <h4 class="name" id="callServer"><span class="type-signature">&lt;async> </span>callServer(user, <span class="optional">type</span>, <span class="optional">custom_data</span>)</h4>
     
     
 </dt>
@@ -578,6 +578,44 @@ listen for it with application.on(&quot;call:status:changed&quot;)</p>
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>custom_data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>custom data to be included in the call object, i.e. { yourCustomKey: yourCustomValue }</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -619,7 +657,7 @@ listen for it with application.on(&quot;call:status:changed&quot;)</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-308">line 308</a>
+				 <a href="application.js.html#sunlight-1-line-310">line 310</a>
 			</li>
 		</ul>
 	</dd>
@@ -676,8 +714,9 @@ listen for it with application.on(&quot;call:status:changed&quot;)</p>
 		}
  });
 
- application.callServer(phone_number).then(() =&gt; {
+ application.callServer(phone_number).then((nxmCall) =&gt; {
    console.log(&#x27;Calling phone &#x27; + phone_number);
+   console.log(&#x27;Call Object &#x27;: nxmCall);
  }).catch((error) =&gt; {
    console.error(error);
  });</pre>
@@ -833,7 +872,7 @@ Result added (or updated) in this.conversations</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-388">line 388</a>
+				 <a href="application.js.html#sunlight-1-line-422">line 422</a>
 			</li>
 		</ul>
 	</dd>
@@ -1136,7 +1175,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-464">line 464</a>
+				 <a href="application.js.html#sunlight-1-line-498">line 498</a>
 			</li>
 		</ul>
 	</dd>
@@ -1314,7 +1353,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-531">line 531</a>
+				 <a href="application.js.html#sunlight-1-line-565">line 565</a>
 			</li>
 		</ul>
 	</dd>
@@ -1751,7 +1790,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-338">line 338</a>
+				 <a href="application.js.html#sunlight-1-line-372">line 372</a>
 			</li>
 		</ul>
 	</dd>
@@ -2019,7 +2058,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-368">line 368</a>
+				 <a href="application.js.html#sunlight-1-line-402">line 402</a>
 			</li>
 		</ul>
 	</dd>
@@ -2090,6 +2129,201 @@ The conversation name must be unique per application.</p>
             
 <hr>
 <dt>
+    <h4 class="name" id="reconnectCall"><span class="type-signature">&lt;async> </span>reconnectCall(conversation_id, rtc_id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Reconnect a leg to an ongoing call.<br>
+You don't need to start the stream, the SDK will play the audio for you</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>conversation_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the conversation that you want to reconnect</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rtc_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the id of the leg that will be reconnected</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="application.js.html">application.js</a>,
+				 <a href="application.js.html#sunlight-1-line-336">line 336</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="NXMCall.html">NXMCall</a>></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">Reconnect a leg to an ongoing call</p>
+    
+    <pre class="sunlight-highlight-javascript"> application.reconnectCall(&quot;conversation_id&quot;, &quot;rtc_id&quot;).then((nxmCall) =&gt; {
+   console.log(nxmCall);
+ }).catch((error) =&gt; {
+   console.error(error);
+ });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="syncConversations"><span class="type-signature"></span>syncConversations()</h4>
     
     
@@ -2145,7 +2379,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-493">line 493</a>
+				 <a href="application.js.html#sunlight-1-line-527">line 527</a>
 			</li>
 		</ul>
 	</dd>
@@ -3303,7 +3537,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-479">line 479</a>
+				 <a href="application.js.html#sunlight-1-line-513">line 513</a>
 			</li>
 		</ul>
 	</dd>
@@ -3375,7 +3609,7 @@ The conversation name must be unique per application.</p>
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Thu Jul 15th 2021 using the <a
+	on Fri Sep 3rd 2021 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
