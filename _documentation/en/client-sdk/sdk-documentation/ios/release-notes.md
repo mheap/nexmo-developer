@@ -6,6 +6,23 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.1.0 - 2021-09-06
+
+### Added
+
+- `[NXMClient inAppCallWithCallee:completionHandler:]` method to perform in-app calls.
+- `[NXMClient serverCallWithCallee:customData:completionHandler:]` method to perform server calls, optionally specifying `customData`.
+
+### Enhancements
+
+- Internal API calls optimised for conversation creation.
+
+### Deprecated
+
+- `[NXMClient call:callHandler:completionHandler:]` method.
+- `NXMCallHandler` enumerate.
+- `[NXMLogger getLogFileNames]` method.
+
 ## 3.0.1 - 2021-07-12
 
 ### Fixed
