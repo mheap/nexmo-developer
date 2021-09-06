@@ -30,7 +30,7 @@ Please make sure to replace `PHONE_NUMBER` below with the actual phone number yo
 }
 
 - (void)placeCall {
-    [self.client call:@"PHONE_NUMBER" callHandler:NXMCallHandlerServer completionHandler:^(NSError * _Nullable error, NXMCall * _Nullable call) {
+    [self.client serverCallWithCallee:@"PHONE_NUMBER" customData:nil completionHandler:^(NSError * _Nullable error, NXMCall * _Nullable call) {
         if (error) {
             self.connectionStatusLabel.text = error.localizedDescription;
             return;
