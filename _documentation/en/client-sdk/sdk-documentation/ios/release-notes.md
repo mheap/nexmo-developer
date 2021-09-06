@@ -15,7 +15,7 @@ navigation_weight: 0
 
 ### Enhancements
 
-- Internal API calls optimised for conversation creation.
+- Internal API calls optimized for conversation creation.
 
 ### Deprecated
 
