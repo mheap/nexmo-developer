@@ -6,6 +6,18 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 3.1.0 - Sep 6, 2021
+
+### Added
+
+- `NexmoClient.inAppCall(username, listener)` method to perform in-app calls.
+- `NexmoClient.serverCall(callee, customData, listener)` method to perform server calls, optionally specifying `customData`.
+
+### Deprecated
+
+- `NexmoClient.call(callee, callType, listener)` method.
+- `NexmoCallHandler` enumerate.
+
 ## Version 3.0.1 - Jun 16, 2021
 
 ### Enhancements
