@@ -31,7 +31,7 @@ Replace the current `callButtonPressed` method with the code below:
 
 func placeCall() {
     callButton.setTitle("End Call", for: .normal)
-    client.call("PHONE_NUMBER", callHandler: .server) {  [weak self] (error, call) in
+    client.serverCall(withCallee: "PHONE_NUMBER", customData: nil) {  [weak self] (error, call) in
         if let error = error {
             self?.connectionStatusLabel.text = error.localizedDescription
             self?.callButton.setTitle("Call", for: .normal)

@@ -6,7 +6,7 @@ menu_weight: 1
 
 
 ```swift
-NXMClient.shared.call(userName, callHandler: .server) { [weak self] (error, call) in
+NXMClient.shared.serverCall(withCallee: userName, customData: nil) { [weak self] (error, call) in
     guard let call = call else {
         // Handle create call failure
         ...
