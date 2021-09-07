@@ -428,7 +428,7 @@ user's invitations</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-585">line 585</a>
+				 <a href="application.js.html#sunlight-1-line-608">line 608</a>
 			</li>
 		</ul>
 	</dd>
@@ -872,7 +872,7 @@ Result added (or updated) in this.conversations</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-422">line 422</a>
+				 <a href="application.js.html#sunlight-1-line-445">line 445</a>
 			</li>
 		</ul>
 	</dd>
@@ -1175,7 +1175,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-498">line 498</a>
+				 <a href="application.js.html#sunlight-1-line-521">line 521</a>
 			</li>
 		</ul>
 	</dd>
@@ -1353,7 +1353,7 @@ logged-in user is a member with a state of <code>JOINED</code> or <code>INVITED<
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-565">line 565</a>
+				 <a href="application.js.html#sunlight-1-line-588">line 588</a>
 			</li>
 		</ul>
 	</dd>
@@ -1790,7 +1790,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-372">line 372</a>
+				 <a href="application.js.html#sunlight-1-line-395">line 395</a>
 			</li>
 		</ul>
 	</dd>
@@ -2058,7 +2058,7 @@ The conversation name must be unique per application.</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-402">line 402</a>
+				 <a href="application.js.html#sunlight-1-line-425">line 425</a>
 			</li>
 		</ul>
 	</dd>
@@ -2129,7 +2129,7 @@ The conversation name must be unique per application.</p>
             
 <hr>
 <dt>
-    <h4 class="name" id="reconnectCall"><span class="type-signature">&lt;async> </span>reconnectCall(conversation_id, rtc_id)</h4>
+    <h4 class="name" id="reconnectCall"><span class="type-signature">&lt;async> </span>reconnectCall(conversation_id, rtc_id, <span class="optional">mediaParams</span>)</h4>
     
     
 </dt>
@@ -2161,6 +2161,8 @@ You don't need to start the stream, the SDK will play the audio for you</p>
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -2187,6 +2189,14 @@ You don't need to start the stream, the SDK will play the audio for you</p>
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -2211,10 +2221,52 @@ You don't need to start the stream, the SDK will play the audio for you</p>
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
             <td class="description last"><p>the id of the leg that will be reconnected</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>mediaParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>MediaStream params (same as Media.enable())</p></td>
         </tr>
 
     
@@ -2259,7 +2311,7 @@ You don't need to start the stream, the SDK will play the audio for you</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-336">line 336</a>
+				 <a href="application.js.html#sunlight-1-line-351">line 351</a>
 			</li>
 		</ul>
 	</dd>
@@ -2306,11 +2358,27 @@ You don't need to start the stream, the SDK will play the audio for you</p>
         
 
     
-        <h5>Example</h5>
+        <h5>Examples</h5>
         
         <p class="code-caption">Reconnect a leg to an ongoing call</p>
     
     <pre class="sunlight-highlight-javascript"> application.reconnectCall(&quot;conversation_id&quot;, &quot;rtc_id&quot;).then((nxmCall) =&gt; {
+   console.log(nxmCall);
+ }).catch((error) =&gt; {
+   console.error(error);
+ });</pre>
+
+        <p class="code-caption">Reconnect a leg to an ongoing call without auto playing audio</p>
+    
+    <pre class="sunlight-highlight-javascript"> application.reconnectCall(&quot;conversation_id&quot;, &quot;rtc_id&quot;, { autoPlayAudio: false }).then((nxmCall) =&gt; {
+   console.log(nxmCall);
+ }).catch((error) =&gt; {
+   console.error(error);
+ });</pre>
+
+        <p class="code-caption">Reconnect a leg to an ongoing call choosing device ID</p>
+    
+    <pre class="sunlight-highlight-javascript"> application.reconnectCall(&quot;conversation_id&quot;, &quot;rtc_id&quot;, { audioConstraints: { deviceId: &quot;device_id&quot; } }).then((nxmCall) =&gt; {
    console.log(nxmCall);
  }).catch((error) =&gt; {
    console.error(error);
@@ -2379,7 +2447,7 @@ You don't need to start the stream, the SDK will play the audio for you</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-527">line 527</a>
+				 <a href="application.js.html#sunlight-1-line-550">line 550</a>
 			</li>
 		</ul>
 	</dd>
@@ -3537,7 +3605,7 @@ You don't need to start the stream, the SDK will play the audio for you</p>
 		<ul class="dummy">
 			<li>
 				<a href="application.js.html">application.js</a>,
-				 <a href="application.js.html#sunlight-1-line-513">line 513</a>
+				 <a href="application.js.html#sunlight-1-line-536">line 536</a>
 			</li>
 		</ul>
 	</dd>
@@ -3609,7 +3677,7 @@ You don't need to start the stream, the SDK will play the audio for you</p>
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Fri Sep 3rd 2021 using the <a
+	on Tue Sep 7th 2021 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Functions  Reference</title>
+    <title>NexmoClient  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,11 +13,10 @@
     <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/objc/Section/Functions" class="dashAnchor"></a>
-    <a title="Functions  Reference"></a>
+    <a title="NexmoClient  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NexmoClient 3.0.1 Docs</a> (90% documented)</p>
+        <p><a href="index.html">NexmoClient 3.1.0 Docs</a> (100% documented)</p>
         <p class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -29,7 +28,7 @@
       <p id="breadcrumbs">
         <a href="index.html">NexmoClient Reference</a>
         <img id="carat" src="img/carat.png" />
-        Functions  Reference
+        NexmoClient  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -95,13 +94,78 @@
             <a href="Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Constants.html#/c:@NSString">NSString</a>
+                <a href="Constants.html#/c:@NXMErrorDomain">NXMErrorDomain</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@NexmoClientVersionNumber">NexmoClientVersionNumber</a>
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@NexmoClientVersionString">NexmoClientVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/NXMAttachmentType.html">NXMAttachmentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMCallHandler.html">NXMCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMCallMemberStatus.html">NXMCallMemberStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMConnectionStatus.html">NXMConnectionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMConnectionStatusReason.html">NXMConnectionStatusReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMDirectionType.html">NXMDirectionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMErrorCode.html">NXMErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMEventType.html">NXMEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMLegStatus.html">NXMLegStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMLegType.html">NXMLegType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMLoggerLevel.html">NXMLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMediaStreamType.html">NXMMediaStreamType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMediaType.html">NXMMediaType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMemberState.html">NXMMemberState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMemberUpdateType.html">NXMMemberUpdateType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMessageStatusType.html">NXMMessageStatusType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMPageOrder.html">NXMPageOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMPushTemplate.html">NXMPushTemplate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMSipStatus.html">NXMSipStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMTextTypingEventStatus.html">NXMTextTypingEventStatus</a>
               </li>
             </ul>
           </li>
@@ -142,64 +206,32 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="Functions.html">Functions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Functions.html#/c:@F@NS_ENUM">NS_ENUM</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Functions</h1>
-            <p>The following functions are available globally.</p>
+            
+            <h1 id='nexmo-client-sdk-for-ios' class='heading'>Nexmo Client SDK for iOS</h1>
 
-          </section>
-          <section class="section task-group-section">
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@F@NS_ENUM"></a>
-                    <a name="//apple_ref/objc/Function/NS_ENUM" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@F@NS_ENUM">NS_ENUM</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of the call handlers.</p>
+<p><a href="https://twitter.com/Vonage"><img src="https://img.shields.io/badge/twitter-@Vonage-blue.svg?style=flat" alt="Twitter"></a></p>
+<h2 id='overview' class='heading'>Overview</h2>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="nf">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">NXMCallHandler</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">/// A default call behavior - use it only for IP to IP calls.
-</span>    <span class="n">NXMCallHandlerInApp</span><span class="p">,</span>
-    <span class="c1">/// A webhook call, can use it for IP to IP and IP to PSTN.
-</span>    <span class="n">NXMCallHandlerServer</span>
-<span class="p">}</span></code></pre>
+<p>The Client SDK serves as your gateway for integrating communications in your app.
+With a set of features including IP-IP calls, IP-PSTN/PSTN-IP calls, chat messages and more, you can easily address your communications needs.</p>
 
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
+<p>Nexmo Client SDK for iOS current version is <strong><em>3.1.0</em></strong>.</p>
+<h2 id='setup' class='heading'>Setup</h2>
+
+<p>To get started with the Nexmo Client SDK for iOS, check out the <a href="https://developer.nexmo.com/client-sdk/overview">documentation</a>.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>Copyright © 2021 Vonage. All rights reserved. Licensed only under the Nexmo SDK License Agreement (the &ldquo;License&rdquo;).</p>
+
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external">Vonage</a>. All rights reserved. (Last updated: 2021-07-13)</p>
+          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external">Vonage</a>. All rights reserved. (Last updated: 2021-09-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
