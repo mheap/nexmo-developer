@@ -6,7 +6,7 @@ navigation_weight: 0
 
 # Release Notes
 
-## Version 8.1.1 - September 07, 2021
+## Version 8.1.1 - September 08, 2021
 
 ### New
 
@@ -23,6 +23,8 @@ application.reconnectCall(
   console.error(error);
 });
 ```
+
+- Update `media.enable()` docs to include audio constraints
 
 ### Fixes
 
