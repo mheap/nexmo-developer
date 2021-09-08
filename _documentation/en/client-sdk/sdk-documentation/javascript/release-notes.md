@@ -34,32 +34,6 @@ application.reconnectCall(
 
 - Update `npm` dependencies
 
-## Version 8.1.1 - September 07, 2021
-
-### New
-
-- Add new optional `mediaParams` parameter in `reconnectCall` function, in order to modify the `MediaStream` object
-
-```javascript
-application.reconnectCall(
-  "conversation_id",
-  "rtc_id",
-  { audioConstraints: { deviceId: "device_id" } }
-).then((nxmCall) => {
-  console.log(nxmCall);
-}).catch((error) => {
-  console.error(error);
-});
-```
-
-### Fixes
-
-- Assign the correct `NXMCall` status when reconnecting to a call (`STARTED`, `RINGING` or `ANSWERED`)
-
-### Changes
-
-- Update `npm` dependencies
-
 ## Version 8.1.0 - September 02, 2021
 
 ### New
