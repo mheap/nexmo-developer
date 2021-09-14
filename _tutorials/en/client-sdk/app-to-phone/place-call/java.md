@@ -10,7 +10,7 @@ To start the call after pressing the `START CALL` button fill the body of the `s
 ```java
 @SuppressLint("MissingPermission")
   private void startCall() {
-      client.call("PHONE_NUMBER", NexmoCallHandler.SERVER, new NexmoRequestListener<NexmoCall>() {
+      client.serverCall("PHONE_NUMBER", null, new NexmoRequestListener<NexmoCall>() {
           @Override
           public void onError(@NonNull NexmoApiError nexmoApiError) {
 

@@ -16,7 +16,7 @@ To start the call after pressing `start call` button add the `startCall` method 
 ```kotlin
 @SuppressLint("MissingPermission")
 fun startCall() {
-  client.call(otherUser, NexmoCallHandler.SERVER, object : NexmoRequestListener<NexmoCall> {
+  client.serverCall(otherUser, null, object : NexmoRequestListener<NexmoCall> {
       override fun onSuccess(call: NexmoCall?) {
           runOnUiThread { 
             hideUI()

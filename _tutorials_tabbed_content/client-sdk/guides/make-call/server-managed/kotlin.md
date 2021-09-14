@@ -15,6 +15,5 @@ val callListener = object: NexmoRequestListener<NexmoCall> {
     }
 }
 
-client.call("123456", NexmoCallHandler.SERVER, callListener);
-
+client.serverCall("123456", null, callListener);
 ```
