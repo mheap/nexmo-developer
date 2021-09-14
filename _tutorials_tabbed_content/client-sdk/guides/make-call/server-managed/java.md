@@ -17,5 +17,5 @@ NexmoRequestListener<NexmoCall> callListener = new NexmoRequestListener<NexmoCal
     }
 };
 
-client.call("123456", NexmoCallHandler.SERVER, callListener)
+client.serverCall("123456", null, callListener)
 ```
