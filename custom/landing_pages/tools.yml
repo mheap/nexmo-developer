@@ -173,7 +173,7 @@ page:
     - column:
       - type: html
         html:
-          content: "<p>A set of UI Web Components to be used with the Vonage Client SDKs.</p>"
+          content: "<p>A set of UI Web Components to be used with the Vonage <a href='https://developer.nexmo.com/client-sdk/overview'>Client SDKs</a>.</p>"
   - row:
     - column:
       - type: github_repo
