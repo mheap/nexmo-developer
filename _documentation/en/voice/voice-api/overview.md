@@ -30,7 +30,7 @@ In this document you can learn about:
 
 * **Authentication with JWTs** - interaction with the Voice API are authenticated using JWTs (JSON Web Tokens). The [libraries](/tools) handle JWT generation using a unique Vonage Voice Application ID and a Private Key. For more information see [authenticating your applications](/concepts/guides/authentication).
 
-* **Vonage Voice Applications** - Vonage Voice Applications represent a one-to-one mapping with the application that you are building. They contain configuration such as virtual numbers and webhook callback URLs. You can create Vonage Voice Applications using the [Vonage Dashboard](https://dashboard.nexmo.com/sign-in), the [Nexmo CLI](/tools), or via the [Application API](/concepts/guides/applications).
+* **Vonage Voice Applications** - Vonage Voice Applications represent a one-to-one mapping with the application that you are building. They contain configuration such as virtual numbers and webhook callback URLs. You can create Vonage Voice Applications using the [Vonage Dashboard](https://dashboard.nexmo.com/sign-in), the [Vonage CLI](/tools), or via the [Application API](/concepts/guides/applications).
 
 * **[NCCOs](/voice/voice-api/ncco-reference)** - Nexmo Call Control Objects are a set of actions that instruct Vonage how to control the call to your Vonage application. For example, you can `connect` a call, send synthesized speech using `talk`, `stream` audio, or `record` a call. They are represented in JSON form as an Array of objects. For more information see the [NCCO Reference](/voice/voice-api/ncco-reference).
 

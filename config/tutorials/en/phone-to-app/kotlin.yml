@@ -21,7 +21,7 @@ introduction:
 prerequisites:
 - create-nexmo-account
 - install-nodejs
-- install-nexmo-cli-beta
+- install-nexmo-cli
 - install-android-studio
 
 tasks:

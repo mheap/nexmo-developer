@@ -7,7 +7,7 @@ navigation_weight: 4
 
 This page shows you how to programmatically update the configuration settings for one of your numbers.
 
-> You can also update these settings online, using the [developer dashboard](https://dashboard.nexmo.com/). Select the "Your Applications" option from either the "Voice" or "Messages and Dispatch" menu. Or, you can use the [Nexmo CLI](https://github.com/Nexmo/nexmo-cli#update-a-number).
+> You can also update these settings online, using the [developer dashboard](https://dashboard.nexmo.com/). Select the "Your Applications" option from either the "Voice" or "Messages and Dispatch" menu. Or, you can use the [Vonage CLI](https://github.com/vonage/vonage-cli#update-a-number).
 
 Replace the following variables in the sample code with your own values:
 

@@ -32,7 +32,7 @@ This tutorial is based on the [IVR](https://www.nexmo.com/use-cases/interactive-
 In order to work through this tutorial you need:
 
 * A [Vonage account](https://dashboard.nexmo.com/sign-up).
-* The [Nexmo CLI](https://github.com/nexmo/nexmo-cli) installed and set up.
+* The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and set up.
 * A publicly accessible PHP web server so that Vonage can make webhook requests to your app, or for local development we recommend [ngrok](https://ngrok.com). 
 * The [tutorial code](https://github.com/Nexmo/php-phone-menu), either clone the repository or download and extract the zip file to your machine.
 * [Learn how to use `ngrok`](/tools/ngrok)
@@ -41,11 +41,10 @@ In order to work through this tutorial you need:
 
 A Vonage application contains the security and configuration information you need to connect to Vonage endpoints and use our products. You make calls to a Vonage product using the security information in the application. When the call connects, Vonage communicates with your webhook endpoints so you can manage your call.
 
-You can use Nexmo CLI to create an application for Voice API by using the following command and replacing the `YOUR_URL` segments with the URL of your own application:
+You can use Vonage CLI to create an application for Voice API by using the following command and replacing the `YOUR_URL` segments with the URL of your own application:
 
 ```bash
-nexmo app:create phone-menu YOUR_URL/answer YOUR_URL/event
-Application created: 5555f9df-05bb-4a99-9427-6e43c83849b8
+vonage apps:create "Phone Menu" --voice_answer_url=YOUR_URL/answer --voice_event_url=YOUR_URL/event
 ```
 
 This command uses the `app:create` command to create a new app. The parameters are:
@@ -60,11 +59,10 @@ The command returns the UUID (Universally Unique Identifier) that identifies you
 
 To handle inbound calls to your application, you need a number from Vonage. If you already have a number to use, jump to the next section to associate the existing number with your application.
 
-You can use the [Nexmo CLI](https://github.com/nexmo/nexmo-cli) to buy the phone number:
+You can use the [Vonage CLI](https://github.com/vonage/vonage-cli) to buy the phone number:
 
-```bash
-nexmo number:buy --country_code GB --confirm
-Number purchased: 441632960960
+```partial
+source: _partials/vonage-cli/buy-number.md
 ```
 
 The `number:buy` command allows you to specify which country the number should be in, using [ISO 3166-1 alpha-2 format](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). By specifying `--confirm` as well, we don't need to confirm the choice of number, the first available one will be purchased.
@@ -74,10 +72,10 @@ Now we can set up the phone number to point to the application you created earli
 
 ## Link phone numbers to the Vonage Application
 
-Next you will link each phone number with the *phone-menu* application you created. When any event occurs relating to a number associated with an application, Vonage sends a web request to your webhook endpoints with information about the event. To do this, use the `link:app` command in the Nexmo CLI:
+Next you will link each phone number with the *phone-menu* application you created. When any event occurs relating to a number associated with an application, Vonage sends a web request to your webhook endpoints with information about the event. To do this, use the `link:app` command in the Vonage CLI:
 
-```bash
-nexmo link:app 441632960960 5555f9df-05bb-4a99-9427-6e43c83849b8
+```partial
+source: _partials/vonage-cli/link-app-number.md
 ```
 
 The parameters are the phone number you want to use and the UUID returned when you [created a voice application](#create-a-voice-application) earlier.
@@ -96,7 +94,7 @@ composer install
 
 Copy the `config.php.dist` to `config.php` and edit it to add your base URL (the same URL that you used when setting up the application above).
 
-> If you're using ngrok, it randomly generates a tunnel URL. It can be helpful to start ngrok before doing the other configuration so that you know what URL your endpoints will be on (paid ngrok users can reserve tunnel names). It might also be useful to know that there is a `nexmo app:update` command if you need update the URLs you set at any time
+> If you're using ngrok, it randomly generates a tunnel URL. It can be helpful to start ngrok before doing the other configuration so that you know what URL your endpoints will be on (paid ngrok users can reserve tunnel names). It might also be useful to know that there is a `vonage apps:update` command if you need update the URLs you set at any time
 
 All set? Then start up the PHP webserver:
 

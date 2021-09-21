@@ -5,7 +5,7 @@ description: Add your two new users as Conversation members
 
 # Add Users to the Conversation
 
-You must now add your [Users](/conversation/concepts/user) as [Members](/conversation/concepts/member) of the [Conversation](/conversation/concepts/conversation) using Nexmo CLI. 
+You must now add your [Users](/conversation/concepts/user) as [Members](/conversation/concepts/member) of the [Conversation](/conversation/concepts/conversation) using Vonage CLI. 
 To add `Alice` to the conversation replace `CONVERSATION_ID` in the command below with your conversation Id generated previously (`CON-...`) and run the command:
 
 ```sh

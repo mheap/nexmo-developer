@@ -18,7 +18,7 @@ ngrok http 3000
 Make a note of the temporary host name that `ngrok` provides and use it in place of `example.com` in the following command:
 
 ```sh
-nexmo app:create "My WebSocket Server" https://example.com/webhooks/answer https://example.com/webhooks/events
+vonage apps:create "My WebSocket Server" --voice_answer_url=https://example.com/webhooks/answer --voice_events_url=https://example.com/webhooks/events
 ```
 
 The command returns an application ID (which you should make a note of) and your public key information (which you can safely ignore for the purposes of this tutorial).

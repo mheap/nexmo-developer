@@ -8,7 +8,7 @@ description: Create a Conversation that enables Users to communicate
 Create the [Conversation](/conversation/concepts/conversation) that users will use to communicate with each other.
 
 ```bash
-nexmo conversation:create display_name="CONVERSATION_NAME"
+vonage apps:conversations:create "CONVERSATION_NAME"
 ```
 
 The output is similar to:

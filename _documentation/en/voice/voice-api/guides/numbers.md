@@ -33,6 +33,6 @@ Vonage attempts to present to you the caller ID of the party calling your Vonage
 
 Vonage offers for rental incoming numbers located in many countries around the world. In some countries the numbers may be enabled for SMS or Voice only, or in others they will support both.
 
-Vonage can also provide numbers in both 'landline' and 'mobile' ranges for many countries. You can search for and rent an available number via the Dashboard or the Nexmo CLI tool. 
+Vonage can also provide numbers in both 'landline' and 'mobile' ranges for many countries. You can search for and rent an available number via the Dashboard or the Vonage CLI tool. 
 
 To use a number you have rented from Vonage with your voice application you need to link that number to the application again either via the Dashboard or the CLI tool. You can link multiple incoming numbers to the same application and the number that was called will be passed to your `answer_url` in the `to` parameter.

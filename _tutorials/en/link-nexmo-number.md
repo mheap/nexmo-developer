@@ -11,10 +11,10 @@ description: In this step you learn how to link a Vonage number to your applicat
 2. Click on the application in the Your Applications list. Then click on the Numbers tab.
 3. Click the Link button to link a Vonage number with that application.
 
-## Using the Nexmo CLI
+## Using the Vonage CLI
 
 Once you have a suitable number you can link it with your Vonage application. Replace `YOUR_VONAGE_NUMBER` with newly generated number, replace `APPLICATION_ID` with your application id and run this command:
 
 ```
-nexmo link:app YOUR_VONAGE_NUMBER APPLICATION_ID
+vonage apps:link APPLICATION_ID --number=YOUR_VONAGE_NUMBER
 ```
