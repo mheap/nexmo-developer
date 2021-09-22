@@ -10,8 +10,8 @@ Each participant in a [Conversation](/conversation/concepts/conversation) is rep
 Execute the following commands to create two users, `Alice` and `Bob` who will log in to the Vonage Client and participate in the chat (Conversation).
 
 ```bash
-nexmo user:create name="Alice"
-nexmo user:create name="Bob"
+vonage apps:users:create Alice
+vonage apps:users:create Bob
 ```
 
 This will return user IDs similar to the following:

@@ -29,7 +29,7 @@ The following diagram illustrates how the Vonage Messages API enables you to sen
 
 This API is currently in Beta.
 
-Vonage always welcomes your feedback. Your suggestions help us improve the product. If you do need help, please email [support@nexmo.com](mailto:support@nexmo.com) and include the Messages API in the subject line. Please note that during the Beta period, support times are limited to Monday to Friday.
+Vonage always welcomes your feedback. Your suggestions help us improve the product. If you do need help, please email [support@vonage.com](mailto:support@vonage.com) and include the Messages API in the subject line. Please note that during the Beta period, support times are limited to Monday to Friday.
 
 During Beta Vonage will expand the capabilities of the API.
 

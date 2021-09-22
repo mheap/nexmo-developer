@@ -52,17 +52,17 @@ In order to work through this tutorial you need:
 
 Vonage forwards inbound messages to the webhook endpoint associated with your Vonage virtual number.
 
-You manage virtual numbers using the [Developer API](/api/developer/numbers) or the [Nexmo CLI](https://github.com/nexmo/nexmo-cli). The following examples use the [Nexmo CLI](https://github.com/nexmo/nexmo-cli) to rent a Vonage number:
+You manage virtual numbers using the [Developer API](/api/developer/numbers) or the [Vonage CLI](https://github.com/vonage/vonage-cli). The following examples use the Vonage CLI to rent a Vonage number:
 
 ```sh
-$ nexmo number:buy --country_code US --confirm
-Number purchased: 441632960960
+$ vonage numbers:search US
+$ vonage numbers:buy 1201###### US
 ```
 
-Then associate the virtual number with your webhook endpoint that (link: #process-inbound-sms text: handles inbound SMS):
+Then associate the virtual number with your webhook endpoint that [handles inbound SMS](#process-the-reply-sms):
 
 ```sh
-> nexmo link:sms 441632960960 http://www.example.com/update
+$ vonage numbers:sms 1201###### http://www.example.com/update
 Number updated
 ```
 

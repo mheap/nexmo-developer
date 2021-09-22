@@ -21,11 +21,11 @@ The `answer_url` and `event_url` consist of your Ngrok domain name (as generated
 Execute the following CLI command to update your application with the following data:
 
 ```
-nexmo app:update APPLICATION_ID "APPLICATION_NAME" https://mydomain.ngrok.io/webhooks/answer https://mydomain.ngrok.io/webhooks/event
+vonage apps:update APPLICATION_ID --name="APPLICATION_NAME" --voice_answer_url=https://mynewdomain.ngrok.io/webhooks/answer
 ```
 
 For example:
 
 ```
-nexmo app:update 228c1ad1-176d-406c-a63a-b97e6fd3fd52 https://63daf1c05d6f.ngrok.io/webhooks/answer https://63daf1c05d6f.ngrok.io/webhooks/events
+vonage apps:update 228c1ad1-176d-406c-a63a-b97e6fd3fd52 --voice_answer_url=https://63daf1c05d6f.ngrok.io/webhooks/answer
 ```

@@ -13,10 +13,10 @@ Remember to replace the `MY_APP_ID` variable with your own value in the section 
 
 ## Using the CLI
 
-You can generate a JWT using the Nexmo CLI by running the following command:
+You can generate a JWT using the Vonage CLI by running the following command:
 
-```shell
-nexmo jwt:generate ./private.key exp=$(($(date +%s)+21600)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' sub=Alice application_id=MY_APP_ID
+``` shell
+vonage jwt --key_file=./private.key --acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' --subject=Alice --app_id=APP_ID
 ```
 
 The generated JWT will be valid for the next 6 hours.

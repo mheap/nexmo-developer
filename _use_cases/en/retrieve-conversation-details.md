@@ -32,7 +32,7 @@ The setup you will have in this tutorial is illustrated in the following diagram
 
 1. [Create a Vonage account](/account/guides/management#create-and-configure-a-nexmo-account) - you won't get far without this.
 2. [Rent a Vonage Number](/account/guides/numbers#rent-virtual-numbers) - you should have a couple of Euros free credit. It's more than enough.
-3. [Install the Nexmo Command Line tools](/tools) - you will need [Node](https://nodejs.org) installed but using Nexmo CLI is quick and convenient.
+3. [Install the Vonage Command Line tools](/tools) - you will need [Node](https://nodejs.org) installed but using Vonage CLI is quick and convenient.
 4. You should have [Python 3](https://realpython.com/installing-python/) and [Flask](http://flask.pocoo.org/) installed. These are required for your webhook server.
 
 This tutorial assumes you will be running [Ngrok](https://ngrok.com) in order to run your [webhook](/concepts/guides/webhooks) server locally.
@@ -48,7 +48,7 @@ So, if you are ready to continue...
 First you will need to create a Vonage Application if you have not already done so:
 
 ``` bash
-nexmo app:create "Conversation App" http://demo.ngrok.io/webhooks/answer http://demo.ngrok.io/webhooks/event --keyfile private.key
+vonage apps:create "Conversation App" --voice_answer_url=http://demo.ngrok.io/webhooks/answer --voice_event_url=http://demo.ngrok.io/webhooks/event
 ```
 
 In this previous command you will need to replace `demo` by what applies to your setup.
@@ -60,7 +60,7 @@ Make a note of the generated Application ID (`APP_ID`), you will need this when 
 Assuming you have already rented a Vonage Number (`VONAGE_NUMBER`), you can link your Vonage Number with your application in the Dashboard or via the command line:
 
 ``` bash
-nexmo link:app VONAGE_NUMBER APP_ID
+vonage apps:link:app APP_ID --number=VONAGE_NUMBER 
 ```
 
 ## Create a JWT
@@ -68,7 +68,7 @@ nexmo link:app VONAGE_NUMBER APP_ID
 The Conversation API is authenticated using JWTs. You can generate a JWT with the following command:
 
 ``` bash
-JWT="$(nexmo jwt:generate private.key exp=$(($(date +%s)+86400)) application_id=APP_ID)"
+JWT="$(vonage jwt --private_key=private.key --app_id=APP_ID)"
 ```
 
 You need to replace `APP_ID` with the ID for your application. Also, `private.key` is the key associated with this same application.

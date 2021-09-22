@@ -26,7 +26,7 @@ You can download the source code from our [GitHub repo](https://github.com/Nexmo
 In order to work through this use case you need:
 
 * A [Vonage account](https://dashboard.nexmo.com/sign-up)
-* The [Nexmo CLI](https://github.com/nexmo/nexmo-cli) installed and configured
+* The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and configured
 
 ## Code repository
 
@@ -62,19 +62,19 @@ You need to create a `.env` file containing configuration. Instructions on how t
 
 A Voice API Application is a Vonage construct and should not be confused with the application you are going to write. Instead, it's a "container" for the authentication and configuration settings you need to work with the API.
 
-You can create a Voice API Application with the Nexmo CLI. You must provide a name for the application and the URLs of two webhook endpoints: the first is the one that Vonage's APIs will make a request to when you receive an inbound call on your virtual number and the second is where the API can post event data.
+You can create a Voice API Application with the Vonage CLI. You must provide a name for the application and the URLs of two webhook endpoints: the first is the one that Vonage's APIs will make a request to when you receive an inbound call on your virtual number and the second is where the API can post event data.
 
-Replace the domain name in the following Nexmo CLI command with your ngrok domain name ([How to run ngrok](https://developer.nexmo.com/tools/ngrok/)) and run it in your project's root directory:
+Replace the domain name in the following Vonage CLI command with your ngrok domain name ([How to run ngrok](https://developer.nexmo.com/tools/ngrok/)) and run it in your project's root directory:
 
 ``` shell
-nexmo app:create "voice-proxy" --capabilities=voice --voice-answer-url=https://example.com/proxy-call --voice-event-url=https://example.com/event --keyfile=private.key
+vonage apps:create "Voice Proxy" --voice_answer_url=https://example.com/proxy-call --voice_event_url=https://example.com/event
 ```
 
-This command downloads a file called `private.key` that contains authentication information and returns a unique application ID. Make a note of this ID because you'll need it in subsequent steps.
+This command creates a file called `voice_proxy.key` that contains authentication information and returns a unique application ID. Make a note of this ID because you'll need it in subsequent steps.
 
 ## Create the web application
 
-This application uses the [Express](https://expressjs.com/) framework for routing and the [Vonage Node Server SDK](https://github.com/Nexmo/nexmo-node) for working with the Voice API. `dotenv` is used so that the application can be configured using a `.env` text file.
+This application uses the [Express](https://expressjs.com/) framework for routing and the [Vonage Node Server SDK](https://github.com/vonage/vonage-node-sdk) for working with the Voice API. `dotenv` is used so that the application can be configured using a `.env` text file.
 
 In `server.js` the code initializes the application's dependencies and starts the web server. A route handler is implemented for the application's home page (`/`) so that you can test that the server is running by running `node server.js` and visiting `http://localhost:3000` in your browser:
 

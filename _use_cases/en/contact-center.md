@@ -23,7 +23,7 @@ For a better understanding of the flow, see [Call Flow](/voice/voice-api/guides/
 To complete this tutorial, you need:
 
 * A [Vonage account](https://dashboard.nexmo.com/sign-up),
-* The [Nexmo CLI](/application/nexmo-cli) installed and set up,
+* The [Vonage CLI](/application/vonage-cli) installed and set up,
 * [ngrok](https://ngrok.com/) - to make your development web server accessible to Vonage's servers over the Internet,
 * [Node.JS](https://nodejs.org/en/download/) installed,
 * two phone calling devices with PSTN numbers assigned - "user phone" and "agent phone", for example, two mobile phones or an application with calling capability like [Vonage Business](https://www.vonage.com/unified-communications/features) app.
@@ -40,16 +40,10 @@ $ npm install express body-parser
 
 If you don't already have one, buy a Vonage number to receive inbound calls.
 
-First, list the numbers available in your country (replace `GB` with your two-character [country code](https://www.iban.com/country-codes)):
+First, list the numbers available in your country (replace `US` with your two-character [country code](https://www.iban.com/country-codes)) Then purchase one of the available numbers:
 
-```sh
-nexmo number:search GB
-```
-
-Purchase one of the available numbers. For example, to purchase the number `447700900001`, execute the following command:
-
-```sh
-nexmo number:buy 447700900001
+```partial
+source: _partials/vonage-cli/buy-number.md
 ```
 
 ## Create a Voice API application
@@ -67,7 +61,7 @@ ngrok http 3000
 Make a note of the temporary host name that `ngrok` provides and use it in place of `example.com` in the following command:
 
 ```sh
-nexmo app:create "CCApp" --capabilities=voice --voice-event-url=https://example.com/webhooks/event --voice-answer-url=https://example.com/webhooks/answer --keyfile=private.key
+vonage apps:create "CCApp" --voice_event_url=https://example.com/webhooks/event --voice_answer_url=https://example.com/webhooks/answer
 ```
 
 The command returns an application ID (which you should make a note of) and your private key information (which you can safely ignore for the purposes of this tutorial).
@@ -76,8 +70,8 @@ The command returns an application ID (which you should make a note of) and your
 
 You need to link your Vonage number to the Voice API application that you created. Use the following command:
 
-```sh
-nexmo link:app VONAGE_NUMBER VONAGE_APPLICATION_ID
+```partial
+source: _partials/vonage-cli/link-app-number.md
 ```
 
 You're now ready to write your application code.

@@ -23,14 +23,14 @@ If you have access to more than two numbers you can include them as participants
 
 You also need a Vonage account. [Sign up here](https://dashboard.nexmo.com/sign-up) if you don't already have one.
 
-## Install and configure Nexmo CLI
+## Install and configure Vonage CLI
 
-This tutorial uses the [Nexmo command line tool](https://github.com/Nexmo/nexmo-cli), so ensure that it is installed and configured before proceeding.
+This tutorial uses the [Vonage Command line tool](https://github.com/vonage/vonage-cli), so ensure that it is installed and configured before proceeding.
 
 Run the following `npm` command at a terminal prompt to install the CLI tool:
 
 ```sh
-npm install -g nexmo-cli
+npm install -g @vonage/cli
 ```
 
 Configure the CLI tool with your `VONAGE_API_KEY` and `VONAGE_API_SECRET`, which you will find in the Developer Dashboard:
@@ -41,18 +41,13 @@ nexmo setup VONAGE_API_KEY VONAGE_API_SECRET
 
 ## Purchase a Vonage number
 
-If you don't already have one, purchase a Vonage number to receive inbound calls.
+If you don't already have one, buy a Vonage number to receive inbound calls.
 
-1. List the numbers available for purchase, replacing `COUNTRY_CODE` with your location's [two-character country code](https://www.iban.com/country-codes):
+First, list the numbers available in your country (replace `US` with your two-character [country code](https://www.iban.com/country-codes)) Then purchase one of the available numbers:
 
-    ```sh
-    nexmo number:search COUNTRY_CODE
-    ```
-2. Purchase one of the numbers:
-
-    ```sh
-    nexmo number:buy 447700900001
-    ```
+```partial
+source: _partials/vonage-cli/buy-number.md
+```
 
 ## Create a Voice API Application
 
@@ -68,17 +63,20 @@ Use the CLI to create a Voice API Application that contains configuration detail
 Replace `example.com` in the following command with your own public-facing URL or `ngrok` host name. Run it in the root of your application directory. This returns an application ID and downloads the authentication details in a file called `private.key`.
 
 ```sh
-nexmo app:create "Call Transcription" https://example.com/webhooks/answer https://example.com/webhooks/events --keyfile private.key
+vonage apps:create "Call Transcription" --voice_answer_url=https://example.com/webhooks/answer --voice_event_url=https://example.com/webhooks/events
 ```
 
-Make a note of the Application ID and the location of the `private.key` file. You will need these in later steps.
+```partial
+source: _partials/vonage-cli/buy-number.md
+```
+Make a note of the Application ID and the location of the `call_transcription.key` file. You will need these in later steps.
 
 ## Link your Vonage number
 
 Run the following CLI command to link your Voice API Application with your Vonage number using the Application ID:
 
-```sh
-nexmo link:app VONAGE_NUMBER APPLICATION_ID
+```partial
+source: _partials/vonage-cli/link-app-number.md
 ```
 
 ## Configure AWS

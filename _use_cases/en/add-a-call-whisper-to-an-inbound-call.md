@@ -47,35 +47,36 @@ Before we grab and run the code, there are a few things we need to do first.
 
 ### Set up the CLI
 
-This tutorial uses the [Nexmo command line tool](https://github.com/Nexmo/nexmo-cli), so check it is installed before proceeding.
+This tutorial uses the [Vonage command line tool](https://github.com/vonage/vonage-cli), so check it is installed before proceeding.
 
 ### Buy two phone numbers
 
 You will want two phone numbers in order to observe different whispers when calling different numbers. Run this command twice and make a note of the numbers that you have bought:
 
-```bash
-$ nexmo number:buy --country_code US --confirm
+
+```partial
+source: _partials/vonage-cli/buy-number.md
 ```
 
 ### Create an application
 
 Create a new Vonage application and save the private key - you'll need this later. Replace `https://example.com` with the URL of your own application for both the "answer" and "event" arguments in this command:
 
-```bash
-nexmo app:create "Call Whisper" https://example.com/answer https://example.com/event --keyfile app.key
+```sh
+vonage apps:create "Call Whisper" --voice_event_url=https://example.com/webhooks/event --voice_answer_url=https://example.com/webhooks/answer
 ```
 
-This command grabs the private key and puts it safely in `app.key` for you. Make a note of the application ID as it's used in the next command...
+This command grabs the private key and puts it safely in `call_whisper.key` for you. Make a note of the application ID as it's used in the next command...
 
 ### Link numbers to your application
 
 Link the application to both numbers, by running the command below once for each number:
 
-```bash
-nexmo link:app [NEXMO_NUMBER] [APP_ID]
+```partial
+source: _partials/vonage-cli/link-app-number.md
 ```
 
-> You can get a list of apps or numbers at any time with the `nexmo app:list` and `nexmo number:list` commands respectively.
+> You can get a list of apps or numbers at any time with the `vonage apps` and `vonage numbers` commands respectively.
 
 ## Getting started with code
 
@@ -106,7 +107,7 @@ With the configuration done and the dependencies in place, your application is r
 
 By default, the application runs on port 5000. If you're going to be using `ngrok`, you can start your tunnel now.
 
-> When the ngrok tunnel name changes, remember to update your application's URLs with the `nexmo app:update` command.
+> When the ngrok tunnel name changes, remember to update your application's URLs with the `vonage apps:update` command.
 
 ## Try it out
 

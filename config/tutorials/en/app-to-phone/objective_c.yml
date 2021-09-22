@@ -24,14 +24,14 @@ introduction:
 prerequisites:
 - create-nexmo-account
 - install-nodejs
-- install-nexmo-cli-beta
+- install-nexmo-cli
 - buy-nexmo-number
-- link-nexmo-number
 - install-xcode
 
 tasks:
 - client-sdk/app-to-phone/create-webhook-server
 - client-sdk/app-to-phone/create-application
+- link-nexmo-number
 - client-sdk/create-user-alice
 - client-sdk/generate-jwt-alice
 - client-sdk/app-to-phone/create-project

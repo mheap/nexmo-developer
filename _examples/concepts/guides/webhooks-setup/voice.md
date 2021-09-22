@@ -9,13 +9,13 @@ For Voice API requests, webhooks can be set at an application level, when creati
 
 Vonage numbers that are linked to Vonage applications will use the `answer_url` to retrieve an NCCO, and the `event_url` to send call status information to you. The `fallback_answer_url` can optionally be configured. This is used when `answer_url` is offline or returning an HTTP error code. It is also used when an event is expected to deliver an NCCO on `event_url`, but `event_url` is offline or returning an HTTP Status code.
 
-You can set these using the [Application API](/api/application), in the [dashboard](https://dashboard.nexmo.com) or using the [Nexmo CLI](https://github.com/nexmo/nexmo-cli) tool.
+You can set these using the [Application API](/api/application), in the [dashboard](https://dashboard.nexmo.com) or using the [Vonage CLI](https://github.com/vonage/vonage-cli) tool.
 
 ### Number-level webhooks
 
 You can set a status webhook for each number you purchase. This will be used to send events to you regarding each number.
 
-These can be set up in the Numbers section of the [Dashboard](https://dashboard.nexmo.com), via the [Nexmo CLI](https://github.com/nexmo/nexmo-cli) or via the [Update a Number](/api/developer/numbers#update-a-number) API call (specifically, the `voiceStatusCallback` property).
+These can be set up in the Numbers section of the [Dashboard](https://dashboard.nexmo.com), via the [Vonage CLI](https://github.com/vonage/vonage-cli) or via the [Update a Number](/api/developer/numbers#update-a-number) API call (specifically, the `voiceStatusCallback` property).
 
 ### On creating an outbound call
 

@@ -19,12 +19,11 @@ mkdir vonage-tutorial
 cd vonage-tutorial
 ```
 
-**3.** Create a Vonage application [interactively](/application/nexmo-cli#interactive-mode). The following command enters interactive mode:
+**3.** Create a Vonage application [interactively](/application/vonage-cli#interactive-mode). The following command enters interactive mode:
 
 ``` shell
-nexmo app:create
+vonage apps:create
 ```
-
 
 **4.** Specify your application name. Press Enter to continue.
 
@@ -33,25 +32,17 @@ capabilities your application needs. For the purposes of this example select bot
 
 > **NOTE:** If your application will be in-app voice only you can select Voice capabilities only. If you want in-app messaging select only RTC capabilities. If your app will have both in-app voice and in-app messaging select both capabilities.
 
-**6.** For "Use the default HTTP methods?" press Enter to select the default.
+**6.** For "Create voice webhooks?" press Y to select yes.
 
-**7.** For "Voice Answer URL" enter `https://example.ngrok.io/webhooks/answer` or other suitable URL (this depends on how you are testing).
+**7.** For "Answer webhook" enter `https://example.ngrok.io/webhooks/answer` or other suitable URL (this depends on how you are testing). Set the HTTP method to default.
 
-**8.** You are next prompted for the "Voice Fallback Answer URL". This is an optional fallback URL should your main 
-Voice 
-Answer URL fail for some reason. In this case press Enter. If later you need the fallback URL you can add it in the [Dashboard](https://dashboard.nexmo.com/sign-in), or using the Nexmo CLI.
+**8.** You are now required to enter the "Voice Event URL". Enter `https://example.ngrok.io/webhooks/event`. Set the HTTP method to default.
 
-**9.** You are now required to enter the "Voice Event URL". Enter `https://example.ngrok.io/webhooks/event`.
+**9.** For "Event Webhook" enter `https://example.ngrok.io/webhooks/rtc`, and set the HTTP method to the default. 
 
-**10.** For " RTC Event URL" enter `https://example.ngrok.io/webhooks/rtc`.
+**10.** For "Allow the use of data for AI training" you can select Y or N. 
 
-**11.** For "Public Key path" press Enter to select the default. If you want to use your own public-private key pair 
-refer
-to [this documentation](/application/nexmo-cli#creating-an-application-with-your-own-public-private-key-pair).
-
-**12.** For "Private Key path" type in `private.key` and press Enter.
-
-A file named `.nexmo-app` is created in your project directory and contains the newly created Vonage Application ID and the private key. A private key file named `private.key` is also created.
+A file named `vonage_app.json` is created in your project directory and contains the newly created Vonage Application ID, name and the private key. A private key file named `your_app_name.key` is also created.
 
 **Please make a note of it as you'll need it in the future.**
 

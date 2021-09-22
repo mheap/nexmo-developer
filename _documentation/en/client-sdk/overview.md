@@ -1,7 +1,7 @@
 ---
 title: Overview
 meta_title: Realtime communication with In-App Messaging and In-app Voice
-description: This topic provides a brief overview of Vonage Client SDK. 
+description: This topic provides a brief overview of Vonage Client SDK.
 ---
 
 # Overview
@@ -92,6 +92,6 @@ product: conversation
 ## References
 
 * [Conversation API](/conversation/overview)
-* [Nexmo CLI](https://github.com/nexmo/nexmo-cli/tree/beta)
+* [Vonage CLI](https://github.com/vonage/vonage-cli/)
 * [Tutorials](/client-sdk/tutorials)
 * [Use Cases](/client-sdk/use-cases)

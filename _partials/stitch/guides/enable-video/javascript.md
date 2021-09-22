@@ -21,7 +21,7 @@ Ensure you have run through the [previous guide](/client-sdk/in-app-voice/guides
 
 ## 1 - Extra Setup
 
-_Note: The steps within this section can all be done dynamically via server-side logic. But in order to get the client-side functionality we're going to manually run through setup and simulate the server-side logic using the Nexmo CLI._
+_Note: The steps within this section can all be done dynamically via server-side logic. But in order to get the client-side functionality we're going to manually run through setup and simulate the server-side logic using the Vonage CLI._
 
 ### 1.1 - Create a new video enabled Conversation
 

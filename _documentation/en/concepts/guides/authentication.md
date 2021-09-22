@@ -105,7 +105,7 @@ It is possible to have two API secrets to be used against one API key at the sam
 
 JSON Web Tokens (JWTs) are a compact, URL-safe means of representing claims to be transferred between two parties.
 
-JWTs are used by the Voice API to authenticate your requests. The [Vonage libraries](/tools) and Nexmo CLI handle JWT generation using a unique Vonage Voice Application ID and a Private Key.
+JWTs are used by the Voice API to authenticate your requests. The [Vonage libraries](/tools) and Vonage CLI handle JWT generation using a unique Vonage Voice Application ID and a Private Key.
 
 Values for the Header are:
 
@@ -130,29 +130,29 @@ If you are not using a Vonage library you should refer to [RFC 7519](https://too
 
 You can generate a JWT using our [online tool](/jwt).
 
-### Using the Nexmo CLI to generate JWTs
+### Using the Vonage CLI to generate JWTs
 
-The Nexmo CLI provides a command for generating a JWT. The general syntax is:
+The Vonage CLI provides a command for generating a JWT. The general syntax is:
 
 ``` shell
-nexmo jwt:generate [options] <private_key> [claim=value...]
+vonage jwt [options]
 ```
 
 An example of generating a JWT for a Voice API application is as follows:
 
 ``` shell
-nexmo jwt:generate path/to/private.key application_id=asdasdas-asdd-2344-2344-asdasdasd345
+vonage jwt --key_file=path/to/private.key --app_id=asdasdas-asdd-2344-2344-asdasdasd345
 ```
 
 An example of generating a JWT for a Client SDK application is as follows:
 
 ``` shell
-nexmo jwt:generate ./private.key sub=MY_USER_NAME exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=MY_APP_ID
+vonage jwt --key_file=./private.key --subject=MY_USER_NAME --acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' --app_id=MY_APP_ID
 ```
 
 More examples of generating JWTs with ACLs can be found in the [Vonage documentation](/conversation/guides/jwt-acl).
 
-Further information on the Nexmo CLI can be found in its [repository on GitHub](https://github.com/Nexmo/nexmo-cli).
+Further information on the Vonage CLI can be found in its [repository on GitHub](https://github.com/vonage/vonage-cli).
 
 ## References
 
