@@ -127,7 +127,7 @@ Set up access to submodules:
 git submodule init && git submodule update` and then `git config --global submodule.recurse true
 ```
 
-Start run docker-compose as a daemon to run in the background:
+Run docker-compose as a daemon to run in the background:
 
 ```bash
 $ docker-compose up -d
