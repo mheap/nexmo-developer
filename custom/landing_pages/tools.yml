@@ -161,3 +161,53 @@ page:
           badge_url: //badge.fury.io/gh/nexmo%2Fnexmo-spring-boot-starter.svg
           github_repo_title: "Nexmo starter and auto configuration for Spring Boot"
           language: "Java"
+  - row:
+    - column:
+      - type: line_divider
+  - row:
+    - column:
+      - type: html
+        html:
+          content: "<h2>Client SDK UI Web Components</h2>"
+  - row:
+    - column:
+      - type: html
+        html:
+          content: "<p>A set of UI Web Components to be used with the Vonage <a href='https://developer.nexmo.com/client-sdk/overview'>Client SDKs</a>.</p>"
+  - row:
+    - column:
+      - type: github_repo
+        github_repo:
+          repo_url: https://github.com/nexmo-community/clientsdk-ui-js/tree/main/vc-keypad
+          github_repo_title: "A versatile keypad, primarly used for phone number inputs"
+          language: "JavaScript"
+    - column:
+      - type: github_repo
+        github_repo:
+          repo_url: https://github.com/nexmo-community/clientsdk-ui-js/tree/main/vc-text-input
+          github_repo_title: "A simple text input, with a send button, commonly displayed below a list of messages"
+          language: "JavaScript"
+    - column:
+      - type: github_repo
+        github_repo:
+          repo_url: https://github.com/nexmo-community/clientsdk-ui-js/tree/main/vc-members
+          github_repo_title: "Lists all active members of a conversation"
+          language: "JavaScript"
+  - row:
+    - column:
+      - type: github_repo
+        github_repo:
+          repo_url: https://github.com/nexmo-community/clientsdk-ui-js/tree/main/vc-messages
+          github_repo_title: "Used as part of a chat app UI to display messages in a conversation"
+          language: "JavaScript"
+    - column:
+      - type: github_repo
+        github_repo:
+          repo_url: https://github.com/nexmo-community/clientsdk-ui-js/tree/main/vc-typing-indicator
+          github_repo_title: "In a chat app UI, it displays typing indicators when appropriate"
+          language: "JavaScript"
+    - column:
+        - type: html
+          html:
+            content: "<span></span>"
+      
