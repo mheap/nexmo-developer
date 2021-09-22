@@ -127,13 +127,20 @@ Set up access to submodules:
 git submodule init && git submodule update` and then `git config --global submodule.recurse true
 ```
 
-Start docker-compose:
+Start run docker-compose as a daemon to run in the background:
 
 ```bash
-$ docker-compose up
+$ docker-compose up -d
 ```
 
-Once `docker-compose up` has stopped returning output, open a new terminal and run 
+Check that your containers have booted by running `docker ps`. You should see the following two containers running:
+```
+nexmo-developer_web_1
+nexmo-developer_db_1
+```
+
+Once you've confirmed that both containers are running, it's time to run the migrations. Run the following:
+
 ```
 docker-compose run web bundle exec rake db:migrate
 ```
