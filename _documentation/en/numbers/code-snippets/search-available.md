@@ -7,7 +7,7 @@ navigation_weight: 2
 
 This page shows you how to programmatically search for numbers that are available for purchase.
 
-> You can also search for available numbers online, using the [developer dashboard](https://dashboard.nexmo.com/buy-numbers) or from the command line, using the [Nexmo CLI](https://github.com/Nexmo/nexmo-cli#search-for-new-numbers).
+> You can also search for available numbers online, using the [developer dashboard](https://dashboard.nexmo.com/buy-numbers) or from the command line, using the [Vonage CLI](https://github.com/vonage/vonage-cli#search-for-new-numbers).
 
 Replace the following variables in the sample code with your own values:
 

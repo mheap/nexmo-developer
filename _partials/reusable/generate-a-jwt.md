@@ -6,13 +6,11 @@ Once you have created a Vonage API Application you can use the Application ID an
 
 > **TIP:** If you are using the [Server SDK](/messages/code-snippets/server-sdk) for Node (or other languages when supported), the dynamic creation of JWTs is done for you.
 
-If you're using the Nexmo CLI, the command to create the JWT is:
+If you're using the Vonage CLI, the command to create the JWT is:
 
 ``` shell
-JWT="$(nexmo jwt:generate private.key exp=$(($(date +%s)+86400)) application_id=NEXMO_APPLICATION_ID)"
+JWT="$(vonage jwt --key_file=private.key --app_id=APPLICATION_ID)"
 ```
-
-This JWT will be valid for one day. After that, you will need to generate a new one.
 
 You can then view the JWT with:
 

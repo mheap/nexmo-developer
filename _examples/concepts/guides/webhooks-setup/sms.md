@@ -9,7 +9,7 @@ Webhooks are used to deliver incoming messages and delivery receipts.
 
 To set up the webhook used for incoming messages, go to the [Your Numbers](https://dashboard.nexmo.com/your-numbers) section of the Vonage Dashboard. Click 'edit' for the virtual number and set the *Callback URL*.
 
-You can also use the [nexmo-cli](https://github.com/nexmo/nexmo-cli) to set the incoming messages endpoint for an individual number.
+You can also use the [Vonage CLI](https://github.com/vonage/vonage-cli) to set the incoming messages endpoint for an individual number.
 
 ### Delivery Receipts
 

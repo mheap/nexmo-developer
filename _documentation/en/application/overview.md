@@ -1,7 +1,7 @@
 ---
 title: Overview
 meta_title: Application version 2 Overview
-Description: A Vonage API application contains the security and configuration information you need to connect to Vonage endpoints and use the Vonage APIs. 
+Description: A Vonage API application contains the security and configuration information you need to connect to Vonage endpoints and use the Vonage APIs.
 navigation_weight: 1
 ---
 
@@ -140,14 +140,14 @@ There is further explanation of webhook timeouts in the [webhook documentation](
 
 There are four main ways to create an application:
 
-1. In the Vonage [Dashboard](https://dashboard.nexmo.com). Applications are then listed in the [your applications](https://dashboard.nexmo.com/applications) section of the Dashboard.
-2. Using the [Nexmo CLI](/application/nexmo-cli).
+1. In the Vonage [Dashboard](https://dashboard.nexmo.com). Applications are then listed in the [your applications](https://dashboard.vonage.com/applications) section of the Dashboard.
+2. Using the [Vonage CLI](/application/vonage-cli).
 3. Using the [Application API](/api/application.v2).
 4. Using one of the Vonage [Server SDKs](/tools).
 
 ## Managing applications using the CLI
 
-* [Managing applications using the Nexmo CLI](/application/nexmo-cli)
+* [Managing applications using the Vonage CLI](/application/vonage-cli)
 
 ## Code Snippets
 

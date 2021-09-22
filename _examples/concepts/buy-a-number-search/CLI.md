@@ -2,19 +2,20 @@
 title: CLI
 ---
 
+```shell
+$ vonage numbers:search US
+ Country Number      Type       Cost Features  
+ ─────── ─────────── ────────── ──── ───────── 
+ US      12017759762 mobile-lvn 0.90 VOICE,SMS 
+ US      12017759893 mobile-lvn 0.90 VOICE,SMS 
+ US      12017759906 mobile-lvn 0.90 VOICE,SMS 
+ US      12017759909 mobile-lvn 0.90 VOICE,SMS 
+ US      12017759925 mobile-lvn 0.90 VOICE,SMS 
+ US      12017759928 mobile-lvn 0.90 VOICE,SMS 
+ US      12017759939 mobile-lvn 0.90 VOICE,SMS 
+ US      12017759948 mobile-lvn 0.90 VOICE,SMS 
+ US      12017759963 mobile-lvn 0.90 VOICE,SMS 
+ US      12017759976 mobile-lvn 0.90 VOICE,SMS 
 ```
-> nexmo number:search US
-12057200555
-12069396555
-12069396555
-12155961555
 
-> nexmo number:search NL --sms --pattern *007 --verbose
-msisdn      | country | cost | type       | features
------------------------------------------------------
-31655551007 | NL      | 3.00 | mobile-lvn | VOICE,SMS
-31655552007 | NL      | 3.00 | mobile-lvn | VOICE,SMS
-31655553007 | NL      | 3.00 | mobile-lvn | VOICE,SMS
-```
-
-See the [Nexmo CLI](https://github.com/nexmo/nexmo-cli) documentation for details on arguments.
+See the [Vonage CLI](https://github.com/vonage/vonage-cli) documentation for details on arguments.

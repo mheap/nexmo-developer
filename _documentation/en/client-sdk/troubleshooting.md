@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Troubleshooting
 
-## Working with the Nexmo CLI
+## Working with the Vonage CLI
 
 ### Vonage Application setup
 
@@ -14,19 +14,7 @@ Since you can create multiple Vonage applications, the commands you run refer to
 * Check the app your CLI refers to by running:
 
 ``` sh
-cat .nexmo-app
-```
-
-* If you need to change the setup application, run:
-
-``` sh
-nexmo app:setup YOU_APPLICATION_ID YOUR_PRIVATE_KEY_FILE
-```
-
-For example:
-
-``` sh
-nexmo app:setup abababa-ababa-123123-123123-abababa private.key
+cat vonage_app.json
 ```
 
 ### No response to commands

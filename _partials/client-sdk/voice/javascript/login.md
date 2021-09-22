@@ -2,7 +2,7 @@ Using the Vonage Client SDK should start with logging in to `NexmoClient`, using
 
 In production apps, your server would authenticate the user, and would return a [correctly configured JWT](/client-sdk/concepts/jwt-acl) to your app.
 
-For testing and getting started purposes, you can use the Nexmo CLI to [generate JWTs](/tutorials/client-sdk-generate-test-credentials).
+For testing and getting started purposes, you can use the Vonage CLI to [generate JWTs](/tutorials/client-sdk-generate-test-credentials).
 
 We'll update the empty `<script>` tag that's at the bottom of your `<body>` tag to login with a `USER_JWT`, and update the `notification` paragraph when the login was successful. We'll create a new `NexmoClient`, and then call the `login` method, with a string for the user JWT. That returns a promise containing an `application` object, and we'll use that to check we're logged in with the correct user.
 

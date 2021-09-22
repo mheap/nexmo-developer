@@ -21,7 +21,7 @@ All the code is [available on GitHub](https://github.com/nexmo-community/client-
 In order to work through this use case you need:
 
 * A [Vonage account](https://dashboard.nexmo.com/sign-up)
-* The [Nexmo CLI](https://github.com/nexmo/nexmo-cli) installed and configured.
+* The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and configured.
 * A publicly accessible web server so Vonage can make webhook requests to your app. If you're developing locally we recommend [ngrok](https://ngrok.com/).
 
 ## Get Started
@@ -37,28 +37,29 @@ git clone https://github.com/nexmo-community/client-sdk-click-to-call
 cd client-sdk-click-to-call
 ```
 
-### Install the Nexmo CLI
+### Install the Vonage CLI
 
-You can perform some of these initial steps by using the [Developer Dashboard](https://dashboard.nexmo.com). However, it's often easier to use the Nexmo CLI and as we'll need it for some later steps, install the Nexmo CLI beta before continuing:
+You can perform some of these initial steps by using the [Developer Dashboard](https://dashboard.nexmo.com). However, it's often easier to use the Vonage CLI and as we'll need it for some later steps, install the Vonage CLI beta before continuing:
 
 ```sh
-npm install nexmo-cli@beta 
+npm install @vonage/cli 
 ```
 
-Then, configure the Nexmo CLI with your API key and secret:
+Then, configure the Vonage CLI with your API key and secret:
 
 ```sh
-nexmo setup API_KEY API_SECRET
+vonage config:set --apiKey=API_KEY --apiSecret=API_SECRET
 ```
 ### Buy a Vonage number
 
 You'll need a Vonage virtual number for your customer to call. You can purchase an available number for your chosen country code using the following CLI command:
 
 ```
-nexmo number:buy -c GB --confirm
+vonage numbers:search US
+vonage numbers:buy US --number=15555555555
 ```
 
-Replace `GB` with your own [country code](https://www.iban.com/country-codes).
+Replace `US` with your own [country code](https://www.iban.com/country-codes).
 
 
 ## Create an Application
@@ -67,10 +68,10 @@ Let's not get confused between the application itself that contains the logic an
 
 A Vonage Application is a container for security and configuration information. When you create a Vonage application, you specify some [webhook](https://developer.nexmo.com/concepts/guides/webhooks) endpoints; these are the URLs that your code exposes which must be publicly accessible. When a caller calls your Vonage number, Vonage makes an HTTP request to the `answer_url` endpoint you specify and follows the instructions it finds there. If you provide an `event_url` endpoint, Vonage will update your application about call events which can help you troubleshoot any problems.
 
-To create the Vonage Application, use the Nexmo CLI to run the command below, replacing `YOUR_SERVER_HOSTNAME` in both URLs with your own server's host name:
+To create the Vonage Application, use the Vonage CLI to run the command below, replacing `YOUR_SERVER_HOSTNAME` in both URLs with your own server's host name:
 
 ```bash
-nexmo app:create --keyfile private.key ClickToCall https://YOUR_SERVER_HOSTNAME/webhooks/answer https://YOUR_SERVER_NAME/webhooks/event
+vonage apps:create ClickToCall --vonage_answer_url=https://YOUR_SERVER_HOSTNAME/webhooks/answer --vonage_event_url=https://YOUR_SERVER_NAME/webhooks/event
 ```
 
 This command returns a unique Application ID. Copy it somewhere, you will need it later!
@@ -78,16 +79,15 @@ This command returns a unique Application ID. Copy it somewhere, you will need i
 The parameters are:
 
 * `ClickToCall` - the name of your Vonage Application
-* `private.key` - the name of the file to store the private key in for authentication. This is downloaded to your application's root directory.
-* `https://example.com/webhooks/answer` - when you receive an inbound call to your Vonage number, Vonage makes a `GET` request and retrieves the [NCCO](/voice/voice-api/ncco-reference) that tells Vonage's APIs what to do with the call
-* `https://example.com/webhooks/event` - When the call status changes, Vonage sends status updates to this webhook endpoint
+* `-vonage_answer_url=https://example.com/webhooks/answer` - when you receive an inbound call to your Vonage number, Vonage makes a `GET` request and retrieves the [NCCO](/voice/voice-api/ncco-reference) that tells Vonage's APIs what to do with the call
+* `--vonage_event_url=https://example.com/webhooks/event` - When the call status changes, Vonage sends status updates to this webhook endpoint
 
 ## Link your Vonage number
 
-You need to tell Vonage which virtual number this Application uses. Execute the following CLI command, replacing `NEXMO_NUMBER` and `APPLICATION_ID` with your own values:
+You need to tell Vonage which virtual number this Application uses. Execute the following CLI command, replacing `VONAGE_NUMBER` and `APPLICATION_ID` with your own values:
 
 ```
-nexmo link:app NEXMO_NUMBER APPLICATION_ID
+vonage apps:link APP_ID --number=VONAGE_NUMBER
 ```
 
 ## Create a User
@@ -95,7 +95,7 @@ nexmo link:app NEXMO_NUMBER APPLICATION_ID
 You need to authenticate your user using the Client SDK before they can call your Vonage number. Create a user called `supportuser` with the following CLI command, which returns a unique ID for the user. You don't need to track that ID in this example, so you can safely ignore the output of this command:
 
 ```
-nexmo user:create name="supportuser"
+vonage apps:users:create supportuser
 ```
 
 ## Generate a JWT
@@ -103,7 +103,7 @@ nexmo user:create name="supportuser"
 The Client SDK uses [JWTs](/concepts/guides/authentication#json-web-tokens-jwt) for authentication. Execute the following command to create the JWT, replacing `APPLICATION_ID` with your own Vonage Application ID. The JWT expires after one day (the maximum lifetime of a Vonage JWT), after which you will need to regenerate it.
 
 ```
-nexmo jwt:generate ./private.key sub=supportuser exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=APPLICATION_ID
+vonage jwt --key_file=./private.key --subject=supportuser --acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' --app_id=APPLICATION_ID
 ```
 
 ## Configure your Application

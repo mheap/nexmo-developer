@@ -104,19 +104,19 @@ page:
     - column:
       - type: html
         html:
-          content: "<h2>Nexmo CLI</h2>"
+          content: "<h2>Vonage CLI</h2>"
   - row:
     - column:
       - type: html
         html:
-          content: "<p>You use the Nexmo Command Line Interface (CLI) to manage your Vonage account and use Vonage API products from the command line.</p>"
+          content: "<p>You use the Vonage Command Line Interface (CLI) to manage your Vonage account and use Vonage API products from the command line.</p>"
   - row:
     - column:
       - type: github_repo
         github_repo:
-          repo_url: https://github.com/Nexmo/nexmo-cli
-          badge_url: //badge.fury.io/js/nexmo-cli.svg
-          github_repo_title: Nexmo CLI (Command Line Interface)
+          repo_url: https://github.com/vonage/vonage-cli
+          badge_url: //badge.fury.io/js/@vonage%2Fcli.svg
+          github_repo_title: Vonage CLI (Command Line Interface)
           language: "JavaScript"
     - column:
         - type: html

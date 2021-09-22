@@ -80,7 +80,7 @@ To connect Vonage backend push service with Firebase you will need the following
 
 ### Get Vonage application Id
 
-Obtain your Vonage API Application id. You can access the existing applications in the [dashboard](https://dashboard.nexmo.com/voice/your-applications). If you don't have an application already you can create the new application via [Nexmo CLI](/client-sdk/setup/create-your-application).
+Obtain your Vonage API Application id. You can access the existing applications in the [dashboard](https://dashboard.nexmo.com/voice/your-applications). If you don't have an application already you can create the new application via [Vonage CLI](/client-sdk/setup/create-your-application).
 
 ### Get Firebase project Id
 
@@ -121,7 +121,7 @@ To connect the Vonage backend push service with the Firebase application you nee
 To generate a Vonage developer JWT run the following command. Remember to replace the `VONAGE_APP_ID` with id of your Vonage application:
 
 ```bash
-nexmo jwt:generate ./private.key exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=VONAGE_APP_ID
+vonage jwt --key_file=./private.key --acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' --app_id=VONAGE_APP_ID
 ```
 
 > **NOTE** The above commands set the expiry of the JWT to one day from now, which is the maximum.
