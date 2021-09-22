@@ -122,9 +122,16 @@ $ git clone git@github.com:Nexmo/nexmo-developer.git
 $ cd nexmo-developer
 ```
 
-Set up access to submodules: 
+Set up access to submodules with the following two commands:
+
 ```
-git submodule init && git submodule update` and then `git config --global submodule.recurse true
+git submodule init && git submodule update
+```
+
+and then:
+
+```
+git config --global submodule.recurse true
 ```
 
 Run docker-compose as a daemon to run in the background:
