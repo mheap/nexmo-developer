@@ -122,18 +122,47 @@ $ git clone git@github.com:Nexmo/nexmo-developer.git
 $ cd nexmo-developer
 ```
 
-Set up access to submodules: 
+Set up access to submodules with the following two commands:
+
 ```
-git submodule init && git submodule update` and then `git config --global submodule.recurse true
+git submodule init && git submodule update
 ```
 
-Start docker-compose:
+and then:
+
+```
+git config --global submodule.recurse true
+```
+
+There are two ways to run docker-compose.
+
+#### Foreground in terminal
 
 ```bash
 $ docker-compose up
 ```
 
-Once `docker-compose up` has stopped returning output, open a new terminal and run 
+Once you can see the logs have booted the containers, open a new terminal window and proceed to running the migrations.
+
+#### Background in terminal
+
+You can also run docker as a background process by adding the switch to run it as a daemon. To do this, first run the following:
+
+```bash
+$ docker-compose up -d
+```
+
+Now check that your containers have booted by running `docker ps`. You should see the following two containers running:
+
+```
+nexmo-developer_web_1
+nexmo-developer_db_1
+```
+
+Once you've confirmed that both containers are running, it's time to run the migrations.
+
+#### Running the migrations
+
 ```
 docker-compose run web bundle exec rake db:migrate
 ```
