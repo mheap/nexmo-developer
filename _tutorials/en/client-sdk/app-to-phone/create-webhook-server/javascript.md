@@ -52,14 +52,12 @@ app.use(express.json());
 
 app.get('/voice/answer', (req, res) => {
   console.log('NCCO request:');
-  var custom_data = JSON.parse(req.query.custom_data)
-  console.log(`  - caller: ${custom_data.name}`)  
   console.log(`  - callee: ${req.query.to}`);
   console.log('---');
   res.json([ 
-    {
-      "action": "talk",
-      "text": `Hello ${custom_data.name}. Please wait while we connect you.`
+    { 
+      "action": "talk", 
+      "text": "Please wait while we connect you."
     },
     { 
       "action": "connect",
