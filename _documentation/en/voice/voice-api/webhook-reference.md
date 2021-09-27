@@ -29,7 +29,7 @@ Field | Example | Description
 `from` | `447700900000` | The number that called `to`. (This could be a landline or mobile number, or another virtual number if the call was made programmatically.)
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this conversation
-`custom_data` | `{ "key": "value" }` | Custom data object passed as the third parameter in `callServer` method (if any) when the call is initiated from the application using [Client SDK](/client-sdk/in-app-voice/guides/make-call/javascript#start-a-server-managed-call)
+`custom_data` | `{ "key": "value" }` | A custom data object, optionally passed as parameter on the `callServer` method when a call is initiated from an application using the [Client SDK](/client-sdk/in-app-voice/guides/make-call/javascript#start-a-server-managed-call)
 
 #### Transmitting additional data with SIP headers
 
