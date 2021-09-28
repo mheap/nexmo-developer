@@ -37,14 +37,14 @@ frameless: false
 ```
 ### Custom Data
 
-The server call method has a parameter for custom data. This allows you to pass additional context in a key-value format to the server running your `answer_url`. 
+The server call method has a parameter for custom data. This allows you to pass additional context, in a key-value format, to your `answer_url` webhook server. 
 
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/guides/make-call/custom-data'
 frameless: false
 ```
 
-The data will be available on the request's query made to your `answer_url` server:
+The data will be available on the request's query made to your `answer_url` webhook server:
 
 ```json
 {
