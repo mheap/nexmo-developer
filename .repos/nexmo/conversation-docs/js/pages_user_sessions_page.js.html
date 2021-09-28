@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>DocStrap Class: NexmoApiError</title>
+	<title>DocStrap Source: pages/user_sessions_page.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,185 +48,81 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-12">
 	
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: NexmoApiError</h1>
+		<h1 class="page-title">Source: pages/user_sessions_page.js</h1>
+    
 <section>
-
-<header>
-    
-        <h2>
-        NexmoApiError
-        </h2>
-        
-            <div class="class-description"><p>Error constructor of an API-error</p></div>
-        
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-<hr>
-<dt>
-    <h4 class="name" id="NexmoApiError"><span class="type-signature"></span>new NexmoApiError(error)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>error</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>API error, always containing {type: <string>}</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="nexmoClientError.js.html">nexmoClientError.js</a>,
-				 <a href="nexmoClientError.js.html#sunlight-1-line-50">line 50</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">'use strict';
+var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
+    return (mod &amp;&amp; mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+/*
+ * Nexmo Client SDK
+ *
+ * Copyright (c) Nexmo Inc.
+*/
+const page_1 = __importDefault(require("./page"));
+const user_session_1 = __importDefault(require("../user_session"));
+/**
+ * A UserSessions Page
+ *
+ * @class UserSessionsPage
+ * @param {Map} items map of UserSessions fetched in the paginated query
+ * @extends Page
+*/
+class UserSessionsPage extends page_1.default {
+    constructor(params) {
+        super(params);
+        this.items = new Map();
+        // Iterate through the UserSessions
+        params.items.forEach((userSession) => {
+            this.items.set(userSession.id, new user_session_1.default(this.application, userSession));
+        });
+    }
+    /**
+     * Fetch the previous page if exists
+     * @returns {Promise&lt;Page>}
+     * @example &lt;caption>Fetch the previous page if exists&lt;/caption>
+     *  currentUserSessionsPage.getPrev().then((prevUserSessionsPage) => {
+     *    console.log("previous user sessions page ", prevUserSessionsPage);
+     *  }).catch((error) => {
+     *    console.error("error getting previous user sessions page ", error);
+     *  });
+    */
+    getPrev() {
+        if (!this.hasPrev())
+            return this._getError();
+        return this.application.getUserSessions(this._getConfig(this.cursor.prev));
+    }
+    /**
+     * Fetch the next page if exists
+     * @returns {Promise&lt;Page>}
+     * @example &lt;caption>Fetch the next page if exists&lt;/caption>
+     *  currentUserSessionsPage.getNext().then((nextUserSessionsPage) => {
+     *    console.log("next user sessions page ", nextUserSessionsPage);
+     *  }).catch((error) => {
+     *    console.error("error getting next user sessions page ", error);
+     *  });
+    */
+    getNext() {
+        if (!this.hasNext())
+            return this._getError();
+        return this.application.getUserSessions(this._getConfig(this.cursor.next));
+    }
+}
+exports.default = UserSessionsPage;
+module.exports = UserSessionsPage;
+</pre>
+    </article>
 </section>
+
 
 
 
@@ -236,10 +132,6 @@
 
 	<div class="clearfix"></div>
 
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3"></div>
-		</div>
 	
 
 </div>
