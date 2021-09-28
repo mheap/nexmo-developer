@@ -35,6 +35,28 @@ On the client side, start the call as such:
 source: '_tutorials_tabbed_content/client-sdk/guides/make-call/server-managed'
 frameless: false
 ```
+### Custom Data
+
+The server call method has a parameter for custom data. This allows you to pass additional context in a key-value format to the server running your `answer_url`. 
+
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/guides/make-call/custom-data'
+frameless: false
+```
+
+The data will be available on the request's query made to your `answer_url` server:
+
+```json
+{
+  "to": "447000000000",
+  "from_user": "Alice",
+  "conversation_uuid": "CON-8dd32088-66be-42ae-b0af-c9e12ca588ed",
+  "uuid": "54c255ca-9c1c-4ecd-b175-a1d022dc7b07",
+  "custom_data": {
+      "device_name": "Alice app"
+    }
+}
+```
 
 ## Listen For Call Events
 
