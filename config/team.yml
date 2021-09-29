@@ -1,18 +1,22 @@
 current:
   - name: 'Kelly Andrews'
     email: 'kelly.andrews@vonage.com'
+    role: "JavaScript Developer Advocate"
     twitter: 'kellyjandrews'
   - name: 'Myrsini Koukiasa'
     email: 'myrsini.koukiasa@vonage.com'
     twitter: 'myrsiningos'
     role: 'Senior Community Manager'
   - name: 'Garann Means'
+    role: "Developer Advocate"
     email: 'garann.means@vonage.com'
   - name: 'Paul Ardeleanu'
     email: 'paul.ardeleanu@vonage.com'
+    role: 'Developer Relations Manager'
     twitter: 'pardel'
   - name: 'Dwane Hemmings'
     email: 'dwane.hemmings@vonage.com'
+    role: "JavaScript Developer Advocate"
     twitter: 'dwaneio'
   - name: 'Nick Iati'
     email: 'nick.iati@vonage.com'
@@ -22,10 +26,11 @@ current:
     role: 'Online Community Manager'
   - name: "Mofi Rahman"
     email: "mofi.rahman@vonage.com"
-    role: "Senior Developer Advocate"
+    role: "Video Developer Advocate"
     twitter: "moficodes"
   - name: "Abdul Ajetunmobi"
     email: "abdul.ajetunmobi@vonage.com"
+    role: "iOS Developer Advocate"
     twitter: "abdulajet"
   - name: "Clarisse Ng"
     email: "clarisse.ng@vonage.com"
@@ -42,11 +47,11 @@ current:
     twitter: "coryalthoff"
   - name: "James Seconde"
     email: "jim.seconde@vonage.com"
-    role: "Developer Advocate"
+    role: "PHP Developer Advocate"
     twitter: "secondej"
   - name: "Karl Lingiah"
     email: "karl.lingiah@vonage.com"
-    role: "Developer Advocate"
+    role: "Ruby Developer Advocate"
     twitter: "KarlLingiah"
   - name: "Richard Süselbeck"
     email: "richard.sueselbeck@vonage.com"
