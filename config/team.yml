@@ -24,6 +24,7 @@ current:
   - name: 'Benjamin Aronov'
     email: 'benjamin.aronov@vonage.com'
     role: 'Online Community Manager'
+    twitter: "AronovBenjamin"
   - name: "Mofi Rahman"
     email: "mofi.rahman@vonage.com"
     role: "Video Developer Advocate"
