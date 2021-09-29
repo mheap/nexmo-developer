@@ -11,18 +11,6 @@ current:
   - name: 'Paul Ardeleanu'
     email: 'paul.ardeleanu@vonage.com'
     twitter: 'pardel'
-  - name: 'Fabian Rodriguez'
-    email: 'fabian.rodriguez@vonage.com'
-    twitter: 'fabianrbz'
-    role: 'Vonage API Developer Tech Lead'
-  - name: 'Laura Czajkowski'
-    email: 'laura.czajkowski@vonage.com'
-    twitter: 'Czajkowski'
-    role: 'Developer Relations Manager'
-  - name: 'Bethany Loft'
-    email: 'bethany.loft@vonage.com'
-    twitter: 'bb_loft'
-    role: 'Community Manager'
   - name: 'Dwane Hemmings'
     email: 'dwane.hemmings@vonage.com'
     twitter: 'dwaneio'
@@ -60,3 +48,31 @@ current:
     email: "karl.lingiah@vonage.com"
     role: "Developer Advocate"
     twitter: "KarlLingiah"
+  - name: "Richard Süselbeck"
+    email: "richard.sueselbeck@vonage.com"
+    role: "Head of Developer Relations"
+    twitter: "sueselbeck"
+  - name: "Tonya Sims"
+    email: "Tonya.Sims@vonage.com"
+    role: "Python Developer Advocate"
+    twitter: "TonyaSims"
+  - name: "Caroline Kerns"
+    email: "Caroline.Kerns@vonage.com"
+    role: "Community Manager"
+    twitter: "GrumpySnek"
+  - name: "Amanda Cavallaro"
+    email: "Amanda.Cavallaro@vonage.com"
+    role: "Developer Advocate"
+    twitter: "amdcavallaro"
+  - name: "Daniela Facchinetti"
+    email: "daniela.facchinetti@vonage.com"
+    role: "Developer Advocate"
+  - name: "Julia Biro"
+    email: "julia.biro@vonage.com"
+    role: "Developer Advocate"
+    twitter: "iza_biro"
+  - name: "Rachel Sunderland"
+    email: "Rachel.Sunderland@vonage.com"
+    role: "Head of Community"
+
+
