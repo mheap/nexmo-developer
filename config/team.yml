@@ -17,7 +17,7 @@ current:
   - name: 'Dwane Hemmings'
     email: 'dwane.hemmings@vonage.com'
     role: "JavaScript Developer Advocate"
-    twitter: 'dwaneio'
+    twitter: 'lifelongdev'
   - name: 'Nick Iati'
     email: 'nick.iati@vonage.com'
     role: 'Technical Writer'
@@ -64,7 +64,7 @@ current:
   - name: "Caroline Kerns"
     email: "Caroline.Kerns@vonage.com"
     role: "Community Manager"
-    twitter: "GrumpySnek"
+    twitter: "CaptCalli"
   - name: "Amanda Cavallaro"
     email: "Amanda.Cavallaro@vonage.com"
     role: "Developer Advocate"
