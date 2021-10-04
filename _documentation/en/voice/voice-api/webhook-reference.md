@@ -29,6 +29,7 @@ Field | Example | Description
 `from` | `447700900000` | The number that called `to`. (This could be a landline or mobile number, or another virtual number if the call was made programmatically.)
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this conversation
+`region_url` | `https://api-sg-1.nexmo.com` | Regional API endpoint which should be used to control the call with [REST API](/api/voice#updateCall); see the full list of regions [here](/voice/voice-api/guides/troubleshooting/node#regions)
 `custom_data` | `{ "key": "value" }` | A custom data object, optionally passed as parameter on the `callServer` method when a call is initiated from an application using the [Client SDK](/client-sdk/in-app-voice/guides/make-call/javascript#start-a-server-managed-call)
 
 #### Transmitting additional data with SIP headers
