@@ -18,7 +18,7 @@ T-Mobile and AT&T’s new code of conduct prohibits the use of shared originator
 * Vonage customers using a Shared Short Code must migrate SMS traffic to either a [10 DLC](https://help.nexmo.com/hc/en-us/articles/360027503992-US-10-DLC-Messaging), [Toll Free SMS Number](https://help.nexmo.com/hc/en-us/articles/115011767768-Toll-free-Numbers-Features-Overview), or  [Dedicated Short Code](https://help.nexmo.com/hc/en-us/articles/360050950831).
 * Vonage customers using our Shared Short Code API ***must migrate*** to either our [SMS API](/messaging/sms/overview) or [Verify API](/verify/overview).
 * Customers using Dedicated Short Codes are not affected by these changes within the scope of 10 DLC.
-* [Message Throughput](https://developer.vonage.com/messages/concepts/10-dlc) varies by carrier.
+* [Message Throughput](https://help.nexmo.com/hc/en-us/articles/4406782736532) varies by carrier.
 
 To learn more about 10 DLC including important dates and carrier-specific information, see the knowledge base.
 
