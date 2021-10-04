@@ -8,7 +8,7 @@ languages:
 
 # Private SMS communication
 
-Sometimes you want two parties to exchange SMS without revealing their actual phone numbers. 
+Sometimes you want two parties to exchange SMS without revealing their actual phone numbers.
 
 For example, if you are operating a taxi booking service, then you want your customers and drivers to be able to communicate to coordinate pick-up times, locations, etc. But you don't want your driver to know your customer's phone number, so that you can protect their privacy. And, conversely, you don't want your customer to know the driver's number and be able to book taxi services directly, bypassing your application.
 
@@ -133,23 +133,23 @@ Now that we have created a chat, we need to let each user know how they can cont
 
 > **Note**: In this tutorial each user receives the virtual number via an SMS. In production systems this could be supplied using email, in-app notifications or as a predefined number.
 
-In the `sendSMS()` method of the `smsProxy` class we use the `sendSms()` method to send two messages to the virtual number from each user's real number. 
+In the `sendSMS()` method of the `smsProxy` class we use the `sendSms()` method to send two messages to the virtual number from each user's real number.
 
 ```javascript
 sendSMS() {
-    /*  
-        Send a message from userA to the virtual number
-    */
-    this.nexmo.message.sendSms(this.chat.userA,
-                                process.env.VIRTUAL_NUMBER,
-                                'Reply to this SMS to talk to UserA');
+    /*
+        Send a message from userA to the virtual number
+    */
+    this.nexmo.message.sendSms(process.env.VIRTUAL_NUMBER,
+                                this.chat.userA,
+                                'Reply to this SMS to talk to UserA');
 
-    /*  
-        Send a message from userB to the virtual number
-    */
-    this.nexmo.message.sendSms(this.chat.userB,
-                                process.env.VIRTUAL_NUMBER,
-                                'Reply to this SMS to talk to UserB');
+    /*
+        Send a message from userB to the virtual number
+    */
+    this.nexmo.message.sendSms(process.env.VIRTUAL_NUMBER,
+                                this.chat.userB,
+                                'Reply to this SMS to talk to UserB');
 }
 ```
 
@@ -237,7 +237,7 @@ ngrok http 3000
 
 This creates public URLs (HTTP and HTTPS) for any web site that is running on port 3000 on your local machine.
 
-Use the `ngrok` web interface at <http://localhost:4040> and make a note of the URLs that `ngrok` provides. 
+Use the `ngrok` web interface at <http://localhost:4040> and make a note of the URLs that `ngrok` provides.
 
 Go to your [account settings](https://dashboard.nexmo.com/settings) page and enter the full URL to your webhook endpoint in the "Inbound Messages" text box. For example, if you are using `ngrok` then your URL might resemble the following:
 
@@ -262,11 +262,9 @@ curl -X POST \
 
 Each user should receive a text from the application's virtual number. When a user replies to that number it is delivered to the other user's real number, but appears to come from the virtual one.
 
-
 ## Conclusion
 
-In this tutorial, you learned how to build an SMS proxy to enable two users to exchange SMS without either seeing the other's real number. 
-
+In this tutorial, you learned how to build an SMS proxy to enable two users to exchange SMS without either seeing the other's real number.
 
 ## Where Next?
 
