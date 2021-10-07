@@ -113,11 +113,15 @@ The expected language of user speech should be specified as the `language` param
 | Bengali (Bangladesh) | `bn-BD`
 | Bengali (India) | `bn-IN`
 | Bulgarian (Bulgaria) | `bg-BG`
+| Burmese (Myanmar) | `my-MM`
 | Catalan (Spain) | `ca-ES`
+| Chinese, Cantonese (Traditional, Hong Kong) | `yue-hant-HK`
 | Chinese, Mandarin (Simplified, China) | `zh` (`cmn-hans-cn`)
+| Chinese, Mandarin (Traditional, Taiwan) | `zh-TW` (`cmn-hant-TW`)
 | Croatian (Croatia) | `hr-HR`
 | Czech (Czech Republic) | `cs-CZ`
 | Danish (Denmark) | `da-DK`
+| Dutch (Belgium) | `nl-BE`
 | Dutch (Netherlands) | `nl-NL`
 | English (Australia) | `en-AU`
 | English (Canada) | `en-CA`
@@ -128,10 +132,13 @@ The expected language of user speech should be specified as the `language` param
 | English (New Zealand) | `en-NZ`
 | English (Nigeria) | `en-NG`
 | English (Philippines) | `en-PH`
+| English (Singapore) | `en-SG`
 | English (South Africa) | `en-ZA`
 | English (Tanzania) | `en-TZ`
 | English (United Kingdom) | `en-GB`
 | English (United States) | `en-US`
+| Estonian (Estonia) | `et-EE`
+| Filipino | `fil-PH`
 | Finnish (Finland) | `fi-FI`
 | French (Canada) | `fr-CA`
 | French (France) | `fr-FR`
@@ -154,15 +161,18 @@ The expected language of user speech should be specified as the `language` param
 | Lao (Laos) | `lo-LA`
 | Latvian (Latvia) | `lv-LV`
 | Lithuanian (Lithuania) | `lt-LT`
+| Macedonian (North Macedonia) | `mk-MK`
 | Malay (Malaysia) | `ms-MY`
 | Malayalam (India) | `ml-IN`
 | Marathi (India) | `mr-IN`
+| Mongolian (Mongolia) | `mn-MN`
 | Nepali (Nepal) | `ne-NP`
 | Norwegian Bokmål (Norway) | `nb-NO`
 | Persian (Iran) | `fa-IR`
 | Polish (Poland) | `pl-PL`
 | Portuguese (Brazil) | `pt-BR`
 | Portuguese (Portugal) | `pt-PT`
+| Punjabi (Gurmukhi, India) | `pa-guru-IN`
 | Romanian (Romania) | `ro-RO`
 | Russian (Russia) | `ru-RU`
 | Serbian (Serbia) | `sr-RS`
@@ -203,6 +213,7 @@ The expected language of user speech should be specified as the `language` param
 | Ukrainian (Ukraine) | `uk-UA`
 | Urdu (India) | `ur-IN`
 | Urdu (Pakistan) | `ur-PK`
+| Uzbek (Uzbekistan) | `uz-UZ`
 | Vietnamese (Vietnam) | `vi-VN`
 | Zulu (South Africa) | `zu-ZA`
 
