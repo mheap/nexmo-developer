@@ -11,7 +11,7 @@ page:
               <div class="Vlt-col Vlt-col--1of2 Vlt-center"><h1 id="vonage-devs-tv">Vonage Dev TV</h1></div>
               <div class="Vlt-col Vlt-col--1of2 Vlt-center"><a id="watch-now-btn" class="Vlt-btn Vlt-btn--primary Vlt-btn--app Vlt-btn--large" href="https://twitch.tv/vonagedevs" target="_blank" > < Watch now! > </a></div>
             </div>
-            <h2 class="Vlt-center margin-bottom-0 margin-top-16">September</h2>
+            <h2 class="Vlt-center margin-bottom-0 margin-top-16">October</h2>
             <div class="Vlt-tabs container padding-top-0 margin-top-16">
               <div class="Vlt-table--data  Vlt-tabs__header">
                 <div class="Vlt-tabs__link Vlt-tabs__link_active no-border padding-top-0 padding-bottom-0"></div>
@@ -33,96 +33,6 @@ page:
 
 
 
-
-
-
-
-                <div class="Vlt-table__row">
-
-
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="27">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="27a" role="tab">
-                        <b>27</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="28">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="28a" role="tab">
-                        <b>28</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="29">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="29a" role="tab">
-                        <b>29</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="30">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="30a" role="tab">
-                        <b>30</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="1">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="1a" role="tab">
-                        <b>1</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                </div>
-                <div class="Vlt-table__row">
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="4">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="13a" role="tab">
-                        <b>4</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="5">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="14a" role="tab">
-                        <b>5</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="6">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="15a" role="tab">
-                        <b>6</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="7">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="16a" role="tab">
-                        <b>7</b>
-                        <p class="show"></p>
-                      </div>
-                    </span>
-                  </div>
-                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="8">
-                    <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="8a" role="tab">
-                        <b>8</b>
-                        <p class="show">Now We're Talking</p>
-                      </div>
-                    </span>
-                  </div>
-                </div>
                 <div class="Vlt-table__row">
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="11">
                     <span class="Vlt-col padding-0">
@@ -158,9 +68,93 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="15">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="3a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="3a" role="tab">
                         <b>15</b>
+                        <p class="show">Now We're Talking</p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="18">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="18a" role="tab">
+                        <b>18</b>
                         <p class="show"></p>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="19">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="19a" role="tab">
+                        <b>19</b>
+                        <p class="show"></p>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="20">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="20a" role="tab">
+                        <b>20</b>
+                        <p class="show"></p>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="21">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="21a" role="tab">
+                        <b>21</b>
+                        <p class="show"></p>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="22">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="22a" role="tab">
+                        <b>22</b>
+                        <p class="show"></p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="Vlt-table__row">
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="25">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="25a" role="tab">
+                        <b>25</b>
+                        <p class="show"></p>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="26">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="26a" role="tab">
+                        <b>26</b>
+                        <p class="show"></p>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="27">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="27a" role="tab">
+                        <b>27</b>
+                        <p class="show"></p>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="28">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="28a" role="tab">
+                        <b>28</b>
+                        <p class="show"></p>
+                      </div>
+                    </span>
+                  </div>
+                  <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="29">
+                    <span class="Vlt-col padding-0">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="29a" role="tab">
+                        <b>29</b>
+                        <p class="show">Now We're Talking</p>
                       </div>
                     </span>
                   </div>
@@ -177,75 +171,7 @@ page:
                 </div>
 
 
-                <div class="Vlt-tabs__panel" id="tab-27" role="tabpanel">
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-28" role="tabpanel">
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-29" role="tabpanel">
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-30" role="tabpanel">
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-1" role="tabpanel">
-                </div>
 
-                <div class="Vlt-tabs__panel" id="tab-4" role="tabpanel">
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-5" role="tabpanel">
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-6" role="tabpanel">
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-7" role="tabpanel">
-                </div>
-                <div class="Vlt-tabs__panel" id="tab-8" role="tabpanel">
-                  <div class="Vlt-grid">
-                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
-                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1632654288/Twitch_Show_Social_Graphics_69_qve9j4.png" alt="Now We're Talking">
-                    </div>
-                    <div class="Vlt-col Vlt-col--2of3">
-                      <div class="Vlt-grid">
-                        <h4 class="Vlt-col mobile-center">Now We're Talking</h4>
-                        <p class="Vlt-col Vlt-right mobile-justify">18:00 London / 13:00 New York / 10:00 SF</p>
-                      </div>
-                      <p class="Vlt-col padding-left-0 mobile-justify">
-                        Cory will be interviewing a new hi-tech guest!
-                      </p>
-                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
-                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
-                        Vonage APIs - Vonage Voyagers
-                      </h5>
-                    </div>
-                    <div class="padding-top-32">
-                      <div class="Vlt-grid padding-top-32">
-                        <div class="Vlt-col Vlt-col--1of2">
-                          <h4 class="inline-block">About The Show</h4>
-                          <p class="text-justify">
-                            Each week our Bay Area advocate Cory will be interviewing developers from around the ecosystem to learn about their coding journeys. Join Cory to get a glimpse the of wide range of experiences in programming and what it's like to work in tech.
-                          </p>
-                        </div>
-                        <div class="Vlt-col Vlt-col--1of2">
-                          <h4 class="inline-block">About Cory Althoff</h4>
-                          <a href="https://twitter.com/coryalthoff" target="_blank">
-                            <i class="icon icon-twitter"></i>
-                          </a>
-                          <a href="https://github.com/calthoff" target="_blank">
-                            <i class="icon icon-github"></i>
-                          </a>
-                          <h5>
-                            iOS Developer Advocate
-                          </h5>
-                          <p class="text-justify">
-                            Cory Althoff is a developer advocate at Vonage and the author of two books: The "Self-Taught Programmer" and "The Self-Taught Computer Scientist". Book Authority named "The Self-Taught Programmer" one of the greatest programming books of all time, and The Next Web listed it as one of the ten books that will help you become a better software engineer. Cory lives in the Bay Area with his wife and daughter.
-                          </p>
-                          </br>
-                          <a class="Vlt-purple" href="https://learn.vonage.com/authors/cory-althoff/?utm_source=devtv&utm_medium=organic&utm_campaign=social_media">
-                            Articles by Cory
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
 
                 <div class="Vlt-tabs__panel" id="tab-11" role="tabpanel">
                 </div>
@@ -305,6 +231,75 @@ page:
                   </div>
                 </div>
 
+                <div class="Vlt-tabs__panel" id="tab-18" role="tabpanel">
+                </div>
+                <div class="Vlt-tabs__panel" id="tab-19" role="tabpanel">
+                </div>
+                <div class="Vlt-tabs__panel" id="tab-20" role="tabpanel">
+                </div>
+                <div class="Vlt-tabs__panel" id="tab-21" role="tabpanel">
+                </div>
+                <div class="Vlt-tabs__panel" id="tab-22" role="tabpanel">
+                </div>
+
+                <div class="Vlt-tabs__panel" id="tab-25" role="tabpanel">
+                </div>
+                <div class="Vlt-tabs__panel" id="tab-26" role="tabpanel">
+                </div>
+                <div class="Vlt-tabs__panel" id="tab-27" role="tabpanel">
+                </div>
+                <div class="Vlt-tabs__panel" id="tab-28" role="tabpanel">
+                </div>
+                <div class="Vlt-tabs__panel" id="tab-29" role="tabpanel">
+                  <div class="Vlt-grid">
+                    <div class="Vlt-col Vlt-col--1of3 padding-left-0">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1632654288/Twitch_Show_Social_Graphics_69_qve9j4.png" alt="Now We're Talking">
+                    </div>
+                    <div class="Vlt-col Vlt-col--2of3">
+                      <div class="Vlt-grid">
+                        <h4 class="Vlt-col mobile-center">Now We're Talking</h4>
+                        <p class="Vlt-col Vlt-right mobile-justify">18:00 London / 13:00 New York / 10:00 SF</p>
+                      </div>
+                      <p class="Vlt-col padding-left-0 mobile-justify">
+                        Cory will be interviewing a new hi-tech guest!
+                      </p>
+                      <h5 class="Vlt-col Vlt-title--icon padding-left-0 mobile-justify">
+                        <svg class="Vlt-icon Vlt-icon--large"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-tool-full"></svg>
+                        Vonage APIs - Vonage Voyagers
+                      </h5>
+                    </div>
+                    <div class="padding-top-32">
+                      <div class="Vlt-grid padding-top-32">
+                        <div class="Vlt-col Vlt-col--1of2">
+                          <h4 class="inline-block">About The Show</h4>
+                          <p class="text-justify">
+                            Each week our Bay Area advocate Cory will be interviewing developers from around the ecosystem to learn about their coding journeys. Join Cory to get a glimpse the of wide range of experiences in programming and what it's like to work in tech.
+                          </p>
+                        </div>
+                        <div class="Vlt-col Vlt-col--1of2">
+                          <h4 class="inline-block">About Cory Althoff</h4>
+                          <a href="https://twitter.com/coryalthoff" target="_blank">
+                            <i class="icon icon-twitter"></i>
+                          </a>
+                          <a href="https://github.com/calthoff" target="_blank">
+                            <i class="icon icon-github"></i>
+                          </a>
+                          <h5>
+                            iOS Developer Advocate
+                          </h5>
+                          <p class="text-justify">
+                            Cory Althoff is a developer advocate at Vonage and the author of two books: The "Self-Taught Programmer" and "The Self-Taught Computer Scientist". Book Authority named "The Self-Taught Programmer" one of the greatest programming books of all time, and The Next Web listed it as one of the ten books that will help you become a better software engineer. Cory lives in the Bay Area with his wife and daughter.
+                          </p>
+                          </br>
+                          <a class="Vlt-purple" href="https://learn.vonage.com/authors/cory-althoff/?utm_source=devtv&utm_medium=organic&utm_campaign=social_media">
+                            Articles by Cory
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
 
               </div>
             </div>
