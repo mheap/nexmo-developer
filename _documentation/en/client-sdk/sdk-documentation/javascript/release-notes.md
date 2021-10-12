@@ -6,7 +6,7 @@ navigation_weight: 0
 
 # Release Notes
 
-## Version 8.2.3 - October 11, 2021
+## Version 8.2.5 - October 12, 2021
 
 ### Fix
 
