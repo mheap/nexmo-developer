@@ -10,7 +10,7 @@ navigation_weight: 0
 
 ### Added
 
-- Change socket `connectionListeners` from HashSet to ArraySet.
+- Change socket `connectionListeners` from `HashSet` to `ArraySet`.
 
 ## Version 3.1.0 - Sep 6, 2021
 
