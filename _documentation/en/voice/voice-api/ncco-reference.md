@@ -325,7 +325,7 @@ Option | Description | Required
 `endOnSilence` | Controls how long the system will wait after user stops speaking to decide the input is completed. The default value is `2.0` (seconds). The range of possible values is between `0.4` seconds and `10.0` seconds. | No
 `language` | Expected language of the user's speech. Format: BCP-47. Default: `en-US`. [List of supported languages](/voice/voice-api/guides/asr#language). | No
 `context` | Array of hints (strings) to improve recognition quality if certain words are expected from the user. | No
-`startTimeout` | Controls how long the system will wait for the user to start speaking. The range of possible values is between 1 second and 60 seconds. | No
+`startTimeout` | Controls how long the system will wait for the user to start speaking. The range of possible values is between 1 second and 60 seconds. The default value is `10`. | No
 `maxDuration` | Controls maximum speech duration (from the moment user starts speaking). The default value is 60 (seconds). The range of possible values is between 1 and 60 seconds. | No
 `saveAudio` | Set to `true` so the speech input recording (`recording_url`) is sent to your webhook endpoint at `eventUrl`. The default value is `false`. | No
 
