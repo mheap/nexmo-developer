@@ -6,6 +6,25 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.2.0 - 2021-10-19
+
+### Added
+
+- `NXMClientConfig.autoMediaReoffer` to allow to automatically reconnect media when network interfaces changes.
+- `[NXMClientConfig description]` for a quick `NXMClientConfig`'s instance description.
+- `NXMMediaConnectionStatus` enumerate.
+- `[NXMConversationDelegate conversation:onMediaConnectionStateChange:legId:]` to receive media connection state changed notification.
+- `[NXMConversation reconnectMedia]` to trigger a media reconnection.
+- `[NXMClient reconnectCallWithConversationId:andLegId:completionHandler:]` to reconnect a call given a conversation id and a leg id.
+- `NXMCall.conversation` to get the conversation associated to a call.
+
+### Deprecated
+
+- `[NXMClientConfig initWithApiUrl:websocketUrl:ipsUrl:]`.
+- `[NXMClientConfig initWithApiUrl:websocketUrl:ipsUrl:iceServerUrls:]`.
+- `[NXMClientConfig initWithApiUrl:websocketUrl:ipsUrl:useFirstIceCandidate:]`.
+- `[NXMClientConfig initWithApiUrl:websocketUrl:ipsUrl:iceServerUrls:useFirstIceCandidate]`.
+
 ## 3.1.0 - 2021-09-06
 
 ### Added
