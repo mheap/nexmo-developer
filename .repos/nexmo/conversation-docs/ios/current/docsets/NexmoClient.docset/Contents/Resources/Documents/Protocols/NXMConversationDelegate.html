@@ -17,7 +17,7 @@
     <a title="NXMConversationDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NexmoClient 3.1.0 Docs</a> (100% documented)</p>
+        <p><a href="../index.html">NexmoClient 3.2.0 Docs</a> (100% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -185,6 +185,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NXMLoggerLevel.html">NXMLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMMediaConnectionStatus.html">NXMMediaConnectionStatus</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NXMMediaStreamType.html">NXMMediaStreamType</a>
@@ -916,12 +919,89 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:onMediaConnectionStateChange:legId:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:onMediaConnectionStateChange:legId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:onMediaConnectionStateChange:legId:">-conversation:<wbr>onMediaConnectionStateChange:<wbr>legId:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a media connection state changed notification.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">onMediaConnectionStateChange</span><span class="p">:(</span><span class="n"><a href="../Enums/NXMMediaConnectionStatus.html">NXMMediaConnectionStatus</a></span><span class="p">)</span><span class="nv">state</span>
+                           <span class="nf">legId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">legId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">onMediaConnectionStateChange</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/NXMMediaConnectionStatus.html">NXMMediaConnectionStatus</a></span><span class="p">,</span> <span class="nv">legId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the media connection state changed notification.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>state</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new Media state.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>legId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The leg id associated with the new media connection state received.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external">Vonage</a>. All rights reserved. (Last updated: 2021-09-13)</p>
+          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external">Vonage</a>. All rights reserved. (Last updated: 2021-10-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
