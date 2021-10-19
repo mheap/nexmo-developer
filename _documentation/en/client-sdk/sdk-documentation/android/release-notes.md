@@ -6,6 +6,17 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.2.0 - Oct 19, 2021
+
+### Added
+
+- `NexmoClient.Builder.autoMediaReoffer(autoMediaReoffer)` to allow to automatically reconnect media when network interfaces changes.
+- `EMediaConnectionState` enumerate.
+- `NexmoMediaStatusListener` to receive media connection state changed notification.
+- `NexmoConversation.reconnectMedia()` to trigger a media reconnection.
+- `NexmoClient.reconnectCall(conversationId, legId, listener)` to reconnect a call given a conversation id and a leg id.
+- `NexmoClient.getUserSessions(userId, pageSize, order, listener)` to fetch a paginated list of active user sessions.
+
 ## Version 3.1.1 - Oct 18, 2021
 
 ### Added
