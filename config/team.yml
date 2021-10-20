@@ -74,5 +74,9 @@ current:
   - name: "Rachel Sunderland"
     email: "Rachel.Sunderland@vonage.com"
     role: "Head of Community"
+  - name: "Matt Hunt"
+    email: "matt.hunt@vonage.com"
+    role: ".Net Developer Advocate"
+    twitter: "doesdotnet"
 
 
