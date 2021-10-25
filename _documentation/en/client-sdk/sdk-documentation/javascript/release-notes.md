@@ -12,105 +12,11 @@ navigation_weight: 0
 
 - Fix error handling for audio permissions
 
-## 8.2.2
-
-### Fix
-
-- Enhance debug logs
-
-## 8.2.0
-
-### New
-
-- Add new `getUserSessions()` function to fetch the sessions of the logged in user
-
-```javascript
-application.getUserSessions({ user_id: "USR-id", page_size: 20 }).then((user_sessions_page) => {
-  user_sessions_page.items.forEach(user_session => {
-    render(user_session)
-  })
-}).catch((error) => {
-  console.error(error);
-});
-```
-
-## 8.1.1
-
-### New
-
-- Add new optional `mediaParams` parameter in `reconnectCall` function, in order to modify the `MediaStream` object
-
-```javascript
-application.reconnectCall(
-  "conversation_id",
-  "rtc_id",
-  { audioConstraints: { deviceId: "device_id" } }
-).then((nxmCall) => {
-  console.log(nxmCall);
-}).catch((error) => {
-  console.error(error);
-});
-```
-
-- Update `media.enable()` docs to include audio constraints
-
-### Fixes
-
-- Assign the correct `NXMCall` status when reconnecting to a call (`STARTED`, `RINGING` or `ANSWERED`)
-
-### Changes
-
-- Update `npm` dependencies
-
 ## Version 8.2.2 - October 08, 2021
 
 ### Fix
 
 - Enhance debug logs
-
-## 8.2.0
-
-### New
-
-- Add new `getUserSessions()` function to fetch the sessions of the logged in user
-
-```javascript
-application.getUserSessions({ user_id: "USR-id", page_size: 20 }).then((user_sessions_page) => {
-  user_sessions_page.items.forEach(user_session => {
-    render(user_session)
-  })
-}).catch((error) => {
-  console.error(error);
-});
-```
-
-## 8.1.1
-
-### New
-
-- Add new optional `mediaParams` parameter in `reconnectCall` function, in order to modify the `MediaStream` object
-
-```javascript
-application.reconnectCall(
-  "conversation_id",
-  "rtc_id",
-  { audioConstraints: { deviceId: "device_id" } }
-).then((nxmCall) => {
-  console.log(nxmCall);
-}).catch((error) => {
-  console.error(error);
-});
-```
-
-- Update `media.enable()` docs to include audio constraints
-
-### Fixes
-
-- Assign the correct `NXMCall` status when reconnecting to a call (`STARTED`, `RINGING` or `ANSWERED`)
-
-### Changes
-
-- Update `npm` dependencies
 
 ## Version 8.2.0 - September 28, 2021
 
@@ -127,34 +33,6 @@ application.getUserSessions({ user_id: "USR-id", page_size: 20 }).then((user_ses
   console.error(error);
 });
 ```
-
-## 8.1.1
-
-### New
-
-- Add new optional `mediaParams` parameter in `reconnectCall` function, in order to modify the `MediaStream` object
-
-```javascript
-application.reconnectCall(
-  "conversation_id",
-  "rtc_id",
-  { audioConstraints: { deviceId: "device_id" } }
-).then((nxmCall) => {
-  console.log(nxmCall);
-}).catch((error) => {
-  console.error(error);
-});
-```
-
-- Update `media.enable()` docs to include audio constraints
-
-### Fixes
-
-- Assign the correct `NXMCall` status when reconnecting to a call (`STARTED`, `RINGING` or `ANSWERED`)
-
-### Changes
-
-- Update `npm` dependencies
 
 ## Version 8.1.1 - September 08, 2021
 
