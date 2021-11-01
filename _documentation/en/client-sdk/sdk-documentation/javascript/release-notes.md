@@ -6,6 +6,122 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.3.0 - November 01, 2021
+
+### New
+
+- Added new `uploadImage()` function to upload an image to the Vonage Media Service
+
+```javascript
+const params = {
+  quality_ratio : "90",
+  medium_size_ratio: "40",
+  thumbnail_size_ratio: "20"
+};
+
+conversation.uploadImage(fileInput.files[0], params).then((uploadImageRequest) => {
+  uploadImageRequest.onprogress = (e) => {
+    console.log("Image request progress: ", e);
+    console.log("Image progress: " + e.loaded + "/" + e.total);
+  };
+  uploadImageRequest.onabort = (e) => {
+    console.log("Image request aborted: ", e);
+    console.log("Image: " + e.type);
+  };
+  uploadImageRequest.onloadend = (e) => {
+    console.log("Image request successful: ", e);
+    console.log("Image: " + e.type);
+  };
+  uploadImageRequest.onreadystatechange = () => {
+    if (uploadImageRequest.readyState === 4 && uploadImageRequest.status === 200) {
+      const representations = JSON.parse(uploadImageRequest.responseText);
+      console.log("Original image url: ", representations.original.url);
+      console.log("Medium image url: ", representations.medium.url);
+      console.log("Thumbnail image url: ", representations.thumbnail.url);
+    }
+  };
+}).catch((error) => {
+  console.error("error uploading the image ", error);
+});
+```
+
+- Added new `sendMessage()` function to send a new `message` to the conversation (supported types are `text`, `image`, `audio`, `video` and `file`)
+
+```javascript
+conversation.sendMessage({
+  "message_type": "text",
+  "text": "Hi Vonage!"
+}).then((event) => {
+  console.log("message was sent", event);
+}).catch((error)=>{
+  console.error("error sending the message ", error);
+});
+```
+
+```javascript
+conversation.sendMessage({
+  "message_type": "image",
+  "image": {
+    "url": "https://example.com/image.jpg"
+  }
+})
+.then((event) => {
+  console.log("message was sent", event);
+}).catch((error)=>{
+  console.error("error sending the message ", error);
+});
+```
+
+- Added new `MessageEvent` type of event
+
+```javascript
+conversation.on("message", (member, messageEvent) => {
+  console.log(messageEvent);
+});
+```
+
+### Changes
+
+- Deprecate `sendText()` function (use `sendMessage()` with a type of `text` instead)
+
+```javascript
+conversation.sendMessage({ "message_type": "text", "text": "Hi Vonage!" }).then((event) => {
+  console.log("message was sent", event);
+}).catch((error)=>{
+  console.error("error sending the message ", error);
+});
+```
+
+- Deprecate `sendImage()` function (use `uploadImage()` and `sendMessage()` with a type of `image` instead)
+
+```javascript
+conversation.uploadImage(imageFile).then((imageRequest) => {
+  imageRequest.onreadystatechange = () => {
+    if (imageRequest.readyState === 4 && imageRequest.status === 200) {
+      try {
+        const { original, medium, thumbnail } = JSON.parse(imageRequest.responseText);
+        const message = {
+          message_type: 'image',
+          image: {
+            url: original.url ?? medium.url ?? thumbnail.url
+          }
+        }
+        return conversation.sendMessage(message);
+      } catch (error) {
+        console.error("error sending the message ", error);
+      }
+    }
+    if (imageRequest.status !== 200) {
+      console.error("error uploading the image");
+    }
+  };
+  return imageRequest;
+})
+.catch((error) => {
+  console.error("error uploading the image ", error);
+});
+```
+
 ## Version 8.2.5 - October 12, 2021
 
 ### Fix
