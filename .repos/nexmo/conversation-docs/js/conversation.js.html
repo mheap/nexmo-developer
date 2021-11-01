@@ -27,7 +27,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
+					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="MessageEvent.html">MessageEvent</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
 				</ul>
 			</li>
 			
@@ -75,6 +75,7 @@ const nexmoClientError_1 = require("./nexmoClientError");
 const member_1 = __importDefault(require("./member"));
 const nxmEvent_1 = __importDefault(require("./events/nxmEvent"));
 const text_event_1 = __importDefault(require("./events/text_event"));
+const message_event_1 = __importDefault(require("./events/message_event"));
 const media_1 = __importDefault(require("./modules/media"));
 const conversation_events_1 = __importDefault(require("./handlers/conversation_events"));
 const utils_1 = __importDefault(require("./utils"));
@@ -402,6 +403,8 @@ class Conversation {
       *  console.error("error sending the message ", error);
       * });
       *
+      * @deprecated since version 8.3.0
+      *
     */
     async sendText(text) {
         try {
@@ -473,6 +476,77 @@ class Conversation {
         }
     }
     /**
+     * Uploads an Image to Media Service.
+     * implements xhr (https://xhr.spec.whatwg.org/) - this.imageRequest
+     *
+     * @param {File} file single input file (jpeg/jpg)
+     * @param {object} params - params of image sent
+     * @param {string} [params.quality_ratio = 100] a value between 0 and 100. 0 indicates 'maximum compression' and the lowest quality, 100 will result in the highest quality image
+     * @param {string} [params.medium_size_ratio = 50] a value between 1 and 100. 1 indicates the new image is 1% of original, 100 - same size as original
+     * @param {string} [params.thumbnail_size_ratio = 30] a value between 1 and 100. 1 indicates the new image is 1% of original, 100 - same size as original
+     *
+     * @returns {Promise&lt;XMLHttpRequest>}
+     *
+     * @example &lt;caption>uploading an image&lt;/caption>
+     * const params = {
+     *  quality_ratio : "90",
+     *  medium_size_ratio: "40",
+     *  thumbnail_size_ratio: "20"
+     * }
+     * conversation.uploadImage(fileInput.files[0], params).then((uploadImageRequest) => {
+     *  uploadImageRequest.onprogress = (e) => {
+     *    console.log("Image request progress: ", e);
+     *    console.log("Image progress: " + e.loaded + "/" + e.total);
+     *  };
+     *  uploadImageRequest.onabort = (e) => {
+     *    console.log("Image request aborted: ", e);
+     *    console.log("Image: " + e.type);
+     *  };
+     *  uploadImageRequest.onloadend = (e) => {
+     *    console.log("Image request successful: ", e);
+     *    console.log("Image: " + e.type);
+     *  };
+     *  uploadImageRequest.onreadystatechange = () => {
+     *    if (uploadImageRequest.readyState === 4 &amp;&amp; uploadImageRequest.status === 200) {
+     *      const representations = JSON.parse(uploadImageRequest.responseText);
+     *      console.log("Original image url: ", representations.original.url);
+     *      console.log("Medium image url: ", representations.medium.url);
+     *      console.log("Thumbnail image url: ", representations.thumbnail.url);
+     *    }
+     *  };
+     * }).catch((error) => {
+     *    console.error("error uploading the image ", error);
+     * });
+    */
+    async uploadImage(fileInput, params = {
+        quality_ratio: '100',
+        medium_size_ratio: '50',
+        thumbnail_size_ratio: '30'
+    }) {
+        const formData = new FormData();
+        formData.append('file', fileInput);
+        formData.append('quality_ratio', params.quality_ratio);
+        formData.append('medium_size_ratio', params.medium_size_ratio);
+        formData.append('thumbnail_size_ratio', params.thumbnail_size_ratio);
+        const imageRequest = await utils_1.default.networkRequest({
+            type: 'POST',
+            url: this.application.session.config.ips_url,
+            data: formData,
+            token: this.application.session.config.token
+        });
+        imageRequest.upload.addEventListener('progress', (evt) => {
+            if (evt.lengthComputable) {
+                this.log.debug('uploading image ' + evt.loaded + '/' + evt.total);
+            }
+        }, false);
+        imageRequest.onreadystatechange = () => {
+            if (imageRequest.status !== 200) {
+                this.log.error(imageRequest);
+            }
+        };
+        return imageRequest;
+    }
+    /**
      * Send an Image message to the conversation, which will be relayed to every other member of the conversation.
      * implements xhr (https://xhr.spec.whatwg.org/) - this.imageRequest
      *
@@ -506,28 +580,15 @@ class Conversation {
      * }).catch((error) => {
      *  console.error("error sending the image ", error);
      * });
+     *
+     * @deprecated since version 8.3.0
     */
     async sendImage(fileInput, params = {
         quality_ratio: '100',
         medium_size_ratio: '50',
         thumbnail_size_ratio: '30'
     }) {
-        const formData = new FormData();
-        formData.append('file', fileInput);
-        formData.append('quality_ratio', params.quality_ratio);
-        formData.append('medium_size_ratio', params.medium_size_ratio);
-        formData.append('thumbnail_size_ratio', params.thumbnail_size_ratio);
-        const imageRequest = await utils_1.default.networkRequest({
-            type: 'POST',
-            url: this.application.session.config.ips_url,
-            data: formData,
-            token: this.application.session.config.token
-        });
-        imageRequest.upload.addEventListener('progress', (evt) => {
-            if (evt.lengthComputable) {
-                this.log.debug('uploading image ' + evt.loaded + '/' + evt.total);
-            }
-        }, false);
+        const imageRequest = await this.uploadImage(fileInput, params);
         imageRequest.onreadystatechange = () => {
             if (imageRequest.readyState === 4 &amp;&amp; imageRequest.status === 200) {
                 try {
@@ -548,14 +609,11 @@ class Conversation {
                     this.log.error(new nexmoClientError_1.NexmoApiError(error));
                 }
             }
-            if (imageRequest.status !== 200) {
-                this.log.error(imageRequest);
-            }
         };
         return imageRequest;
     }
     /**
-     * Cancel sending an Image message to the conversation.
+     * Cancel uploading or sending an Image message to the conversation.
      *
      * @param {XMLHttpRequest} imageRequest
      *
@@ -564,8 +622,15 @@ class Conversation {
      * @example &lt;caption>cancel sending an image&lt;/caption>
      * conversation.sendImage(fileInput.files[0]).then((imageRequest) => {
      *    conversation.abortSendImage(imageRequest);
-     * }).catch((error) => {
-     *  console.error("error sending the image ", error);
+   * }).catch((error) => {
+   *    console.error("error sending the image ", error);
+     * });
+   *
+   * @example &lt;caption>cancel uploading an image&lt;/caption>
+     * conversation.uploadImage(fileInput.files[0]).then((imageRequest) => {
+     *    conversation.abortSendImage(imageRequest);
+   * }).catch((error) => {
+   *    console.error("error uploading the image ", error);
      * });
     */
     abortSendImage(imageRequest) {
@@ -574,6 +639,61 @@ class Conversation {
         }
         else {
             return new nexmoClientError_1.NexmoClientError('error:invalid:param:type');
+        }
+    }
+    /**
+      * Send a message event to the conversation, which will be relayed to every other member of the conversation
+      *
+      * @param {object} params the content of the message you want sent
+      * @param {string} params.message_type the type of the message. It should be one of 'text', 'image', 'audio', 'video', 'file'
+      * @param {string} [params.text] the text content when message type is 'text
+      * @param {object} [params.image]
+      * @param {string} params.image.url the image url when message type is 'image'
+      * @param {object} [params.audio]
+      * @param {string} params.audio.url the audio url when message type is 'audio'
+      * @param {object} [params.video]
+      * @param {string} params.video.url the video url when message type is 'video'
+      * @param {object} [params.file]
+      * @param {string} params.file.url the file url when message type is 'file'
+      *
+      * @returns {Promise&lt;MessageEvent>} - the message that was sent
+      *
+      * @example &lt;caption> sending a message &lt;/caption>
+      * conversation.sendMessage({ "message_type": "text", "text": "Hi Vonage!" }).then((event) => {
+      *  console.log("message was sent", event);
+      * }).catch((error)=>{
+      *  console.error("error sending the message ", error);
+      * });
+      *
+    */
+    async sendMessage(params) {
+        var _a;
+        if (this.me === null) {
+            throw new nexmoClientError_1.NexmoClientError('error:self');
+        }
+        else if (!((_a = params) === null || _a === void 0 ? void 0 : _a.message_type)) {
+            throw new nexmoClientError_1.NexmoClientError('error:message-event:invalid');
+        }
+        try {
+            const msg = {
+                type: 'message',
+                cid: this.id,
+                from: this.me.id,
+                body: {
+                    ...params
+                }
+            };
+            const { id, timestamp } = await this.application.session.sendNetworkRequest({
+                type: 'POST',
+                path: `conversations/${this.id}/events`,
+                data: msg
+            });
+            msg.id = id;
+            msg.body.timestamp = timestamp;
+            return new message_event_1.default(this, msg);
+        }
+        catch (error) {
+            throw new nexmoClientError_1.NexmoApiError(error);
         }
     }
     async _typing(state) {
@@ -835,7 +955,7 @@ module.exports = Conversation;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Mon Oct 11th 2021 using the <a
+	on Mon Nov 1st 2021 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>

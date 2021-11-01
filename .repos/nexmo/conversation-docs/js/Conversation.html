@@ -27,7 +27,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
+					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="MessageEvent.html">MessageEvent</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
 				</ul>
 			</li>
 			
@@ -376,7 +376,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-25">line 25</a>
+				 <a href="conversation.js.html#sunlight-1-line-26">line 26</a>
 			</li>
 		</ul>
 	</dd>
@@ -487,7 +487,7 @@ otherwise the value will be <code>null</code>.</p>
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-58">line 58</a>
+				 <a href="conversation.js.html#sunlight-1-line-59">line 59</a>
 			</li>
 		</ul>
 	</dd>
@@ -522,7 +522,7 @@ otherwise the value will be <code>null</code>.</p>
 
     
     <div class="description">
-        <p>Cancel sending an Image message to the conversation.</p>
+        <p>Cancel uploading or sending an Image message to the conversation.</p>
     </div>
     
 
@@ -619,7 +619,7 @@ otherwise the value will be <code>null</code>.</p>
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-511">line 511</a>
+				 <a href="conversation.js.html#sunlight-1-line-576">line 576</a>
 			</li>
 		</ul>
 	</dd>
@@ -657,14 +657,22 @@ otherwise the value will be <code>null</code>.</p>
         
 
     
-        <h5>Example</h5>
+        <h5>Examples</h5>
         
         <p class="code-caption">cancel sending an image</p>
     
     <pre class="sunlight-highlight-javascript">conversation.sendImage(fileInput.files[0]).then((imageRequest) =&gt; {
    conversation.abortSendImage(imageRequest);
 }).catch((error) =&gt; {
- console.error(&quot;error sending the image &quot;, error);
+   console.error(&quot;error sending the image &quot;, error);
+});</pre>
+
+        <p class="code-caption">cancel uploading an image</p>
+    
+    <pre class="sunlight-highlight-javascript">conversation.uploadImage(fileInput.files[0]).then((imageRequest) =&gt; {
+   conversation.abortSendImage(imageRequest);
+}).catch((error) =&gt; {
+   console.error(&quot;error uploading the image &quot;, error);
 });</pre>
 
 
@@ -730,7 +738,7 @@ otherwise the value will be <code>null</code>.</p>
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-191">line 191</a>
+				 <a href="conversation.js.html#sunlight-1-line-192">line 192</a>
 			</li>
 		</ul>
 	</dd>
@@ -900,7 +908,7 @@ otherwise the value will be <code>null</code>.</p>
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-217">line 217</a>
+				 <a href="conversation.js.html#sunlight-1-line-218">line 218</a>
 			</li>
 		</ul>
 	</dd>
@@ -1230,7 +1238,7 @@ otherwise the value will be <code>null</code>.</p>
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-590">line 590</a>
+				 <a href="conversation.js.html#sunlight-1-line-710">line 710</a>
 			</li>
 		</ul>
 	</dd>
@@ -1408,7 +1416,7 @@ otherwise the value will be <code>null</code>.</p>
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-682">line 682</a>
+				 <a href="conversation.js.html#sunlight-1-line-802">line 802</a>
 			</li>
 		</ul>
 	</dd>
@@ -1704,7 +1712,7 @@ otherwise the value will be <code>null</code>.</p>
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-628">line 628</a>
+				 <a href="conversation.js.html#sunlight-1-line-748">line 748</a>
 			</li>
 		</ul>
 	</dd>
@@ -1830,7 +1838,7 @@ conversation.getMembers(params).then((members_page) =&gt; {
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-655">line 655</a>
+				 <a href="conversation.js.html#sunlight-1-line-775">line 775</a>
 			</li>
 		</ul>
 	</dd>
@@ -2062,7 +2070,7 @@ conversation.getMembers(params).then((members_page) =&gt; {
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-241">line 241</a>
+				 <a href="conversation.js.html#sunlight-1-line-242">line 242</a>
 			</li>
 		</ul>
 	</dd>
@@ -2300,7 +2308,7 @@ conversation.invite({
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-301">line 301</a>
+				 <a href="conversation.js.html#sunlight-1-line-302">line 302</a>
 			</li>
 		</ul>
 	</dd>
@@ -2572,7 +2580,7 @@ Accept an invitation if our Member has state INVITED and no user_id / user_name 
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-144">line 144</a>
+				 <a href="conversation.js.html#sunlight-1-line-145">line 145</a>
 			</li>
 		</ul>
 	</dd>
@@ -2850,7 +2858,7 @@ Accept an invitation if our Member has state INVITED and no user_id / user_name 
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-329">line 329</a>
+				 <a href="conversation.js.html#sunlight-1-line-330">line 330</a>
 			</li>
 		</ul>
 	</dd>
@@ -3094,7 +3102,7 @@ Accept an invitation if our Member has state INVITED and no user_id / user_name 
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-388">line 388</a>
+				 <a href="conversation.js.html#sunlight-1-line-391">line 391</a>
 			</li>
 		</ul>
 	</dd>
@@ -3428,6 +3436,15 @@ implements xhr (https://xhr.spec.whatwg.org/) - this.imageRequest</p>
     
 
 	
+	<dt class="important tag-deprecated method-doc-label method-doc-details-label">Deprecated:</dt>
+	
+    <dd>
+        <ul class="dummy">
+            <li>since version 8.3.0</li>
+        </ul>
+    </dd>
+    
+    
 
 	
 
@@ -3445,7 +3462,7 @@ implements xhr (https://xhr.spec.whatwg.org/) - this.imageRequest</p>
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-450">line 450</a>
+				 <a href="conversation.js.html#sunlight-1-line-526">line 526</a>
 			</li>
 		</ul>
 	</dd>
@@ -3516,6 +3533,612 @@ conversation.sendImage(fileInput.files[0], params).then((imageRequest) =&gt; {
  };
 }).catch((error) =&gt; {
  console.error(&quot;error sending the image &quot;, error);
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="sendMessage"><span class="type-signature">&lt;async> </span>sendMessage(params)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Send a message event to the conversation, which will be relayed to every other member of the conversation</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the content of the message you want sent</p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message_type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the type of the message. It should be one of 'text', 'image', 'audio', 'video', 'file'</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>text</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the text content when message type is 'text</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>image</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the image url when message type is 'image'</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>audio</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the audio url when message type is 'audio'</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>video</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the video url when message type is 'video'</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the file url when message type is 'file'</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="conversation.js.html">conversation.js</a>,
+				 <a href="conversation.js.html#sunlight-1-line-609">line 609</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>the message that was sent</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="MessageEvent.html">MessageEvent</a>></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption"> sending a message </p>
+    
+    <pre class="sunlight-highlight-javascript">conversation.sendMessage({ &quot;message_type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Hi Vonage!&quot; }).then((event) =&gt; {
+ console.log(&quot;message was sent&quot;, event);
+}).catch((error)=&gt;{
+ console.error(&quot;error sending the message &quot;, error);
 });</pre>
 
 
@@ -3614,6 +4237,15 @@ conversation.sendImage(fileInput.files[0], params).then((imageRequest) =&gt; {
     
 
 	
+	<dt class="important tag-deprecated method-doc-label method-doc-details-label">Deprecated:</dt>
+	
+    <dd>
+        <ul class="dummy">
+            <li>since version 8.3.0</li>
+        </ul>
+    </dd>
+    
+    
 
 	
 
@@ -3631,7 +4263,7 @@ conversation.sendImage(fileInput.files[0], params).then((imageRequest) =&gt; {
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-346">line 346</a>
+				 <a href="conversation.js.html#sunlight-1-line-349">line 349</a>
 			</li>
 		</ul>
 	</dd>
@@ -3757,7 +4389,7 @@ conversation.sendImage(fileInput.files[0], params).then((imageRequest) =&gt; {
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-551">line 551</a>
+				 <a href="conversation.js.html#sunlight-1-line-671">line 671</a>
 			</li>
 		</ul>
 	</dd>
@@ -3881,7 +4513,7 @@ conversation.sendImage(fileInput.files[0], params).then((imageRequest) =&gt; {
 		<ul class="dummy">
 			<li>
 				<a href="conversation.js.html">conversation.js</a>,
-				 <a href="conversation.js.html#sunlight-1-line-568">line 568</a>
+				 <a href="conversation.js.html#sunlight-1-line-688">line 688</a>
 			</li>
 		</ul>
 	</dd>
@@ -3944,6 +4576,375 @@ messageTextarea.addEventListener(&#x27;keyup&#x27;, (event) =&gt; {
    timeout = setTimeout(() =&gt; {
      conversation.stopTyping();
    }, 500);
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="uploadImage"><span class="type-signature">&lt;async> </span>uploadImage(file, params)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Uploads an Image to Media Service.<br>
+implements xhr (https://xhr.spec.whatwg.org/) - this.imageRequest</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">File</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>single input file (jpeg/jpg)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>params of image sent</p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>quality_ratio</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    100
+                
+                </td>
+            
+
+            <td class="description last"><p>a value between 0 and 100. 0 indicates 'maximum compression' and the lowest quality, 100 will result in the highest quality image</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>medium_size_ratio</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    50
+                
+                </td>
+            
+
+            <td class="description last"><p>a value between 1 and 100. 1 indicates the new image is 1% of original, 100 - same size as original</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>thumbnail_size_ratio</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    30
+                
+                </td>
+            
+
+            <td class="description last"><p>a value between 1 and 100. 1 indicates the new image is 1% of original, 100 - same size as original</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="conversation.js.html">conversation.js</a>,
+				 <a href="conversation.js.html#sunlight-1-line-461">line 461</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;XMLHttpRequest></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">uploading an image</p>
+    
+    <pre class="sunlight-highlight-javascript">const params = {
+ quality_ratio : &quot;90&quot;,
+ medium_size_ratio: &quot;40&quot;,
+ thumbnail_size_ratio: &quot;20&quot;
+}
+conversation.uploadImage(fileInput.files[0], params).then((uploadImageRequest) =&gt; {
+ uploadImageRequest.onprogress = (e) =&gt; {
+   console.log(&quot;Image request progress: &quot;, e);
+   console.log(&quot;Image progress: &quot; + e.loaded + &quot;/&quot; + e.total);
+ };
+ uploadImageRequest.onabort = (e) =&gt; {
+   console.log(&quot;Image request aborted: &quot;, e);
+   console.log(&quot;Image: &quot; + e.type);
+ };
+ uploadImageRequest.onloadend = (e) =&gt; {
+   console.log(&quot;Image request successful: &quot;, e);
+   console.log(&quot;Image: &quot; + e.type);
+ };
+ uploadImageRequest.onreadystatechange = () =&gt; {
+   if (uploadImageRequest.readyState === 4 &amp;&amp; uploadImageRequest.status === 200) {
+     const representations = JSON.parse(uploadImageRequest.responseText);
+     console.log(&quot;Original image url: &quot;, representations.original.url);
+     console.log(&quot;Medium image url: &quot;, representations.medium.url);
+     console.log(&quot;Thumbnail image url: &quot;, representations.thumbnail.url);
+   }
+ };
+}).catch((error) =&gt; {
+   console.error(&quot;error uploading the image &quot;, error);
 });</pre>
 
 
@@ -6490,7 +7491,7 @@ A Member has muted their audio</p>
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Mon Oct 11th 2021 using the <a
+	on Mon Nov 1st 2021 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
