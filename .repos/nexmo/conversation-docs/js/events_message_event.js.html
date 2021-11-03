@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>DocStrap Source: modules/errors_emitter.js</title>
+	<title>DocStrap Source: events/message_event.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -53,82 +53,114 @@
 		<div id="main">
 			
 
-		<h1 class="page-title">Source: modules/errors_emitter.js</h1>
+		<h1 class="page-title">Source: events/message_event.js</h1>
     
 <section>
     <article>
         <pre
             class="sunlight-highlight-javascript linenums">'use strict';
+var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
+    return (mod &amp;&amp; mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Nexmo Client SDK
- *  Errors Emitter
+ *  Message NXMEvent Object Model
  *
  * Copyright (c) Nexmo Inc.
 */
 const loglevel_1 = require("loglevel");
+const utils_1 = __importDefault(require("../utils"));
+const nxmEvent_1 = __importDefault(require("./nxmEvent"));
 const nexmoClientError_1 = require("../nexmoClientError");
 /**
- * Class that can emit errors via any emitter passed to it.
- * @class ErrorsEmitter
- * @param {Emitter} emitter - Any event emitter that implements "emit" and "releaseGroup". Basically object that is mixed with Wildemitter.
- * @property {string} LISTENER_GROUP='NXM-errors' - the group this emitter will register
- * @emits Emitter#NXM-errors
- * @private
+ * A message event
+ *
+ * @class MessageEvent
+ * @extends NXMEvent
 */
-/**
- * Application listening for client and expired-token errors events.
- *
- * @event Application#NXM-errors
- *
- * @property {NexmoClientError} error
- *
- * @example &lt;caption>listen for client error events on Application level&lt;/caption>
- * application.on('*', 'NXM-errors', (error) => {
- *    console.log('Error thrown with type ' + error.type);
- *  });
- * @example &lt;caption>listen for expired-token error events and then update the token on Application level&lt;/caption>
- * application.on('system:error:expired-token', 'NXM-errors', (error) => {
- * 	console.log('token expired');
- * 	application.updateToken(token);
- * });
-*/
-class ErrorsEmitter {
-    constructor(emitter) {
+class MessageEvent extends nxmEvent_1.default {
+    constructor(conversation, params) {
+        super(conversation, params);
         this.log = loglevel_1.getLogger(this.constructor.name);
-        if (!emitter) {
-            throw new nexmoClientError_1.NexmoClientError('no emitter object passed for the Error Emitter');
+        this.type = 'message';
+        this.conversation = conversation;
+        if (params &amp;&amp; params.body &amp;&amp; params.body.timestamp) {
+            this.timestamp = params.body.timestamp;
         }
-        this.emitter = emitter;
-        this.LISTENER_GROUP = 'NXM-errors';
+        Object.assign(this, params);
     }
     /**
-     * Detect if the param.type includes error and emit that payload in the LISTENER_GROUP
-     * @param param - the payload to forward in the LISTENER_GROUP
-     * @param param.type - the type of the event to check if it's an error
+     * Set the messageEvent status to 'seen'
+     * @returns {Promise}
+     * @example &lt;caption>Set the messageEvent status to 'seen'&lt;/caption>
+     *  messageEvent.seen().then(() => {
+     *    console.log("message event status set to seen");
+     *  }).catch((error)=>{
+     *	  console.log("error setting message event status to seen ", error);
+     *  });
+     *
+     * @private
+     */
+    seen() {
+        return super.seen();
+    }
+    /**
+     * Set the messageEvent status to 'delivered'.
+     * handled by the SDK
+     * @returns {Promise}
+     * @example &lt;caption>Set the messageEvent status to 'delivered'&lt;/caption>
+     *  messageEvent.delivered().then(() => {
+     *    console.log("message event status set to delivered");
+     *  }).catch((error)=>{
+     *	  console.log("error setting message event status to delivered  ", error);
+     *  });
+     *
+     * @private
+     */
+    delivered() {
+        return super.delivered();
+    }
+    /**
+     * Delete the messageEvent
+     * @returns {Promise}
+     * @example &lt;caption>Delete the messageEvent&lt;/caption>
+     *  messageEvent.del().then(() => {
+     *    console.log("message event deleted");
+     *  }).catch((error)=>{
+     *	  console.log("error deleting message event  ", error);
+     *  });
+     */
+    del() {
+        return super.del();
+    }
+    /**
+     * Download an Image from Media service
+     * @returns {string} the dataUrl "data:image/jpeg;base64..."
+     * @example &lt;caption>Downloading an image from the messageEvent&lt;/caption>
+     *  messageEvent.fetchImage().then((imageData) => {
+     *    const img = new Image();
+     *    img.src = imageData;
+     *    document.body.appendChild(img);
+     *  }).catch((error) => {
+     *    console.log("error getting image ", error);
+     *  });
     */
-    emitResponseIfError(param) {
-        if (this._isTypeError(param.type)) {
-            return this.emitter.emit(param.type, this.LISTENER_GROUP, param);
+    async fetchImage() {
+        if (this.body.message_type !== "image") {
+            throw new nexmoClientError_1.NexmoClientError('error:message-event:invalid');
         }
-        return;
-    }
-    /**
-     * Release Group on the registered emitter (using the namespace LISTENER_GROUP that is set)
-    */
-    cleanup() {
-        return this.emitter.releaseGroup(this.LISTENER_GROUP);
-    }
-    /**
-     * Returns true if the param includes 'error'
-     * @param {string} type - the error type to check
-    */
-    _isTypeError(param) {
-        return param.indexOf('error') !== -1;
+        try {
+            return utils_1.default._fetchImage(this.body.image.url, this.conversation.application.session.config.token);
+        }
+        catch (error) {
+            this.log.error(error);
+            throw error;
+        }
     }
 }
-exports.default = ErrorsEmitter;
-module.exports = ErrorsEmitter;
+exports.default = MessageEvent;
+module.exports = MessageEvent;
 </pre>
     </article>
 </section>

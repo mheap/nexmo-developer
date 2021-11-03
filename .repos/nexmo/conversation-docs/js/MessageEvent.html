@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>DocStrap Source: modules/errors_emitter.js</title>
+	<title>DocStrap Class: MessageEvent</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,91 +48,403 @@
 <div class="row">
 
 	
-	<div class="col-md-12">
+	<div class="col-md-8">
 	
 		<div id="main">
 			
 
-		<h1 class="page-title">Source: modules/errors_emitter.js</h1>
-    
+	<h1 class="page-title">Class: MessageEvent</h1>
 <section>
-    <article>
-        <pre
-            class="sunlight-highlight-javascript linenums">'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-/*
- * Nexmo Client SDK
- *  Errors Emitter
- *
- * Copyright (c) Nexmo Inc.
-*/
-const loglevel_1 = require("loglevel");
-const nexmoClientError_1 = require("../nexmoClientError");
-/**
- * Class that can emit errors via any emitter passed to it.
- * @class ErrorsEmitter
- * @param {Emitter} emitter - Any event emitter that implements "emit" and "releaseGroup". Basically object that is mixed with Wildemitter.
- * @property {string} LISTENER_GROUP='NXM-errors' - the group this emitter will register
- * @emits Emitter#NXM-errors
- * @private
-*/
-/**
- * Application listening for client and expired-token errors events.
- *
- * @event Application#NXM-errors
- *
- * @property {NexmoClientError} error
- *
- * @example &lt;caption>listen for client error events on Application level&lt;/caption>
- * application.on('*', 'NXM-errors', (error) => {
- *    console.log('Error thrown with type ' + error.type);
- *  });
- * @example &lt;caption>listen for expired-token error events and then update the token on Application level&lt;/caption>
- * application.on('system:error:expired-token', 'NXM-errors', (error) => {
- * 	console.log('token expired');
- * 	application.updateToken(token);
- * });
-*/
-class ErrorsEmitter {
-    constructor(emitter) {
-        this.log = loglevel_1.getLogger(this.constructor.name);
-        if (!emitter) {
-            throw new nexmoClientError_1.NexmoClientError('no emitter object passed for the Error Emitter');
-        }
-        this.emitter = emitter;
-        this.LISTENER_GROUP = 'NXM-errors';
-    }
-    /**
-     * Detect if the param.type includes error and emit that payload in the LISTENER_GROUP
-     * @param param - the payload to forward in the LISTENER_GROUP
-     * @param param.type - the type of the event to check if it's an error
-    */
-    emitResponseIfError(param) {
-        if (this._isTypeError(param.type)) {
-            return this.emitter.emit(param.type, this.LISTENER_GROUP, param);
-        }
-        return;
-    }
-    /**
-     * Release Group on the registered emitter (using the namespace LISTENER_GROUP that is set)
-    */
-    cleanup() {
-        return this.emitter.releaseGroup(this.LISTENER_GROUP);
-    }
-    /**
-     * Returns true if the param includes 'error'
-     * @param {string} type - the error type to check
-    */
-    _isTypeError(param) {
-        return param.indexOf('error') !== -1;
-    }
-}
-exports.default = ErrorsEmitter;
-module.exports = ErrorsEmitter;
-</pre>
-    </article>
-</section>
 
+<header>
+    
+        <h2>
+        MessageEvent
+        </h2>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="MessageEvent"><span class="type-signature"></span>new MessageEvent()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>A message event</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="events_message_event.js.html">events/message_event.js</a>,
+				 <a href="events_message_event.js.html#sunlight-1-line-16">line 16</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="NXMEvent.html">NXMEvent</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="del"><span class="type-signature"></span>del()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Delete the messageEvent</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        NXMEvent#del
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="events_message_event.js.html">events/message_event.js</a>,
+				 <a href="events_message_event.js.html#sunlight-1-line-74">line 74</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">Delete the messageEvent</p>
+    
+    <pre class="sunlight-highlight-javascript"> messageEvent.del().then(() =&gt; {
+   console.log(&quot;message event deleted&quot;);
+ }).catch((error)=&gt;{
+	  console.log(&quot;error deleting message event  &quot;, error);
+ });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="fetchImage"><span class="type-signature">&lt;async> </span>fetchImage()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Download an Image from Media service</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="events_message_event.js.html">events/message_event.js</a>,
+				 <a href="events_message_event.js.html#sunlight-1-line-89">line 89</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the dataUrl &quot;data:image/jpeg;base64...&quot;</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">Downloading an image from the messageEvent</p>
+    
+    <pre class="sunlight-highlight-javascript"> messageEvent.fetchImage().then((imageData) =&gt; {
+   const img = new Image();
+   img.src = imageData;
+   document.body.appendChild(img);
+ }).catch((error) =&gt; {
+   console.log(&quot;error getting image &quot;, error);
+ });</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
@@ -142,6 +454,10 @@ module.exports = ErrorsEmitter;
 
 	<div class="clearfix"></div>
 
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3"></div>
+		</div>
 	
 
 </div>
