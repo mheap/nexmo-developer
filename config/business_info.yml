@@ -11,6 +11,9 @@ header:
         - try-it
         - get_an_api_key
         - start_building
+    sign-in:
+      path: https://dashboard.nexmo.com/sign-in
+      text: sign-in
 code_snippets:
   - title: 'Send an SMS'
     source: '_examples/messaging/sms/send-an-sms'
