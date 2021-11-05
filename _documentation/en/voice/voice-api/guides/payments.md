@@ -11,7 +11,6 @@ There are various scenarios when you may want to charge the user during the phon
 > Payments over the Phone are currently offered as [Developer Preview](/product-lifecycle/dev-preview). The feature can be used in your projects for supported scenarios (see below). The following limitations apply:
 <ul style='list-style:disc;margin-left:16px;margin-top:16px;'><li style='margin-bottom:16px;'>payment gateway configuration is being done by request,</li>
 <li style='margin-bottom:16px;'>The `pay` action supported for inbound calls only</li>
-<li style='margin-bottom:16px;'>US dollars are the only supported currency</li>
 <li style='margin-bottom:16px;'>Only Mastercard and Visa cards supported</li>
 <li style='margin-bottom:16px;'>[Stripe](https://www.stripe.com) is the only supported payment gateway</li>
 <li style='margin-bottom:16px;'>The feature is supported free of extra charge during Developer Preview.</li></ul>
@@ -193,9 +192,62 @@ Similarly to other actions, you can set a custom URL for the `pay` action status
 
 ### Amount
 
-Set the `amount` to be charged in US dollars as in the sample above.
+Set the `amount` to be charged as in the sample above.
 
-> In Developer Preview, only US dollars supported. More to come soon.
+### Currency
+
+US dollar is used as the currency by default. Use `currency` parameter to select the required one:
+
+```json
+[
+  {
+     "action": "pay",
+     "amount": 9.99,
+     "currency": "gbp",
+     "eventUrl": [ "https://www.example.com/webhooks/pay"]
+  }
+]
+```
+
+Supported currencies:
+
+ Code | Description 
+------|------------
+`aed` | United Arab Emirates dirham
+`ars` | Argentine peso
+`aud` | Australian dollar
+`bgn` | Bulgarian lev
+`brl` | Brazilian real
+`cad` | Canadian dollar
+`chf` | Swiss franc
+`clp` | Chilean peso
+`cop` | Colombian peso
+`crc` | Costa Rican colon
+`czk` | Czech koruna
+`dkk` | Danish krone
+`dop` | Dominican peso
+`eur` | Euro
+`gbp` | Pound sterling
+`hkd` | Hong Kong dollar
+`hrk` | Croatian kuna
+`huf` | Hungarian forint
+`idr` | Indonesian rupiah
+`ils` | Israeli new shekel
+`inr` | Indian rupee
+`isk` | Icelandic króna
+`jpy` | Japanese yen
+`mxn` | Mexican peso
+`myr` | Malaysian ringgit
+`nok` | Norwegian krone
+`nzd` | New Zealand dollar
+`pen` | Peruvian sol
+`pln` | Polish złoty
+`ron` | Romanian leu
+`sek` | Swedish krona
+`sgd` | Singapore dollar
+`thb` | Thai baht
+`usd` | United States dollar
+`uyu` | Uruguayan peso
 
 ### Text to Speech Voice
 You can select any of the supported Text to Speech voices and languages by adding the following parameters:
