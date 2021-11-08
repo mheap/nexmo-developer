@@ -425,6 +425,7 @@ The `pay` action collects credit card information with DTMF input in a secure ([
     "eventUrl": [
       "https://example.com/pay"
     ],
+    "currency": "eur",
     "amount": 9.99
   }
 ]
@@ -434,7 +435,8 @@ The following options can be used to control an `pay` action:
 
 Option | Description | Required
 -- | -- | --
-`amount` | Charge amount in US dollars, decimal value > `0`. | Yes
+`amount` | Charge amount, decimal value > `0`. | Yes
+`currency` | Currency code. Default value is `usd`, see the list of supported codes in the [guide](/voice/voice-api/guides/payments#currency). | No
 `eventUrl` | The URL to the webhook endpoint that is called asynchronously when payment is finished. | No
 `prompts` | Array of [Prompt settings](#prompts-text-settings) | No
 `voice` | [Text to speech voice settings](#prompts-voice-settings) | No
