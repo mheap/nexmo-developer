@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.2.1 - 2021-11-08
+
+### Fixed
+
+- Stash events while conversation is downloading to avoid missed events
+
 ## 3.2.0 - 2021-10-19
 
 ### Added
