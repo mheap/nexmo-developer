@@ -26,11 +26,11 @@ This document contains the following information:
 ## Basic, Standard and Advanced APIs
 Each API level builds upon the capabilities of the previous one. For example, the Standard API includes all of the locale and formatting information from the Basic API and returns extra data about the type of number, whether it is ported and the identity of the caller (US only). The Advanced API provides the most comprehensive data. It includes everything that is available in the Basic and Standard APIs and adds roaming and reachability information.
 
-> Unlike the Basic and Standard APIs which are synchronous APIs, the Advanced API is intended to be used asynchronously. 
+> Unlike the Basic and Standard APIs which are synchronous APIs, the Advanced API is intended to be used asynchronously.
 
 ### Typical use cases
 
-- **Basic API**: Discovering which country a number belongs to and using the information to format the number correctly. 
+- **Basic API**: Discovering which country a number belongs to and using the information to format the number correctly.
 - **Standard API**: Determining whether the number is a landline or mobile number (to choose between voice and SMS contact) and blocking virtual numbers.
 - **Advanced API**: Ascertaining the risk associated with a number.
 
@@ -54,7 +54,7 @@ CNAM (add-on) | ❌ | ✅ | ✅
 
 ## Getting Started
 
-This example shows you how to use the [Nexmo CLI](/tools) to access the Number Insight Basic API and display information about a number.
+This example shows you how to use the [Vonage CLI](/tools) to access the Number Insight Basic API and display information about a number.
 
 > For examples of how to use Basic, Standard and Advanced Number Insight with `curl` and the developer SDKs see the [Code Snippets](#code-snippets).
 
@@ -63,18 +63,18 @@ This example shows you how to use the [Nexmo CLI](/tools) to access the Number I
 * Sign up for a [Vonage API account](https://dashboard.nexmo.com/signup)
 * Install [Node.JS](https://nodejs.org/en/download/)
 
-### Install and set up the Nexmo CLI
+### Install and set up the Vonage CLI
 
 ```
-$ npm install -g nexmo-cli
+$ npm install -g @vonage/cli
 ```
 
 > Note: Depending on your user permissions, you might need to prefix the above command with `sudo`.
 
-Use your `VONAGE_API_KEY` and `VONAGE_API_SECRET` from the [dashboard getting started page](https://dashboard.nexmo.com/getting-started-guide) to set up the Nexmo CLI with your credentials:
+Use your `VONAGE_API_KEY` and `VONAGE_API_SECRET` from the [dashboard getting started page](https://dashboard.nexmo.com/getting-started-guide) to set up the Vonage CLI with your credentials:
 
 ```
-$ nexmo setup VONAGE_API_KEY VONAGE_API_SECRET
+$ vonage config:set --apiKey=VONAGE_API_KEY --apiSecret=VONAGE_API_SECRET
 ```
 
 ### Execute a Number Insight API Basic lookup
@@ -82,50 +82,25 @@ $ nexmo setup VONAGE_API_KEY VONAGE_API_SECRET
 Execute the example command shown below, replacing the phone number with one that you want information about:
 
 ```
-nexmo insight:basic 447700900000
+vonage numberinsight 15555555555
 ```
 
 ### View the response
 
-The Basic API response lists the number together with the country the number is located in. For example:
-
-```
-447700900000 | GB
-```
-Use the `--verbose` flag (or `-v`) to see everything that the Basic API response contains:
 
 ```text
-$ nexmo insight:basic --verbose 447700900000
+$ vonage numberinsight 15555555555
 
-[status]
-0
+Number Formats
+National: (555) 555-5555
+International: 15745144119
 
-[status_message]
-Success
-
-[request_id]
-aaaaaaaa-bbbb-cccc-dddd-0123456789ab
-
-[international_format_number]
-447700900000
-
-[national_format_number]
-07700 900000
-
-[country_code]
-GB
-
-[country_code_iso3]
-GBR
-
-[country_name]
-United Kingdom
-
-[country_prefix]
-44
+Country Details
+Country: United States of America
+Country Code: US
+ISO 3 Code: USA
+Prefix: 1
 ```
-
-
 
 
 ## Guides

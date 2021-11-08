@@ -27,7 +27,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li>
+					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="MessageEvent.html">MessageEvent</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
 				</ul>
 			</li>
 			
@@ -94,6 +94,8 @@ class RTCStatsAnalytics {
         if (!context || !context.application || !context.rtc_id || !context.pc) {
             return;
         }
+        this.conversation = null;
+        this.application_id = null;
         this.attachHandlers(context);
         this.startSendingStats(context);
         this.startEmittingStats(context);
@@ -113,6 +115,25 @@ class RTCStatsAnalytics {
                     this.emitLastReport(context);
             }
         };
+        if (!context.conversation) {
+            const application = context.application;
+            application.on("member:joined", (member, event) => {
+                var _a;
+                if ((!this.conversation || !this.application_id) &amp;&amp; ((_a = context) === null || _a === void 0 ? void 0 : _a.rtc_id) === event.body.channel.id) {
+                    this.conversation = member.conversation;
+                    this.application_id = event.application_id;
+                }
+            });
+        }
+        else {
+            const conversation = context.conversation;
+            conversation.on("member:media", (member, event) => {
+                var _a;
+                if (!this.application_id &amp;&amp; ((_a = context) === null || _a === void 0 ? void 0 : _a.rtc_id) === event.body.channel.id) {
+                    this.application_id = event.application_id;
+                }
+            });
+        }
     }
     emitLastReport(context) {
         const { application, conversation = null, rtc_id, config: { emit_events, emit_rtc_analytics }, } = context;
@@ -124,7 +145,13 @@ class RTCStatsAnalytics {
                     type: "mos_report",
                     mos,
                     rtc_id,
-                    mos_report
+                    mos_report,
+                    api_key: application.session.apiKey,
+                    ...(this.application_id &amp;&amp; { application_id: this.application_id }),
+                    ...(conversation &amp;&amp; {
+                        conversation_id: conversation.id,
+                        conversation_name: conversation.name
+                    })
                 });
             }
             if (emit_events) {
@@ -140,19 +167,28 @@ class RTCStatsAnalytics {
         }
     }
     startSendingStats(context) {
-        const { pc, rtc_id, config: { remote_collection, remote_collection_url, remote_collection_interval, }, } = context;
+        const { application, conversation = null, pc, rtc_id, config: { remote_collection, remote_collection_url, remote_collection_interval, }, } = context;
         if (!remote_collection)
             return;
-        const remote_collection_interval_id = window.setInterval(() => {
-            pc.getStats(null).then((stats) => {
-                const data = rtcStatsAdapterParser(stats);
-                data.legId = rtc_id;
+        const remote_collection_interval_id = setInterval(() => {
+            pc.getStats(null).then((report) => {
+                var _a;
+                const conv = (_a = (conversation !== null &amp;&amp; conversation !== void 0 ? conversation : this.conversation), (_a !== null &amp;&amp; _a !== void 0 ? _a : null));
                 utils_1.default.networkRequest({
                     url: remote_collection_url,
                     type: "POST",
-                    data,
-                });
-            });
+                    data: {
+                        ...rtcStatsAdapterParser(report),
+                        legId: rtc_id,
+                        apiKey: application.session.apiKey,
+                        ...(this.application_id &amp;&amp; { applicationId: this.application_id }),
+                        ...(conv &amp;&amp; {
+                            conversationId: conv.id,
+                            conversationName: conv.name
+                        })
+                    }
+                }).catch(() => { });
+            }).catch(() => { });
             if (pc.connectionState === "closed" || pc.signalingState === 'closed') {
                 this.removeIntervals();
             }
@@ -163,17 +199,26 @@ class RTCStatsAnalytics {
         const { application, conversation = null, pc, rtc_id, config: { emit_events, emit_rtc_analytics, emit_interval }, } = context;
         if (!emit_events &amp;&amp; !emit_rtc_analytics)
             return;
-        const emit_stats_interval_id = window.setInterval(() => {
+        const emit_stats_interval_id = setInterval(() => {
+            var _a;
             pc.getStats(null).then((stats) => {
+                var _a;
                 const mos = this.getMos(stats);
                 if (!mos)
                     return;
+                const conv = (_a = (conversation !== null &amp;&amp; conversation !== void 0 ? conversation : this.conversation), (_a !== null &amp;&amp; _a !== void 0 ? _a : null));
                 if (emit_rtc_analytics) {
                     application.emit("rtcstats:analytics", {
                         type: "mos",
                         mos,
                         report: stats,
                         rtc_id,
+                        api_key: application.session.apiKey,
+                        ...(this.application_id &amp;&amp; { application_id: this.application_id }),
+                        ...(conv &amp;&amp; {
+                            conversation_id: conv.id,
+                            conversation_name: conv.name
+                        })
                     });
                 }
                 if (emit_events) {
@@ -186,16 +231,19 @@ class RTCStatsAnalytics {
                      */
                     application.emit("rtcstats:report", mos, stats, conversation);
                 }
-            });
+            }).catch(() => { });
             if (pc.connectionState === "closed" || pc.signalingState === 'closed') {
                 this.removeIntervals();
-                this.emitLastReport(context);
+                this.emitLastReport({
+                    ...context,
+                    conversation: (_a = (conversation !== null &amp;&amp; conversation !== void 0 ? conversation : this.conversation), (_a !== null &amp;&amp; _a !== void 0 ? _a : null))
+                });
             }
         }, emit_interval);
         this.intervals.push(emit_stats_interval_id);
     }
     removeIntervals() {
-        this.intervals.forEach((interval) => window.clearInterval(interval));
+        this.intervals.forEach((interval) => clearInterval(interval));
         this.intervals = [];
     }
     getMos(stats) {
@@ -237,6 +285,7 @@ class RTCStatsAnalytics {
     }
 }
 exports.default = RTCStatsAnalytics;
+module.exports = RTCStatsAnalytics;
 </pre>
     </article>
 </section>
@@ -265,7 +314,7 @@ exports.default = RTCStatsAnalytics;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Thu Jul 15th 2021 using the <a
+	on Mon Nov 1st 2021 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>

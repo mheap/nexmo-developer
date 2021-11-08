@@ -84,6 +84,14 @@ navigation_overrides:
   voice:
     svg: 'phone'
     svgColor: 'green'
+    voice-api:
+      guides:
+        websockets:
+        asr:
+        signed-webhooks:
+          label: 'Beta'
+        payments:
+          label: 'Dev Preview'        
     sip:
       concepts:
         programmable-sip:

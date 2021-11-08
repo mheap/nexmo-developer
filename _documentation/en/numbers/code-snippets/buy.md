@@ -13,7 +13,7 @@ You need to purchase a Vonage [virtual number](/concepts/guides/glossary#virtual
 
 This page shows you how to buy a number programmatically.
 
-> You can also cancel a number online, using the [developer dashboard](https://dashboard.nexmo.com/your-numbers) or from the command line, using the [Nexmo CLI](https://github.com/Nexmo/nexmo-cli#buying-a-number).
+> You can also cancel a number online, using the [developer dashboard](https://dashboard.nexmo.com/your-numbers) or from the command line, using the [Vonage CLI](https://github.com/vonage/vonage-cli#buying-a-number).
 
 Replace the following variables in the sample code with your own values:
 

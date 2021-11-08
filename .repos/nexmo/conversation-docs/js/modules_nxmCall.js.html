@@ -27,7 +27,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li>
+					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="MessageEvent.html">MessageEvent</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
 				</ul>
 			</li>
 			
@@ -220,12 +220,18 @@ class NXMCall {
     */
     _attachCallListeners() {
         // Conversation level listeners
-        this.conversation.releaseGroup('call_module');
-        this.conversation.on('member:media', 'call_module', (from, event) => {
-            if (this.application.calls &amp;&amp; this.application.calls.has(this.conversation.id)) {
-                this.application.calls.get(this.conversation.id)._handleStatusChange(event);
-            }
-        });
+        this.log.debug("_attachCallListeners : ", { nxmCall: this });
+        try {
+            this.conversation.releaseGroup('call_module');
+            this.conversation.on('member:media', 'call_module', (from, event) => {
+                if (this.application.calls &amp;&amp; this.application.calls.has(this.conversation.id)) {
+                    this.application.calls.get(this.conversation.id)._handleStatusChange(event);
+                }
+            });
+        }
+        catch (e) {
+            this.log.error("_attachCallListeners_error: ", { e });
+        }
     }
     /**
      * Validate the current nxmCall status transition
@@ -257,6 +263,7 @@ class NXMCall {
      * @returns {Promise} - empty promise or the nxmCall.hangUp promise chain
     */
     hangUpIfAllLeft() {
+        this.log.debug("hangUpIfAllLeft: ", { nxmCall: this });
         if (!this.conversation.me || this.conversation.me.state === 'LEFT' || this.conversation.members.size &lt;= 1) {
             return Promise.resolve();
         }
@@ -303,6 +310,7 @@ class NXMCall {
         // for knocking case the conversation object is not yet set in the nxmCall. We know the action is initiated from us
         const _isEventFromMe = (this.conversation) ? this.conversation.me.id === event.from : true;
         const _isOutbound = this.direction === this.CALL_DIRECTION.OUTBOUND;
+        this.log.debug("_handleStatusChange: ", { event }, `_isEventFromMe: ${_isEventFromMe} _isOutbound: ${_isOutbound}`);
         let _handleStatusChangeMap = new Map();
         _handleStatusChangeMap.set('member:joined', async () => {
             if (event.body.channel &amp;&amp; event.body.channel.id) {
@@ -405,6 +413,7 @@ class NXMCall {
             return;
         }
         this.status = status;
+        this.log.debug(`_setStatusAndEmit: ${status}`, { nxmCall: this });
         this.application.emit('call:status:changed', this);
     }
     /**
@@ -416,6 +425,7 @@ class NXMCall {
      * @returns {Promise&lt;Audio>}
     */
     async answer(autoPlayAudio = true) {
+        this.log.debug(`answer: { autoPlayAudio: ${autoPlayAudio}`);
         if (this.conversation) {
             try {
                 await this.conversation.join();
@@ -445,6 +455,7 @@ class NXMCall {
      * @private
     */
     async createCall(usernames, autoPlayAudio = true) {
+        this.log.debug(`createCall: { usernames: ${usernames}, autoPlayAudio: ${autoPlayAudio} }`);
         if (!usernames || !Array.isArray(usernames) || usernames.length === 0) {
             return Promise.reject(new nexmoClientError_1.NexmoClientError('error:application:call:params'));
         }
@@ -508,7 +519,8 @@ class NXMCall {
      * @returns {Promise}
      * @private
     */
-    async createServerCall(user, type) {
+    async createServerCall(user, type, custom_data) {
+        this.log.debug(`createServerCall: { user: ${user}, type: ${type}, custom_data: `, { custom_data });
         const to = {
             type
         };
@@ -521,6 +533,7 @@ class NXMCall {
         try {
             // PrewarmLeg
             const { stream, legId, rtcObjects } = await rtc_helper_1.default.prewarmLeg(this);
+            this.log.debug("createServerCall: ", { stream }, { legId }, { rtcObjects });
             // Add Media to the Call Object
             this.rtcObjects = rtcObjects;
             this.stream = stream;
@@ -537,11 +550,17 @@ class NXMCall {
                         from: { type: 'app' },
                         to,
                         id: legId || null
-                    }
+                    },
+                    ...(custom_data &amp;&amp; Object.keys(custom_data).length &amp;&amp; { properties: { custom_data } })
                 }
             };
-            const knockingResponse = await this.application.session.sendNetworkRequest(params);
-            this.knocking_id = knockingResponse.id;
+            try {
+                const knockingResponse = await this.application.session.sendNetworkRequest(params);
+                this.knocking_id = knockingResponse.id;
+            }
+            catch (error) {
+                throw new nexmoClientError_1.NexmoApiError(error);
+            }
             // If knocking request doesn't result in member:joined after set time disable audio, cleanup media
             rtc_helper_1.default.cleanCallMediaIfFailed(this);
             return stream;
@@ -549,7 +568,7 @@ class NXMCall {
         catch (error) {
             // If knocking request fails disable audio, cleanup media
             rtc_helper_1.default.cleanMediaProperties(this);
-            throw new nexmoClientError_1.NexmoApiError(error);
+            throw error;
         }
     }
     /**
@@ -566,6 +585,7 @@ class NXMCall {
      * @returns {Promise}
     */
     async hangUp(reason) {
+        this.log.debug(`hangUp: { reason: ${reason} }`);
         if (this.conversation) {
             await this.conversation.media.disable();
         }
@@ -598,7 +618,7 @@ class NXMCall {
             catch (error) {
                 // Don't switch yet to fail status, it could be an expected race between knocking:delete and conversation.leave
                 if (!this.conversation) {
-                    this.log.debug('Problem cancelling the call: Knocking cancel failed and Conversation. Leave not available');
+                    this.log.debug('hangup: Problem cancelling the call. Knocking cancel failed and Conversation. Leave not available', error);
                     return;
                 }
                 else {
@@ -618,6 +638,7 @@ class NXMCall {
      * @returns {Promise}
     */
     reject(reason) {
+        this.log.debug(`reject: { reason: ${reason} }`);
         if (this.conversation) {
             return this.conversation.leave(reason);
         }
@@ -656,7 +677,7 @@ module.exports = NXMCall;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Thu Jul 15th 2021 using the <a
+	on Mon Nov 1st 2021 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>

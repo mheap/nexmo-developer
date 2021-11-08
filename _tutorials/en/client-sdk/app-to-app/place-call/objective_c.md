@@ -20,7 +20,7 @@ When the `callButton` is tapped it will call the `makeCall` function. Add it to 
 - (void)makeCall {
     [self setStatusLabelText:[NSString stringWithFormat:@"Calling %@", self.user.callPartnerName]];
     
-    [self.client call:self.user.callPartnerName callHandler:NXMCallHandlerServer completionHandler:^(NSError * _Nullable error, NXMCall * _Nullable call) {
+    [self.client serverCallWithCallee:self.user.callPartnerName customData:nil completionHandler:^(NSError * _Nullable error, NXMCall * _Nullable call) {
         if (error) {
             [self setStatusLabelText:error.localizedDescription];
             return;
@@ -37,7 +37,7 @@ The `makeCall` function uses the `NXMClient` instance to make the call. The Clie
 
 > **NOTE:** Also, please make sure that the webhook server you built in the previous steps is still running. 
 
-Press `Cmd + R` to build and run again. You now have a functioning call app! To test it out you can run the app on two different simulators/devices, and call the device logged in as the Alice user from the device logged in as the Bob user:
+Press `Cmd + R` to build and run again. You now have a functioning call app! To test it out you can run the app on two different simulators/devices, and make calls between the two users:
 
 ![Sent messages](/images/client-sdk/ios-in-app-voice/active-call.png)
 

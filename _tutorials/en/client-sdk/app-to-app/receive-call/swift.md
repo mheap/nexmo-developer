@@ -5,7 +5,7 @@ description: In this step you learn how to receive an in-app call
 
 # Receiving a call
 
-Now that the calling interface is built, you can now add the code needed receive a call. The `NXMClientDelegate` has a function that is called when there is an incoming call. Add an implementation for it in the `NXMClientDelegate` extension in the `ViewController.swift` file.
+Now that the calling interface is built, you can now add the code needed to receive a call. The `NXMClientDelegate` has a function that is called when there is an incoming call. Add an implementation for it in the `NXMClientDelegate` extension in the `ViewController.swift` file.
 
 ```swift
 extension ViewController: NXMClientDelegate {
@@ -47,10 +47,7 @@ class CallViewController: UIViewController {
     }
     
     private func displayIncomingCallAlert(call: NXMCall) {
-        var from = "Unknown"
-        if let otherParty = call.allMembers.firstObject {
-            from = otherParty.user.name
-        }
+        let from = call.myMember?.channel?.from.data ?? "Unknown"
 
         let alert = UIAlertController(title: "Incoming call from", message: from, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Answer", style: .default, handler: { _ in

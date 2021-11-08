@@ -31,6 +31,8 @@ You can work around this issue by sending your API request to the correct region
 * https://api-eu-2.nexmo.com (Amsterdam)
 * https://api-sg-1.nexmo.com (Singapore)
 
+API endpoint corresponding to particular call is returned as `region_url` parameter in [Answer webhook](/voice/voice-api/webhook-reference#answer-webhook).
+
 The following are examples of how to override the default hosts using the [Vonage Server SDKs](/tools):
 
 ```tabbed_content

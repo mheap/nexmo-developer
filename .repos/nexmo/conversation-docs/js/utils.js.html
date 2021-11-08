@@ -27,7 +27,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li>
+					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="MessageEvent.html">MessageEvent</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
 				</ul>
 			</li>
 			
@@ -70,6 +70,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Copyright (c) Nexmo Inc.
  */
 const uuid_1 = __importDefault(require("uuid"));
+const application_1 = __importDefault(require("./application"));
 /**
  * Utilities class for the SDK.
  *
@@ -174,6 +175,7 @@ class Utils {
      * @param {string} [params.order] 'asc' or 'desc' ordering of resources (usually based on creation time)
      * @param {string} [params.event_type] the type of event used to filter event requests ('member:joined', 'audio:dtmf', etc)
      * @param {string} token the jwt token for the network request
+     * @param {string} [version=Application.CONVERSATION_API_VERSION.v1] version of conversation service that is used for the request (one of v1 and v3)
      *
      * @returns {Promise&lt;XMLHttpRequest.response>} the XMLHttpRequest
      * @static
@@ -189,7 +191,7 @@ class Utils {
      *      response.order: 'asc',
      *   });
      */
-    static async paginationRequest(url, params, token) {
+    static async paginationRequest(url, params, token, version = application_1.default.CONVERSATION_API_VERSION.v1) {
         try {
             const xhr = await Utils.networkRequest({
                 type: 'GET',
@@ -199,7 +201,7 @@ class Utils {
             const { page_size, _embedded, _links } = xhr.response;
             const resource = url.split('/').pop().trim();
             return {
-                items: _embedded.data[resource],
+                items: (version === application_1.default.CONVERSATION_API_VERSION.v1) ? _embedded.data[resource] : _embedded[resource],
                 cursor: {
                     prev: _links.prev ? new URLSearchParams(_links.prev.href).get('cursor') : '',
                     next: _links.next ? new URLSearchParams(_links.next.href).get('cursor') : '',
@@ -332,6 +334,10 @@ class Utils {
      */
     static _isCallEvent(event) {
         const { channel, media } = event.body;
+        // in case we have a transfer we should fetch the conversation
+        // including the new membership
+        if (event.type === "rtc:transfer")
+            return true;
         // this check differentiates the call flow with the non call
         // IP-PSTN (member:joined) should have an knocking_id inside the channel
         // PSTN-IP and IP-IP (member:invited) should have audio_settings.enabled = true
@@ -340,6 +346,32 @@ class Utils {
             return true;
         }
         return false;
+    }
+    /**
+     * Fetch an image from Media Service
+     * @private
+     */
+    static async _fetchImage(url, token) {
+        const { response } = await Utils.networkRequest({
+            type: 'GET',
+            url,
+            responseType: 'arraybuffer',
+            token
+        });
+        const responseArray = new Uint8Array(response);
+        // Convert the int array to a binary String
+        // We have to use apply() as we are converting an *array*
+        // and String.fromCharCode() takes one or more single values, not
+        // an array.
+        // support large image files (Chunking)
+        let res = '';
+        const chunk = 8 * 1024;
+        let i;
+        for (i = 0; i &lt; responseArray.length / chunk; i++) {
+            res += String.fromCharCode.apply(null, responseArray.subarray(i * chunk, (i + 1) * chunk));
+        }
+        res += String.fromCharCode.apply(null, responseArray.subarray(i * chunk));
+        return 'data:image/jpeg;base64,' + btoa(res);
     }
 }
 exports.default = Utils;
@@ -372,7 +404,7 @@ module.exports = Utils;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Thu Jul 15th 2021 using the <a
+	on Mon Nov 1st 2021 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>

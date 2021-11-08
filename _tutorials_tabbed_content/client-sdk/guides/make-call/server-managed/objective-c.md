@@ -5,7 +5,7 @@ menu_weight: 2
 ---
 
 ```objective_c
-[[NXMClient shared] call:userName callHandler:NXMCallHandlerServer 
+[[NXMClient shared] serverCallWithCallee:userName customData:nil 
         completionHandler:^(NSError * _Nullable error, NXMCall * _Nullable call) {
     if(error) {
         // Handle create call failure

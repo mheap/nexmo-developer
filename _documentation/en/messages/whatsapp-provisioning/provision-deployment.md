@@ -33,10 +33,10 @@ Certificate (associated with your phone number)
 5. Click the **View** button (in the **Certificate** column).
 6. Copy the associated certificate to your clipboard and paste it in a separate document. You will need it in a subsequent step.
 
-## Install CLI
+## Install  the Vonage CLI
 
-```
-npm install nexmo-cli@beta -g
+```partial
+source: _partials/reusable/install-vonage-cli.md
 ```
 
 ## Create a Vonage Application
@@ -45,13 +45,13 @@ A Vonage API application contains the security and configuration information you
 
 > Note: Your WhatsApp account must be connected to your Vonage account before you can link it to a Vonage application. You can connect your WhatsApp account to your Vonage account via the [Vonage API Dashboard](https://dashboard.nexmo.com/messages/social-channels).
 
-* Both CLI and Dashboard examples are [here](https://developer.nexmo.com/messages/code-snippets/create-an-application)
+* Both CLI and Dashboard examples are [here](https://developer.vonage.com/messages/code-snippets/create-an-application)
 
 
 ## Generate your JWT
 
-```
-export JWT=$(nexmo jwt:generate $PATH_TO_PRIVATE_KEY application_id=$NEXMO_APPLICATION_ID)
+```partial
+source: _partials/reusable/generate-a-jwt.md
 ```
 
 ### Provision WhatsApp Deployment

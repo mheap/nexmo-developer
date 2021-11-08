@@ -6,6 +6,218 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.3.0 - November 01, 2021
+
+### New
+
+- Added new `uploadImage()` function to upload an image to the Vonage Media Service
+
+```javascript
+const params = {
+  quality_ratio : "90",
+  medium_size_ratio: "40",
+  thumbnail_size_ratio: "20"
+};
+
+conversation.uploadImage(fileInput.files[0], params).then((uploadImageRequest) => {
+  uploadImageRequest.onprogress = (e) => {
+    console.log("Image request progress: ", e);
+    console.log("Image progress: " + e.loaded + "/" + e.total);
+  };
+  uploadImageRequest.onabort = (e) => {
+    console.log("Image request aborted: ", e);
+    console.log("Image: " + e.type);
+  };
+  uploadImageRequest.onloadend = (e) => {
+    console.log("Image request successful: ", e);
+    console.log("Image: " + e.type);
+  };
+  uploadImageRequest.onreadystatechange = () => {
+    if (uploadImageRequest.readyState === 4 && uploadImageRequest.status === 200) {
+      const representations = JSON.parse(uploadImageRequest.responseText);
+      console.log("Original image url: ", representations.original.url);
+      console.log("Medium image url: ", representations.medium.url);
+      console.log("Thumbnail image url: ", representations.thumbnail.url);
+    }
+  };
+}).catch((error) => {
+  console.error("error uploading the image ", error);
+});
+```
+
+- Added new `sendMessage()` function to send a new `message` to the conversation (supported types are `text`, `image`, `audio`, `video` and `file`)
+
+```javascript
+conversation.sendMessage({
+  "message_type": "text",
+  "text": "Hi Vonage!"
+}).then((event) => {
+  console.log("message was sent", event);
+}).catch((error)=>{
+  console.error("error sending the message ", error);
+});
+```
+
+```javascript
+conversation.sendMessage({
+  "message_type": "image",
+  "image": {
+    "url": "https://example.com/image.jpg"
+  }
+})
+.then((event) => {
+  console.log("message was sent", event);
+}).catch((error)=>{
+  console.error("error sending the message ", error);
+});
+```
+
+- Added new `MessageEvent` type of event
+
+```javascript
+conversation.on("message", (member, messageEvent) => {
+  console.log(messageEvent);
+});
+```
+
+### Changes
+
+- Deprecate `sendText()` function (use `sendMessage()` with a type of `text` instead)
+
+```javascript
+conversation.sendMessage({ "message_type": "text", "text": "Hi Vonage!" }).then((event) => {
+  console.log("message was sent", event);
+}).catch((error)=>{
+  console.error("error sending the message ", error);
+});
+```
+
+- Deprecate `sendImage()` function (use `uploadImage()` and `sendMessage()` with a type of `image` instead)
+
+```javascript
+conversation.uploadImage(imageFile).then((imageRequest) => {
+  imageRequest.onreadystatechange = () => {
+    if (imageRequest.readyState === 4 && imageRequest.status === 200) {
+      try {
+        const { original, medium, thumbnail } = JSON.parse(imageRequest.responseText);
+        const message = {
+          message_type: 'image',
+          image: {
+            url: original.url ?? medium.url ?? thumbnail.url
+          }
+        }
+        return conversation.sendMessage(message);
+      } catch (error) {
+        console.error("error sending the message ", error);
+      }
+    }
+    if (imageRequest.status !== 200) {
+      console.error("error uploading the image");
+    }
+  };
+  return imageRequest;
+})
+.catch((error) => {
+  console.error("error uploading the image ", error);
+});
+```
+
+## Version 8.2.5 - October 12, 2021
+
+### Fix
+
+- Fix error handling for audio permissions
+
+## Version 8.2.2 - October 08, 2021
+
+### Fix
+
+- Enhance debug logs
+
+## Version 8.2.0 - September 28, 2021
+
+### New
+
+- Add new `getUserSessions()` function to fetch the sessions of the logged in user
+
+```javascript
+application.getUserSessions({ user_id: "USR-id", page_size: 20 }).then((user_sessions_page) => {
+  user_sessions_page.items.forEach(user_session => {
+    render(user_session)
+  })
+}).catch((error) => {
+  console.error(error);
+});
+```
+
+## Version 8.1.1 - September 08, 2021
+
+### New
+
+- Add new optional `mediaParams` parameter in `reconnectCall` function, in order to modify the `MediaStream` object
+
+```javascript
+application.reconnectCall(
+  "conversation_id",
+  "rtc_id",
+  { audioConstraints: { deviceId: "device_id" } }
+).then((nxmCall) => {
+  console.log(nxmCall);
+}).catch((error) => {
+  console.error(error);
+});
+```
+
+- Update `media.enable()` docs to include audio constraints
+
+### Fixes
+
+- Assign the correct `NXMCall` status when reconnecting to a call (`STARTED`, `RINGING` or `ANSWERED`)
+
+### Changes
+
+- Update `npm` dependencies
+
+## Version 8.1.0 - September 02, 2021
+
+### New
+
+- Add `reconnectCall` function allowing users to reconnect to a call within 20 seconds if browser tab closed
+
+```javascript
+application.reconnectCall("conversation_id", "rtc_id").then((nxmCall) => {
+  console.log(nxmCall);
+}).catch((error) => {
+  console.error(error);
+});
+```
+
+- Add optional parameter `reconnectRtcId` to media `enable()` function to reconnect media to call
+
+```javascript
+conversation.media.enable({ reconnectRtcId: "UUID" }).then((stream) => {
+  console.log(stream)
+}).catch((error) => {
+  console.error("error renabling media", error);
+});
+```
+
+- Add `custom_data` object in `callServer` function
+
+```javascript
+application.callServer("<phone_number>", "phone", { field1: "test" }).then((nxmCall) => {
+  console.log(nxmCall);
+}).catch((error) => {
+  console.error(error);
+});
+```
+
+- Add `apiKey`, `applicationId`, `conversationId` and `conversationName` when available in `rtcstats` analytics reports
+
+### Fixes
+
+- Fix bug in call transfer where `transferred_from` was undefined
+
 ## Version 8.0.5 - July 15, 2021
 
 ### Fixes

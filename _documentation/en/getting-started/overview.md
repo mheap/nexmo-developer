@@ -16,7 +16,7 @@ However, there are some fundamental concepts that you need to understand and too
 
 - [Signing up for an account](#signing-up-for-an-account)
 - [Accessing the Developer Dashboard](#accessing-the-developer-dashboard)
-- [Using the Nexmo CLI](#using-the-nexmo-cli)
+- [Using the Vonage CLI](#using-the-vonage-cli)
 - [Experimenting with our APIs](#experimenting-with-our-apis)
 - [Using a Server SDK](#using-a-server-sdk)
 - [Working with Webhooks](#working-with-webhooks)
@@ -36,15 +36,15 @@ Once you have an account, you can log into the [Developer Dashboard](/account/gu
 * **Manage applications**. Some of our APIs (such as Voice and Messages) require you to create an [Application](/application/overview), which acts as a container for security and configuration information. You can create and manage these applications in the Developer Dashboard.
 * **Manage your account**. You can perform [other administration tasks](/account/guides/dashboard-management) here.
 
-## Using the Nexmo CLI
+## Using the Vonage CLI
 
-You can optionally perform many of the Dashboard tasks from the command line, using the Nexmo CLI. This is often quicker and also allows you to script these operations.
+You can optionally perform many of the Dashboard tasks from the command line, using the Vonage CLI. This is often quicker and also allows you to script these operations.
 
-The Nexmo CLI is written in Node.js and installed using the Node Package Manager (`npm`). The `README` in the [Nexmo CLI GitHub repo](https://github.com/Nexmo/nexmo-cli) shows you how to install and work with the Nexmo CLI.
+The Vonage CLI is written with `oclif` and can be installed using the Node Package Manager (`npm`). The `README` in the [Vonage CLI GitHub repo](https://github.com/Vonage/vonage-cli) shows you how to install and work with the Vonage CLI.
 
 ## Authentication
 
-When using the Vonage APIs your requests need to be [authenticated](/concepts/authentication). Typically this is done using [Basic Authentication](/concepts/authentication#basic-authentication) or [JWTs](/concepts/authentication#jwts). You can generate a suitable JWT using the Nexmo CLI, or our [online tool](/jwt).
+When using the Vonage APIs your requests need to be [authenticated](/concepts/authentication). Typically this is done using [Basic Authentication](/concepts/authentication#basic-authentication) or [JWTs](/concepts/authentication#jwts). You can generate a suitable JWT using the Vonage CLI, or our [online tool](/jwt).
 
 ## Experimenting with our APIs
 
@@ -64,12 +64,12 @@ Each of our APIs has its own [OpenAPI specification](/api). You can read more ab
 
 When you are ready to start building your app, you’ll want to use one of our Server SDKs instead of coding each request by hand. We have SDKs for the following programming languages:
 
-- [Node.js](https://github.com/nexmo/nexmo-node)
-- [Java](https://github.com/nexmo/nexmo-java)
-- [.NET](https://github.com/nexmo/nexmo-dotnet)
-- [PHP](https://github.com/nexmo/nexmo-php)
-- [Python](https://github.com/nexmo/nexmo-python)
-- [Ruby](https://github.com/nexmo/nexmo-ruby)
+- [Node.js](https://github.com/Vonage/vonage-node-sdk)
+- [Java](https://github.com/Vonage/vonage-java-sdk)
+- [.NET](https://github.com/Vonage/vonage-dotnet-sdk)
+- [PHP](https://github.com/Vonage/vonage-php-sdk-core)
+- [Python](https://github.com/Vonage/vonage-python-sdk)
+- [Ruby](https://github.com/Vonage/vonage-ruby-sdk)
 
 Click on the link for your chosen language to visit that SDK’s GitHub repo page, where you can learn how to install and use it.
 
@@ -83,13 +83,13 @@ These endpoints are called Webhooks. [Find out more about webhooks](/concepts/gu
 
 Making these webhooks publicly-accessible during development can be tricky, so we recommend a tool called [Ngrok](https://ngrok.com/).
 
-Visit our guide on [testing with Ngrok](https://developer.nexmo.com/tools/ngrok) to learn how to use it.
+Visit our guide on [testing with Ngrok](https://developer.vonage.com/tools/ngrok) to learn how to use it.
 
 ## What to do next
 
 This guide introduced you to some of the fundamental concepts and tools that you should know about when working with our APIs.
 
-> Learn more in our [Concepts](/concepts/overview) and [Tools](https://developer.nexmo.com/tools) sections.
+> Learn more in our [Concepts](/concepts/overview) and [Tools](https://developer.vonage.com/tools) sections.
 
 Once you understand these fundamental concepts and have installed the tools you intend to use, you are ready to start building! View the documentation for your chosen API to get started, or try out some of the following starter tasks:
 

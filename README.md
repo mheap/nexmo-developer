@@ -7,9 +7,6 @@ This repository is the content for <https://developer.nexmo.com>, which includes
 
 ### [Testing](#testing) &middot; [Running Locally](#running-locally) &middot; [Admin Dashboard](#admin-dashboard) &middot; [Troubleshooting](#troubleshooting) &middot; [Contributing](#contributing) &middot; [License](#license)
 
-
-
-
 ## Testing
 
 ### Spell Checking
@@ -50,45 +47,47 @@ The project can be run on your laptop, either directly or using Docker. These in
 
 #### System Setup (OSX)
 
-1. Install Homebrew
+1.  Install Homebrew
 
     ```bash
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```
 
-2. Install required packages, create database and configure `git`.
+2.  Install required packages, create database and configure `git`.
 
-    Note: A default database is created for you when you run the `db:setup` script. If you'd like to create and
-use a different database or user, use `createdb database_name_here` or `createuser username_here` and make sure your
-`.env` file is updated accordingly (See [.env.example](https://github.com/Nexmo/nexmo-developer/blob/master/.env.example)).
-    
+    > Note: A default database is created for you when you run the `db:setup` script. If you'd like to create and use a different database or user, use `createdb database_name_here` or `createuser username_here` and make sure your `.env` file is updated accordingly (See [.env.example](https://github.com/Nexmo/nexmo-developer/blob/master/.env.example)).
+
     ```bash
     brew install postgres rbenv git nvm redis
     brew services start postgresql
     brew services start redis
+    ```
+
+    If you have not already, update git config with your name and email address.
     
+    ```
     git config --global user.name "NAME"
     git config --global user.email "user.name@vonage.com"
     ```
 
-3. Generate an SSH key for authentication
+3.  Generate an SSH key for authentication
 
     ```bash
     ssh-keygen -t rsa
     cat .ssh/id_rsa.pub # Add to GitHub
     ```
 
-4. Clone ADP to your local machine:
+4.  Clone ADP to your local machine:
 
     ```bash
     git clone git@github.com:Nexmo/nexmo-developer.git
     cd nexmo-developer
     ```
 
-4. Copy the contents of the example file: `cp .env.example .env` and check if it worked by running `cat .env` (it should produce an output)
-5. Open the file: `code .env`, find the redis line (probably line 35) and comment it out
+5.  Copy the contents of the example file: `cp .env.example .env` and check if it worked by running `cat .env` (it should produce an output)
+6.  Open the file: `code .env`, find the redis line (probably line 35) and comment it out
 
-5. Install the correct versions of ruby, as well as dependencies:
+7.  Install the correct versions of ruby, as well as dependencies:
 
     ```bash
     rbenv install 2.7.2
@@ -97,15 +96,16 @@ use a different database or user, use `createdb database_name_here` or `createus
     bundle install
     ```
 
-   - If you're getting error `rbenv: commend not found` run `brew update && brew update ruby-build`.
-   - If you're getting `ruby-build definition not found 2.7.2`, you need to update the xcode: `xcode-select --install`
-   - **NOTE**: If you use `rvm`: `rvm --default use 2.7.2 && gem install bundle && bundle install`
+    -   If you're getting error `rbenv: commend not found` run `brew update && brew update ruby-build`.
+    -   If you're getting `ruby-build definition not found 2.7.2`, you need to update the xcode: `xcode-select --install`
+    -   **NOTE**: If you use `rvm`: `rvm --default use 2.7.2 && gem install bundle && bundle install`
 
-6. Set up access to submodules: `git submodule init && git submodule update` and then `git config --global submodule.recurse true`
-7. Start postgres: `brew services start postgresql` and if that doesn't work `brew services restart postgresql`.
-   - If you're getting "PG::ConnectionBad - could not connect to server: Connection refused", you can try installing the correct version or re-install postgres: `brew uninstall postgresql && rm -rf /usr/local/bin/postgres && rm -rf .psql_history .psqlrc .psql.local .pgpass .psqlrc.local && brew update && brew install postgres`
+8.  Set up access to submodules: `git submodule init && git submodule update` and then `git config --global submodule.recurse true`
+9.  Start postgres: `brew services start postgresql` and if that doesn't work `brew services restart postgresql`.
 
-8. Start the local server: 
+    -   If you're getting `PG::ConnectionBad - could not connect to server: Connection refused`, you can try installing the correct version or re-install postgres: `brew uninstall postgresql && rm -rf /usr/local/bin/postgres && rm -rf .psql_history .psqlrc .psql.local .pgpass .psqlrc.local && brew update && brew install postgres`
+
+10. Start the local server:
 
     ```bash
     OAS_PATH=“pwd/_open_api/api_specs/definitions” bundle exec nexmo-developer --docs=`pwd` --rake-ci`
@@ -122,11 +122,50 @@ $ git clone git@github.com:Nexmo/nexmo-developer.git
 $ cd nexmo-developer
 ```
 
+Set up access to submodules with the following two commands:
+
+```
+git submodule init && git submodule update
+```
+
+and then:
+
+```
+git config --global submodule.recurse true
+```
+
+There are two ways to run docker-compose.
+
+#### Foreground in terminal
+
 ```bash
 $ docker-compose up
 ```
 
-Once `docker-compose up` has stopped returning output, open a new terminal and run `docker-compose run web bundle exec rake db:migrate`.
+Once you can see the logs have booted the containers, open a new terminal window and proceed to running the migrations.
+
+#### Background in terminal
+
+You can also run docker as a background process by adding the switch to run it as a daemon. To do this, first run the following:
+
+```bash
+$ docker-compose up -d
+```
+
+Now check that your containers have booted by running `docker ps`. You should see the following two containers running:
+
+```
+nexmo-developer_web_1
+nexmo-developer_db_1
+```
+
+Once you've confirmed that both containers are running, it's time to run the migrations.
+
+#### Running the migrations
+
+```
+docker-compose run web bundle exec rake db:migrate
+```
 
 At this point, open your browser to http://localhost:3000/ and you should see the homepage. The first time you click on `Documentation` it might take 5 seconds or so, but any further page loads will be almost instantaneous.
 
@@ -170,20 +209,19 @@ git submodule update
 
 Make sure you are _inside_ the directory that is a submodule.
 
-- make your changes
-- commit your changes
-- _push your changes from here_ (this is the bit that normally trips us up)
-- open a pull request on the submodule's repository - we can't open the PR on the main repo until this is merged
+-   make your changes
+-   commit your changes
+-   _push your changes from here_ (this is the bit that normally trips us up)
+-   open a pull request on the submodule's repository - we can't open the PR on the main repo until this is merged
 
 You are not done, keep reading! A second pull request is needed to update the main repo, including any other changes to that repo _and_ an update to the submodule pointing to the new (merged) commit to use.
 
-- open your PR for this change including any changes to the main project (so we don't lose it) but label it "don't merge" and add the URL of the submodule PR we're waiting for
-- once the submodule has the change you need on its master branch, change into the subdirectory and `git pull`
-- change directory back up to the root of the project
-- commit the submodules changes
-- _push these changes too_
-- Now we can review your PR
-
+-   open your PR for this change including any changes to the main project (so we don't lose it) but label it "don't merge" and add the URL of the submodule PR we're waiting for
+-   once the submodule has the change you need on its master branch, change into the subdirectory and `git pull`
+-   change directory back up to the root of the project
+-   commit the submodules changes
+-   _push these changes too_
+-   Now we can review your PR
 
 ### Bringing submodule changes into ADP
 
@@ -193,7 +231,7 @@ Make a branch, change into the submodule directory and `git pull` or do whatever
 
 ### Further advice and resources for successful submodule usage
 
-Never `git add .` this will make bad things happen with submodules.  Try `git add -p` instead. You're welcome.
+Never `git add .` this will make bad things happen with submodules. Try `git add -p` instead. You're welcome.
 
 If you're not sure what to do, ask for help. It's easier to lend a hand along the way than to rescue it later!
 
@@ -225,12 +263,13 @@ Once PostgreSQL is running you'll need to create and migrate the database. See [
 
 Volta is the Vonage design system, and is used to style the Vonage API Developer Portal. To upgrade the version of Volta used:
 
-* Clone Volta on to your local machine
-* Remove the `app/assets/volta/scss` folder in the Vonage API Developer Portal
-* Copy the `scss` folder from the Volta repo in to `app/assets/volta`
-* Commit and push. Rails will take care of compilation etc
+-   Clone Volta on to your local machine
+-   Remove the `app/assets/volta/scss` folder in the Vonage API Developer Portal
+-   Copy the `scss` folder from the Volta repo in to `app/assets/volta`
+-   Commit and push. Rails will take care of compilation etc
 
 ## Contributing
+
 We :heart: contributions from everyone! It is a good idea to [talk to us](https://nexmo-community-invite.herokuapp.com/) first if you plan to add any new functionality. Otherwise, [bug reports](https://github.com/Nexmo/nexmo-developer/issues/), [bug fixes](https://github.com/Nexmo/nexmo-developer/pulls) and feedback on the library are always appreciated. Look at the [Contributor Guidelines](CONTRIBUTING.md) for more information and please follow the [GitHub Flow](https://guides.github.com/introduction/flow/index.html).
 
 ## [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues) [![GitHub contributors](https://img.shields.io/github/contributors/Nexmo/nexmo-developer.svg)](https://GitHub.com/Nexmo/nexmo-developer/graphs/contributors/)
@@ -270,7 +309,7 @@ git push origin your-branch-name
 Create a pull request in GitHub:
 
 1. In the `nexmo-developer` repository, click the Pull requests tab.
-2. Click the Compare and new pull request button next to your branch in the list. 
+2. Click the Compare and new pull request button next to your branch in the list.
 3. Review the changes between your branch and master.
 4. Add a Description of the changes.
 5. Click the Create pull request button.

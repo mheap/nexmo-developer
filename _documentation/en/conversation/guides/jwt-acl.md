@@ -80,12 +80,12 @@ You should provide the user you are generating with permissions to access only t
 
 ## Vonage Server SDKs
 
-### CLI
+### Vonage CLI
 
-Currently, you can use the beta version of the [Nexmo CLI](https://github.com/Nexmo/nexmo-cli/tree/beta) to create a JWT [including the appropriate claims](https://github.com/Nexmo/nexmo-cli/tree/beta#jwt)
+You can use the [Vonage CLI](https://github.com/vonage/vonage-cli) to create a JWT including the appropriate claims.
 
 ```sh
-nexmo jwt:generate ./private.key sub=alice exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=YOUR_APP_ID
+vonage jwt --private_key=./private.key --subject=alice --acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' --app_id=YOUR_APP_ID
 ```
 
 ### Node

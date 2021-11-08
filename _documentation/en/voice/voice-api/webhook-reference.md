@@ -33,6 +33,8 @@ Field | Example | Description
 `from` | `447700900000` | The number that called `to`. (This could be a landline or mobile number, or another virtual number if the call was made programmatically.)
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this call
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this conversation
+`region_url` | `https://api-sg-1.nexmo.com` | Regional API endpoint which should be used to control the call with [REST API](/api/voice#updateCall); see the full list of regions [here](/voice/voice-api/guides/troubleshooting/node#regions)
+`custom_data` | `{ "key": "value" }` | A custom data object, optionally passed as parameter on the `callServer` method when a call is initiated from an application using the [Client SDK](/client-sdk/in-app-voice/guides/make-call/javascript#start-a-server-managed-call)
 
 #### Transmitting additional data with SIP headers
 
@@ -87,6 +89,7 @@ The format of the data included depends on which event has occurred:
 * [`record`](#record)
 * [`input`](#input)
 * [`transfer`](#transfer)
+* [`payment`](#payment)
 
 ### Started
 
@@ -356,6 +359,21 @@ Field | Example | Description
 `conversation_uuid_to` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The conversation ID that the leg was transferred to
 `uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
+
+[Back to event webhooks list](#event-webhook)
+
+### Payment
+
+This webhook is sent by Vonage when an NCCO with an action of "[pay](/voice/voice-api/ncco-reference#pay)" has finished.
+
+Field | Example | Description
+-- | -- | --
+`from` | `447700900000` | The number the call came from
+`to` | `447700900000` | The number the call was made to
+`uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this call
+`conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
+`status` | `success` | Payment operation status. Possible values: `success`, `failure`
+`timestamp` | `2021-08-23T15:27:46.479Z` | Timestamp (ISO 8601 format)
 
 [Back to event webhooks list](#event-webhook)
 

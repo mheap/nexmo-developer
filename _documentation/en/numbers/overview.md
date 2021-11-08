@@ -11,7 +11,7 @@ Vonage offers virtual numbers worldwide so that you can use phone numbers that a
 
 ## Getting Started
 
-You can rent new numbers and manage your existing numbers using the Vonage [developer dashboard](https://dashboard.nexmo.com) or Nexmo CLI. The following guides show you how:
+You can rent new numbers and manage your existing numbers using the Vonage [developer dashboard](https://dashboard.nexmo.com) or Vonage CLI. The following guides show you how:
 
 ```concept_list
 product: numbers

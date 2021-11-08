@@ -27,7 +27,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li>
+					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="MessageEvent.html">MessageEvent</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
 				</ul>
 			</li>
 			
@@ -203,22 +203,29 @@ class Media {
         return new Promise(async (resolve, reject) => {
             const streamIndex = this.streamIndex;
             this.streamIndex++;
-            const localStream = await rtc_helper_1.default.getUserAudio(params.audioConstraints);
-            const pc = rtc_helper_1.default.createPeerConnection(this.application);
-            this.pc = pc;
-            const { application, log, parentConversation: conversation, rtcObjects } = this;
-            const context = {
-                pc,
-                streamIndex,
-                localStream,
-                application,
-                conversation,
-                log,
-                rtcObjects,
-            };
-            rtc_helper_1.default.attachPeerConnectionEventHandlers({ ...context, resolve, reject });
-            rtc_helper_1.default.attachConversationEventHandlers(context);
-            this._attachEndingEventHandlers();
+            const { audioConstraints, reconnectRtcId } = params;
+            try {
+                const localStream = await rtc_helper_1.default.getUserAudio(audioConstraints);
+                const pc = rtc_helper_1.default.createPeerConnection(this.application);
+                this.pc = pc;
+                const { application, log, parentConversation: conversation, rtcObjects } = this;
+                const context = {
+                    pc,
+                    streamIndex,
+                    localStream,
+                    application,
+                    conversation,
+                    log,
+                    rtcObjects,
+                    reconnectRtcId
+                };
+                rtc_helper_1.default.attachPeerConnectionEventHandlers({ ...context, resolve, reject });
+                rtc_helper_1.default.attachConversationEventHandlers(context);
+                this._attachEndingEventHandlers();
+            }
+            catch (error) {
+                reject(new nexmoClientError_1.NexmoClientError(error));
+            }
         });
     }
     _findRtcObjectByType(type) {
@@ -427,10 +434,16 @@ class Media {
     }
     /**
      * Enable media participation in the conversation for this application (requires WebRTC)
-     * @param {object} params - rtc params
-     * @param {string} params.label - Label is an application defined tag, eg. ‘fullscreen’
+     * @param {object} [params] - rtc params
+     * @param {string} [params.label] - label is an application defined tag, eg. ‘fullscreen’
+     * @param {string} [params.reconnectRtcId] - the rtc_id / leg_id of the call to reconnect to
      * @param {object} [params.audio=true] - audio enablement mode. possible values "both", "send_only", "receive_only", "none", true or false
      * @param {object} [params.autoPlayAudio=false] - attach the audio stream automatically to start playing after enable media (default false)
+     * @param {object} [params.audioConstraints] - audio constraints to use
+     * @param {boolean} [params.audioConstraints.autoGainControl] - a boolean which specifies whether automatic gain control is preferred and/or required
+     * @param {boolean} [params.audioConstraints.echoCancellation] - a boolean specifying whether or not echo cancellation is preferred and/or required
+     * @param {boolean} [params.audioConstraints.noiseSuppression] - a boolean which specifies whether noise suppression is preferred and/or required
+     * @param {string | Array} [params.audioConstraints.deviceId] - object specifying a device ID or an array of device IDs which are acceptable and/or required
      * @returns {Promise&lt;MediaStream>}
      * @example &lt;caption>Enable media in the Conversation&lt;/caption>
      *
@@ -738,7 +751,7 @@ module.exports = Media;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Thu Jul 15th 2021 using the <a
+	on Mon Nov 1st 2021 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>

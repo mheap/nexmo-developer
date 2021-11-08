@@ -157,8 +157,10 @@ page:
                 <div class="mb" style="margin: 2em 0; padding-bottom: 2em; text-align: center; padding: 0 1em;">
                   <h2 class="h-2">Get recognized for being an expert in Communications APIs</h2>
                   <p style=" margin-bottom: 1em;">Communications APIs are key to how we connect and communicate in the future. We want to encourage the boldest and most curious to be pioneers in our field. Use Vonage Voyagers to learn from API experts, improve your technical communication skills, showcase your knowledge and support your peers.</p>
-                  <a class="Vlt-btn Vlt-btn--primary" href="https://airtable.com/shrOGdDIjGXQYclXx">Apply to be a Voyager</a>
-                  <p style="">Know someone who’d be a great Voyager? <a style="color: #9941ff; text-decoration: underline;" href="https://airtable.com/shrI1b8WWx4B85ZSZ">Nominate them here</a></p>
+
+                  <!-- apply / nomination hidden -->
+                  <a class="Vlt-btn Vlt-btn--primary hide" href="https://airtable.com/shrOGdDIjGXQYclXx">Apply to be a Voyager</a>
+                  <p class="hide" style="">Know someone who’d be a great Voyager? <a style="color: #9941ff; text-decoration: underline;" href="https://airtable.com/shrI1b8WWx4B85ZSZ">Nominate them here</a></p>
                 </div>
               <div>
             </div>
@@ -202,21 +204,23 @@ page:
                 </div>
               </div>
             </div>
-  - row:
-    - column:
-      - type: html
-        html:
-          content: |
-            <div class="Vlt-center">
-              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--larger" href="https://airtable.com/shrOGdDIjGXQYclXx">Apply to be a Voyager</a>
-            </div>
-    - column:
-      - type: html
-        html:
-          content: |
-            <div class="Vlt-center">
-              <a class="Vlt-btn Vlt-btn--primary Vlt-btn--larger" href="https://airtable.com/shrI1b8WWx4B85ZSZ">Nominate a Voyager</a>
-            </div>
+
+  # Commenting out application/nomination buttons
+  # - row:
+  #   - column:
+  #     - type: html
+  #       html:
+  #         content: |
+  #           <div class="Vlt-center">
+  #             <a class="Vlt-btn Vlt-btn--primary Vlt-btn--larger" href="https://airtable.com/shrOGdDIjGXQYclXx">Apply to be a Voyager</a>
+  #           </div>
+  #   - column:
+  #     - type: html
+  #       html:
+  #         content: |
+  #           <div class="Vlt-center">
+  #             <a class="Vlt-btn Vlt-btn--primary Vlt-btn--larger" href="https://airtable.com/shrI1b8WWx4B85ZSZ">Nominate a Voyager</a>
+  #           </div>
   - row:
     - column:
       - type: html
@@ -424,6 +428,27 @@ page:
                   </ul>
                 </div>
               </div>
+
+              <div class="profile">
+                <a href="https://flowcv.me/sirsuccess">
+                  <img src="https://res.cloudinary.com/sirsuccess/image/upload/c_scale,h_250/v1627320372/amani_kanu/Amani_Kanu_Associate_Software_Engineer_Project_y1zqoo.jpg" alt="Amani Kanu Avatar">
+                </a>
+                <div class="main">
+                  <h3>Amani Kanu</h3>
+                  <p>An experienced software engineer who loves thinking through problems to provide a robust software solution. Javascript and frontend lover. A community builder. Computer science graduate, and AI enthusiast.</p>
+                  <ul class="meta">
+                    <li>
+                      <a href="https://twitter.com/AmaniKanu"><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-twitter"></use></svg> AmaniKanu</a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/sirsuccess"><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-github"></use></svg> sirsuccess</a>
+                    </li>
+                    <li><svg class="Vlt-icon Vlt-icon--smaller Vlt-grey-darker"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-world"></use></svg> Lagos, Nigeria
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
   - row:
     - column:

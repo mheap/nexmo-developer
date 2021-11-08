@@ -24,6 +24,7 @@ Action | Description | Synchronous
 [stream](#stream) | Send audio files to a Conversation. | Yes, unless *bargeIn=true*
 [input](#input) | Collect digits or capture speech input from the person you are calling. | Yes
 [notify](#notify) | Send a request to your application to track progress through an NCCO | Yes
+[pay](#pay) [Developer Preview] | Ask the user for card details and process payment. See the [Guide](/voice/voice-api/guides/payments) for more details | Yes
 
 > **Note**: [Connect an inbound call](/voice/voice-api/code-snippets/connect-an-inbound-call) provides an example of how to serve your NCCOs to Vonage after a Call or Conference is initiated.
 
@@ -324,7 +325,7 @@ Option | Description | Required
 `endOnSilence` | Controls how long the system will wait after user stops speaking to decide the input is completed. The default value is `2.0` (seconds). The range of possible values is between `0.4` seconds and `10.0` seconds. | No
 `language` | Expected language of the user's speech. Format: BCP-47. Default: `en-US`. [List of supported languages](/voice/voice-api/guides/asr#language). | No
 `context` | Array of hints (strings) to improve recognition quality if certain words are expected from the user. | No
-`startTimeout` | Controls how long the system will wait for the user to start speaking. The range of possible values is between 1 second and 10 seconds. | No
+`startTimeout` | Controls how long the system will wait for the user to start speaking. The range of possible values is between 1 second and 60 seconds. The default value is `10`. | No
 `maxDuration` | Controls maximum speech duration (from the moment user starts speaking). The default value is 60 (seconds). The range of possible values is between 1 and 60 seconds. | No
 `saveAudio` | Set to `true` so the speech input recording (`recording_url`) is sent to your webhook endpoint at `eventUrl`. The default value is `false`. | No
 
@@ -408,3 +409,78 @@ Option | Description | Required
 `payload` | The JSON body to send to your event URL. | Yes
 `eventUrl` | The URL to send events to. If you return an NCCO when you receive a notification, it will replace the current NCCO. | Yes
 `eventMethod` | The HTTP method to use when sending `payload` to your `eventUrl`. | No
+
+## Pay
+
+The `pay` action collects credit card information with DTMF input in a secure ([PCI-DSS compliant](https://www.pcisecuritystandards.org/pci_security/)) way. See [Payments over the Phone](/voice/voice-api/guides/payments) guide to learn more.
+
+```json
+[
+  {
+    "action": "talk",
+    "text": "Thank you for your order, we will charge 9 dollars 99 cents now"
+  },
+  {
+    "action": "pay",
+    "eventUrl": [
+      "https://example.com/pay"
+    ],
+    "currency": "eur",
+    "amount": 9.99
+  }
+]
+```
+
+The following options can be used to control an `pay` action:
+
+Option | Description | Required
+-- | -- | --
+`amount` | Charge amount, decimal value > `0`. | Yes
+`currency` | Currency code. Default value is `usd`, see the list of supported codes in the [guide](/voice/voice-api/guides/payments#currency). | No
+`eventUrl` | The URL to the webhook endpoint that is called asynchronously when payment is finished. | No
+`prompts` | Array of [Prompt settings](#prompts-text-settings) | No
+`voice` | [Text to speech voice settings](#prompts-voice-settings) | No
+
+### Prompts Voice Settings
+Option | Description | Required
+-- | -- | --
+`language` | The language ([BCP-47](https://tools.ietf.org/html/bcp47) format) for the prompts. Default: `en-US`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No 
+`style` | The vocal style (vocal range, tessitura and timbre). Default: `0`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No 
+
+### Prompts Text Settings
+Option | Description | Required
+-- | -- | --
+`type` | Prompt type. Possible values: `CardNumber`, `ExpirationDate`, `SecurityCode` | Yes
+`text` | Prompt text, for example, "Enter your card number". | Yes 
+`errors` | [Error prompts settings](#error-prompts). | Yes
+
+### Error Prompts
+Possible errors depend on prompt `type` (see above):
+Prompt Type | Error Type | Description 
+-- | -- | --
+`CardNumber` | `InvalidCardType` | The type of the card entered is not in the list of allowed card types
+`CardNumber`| `InvalidCardNumber` | The card number entered is not correct
+`ExpirationDate` | `InvalidExpirationDate` | Invalid month number or date in the past
+`SecurityCode` | `InvalidSecurityCode` | Security code validation did not pass
+`CardNumber`, `ExpirationDate`, `Security` | `Timeout` | No user input during 10 seconds
+
+Option | Description | Required
+-- | -- | --
+`text` | Error prompt text, for example, "Invalid credit card number. Please try again". | Yes 
+
+Error prompts example:
+
+```json
+{
+  "type": "ExpirationDate",
+  "text": "Please enter expiration date",
+  "errors": {
+    "InvalidExpirationDate": {
+      "text": "Invalid expiration date. Please try again"
+    },
+    "Timeout": {
+      "text": "Please enter your 4 digit credit card expiration date"
+    }
+  }
+}
+```

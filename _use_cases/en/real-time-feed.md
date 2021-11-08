@@ -23,8 +23,8 @@ The Python source code for this project is available in the Vonage Community [Gi
 ## Prerequisites
 
 1. [Create a Vonage Account](https://dashboard.nexmo.com/sign-in)
-2. [Install Node JS](https://nodejs.org/en/download/) - required for using the Nexmo Command Line Interface (CLI).
-3. [Install the Beta version of the Nexmo CLI](/messages/code-snippets/install-cli)
+2. [Install Node JS](https://nodejs.org/en/download/) - required for using the Vonage Command Line Interface (CLI).
+3. [Install the Vonage CLI](/messages/code-snippets/install-cli)
 4. [Know how to test your webhook server locally](/messages/code-snippets/configure-webhooks#testing-locally-via-ngrok)
 5. [Python 3 installed](https://www.python.org/)
 6. [Flask installed](http://flask.pocoo.org/)
@@ -42,7 +42,7 @@ If you plan to test this use case with Facebook Messenger it is recommended that
 
 After the prerequisites have been met, the steps are as follows:
 
-1. [Create a Vonage Application](#create-your-nexmo-application)
+1. [Create a Vonage Application](#create-your-vonage-application)
 2. [Get Ngrok up and running](#get-ngrok-up-and-running)
 3. [Set your SMS webhooks in Dashboard](#set-your-sms-webhooks-in-dashboard)
 4. [Write your basic application](#write-your-basic-application)
@@ -60,14 +60,14 @@ If you have not yet done so, create a new directory for your project, such as `r
 Use the CLI to create your Vonage application:
 
 ``` shell
-nexmo app:create "Real-time App" https://abcd1234.ngrok.io/webhooks/inbound https://abcd1234.ngrok.io/webhooks/status --keyfile=private.key --type=messages
+vonage apps:create "Real-time App" --messages_inbound_url=https://abcd1234.ngrok.io/inbound --messages_status_url=https://abcd1234.ngrok.io/status
 ```
 
 Make a note of the generated Application ID. You can also check this in the [dashboard](https://dashboard.nexmo.com/messages/applications).
 
-This command will also create a private key, `private.key` in your current directory.
+This command will also create a private key, `real_time_app.key` in your current directory, as well as update/create `vonage_app.json`.
 
-This command also sets the two webhooks that need to be set. All interaction between your App and Vonage takes place through these webhooks. You must at least acknowledge each of these webhooks in your app.
+This command also sets the two webhooks where all interaction takes place between your app and Vonage takes place. You must have a server running and accessible to Vonage at these URLs.
 
 ## Get Ngrok up and running
 

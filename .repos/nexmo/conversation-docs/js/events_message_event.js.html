@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>DocStrap Source: events/message_event.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.cosmo.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">DocStrap</a>
+	</div>
+	<div class="navbar-collapse">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="MessageEvent.html">MessageEvent</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+	</div>
+</div>
+</div>
+
+
+<div class="container">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: events/message_event.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">'use strict';
+var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
+    return (mod &amp;&amp; mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+/*
+ * Nexmo Client SDK
+ *  Message NXMEvent Object Model
+ *
+ * Copyright (c) Nexmo Inc.
+*/
+const loglevel_1 = require("loglevel");
+const utils_1 = __importDefault(require("../utils"));
+const nxmEvent_1 = __importDefault(require("./nxmEvent"));
+const nexmoClientError_1 = require("../nexmoClientError");
+/**
+ * A message event
+ *
+ * @class MessageEvent
+ * @extends NXMEvent
+*/
+class MessageEvent extends nxmEvent_1.default {
+    constructor(conversation, params) {
+        super(conversation, params);
+        this.log = loglevel_1.getLogger(this.constructor.name);
+        this.type = 'message';
+        this.conversation = conversation;
+        if (params &amp;&amp; params.body &amp;&amp; params.body.timestamp) {
+            this.timestamp = params.body.timestamp;
+        }
+        Object.assign(this, params);
+    }
+    /**
+     * Set the messageEvent status to 'seen'
+     * @returns {Promise}
+     * @example &lt;caption>Set the messageEvent status to 'seen'&lt;/caption>
+     *  messageEvent.seen().then(() => {
+     *    console.log("message event status set to seen");
+     *  }).catch((error)=>{
+     *	  console.log("error setting message event status to seen ", error);
+     *  });
+     *
+     * @private
+     */
+    seen() {
+        return super.seen();
+    }
+    /**
+     * Set the messageEvent status to 'delivered'.
+     * handled by the SDK
+     * @returns {Promise}
+     * @example &lt;caption>Set the messageEvent status to 'delivered'&lt;/caption>
+     *  messageEvent.delivered().then(() => {
+     *    console.log("message event status set to delivered");
+     *  }).catch((error)=>{
+     *	  console.log("error setting message event status to delivered  ", error);
+     *  });
+     *
+     * @private
+     */
+    delivered() {
+        return super.delivered();
+    }
+    /**
+     * Delete the messageEvent
+     * @returns {Promise}
+     * @example &lt;caption>Delete the messageEvent&lt;/caption>
+     *  messageEvent.del().then(() => {
+     *    console.log("message event deleted");
+     *  }).catch((error)=>{
+     *	  console.log("error deleting message event  ", error);
+     *  });
+     */
+    del() {
+        return super.del();
+    }
+    /**
+     * Download an Image from Media service
+     * @returns {string} the dataUrl "data:image/jpeg;base64..."
+     * @example &lt;caption>Downloading an image from the messageEvent&lt;/caption>
+     *  messageEvent.fetchImage().then((imageData) => {
+     *    const img = new Image();
+     *    img.src = imageData;
+     *    document.body.appendChild(img);
+     *  }).catch((error) => {
+     *    console.log("error getting image ", error);
+     *  });
+    */
+    async fetchImage() {
+        if (this.body.message_type !== "image") {
+            throw new nexmoClientError_1.NexmoClientError('error:message-event:invalid');
+        }
+        try {
+            return utils_1.default._fetchImage(this.body.image.url, this.conversation.application.session.config.token);
+        }
+        catch (error) {
+            this.log.error(error);
+            throw error;
+        }
+    }
+}
+exports.default = MessageEvent;
+module.exports = MessageEvent;
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	DocStrap Copyright © 2012-2015 The contributors to the JSDoc3 and DocStrap projects.
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
+	on Mon Nov 1st 2021 using the <a
+	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<!--<script src="scripts/sunlight.js"></script>-->
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/bootstrap-dropdown.js"></script>
+<script src="scripts/toc.js"></script>
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
+		},
+		selectors   : "h1,h2,h3,h4",
+		showAndHide : false,
+                navbarOffset: 10,
+		smoothScrolling: true
+	} );
+
+	$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+	//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
+
+  $( "table" ).each( function () {
+    var $this = $( this );
+    $this.addClass('table');
+  } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+</body>
+</html>

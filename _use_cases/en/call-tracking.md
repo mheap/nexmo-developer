@@ -18,7 +18,7 @@ Today's example uses node.js and all the code is [available on GitHub](https://g
 In order to work through this tutorial you need:
 
 * A [Vonage account](https://dashboard.nexmo.com/sign-up)
-* The [Nexmo CLI](https://github.com/nexmo/nexmo-cli) installed and set up.
+* The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and set up.
 * A publicly accessible web server so Vonage can make webhook requests to your app. If you're developing locally we recommend [ngrok](https://ngrok.com/).
 
 ⚓ Create a Voice Application
@@ -30,31 +30,31 @@ Before you grab the code and dive in, you will to set up a Vonage application an
 
 There is also an `event_url` webhook, that receives updates whenever the call state changes. In this application the code outputs the events to the console to provide useful information during development.
 
-To create the initial application, use the Nexmo CLI to run the command below, replacing your URL in two places:
+To create the initial application, use the Vonage CLI to run the command below, replacing your URL in two places:
 
 ```bash
-nexmo app:create --keyfile private.key call-tracker https://your-url-here/track-call https://your-url-here/event
+vonage apps:create "Call Tracker" --voice_answer_url=https://your-url-here/track-call --voice_events_url=https://your-url-here/event
 ```
 
 This command returns the UUID (Universally Unique Identifier) that identifies your application. Copy it somewhere safe, you will need it later!
 
 The parameters are:
 
-* `call-tracker` - the name you give to this application
-* `private.key` - the name of the file to store the private key in, `private.key` is expected by the application
-* `https://example.com/track-call` - when you receive an inbound call to your Vonage number, Vonage makes a `GET` request and retrieves the NCCO that controls the call flow from this webhook endpoint
-* `https://example.com/event` - as the call status changes, Vonage sends status updates to this webhook endpoint
+* `"Call Tracker"` - the name you give to this application
+* `--voice_answer_url=https://example.com/track-call` - when you receive an inbound call to your Vonage number, Vonage makes a `GET` request and retrieves the NCCO that controls the call flow from this webhook endpoint
+* `--voice_events_url=https://example.com/event` - as the call status changes, Vonage sends status updates to this webhook endpoint
 
-You will need a couple of Vonage numbers to try this application. To buy a number, use the Nexmo CLI again and a command like this:
+You will need a couple of Vonage numbers to try this application. To buy a number, use the Vonage CLI again and a command like this:
 
 ```bash
-nexmo number:buy --country_code US --confirm
+vonage numbers:search US
+vonage numbers:buy 15555555555 US
 ```
 
-You can use any country code in [ISO 3166-1 alpha-2 format](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) for this command. The result is the number you have bought so copy that (you can always get a list with `nexmo numbers:list`) and link it the the application you created:
+You can use any country code in [ISO 3166-1 alpha-2 format](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) for this command. The result is the number you have bought so copy that (you can always get a list with `vonage numbers`) and link it the the application you created:
 
 ```bash
-nexmo link:app [number] [application ID]
+vonage apps:link [APP_ID] --number=15555555555
 ```
 
 Repeat the buying and linking step for as many numbers as you'd like to use.

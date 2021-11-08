@@ -27,7 +27,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li>
+					<li><a href="Application.html">Application</a></li><li><a href="Conversation.html">Conversation</a></li><li><a href="ConversationsPage.html">ConversationsPage</a></li><li><a href="EventsPage.html">EventsPage</a></li><li><a href="ImageEvent.html">ImageEvent</a></li><li><a href="Media.html">Media</a></li><li><a href="Member.html">Member</a></li><li><a href="MembersPage.html">MembersPage</a></li><li><a href="MessageEvent.html">MessageEvent</a></li><li><a href="NexmoApiError.html">NexmoApiError</a></li><li><a href="NexmoClient.html">NexmoClient</a></li><li><a href="NexmoClientError.html">NexmoClientError</a></li><li><a href="NXMCall.html">NXMCall</a></li><li><a href="NXMEvent.html">NXMEvent</a></li><li><a href="TextEvent.html">TextEvent</a></li><li><a href="UserSessionsPage.html">UserSessionsPage</a></li>
 				</ul>
 			</li>
 			
@@ -81,6 +81,7 @@ const application_events_1 = __importDefault(require("./handlers/application_eve
 const utils_1 = __importDefault(require("./utils"));
 const page_config_1 = __importDefault(require("./pages/page_config"));
 const conversations_page_1 = __importDefault(require("./pages/conversations_page"));
+const user_sessions_page_1 = __importDefault(require("./pages/user_sessions_page"));
 const events_queue_1 = require("./handlers/events_queue");
 const member_1 = __importDefault(require("./member"));
 let sipEventHandler = null;
@@ -289,25 +290,31 @@ class Application {
      * @private
     */
     async _handleApplicationEvent(event) {
-        const processed_event = applicationEventsHandler.handleEvent(event);
-        const conversation = this.conversations.get(event.cid);
-        let member;
-        if (conversation.members.has(processed_event.from)) {
-            member = conversation.members.get(processed_event.from);
-        }
-        else if (event.type === 'member:joined' || event.type === 'member:invited') {
-            const params = { ...event.body, ...(event.from &amp;&amp; { member_id: event.from }) };
-            member = new member_1.default(conversation, params);
-        }
-        else {
-            try {
-                member = await conversation.getMember(processed_event.from);
+        try {
+            this.log.debug("_handleApplicationEvent: ", { event });
+            const processed_event = applicationEventsHandler.handleEvent(event);
+            const conversation = this.conversations.get(event.cid);
+            let member;
+            if (conversation.members.has((processed_event || {}).from)) {
+                member = conversation.members.get(processed_event.from);
             }
-            catch (error) {
-                this.log.warn(`There is an error getting the member ${error}`);
+            else if (event.type === 'member:joined' || event.type === 'member:invited') {
+                const params = { ...event.body, ...(event.from &amp;&amp; { member_id: event.from }) };
+                member = new member_1.default(conversation, params);
             }
+            else {
+                try {
+                    member = await conversation.getMember(processed_event.from);
+                }
+                catch (error) {
+                    this.log.warn(`There is an error getting the member ${error}`);
+                }
+            }
+            this.emit(processed_event.type, member, processed_event);
         }
-        this.emit(processed_event.type, member, processed_event);
+        catch (e) {
+            this.log.error("_handleApplicationEvent: ", e);
+        }
     }
     /**
      * Creates a call to specified user/s.
@@ -351,6 +358,7 @@ class Application {
      * @classdesc creates a call to a phone number
    * @param {string} user the phone number or the username you want to call
    * @param {string} [type="phone"] the type of the call you want to have. possible values "phone" or "app" (default is "phone")
+   * @param {object} [custom_data] custom data to be included in the call object, i.e. { yourCustomKey: yourCustomValue }
      * @returns {Promise&lt;NXMCall>}
      * @example &lt;caption>Create a call to a phone&lt;/caption>
      *  application.on("call:status:changed", (nxmCall) => {
@@ -359,17 +367,73 @@ class Application {
    *		}
    *  });
    *
-     *  application.callServer(phone_number).then(() => {
+     *  application.callServer(phone_number).then((nxmCall) => {
      *    console.log('Calling phone ' + phone_number);
+   *    console.log('Call Object ': nxmCall);
      *  }).catch((error) => {
-     *    console.error(error);
-     *  });
+   *    console.error(error);
+   *  });
     */
-    async callServer(user, type = 'phone') {
+    async callServer(user, type = 'phone', custom_data = {}) {
         try {
             const nxmCall = new nxmCall_1.default(this);
             nxmCall.direction = nxmCall.CALL_DIRECTION.OUTBOUND;
-            await nxmCall.createServerCall(user, type);
+            await nxmCall.createServerCall(user, type, custom_data);
+            return nxmCall;
+        }
+        catch (error) {
+            throw error;
+        }
+    }
+    /**
+       * Reconnect a leg to an ongoing call.
+       * You don't need to start the stream, the SDK will play the audio for you
+       *
+       * @classdesc reconnect leg to an ongoing call
+     * @param {string} conversation_id the conversation that you want to reconnect
+     * @param {string} rtc_id the id of the leg that will be reconnected
+     * @param {object} [mediaParams] - MediaStream params (same as Media.enable())
+       * @returns {Promise&lt;NXMCall>}
+       * @example &lt;caption>Reconnect a leg to an ongoing call&lt;/caption>
+       *  application.reconnectCall("conversation_id", "rtc_id").then((nxmCall) => {
+       *    console.log(nxmCall);
+       *  }).catch((error) => {
+     *    console.error(error);
+     *  });
+     *
+     * @example &lt;caption>Reconnect a leg to an ongoing call without auto playing audio&lt;/caption>
+       *  application.reconnectCall("conversation_id", "rtc_id", { autoPlayAudio: false }).then((nxmCall) => {
+       *    console.log(nxmCall);
+       *  }).catch((error) => {
+     *    console.error(error);
+     *  });
+     *
+     * @example &lt;caption>Reconnect a leg to an ongoing call choosing device ID&lt;/caption>
+       *  application.reconnectCall("conversation_id", "rtc_id", { audioConstraints: { deviceId: "device_id" } }).then((nxmCall) => {
+       *    console.log(nxmCall);
+       *  }).catch((error) => {
+     *    console.error(error);
+     *  });
+      */
+    async reconnectCall(conversationId, rtcId, mediaParams = {}) {
+        try {
+            if (!conversationId || !rtcId) {
+                throw new nexmoClientError_1.NexmoClientError('error:missing:params');
+            }
+            const conversation = await this.getConversation(conversationId, Application.CONVERSATION_API_VERSION.v1);
+            await conversation.media.enable({ ...mediaParams, reconnectRtcId: rtcId });
+            const nxmCall = new nxmCall_1.default(this, conversation);
+            // assigning the correct call status taking into account the sip status (outbound)
+            // on inbound calls the reconnect will happen after the call is estabilished and both legs are answered
+            const event_types = Array.from(conversation.events.values()).map(event => event.type);
+            if (event_types.includes('sip:answered'))
+                nxmCall.status = nxmCall.CALL_STATUS.ANSWERED;
+            else if (event_types.includes('sip:ringing'))
+                nxmCall.status = nxmCall.CALL_STATUS.RINGING;
+            else
+                nxmCall.status = nxmCall.CALL_STATUS.STARTED;
+            nxmCall.rtcObjects = conversation.media.rtcObjects;
+            this.calls.set(conversation.id, nxmCall);
             return nxmCall;
         }
         catch (error) {
@@ -600,6 +664,42 @@ class Application {
             throw new nexmoClientError_1.NexmoApiError(error);
         }
     }
+    /**
+     * Query the service to obtain a complete list of userSessions of a given user
+   * @param {object} params configure defaults for paginated user sessions query
+   * @param {string} params.order 'asc' or 'desc' ordering of resources based on creation time
+   * @param {number} params.page_size the number of resources returned in a single request list
+   * @param {string} [params.cursor] string to access the starting point of a dataset
+   * @param {string} [params.user_id] the user id that the sessions are being fetched
+     *
+     * @returns {Promise&lt;Page&lt;Map&lt;UserSession>>>}
+   * @example &lt;caption>Get User Sessions&lt;/caption>
+   *  application.getUserSessions({ user_id: "id", page_size: 20 }).then((user_sessions_page) => {
+   *    user_sessions_page.items.forEach(user_session => {
+   *      render(user_session)
+   *    })
+   *  }).catch((error) => {
+   *      console.error(error);
+   *  });
+   *
+    */
+    async getUserSessions(params = {}) {
+        var _a;
+        const user_id = ((_a = params) === null || _a === void 0 ? void 0 : _a.user_id) || this.me.id;
+        const url = `${this.session.config.nexmo_api_url}/v0.3/users/${user_id}/sessions`;
+        // Create pageConfig if some elements given otherwise use default
+        let pageConfig = Object.keys(params).length === 0 ? this.pageConfig : new page_config_1.default(params);
+        try {
+            const response = await utils_1.default.paginationRequest(url, pageConfig, this.session.config.token, Application.CONVERSATION_API_VERSION.v3);
+            response.application = this;
+            const user_sessions_page = new user_sessions_page_1.default(response);
+            this.user_sessions_page_last = user_sessions_page;
+            return user_sessions_page;
+        }
+        catch (error) {
+            throw new nexmoClientError_1.NexmoApiError(error);
+        }
+    }
 }
 exports.default = Application;
 /**
@@ -641,7 +741,7 @@ module.exports = Application;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Thu Jul 15th 2021 using the <a
+	on Mon Nov 1st 2021 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
