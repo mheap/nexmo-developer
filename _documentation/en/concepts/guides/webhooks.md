@@ -70,18 +70,18 @@ Signed webhooks are supported by Messages, Dispatch and Voice APIs and are enabl
 
 Validating signed webhooks provides a number of security benefits, including:
 
-* Ability to verify a request originates from Vonage
-* Ensures that the message has not been tampered with while in transit
-* Defends against interception and later replay
+* The ability to verify a request originates from Vonage
+* Ensuring that the message has not been tampered with while in transit
+* Defending against interception and later replay
 
 ### Validating signed webhooks
 
 There are two parts to validating signed webhooks:
 
-1. Verify the request
-2. Verify the payload (optional)
+1. Verifying the request
+2. Verifying the payload (optional)
 
-#### Verify the request
+#### Verifying the request
 
 Webhooks will include a JWT in the `Authorization` header. Use the API key included in the JWT claims to identify which of your signature secrets has been used to sign the request. The secret used to sign the request corresponds to the signature secret associated with the `api_key` included in the JWT claims. You can identify your signature secret on the [Dashboard](https://dashboard.nexmo.com/settings). It's recommended that signature secrets be no less than 32 bits to ensure their security.
 
