@@ -77,4 +77,4 @@ See also [Number Insight Basic](/number-insight/code-snippets/number-insight-bas
 Other types of attacks might attempt to gain access to your application or your customers' private data. In these attacks, a fraudster impersonates the Vonage Platform by making webhook requests to your application. These can reveal the voice message text which could contain sensitive data. To ensure that requests to your webhooks are from Vonage, you can:
 
 * Setup a firewall to accept requests from [Vonage IP ranges](https://help.nexmo.com/hc/en-us/articles/115004859247-Which-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo-) only;
-* Check [callback signature](/voice/voice-api/guides/signed-webhooks).
+* Check [callback signature](/concepts/guides/webhooks#decoding-signed-webhooks).

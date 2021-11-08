@@ -51,7 +51,7 @@ Please ensure that all applications acknowledge webhooks with a 200 response.
 
 ### Signed webhooks
 
-In order to validate the origin of your webhooks, you can validate the signature of the webhooks, see instructions [here](https://developer.nexmo.com/messages/concepts/signed-webhooks)
+In order to validate the origin of your webhooks, you can validate the signature of the webhooks, see instructions [here](/concepts/guides/webhooks#decoding-signed-webhooks)
 
 ### Webhooks in production use
 
