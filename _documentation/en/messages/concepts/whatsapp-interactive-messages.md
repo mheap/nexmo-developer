@@ -31,4 +31,4 @@ One possible use-case for reply buttons might be a customer choosing between a s
 
 ## Further information
 
-- [Working with WhatsApp Interactive Messages](/messages/tutorials/working-with-whatsapp-interactive-messages/introduction)
+- [Working with WhatsApp Interactive Messages](/messages/concepts/working-with-whatsapp-interactive-messages)
