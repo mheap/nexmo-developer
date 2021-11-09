@@ -36,6 +36,7 @@ Message Template | Message Templates are created in the WhatsApp Manager. Outsid
 Media Message Templates | Media message templates expand the content you can send to recipients beyond the standard message template type to include media, headers, and footers using a `components` object.
 Contacts Message | Send a contact list as a message.
 Location Message | Send a location as a message.
+Interactive Message | The Vonage Messages API v1 supports two types of WhatsApp Interactive Messages: **List Messages** and **Reply Buttons**. [Read more](/messages/concepts/whatsapp-interactive-messages)
 
 ## How WhatsApp works
 
@@ -69,36 +70,21 @@ curl -X POST \
   -H 'Authorization: Bearer' $JWT \
   -H 'Content-Type: application/json' \
   -d '{
-   "from":{
-      "type":"whatsapp",
-      "number":"WHATSAPP_NUMBER"
-   },
-   "to":{
-      "type":"whatsapp",
-      "number":"TO_NUMBER"
-   },
-   "message":{
-      "content":{
-         "type":"template",
-         "template":{
-            "name":"whatsapp:hsm:technology:nexmo:verify",
-            "parameters":[
-               {
-                  "default":"Vonage Verification"
-               },
-               {
-                  "default":"64873"
-               },
-               {
-                  "default":"10"
-               }
-            ]
-         }
-      },
-      "whatsapp": {
-        "policy": "deterministic",
-        "locale": "en-GB"
-      }
+   "from": "WHATSAPP_NUMBER",
+   "to": "TO_NUMBER",
+   "channel": "whatsapp",
+   "whatsapp": {
+     "policy": "deterministic",
+     "locale": "en-GB"
+   }
+   "message_type": "template",
+   "template":{
+      "name":"whatsapp:hsm:technology:nexmo:verify",
+      "parameters":[
+         "Vonage Verification",
+         "64873",
+         "10"
+      ]
    }
 }'
 ```
@@ -113,13 +99,15 @@ Further information is available in the [WhatsApp documentation](https://develop
 
 ## WhatsApp Provisioning API
 
-The WhatsApp Provisioning API enables you to deploy a WhatsApp cluster, perform one time password (OTP) verification, and update profile information for a WhatsApp business account. 
+The WhatsApp Provisioning API enables you to deploy a WhatsApp cluster, perform one time password (OTP) verification, and update profile information for a WhatsApp business account.
 
 For more information see the [WhatsApp Provisioning API](/messages/whatsapp-provisioning/overview) documentation.
 
 ## Further information
 
 * [Custom objects](/messages/concepts/custom-objects)
+* [Interactive Messages: Overview](/messages/concepts/whatsapp-interactive-messages)
+* [Working with Interactive Messages](/messages/concepts/working-with-whatsapp-interactive-messages)
 
 WhatsApp developer documentation:
 
@@ -130,3 +118,4 @@ WhatsApp developer documentation:
 * [Media Message Template](https://developers.facebook.com/docs/whatsapp/api/messages/message-templates/media-message-templates)
 * [Contacts message](https://developers.facebook.com/docs/whatsapp/api/messages/others#contacts-messages)
 * [Location message](https://developers.facebook.com/docs/whatsapp/api/messages/others#location-messages)
+* [Interactive Message](https://developers.facebook.com/docs/whatsapp/guides/interactive-messages)
