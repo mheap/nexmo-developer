@@ -10,7 +10,7 @@ products:
     title: Subaccount API
   application:
     title: Application API
-  messages-olympus:
+  messages:
     title: Messages API
     hide_rfc7807_header: true
   reports:

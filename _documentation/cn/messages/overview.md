@@ -117,6 +117,6 @@ product: messages
 Reference
 ---------
 
-* [Messages API Reference](/api/messages-olympus)
+* [Messages API Reference](/api/messages.v1)
 * [External Accounts API Reference](/api/external-accounts)
 
