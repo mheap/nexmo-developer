@@ -11,23 +11,14 @@ When a Facebook message is sent by a Facebook User to your Facebook Page a callb
 
 ```json
 {
-  "message_uuid":"aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-  "to":{
-    "type":"messenger",
-    "id":"0000000000000000"
-  },
-  "from":{
-    "type":"messenger",
-    "id":"1111111111111111"
-  },
-  "timestamp":"2020-01-01T14:00:00.000Z",
-  "message":{
-    "content":{
-      "type":"text",
-      "text":"Hello from Facebook Messenger!"
-    }
-  }
+  "channel": "messenger",
+  "message_uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+  "to": "'$FB_RECIPIENT_ID'",
+  "from": "'$FB_SENDER_ID'",
+  "timestamp": "2020-01-01 14:00:00 UTC",
+  "message_type": "text",
+  "text": "Nexmo Verification code: 12345. Valid for 10 minutes."
 }
 ```
 
-You need to extract the `from.id` value here as this is the ID that you need to send a reply.
+You need to extract the `from` value here as this is the ID that you need to send a reply.
