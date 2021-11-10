@@ -137,6 +137,6 @@ product: messages
 関連情報
 ----
 
-* [メッセージ用 API の関連情報](/api/messages.v1)
+* [メッセージ用 API の関連情報](/api/messages-olympus)
 * [外部アカウント用 API の関連情報](/api/external-accounts)
 
