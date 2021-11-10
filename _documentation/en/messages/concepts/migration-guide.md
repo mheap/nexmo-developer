@@ -97,7 +97,7 @@ Incoming WhatsApp text webhook v1
 }
 ```
 
-The above are a few examples. Check the [specification](/api/messages) for a comprehensive set of fields for the various message types and webhooks.
+The above are a few examples. Check the [specification](/api/messages-olympus) for a comprehensive set of fields for the various message types and webhooks.
 
 ## Use of Vonage Applications for Webhooks
 

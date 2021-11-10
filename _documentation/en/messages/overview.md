@@ -41,7 +41,7 @@ There are currently two versions of the API, v0.1 and v1. Each version has its o
 - **v0.1**: `https://api.nexmo.com/v0.1/messages`
 - **v1**: `https://api.nexmo.com/v1/messages`
 
-One of the primary differences between the two versions is that v1 provides a much simpler and flatter structure for the JSON structure used in the request and response data. Check the relevant [API specification](/api/messages) for details of the required structure.
+One of the primary differences between the two versions is that v1 provides a much simpler and flatter structure for the JSON structure used in the request and response data. Check the relevant [API specification](/api/messages-olympus) for details of the required structure.
 
 > **NOTE:** Most of the code examples in this documentation (other than examples for the Node SDK) use the structure for v1 of the API.
 
@@ -147,5 +147,5 @@ product: messages
 
 ## Reference
 
-* [Messages API Reference](/api/messages)
+* [Messages API Reference](/api/messages-olympus)
 * [External Accounts API Reference](/api/external-accounts)
