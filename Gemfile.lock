@@ -406,7 +406,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    station (0.0.133)
+    station (0.0.134)
       activeadmin (~> 2.7)
       activesupport (~> 6.0)
       algoliasearch (= 1.27.5)
@@ -495,7 +495,7 @@ DEPENDENCIES
   factory_bot
   rack-test
   rspec
-  station (= 0.0.133)
+  station (= 0.0.134)
 
 BUNDLED WITH
    2.2.15
