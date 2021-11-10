@@ -8,9 +8,9 @@ description: Differences to be aware of between the two versions of the API if m
 
 There are currently two versions of the Messages API: **v0.1** and **v1**. While v1 supports all of the features of v0.1, there are some significant differences between the two versions which should be borne in mind if you are already using v0.1 of the API and are planning on migrating to v1.
 
-## JSON Schema
+## JSON Structure
 
-One of the most important differences between the two versions is the schema used for the JSON data in requests to the API and for incoming webhook data; v1 provides a simplified, flatter structure. In order for your application to work with v1, it will be necessary to change any code that generates or references the JSON data.
+One of the most important differences between the two versions is the structure used for the JSON data in requests to the API and for incoming webhook data; v1 provides a simplified, flatter structure. In order for your application to work with v1, it will be necessary to change any code that generates or references the JSON data.
 
 Some of the differences between the two structures include:
 

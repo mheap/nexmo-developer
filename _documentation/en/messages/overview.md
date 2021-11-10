@@ -41,11 +41,11 @@ There are currently two versions of the API, v0.1 and v1. Each version has its o
 - **v0.1**: `https://api.nexmo.com/v0.1/messages`
 - **v1**: `https://api.nexmo.com/v1/messages`
 
-One of the primary differences between the two versions is that v1 provides a much simpler and flatter structure for the JSON schema used in the request and response data. Check the relevant [API specification](/api/messages) for details of the required schema.
+One of the primary differences between the two versions is that v1 provides a much simpler and flatter structure for the JSON structure used in the request and response data. Check the relevant [API specification](/api/messages) for details of the required structure.
 
-> **NOTE:** Most of the code examples in this documentation (other than examples for the Node SDK) use the schema for v1 of the API.
+> **NOTE:** Most of the code examples in this documentation (other than examples for the Node SDK) use the structure for v1 of the API.
 
-As well as the difference in JSON schema, v1 supports some [additional features](#additional-v1-features).
+As well as the difference in JSON structure, v1 supports some [additional features](#additional-v1-features).
 
 If you are currently using v0.1 of the API, and are intending to move to v1, check our [Migration Guide](/messages/concepts/migration-guide).
 

@@ -13,7 +13,7 @@ Interactive Messages is a feature within WhatsApp for Business. The [Vonage Mess
 
 The basic flow for working with WhatsApp Interactive Messages is as follows:
 
-1. Send a `POST` request to the `/v1/messages` endpoint. The request body should contain the required JSON data, with the `channel` set to `whatsapp` and the `message_type` set to `custom`. The `custom` field must be populated with a suitably formatted [custom object](/messages/concepts/custom-objects). The actual schema of the custom object will vary depending on the type of interactive message being sent (e.g. reply button or list).
+1. Send a `POST` request to the `/v1/messages` endpoint. The request body should contain the required JSON data, with the `channel` set to `whatsapp` and the `message_type` set to `custom`. The `custom` field must be populated with a suitably formatted [custom object](/messages/concepts/custom-objects). The actual structure of the custom object will vary depending on the type of interactive message being sent (e.g. reply button or list).
 
 2. The appropriate message type will then be rendered in the specified WhatsApp chat. The customer can interact with the message, such as clicking a reply button or selecting an option from a list (depending on the message type). The Vonage Messages API will then inform you of this interaction via a callback with the message payload using a pre-configured [inbound message webhook](messages/code-snippets/inbound-message)
 
