@@ -111,6 +111,8 @@ A basic workflow for setting this up via the [Dashboard](https://dashboard.nexmo
 4. Set the Messages API version to v1 using the drop-down menu
 5. Click on Generate new application
 
+<img src="/images/messages/messages-application-webhooks-and-version-settings.png" alt="UI for Messages webhook and version settings">
+
 ## Use of JWTs for Authentication if using a Vonage Applications
 
 If you are setting up a Vonage Application, an important thing to be aware of is that Vonage Applications mandate the usage of JWT (JSON Web Tokens) to authenticate requests to the API. In other words, HTTP Basic authentication is not an option in this situation. [Read more about JWTs](/concepts/guides/authentication#json-web-tokens-jwt).

@@ -32,6 +32,8 @@ You can set up your Vonage Application in a number of ways, such as via the [Das
 5. Click on Generate new application
 6. Once the application is generated, a 'Link social channels' tab will be exposed. Under this tab, you can link your WhatsApp Business number
 
+<img src="/images/messages/messages-application-webhooks-and-version-settings.png" alt="UI for Messages webhook and version settings">
+
 > **NOTE:** Vonage Applications mandate the usage of JWT (JSON Web Tokens) to authenticate requests to the API, i.e. HTTP Basic authentication is not an option when using Messages API v1 with webhooks. [Read more about JWTs](/concepts/guides/authentication#json-web-tokens-jwt).
 
 ## Interactive Messages: Examples
