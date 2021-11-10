@@ -1,7 +1,7 @@
 ---
 title: Overview
-meta_title: Send messages via SMS, MMS, WhatsApp, Viber and Facebook Messenger with a single API. 
-description: The Messages API allows you to send and in some cases receive messages over SMS/MMS, Facebook Messenger, Viber, WhatsApp. 
+meta_title: Send messages via SMS, MMS, WhatsApp, Viber and Facebook Messenger with a single API.
+description: The Messages API allows you to send and in some cases receive messages over SMS/MMS, Facebook Messenger, Viber, WhatsApp.
 navigation_weight: 1
 ---
 
@@ -16,6 +16,7 @@ The following diagram illustrates how the Vonage Messages API enables you to sen
 ## Contents
 
 * [Beta](#beta)
+* [Versions](#versions)
 * [Supported features](#supported-features)
 * [External Accounts API](#external-accounts-api)
 * [Getting started](#getting-started)
@@ -33,9 +34,24 @@ Vonage always welcomes your feedback. Your suggestions help us improve the produ
 
 During Beta Vonage will expand the capabilities of the API.
 
+## Versions
+
+There are currently two versions of the API, v0.1 and v1. Each version has its own API endpoint:
+
+- **v0.1**: `https://api.nexmo.com/v0.1/messages`
+- **v1**: `https://api.nexmo.com/v1/messages`
+
+One of the primary differences between the two versions is that v1 provides a much simpler and flatter structure for the JSON structure used in the request and response data. Check the relevant [API specification](/api/messages-olympus) for details of the required structure.
+
+> **NOTE:** Most of the code examples in this documentation (other than examples for the Node SDK) use the structure for v1 of the API.
+
+As well as the difference in JSON structure, v1 supports some [additional features](#additional-v1-features).
+
+If you are currently using v0.1 of the API, and are intending to move to v1, check our [Migration Guide](/messages/concepts/migration-guide).
+
 ## Supported features
 
-In this release the following features are supported:
+The following features are supported in both v0.1 and v1 versions of the API:
 
 Channel | Outbound Text | Outbound Image | Outbound Audio | Outbound Video | Outbound File | Outbound Template
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
@@ -68,6 +84,18 @@ WhatsApp | ✅ | ✅ | ✅
 * ✅ = Supported.
 * ❌ = Supported by the channel, but not by Vonage.
 * n/a = Not supported by the channel.
+
+### Additional v1 Features
+
+As well as all of the existing features from v0.1, there are some additional features supported in v1 of the API.
+
+- **WhatsApp Interactive Messages**: v1 of the Messages API, supports WhatsApp's interactive message feature. See our [overview](/messages/concepts/whatsapp-interactive-messages) of this feature. Once you're ready to start working with interactive messages, read our [more detailed explanation](/messages/concepts/working-with-whatsapp-interactive-messages).
+
+- **WhatsApp Reply Context**: in v1 of the Messages API, the callbacks to the inbound messages webhooks can provide a [reply context](https://developers.facebook.com/docs/whatsapp/api/webhooks/components#quick_reply).
+
+- **WhatsApp Profile Name**: in v1 of the Messages API, the callbacks to the inbound messages webhooks can provide [profile name](https://developers.facebook.com/docs/whatsapp/api/webhooks/components#profile).
+
+- **Provider messages**: in v1 of the Messages API, the callbacks to the inbound messages webhooks can provide [error messages from WhatsApp](https://developers.facebook.com/docs/whatsapp/api/webhooks/components#errors-object) under a new `provider_message` field.
 
 ## External Accounts API
 
