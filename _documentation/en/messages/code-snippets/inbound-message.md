@@ -24,4 +24,4 @@ application:
 
 ## Try it out
 
-The webhook is invoked on receipt of an [inbound message](/api/messages.v1#inbound-message) and the message details and data are printed to the console.
+The webhook is invoked on receipt of an [inbound message](/api/messages#inbound-message) and the message details and data are printed to the console.

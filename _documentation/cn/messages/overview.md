@@ -117,6 +117,6 @@ product: messages
 Reference
 ---------
 
-* [Messages API Reference](/api/messages.v1)
+* [Messages API Reference](/api/messages)
 * [External Accounts API Reference](/api/external-accounts)
 
