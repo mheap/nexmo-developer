@@ -1,7 +1,7 @@
 ---
 title: Mute a Call Member
 description: How to mute and unmute a call member.
-navigation_weight: 7
+navigation_weight: 8
 ---
 
 
