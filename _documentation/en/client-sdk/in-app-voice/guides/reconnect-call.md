@@ -8,7 +8,7 @@ navigation_weight: 8
 
 ## Overview
 
-This guide covers how to reconnect to a call or a conversation's media in your Android and iOS Vonage Client application, there is also a guide on call [reconnection for JavaScript]().
+This guide covers how to reconnect to a call or a conversation's media in your Android and iOS Vonage Client application.
 
 ### Automatically Reconnect
 
