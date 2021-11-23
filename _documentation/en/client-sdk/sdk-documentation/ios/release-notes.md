@@ -6,6 +6,18 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.3.0 - 2021-11-22
+
+### Added
+
+- `NXMClientConfig`'s `apiPinning` and `websocketPinning` optional fields to enable HTTP and web-socket SSL pinning.
+- `[NXMPinningConfig fromPublicKeys:]` method to create a public-key-based pinning configuration.
+- `NXMConnectionStatusReasonSSLPinningError` describing a client connection update due to an SSL pinning error.
+
+### Changed
+
+- Minimum supported iOS version (`IPHONEOS_DEPLOYMENT_TARGET`) bumped to `10.3`.
+
 ## 3.2.1 - 2021-11-08
 
 ### Fixed
