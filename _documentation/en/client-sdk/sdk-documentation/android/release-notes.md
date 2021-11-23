@@ -6,6 +6,34 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.3.0 - Nov 22, 2022
+
+### Added
+
+- `NexmoClient.Builder`'s `restEnvironmentHostPinning` and `environmentHostPinning` methods added to enable HTTP and web-socket SSL pinning.
+- `NexmoPinningConfig.fromPublicKeys(...)` method to create a public-key-based pinning configuration.
+
+```kotlin
+nexmoClient = new NexmoClient.Builder()
+    .environmentHostPinning(NexmoPinningConfig.fromPublicKeys("publicKeyHash"))
+    .build(context);
+```
+
+- New `ConnectionStatusReason` case `SSL_PINNING_ERROR` when `Disconnected` due to invalid public key found backend connection.
+
+```kotlin
+connectionStateListener = NexmoConnectionListener { status, reason ->
+    when(status){
+          NexmoConnectionListener.ConnectionStatus.DISCONNECTED-> {
+              if (reason == NexmoConnectionListener.ConnectionStatusReason.SSL_PINNING_ERROR) {
+                  // Notify UI 
+              }
+          }
+      }
+}
+```
+
+
 ## 3.2.0 - Oct 19, 2021
 
 ### Added
