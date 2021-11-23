@@ -17,18 +17,18 @@
     <a title="NXMClientConfig Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NexmoClient 3.2.0 Docs</a> (100% documented)</p>
-        <p class="header-right">
+        <p><a href="../index.html">NexmoClient 3.3.0 Docs</a> (100% documented)</p>
+        <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
           </form>
-        </p>
+        </div>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html">NexmoClient Reference</a>
-        <img id="carat" src="../img/carat.png" />
+        <img id="carat" src="../img/carat.png" alt=""/>
         NXMClientConfig Class Reference
       </p>
     </div>
@@ -410,6 +410,70 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)NXMClientConfig(py)apiPinning"></a>
+                    <a name="//apple_ref/objc/Property/apiPinning" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMClientConfig(py)apiPinning">apiPinning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional API pinning configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NXMPinningConfig</span> <span class="o">*</span><span class="n">apiPinning</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">apiPinning</span><span class="p">:</span> <span class="kt">NXMPinningConfig</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMClientConfig(py)websocketPinning"></a>
+                    <a name="//apple_ref/objc/Property/websocketPinning" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMClientConfig(py)websocketPinning">websocketPinning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional WebSocket pinning configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NXMPinningConfig</span> <span class="o">*</span><span class="n">websocketPinning</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">websocketPinning</span><span class="p">:</span> <span class="kt">NXMPinningConfig</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)NXMClientConfig(py)useFirstIceCandidate"></a>
                     <a name="//apple_ref/objc/Property/useFirstIceCandidate" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)NXMClientConfig(py)useFirstIceCandidate">useFirstIceCandidate</a>
@@ -487,12 +551,14 @@
                         <p>The default initializer for the class.</p>
 
 <p>Default values:</p>
-<pre class="highlight objective_c"><code><span class="nl">apiURL:</span>        <span class="s">@"https://api.nexmo.com/"</span>
-<span class="n">websocketUrl</span><span class="o">:</span>  <span class="s">@"https://ws.nexmo.com/"</span>
-<span class="n">ipsUrl</span><span class="o">:</span>        <span class="s">@"https://api.nexmo.com/v1/image/"</span>
-<span class="n">iceServerUrls</span><span class="o">:</span> <span class="p">@[</span><span class="s">@"stun:stun.l.google.com:19302"</span><span class="p">]</span>
+<pre class="highlight objective_c"><code><span class="nl">apiURL:</span>               <span class="s">@"https://api.nexmo.com/"</span>
+<span class="n">websocketUrl</span><span class="o">:</span>         <span class="s">@"https://ws.nexmo.com/"</span>
+<span class="n">ipsUrl</span><span class="o">:</span>               <span class="s">@"https://api.nexmo.com/v1/image/"</span>
+<span class="n">iceServerUrls</span><span class="o">:</span>        <span class="p">@[</span><span class="s">@"stun:stun.l.google.com:19302"</span><span class="p">]</span>
+<span class="n">apiPublicKeys</span><span class="o">:</span>        <span class="nb">NULL</span>
+<span class="n">websocketPublicKeys</span><span class="o">:</span>  <span class="nb">NULL</span>
 <span class="n">useFirstIceCandidate</span><span class="o">:</span> <span class="nb">YES</span>
-<span class="n">autoMediaReoffer</span><span class="o">:</span> <span class="nb">NO</span>
+<span class="n">autoMediaReoffer</span><span class="o">:</span>     <span class="nb">NO</span>
 </code></pre>
 
                       </div>
@@ -1196,11 +1262,10 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external">Vonage</a>. All rights reserved. (Last updated: 2021-10-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external noopener">Vonage</a>. All rights reserved. (Last updated: 2021-11-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
   </body>
-</div>
 </html>
