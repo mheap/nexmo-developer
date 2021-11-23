@@ -90,6 +90,7 @@ VIDEO_URL.WHATSAPP.MESSAGES: The link to the video to send. WhatsApp supports `.
 
 # Number Insight API
 INSIGHT_NUMBER: The number you want to retrieve insight information for.
+REAL_TIME_DATA: An optional flag to determine if you want real time data back in the response.
 
 # Numbers
 NUMBER_SEARCH_CRITERIA: The filter criteria. For example, numbers containing `234`.
