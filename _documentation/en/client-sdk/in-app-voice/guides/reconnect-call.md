@@ -12,7 +12,7 @@ This guide covers how to reconnect to a call or a conversation's media in your A
 
 ### Automatically Reconnect
 
-The Client SDK can attempt to automatically reconnect to a call or a conversation's media if you set the client's `autoReoffer` configuration property. This is useful for when there is a short drop in internet connectivity or the user switches between cellular and wifi.
+The Client SDK can attempt to automatically reconnect to a call or a conversation's media if you set the client's `autoReoffer` configuration property. This is useful for when there is a short drop in internet connectivity or the user switches between cellular and WiFi.
 
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/guides/reconnect-call/automatically-reconnect'
