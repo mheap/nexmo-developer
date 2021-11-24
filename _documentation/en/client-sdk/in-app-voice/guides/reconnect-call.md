@@ -30,7 +30,7 @@ frameless: false
 
 ### Manually Reconnect
 
-The Client SDK has can also has functions for explicitly reconnecting a call or conversation's media. This is useful for example when you want to switch which device a user is speaking on without hanging up the call and starting a new one if the application dies.
+The Client SDK has functions for explicitly reconnecting a call or conversation's media. This is useful for example when you want to switch which device a user is speaking on without hanging up the call and starting a new one if the application dies.
 
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/guides/reconnect-call/reconnect'
