@@ -22,22 +22,24 @@ You now have a brand new Android Project.
 
 ## Add Client SDK dependency
 
-You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside the `allprojects` block within the project-level `build.gradle` file:
+You need to add a custom Maven URL repository to your Gradle configuration. Add the following `maven` block inside the `repositories` block within the project-level `settings.gradle` file:
 
-![Build gradle](/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
+![Setting gradle file in file explorer](/screenshots/tutorials/client-sdk/android-shared/settings-gradle-file.png)
 
 ```groovy
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        
-        maven {
-            url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
-        }
+repositories {
+    google()
+    mavenCentral()
+    maven {
+        url "https://artifactory.ess-dev.com/artifactory/gradle-dev-local"
     }
 }
 ```
+
+If you are using an older version of Android Studio and there is no `dependencyResolutionManagement` in your `settings.gradle` file then add the maven block to the `repositories` block within the project-level `build.gradle` file:
+
+![Build gradle file in the file explorer](/screenshots/tutorials/client-sdk/android-shared/project-level-build-gradle-file.png)
+
 
 > **NOTE** You can use the `Navigate file` action to open any file in the project. Run the keyboard shortcut (Mac: `Shift + Cmd + O` ; Win: `Shift + Ctrl + O`) and type the filename.
 
