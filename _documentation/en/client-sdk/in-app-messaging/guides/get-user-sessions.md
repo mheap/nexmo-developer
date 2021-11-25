@@ -7,9 +7,9 @@ navigation_weight: 10
 
 ## Overview
 
-This guide covers how to get the a user's active [sessions](/conversation/concepts/session), which can be used as a way to show an online status. 
+This guide covers how to get a user's active [sessions](/conversation/concepts/session), which can be used as a way to show their online status. 
 
-Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app) and you are able to [create a conversation](/client-sdk/in-app-messaging/guides/simple-conversation).
+Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app) and are able to [create a conversation](/client-sdk/in-app-messaging/guides/simple-conversation).
 
 ```partial
 source: _partials/client-sdk/messaging/chat-app-tutorial-note.md
