@@ -29,6 +29,8 @@ Add the following URL in your project-level `build.gradle` or `build.gradle.kts`
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/maven'
 ``` 
 
+> NOTE: The Arctic Fox release of Android Studio creates new projects with Gradle 7 or newer. If you have created a new application add the maven URL to repositories in `settings.gradle` file in the `dependencyResolutionManagement` block.
+
 Now add the Client SDK to your project. Add the following dependency in your app level `build.gradle` file (typically `app/build.gradle`):
 
  ```tabbed_content
