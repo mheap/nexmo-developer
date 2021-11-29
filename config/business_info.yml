@@ -12,7 +12,7 @@ header:
         - get_an_api_key
         - start_building
     sign-in:
-      path: https://dashboard.nexmo.com/sign-in
+      path: https://dashboard.nexmo.com/sign-in?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav
       text: sign-in
 code_snippets:
   - title: 'Send an SMS'
