@@ -15,6 +15,7 @@ Before attempting to run the code examples, replace the variable placeholders:
 - VONAGE_API_KEY
 - VONAGE_API_SECRET
 - INSIGHT_NUMBER
+- REAL_TIME_DATA
 ```
 
 ```code_snippets
@@ -53,7 +54,11 @@ The response from the API contains the following data:
     "valid_number": "valid",
     "reachable": "reachable",
     "ported": "ported",
-    "roaming": { "status": "not_roaming" }
+    "roaming": { "status": "not_roaming" },
+    "real_time_data": {
+     "active_status": "active",
+     "handset_status": "on"
+    }
 }
 ```
 

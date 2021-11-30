@@ -14,22 +14,11 @@ Using WhatsApp by way of example, for the following Messages API call:
 
 ``` json
 {
-  "from": {
-    "type": "whatsapp",
-    "number": "447700900001"
-  },
-  "to": {
-    "type": "whatsapp",
-    "number": "447700900000"
-  },
-  "message": {
-    "content": {
-      "type": "custom",
-      "custom": {
-        $CUSTOM_OBJECT
-      }
-    }
-  }
+  "to": "447700900000",
+  "from": "447700900001",
+  "channel": "whatsapp",
+  "message_type": "custom",
+  "custom": {$CUSTOM_OBJECT}
 }
 ```
 
@@ -95,61 +84,52 @@ The Messages API request format would be:
 
 ``` json
 {
-  "from": {
-    "type": "whatsapp",
-    "number": "447700900001"
-  },
-  "to": {
-    "type": "whatsapp",
-    "number": "447700900000"
-  },
-  "message": {
-    "content": {
-      "type": "custom",
-      "custom": {
-        "type": "template",
-        "template": {
-          "namespace": "whatsapp:hsm:technology:nexmo",
-          "name": "parcel_location",
-          "language": {
-            "policy": "deterministic",
-            "code": "en"
-          },
-          "components": [
+  "to": "447700900000",
+  "from": "447700900001",
+  "channel": "whatsapp",
+  "message_type": "custom",
+  "custom": {
+    "type": "template",
+    "template": {
+      "namespace": "whatsapp:hsm:technology:nexmo",
+      "name": "parcel_location",
+      "language": {
+        "policy": "deterministic",
+        "code": "en"
+      },
+      "components": [
+        {
+          "type": "header",
+          "parameters": [
             {
-              "type": "header",
-              "parameters": [
-                {
-                  "type": "location",
-                  "location": {
-                    "longitude": -122.425332,
-                    "latitude": 37.758056,
-                    "name": "Facebook HQ",
-                    "address": "1 Hacker Way, Menlo Park, CA 94025"
-                  }
-                }
-              ]
+              "type": "location",
+              "location": {
+                "longitude": -122.425332,
+                "latitude": 37.758056,
+                "name": "Facebook HQ",
+                "address": "1 Hacker Way, Menlo Park, CA 94025"
+              }
+            }
+          ]
+        },
+        {
+          "type": "body",
+          "parameters": [
+            {
+              "type": "text",
+              "text": "Value 1"
             },
             {
-              "type": "body",
-              "parameters": [
-                {
-                  "type": "text",
-                  "text": "Value 1"
-                },
-                {
-                  "type": "text",
-                  "text": "Value 2"
-                },
-                {
-                  "type": "text",
-                  "text": "Value 3"
-                }
-              ]
+              "type": "text",
+              "text": "Value 2"
+            },
+            {
+              "type": "text",
+              "text": "Value 3"
             }
           ]
         }
-      }
+      ]
     }
   }
 }
@@ -201,22 +181,11 @@ You can use custom objects for sending Facebook Messenger message templates. For
 
 ``` json
 {
-  "from": {
-    "type": "messenger",
-    "id": $FB_SENDER_ID
-  },
-  "to": {
-    "type": "messenger",
-    "id": $FB_RECIPIENT_ID
-  },
-  "message": {
-    "content": {
-      "type": "custom",
-      "custom": {
-        $CUSTOM_OBJECT
-      }
-    }
-  }
+  "to": $FB_RECIPIENT_ID,
+  "from": $FB_SENDER_ID,
+  "channel": "messenger",
+  "message_type": "custom",
+  "custom": {$CUSTOM_OBJECT}
 }
 ```
 
