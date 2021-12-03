@@ -104,6 +104,14 @@ products:
     translation_frequency: 5
     dropdown: true
   -
+    name: 'Meetings'
+    icon: 'video-conference'
+    icon_colour: 'indigo' 
+    path: meetings
+    translate: false
+    translation_frequency: 5
+    dropdown: true
+  -
     name: 'SMS API'
     icon: 'message'
     icon_colour: 'purple' 
