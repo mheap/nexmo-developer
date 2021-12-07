@@ -6,13 +6,13 @@ oas_url: https://www.github.com/nexmo/api-specification/blob/master/definitions
 header:
   links:
     sign-up:
-      path: https://dashboard.nexmo.com/sign-up
+      path: https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav
       text:
         - try-it
         - get_an_api_key
         - start_building
     sign-in:
-      path: https://dashboard.nexmo.com/sign-in
+      path: https://dashboard.nexmo.com/sign-in?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav
       text: sign-in
 code_snippets:
   - title: 'Send an SMS'
