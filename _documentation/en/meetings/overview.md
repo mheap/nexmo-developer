@@ -10,7 +10,7 @@ navigation_weight: 1
 
 The Meetings API allows you to easily integrate real-time, high-quality interactive video meetings into your web apps.
 
-The following image provides an overview of the Meetings API architecture:
+<!-- The following image provides an overview of the Meetings API architecture:
 
 <img src="/images/meetings/meetings-apitxtfree.png" alt="Meetings API" width="38%" height="38%" />
 
@@ -21,14 +21,14 @@ The flow is represented by the numbers in the above image:
 3. The Hosted Server creates a session and Meeting URL.
 4. The Hosted server returns the Meeting URL.
 5. The App adds the Meetings URL in the Software as a Service component.
-6. The End User clicks the Meetings URL and is connected to room in the client app.
+6. The End User clicks the Meetings URL and is connected to room in the client app. -->
 
 ## Contents
 
-* [Requirements](#requirements). What do you need to get started?
-* [Terminology](#Terminology). Key terms you'll need when using the Meetings API.
-* [Code Snippets](#code-snippets). Using the Meetings API, code and instructions.
-* [Reference](#reference). You can view the Vonage Meetings API on github.
+* [Requirements](#requirements). What you will need to get started.
+* [Terminology](#Terminology). Key terms and definitions for the Meetings API.
+* [Code Snippets](#code-snippets). Code and instructions for using the Meetings API.
+* [Reference](#reference). Further information about the Meetings API.
 
 ## Requirements
 
@@ -63,3 +63,5 @@ Note that once a room that has been deleted, it will be set to `is_available` = 
 * [Meeting Room Management](code-snippets/room-management)
 
 ## Reference
+
+* Link to the Meetings API. **TBA**
