@@ -18,15 +18,15 @@ How to setup an Instant (default) room using the Meetings API.
 
 ## Setup POST Request
 
-**POST Endpoint**: The (POST) endpoint when creating a meeting room is: `` https://api.vonage.com/beta/meetings/rooms ``
+**POST Endpoint**: The (POST) endpoint when creating a meeting room is: ``https://api.vonage.com/beta/meetings/rooms``.
 
-**Required Headers**: You need to add the ``Content-Type`` to your headers: Content-Type: application/json ``
+**Required Headers**: You need to add the ``Content-Type`` to your headers: ``Content-Type: application/json``.
 
 **Authorization**: Basic [Authentication](/concepts/guides/authentication) is enabled with your `VONAGE_API_KEY` and `VONAGE_API_SECRET` from your account.
 
 ## Body Content
 
-You'll need to provide the following:
+You need to provide the following:
 
 * ``display_name`` (required) the name of the meeting room.
 * ``metadata`` metadata that will be included in all callbacks.
@@ -36,6 +36,8 @@ You'll need to provide the following:
    ``auto_record`` (boolean) sets whether the session will be recorded or not.
 
 ## Request
+
+You can use the following code to start an instant room (default options):
 
 ``` curl
 
@@ -47,11 +49,26 @@ You'll need to provide the following:
                }
 ```
 
+To create an instant room and automatically turn on recording:
+
+``` curl
+   --request POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
+   --header 'authorization: basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
+   --header 'content-type: application/json' \
+   --data-raw '{
+   "display_name":"New Meeting Room"
+   "recording_options": {
+       "auto_record": true}
+               }
+```
+
 ## Response
 
-An instant room has been created by default, which means that the expiration date was automatically set to 10 minutes after room creation.
+When an instant room is created the expiration date is set to 10 minutes.
 
-As this room has not yet expired, ``is_available`` is set to true. By default, ``auto_record`` was set to ``false``.
+As this room has not yet expired, ``is_available`` is set to true.
+
+> If you set ``auto_record`` to ``true``, this option will be shown as ``true`` in the image below.
 
 ``` json
 {
@@ -77,4 +94,4 @@ As this room has not yet expired, ``is_available`` is set to true. By default, `
 }
 ```
 
-> Your Instant Room has been created.
+> Your Instant Room has been created. Note the ``ID`` if you are going to further configure this room.

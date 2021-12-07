@@ -18,9 +18,26 @@ How to setup a long term room using the Meetings API.
 
 ## Setup POST Request
 
+**POST Endpoint**: The (POST) endpoint when creating a meeting room is: ``https://api.vonage.com/beta/meetings/rooms``.
+
+**Required Headers**: You need to add the ``Content-Type`` to your headers: ``Content-Type: application/json``.
+
+**Authorization**: Basic [Authentication](/concepts/guides/authentication) is enabled with your `VONAGE_API_KEY` and `VONAGE_API_SECRET` from your account.
+
+## Body Content
+
+You need to provide the following:
+
+* ``display_name`` (required) the name of the meeting room.
+* ``metadata`` metadata that will be included in all callbacks.
+* ``type`` which can be ``instant`` or ``long term``.
+* ``expires_at`` (required for the ``long_term`` type). The room expiration date in Universal Time Coordinated (UTC) format.
+* ``recording_options`` an object containing various meeting recording options:
+   ``auto_record`` (boolean) sets whether the session will be recorded or not.
+
 ## Request
 
-You can use the example code below create a long term room which expires on October 21st 2022. Each session will be recorded (``auto_record = true``):
+You can use the example code below create a long term room which expires on October 21st 2022 and will be automatically recorded:
 
 ``` curl
 --request POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
@@ -63,4 +80,4 @@ You will receive a request similar to the following:
 }
 ```
 
-> Your Long Term Room has been created.
+> Your Long Term Room has been created. Note the ``ID`` if you are going to further configure this room.
