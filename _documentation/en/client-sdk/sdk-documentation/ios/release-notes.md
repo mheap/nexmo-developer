@@ -11,7 +11,7 @@ navigation_weight: 0
 ### Added
 
 - `[NXMConversation sendMessage:completionHandler:]` method to send `NXMMessage`.
-- `[NXMClient uploadAttachmentWithType:name:data:completionHandler:]` method to send attachments.
+- `[NXMClient uploadAttachmentWithType:name:data:completionHandler:]` method to upload attachments.
 - `NXMMessage` represents a message to send.
 - `NXMMessageType` for messages of type `text`, `image`, `audio`, `video`, `file`, `template`, `vcard` and `custom`.
 - `NXMEventTypeMemberMessageStatus`, a new `NXMEventType` case, represents a member message status event that can be received on an `NXMConversation`.
