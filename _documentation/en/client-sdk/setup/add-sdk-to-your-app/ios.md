@@ -60,13 +60,31 @@ source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/import'
 
 ### Frameworks
 
-1. Download the Client SDK then drag and drop the `NexmoClient.framework` folder into your project:
+1. Download the Client SDK from: 
+https://clientsdk.nexmocdn.com/ios/NexmoClient/$(xyz)/NexmoClient-$(xyz)-iOS-Release.zip 
+Then drag and drop the `NexmoClient.framework` folder into your project:
 ![Project explorer](/images/client-sdk/ios-manual-setup-project.png)
 
 2. Turn on *Embed & Sign* for `NexmoClient.framework` in your target's settings:
 ![Embed & sign](/images/client-sdk/ios-manual-setup-signing.png)
 
 3. In your code, import the `NexmoClient` library:
+
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/import'
+```
+
+### Additional framework for sdk versions >= 4.0.0
+
+4.  Download the Vonage WebRTC dependency:
+https://d3opqjmqzxf057.cloudfront.net/vonage-webrtc/pod/vonagewebrtc/release/84.0.6/VonageWebRTC-84.0.6.zip  
+Then drag and drop the `VonageWebRTC.framework` folder into your project:
+![Project explorer](/images/client-sdk/ios-manual-setup-project.png)
+
+5. Turn on *Embed & Sign* for `VonageWebRTC.framework` in your target's settings:
+![Embed & sign](/images/client-sdk/ios-manual-setup-signing.png)
+
+6. In your code, import the `VonageWebRTC` library:
 
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/import'
