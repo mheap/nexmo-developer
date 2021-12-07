@@ -6,6 +6,27 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.0 - Dec 7, 2021
+
+### Added
+
+- `NexmoConversation.sendMessage(message, listener)` to send `NexmoMessage` to a conversation.
+- `NexmoClient.uploadAttachment(attachment, listener)` method to send `NexmoAttachmentType`.
+- `NexmoMessage` represents a message of `EMessageEventType` type to send.
+- `EMessageEventType` for messages of type `text`, `image`, `audio`, `video`, `file`, `template`, `vcard`, `custom` and `location`.
+- `NexmoChannelType` added channels of type `sms`, `mms`, `whatsapp`, `viber` and `messenger`.
+- `NexmoAttachmentType` to upload an attachment message to Vonage Media Service.
+- `NexmoMessageEvent` represents the member message status event dispatched into the `NexmoMemberMessageStatusEventListener`.
+
+### Enhancements
+
+- WebRTC dependency upgraded to version `84.0.0`.
+
+### Deprecated
+
+- `NexmoConversation.sendText(text, listener)` method. Use `NexmoConversation.sendMessage(message, listener)` method instead.
+- `NexmoConversation.sendAttachment(file, listener)` method. Use `NexmoClient.uploadAttachment(attachment, listener)` and `NexmoConversation.sendMessage(message, listener)` method instead.
+
 ## 3.3.0 - Nov 22, 2022
 
 ### Added
