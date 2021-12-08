@@ -8,7 +8,7 @@ navigation_weight: 1
 
 # Meetings API Overview
 
-The Meetings API allows you to easily integrate real-time, high-quality interactive video meetings into your web apps.
+The Meetings API allows you to integrate real-time, high-quality interactive video meetings into your web apps.
 
 ## Contents
 
