@@ -14,6 +14,7 @@ The Meetings API allows you to easily integrate real-time, high-quality interact
 
 * [Requirements](#requirements). What you will need to get started.
 * [Terminology](#Terminology). Key terms and definitions for the Meetings API.
+* [Room Types](Room-Types). Defines the types of rooms available
 * [Code Snippets](#code-snippets). Code and instructions for using the Meetings API.
 * [Reference](#reference). Further information about the Meetings API.
 
@@ -32,17 +33,36 @@ Key | Description
 
 ## Terminology
 
-* **Room**: the virtual space in which the video meeting takes place.
-* **Owner**: usually the creator of the room; this user has special admin capabilities.
-* **Chat**: space for sending written messages that are visible to all attendees in the room.
-* **Meeting Room ID**: the ``ID`` is a unique identifier for a room which is returned in the response.
-* **Guest URL**: meeting room URL used by the guest.
-* **Host URL**: meeting room URL with additional capabilities used by the session host.
-* **Session**: the duration in which there are participants present in the room, from the first participant to join, until the last to leave.  
-* **Instant Room**: an instant room is created for a meeting happening now. This room lives for **ten (10) minutes** until the first participant joins the room. Once the last participant leaves the room, the room lives for ten more minutes, after which it is deleted.
-* **Long Term Room**: a long term room remains alive until expiration date (max five years). It is typically linked to a recurring meeting, person, or resource.
-It requires an expiration date (in UTC format), and has the option of automatically deleting the room ten minutes after the last participant leaves the room.
-Note that once a room that has been deleted, it will be set to `is_available` = false.
+* **Room**: the virtual space in which the video meeting takes place. See [Room Types](Room-Types) below.
+* **Participants**:
+  * **Owner**: usually the creator of the room, this person has special adminstration capabilities.
+  * **Guest**: people attending meeting. Guests have access to standard meeting features.
+* **Setup and Configuration**:
+  * **Request**: the code snippet you submit to set up a room.
+  * **Response**: the data that is returned from your request.
+  * **Meeting Room ID**: the ``ID`` is a session identifier which is returned in the response to a meeting request.
+  * **Session**: the time in which there are participants present in the room. Defined as from the first participant to join, until the last to leave.  
+  * **Guest URL**: meeting room URL used by guests.
+  * **Host URL**: meeting room URL with meeting administration capabilities used by the host.
+* **Features**:
+  * **Chat**: space for sending written messages that are visible to all attendees in the room.
+  * **Record**: you can record a meeting either manually during the meeting or automatically when sending a request.
+  * **Room Management**: you can delete, update or retrieve information about rooms.
+  * **Callbacks**: allow you to receiver information about a session.
+
+## Room Types
+There are two room types:
+
+* **Instant Room**:
+  * is created for a meeting happening now.
+  * is active for ten (10) minutes until the first participant joins the room.
+      If no one joins the room within the ten minutes, the room is deleted.
+  * is active for ten minutes after the last participant leaves, then it is deleted.
+* **Long Term Room**:
+  * remains alive until the expiration date you specify (max five years).
+  * is typically linked to a recurring meeting, person, or resource.
+  * will require you to specify an expiration date (in UTC format)
+  * enables you to request that a room is automatically deleted ten minutes after the last participant leaves the room.
 
 ## Code Snippets
 
