@@ -35,7 +35,7 @@ Key | Description
 
 * **Room**: the virtual space in which the video meeting takes place. See [Room Types](Room-Types) below.
 * **Participants**:
-  * **Owner**: usually the creator of the room, this person has special adminstration capabilities.
+  * **Owner**: usually the creator of the room, this person has special administration capabilities.
   * **Guest**: people attending meeting. Guests have access to standard meeting features.
 * **Setup and Configuration**:
   * **Request**: the code snippet you submit to set up a room.
