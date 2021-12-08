@@ -1,7 +1,7 @@
 ---
 title: Overview
 meta_title: Provides an out of the box video solution for low tech users.
-description: The Meetings API allows you to easily integrate real-time, high-quality interactive video meetings into your web apps
+description: The Meetings API allows you to integrate real-time, high-quality interactive video meetings into your web apps
 product: meetings
 navigation_weight: 1
 ---
