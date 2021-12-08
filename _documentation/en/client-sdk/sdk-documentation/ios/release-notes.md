@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.2  - 2021-12-07
+
+### Fixed
+
+- CocoaPods dependencies.
+
 ## 4.0.0  - 2021-12-06
 
 ### Added
