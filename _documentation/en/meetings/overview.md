@@ -20,11 +20,11 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 ## Requirements
 
-**Vonage Developer Account** If you don’t have a Vonage account yet, you can get one  here: [Vonage Developers Account](https://dashboard.nexmo.com/sign-up).
+**Vonage Developer Account**: If you don’t have a Vonage account yet, you can get one  here: [Vonage Developers Account](https://dashboard.nexmo.com/sign-up).
 
-**Meetings API Activation** To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
+**Meetings API Activation**: To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
 
-**API Key and Secret** Once you’re logged in, you'll find your API Key and Secret in your dashboard under "Getting Started".
+**API Key and Secret**: Once you’re logged in, you'll find your API Key and Secret in your dashboard under "Getting Started".
 
 Key | Description
 -- | --
