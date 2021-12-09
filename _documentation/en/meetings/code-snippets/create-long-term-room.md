@@ -10,11 +10,11 @@ How to setup a long term room using the Meetings API.
 
 ## Prerequisites
 
-* **Vonage Developer Account** If you don’t have a Vonage account yet, you can get one  here: [Vonage Developers Account](https://dashboard.nexmo.com/sign-up).
+* **Vonage Developer Account**: If you do not already have one, sign-up for a free account on the [Vonage Developers Account](https://dashboard.nexmo.com/sign-up).
 
-* **Meetings API Activation** To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
+* **Meetings API Activation**: To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
 
-* **API Key and Secret** Once you’re logged in, you'll find your API Key and Secret in your dashboard under "Getting Started".
+* **API Key and Secret**: Once you’re logged in to the [Vonage API Dashboard](https://dashboard.nexmo.com), you'll find your API Key and Secret on the Meetings API menu.
 
 ## Setup POST Request
 
@@ -30,14 +30,14 @@ You need to provide the following:
 
 * ``display_name`` (required) the name of the meeting room.
 * ``metadata`` metadata that will be included in all callbacks.
-* ``type`` which can be ``instant`` or ``long term``.
+* ``type`` which can be ``instant`` or ``long_term``.
 * ``expires_at`` (required for the ``long_term`` type). The room expiration date in Universal Time Coordinated (UTC) format.
 * ``recording_options`` an object containing various meeting recording options:
    ``auto_record`` (boolean) sets whether the session will be recorded or not.
 
 ## Request
 
-You can use the example code below create a long term room which expires on October 21st 2022 and will be automatically recorded:
+You can use the example code below to create a long term room which expires on October 21st 2022 and will be automatically recorded:
 
 ``` curl
 --request POST 'https://api-eu.vonage.com/beta/meetings/rooms' \

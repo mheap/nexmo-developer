@@ -1,6 +1,6 @@
 ---
 title: Overview
-meta_title: Provides an out of the box video solution for low tech users.
+meta_title: Provides an out of the box video solution for low tech users
 description: The Meetings API allows you to integrate real-time, high-quality interactive video meetings into your web apps
 product: meetings
 navigation_weight: 1
@@ -12,11 +12,11 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 ## Contents
 
-* [Requirements](#requirements). What you will need to get started.
-* [Terminology](#Terminology). Key terms and definitions for the Meetings API.
-* [Room Types](Room-Types). Defines the types of rooms available
-* [Code Snippets](#code-snippets). Code and instructions for using the Meetings API.
-* [Reference](#reference). Further information about the Meetings API.
+* [Requirements](#requirements): What you will need to get started.
+* [Terminology](#terminology): Key terms and definitions for the Meetings API.
+* [Room Types](#room-types): Defines the types of rooms available
+* [Code Snippets](#code-snippets): Code and instructions for using the Meetings API.
+* [Reference](#reference): Further information about the Meetings API.
 
 ## Requirements
 
@@ -51,18 +51,19 @@ Key | Description
   * **Callbacks**: allow you to receiver information about a session.
 
 ## Room Types
+
 There are two room types:
 
 * **Instant Room**:
-  * is created for a meeting happening now.
-  * is active for ten (10) minutes until the first participant joins the room.
+  * Created for a meeting happening now.
+  * Active for ten (10) minutes until the first participant joins the room.
       If no one joins the room within the ten minutes, the room is deleted.
-  * is active for ten minutes after the last participant leaves, then it is deleted.
+  * Active for ten minutes after the last participant leaves, then it is deleted.
 * **Long Term Room**:
-  * remains alive until the expiration date you specify (max five years).
-  * is typically linked to a recurring meeting, person, or resource.
-  * will require you to specify an expiration date (in UTC format)
-  * enables you to request that a room is automatically deleted ten minutes after the last participant leaves the room.
+  * Remains alive until the expiration date you specify (max five years).
+  * Typically linked to a recurring meeting, person, or resource.
+  * Will require you to specify an expiration date (in UTC format).
+  * Enables you to request that a room is automatically deleted ten minutes after the last participant leaves the room.
 
 ## Code Snippets
 

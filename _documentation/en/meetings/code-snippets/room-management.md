@@ -57,7 +57,7 @@ You use the ``ID`` to perform a DELETE action on a room:
 ## Room Update
 
 A room can be updated by using a PATCH action and the room ID. Changes can be for ``display_name``, ``metadata``, ``expires_at``, and ``recording_options``
-> These should be included in an object called ``update_details``
+> These should be included in an object called ``update_details``.
 
 ``` curl
 {
