@@ -90,7 +90,7 @@ Name | Description |
 ``recording:started`` | A recording is beginning within a session.
 ``recording:ended`` | A recording has been stopped within a session.
 ``recording:uploaded`` | A recording is ready to be downloaded.
-``participant:joint`` | Someone has joined a session.
+``participant:joined`` | Someone has joined a session.
 ``session:participant:left`` | Someone has left a session.
 
 ### Example Payloads
