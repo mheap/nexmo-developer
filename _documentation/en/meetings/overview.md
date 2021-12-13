@@ -10,19 +10,21 @@ navigation_weight: 1
 
 The Meetings API allows you to integrate real-time, high-quality interactive video meetings into your web apps.
 
+> You can try out the Meetings API in the [Vonage API Dashboard](https://dashboard.nexmo.com).
+
 ## Contents
 
-* [Requirements](#requirements): What you will need to get started.
-* [Terminology](#terminology): Key terms and definitions for the Meetings API.
+* [Requirements](#requirements): What you will need to get started
+* [Terminology](#terminology): Key terms and definitions for the Meetings API
 * [Room Types](#room-types): Defines the types of rooms available
-* [Code Snippets](#code-snippets): Code and instructions for using the Meetings API.
-* [Reference](#reference): Further information about the Meetings API.
+* [Code Snippets](#code-snippets): Code and instructions for using the Meetings API
+* [Reference](#reference): Further information about the Meetings API
 
 ## Requirements
 
 **Vonage Developer Account**: If you don’t have a Vonage account yet, you can get one  here: [Vonage Developers Account](https://dashboard.nexmo.com/sign-up).
 
-**Meetings API Activation**: To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
+**Meetings API Activation**: To activate the Meetings API, you need to register with us. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
 
 **API Key and Secret**: Once you’re logged in, you'll find your API Key and Secret in your dashboard under "Getting Started".
 
@@ -37,7 +39,7 @@ Key | Description
 * **Participants**:
   * **Owner**: usually the creator of the room, this person has special administration capabilities.
   * **Guest**: people attending meeting. Guests have access to standard meeting features.
-* **Setup and Configuration**:
+* **Set up and Configuration**:
   * **Request**: the code snippet you submit to set up a room.
   * **Response**: the data that is returned from your request.
   * **Meeting Room ID**: the ``ID`` is a session identifier which is returned in the response to a meeting request.

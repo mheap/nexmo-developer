@@ -6,34 +6,37 @@ description: Setting up an Instant Meeting Room
 
 # Setting up an Instant Meeting Room
 
-How to setup an Instant (default) room using the Meetings API.
+Hot to set up an Instant (default) room using the Meetings API.
 
 ## Prerequisites
 
-* **Vonage Developer Account**: If you do not already have one, sign-up for a free account on the [Vonage Developers Account](https://dashboard.nexmo.com/sign-up).
+* **Vonage Developer Account**: If you do not already have one, sign-up for a free account on the [Vonage Developers Account](https://dashboard.nexmo.com/sign-up)
 
-* **Meetings API Activation**: To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
+* **Meetings API Activation**: To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com)
 
-* **API Key and Secret**: Once you’re logged in to the [Vonage API Dashboard](https://dashboard.nexmo.com), you'll find your API Key and Secret on the Meetings API menu.
+* **API Key and Secret**: Once you’re logged in to the [Vonage API Dashboard](https://dashboard.nexmo.com), you'll find your API Key and Secret on the Meetings API menu
 
-## Setup POST Request
+## Set up POST Request
 
-**POST Endpoint**: The (POST) endpoint when creating a meeting room is: ``https://api.vonage.com/beta/meetings/rooms``.
+**POST Endpoint**: The endpoint for creating a meeting room is: ``https://api-eu.vonage.com/beta/meetings/rooms``.
 
 **Required Headers**: You need to add the ``Content-Type`` to your headers: ``Content-Type: application/json``.
 
-**Authorization**: Basic [Authentication](/concepts/guides/authentication) is enabled with your `VONAGE_API_KEY` and `VONAGE_API_SECRET` from your account.
+**Authorization**: Log into your [Vonage API Dashboard](https://dashboard.nexmo.com) to retrieve your `VONAGE_API_KEY` and `VONAGE_API_SECRET`. You'll combine these to create a [Basic Authentication](/concepts/guides/authentication) string.
 
 ## Body Content
 
-You need to provide the following:
+The following fields can be assigned values in the POST request:
 
-* ``display_name`` (required) the name of the meeting room.
-* ``metadata`` metadata that will be included in all callbacks.
-* ``type`` which can be ``instant`` or ``long term``.
-* ``expires_at`` (required for the ``long_term`` type). The room expiration date in Universal Time Coordinated (UTC) format.
-* ``recording_options`` an object containing various meeting recording options:
-   ``auto_record`` (boolean) sets whether the session will be recorded or not.
+Field | Required? | Description |
+-- | -- | -- | --| -- |
+``display_name`` | Yes | The name of the meeting room.
+``metadata`` | No | Metadata that will be included in all callbacks.
+``type``| No | The type of meeting which can be ``instant`` (the default) or ``long term``.
+``expires_at`` | No | The room expiration date in Universal Time Coordinated (UTC) format.
+``recording_options`` | No | An object containing various meeting recording options. For example:
+| | | If ``auto_record``=``true``, the session will be recorded.
+| | | If ``auto_record``=``false``, the session will not be recorded.
 
 ## Request
 

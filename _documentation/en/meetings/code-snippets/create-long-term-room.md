@@ -26,14 +26,17 @@ How to setup a long term room using the Meetings API.
 
 ## Body Content
 
-You need to provide the following:
+The following fields can be assigned values in the POST request:
 
-* ``display_name`` (required) the name of the meeting room.
-* ``metadata`` metadata that will be included in all callbacks.
-* ``type`` which can be ``instant`` or ``long_term``.
-* ``expires_at`` (required for the ``long_term`` type). The room expiration date in Universal Time Coordinated (UTC) format.
-* ``recording_options`` an object containing various meeting recording options:
-   ``auto_record`` (boolean) sets whether the session will be recorded or not.
+Field | Required? | Description |
+-- | -- | -- | --| -- |
+``display_name`` | Yes | The name of the meeting room.
+``metadata`` | No | Metadata that will be included in all callbacks.
+``type``| No | The type of meeting which can be ``instant`` (the default) or ``long term``.
+``expires_at`` | Yes | You need to suppy a room expiration date in Universal Time Coordinated (UTC) format for a long term room.
+``recording_options`` | No | An object containing various meeting recording options. For example:
+| | | If ``auto_record``=``true``, the session will be recorded.
+| | | If ``auto_record``=``false``, the session will not be recorded.
 
 ## Request
 

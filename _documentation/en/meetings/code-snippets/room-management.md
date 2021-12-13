@@ -22,7 +22,7 @@ The Meetings API provides the following Room Management features.
 
 ## Individual Room Retrieval
 
-Notice the ``ID`` received in the response. This is the ``ID`` of the room which will be used for room retrieval:
+Notice the ``ID`` received in the response. This is the ``ID`` of the room which will be used for room retrieval using a GET request:
 
 ``` curl
 --request GET 'https://api-eu.vonage.com/beta/meetings/rooms/b731a3a9-5552-410b-8d5e-72eac07cb45d' \
@@ -86,7 +86,7 @@ API meetings callbacks allow you to receive information about session events, pa
 * **Recording Started** ``recording:started``: A notification about a recording beginning within a session.
 * **Recording Ended** ``recording:ended``: A notification about a recording being stopped within a session.
 * **Recording Uploaded** ``recording:uploaded``: A notification that a recording is ready to be downloaded.
-* **Participant Joined** ``participant-joined``: A notification about someone joining a session.
+* **Participant Joined** ``participant:joint``: A notification about someone joining a session.
 * **Participant Left** ``session:participant:left``: A notification about someone leaving a session.
 
 ### Example Payloads
@@ -150,7 +150,7 @@ API meetings callbacks allow you to receive information about session events, pa
 
 ## Recordings
 
-Recordings are associated with the session in which they occurred. To retrieve or manage recordings, you'll need the recording ID, which can be found in the callbacks.
+Recordings are associated with the session in which they occurred. To retrieve or manage recordings, you'll need the recording ``ID``, which can be found in the callbacks.
 
 ### Retrieve All Recordings From A Session
 
