@@ -80,14 +80,18 @@ API meetings callbacks allow you to receive information about session events, pa
 
 ### Types of Callbacks
 
-* **Room Expired** ``room:expired``: A notification that a room is inactive. Sessions cannot be created for inactive rooms.
-* **Session Started** ``session:started``: A notification that a session has started.
-* **Session Ended** ``session:ended``: A notification that a session has finished.
-* **Recording Started** ``recording:started``: A notification about a recording beginning within a session.
-* **Recording Ended** ``recording:ended``: A notification about a recording being stopped within a session.
-* **Recording Uploaded** ``recording:uploaded``: A notification that a recording is ready to be downloaded.
-* **Participant Joined** ``participant:joint``: A notification about someone joining a session.
-* **Participant Left** ``session:participant:left``: A notification about someone leaving a session.
+The following table describe each type of callback notification:
+
+Name | Description |
+-- | -- | -- |
+``room:expired`` |  The room is inactive. Sessions cannot be created for inactive rooms.
+``session:started`` | A session has started.
+``session:ended`` | A session has finished.
+``recording:started`` | A recording is beginning within a session.
+``recording:ended`` | A recording has been stopped within a session.
+``recording:uploaded`` | A recording is ready to be downloaded.
+``participant:joint`` | Someone has joined a session.
+``session:participant:left`` | Someone has left a session.
 
 ### Example Payloads
 

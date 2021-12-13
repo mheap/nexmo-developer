@@ -14,11 +14,11 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 ## Contents
 
-* [Requirements](#requirements): What you will need to get started
-* [Terminology](#terminology): Key terms and definitions for the Meetings API
-* [Room Types](#room-types): Defines the types of rooms available
-* [Code Snippets](#code-snippets): Code and instructions for using the Meetings API
-* [Reference](#reference): Further information about the Meetings API
+* [Requirements](#requirements): What you will need to get started.
+* [Terminology](#terminology): Key terms and definitions for the Meetings API.
+* [Room Types](#room-types): Defines the types of rooms available.
+* [Code Snippets](#code-snippets): Code and instructions for using the Meetings API.
+* [Reference](#reference): Further information about the Meetings API.
 
 ## Requirements
 

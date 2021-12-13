@@ -4,7 +4,7 @@ navigation_weight: 1
 description: Setting up a Long Term Meeting Room
 ---
 
-# Setting up a Long Term Meeting Room
+# Set up a Long Term Meeting Room
 
 How to setup a long term room using the Meetings API.
 
