@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.3  - 2021-12-13
+
+### Fixed
+
+- Umbrella header.
+
 ## 4.0.2  - 2021-12-07
 
 ### Fixed
