@@ -43,14 +43,14 @@ Key | Description
   * **Request**: the code snippet you submit to set up a room.
   * **Response**: the data that is returned from your request.
   * **Meeting Room ID**: the ``ID`` is a session identifier which is returned in the response to a meeting request.
-  * **Session**: the time in which there are participants present in the room. Defined as from the first participant to join, until the last to leave.  
+  * **Session**: defined as all events that occur during this time, from when the first participant joins, until the last to leave.  
   * **Guest URL**: meeting room URL used by guests.
   * **Host URL**: meeting room URL with meeting administration capabilities used by the host.
 * **Features**:
   * **Chat**: space for sending written messages that are visible to all attendees in the room.
   * **Record**: you can record a meeting either manually during the meeting or automatically when sending a request.
   * **Room Management**: you can delete, update or retrieve information about rooms.
-  * **Callbacks**: allow you to receiver information about a session.
+  * **Callbacks**: allow you to receive information about a session.
 
 ## Room Types
 
@@ -72,6 +72,8 @@ There are two room types:
 * [Create an Instant Room](code-snippets/create-instant-room)
 * [Create a Long Term Room](code-snippets/create-long-term-room)
 * [Meeting Room Management](code-snippets/room-management)
+* [Create a Long Term Room](code-snippets/create-long-term-room)
+* [Callbacks](code-snippets/callbacks)
 
 ## Reference
 

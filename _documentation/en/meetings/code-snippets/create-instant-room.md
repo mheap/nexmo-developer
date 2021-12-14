@@ -34,7 +34,7 @@ Field | Required? | Description |
 ``metadata`` | No | Metadata that will be included in all callbacks.
 ``type``| No | The type of meeting which can be ``instant`` (the default) or ``long term``.
 ``expires_at`` | No | The room expiration date in Universal Time Coordinated (UTC) format.
-``recording_options`` | No | An object containing various meeting recording options. For example:
+``recording_options`` | No | An object containing recording options for the meeting. For example:
 | | | If ``auto_record``=``true``, the session will be recorded.
 | | | If ``auto_record``=``false``, the session will not be recorded.
 

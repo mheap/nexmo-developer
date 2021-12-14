@@ -1,6 +1,6 @@
 ---
-title: Mettings API Callbacks
-navigation_weight: 0
+title: Callbacks
+navigation_weight: 3
 description: Setting up an Instant Meeting Room
 ---
 
@@ -54,66 +54,4 @@ Name | Description |
     "type": "Guest",
     "is_host": true
 }
-```
-
-## Recording
-
-> Set this option to start recording. See [Recordings below](#Recordings).
-
-``` json
-{
-    "event": "recording:started",
-    "recording_id": "17461b93-f793-48a0-9392-7d82de40432f",
-    "session_id": "2_MX40NjMzOTg5Mn5-MTYzNTg2ODUxNzIzNH5mOUVub3hPNCt6czlwQzdvaTYvbm5lOTN-fg"
-}
-```
-
-## Recording Uploaded
-
-> A notification that a recording is ready to be downloaded. See [Recordings below](#Recordings).
-
-``` json
-{
-    "event": "recording:uploaded",
-    "recording_id": "17461b93-f793-48a0-9392-7d82de40432f",
-    "session_id": "2_MX40NjMzOTg5Mn5-MTYzNTg2ODUxNzIzNH5mOUVub3hPNCt6czlwQzdvaTYvbm5lOTN-fg",
-    "started_at": "2021-11-02T15:55:35.000Z",
-    "ended_at": "2021-11-02T15:56:13.000Z",
-    "duration": 38,
-    "url": "https://prod-meetings-recordings.s3.amazonaws.com/46339892/17461b93-f793-48a0-9392-7d82de40432f/archive.mp4?..."
-}
-```
-
-# Recordings
-
-Recordings are associated with the session in which they occurred. To retrieve or manage recordings, you'll need the recording ``ID``, which can be found in the callbacks.
-
-## Retrieve All Recordings From A Session
-
-To get all recordings for a Session ID, you can use the `sessions` endpoint:
-
-``` curl
---location --request GET 'https://api-eu.vonage.com/beta/meetings/sessions/2_MX40NjMzOTg5Mn5-MTYzNTg2ODUxNzIzNH5mOUVub3hPNCt6czlwQzdvaTYvbm5lOTN-fg/recordings'
---header 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ=='
---header 'Content-Type: application/json'
-```
-
-## Retrieve Individual Recording
-
-Once you have the recording ID, you can use the ``recordings`` endpoint to get a recording:
-
-``` curl
---location --request GET 'https://api-eu.vonage.com/beta/meetings/recordings/17461b93-f793-48a0-9392-7d82de40432f'
---header 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ=='
---header 'Content-Type: application/json'
-```
-
-## Delete A Recording
-
-Similarly, you can delete a recording with a ``DELETE`` action on the same endpoint:
-
-``` curl
---location --request DELETE 'https://api-eu.vonage.com/beta/meetings/recordings/17461b93-f793-48a0-9392-7d82de40432f'
---header 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ=='
---header 'Content-Type: application/json'
 ```

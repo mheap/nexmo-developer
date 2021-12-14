@@ -104,7 +104,7 @@ products:
     translation_frequency: 5
     dropdown: true
   -
-    name: 'Meetings'
+    name: 'Meetings API'
     icon: 'video-conference'
     icon_colour: 'indigo' 
     path: meetings

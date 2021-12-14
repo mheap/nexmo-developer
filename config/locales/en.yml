@@ -6,7 +6,7 @@ en:
   menu:
     message-search: Message Search
     messaging: Messaging
-    meetings: Meetings
+    meetings: Meetings API
     voice: Voice
     voice-api: Voice API
     sip: SIP
