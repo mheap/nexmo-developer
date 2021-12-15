@@ -90,7 +90,7 @@ A room can be updated by using a PATCH action and the room ID. Changes can be fo
 
 Recordings are associated with the session in which they occurred. To retrieve or manage recordings, you'll need the recording ``ID``, which can be found in the callbacks.
 
-#### Retrieve All Recordings From A Session
+### Retrieve All Recordings From A Session
 
 To get all recordings for a Session ID, you can use the `sessions` endpoint:
 

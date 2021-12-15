@@ -10,7 +10,7 @@ API meetings callbacks allow you to receive information about session events, pa
 
 > To register for callbacks, please send a request to the [Meetings API Team](mailto:meetings-api@vonage.com).
 
-# Types of Callbacks
+## Types of Callbacks
 
 The following table describe each type of callback notification:
 
@@ -25,9 +25,9 @@ Name | Description |
 ``participant:joined`` | Someone has joined a session.
 ``session:participant:left`` | Someone has left a session.
 
-# Example Payloads
+## Example Payloads
 
-## Session Started
+### Session Started
 
 > A notification that a session has started.
 
@@ -40,7 +40,7 @@ Name | Description |
 }
 ```
 
-## New Joiner
+### New Joiner
 
 > A notification about someone entering a session.
 
