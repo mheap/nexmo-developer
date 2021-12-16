@@ -44,10 +44,10 @@ You can use the following code to start an instant room (default options):
 
 ``` curl
 
-   --request POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
-   --header 'authorization: basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
-   --header 'content-type: application/json' \
-   --data-raw '{
+   curl -X POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
+   -H 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
+   -H 'content-type: application/json' \
+   -d '{
    "display_name":"New Meeting Room"
                }
 ```
@@ -55,10 +55,10 @@ You can use the following code to start an instant room (default options):
 To create an instant room and automatically turn on recording:
 
 ``` curl
-   --request POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
-   --header 'authorization: basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
-   --header 'content-type: application/json' \
-   --data-raw '{
+   curl -X POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
+   -H 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
+   -H 'Content-Type: application/json' \
+   -d '{
    "display_name":"New Meeting Room"
    "recording_options": {
        "auto_record": true}

@@ -43,10 +43,10 @@ Field | Required? | Description |
 You can use the example code below to create a long term room which expires on October 21st 2022 and will be automatically recorded:
 
 ``` curl
---request POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
---header 'authorization: basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
---header 'content-type: application/json' \
---data-raw '{
+curl -X POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
+-H 'Authorization: basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
+-H 'Content-Type: application/json' \
+--d '{
    "display_name":"New Meeting Room",
    "type":"long_term",
    "expires_at":"2022-10-21T18:45:50.901Z", 
