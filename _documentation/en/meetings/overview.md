@@ -77,4 +77,4 @@ There are two room types:
 
 ## Reference
 
-* Link to the Meetings API. **TBA**
+* [Meetings API Reference](/api/meetings)
