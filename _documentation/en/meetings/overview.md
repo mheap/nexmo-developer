@@ -72,7 +72,6 @@ There are two room types:
 * [Create an Instant Room](code-snippets/create-instant-room)
 * [Create a Long Term Room](code-snippets/create-long-term-room)
 * [Meeting Room Management](code-snippets/room-management)
-* [Create a Long Term Room](code-snippets/create-long-term-room)
 * [Callbacks](code-snippets/callbacks)
 
 ## Reference
