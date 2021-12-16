@@ -109,7 +109,7 @@ navigation_overrides:
     subaccounts:
       label: 'Beta'
   redact:
-    label: 'Dev Preview'
+    label: 'Beta'
     svg: 'lock'
     svgColor: 'red'
   client-sdk:

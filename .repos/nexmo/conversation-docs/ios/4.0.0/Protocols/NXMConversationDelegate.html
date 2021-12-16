@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NXMConversationDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/NXMConversationDelegate" class="dashAnchor"></a>
+    <a title="NXMConversationDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NexmoClient 4.0.0 Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NexmoClient Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        NXMConversationDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NXMCall.html">NXMCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMChannel.html">NXMChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMClient.html">NXMClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMClientConfig.html">NXMClientConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMConversation.html">NXMConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMConversationsPage.html">NXMConversationsPage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMCustomEvent.html">NXMCustomEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMDTMFEvent.html">NXMDTMFEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMDirection.html">NXMDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMEvent.html">NXMEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMEventEmbeddedInfo.html">NXMEventEmbeddedInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMEventsPage.html">NXMEventsPage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMHelper.html">NXMHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMImageEvent.html">NXMImageEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMImageInfo.html">NXMImageInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMLeg.html">NXMLeg</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMLegStatusEvent.html">NXMLegStatusEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMLogger.html">NXMLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMediaEvent.html">NXMMediaEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMediaSettings.html">NXMMediaSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMember.html">NXMMember</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMemberEvent.html">NXMMemberEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMemberMessageStatusEvent.html">NXMMemberMessageStatusEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMemberSummary.html">NXMMemberSummary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMembersSummaryPage.html">NXMMembersSummaryPage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMessage.html">NXMMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMessageEvent.html">NXMMessageEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMMessageStatusEvent.html">NXMMessageStatusEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMPage.html">NXMPage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMPushPayload.html">NXMPushPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMTextEvent.html">NXMTextEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMTextTypingEvent.html">NXMTextTypingEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMUser.html">NXMUser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@NXMErrorDomain">NXMErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@NexmoClientVersionNumber">NexmoClientVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@NexmoClientVersionString">NexmoClientVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/NXMAttachmentType.html">NXMAttachmentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMCallHandler.html">NXMCallHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMCallMemberStatus.html">NXMCallMemberStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMChannelType.html">NXMChannelType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMConnectionStatus.html">NXMConnectionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMConnectionStatusReason.html">NXMConnectionStatusReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMErrorCode.html">NXMErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMEventType.html">NXMEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMImageSize.html">NXMImageSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMLegStatus.html">NXMLegStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMLegType.html">NXMLegType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMLoggerLevel.html">NXMLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMMediaConnectionStatus.html">NXMMediaConnectionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMMediaStreamType.html">NXMMediaStreamType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMMediaType.html">NXMMediaType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMMemberState.html">NXMMemberState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMMemberUpdateType.html">NXMMemberUpdateType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMMessageStatusType.html">NXMMessageStatusType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMMessageType.html">NXMMessageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMPageOrder.html">NXMPageOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMPushTemplate.html">NXMPushTemplate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMSipStatus.html">NXMSipStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMTextTypingEventStatus.html">NXMTextTypingEventStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/NXMCallDelegate.html">NXMCallDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NXMClientDelegate.html">NXMClientDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NXMConversationDelegate.html">NXMConversationDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:NXMBlocks.h@T@NXMCompletionCallback">NXMCompletionCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:NXMBlocks.h@T@NXMErrorCallback">NXMErrorCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallback">NXMSuccessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallbackWithDictionary">NXMSuccessCallbackWithDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallbackWithId">NXMSuccessCallbackWithId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallbackWithObject">NXMSuccessCallbackWithObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallbackWithObjects">NXMSuccessCallbackWithObjects</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NXMConversationDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">NXMConversationDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">NXMConversationDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>The NXMConversationDelegate protocol notifies on conversation events.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceive:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceive:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceive:">-conversation:<wbr>didReceive:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a conversation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+          <span class="nf">didReceive</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation received.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveCustomEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveCustomEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveCustomEvent:">-conversation:<wbr>didReceiveCustomEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a custom event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveCustomEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMCustomEvent.html">NXMCustomEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMCustomEvent.html">NXMCustomEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the custom event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMCustomEvent.html">NXMCustomEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveTextEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveTextEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveTextEvent:">-conversation:<wbr>didReceiveTextEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a text event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveTextEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMTextEvent.html">NXMTextEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMTextEvent.html">NXMTextEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the text event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMTextEvent.html">NXMTextEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveImageEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveImageEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveImageEvent:">-conversation:<wbr>didReceiveImageEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received an image event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveImageEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMImageEvent.html">NXMImageEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMImageEvent.html">NXMImageEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the image event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMImageEvent.html">NXMImageEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMessageEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveMessageEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMessageEvent:">-conversation:<wbr>didReceiveMessageEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a message event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveMessageEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMMessageEvent.html">NXMMessageEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMMessageEvent.html">NXMMessageEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the message event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMMessageEvent.html">NXMMessageEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMessageStatusEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveMessageStatusEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMessageStatusEvent:">-conversation:<wbr>didReceiveMessageStatusEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a message status event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveMessageStatusEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMMessageStatusEvent.html">NXMMessageStatusEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMMessageStatusEvent.html">NXMMessageStatusEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the message status event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMMessageStatusEvent.html">NXMMessageStatusEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveTypingEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveTypingEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveTypingEvent:">-conversation:<wbr>didReceiveTypingEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a typing event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveTypingEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMTextTypingEvent.html">NXMTextTypingEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMTextTypingEvent.html">NXMTextTypingEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the typing event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMTextTypingEvent.html">NXMTextTypingEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMemberEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveMemberEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMemberEvent:">-conversation:<wbr>didReceiveMemberEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a member event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveMemberEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMMemberEvent.html">NXMMemberEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMMemberEvent.html">NXMMemberEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the member event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMMemberEvent.html">NXMMemberEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveLegStatusEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveLegStatusEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveLegStatusEvent:">-conversation:<wbr>didReceiveLegStatusEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a leg status event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveLegStatusEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMLegStatusEvent.html">NXMLegStatusEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMLegStatusEvent.html">NXMLegStatusEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the leg status event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMLegStatusEvent.html">NXMLegStatusEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMemberMessageStatusEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveMemberMessageStatusEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMemberMessageStatusEvent:">-conversation:<wbr>didReceiveMemberMessageStatusEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a member message status event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveMemberMessageStatusEvent</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMMemberMessageStatusEvent.html">NXMMemberMessageStatusEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMMemberMessageStatusEvent.html">NXMMemberMessageStatusEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the member message status event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMMemberMessageStatusEvent.html">NXMMemberMessageStatusEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMediaEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveMediaEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveMediaEvent:">-conversation:<wbr>didReceiveMediaEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a media event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveMediaEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMMediaEvent.html">NXMMediaEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMMediaEvent.html">NXMMediaEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the media event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMMediaEvent.html">NXMMediaEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveDTMFEvent:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:didReceiveDTMFEvent:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:didReceiveDTMFEvent:">-conversation:<wbr>didReceiveDTMFEvent:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a DTMF event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">didReceiveDTMFEvent</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMDTMFEvent.html">NXMDTMFEvent</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMDTMFEvent.html">NXMDTMFEvent</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the DTMF event.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/NXMDTMFEvent.html">NXMDTMFEvent</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NXMConversationDelegate(im)conversation:onMediaConnectionStateChange:legId:"></a>
+                    <a name="//apple_ref/objc/Method/-conversation:onMediaConnectionStateChange:legId:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NXMConversationDelegate(im)conversation:onMediaConnectionStateChange:legId:">-conversation:<wbr>onMediaConnectionStateChange:<wbr>legId:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Received a media connection state changed notification.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">conversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/NXMConversation.html">NXMConversation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">conversation</span>
+    <span class="nf">onMediaConnectionStateChange</span><span class="p">:(</span><span class="n"><a href="../Enums/NXMMediaConnectionStatus.html">NXMMediaConnectionStatus</a></span><span class="p">)</span><span class="nv">state</span>
+                           <span class="nf">legId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">legId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">conversation</span><span class="p">(</span><span class="n">_</span> <span class="nv">conversation</span><span class="p">:</span> <span class="kt"><a href="../Classes/NXMConversation.html">NXMConversation</a></span><span class="p">,</span> <span class="n">onMediaConnectionStateChange</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/NXMMediaConnectionStatus.html">NXMMediaConnectionStatus</a></span><span class="p">,</span> <span class="nv">legId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>conversation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Classes/NXMConversation.html">NXMConversation</a></code> object, the conversation which received the media connection state changed notification.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>state</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new Media state.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>legId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The leg id associated with the new media connection state received.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external noopener">Vonage</a>. All rights reserved. (Last updated: 2021-12-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

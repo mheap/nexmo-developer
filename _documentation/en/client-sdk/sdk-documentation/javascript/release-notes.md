@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.3.1 - December 09, 2021
+
+### New
+
+- Set the default sync level for the login process from `lite` to `none`
+
 ## Version 8.3.0 - November 01, 2021
 
 ### New
