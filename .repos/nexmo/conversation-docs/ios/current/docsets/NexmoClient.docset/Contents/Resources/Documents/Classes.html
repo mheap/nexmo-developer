@@ -17,7 +17,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NexmoClient 3.3.0 Docs</a> (100% documented)</p>
+        <p><a href="index.html">NexmoClient 4.0.2 Docs</a> (100% documented)</p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -105,10 +105,16 @@
                 <a href="Classes/NXMMemberEvent.html">NXMMemberEvent</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/NXMMemberMessageStatusEvent.html">NXMMemberMessageStatusEvent</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/NXMMemberSummary.html">NXMMemberSummary</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/NXMMembersSummaryPage.html">NXMMembersSummaryPage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NXMMessage.html">NXMMessage</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/NXMMessageEvent.html">NXMMessageEvent</a>
@@ -160,13 +166,13 @@
                 <a href="Enums/NXMCallMemberStatus.html">NXMCallMemberStatus</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/NXMChannelType.html">NXMChannelType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/NXMConnectionStatus.html">NXMConnectionStatus</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/NXMConnectionStatusReason.html">NXMConnectionStatusReason</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/NXMDirectionType.html">NXMDirectionType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/NXMErrorCode.html">NXMErrorCode</a>
@@ -203,6 +209,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Enums/NXMMessageStatusType.html">NXMMessageStatusType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NXMMessageType.html">NXMMessageType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/NXMPageOrder.html">NXMPageOrder</a>
@@ -243,6 +252,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallback">NXMSuccessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallbackWithDictionary">NXMSuccessCallbackWithDictionary</a>
               </li>
               <li class="nav-group-task">
                 <a href="Type%20Definitions.html#/c:NXMBlocks.h@T@NXMSuccessCallbackWithId">NXMSuccessCallbackWithId</a>
@@ -420,12 +432,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMImageEvent</span> <span class="p">:</span> <span class="nc"><a href="Classes/NXMMessageEvent.html">NXMMessageEvent</a></span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMImageEvent</span> <span class="p">:</span> <span class="nc"><a href="Classes/NXMEvent.html">NXMEvent</a></span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMImageEvent</span> <span class="p">:</span> <span class="kt"><a href="Classes/NXMMessageEvent.html">NXMMessageEvent</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMImageEvent</span> <span class="p">:</span> <span class="kt"><a href="Classes/NXMEvent.html">NXMEvent</a></span></code></pre>
 
                         </div>
                       </div>
@@ -478,7 +490,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A base class for both <code><a href="Classes/NXMImageEvent.html">NXMImageEvent</a></code> and <code><a href="Classes/NXMTextEvent.html">NXMTextEvent</a></code>.</p>
+                        <p>Represents a message event that is sent and received on an <code><a href="Classes/NXMConversation.html">NXMConversation</a></code>.</p>
 
                         <a href="Classes/NXMMessageEvent.html" class="slightly-smaller">See more</a>
                       </div>
@@ -552,12 +564,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMTextEvent</span> <span class="p">:</span> <span class="nc"><a href="Classes/NXMMessageEvent.html">NXMMessageEvent</a></span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMTextEvent</span> <span class="p">:</span> <span class="nc"><a href="Classes/NXMEvent.html">NXMEvent</a></span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMTextEvent</span> <span class="p">:</span> <span class="kt"><a href="Classes/NXMMessageEvent.html">NXMMessageEvent</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMTextEvent</span> <span class="p">:</span> <span class="kt"><a href="Classes/NXMEvent.html">NXMEvent</a></span></code></pre>
 
                         </div>
                       </div>
@@ -723,6 +735,39 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMLegStatusEvent</span> <span class="p">:</span> <span class="kt"><a href="Classes/NXMEvent.html">NXMEvent</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMMemberMessageStatusEvent"></a>
+                    <a name="//apple_ref/objc/Class/NXMMemberMessageStatusEvent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMMemberMessageStatusEvent">NXMMemberMessageStatusEvent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a member message status event that can be received on an <code><a href="Classes/NXMConversation.html">NXMConversation</a></code>.</p>
+
+                        <a href="Classes/NXMMemberMessageStatusEvent.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMMemberMessageStatusEvent</span> <span class="p">:</span> <span class="nc"><a href="Classes/NXMEvent.html">NXMEvent</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMMemberMessageStatusEvent</span> <span class="p">:</span> <span class="kt"><a href="Classes/NXMEvent.html">NXMEvent</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1128,6 +1173,39 @@ Use this class to retrieve information about a NXMMemberSummary and display memb
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)NXMMessage"></a>
+                    <a name="//apple_ref/objc/Class/NXMMessage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMMessage">NXMMessage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The NXMMessage object represents a message to send.</p>
+
+                        <a href="Classes/NXMMessage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NXMMessage</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NXMMessage</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)NXMPushPayload"></a>
                     <a name="//apple_ref/objc/Class/NXMPushPayload" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)NXMPushPayload">NXMPushPayload</a>
@@ -1328,7 +1406,7 @@ Use this class to retrieve information about a NXMMemberSummary and display memb
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external noopener">Vonage</a>. All rights reserved. (Last updated: 2021-11-23)</p>
+          <p>&copy; 2021 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external noopener">Vonage</a>. All rights reserved. (Last updated: 2021-12-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

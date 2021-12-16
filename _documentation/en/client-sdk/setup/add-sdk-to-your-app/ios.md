@@ -60,7 +60,7 @@ source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/import'
 
 ### Frameworks
 
-1. Download the Client SDK then drag and drop the `NexmoClient.framework` folder into your project:
+1. Download the Client SDK. You can find the latest version on the [Cocoapods repository](https://github.com/CocoaPods/Specs/tree/ccff7c3196fc5ee4c4846848af9dc4aa792f6d55/Specs/8/8/d/NexmoClient). Navigate to the latest version, then use the link in the `NexmoClient.podspec.json` file. Then drag and drop the `NexmoClient.framework` folder into your project:
 ![Project explorer](/images/client-sdk/ios-manual-setup-project.png)
 
 2. Turn on *Embed & Sign* for `NexmoClient.framework` in your target's settings:
@@ -71,6 +71,13 @@ source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/import'
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/ios/import'
 ```
+
+### Additional framework for SDK versions >= 4
+
+4. Download the Vonage WebRTC dependency. You can find the latest version on the [Cocoapods repository](https://github.com/CocoaPods/Specs/tree/ccff7c3196fc5ee4c4846848af9dc4aa792f6d55/Specs/8/1/b/VonageWebRTC). Similarly to the Client SDK, use the link in the `VonageWebRTC.podspec.json` file. Then drag and drop the `VonageWebRTC.framework` folder into your project.
+
+5. Turn on *Embed & Sign* for `VonageWebRTC.framework` and add `libc++.tbd` in your target's settings:
+![Embed & sign VonageWebRTC](/images/client-sdk/ios-manual-setup-webrtc.png)
 
 ## Add permissions
 
