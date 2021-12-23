@@ -16,7 +16,7 @@ The following table describe each type of callback notification:
 
 Name | Description |
 -- | -- | -- |
-``room:expired`` |  The room is inactive. Sessions cannot be created for inactive rooms.
+``room:expired`` | The room is inactive. Sessions cannot be created for inactive rooms.
 ``session:started`` | A session has started.
 ``session:ended`` | A session has finished.
 ``recording:started`` | A recording is beginning within a session.

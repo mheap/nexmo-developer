@@ -22,7 +22,7 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 ## Requirements
 
-**Vonage Developer Account**: If you don’t have a Vonage account yet, you can get one  here: [Vonage Developers Account](https://dashboard.nexmo.com/sign-up).
+**Vonage Developer Account**: If you don’t have a Vonage account yet, you can get one here: [Vonage Developers Account](https://dashboard.nexmo.com/sign-up).
 
 **Meetings API Activation**: To activate the Meetings API, you need to register with us. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
 
@@ -43,7 +43,7 @@ Key | Description
   * **Request**: the code snippet you submit to set up a room.
   * **Response**: the data that is returned from your request.
   * **Meeting Room ID**: the ``ID`` is a session identifier which is returned in the response to a meeting request.
-  * **Session**: defined as all events that occur during this time, from when the first participant joins, until the last to leave.  
+  * **Session**: defined as all events that occur during this time, from when the first participant joins, until the last to leave.
   * **Guest URL**: meeting room URL used by guests.
   * **Host URL**: meeting room URL with meeting administration capabilities used by the host.
 * **Features**:
