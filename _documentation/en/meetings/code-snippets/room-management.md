@@ -59,7 +59,7 @@ curl -X PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/e6acf820-7093-416f-
 
 ## Recording
 
-> Set this option to start recording. See [Recordings below](#Recordings).
+> Set this option to start recording. See [Recordings Below](#Recordings).
 
 ``` json
 {
@@ -71,7 +71,7 @@ curl -X PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/e6acf820-7093-416f-
 
 ## Recording Uploaded
 
-> A notification that a recording is ready to be downloaded. See [Recordings below](#Recordings).
+> A notification that a recording is ready to be downloaded. See [Recordings Below](#Recordings).
 
 ``` json
 {

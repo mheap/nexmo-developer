@@ -4,7 +4,7 @@ navigation_weight: 0
 description: Setting up an Instant Meeting Room
 ---
 
-# Setting up an Instant Meeting Room
+# Set up an Instant Meeting Room
 
 How to set up an Instant (default) room using the Meetings API.
 

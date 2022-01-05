@@ -62,7 +62,7 @@ There are two room types:
       If no one joins the room within the ten minutes, the room is deleted.
   * Active for ten minutes after the last participant leaves, then it is deleted.
 * **Long Term Room**:
-  * Remains alive until the expiration date you specify (max five years).
+  * Remains alive until the expiration date you specify (maximum five years).
   * Typically linked to a recurring meeting, person, or resource.
   * Will require you to specify an expiration date (in UTC format).
   * Enables you to request that a room is automatically deleted ten minutes after the last participant leaves the room.
