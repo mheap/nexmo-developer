@@ -88,7 +88,7 @@ source: '_examples/voice/ncco/creating-a-custom-call-or-conversation-for-each-us
 
 ⚓ ringback-tone
 
-Below you an find an One De Minute video explaining what NCCOs are and how to use them:
+Below you can find the One Dev Minute video explaining what NCCOs are and how to use them:
 [![Here's an One De Minute video explaining what NCCOs are and how to use them](https://user-images.githubusercontent.com/9335603/148561582-4121623a-99c0-445e-b8cf-1f6e1d57d422.png)](https://www.youtube.com/watch?v=26rm0MP2up0)
 
 
