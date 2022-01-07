@@ -88,6 +88,10 @@ source: '_examples/voice/ncco/creating-a-custom-call-or-conversation-for-each-us
 
 ⚓ ringback-tone
 
+Below you an find an One De Minute video explaining what NCCOs are and how to use them:
+[![Here's an One De Minute video explaining what NCCOs are and how to use them](https://user-images.githubusercontent.com/9335603/148561582-4121623a-99c0-445e-b8cf-1f6e1d57d422.png)](https://www.youtube.com/watch?v=26rm0MP2up0)
+
+
 ## Connecting to endpoints that don't generate a ring back tone
 
 Sometimes you will connect to an endpoint that does not have a ring back tone provided by the carrier. If calling a phone endpoint, you will usually hear a ring back tone provided by the carrier, but if one is not provided for that endpoint the caller will experience silence and may be unsure if they are being connected or not. This may result in them hanging up the call. To get around this potential problem, you can use `ringbackTone` in your NCCO to provide a ring back tone. For example:
