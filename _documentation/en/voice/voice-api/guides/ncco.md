@@ -11,6 +11,11 @@ description: >-
 
 A Call Control Object (NCCO) is a JSON array of actions that is used to control the flow of a Voice API Call.
 
+Below you can find the One Dev Minute video explaining what NCCOs are and how to use them:
+[![Here's the One Dev Minute video explaining what NCCOs are and how to use them](https://user-images.githubusercontent.com/9335603/148561582-4121623a-99c0-445e-b8cf-1f6e1d57d422.png)](https://www.youtube.com/watch?v=26rm0MP2up0)
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/26rm0MP2up0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 This section describes:
 
 - [About Nexmo Call Control Objects](#about-nexmo-call-control-objects)
@@ -87,10 +92,6 @@ source: '_examples/voice/ncco/creating-a-custom-call-or-conversation-for-each-us
 ```
 
 ⚓ ringback-tone
-
-Below you can find the One Dev Minute video explaining what NCCOs are and how to use them:
-[![Here's the One Dev Minute video explaining what NCCOs are and how to use them](https://user-images.githubusercontent.com/9335603/148561582-4121623a-99c0-445e-b8cf-1f6e1d57d422.png)](https://www.youtube.com/watch?v=26rm0MP2up0)
-
 
 ## Connecting to endpoints that don't generate a ring back tone
 
