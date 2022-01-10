@@ -14,7 +14,7 @@ How to set up an Instant (default) room using the Meetings API.
 
 * **Meetings API Activation**: To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
 
-* **API Key and Secret**: Once you’re logged in to the [Vonage API Dashboard](https://dashboard.nexmo.com), you'll find your API Key and Secret on the Meetings API menu.
+* **Application ID and Secret**: Once you’re logged in to the [Vonage API Dashboard](https://dashboard.nexmo.com), click on Applications and create a new Application. Click  `Generate public and private key` and record the private key. You'll be using the private key with the Application ID to [Generate a JSON Web Token (JWT)](https://developer.vonage.com/jwt). For further details about JWTs, please see [Authentication](/concepts/guides/authentication).
 
 ## Set up POST Request
 
@@ -22,7 +22,7 @@ How to set up an Instant (default) room using the Meetings API.
 
 **Required Headers**: You need to add the ``Content-Type`` to your headers: ``Content-Type: application/json``.
 
-**Authorization**: Log into your [Vonage API Dashboard](https://dashboard.nexmo.com) to retrieve your `VONAGE_API_KEY` and `VONAGE_API_SECRET`. You'll combine these to create a [Basic Authentication](/concepts/guides/authentication) string.
+**Authorization**: Use the [JWT Generator](https://developer.vonage.com/jwt) to create a JWT from the Application ID and private key of the application. You'll use your JWT to create a [Token Authorization](/concepts/guides/authentication) string that is made up of ``Bearer`` and the JWT you created.
 
 ## Body Content
 
@@ -45,24 +45,24 @@ You can use the following code to start an instant room (default options):
 ``` curl
 
    curl -X POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
-   -H 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
+   -H 'Authorization: Bearer XXXXX' \
    -H 'content-type: application/json' \
    -d '{
    "display_name":"New Meeting Room"
-               }
+               }'
 ```
 
 To create an instant room and automatically turn on recording:
 
 ``` curl
    curl -X POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
-   -H 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
+   -H 'Authorization: Bearer XXXXX' \
    -H 'Content-Type: application/json' \
    -d '{
-   "display_name":"New Meeting Room"
+   "display_name":"New Meeting Room",
    "recording_options": {
        "auto_record": true}
-               }
+               }'
 ```
 
 ## Response
@@ -81,7 +81,7 @@ As this room has not yet expired, ``is_available`` is set to true.
    "type":"instant",
    "expires_at":"2021-10-19T17:54:17.219Z",
    "recording_options":{
-      "auto_record":false
+      "auto_record":true
    },
    "meeting_code":"982515622",
    "_links":{

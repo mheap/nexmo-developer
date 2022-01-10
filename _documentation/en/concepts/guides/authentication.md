@@ -11,17 +11,18 @@ API | API Key and Secret (Query String) | API Key and Secret (Header) | JSON Web
 -- | -- | -- | -- | --
 [SMS](/api/sms) | ✅ | ❌ | ❌
 [Voice](/api/voice)¹ | ❌ | ❌ | ✅
-[Verify](/api/verify) | ✅ | ❌ | ❌ 
+[Verify](/api/verify) | ✅ | ❌ | ❌
 [Number Insight](/api/number-insight) | ✅ | ❌ | ❌
 [Conversion](/api/conversion) | ✅ | ❌ | ❌
-[Developer](/api/developer) | ✅ | ❌ | ❌ 
-[Messages](/api/messages-olympus) | ❌ | ✅ | ✅ 
-[Dispatch](/api/dispatch) | ❌ | ✅ | ✅ 
-[Audit](/api/audit) | ❌ | ✅ | ❌ 
-[Redact](/api/redact) | ❌ | ✅ | ❌ 
+[Developer](/api/developer) | ✅ | ❌ | ❌
+[Messages](/api/messages-olympus) | ❌ | ✅ | ✅
+[Meetings](/api/meetings) | ❌ | ❌ | ✅
+[Dispatch](/api/dispatch) | ❌ | ✅ | ✅
+[Audit](/api/audit) | ❌ | ✅ | ❌
+[Redact](/api/redact) | ❌ | ✅ | ❌
 [Media](/api/media) | ✅ | ❌ | ❌
-[Conversation](/api/conversation) | ❌ | ❌ | ✅ 
-[Reports](/api/reports) | ❌ | ✅ | ❌ 
+[Conversation](/api/conversation) | ❌ | ❌ | ✅
+[Reports](/api/reports) | ❌ | ✅ | ❌
 
 ¹ SIP Trunking uses [Digest Authentication](https://developer.vonage.com/voice/sip/overview#authentication) method with the API Key as user and API Secret as password.
 
@@ -29,13 +30,13 @@ API | API Key and Secret (Query String) | API Key and Secret (Header) | JSON Web
 
 In this document you can learn about authentication via the following means:
 
-  - [API Key and Secret](#api-key-and-secret)
-    - [Request Body](#request-body)
-    - [Query String](#query-string)
-    - [Header-based API Key and Secret Authentication](#header-based-api-key-and-secret-authentication)
-    - [Secret Rotation](#secret-rotation)
-  - [JSON Web Tokens (JWT)](#json-web-tokens-jwt)
-  - [References](#references)
+- [API Key and Secret](#api-key-and-secret)
+  - [Request Body](#request-body)
+  - [Query String](#query-string)
+  - [Header-based API Key and Secret Authentication](#header-based-api-key-and-secret-authentication)
+  - [Secret Rotation](#secret-rotation)
+- [JSON Web Tokens (JWT)](#json-web-tokens)
+- [References](#references)
 
 ## API Key and Secret
 
@@ -79,29 +80,29 @@ Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==
 
 A website for generating Base64 encoded strings can be found here:
 
-* General: [Base64 Encode and Decode](https://www.base64encode.org/)
+- General: [Base64 Encode and Decode](https://www.base64encode.org/)
 
 Details on how to encode Base64 strings in a variety of programming languages can be found at the following websites:
 
-* C#/.NET: [How do I encode and decode a Base64 string?](https://stackoverflow.com/questions/11743160/how-do-i-encode-and-decode-a-base64-string) from StackOverflow
-* Go: [Base64 Encoding](https://gobyexample.com/base64-encoding) from Go By Example
-* Java: [Base64](https://docs.oracle.com/javase/8/docs/api/java/util/Base64.html)
-* JavaScript: [Base64 encoding and decoding](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) from MDN web docs
-* PHP: [base64_encode](https://secure.php.net/manual/en/function.base64-encode.php)
-* Python: [Base64](https://docs.python.org/2/library/base64.html)
-* Ruby: [Base64](https://ruby-doc.org/stdlib-2.5.0/libdoc/base64/rdoc/Base64.html)
-* Swift: [Base64 Encode and Decode in Swift](http://iosdevelopertips.com/swift-code/base64-encode-decode-swift.html) from iOS Developer Tips
+- C#/.NET: [How do I encode and decode a Base64 string?](https://stackoverflow.com/questions/11743160/how-do-i-encode-and-decode-a-base64-string) from StackOverflow
+- Go: [Base64 Encoding](https://gobyexample.com/base64-encoding) from Go By Example
+- Java: [Base64](https://docs.oracle.com/javase/8/docs/api/java/util/Base64.html)
+- JavaScript: [Base64 encoding and decoding](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) from MDN web docs
+- PHP: [base64_encode](https://secure.php.net/manual/en/function.base64-encode.php)
+- Python: [Base64](https://docs.python.org/2/library/base64.html)
+- Ruby: [Base64](https://ruby-doc.org/stdlib-2.5.0/libdoc/base64/rdoc/Base64.html)
+- Swift: [Base64 Encode and Decode in Swift](http://iosdevelopertips.com/swift-code/base64-encode-decode-swift.html) from iOS Developer Tips
 
 ### Secret Rotation
 
 It is possible to have two API secrets to be used against one API key at the same time. This way you can create a second API secret and test it before revoking the existing API secret in your production network. The API secret rotation procedure consists of the following steps:
 
-1. Create a second API secret in your [account settings](https://dashboard.nexmo.com/settings) or by using  the [secret rotation API](/api/account/secret-management).
+1. Create a second API secret in your [account settings](https://dashboard.nexmo.com/settings) or by using the [secret rotation API](/api/account/secret-management).
 2. Update one or more of your servers to use the newly created API secret for making calls to Vonage APIs
 3. Test that there are no connectivity issues and roll out the API secret update across the remaining servers
 4. Delete the replaced API secret
 
-## JWTs
+## JSON Web Tokens
 
 JSON Web Tokens (JWTs) are a compact, URL-safe means of representing claims to be transferred between two parties.
 
@@ -156,5 +157,5 @@ Further information on the Vonage CLI can be found in its [repository on GitHub]
 
 ## References
 
-* [Voice API Reference](/api/voice)
-* [SMS API Reference](/api/sms)
+- [Voice API Reference](/api/voice)
+- [SMS API Reference](/api/sms)

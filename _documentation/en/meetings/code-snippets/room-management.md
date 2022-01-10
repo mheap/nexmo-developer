@@ -12,7 +12,7 @@ Notice the ``ID`` received in the response. This is the ``ID`` of the room which
 
 ``` curl
 curl -X GET 'https://api-eu.vonage.com/beta/meetings/rooms/b731a3a9-5552-410b-8d5e-72eac07cb45d' \
--H 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
+-H 'Authorization: Bearer XXXXX' \
 -H 'Content-Type: application/json'
 ```
 
@@ -24,7 +24,7 @@ To retrieve all rooms, omit the ``ID``:
 
 ``` curl
 curl -X GET 'https://api-eu.vonage.com/beta/meetings/rooms/' \
--H 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ==' \
+-H 'Authorization: Bearer XXXXX' \
 -H 'Content-Type: application/json'
 ```
 
@@ -46,20 +46,15 @@ A room can be updated by using a PATCH action and the room ID. Changes can be fo
 > These should be included in an object called ``update_details``.
 
 ``` curl
-curl -X PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/e6acf820-7093-416f-a2bd-bcdacd7cc593' \
--H 'Authorization: Basic MTFmMWI4NGY6UnVpbnJIMWxneGZXNGJibQ==' \
+curl -X PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/b731a3a9-5552-410b-8d5e-72eac07cb45d' \
+-H 'Authorization: Bearer XXXXX' \
 -H 'Content-Type: application/json' \
--d '{
-  "update_details": {
-    "expires_at": "2021-11-11T16:00:00.000Z"
-                    }
-            }
-}
+-d '{ "update_details": { "expires_at": "2022-11-11T16:00:00.000Z" } }'
 ```
 
 ## Recording
 
-> Set this option to start recording. See [Recordings Below](#Recordings).
+> Set this option to start recording. See [Recordings Below](#recordings).
 
 ``` json
 {
@@ -71,7 +66,7 @@ curl -X PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/e6acf820-7093-416f-
 
 ## Recording Uploaded
 
-> A notification that a recording is ready to be downloaded. See [Recordings Below](#Recordings).
+> A notification that a recording is ready to be downloaded. See [Recordings Below](#recordings).
 
 ``` json
 {
@@ -105,7 +100,7 @@ Once you have the recording ID, you can use the ``recordings`` endpoint to get a
 
 ``` curl
 curl -X GET 'https://api-eu.vonage.com/beta/meetings/recordings/17461b93-f793-48a0-9392-7d82de40432f'
--H 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ=='
+-H 'Authorization: Bearer XXXXX' \
 -H 'Content-Type: application/json'
 ```
 
@@ -115,6 +110,6 @@ Similarly, you can delete a recording with a ``DELETE`` action on the same endpo
 
 ``` curl
 curl -X DELETE 'https://api-eu.vonage.com/beta/meetings/recordings/17461b93-f793-48a0-9392-7d82de40432f'
--H 'Authorization: Basic YWFhMDEyOmFiYzEyMzQ1Njc4OQ=='
+-H 'Authorization: Bearer XXXXX' \
 -H 'Content-Type: application/json'
 ```
