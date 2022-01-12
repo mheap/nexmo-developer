@@ -26,7 +26,7 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 **Meetings API Activation**: To activate the Meetings API, you need to register with us. Please send an email request, with your API key from the [Vonage API Dashboard](https://dashboard.nexmo.com), to the [Meetings API Team](mailto:meetings-api@vonage.com).
 
-**Application ID and Private Key**: Once you’re logged in to the [Vonage API Dashboard](https://dashboard.nexmo.com), click on Applications and create a new Application. Click Generate ``public and private key`` and record the private key.
+**Application ID and Private Key**: Once you’re logged in to the [Vonage API Dashboard](https://dashboard.nexmo.com), click on Applications and create a new Application. Generate a public and private key and record the private key.
 
 **JSON Web Token (JWT)**: Use the [JWT Generator](https://developer.vonage.com/jwt) to create a JWT using the Application ID and Private Token mentioned above. For further details about JWTs, please see [Vonage Authentication](/concepts/guides/authentication).
 
@@ -45,7 +45,7 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
   * **Host URL**: meeting room URL with meeting administration capabilities used by the host.
 * **Features**:
   * **Chat**: space for sending written messages that are visible to all attendees in the room.
-  * **Record**: you can record a meeting either manually during the meeting or automatically when sending a request.
+  * **Recording**: you can start a recording manually during a meeting, or set the meeting to record automatically when sending a request.
   * **Room Management**: you can delete, update or retrieve information about rooms.
   * **Callbacks**: allow you to receive information about a session.
 
@@ -59,9 +59,9 @@ There are two room types:
       If no one joins the room within the ten minutes, the room is deleted.
   * Active for ten minutes after the last participant leaves, then it is deleted.
 * **Long Term Room**:
-  * Remains alive until the expiration date you specify (maximum five years).
+  * Remains alive until the expiration date you specify (maximum one year).
   * Typically linked to a recurring meeting, person, or resource.
-  * Will require you to specify an expiration date (in UTC format).
+  * Will require you to specify an expiration date (in ISO format).
   * Enables you to request that a room is automatically deleted ten minutes after the last participant leaves the room.
 
 ## Code Snippets

@@ -40,10 +40,10 @@ curl -X DELETE 'https://api-eu.vonage.com/beta/meetings/rooms/b307d837-c0ce-4619
 
 > This operation will return a ``204`` status.
 
-## Room Update
+## Expiration Update
 
 A room can be updated by using a PATCH action and the room ID. Changes can be for ``display_name``, ``metadata``, ``expires_at``, and ``recording_options``
-> These should be included in an object called ``update_details``.
+> The expiration date of a long term room can be updated by using a PATCH action and the room ID. The new date should be included in an object called ``update_details``.
 
 ``` curl
 curl -X PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/b731a3a9-5552-410b-8d5e-72eac07cb45d' \
