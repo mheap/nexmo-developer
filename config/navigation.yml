@@ -2,6 +2,7 @@ navigation_weight:
   application: 0
   messaging: 1
   messages: 1
+  meetings: 2
   voice: 3
   verify: 3
   number-insight: 4
@@ -143,6 +144,10 @@ navigation_overrides:
     label: 'Beta'
     code-snippets:
       collapsible: false
+  meetings:
+    svg: 'video-conference'
+    svgColor: 'purple'
+    label: 'Beta'
   dispatch:
     svg: 'flow'
     svgColor: 'purple'
