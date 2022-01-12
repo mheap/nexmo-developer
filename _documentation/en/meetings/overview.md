@@ -24,14 +24,11 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 **Vonage Developer Account**: If you don’t have a Vonage account yet, you can get one here: [Vonage Developers Account](https://dashboard.nexmo.com/sign-up).
 
-**Meetings API Activation**: To activate the Meetings API, you need to register with us. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
+**Meetings API Activation**: To activate the Meetings API, you need to register with us. Please send an email request, with your API key from the [Vonage API Dashboard](https://dashboard.nexmo.com), to the [Meetings API Team](mailto:meetings-api@vonage.com).
 
-**API Key and Secret**: Once you’re logged in, you'll find your API Key and Secret in your dashboard under "Getting Started".
+**Application ID and Private Key**: Once you’re logged in to the [Vonage API Dashboard](https://dashboard.nexmo.com), click on Applications and create a new Application. Click Generate ``public and private key`` and record the private key.
 
-Key | Description
--- | --
-`VONAGE_API_KEY` | Vonage API key which can be obtained from your [Vonage API Dashboard](https://dashboard.nexmo.com).
-`VONAGE_API_SECRET` | Vonage API secret which can be obtained from your [Vonage API Dashboard](https://dashboard.nexmo.com).
+**JSON Web Token (JWT)**: Use the [JWT Generator](https://developer.vonage.com/jwt) to create a JWT using the Application ID and Private Token mentioned above. For further details about JWTs, please see [Vonage Authentication](/concepts/guides/authentication).
 
 ## Terminology
 
