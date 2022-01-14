@@ -49,7 +49,7 @@ For the log in buttons to work, you need to add targets to them which will run a
 }
 ```
 
-Then link the two functions them to their respective buttons at the end of the `viewDidLoad` function.
+Then link the two functions to their respective buttons at the end of the `viewDidLoad` function.
 
 ```objective_c
 - (void)viewDidLoad {

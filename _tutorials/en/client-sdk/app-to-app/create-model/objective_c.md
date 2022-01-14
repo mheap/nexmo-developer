@@ -5,7 +5,7 @@ description: In this step you will build the user model struct.
 
 # Building the user model
 
-To be have a conversation you need to store some information about a user: 
+To have a conversation you need to store some information about a user: 
 
 * A user's name
 * A user's JWT

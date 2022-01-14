@@ -161,21 +161,23 @@ Now you are ready to present the calling interface along with the user informati
 
 ```objective_c
 - (void)client:(NXMClient *)client didChangeConnectionStatus:(NXMConnectionStatus)status reason:(NXMConnectionStatusReason)reason {
-    switch (status) {
-        case NXMConnectionStatusConnected: {
-            self.statusLabel.text = @"Connected";
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[CallViewController alloc] initWithUser:self.user]];
-            navigationController.modalPresentationStyle = UIModalPresentationOverFullScreen;
-            [self presentViewController:navigationController animated:YES completion:nil];
-            break;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        switch (status) {
+            case NXMConnectionStatusConnected: {
+                self.statusLabel.text = @"Connected";
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[CallViewController alloc] initWithUser:self.user]];
+                navigationController.modalPresentationStyle = UIModalPresentationOverFullScreen;
+                [self presentViewController:navigationController animated:YES completion:nil];
+                break;
+            }
+            case NXMConnectionStatusConnecting:
+                self.statusLabel.text = @"Connecting";
+                break;
+            case NXMConnectionStatusDisconnected:
+                self.statusLabel.text = @"Disconnected";
+                break;
         }
-        case NXMConnectionStatusConnecting:
-            self.statusLabel.text = @"Connecting";
-            break;
-        case NXMConnectionStatusDisconnected:
-            self.statusLabel.text = @"Disconnected";
-            break;
-    }
+    });
 }
 ```
 

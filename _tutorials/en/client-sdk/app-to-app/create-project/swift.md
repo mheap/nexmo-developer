@@ -14,7 +14,7 @@ You will be using the iOS Client SDK library inside an Xcode project you'll crea
 
 * Select a `App` for the Application type and click `Next`.
 
-* For the `Product Name` type in `AppToApp`.
+* For the `Product Name` type in `AppToAppCall`.
 
 * Select or add the relevant value for `Team` and `Organisation Identifier`. NB: If you don't possess that info, select `None` for `Team` and enter `com.test` for `Organisation Identifier`.
 
