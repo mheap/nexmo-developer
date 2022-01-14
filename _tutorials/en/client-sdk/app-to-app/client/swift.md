@@ -51,7 +51,7 @@ class ViewController: UIViewController {
 }
 ```
 
-Then link the two functions them to their respective buttons at the end of the `viewDidLoad` function.
+Then link the two functions to their respective buttons at the end of the `viewDidLoad` function.
 
 ```swift
 override func viewDidLoad() {

@@ -18,7 +18,7 @@ introduction:
     ### Completed project
     If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-objc](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-objc) folder.
 
-    *This tutorial uses NexmoClient version 3.1.0*
+    *This tutorial uses NexmoClient version 4.0*
 
 
 prerequisites:

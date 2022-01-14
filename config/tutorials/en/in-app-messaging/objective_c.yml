@@ -12,9 +12,9 @@ introduction:
 
     First, you will create a Conversation and two Users. Then, you will authenticate these Users and add them to the Conversation as Members. Finally, you will implement chat functionality in an application, including the ability to view and send messages.
 
-    If you would like to follow along without building the app yourself, the completed project for this tutorial is available on [GitHub](https://github.com/nexmo-community/ClientSDK-app-to-app-chat-objective-c).
+    If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [in-app-messaging-objc](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/in-app-messaging-objc) folder.
 
-    *This tutorial uses NexmoClient version 3.0.0*
+    *This tutorial uses NexmoClient version 4.0*
 
 prerequisites:
   - create-nexmo-account

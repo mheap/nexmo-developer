@@ -138,15 +138,16 @@ Now you are ready to present the calling interface along with the user informati
 ```swift
 extension ViewController: NXMClientDelegate {
     func client(_ client: NXMClient, didChange status: NXMConnectionStatus, reason: NXMConnectionStatusReason) {
-        guard let user = self.user else { return }
-
-        switch status {
-        case .connected:
-            self.statusLabel.text = "Connected"
-            let navigationController = UINavigationController(rootViewController: CallViewController(user: user))
-            navigationController.modalPresentationStyle = .overFullScreen
-            self.present(navigationController, animated: true, completion: nil)
-        ...
+        DispatchQueue.main.async {
+            guard let user = self.user else { return }
+            switch status {
+            case .connected:
+                self.statusLabel.text = "Connected"
+                let navigationController = UINavigationController(rootViewController: CallViewController(user: user))
+                navigationController.modalPresentationStyle = .overFullScreen
+                self.present(navigationController, animated: true, completion: nil)
+            ...
+            }
         }
     }
     ...

@@ -14,7 +14,7 @@ class ChatViewController: UIViewController {
     ...
     func send(message: String) {
         inputField.isEnabled = false
-        conversation?.sendText(message, completionHandler: { [weak self] (error) in
+        conversation?.sendMessage(NXMMessage(text: message), completionHandler: { [weak self] (error) in
             DispatchQueue.main.async { [weak self] in
                 self?.inputField.isEnabled = true
             }

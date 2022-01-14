@@ -15,7 +15,7 @@ To send a message, add the following function to `ChatViewController.m` class:
 
 - (void)sendMessage:(NSString *)message {
     [self.inputField setUserInteractionEnabled:NO];
-    [self.conversation sendText:message completionHandler:^(NSError * _Nullable error) {
+    [self.conversation sendMessage: [[NXMMessage alloc] initWithText:message] completionHandler:^(NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.inputField setUserInteractionEnabled:YES];
         });

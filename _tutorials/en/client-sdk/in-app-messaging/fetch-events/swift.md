@@ -64,7 +64,7 @@ class ChatViewController: UIViewController {
                 if let memberEvent = event as? NXMMemberEvent {
                     self.showMemberEvent(event: memberEvent)
                 }
-                if let textEvent = event as? NXMTextEvent {
+                if let textEvent = event as? NXMMessageEvent {
                     self.showTextEvent(event: textEvent)
                 }
             }
@@ -74,11 +74,11 @@ class ChatViewController: UIViewController {
     func showMemberEvent(event: NXMMemberEvent) {
         switch event.state {
         case .invited:
-            addConversationLine("\(event.member.user.name) was invited.")
+            addConversationLine("\(event.embeddedInfo?.user.name ?? "") was invited.")
         case .joined:
-            addConversationLine("\(event.member.user.name) joined.")
+            addConversationLine("\(event.embeddedInfo?.user.name ?? "") joined.")
         case .left:
-            addConversationLine("\(event.member.user.name) left.")
+            addConversationLine("\(event.embeddedInfo?.user.name ?? "") left.")
         case .unknown:
              fatalError("Unknown member event state.")
         @unknown default:
@@ -86,7 +86,7 @@ class ChatViewController: UIViewController {
         }
     }
 
-    func showTextEvent(event: NXMTextEvent) {
+    func showTextEvent(event: NXMMessageEvent) {
         if let message = event.text {
             addConversationLine("\(event.embeddedInfo?.user.name ?? "A user") said: '\(message)'")
         }
@@ -104,7 +104,7 @@ class ChatViewController: UIViewController {
 
 `getConversation` uses the conversation ID from the Vonage CLI to fetch the conversation, if that is successful `getEvents` is called to fetch the chat events. The Client SDK supports pagination so to get the chat events you must specify a page size.
 
-Once the events are fetched they are processed by `processEvents`. In `processEvents` there is type casting to either a `NXMMemberEvent` or a `NXMTextEvent` which get append to the `conversationTextView` by `showMemberEvent` and `showTextEvent` respectively. You can find out more about the supported event types in the [Conversation API documentation](/conversation/concepts/event).
+Once the events are fetched they are processed by `processEvents`. In `processEvents` there is type casting to either a `NXMMemberEvent` or a `NXMMessageEvent` which get append to the `conversationTextView` by `showMemberEvent` and `showTextEvent` respectively. You can find out more about the supported event types in the [Conversation API documentation](/conversation/concepts/event).
 
 ## The Conversation Delegate
 
@@ -116,7 +116,7 @@ extension ChatViewController: NXMConversationDelegate {
         NSLog("Conversation error: \(error.localizedDescription)")
     }
 
-    func conversation(_ conversation: NXMConversation, didReceive event: NXMTextEvent) {
+    func conversation(_ conversation: NXMConversation, didReceive event: NXMMessageEvent) {
         self.events?.append(event)
     }
 }

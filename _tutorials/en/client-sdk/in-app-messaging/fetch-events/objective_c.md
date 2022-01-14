@@ -55,8 +55,8 @@ Add the functions to get the conversation, events and process those events a the
         for (NXMEvent *event in self.events) {
             if ([event isMemberOfClass:[NXMMemberEvent class]]) {
                 [self showMemberEvent:(NXMMemberEvent *)event];
-            } else if ([event isMemberOfClass:[NXMTextEvent class]]) {
-                [self showTextEvent:(NXMTextEvent *)event];
+            } else if ([event isMemberOfClass:[NXMMessageEvent class]]) {
+                [self showTextEvent:(NXMMessageEvent *)event];
             }
         }
     });
@@ -65,13 +65,13 @@ Add the functions to get the conversation, events and process those events a the
 - (void)showMemberEvent:(NXMMemberEvent *)event {
     switch (event.state) {
         case NXMMemberStateInvited:
-            [self addConversationLine:[NSString stringWithFormat:@"%@ was invited", event.member.user.name]];
+            [self addConversationLine:[NSString stringWithFormat:@"%@ was invited", event.embeddedInfo.user.name]];
             break;
         case NXMMemberStateJoined:
-            [self addConversationLine:[NSString stringWithFormat:@"%@ joined", event.member.user.name]];
+            [self addConversationLine:[NSString stringWithFormat:@"%@ joined", event.embeddedInfo.user.name]];
             break;
         case NXMMemberStateLeft:
-            [self addConversationLine:[NSString stringWithFormat:@"%@ left", event.member.user.name]];
+            [self addConversationLine:[NSString stringWithFormat:@"%@ left", event.embeddedInfo.user.name]];
             break;
         case NXMMemberStateUnknown:
              [NSException raise:@"UnknownMemberState" format:@"Member state is unknown"];
@@ -79,7 +79,7 @@ Add the functions to get the conversation, events and process those events a the
     }
 }
 
-- (void)showTextEvent:(NXMTextEvent *)event {
+- (void)showTextEvent:(NXMMessageEvent *)event {
     NSString *message = [NSString stringWithFormat:@"%@ said %@", event.embeddedInfo.user.name, event.text];
     [self addConversationLine:message];
 }
@@ -97,7 +97,7 @@ Add the functions to get the conversation, events and process those events a the
 
 `getConversation` uses the conversation ID from the Vonage CLI to fetch the conversation, if that is successful `getEvents` is called to fetch the chat events. The Client SDK supports pagination so to get the chat events you must specify a page size.
 
-Once the events are fetched they are processed by `processEvents`. In `processEvents` there is type casting to either a `NXMMemberEvent` or a `NXMTextEvent` which get append to the `conversationTextView` by `showMemberEvent` and `showTextEvent` respectively. You can find out more about the supported event types in the [Conversation API documentation](/conversation/concepts/event).
+Once the events are fetched they are processed by `processEvents`. In `processEvents` there is type casting to either a `NXMMemberEvent` or a `NXMMessageEvent` which get append to the `conversationTextView` by `showMemberEvent` and `showTextEvent` respectively. You can find out more about the supported event types in the [Conversation API documentation](/conversation/concepts/event).
 
 ## The conversation delegate
 
@@ -107,7 +107,7 @@ The application also needs to react to events in a conversation after loading in
 @implementation ViewController
     ...
 
-- (void)conversation:(NXMConversation *)conversation didReceiveTextEvent:(NXMTextEvent *)event {
+- (void)conversation:(NXMConversation *)conversation didReceiveMessageEvent:(NXMMessageEvent *)event {
     [self.events addObject:event];
     [self processEvents];
 }

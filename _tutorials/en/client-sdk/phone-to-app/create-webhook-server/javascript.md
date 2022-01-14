@@ -60,7 +60,8 @@ app.get('/voice/answer', (req, res) => {
       "text": "Please wait while we connect you."
     },
     { 
-      "action": "connect", 
+      "action": "connect",
+      "from": req.query.from, 
       "endpoint": [ 
         { "type": "app", "user": "Alice" } 
       ]
