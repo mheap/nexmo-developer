@@ -8,7 +8,7 @@ menu_weight: 2
 [
   {
     "action": "stream",
-    "streamUrl": ["https://acme.com/streams/announcement.mp3"]
+    "streamUrl": ["https://acme.com/streams/announcement.mp3"],
     "bargeIn": "true"
   },
   {
