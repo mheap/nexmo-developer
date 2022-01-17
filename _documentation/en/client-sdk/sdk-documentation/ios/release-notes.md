@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.4  - 2023-01-14
+
+### Fixed
+
+- Inbound call event processing queue defaults to non suspended
+
 ## 4.0.3  - 2021-12-13
 
 ### Fixed
