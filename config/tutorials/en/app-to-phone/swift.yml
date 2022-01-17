@@ -15,6 +15,10 @@ introduction:
     * An iOS application that will make the voice call using the Client SDK.
     * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
 
+    ## Video tutorial
+    If you prefer to follow along by video, you can find this tutorial on [YouTube](https://www.youtube.com/watch?v=s2MjXXIueoo):
+    <center><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/s2MjXXIueoo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
     ### Completed project
     If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-phone-swift](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-phone-swift) folder.
 
