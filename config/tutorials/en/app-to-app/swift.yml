@@ -17,7 +17,7 @@ introduction:
 
     ## Video tutorial
     If you prefer to follow along by video, you can find this tutorial on <a href="https://www.youtube.com/watch?v=3EwAAKYnkm4" target="_blank">YouTube</a>:
-    <center><iframe width="448" height="252" src="https://www.youtube-nocookie.com/embed/3EwAAKYnkm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+    <center style="aspect-ratio: 16 / 9;"><iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/3EwAAKYnkm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
     ### Completed project
     If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-app-swift](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-app-swift) folder.
