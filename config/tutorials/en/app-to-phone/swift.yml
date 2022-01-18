@@ -16,7 +16,7 @@ introduction:
     * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
 
     ## Video tutorial
-    If you prefer to follow along by video, you can find this tutorial on [YouTube](https://www.youtube.com/watch?v=s2MjXXIueoo):
+    If you prefer to follow along by video, you can find this tutorial on <a href="https://www.youtube.com/watch?v=s2MjXXIueoo" target="_blank">YouTube</a>:
     <center><iframe width="448" height="252" src="https://www.youtube-nocookie.com/embed/s2MjXXIueoo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
     ### Completed project
