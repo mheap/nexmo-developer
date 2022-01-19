@@ -149,4 +149,4 @@ Now you can test your push notification setup by calling your app's user. The in
 
 ## Conclusion
 
-In this guide you have seen how to set up push notifications. You can find a sample project that uses the [ConnectionService](https://developer.android.com/reference/android/telecom/ConnectionService) and push notifications to handle an incoming call on [GitHub](https://github.com/Vonage-Community/sample-client_sdk-android-connection_service).
+In this guide you have seen how to set up push notifications. You can also find a sample project that uses the [ConnectionService](https://developer.android.com/reference/android/telecom/ConnectionService) API and push notifications to handle an incoming call using the Android system UI on [GitHub](https://github.com/Vonage-Community/sample-client_sdk-android-connection_service).
