@@ -37,6 +37,8 @@ Now add the Client SDK to your project. Add the following dependency in your app
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/dependencies'
 ``` 
 
+> NOTE: SDK versions >=4 uses a newer version of WebRTC as a dependency. You may need to increase the memory allocated to the JVM in the `gradle.properties` file in the `org.gradle.jvmargs` setting.
+
 ### Set Java 1.8
 
 Set Java 1.8 in your app level `build.gradle` or `build.gradle.kts` file (typically `app/build.gradle` or `app/build.gradle.kts`):

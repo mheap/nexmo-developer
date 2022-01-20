@@ -51,7 +51,7 @@ Now add the Client SDK to the project. Add the following dependency in the modul
 dependencies {
     // ...
 
-    implementation 'com.nexmo.android:client-sdk:3.0.1'
+    implementation 'com.nexmo.android:client-sdk:4.0.0'
 }
 ```
 

@@ -16,6 +16,8 @@ introduction:
 
     If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [in-app-messaging-kotlin](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/in-app-messaging-kotlin) folder.
 
+    *This tutorial uses NexmoClient version 4.0*
+
 prerequisites:
   - create-nexmo-account
   - install-nodejs

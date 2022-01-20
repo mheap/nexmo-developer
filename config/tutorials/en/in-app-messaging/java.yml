@@ -15,6 +15,8 @@ introduction:
     Finally, you will implement chat functionality in your application, including the ability to view and send messages and be notified when a new message appears in Conversation.
 
     If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [in-app-messaging-java](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/in-app-messaging-java) folder.
+    
+    *This tutorial uses NexmoClient version 4.0*
 
 prerequisites:
   - create-nexmo-account
