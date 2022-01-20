@@ -82,6 +82,7 @@ Braintree
 WeChat
 Paypal
 SDKs
+ConnectionService
 node.js
 lookup_outcome
 lookup_outcome_message
