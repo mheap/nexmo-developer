@@ -10,7 +10,7 @@ navigation_weight: 0
 
 ### New
 
-- Added new `connectivityReport()` function to get a connectivity report for all Vonage datacenters and media servers
+- Added new `connectivityReport()` function to get a connectivity report for all Vonage data centers and media servers
 
 ```javascript
 rtc.connectivityReport().then((report) => {
