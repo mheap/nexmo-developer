@@ -27,7 +27,7 @@ private  void sendMessage() {
     messageEditText.setText("");
     hideKeyboard();
 
-    conversation.sendText(message, new NexmoRequestListener<Void>() {
+    conversation.sendMessage(NexmoMessage.fromText(message), new NexmoRequestListener<Void>() {
         @Override
         public void onError(@NonNull NexmoApiError apiError) {
             Toast.makeText(MainActivity.this, "Error sending message", Toast.LENGTH_SHORT).show();

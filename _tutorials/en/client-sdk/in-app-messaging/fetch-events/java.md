@@ -71,7 +71,10 @@ private void updateConversationView() {
 
         if (event instanceof NexmoMemberEvent) {
             NexmoMemberEvent memberEvent = (NexmoMemberEvent) event;
-            String userName = memberEvent.getEmbeddedInfo().getUser().getName();
+            String userName = "";
+            if (memberEvent.getEmbeddedInfo() != null ) {
+                userName = memberEvent.getEmbeddedInfo().getUser().getName();
+            }
 
             switch (memberEvent.getState()) {
                 case JOINED:
@@ -87,10 +90,10 @@ private void updateConversationView() {
                     line = "Error: Unknown member event state";
                     break;
             }
-        } else if (event instanceof NexmoTextEvent) {
-            NexmoTextEvent textEvent = (NexmoTextEvent) event;
-            String userName = textEvent.getEmbeddedInfo().getUser().getName();
-            line = userName + "  said: " + textEvent.getText();
+        } else if (event instanceof NexmoMessageEvent) {
+            NexmoMessageEvent messageEvent = (NexmoMessageEvent) event;
+            String userName = messageEvent.getEmbeddedInfo().getUser().getName();
+            line = userName + "  said: " + messageEvent.getMessage().getText();
         }
 
         lines.add(line);
@@ -126,4 +129,4 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
 });
 ```
 
-> **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoTextEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).
+> **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoMessageEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).

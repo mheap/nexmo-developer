@@ -19,10 +19,13 @@ private void getConversation() {
 
             conversation.addMessageEventListener(new NexmoMessageEventListener() {
                 @Override
-                public void onTextEvent(@NonNull NexmoTextEvent textEvent) {
-                    conversationEvents.add(textEvent);
+                public void onMessageEvent(@NonNull NexmoMessageEvent messageEvent) {
+                    conversationEvents.add(messageEvent);
                     updateConversationView();
                 }
+
+                @Override
+                public void onTextEvent(@NonNull NexmoTextEvent textEvent) {}
 
                 @Override
                 public void onAttachmentEvent(@NonNull NexmoAttachmentEvent attachmentEvent) {}
@@ -50,7 +53,7 @@ private void getConversation() {
 }
 ```
 
-Each time a new message is received `public void onTextEvent(@NonNull NexmoTextEvent textEvent)` listener is called, the new message will be added to the `conversationEvents` collection and `updateConversationView` method will be called to reflect the changes.
+Each time a new message is received `public void onMessageEvent(@NonNull NexmoMessageEvent messageEvent)` listener is called, the new message will be added to the `conversationEvents` collection and `updateConversationView` method will be called to reflect the changes.
 
 # Run the app
 

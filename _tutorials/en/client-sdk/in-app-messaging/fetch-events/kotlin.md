@@ -64,7 +64,10 @@ private fun updateConversationView() {
     for (event in conversationEvents) {
         var line = when (event) {
             is NexmoMemberEvent -> {
-                val userName = event.embeddedInfo.user.name
+                val userName = ""
+                if (event.embeddedInfo != null) {
+                    val userName = event.embeddedInfo.user.name
+                }
 
                 when (event.state) {
                     NexmoMemberState.JOINED -> "$userName joined"
@@ -73,8 +76,8 @@ private fun updateConversationView() {
                     NexmoMemberState.UNKNOWN -> "Error: Unknown member event state"
                 }
             }
-            is NexmoTextEvent -> {
-                "${event.embeddedInfo.user.name} said: ${event.text}"
+            is NexmoMessageEvent -> {
+                "${event.embeddedInfo.user.name} said: ${event.message.text}"
             } else -> {
                 "Unsupported event ${event.eventType}"
             }
@@ -105,4 +108,4 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> {
 });
 ```
 
-> **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoTextEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).
+> **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoMessageEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).

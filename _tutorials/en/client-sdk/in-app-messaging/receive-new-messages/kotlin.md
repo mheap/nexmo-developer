@@ -18,11 +18,12 @@ private fun getConversation() {
             conversation?.let {
                 getConversationEvents(it)
                 it.addMessageEventListener(object : NexmoMessageEventListener {
-                    override fun onTextEvent(textEvent: NexmoTextEvent) {
-                        conversationEvents.add(textEvent)
+                    override fun onMessageEvent(messageEvent: NexmoMessageEvent) {
+                        conversationEvents.add(messageEvent)
                         updateConversationView()
                     }
 
+                    override fun onTextEvent(textEvent: NexmoTextEvent) {}
                     override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {}
                     override fun onEventDeleted(deletedEvent: NexmoDeletedEvent) {}
                     override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {}
@@ -40,7 +41,7 @@ private fun getConversation() {
 }
 ```
 
-Now each time a new message is received `onTextEvent(textEvent: NexmoTextEvent)` listener is called, the new message will be passed to `updateConversation` method and dispatched to the view via `conversationEvents` `LiveData` (same `LiveData` used to dispatch all the messages after loading conversation events).
+Now each time a new message is received `onMessageEvent(messageEvent: NexmoMessageEvent)` listener is called, the new message will be passed to `updateConversation` method and dispatched to the view via `conversationEvents` `LiveData` (same `LiveData` used to dispatch all the messages after loading conversation events).
 
 # Run the app
 
