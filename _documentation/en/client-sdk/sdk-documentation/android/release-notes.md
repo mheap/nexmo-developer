@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.1 - Jan 21, 2022
+
+### Fixed
+
+- Added check to ensure user logged in before SDK tries to process push event.
+
 ## 4.0.0 - Dec 7, 2021
 
 ### Added
