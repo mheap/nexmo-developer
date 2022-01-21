@@ -6,7 +6,7 @@ navigation_weight: 0
 
 # Release Notes
 
-## Version 8.4.0 - January 20, 2022
+## Version 8.4.0 - January 21, 2022
 
 ### New
 
