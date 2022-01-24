@@ -48,6 +48,7 @@ en:
     redact: Redact
     audit: Audit
     numbers: Numbers
+    number-pools-api: Number Pools API
     secret-management: Secret Management
     external-accounts: External Accounts API
     whatsapp-provisioning: WhatsApp Provisioning API
