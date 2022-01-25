@@ -333,5 +333,5 @@
 "/store": "https://apimanager.uc.vonage.com/store/"
 "/spotlight": "https://learn.vonage.com/spotlight/"
 "/messages/whatsapp-provisioning/add-phone-number": "/messages/whatsapp-provisioning/overview"
-"/application/nexmo-cli": "/application/vonage-cli
+"/application/nexmo-cli": "/application/vonage-cli"
 "/numbers/number-pools-api/api-reference": "/api/number-pools"
