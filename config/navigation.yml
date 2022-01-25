@@ -134,6 +134,8 @@ navigation_overrides:
   numbers:
     svg: 'phone-number'
     svgColor: 'red'
+    number-pools-api:
+      label: 'Beta'
   audit:
     svg: 'file-search'
     svgColor: 'green'

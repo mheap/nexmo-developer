@@ -130,6 +130,9 @@ page:
                   - title: 'Number Management API'
                     path: 'api/developer/numbers'
                     description: 'Manage all the numbers you need for your applications. Search for numbers, list and configure your purchased numbers, cancel any number you no longer need.'
+                  - title: 'Number Pools API'
+                    path: 'api/number-pools'
+                    description: 'Manage account-level number pools programmatically as a self-service.'
               - title: 'Verify'
                 icon:
                   color: purple
