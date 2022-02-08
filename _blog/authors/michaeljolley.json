@@ -1,0 +1,13 @@
+{
+  "twitch_url": "https://twitch.tv/baldbeardedbuilder",
+  "bio": "Michael is the bald, bearded builder. Using his 20 years experience in software development and DevOps, this follicly challenged developer spends his days focused on helping others succeed.",
+  "image_url": "/content/images/michael_jolley.jfif",
+  "name": "Michael Jolley",
+  "linkedin_url": "https://www.linkedin.com/in/michaelwjolley/",
+  "twitter": "baldbeardbuild",
+  "github_url": "https://github.com/MichaelJolley",
+  "title": "Video API Developer Advocate",
+  "email": "michael.jolley@vonage.com",
+  "team": false,
+  "alumni": true
+}

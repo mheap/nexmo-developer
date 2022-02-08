@@ -1,0 +1,10 @@
+{
+  "team": true,
+  "alumni": false,
+  "spotlight": false,
+  "noteworthy": false,
+  "hidden": false,
+  "name": "Simon Jones",
+  "image_url": "/content/images/screenshot_20210617-112327_gallery.jpg",
+  "bio": "Simon is Customer Solutions Architect at Vonage and brings along 20 years of communications experience. His global career has included working in rural Africa and India bringing communications to remote locations. Today he's passionate about using communications APIs to improve user experience and efficiency and is focused on the video WebRTC space."
+}

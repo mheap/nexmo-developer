@@ -1,0 +1,15 @@
+{
+  "twitch_url": "https://www.twitch.tv/doesdotnet",
+  "hidden": false,
+  "image_url": "/content/images/matthunt.png",
+  "name": "Matt Hunt",
+  "linkedin_url": "https://www.linkedin.com/in/matt--hunt/",
+  "twitter": "doesdotnet",
+  "github_url": "https://github.com/matt-lethargic",
+  "spotlight": false,
+  "title": "Sr .Net Developer Advocate",
+  "email": "matt.hunt@vonage.com",
+  "noteworthy": false,
+  "team": true,
+  "alumni": false
+}
