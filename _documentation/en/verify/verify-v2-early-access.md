@@ -4,7 +4,7 @@ meta_title: Enable 2FA with the Verify API
 description: The Verify API enables you to confirm that you can contact a user at a specific number.
 ---
 
-This product is in the Early Access product stage.
+> This product is in the Early Access product stage.
 
 ## What is the Verify V2 API?
 
