@@ -38,6 +38,7 @@ The `CallViewController` class will be in the foreground and the class handling 
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Incoming call from" message:from preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"Answer" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         self.call = call;
+        [self.call setDelegate:self];
         [call answer:nil];
         [self setHangUpButtonHidden:NO];
         [self setStatusLabelText:[NSString stringWithFormat:@"On a call with %@", from]];
