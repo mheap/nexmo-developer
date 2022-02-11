@@ -48,6 +48,7 @@ private void answerCall() {
 
         @Override
         public void onSuccess(@Nullable NexmoCall nexmoCall) {
+            onGoingCall.addCallEventListener(callListener);
             runOnUiThread(() -> {
                 hideUI();
                 endCallButton.setVisibility(View.VISIBLE);

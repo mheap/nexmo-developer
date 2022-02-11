@@ -5,7 +5,41 @@ description: In this step you will place the call.
 
 # Place a call
 
-Add click listener code at of the `onCreate` inside `MainActivity` class:
+At the top of the class, add a new property for the `callListener`:
+
+```java
+...
+private Button endCallButton;
+private NexmoCallEventListener callListener;
+```
+
+Then in the `onCreate` function, add the call listener:
+
+```java
+callListener = new NexmoCallEventListener() {
+    @Override
+    public void onMemberStatusUpdated(NexmoCallMemberStatus callStatus, NexmoMember NexmoMember) {
+        if (callStatus == NexmoCallMemberStatus.COMPLETED || callStatus == NexmoCallMemberStatus.CANCELLED) {
+            onGoingCall = null;
+
+            runOnUiThread(() -> {
+                hideUI();
+                waitingForIncomingCallTextView.setVisibility(View.VISIBLE);
+                startCallButton.setVisibility(View.VISIBLE);
+            });
+        }
+    }
+
+    @Override
+    public void onMuteChanged(NexmoMediaActionState newState, NexmoMember member) {}
+    @Override
+    public void onEarmuffChanged(NexmoMediaActionState newState, NexmoMember member) {}
+    @Override
+    public void onDTMF(String dtmf, NexmoMember member) {}
+};
+```
+
+The call listener will update you on changes in the call. The above listener will reset the app to its original state when the call is ended or rejected. Add the start call click listener code in `onCreate` too:
 
 ```java
 startCallButton.setOnClickListener(v -> startCall());
@@ -27,40 +61,12 @@ To start the call after pressing `start call` button add the `startCall` method 
             runOnUiThread(() -> {
               hideUI();
               endCallButton.setVisibility(View.VISIBLE);
-              waitingForIncomingCallTextView.setVisibility(View.VISIBLE);
+              waitingForIncomingCallTextView.setVisibility(View.INVISIBLE);
             });
 
             onGoingCall = call;
             
-            onGoingCall.addCallEventListener(new NexmoCallEventListener() {
-                @Override
-                public void onMemberStatusUpdated(NexmoCallMemberStatus callStatus, NexmoMember nexmoMember) {
-                    if (callStatus == NexmoCallMemberStatus.COMPLETED || callStatus == NexmoCallMemberStatus.CANCELLED) {
-                        onGoingCall = null;
-
-                        runOnUiThread(() -> {
-                                    hideUI();
-                                    startCallButton.setVisibility(View.VISIBLE);
-                                }
-                        );
-                    }
-                }
-
-                @Override
-                public void onMuteChanged(NexmoMediaActionState nexmoMediaActionState, NexmoMember nexmoMember) {
-
-                }
-
-                @Override
-                public void onEarmuffChanged(NexmoMediaActionState nexmoMediaActionState, NexmoMember nexmoMember) {
-
-                }
-
-                @Override
-                public void onDTMF(String s, NexmoMember nexmoMember) {
-
-                }
-            });
+            onGoingCall.addCallEventListener(callListener);
           }
       });
   }

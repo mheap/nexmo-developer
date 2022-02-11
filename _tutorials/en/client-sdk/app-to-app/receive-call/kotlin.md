@@ -45,6 +45,7 @@ private fun answerCall() {
         }
 
         override fun onSuccess(p0: NexmoCall?) {
+            onGoingCall?.addCallEventListener(callListener)
             runOnUiThread {
                 hideUI()
                 endCallButton.visibility = View.VISIBLE

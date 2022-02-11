@@ -5,7 +5,37 @@ description: In this step you will place the call.
 
 # Place a call
 
-Add click listener code at of the `onCreate` inside `MainActivity` class:
+At the top of the class, add a new property for the `callListener`:
+
+```kotlin
+...
+private lateinit var endCallButton: Button
+private lateinit var callListener: NexmoCallEventListener
+```
+
+Then in the `onCreate` function, add the call listener:
+
+```kotlin
+callListener = object: NexmoCallEventListener {
+      override fun onMemberStatusUpdated(callStatus: NexmoCallMemberStatus, callMember: NexmoMember) {
+          if (callStatus == NexmoCallMemberStatus.COMPLETED || callStatus == NexmoCallMemberStatus.CANCELLED) {
+              onGoingCall = null
+
+              runOnUiThread {
+                  hideUI()
+                  startCallButton.visibility = View.VISIBLE
+                  waitingForIncomingCallTextView.visibility = View.VISIBLE
+              }
+          }
+      }
+
+      override fun onMuteChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoMember) {}
+      override fun onEarmuffChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoMember) {}
+      override fun onDTMF(dtmf: String, callMember: NexmoMember) {}
+}
+```
+
+The call listener will update you on changes in the call. The above listener will reset the app to its original state when the call is ended or rejected. Add the start call click listener code in `onCreate` too:
 
 ```kotlin
 startCallButton.setOnClickListener { startCall() }
@@ -25,25 +55,7 @@ fun startCall() {
 
           onGoingCall = call
 
-          onGoingCall?.addCallEventListener(object : NexmoCallEventListener {
-              override fun onMemberStatusUpdated(callStatus: NexmoCallMemberStatus, nexmoMember: NexmoMember) {
-                  if (callStatus == NexmoCallMemberStatus.COMPLETED || callStatus == NexmoCallMemberStatus.CANCELLED) {
-                      onGoingCall = null
-                      
-                      runOnUiThread { 
-                          hideUI()
-                          startCallButton.visibility = View.VISIBLE
-                          waitingForIncomingCallTextView.visibility = View.VISIBLE
-                      }
-                  }
-              }
-
-              override fun onMuteChanged(nexmoMediaActionState: NexmoMediaActionState, nexmoMember: NexmoMember) {}
-
-              override fun onEarmuffChanged(nexmoMediaActionState: NexmoMediaActionState, nexmoMember: NexmoMember) {}
-
-              override fun onDTMF(dtmf: String, nexmoMember: NexmoMember) {}
-          })
+          onGoingCall?.addCallEventListener(callListener)
       }
 
       override fun onError(apiError: NexmoApiError) {
