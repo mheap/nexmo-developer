@@ -12,20 +12,6 @@ navigation_weight: 0
 
 - Fix events ordering when gap in inbound events
 
-## 8.4.0
-
-### New
-
-- Added new `connectivityReport()` function to get a connectivity report for all Vonage data centers and media servers
-
-```javascript
-rtc.connectivityReport().then((report) => {
-  console.log(report);
-}).catch((error) => {
-  console.log(error);
-});
-```
-
 ## Version 8.4.0 - January 21, 2022
 
 ### New
