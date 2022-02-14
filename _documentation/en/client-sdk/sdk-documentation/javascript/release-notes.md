@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.4.1 - February 14, 2022
+
+### Fix
+
+- Fix events ordering when gap in inbound events
+
 ## Version 8.4.0 - January 21, 2022
 
 ### New
