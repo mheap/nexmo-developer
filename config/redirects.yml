@@ -335,3 +335,4 @@
 "/messages/whatsapp-provisioning/add-phone-number": "/messages/whatsapp-provisioning/overview"
 "/application/nexmo-cli": "/application/vonage-cli"
 "/numbers/number-pools-api/api-reference": "/api/number-pools"
+"/meetings/api-reference": "/api/meetings"

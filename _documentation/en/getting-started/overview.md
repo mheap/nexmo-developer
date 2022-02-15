@@ -44,7 +44,7 @@ The Vonage CLI is written with `oclif` and can be installed using the Node Packa
 
 ## Authentication
 
-When using the Vonage APIs your requests need to be [authenticated](/concepts/authentication). Typically this is done using [Basic Authentication](/concepts/authentication#basic-authentication) or [JWTs](/concepts/authentication#jwts). You can generate a suitable JWT using the Vonage CLI, or our [online tool](/jwt).
+When using the Vonage APIs your requests need to be [authenticated](/concepts/guides/authentication). Typically this is done using [Basic Authentication](/concepts/guides/authentication#basic-authentication) or [JWTs](/concepts/guides/authentication#json-web-tokens). You can generate a suitable JWT using the Vonage CLI, or our [online tool](/jwt).
 
 ## Experimenting with our APIs
 
