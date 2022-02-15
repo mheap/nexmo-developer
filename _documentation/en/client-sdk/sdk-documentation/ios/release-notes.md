@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.5  - 2022-02-15
+
+### Added
+
+- Bitcode Support
+
 ## 4.0.4  - 2022-01-14
 
 ### Fixed
