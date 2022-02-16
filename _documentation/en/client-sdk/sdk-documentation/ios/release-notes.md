@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.6  - 2022-02-15
+
+### Fixed
+
+- Fix DSYM Warnings
+
 ## 4.0.5  - 2022-02-15
 
 ### Added
