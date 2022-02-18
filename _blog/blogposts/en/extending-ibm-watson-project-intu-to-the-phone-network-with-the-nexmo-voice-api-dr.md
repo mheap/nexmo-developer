@@ -96,7 +96,7 @@ To log out, you can click the **Logout** button from the menu. This will shut do
 
 ## Customizing Intu to Call Your Phone
 
-Now you are going to need a Nexmo account. [Sign up](https://dashboard.nexmo.com/sign-up) if you haven’t got one.
+Now you are going to need a Nexmo account. [Sign up](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) if you haven’t got one.
 
 After you sign up and log in, go to **Dashboard** then **Settings** &gt; **API Settings** and get the API Key and API Secret. You’ll need them later.
 

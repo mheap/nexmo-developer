@@ -576,7 +576,7 @@ The latter is the webhook URL for the data returned by the Vonage Automatic Spee
 
 ## Provisioning a Vonage Virtual Phone Number
 
-There are two ways to provision a Vonage virtual phone number. Once you have a [Vonage developer account](https://dashboard.nexmo.com/sign-up) you can either purchase a phone number through the dashboard or using the Vonage CLI. We will do so here using the CLI.
+There are two ways to provision a Vonage virtual phone number. Once you have a [Vonage developer account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) you can either purchase a phone number through the dashboard or using the Vonage CLI. We will do so here using the CLI.
 
 To install the CLI you can use either yarn or npm: `yarn global add @vonage/cli` or `npm install @vonage/cli -g`. After installation you need to provide it with your API credentials obtained from the dashboard:
 

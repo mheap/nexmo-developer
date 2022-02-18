@@ -27,7 +27,7 @@ To do this:
 
 In order for this tutorial to work you will need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up)
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 * A publicly accessible Web server so Vonage can make webhook requests to your app. If you're developing locally you should use a tool such as [ngrok](https://ngrok.com/)
 * The source code for this tutorial from <https://github.com/Nexmo/ruby-sms-customer-support/>
 * All US based customers must register a brand and campaign to comply with [10 DLC guidelines](/messaging/sms/overview#send-an-sms).

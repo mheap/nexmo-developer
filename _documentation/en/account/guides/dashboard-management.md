@@ -26,7 +26,7 @@ Dashboard is a web application that allows you to:
 
 To create your free Vonage account:
 
-1. In your browser, navigate to [Dashboard](https://dashboard.nexmo.com/sign-up).
+1. In your browser, navigate to [Dashboard](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav).
 2. Add  your company information and click **Sign up**.
    Vonage sends a PIN to your phone as a text message or automated phone call. The timeout for each verification attempt is 5 minutes.
    **Note**: you can associate a phone number with one account only. If your phone number is already associated with a Vonage account you should [remove that phone number](#manage-your-profile) from the existing account.

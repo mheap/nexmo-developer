@@ -27,7 +27,7 @@ To build the application, you perform the following steps:
 
 To complete this tutorial, you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up) - for your API key and secret and to rent virtual numbers.
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) - for your API key and secret and to rent virtual numbers.
 * A [Vonage number](https://developer.nexmo.com/concepts/guides/glossary#virtual-number) - to hide each user's real number. You can rent a number in the [developer dashboard](https://dashboard.nexmo.com/buy-numbers).
 * The [source code](https://github.com/Nexmo/node-sms-proxy) on GitHub - installation instructions are in the [README](https://github.com/Nexmo/node-sms-proxy/blob/master/README.md).
 * [Node.js](https://nodejs.org/en/download/) installed and configured.

@@ -37,7 +37,7 @@ Ready? Let's go!
 
 We're going to need a few accounts to get this to work. If you haven't already, get a:
 
-* [Vonage API Account](https://dashboard.nexmo.com/sign-up)
+* [Vonage API Account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 * [MongoDB Atlas Account](https://www.mongodb.com/cloud/atlas)
 * [GitHub Account](https://github.com/join)
 * [Netlify Account](https://app.netlify.com/signup)

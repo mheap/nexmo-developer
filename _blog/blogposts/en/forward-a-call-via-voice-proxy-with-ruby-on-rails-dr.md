@@ -23,7 +23,7 @@ A voice proxy is a method by which phone calls are routed to their final destina
 
 <sign-up number></sign-up>
 
-To work through this tutorial, you will need a [Nexmo account](https://dashboard.nexmo.com/sign-up). Sign up now if you don't already have an account.
+To work through this tutorial, you will need a [Nexmo account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav). Sign up now if you don't already have an account.
 
 In addition, you will also need:
 

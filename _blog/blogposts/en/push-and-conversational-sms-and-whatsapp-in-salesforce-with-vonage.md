@@ -112,7 +112,7 @@ Please store the URL on which you are hosting the service as you will need it wh
 
 ## Setting up Vonage API Dashboard
 
-If you don’t have a Vonage API account, head to our [Sign-up page](https://dashboard.nexmo.com/sign-up) or go straight to our [dashboard](https://dashboard.nexmo.com/). 
+If you don’t have a Vonage API account, head to our [Sign-up page](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) or go straight to our [dashboard](https://dashboard.nexmo.com/). 
 
 You will need to perform 3 things:
 

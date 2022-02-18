@@ -29,7 +29,7 @@ The purpose of this tutorial is precisely to fulfill this need. We will build a 
 
 We will use Python 3.9.1 (the latest stable version) in the tutorial, but the code should also work on Python 3.6+. Python is available on Linux, macOS and Windows. To download and install, follow the instructions at the [official website](https://www.python.org/downloads/).
 
-You will also need a Vonage account to receive error alerts through SMS. [Create an account](https://dashboard.nexmo.com/sign-up) if you’re not registered yet. Vonage provides new subscribers with € 2.00 in credits to test the APIs for free.
+You will also need a Vonage account to receive error alerts through SMS. [Create an account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) if you’re not registered yet. Vonage provides new subscribers with € 2.00 in credits to test the APIs for free.
 
 <sign-up></sign-up>
 

@@ -40,7 +40,7 @@ I like having this level control over something like this as it allows me to be 
     };
 ```
 
-If you want to get started with the Verify API, you can sign up for a [Vonage](https://dashboard.nexmo.com/sign-up) account today to get going.
+If you want to get started with the Verify API, you can sign up for a [Vonage](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) account today to get going.
 
 ## Firebase Functions
 

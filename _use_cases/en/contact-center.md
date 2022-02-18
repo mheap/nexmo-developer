@@ -22,7 +22,7 @@ For a better understanding of the flow, see [Call Flow](/voice/voice-api/guides/
 
 To complete this tutorial, you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up),
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav),
 * The [Vonage CLI](/application/vonage-cli) installed and set up,
 * [ngrok](https://ngrok.com/) - to make your development web server accessible to Vonage's servers over the Internet,
 * [Node.JS](https://nodejs.org/en/download/) installed,

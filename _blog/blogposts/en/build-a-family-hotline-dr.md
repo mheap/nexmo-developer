@@ -114,7 +114,7 @@ You should see something like this:
 
 Now you need to configure a *Vonage Virtual Number* to call your server when someone calls your number. So now you need 3 things:
 
-1. A [Vonage account](https://dashboard.nexmo.com/sign-up)
+1. A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 2. A configured Voice application
 3. A configured Vonage Virtual Number.
 

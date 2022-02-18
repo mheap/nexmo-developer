@@ -45,7 +45,7 @@ This is just the beginning, who knows what other opportunities may come about in
 To participate in the Vonage Voyagers program, you must:
 
 - Be fluent in written and spoken English (we’ll use English in all program communications, but other languages are, of course, a plus!)
-- Be over 18 years old and have a [Vonage API account](https://dashboard.nexmo.com/sign-up) 
+- Be over 18 years old and have a [Vonage API account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) 
 - Show how you’ve used Vonage APIs to create content for your peers or to build communications into your projects
 - Demonstrate expertise within a specific developer community
 - Display empathy and understanding when trying to help others grasp technological concepts or solve issues

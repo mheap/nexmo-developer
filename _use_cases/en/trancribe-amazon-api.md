@@ -21,7 +21,7 @@ You need at least two personal phone numbers:
 
 If you have access to more than two numbers you can include them as participants in the conference call too. See [adding more callers](#adding-more-callers).
 
-You also need a Vonage account. [Sign up here](https://dashboard.nexmo.com/sign-up) if you don't already have one.
+You also need a Vonage account. [Sign up here](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) if you don't already have one.
 
 ## Install and configure Vonage CLI
 

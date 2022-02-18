@@ -34,7 +34,7 @@ You learn how to sanitize and validate phone numbers using the Ruby Server SDK.
 
 To complete this tutorial you need:
 
-* Your `api_key` and `api_secret` for your [Vonage account](https://dashboard.nexmo.com/sign-up) - sign up for an account if you do not already have one
+* Your `api_key` and `api_secret` for your [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) - sign up for an account if you do not already have one
 * Access to the [tutorial source code](https://github.com/Nexmo/ruby-ni-customer-number-validation) on GitHub
 
 ## Create the project

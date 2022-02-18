@@ -29,7 +29,7 @@ navigation_weight: 2
 
 为了完成本用例，您需要：
 
-* [Vonage 帐户](https://dashboard.nexmo.com/sign-up)
+* [Vonage 帐户](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 * 已安装并配置 [Nexmo CLI](https://github.com/nexmo/nexmo-cli)
 
 代码存储库

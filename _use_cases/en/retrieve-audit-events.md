@@ -25,7 +25,7 @@ You will see how to retrieve a filtered list of audit events:
 
 In order to work through this tutorial you'll need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up).
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav).
 * A Terminal application running into which you can type or paste Curl commands. Alternatively you could use Paw, Postman or a similar application.
 * You will need to know your `VONAGE_API_KEY` and `VONAGE_API_SECRET` which you can obtain from your [dashboard](https://dashboard.nexmo.com/sign-in).
 

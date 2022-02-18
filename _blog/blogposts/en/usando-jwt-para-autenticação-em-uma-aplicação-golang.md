@@ -35,7 +35,7 @@ Para completar este tutorial, você precisará de uma conta Vonage API. Se você
 
 Este tutorial também usa um número de telefone virtual. Para adquirir um, vá para Números > Comprar Números e procure por um que atenda às suas necessidades. Se você acabou de se inscrever, o custo inicial de um número será facilmente coberto pelo seu crédito disponível.
 
-[![Sign Up](https://www.nexmo.com/wp-content/uploads/2020/05/StartBuilding_Footer.png)](https://dashboard.nexmo.com/sign-up)
+[![Sign Up](https://www.nexmo.com/wp-content/uploads/2020/05/StartBuilding_Footer.png)](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 
 ## O que constitui um JWT?
 

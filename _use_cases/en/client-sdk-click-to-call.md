@@ -20,7 +20,7 @@ All the code is [available on GitHub](https://github.com/nexmo-community/client-
 
 In order to work through this use case you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up)
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 * The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and configured.
 * A publicly accessible web server so Vonage can make webhook requests to your app. If you're developing locally we recommend [ngrok](https://ngrok.com/).
 

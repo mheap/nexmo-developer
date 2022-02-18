@@ -106,7 +106,7 @@ To access environment variables, you'll have to require it, ideally at the top o
 require('dotenv').config()
 ```
 
-If you haven't [signed up for a Nexmo account](https://dashboard.nexmo.com/sign-up) yet, now is a pretty good time to do it. Once you've logged into the dashboard, your API credentials should be the first thing you see. Be sure to enclose both your key and secret with quotes.
+If you haven't [signed up for a Nexmo account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) yet, now is a pretty good time to do it. Once you've logged into the dashboard, your API credentials should be the first thing you see. Be sure to enclose both your key and secret with quotes.
 
 ## Project Structure
 
