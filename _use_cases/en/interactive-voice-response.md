@@ -31,7 +31,7 @@ This tutorial is based on the [IVR](https://www.nexmo.com/use-cases/interactive-
 
 In order to work through this tutorial you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up).
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav).
 * The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and set up.
 * A publicly accessible PHP web server so that Vonage can make webhook requests to your app, or for local development we recommend [ngrok](https://ngrok.com). 
 * The [tutorial code](https://github.com/Nexmo/php-phone-menu), either clone the repository or download and extract the zip file to your machine.

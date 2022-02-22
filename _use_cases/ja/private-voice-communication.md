@@ -29,7 +29,7 @@ VonageのAPIを使用すると、その通話の参加者に対して、実際�
 
 このユースケースを進めるためには、以下のものが必要になります。
 
-* [Vonageアカウント](https://dashboard.nexmo.com/sign-up)
+* [Vonageアカウント](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 * [Nexmo CLI](https://github.com/nexmo/nexmo-cli)がインストールされ、設定されている
 
 コードリポジトリ

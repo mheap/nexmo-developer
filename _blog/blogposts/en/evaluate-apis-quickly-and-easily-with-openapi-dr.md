@@ -74,7 +74,7 @@ Importing an OpenAPI spec will produce a ready-made "Collection" of API requests
 
 I find this such a speedy way of exploring an API that I'm not familiar with. Rather than having to read the docs and piece together some example API calls to try to figure out if this particular API will meet my needs, everything is in front of me.
 
-**Pro-Tip:** feel free to try this now with the Nexmo API. You need to [sign up for an account](https://dashboard.nexmo.com/sign-up) first, but don't worry, it comes with a little free credit for you to play with.
+**Pro-Tip:** feel free to try this now with the Nexmo API. You need to [sign up for an account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) first, but don't worry, it comes with a little free credit for you to play with.
 
 ## Generate Your Own SDK
 

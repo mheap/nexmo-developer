@@ -55,7 +55,7 @@ There are two things happening here.
 
 First, you create an `auth` object that combines your API key and secret together using a helper function that will ensure everything is formatted correctly.
 
-> Note: Your API key and secret can be found by logging into your [Vonage Dashboard](https://dashboard.nexmo.com/sign-in). If you don't have an account yet, you can [sign up here](https://dashboard.nexmo.com/sign-up) and get a free starter credit to run this code!
+> Note: Your API key and secret can be found by logging into your [Vonage Dashboard](https://dashboard.nexmo.com/sign-in). If you don't have an account yet, you can [sign up here](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) and get a free starter credit to run this code!
 
 Second, you instantiate a new `smsClient` that will hold all the functionality the [Vonage Go SDK](https://github.com/Vonage/vonage-go-sdk) provides. Your `auth` object is passed into this.
 

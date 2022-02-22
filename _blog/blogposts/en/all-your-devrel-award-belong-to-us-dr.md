@@ -34,7 +34,7 @@ The [DevRel Awards](https://2018.devrelawards.com/) took place on November 7 in 
 
 ## The DevPortal Awards
 
-The [DevPortal Awards](https://devportalawards.org/), held on November 9 also in London, aim to “celebrate the best developer portals and their API documentation components.” Developer Relations teams are judged in nine categories, and our team was nominated in seven (!), bringing home the award in three of them: Best [Onboarding](https://dashboard.nexmo.com/sign-up), Best [API Reference Documentation](https://developer.nexmo.com/documentation), and Best Post-Integration & Maintenance [Support](https://help.nexmo.com/hc/en-us). 
+The [DevPortal Awards](https://devportalawards.org/), held on November 9 also in London, aim to “celebrate the best developer portals and their API documentation components.” Developer Relations teams are judged in nine categories, and our team was nominated in seven (!), bringing home the award in three of them: Best [Onboarding](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav), Best [API Reference Documentation](https://developer.vonage.com/documentation), and Best Post-Integration & Maintenance [Support](https://help.nexmo.com/hc/en-us). 
 
 [](https://www.nexmo.com/wp-content/uploads/2018/11/20181109_205532.jpg)
 

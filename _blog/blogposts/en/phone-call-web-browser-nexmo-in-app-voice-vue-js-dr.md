@@ -53,7 +53,7 @@ If you'd rather dive straight into the code you can find the [Call from Browser 
 
 * [Yarn](https://yarnpkg.com/en/docs/install) for package management
 * The [Vue CLI](https://cli.vuejs.org/guide/installation.html) for scaffolding out our app and running a dev server
-* A [Nexmo account](https://dashboard.nexmo.com/sign-up) to enable us to use the SDK and make phone calls
+* A [Nexmo account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) to enable us to use the SDK and make phone calls
 * The [Nexmo CLI](https://github.com/Nexmo/nexmo-cli#installation) to quickly create and setup a Nexmo application from the command line. **Please use the beta version of the CLI e.g. `npm install -g nexmo@beta`**
 * A local tunnel solution such as [Ngrok](https://www.nexmo.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr/) so that the Nexmo platform can reach a locally running web server). For this blog post we're going to use Ngrok.
 

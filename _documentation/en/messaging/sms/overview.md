@@ -93,7 +93,7 @@ If you have decided moving to 10 DLC is right for your campaigns, you must:
 
 This example shows you how to send an SMS to your chosen number.
 
-First, [sign up for a Vonage account](https://dashboard.nexmo.com/sign-up) if you don't already have one, and make a note of your API key and secret on the [dashboard getting started page](https://dashboard.nexmo.com/getting-started-guide).
+First, [sign up for a Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) if you don't already have one, and make a note of your API key and secret on the [dashboard getting started page](https://dashboard.nexmo.com/getting-started-guide).
 
 Replace the following placeholder values in the sample code:
 

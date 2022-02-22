@@ -31,7 +31,7 @@ To achieve this, you perform the following steps:
 
 To complete the tutorial, you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up) - for your API key and secret
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) - for your API key and secret
 * [ngrok](https://ngrok.com/) - to make your development web server accessible to Vonage's servers over the Internet
 
 ## Create the project

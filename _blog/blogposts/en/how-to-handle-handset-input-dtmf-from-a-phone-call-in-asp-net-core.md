@@ -22,7 +22,7 @@ The fundamental building block of any Interactive Voice Response (IVR) system is
 
 In this tutorial, we're going to be using the [Vonage Voice API](https://developer.vonage.com/voice/voice-api/overview) to learn how to quickly snap the former (DTMF) into our ASP.NET core applications. Collecting DTMF from a user over a PSTN call will involve the following:
 
-1. Setting up a [Vonage API Account](https://dashboard.nexmo.com/sign-up) if you don't have one.
+1. Setting up a [Vonage API Account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) if you don't have one.
 2. Creating a Vonage Application using the [CLI](https://github.com/Vonage/vonage-cli).
 3. Write some C# code.
 4. Connect our app to the web.

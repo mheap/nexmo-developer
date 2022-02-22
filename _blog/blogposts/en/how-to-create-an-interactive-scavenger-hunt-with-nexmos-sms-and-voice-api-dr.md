@@ -57,7 +57,7 @@ Using your preferred recording device, record the clues for your scavenger hunt 
 
 ### Create a Nexmo Account
 
-If you haven’t done so already, create a Nexmo account for free, and as an added bonus, your account will be credited with 2 euros to begin using your new application. Head over to <https://dashboard.nexmo.com/sign-up> and go through the signup steps. Once you have finished you will be in your Nexmo dashboard.   
+If you haven’t done so already, create a Nexmo account for free, and as an added bonus, your account will be credited with 2 euros to begin using your new application. Head over to <https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav> and go through the signup steps. Once you have finished you will be in your Nexmo dashboard.   
 
 ### Purchase a Nexmo Phone Number
 

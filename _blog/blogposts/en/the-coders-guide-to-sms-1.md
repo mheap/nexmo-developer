@@ -126,7 +126,7 @@ Now that you've read this guide, I hope you have a basic understanding of SMS an
 
 If you want to send SMS messages programmatically, the [Vonage SMS API documentation](https://www.vonage.com/communications-apis/sms/) is the best place to start. 
 
-[You can create a free account and start using Vonage's SMS API here.](https://dashboard.nexmo.com/sign-up)
+[You can create a free account and start using Vonage's SMS API here.](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 
 You can also learn [how to make voice calls here. ](https://www.vonage.com/communications-apis/voice/)
 

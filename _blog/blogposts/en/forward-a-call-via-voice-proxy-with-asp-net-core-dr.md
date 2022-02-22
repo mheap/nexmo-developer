@@ -41,7 +41,7 @@ In this tutorial, we will:
 <sign-up></sign-up>
 
 * Visual Studio 2017 or higher.
-* A Vonage account, which you can [sign up for here](https://dashboard.nexmo.com/sign-up).
+* A Vonage account, which you can [sign up for here](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav).
 * A project setup for this tutorial series, which you can find on [Github](https://github.com/Vonage/vonage-dotnet-code-snippets/tree/ASPNET/NexmoDotNetQuickStarts).
 * Optional: [The Vonage CLI](https://github.com/Vonage/vonage-cli).
 

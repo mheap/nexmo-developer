@@ -17,7 +17,7 @@ In this tutorial, you will learn how to contact a list of people by phone, conve
 
 In order to work through this tutorial you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up)
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 * [Composer](http://getcomposer.org/) to install the [Vonage PHP Server SDK](https://github.com/nexmo/nexmo-php)
 * A publicly accessible web server so Vonage can make webhook requests to your app, or [ngrok](https://ngrok.com/) to be able to access your local development platform from the outside world.
 * The tutorial code from <https://github.com/Nexmo/php-voice-alerts-tutorial> - either clone the project or download the zip file.

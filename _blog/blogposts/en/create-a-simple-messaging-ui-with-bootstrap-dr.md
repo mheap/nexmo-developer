@@ -48,7 +48,7 @@ npm install @vonage/cli -g
 
 <sign-up number></sign-up>
 
-[Sign up for a free Vonage account](https://dashboard.nexmo.com/sign-up) and set up the Vonage CLI with the API key and secret found on the dashboard.
+[Sign up for a free Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) and set up the Vonage CLI with the API key and secret found on the dashboard.
 
 ```shell
 vonage config:set --apiKey=VONAGE_API_KEY --apiSecret=VONAGE_API_SECRET

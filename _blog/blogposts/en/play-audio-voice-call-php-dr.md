@@ -26,7 +26,7 @@ In addition to making [text-to-speech calls](https://learn.vonage.com/blog/2017/
 
 You’ll need PHP installed before working through this post. I’m running PHP 7.4, but the code here should work on PHP 7.2 and above. You’ll also need [Composer](https://getcomposer.org/) available to install the Vonage PHP client.
 
-You’ll also need a [Vonage Account](https://dashboard.nexmo.com/sign-up) and the [Vonage CLI](https://github.com/Vonage/vonage-cli) installed. We’ll be using the CLI to configure our Vonage account and purchase a phone number.
+You’ll also need a [Vonage Account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) and the [Vonage CLI](https://github.com/Vonage/vonage-cli) installed. We’ll be using the CLI to configure our Vonage account and purchase a phone number.
 
 ### Play an Audio File Into an Incoming Call
 

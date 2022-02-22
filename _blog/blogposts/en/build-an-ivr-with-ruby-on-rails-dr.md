@@ -206,7 +206,7 @@ Now would be a good time to go back to the `ivr_controller.rb` and replace the e
 
 In order for our voice application to work, we need a Vonage account, a Vonage provisioned phone number, a Vonage application, and, lastly, we need to link our application to our phone number.
 
-You can create a Vonage account for free, and as an added bonus, your account will be credited with 2 euros to begin using your new application. Navigate to <https://dashboard.nexmo.com/sign-up> in your web browser and go through the signup steps. Once you have finished you will be in your Vonage dashboard.
+You can create a Vonage account for free, and as an added bonus, your account will be credited with 2 euros to begin using your new application. Visit the [Vonage API Developer Dashboard](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) and follow the sign-up steps if you do not already have a Vonage API Developer account. Once you complete sign-up, you will see your Vonage API Developer Dashboard.
 
 From the left-hand menu, click on the `Voice menu` item. You will see the following options:
 

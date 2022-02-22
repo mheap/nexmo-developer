@@ -51,7 +51,7 @@ In Android Studio, choose the option to open an existing project. Navigate to wh
 
 ## Create Nexmo Application
 
-After [creating a Nexmo account](https://dashboard.nexmo.com/sign-up), you will be redirected to the Nexmo dashboard. Click the 'Verify' tab and under 'SDK', click the 'Your apps' link. Create a new application (with the max Idle time set to Instant) and note down the Application ID and Shared Secret. The max idle time is a setting that dictates how long the user will stay verified for.
+After [creating a Nexmo account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav), you will be redirected to the Nexmo dashboard. Click the 'Verify' tab and under 'SDK', click the 'Your apps' link. Create a new application (with the max Idle time set to Instant) and note down the Application ID and Shared Secret. The max idle time is a setting that dictates how long the user will stay verified for.
 
 ![Create Nexmo Application](/content/blog/add-2fa-to-an-android-app-with-nexmo-and-firebase-login/3-1.png)
 

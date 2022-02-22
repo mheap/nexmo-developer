@@ -30,7 +30,7 @@ The code for this tutorial is on [GitHub](https://github.com/nexmo-community/nex
 
 Before you begin, make sure you have:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up)
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 * [Node.js](https://nodejs.org/en/download/) installed on your machine
 * [ngrok](https://ngrok.com/) to make the code on our local machine-accessible to the outside world
 * The [Vonage CLI](https://developer.nexmo.com/tools): `npm install @vonage/cli -g`

@@ -25,7 +25,7 @@ You can download the source code from our [GitHub repo](https://github.com/Nexmo
 
 In order to work through this use case you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up)
+* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
 * The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and configured
 
 ## Code repository

@@ -23,7 +23,7 @@ Nexmo 的短信 API 使您能够使用简单的 REST API 向世界各地的用�
 
 本示例说明如何将短信发送到您选择的号码。
 
-首先，如果您还没有 Nexmo 帐户，请先[注册 Nexmo 帐户](https://dashboard.nexmo.com/sign-up)，然后在 [Dashboard 入门页面](https://dashboard.nexmo.com/getting-started-guide)上记下您的 API 密钥和密码。
+首先，如果您还没有 Nexmo 帐户，请先[注册 Nexmo 帐户](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)，然后在 [Dashboard 入门页面](https://dashboard.nexmo.com/getting-started-guide)上记下您的 API 密钥和密码。
 
 在示例代码中替换以下占位符值：
 

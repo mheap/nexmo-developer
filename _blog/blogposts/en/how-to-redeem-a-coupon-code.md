@@ -30,7 +30,7 @@ These coupon codes will only be valid for a specific period of time, so be sure 
 
 ### How Do I Redeem a Coupon Code?
 
-In order to redeem your coupon code, you will need to create a [Vonage API account](https://dashboard.nexmo.com/sign-up). Once you have created your account and confirmed your email address, take a look at your [Dashboard](https://dashboard.nexmo.com/). 
+In order to redeem your coupon code, you will need to create a [Vonage API account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav). Once you have created your account and confirmed your email address, take a look at your [Dashboard](https://dashboard.nexmo.com/). 
 
 ![Screenshot of Vonage API Dashboard view.](/content/blog/how-to-redeem-a-coupon-code/dashboard.png "Screenshot of Vonage API Dashboard view.")
 
