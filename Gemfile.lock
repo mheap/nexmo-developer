@@ -337,6 +337,7 @@ GEM
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    readingtime (0.3.1)
     recaptcha (5.8.1)
       json
     redcarpet (3.5.1)
@@ -412,7 +413,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    station (0.1.0)
+    station (0.1.1)
       activeadmin (~> 2.7)
       activesupport (~> 6.0)
       algoliasearch (= 1.27.5)
@@ -447,6 +448,7 @@ GEM
       puma (>= 5.3, < 6.0)
       rails (~> 6.1)
       railties (~> 6.0)
+      readingtime (= 0.3.1)
       recaptcha (~> 5.3)
       redis (= 4.3.1)
       rest-client (= 2.1.0)
@@ -501,7 +503,7 @@ DEPENDENCIES
   factory_bot
   rack-test
   rspec
-  station (= 0.1.0)
+  station (= 0.1.1)
 
 BUNDLED WITH
    2.2.31
