@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.1.0  - 2022-02-25
+
+### Added
+
+- `[NXMClient getDeviceId]` to retrieve device identifier.
+
 ## 4.0.6  - 2022-02-15
 
 ### Fixed
