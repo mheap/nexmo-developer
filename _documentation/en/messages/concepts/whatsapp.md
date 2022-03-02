@@ -28,7 +28,7 @@ If your customer initiates messaging with you, WhatsApp will not charge you for 
 
 Vonage now offers a Conversation-Based Pricing model for WhatsApp messaging. This is in line with pricing model introduced by WhatsApp at the start of February 2022.
 
-- **What is a conversation?** A conversation is any number of messages sent within a 'session', which is defined as a 24-hour period starting from the time the first message is sent.
+- **What is a conversation?** A conversation is any number of messages sent within a 'session', which is defined as a 24 hour period starting from the time the first message is sent.
 - **Who initiates a conversation?** A conversation can be initiated either by a *customer* (user-initiated) or *business* (business-initiated).
 - **How does Vonage price conversations?** The Vonage pricing for WhatsApp messaging is made up of two components, both of which are priced *per conversation*:
   - A Vonage platform fee
