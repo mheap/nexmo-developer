@@ -24,6 +24,20 @@ If your customer initiates messaging with you, WhatsApp will not charge you for 
 
 > **IMPORTANT**: The WhatsApp Business Solution may not be used to send any messages to or receive messages from the following countries or regions: Crimea, Cuba, Iran, North Korea, and Syria.
 
+## WhatsApp Conversation-Based Pricing
+
+Vonage now offers a Conversation-Based Pricing model for WhatsApp messaging. This is in line with pricing model introduced by WhatsApp at the start of February 2022.
+
+- **What is a conversation?** A conversation is any number of messages sent within a 'session', which is defined as a 24-hour period starting from the time the first message is sent.
+- **Who initiates a conversation?** A conversation can be initiated either by a *customer* (user-initiated) or *business* (business-initiated).
+- **How does Vonage price conversations?** The Vonage pricing for WhatsApp messaging is made up of two components, both of which are priced *per conversation*:
+  - A Vonage platform fee
+  - A WhatsApp fee
+
+For more information on Vonage WhatsApp pricing, see the [Messages API pricing](https://www.vonage.com/communications-apis/messages/pricing/) page. Further information on the Conversation-Based Pricing model can be found in the [WhatsApp developer documentation](https://developers.facebook.com/docs/whatsapp/pricing)
+
+> **IMPORTANT**: Existing customers will by default remain on their current pricing model by default at the current per message pricing, with the option to move to the new conversation based pricing model.
+
 ## WhatsApp message types
 
 There are a number of different WhatsApp message types:
