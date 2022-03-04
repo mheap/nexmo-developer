@@ -20,7 +20,9 @@ Vonage also offers a [split recording](#split-recording) feature where the audio
 
 To record a conversation you can use the `record` action in an NCCO. The recording will behave differently depending on how you configure the action. For more information on how to configure a recording, see the [record NCCO reference](/voice/voice-api/ncco-reference#record)
 
-Once the `record` action ends, Vonage will send a webhook to the `event_url` that you specified when configuring the `record` action. This webhook contains a URL where the recording file can be downloaded from. You will need to authenticate with a JWT signed by the same application key that created the recording in order to download the recording file.
+Once the `record` action ends, Vonage will send a webhook to the `eventUrl` that you specified when configuring the `record` action. This webhook contains a URL where the recording file can be downloaded from. You will need to authenticate with a JWT signed by the same application key that created the recording in order to download the recording file.
+
+Call transcription is available in [Developer Preview](/product-lifecycle/dev-preview). Vonage will send a webhook to an `eventUrl` once the transcription is complete. This webhook contains a URL where the transcription can be accessed. Similarly to the recording you will need to authenticate.
 
 > NOTE: After your recording is complete, it is stored by Vonage for 30 days before being automatically deleted
 
@@ -89,3 +91,34 @@ If you added another `connect` action to this NCCO, the first two participants w
 
 All formats are mono by default. If split recording is enabled, a stereo file with each channel using the previously mentioned bit-depth and sampling rates is created.
 
+## Transcription
+
+If the `transcription` option is set, the recording will be transcribed using the default values for `language`, EN-US, and the webhook will be sent to your `eventUrl`.
+
+```
+[
+    {
+        "action": "record",
+        "eventUrl":["https://example.com/recording"],
+        "transcription": {}
+    }
+]
+```
+
+Using the transcription settings you can specify a custom `eventUrl` and `language` for your transcriptions. You can find more information on the [NCCO Reference](/voice/voice-api ncco-reference#transcription-settings).
+
+
+```
+[
+    {
+        "action": "record",
+        "eventUrl":["https://example.com/recording"],
+        "transcription":
+        {
+            "eventMethod": "POST",
+            "eventUrl":["https://example.com/transcription"],
+            "language": "pt-BR"
+        }
+    }
+]
+```

@@ -54,6 +54,8 @@ Use the `record` action to record a Call or part of a Call:
 
 The record action is asynchronous. Recording starts when the record action is executed in the NCCO and finishes when the synchronous condition in the action is met. That is, `endOnSilence`, `timeOut` or `endOnKey`. If you do not set a synchronous condition, the Voice API immediately executes the next NCCO without recording.
 
+You can transcribe a recording using the `transcription` option [[Developer Preview](/product-lifecycle/dev-preview)]. Once the recording's transcription is complete, a callback will be sent to an `eventUrl`. Using the transcription settings you can specify a custom `eventUrl` and `language` for your transcriptions.
+
 For information about the workflow to follow, see [Recording](/voice/voice-api/guides/recording).
 
 You can use the following options to control a `record` action:
@@ -69,6 +71,14 @@ Option | Description | Required
 `beepStart` | Set to `true` to play a beep when a recording starts. | No
 `eventUrl` | The URL to the webhook endpoint that is called asynchronously when a recording is finished. If the message recording is hosted by Vonage, this webhook contains the [URL you need to download the recording and other meta data](#recording_return_parameters). | No
 `eventMethod` | The HTTP method used to make the request to `eventUrl`. The default value is `POST`. | No
+`transcription` [Developer Preview] | [Transcription Settings](/voice/voice-api/ncco-reference#transcription-settings)  | No
+
+### Transcription Settings
+Option | Description | Required
+ -- | -- | --
+| `language` | The language ([BCP-47](https://tools.ietf.org/html/bcp47) format) for the recording you're transcribing. Default: `en-US`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No |
+`eventUrl` | The URL to the webhook endpoint that is called asynchronously when a transcription is finished | No
+`eventMethod` | The HTTP method Vonage uses to make the request to <i>eventUrl</i>. The default value is `POST`. | No
 
 <a name="recording_return_parameters"></a>
 The following example shows the return parameters sent to `eventUrl`:
