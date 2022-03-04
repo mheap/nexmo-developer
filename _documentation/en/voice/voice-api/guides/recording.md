@@ -91,9 +91,9 @@ If you added another `connect` action to this NCCO, the first two participants w
 
 All formats are mono by default. If split recording is enabled, a stereo file with each channel using the previously mentioned bit-depth and sampling rates is created.
 
-## Transcription
+## Transcription [Developer Preview]
 
-If the `transcription` option is set, the recording will be transcribed using the default value for `language`, EN-US, and the webhook will be sent to your recording `eventUrl`. If a recording `eventUrl` is not specified, the webhook will be sent to your application's `eventUrl`.
+If the `transcription` option is set, the recording will be transcribed using the default value for `language`, en-US: 
 
 ```
 [
@@ -105,7 +105,7 @@ If the `transcription` option is set, the recording will be transcribed using th
 ]
 ```
 
-Using the transcription settings you can specify a custom `eventUrl` and `language` for your transcriptions. You can find more information on the [NCCO Reference](/voice/voice-api ncco-reference#transcription-settings).
+Using the transcription settings you can specify a custom `eventUrl` and `language` for your transcriptions. You can find more information on the [NCCO Reference](/voice/voice-api/ncco-reference#transcription-settings).
 
 ```
 [
@@ -116,8 +116,23 @@ Using the transcription settings you can specify a custom `eventUrl` and `langua
         {
             "eventMethod": "POST",
             "eventUrl":["https://example.com/transcription"],
-            "language": "pt-BR"
+            "language": "en-US"
         }
     }
 ]
 ```
+
+Once the transcription is complete a callback will be sent to your recording `eventUrl`. If a recording `eventUrl` is not specified, the webhook will be sent to your application's `eventUrl`:
+
+```json
+{
+  "conversation_uuid": "CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+  "recording_uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+  "status": "transcribed",
+  "transcription_url": "https://api.nexmo.com/v1/files/bbbbbbbb-aaaa-cccc-dddd-0123456789ab",
+  "type": "record"
+}
+```
+
+Using the `transcription_url` you can make a request to retrieve the transcription. You will need to authenticate with a JWT signed by the same application key that created the recording:
+
