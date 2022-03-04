@@ -22,7 +22,7 @@ To record a conversation you can use the `record` action in an NCCO. The recordi
 
 Once the `record` action ends, Vonage will send a webhook to the `eventUrl` that you specified when configuring the `record` action. This webhook contains a URL where the recording file can be downloaded from. You will need to authenticate with a JWT signed by the same application key that created the recording in order to download the recording file.
 
-Call transcription is available in [Developer Preview](/product-lifecycle/dev-preview). Vonage will send a webhook to an `eventUrl` once the transcription is complete. This webhook contains a URL where the transcription can be accessed. Similarly to the recording you will need to authenticate.
+[Call transcription](/voice/voice-api/guides/recording#transcription) is available in [Developer Preview](/product-lifecycle/dev-preview). Vonage will send a webhook to an `eventUrl` once the transcription is complete. This webhook contains a URL where the transcription can be accessed. Similarly to the recording you will need to authenticate.
 
 > NOTE: After your recording is complete, it is stored by Vonage for 30 days before being automatically deleted
 
@@ -93,7 +93,7 @@ All formats are mono by default. If split recording is enabled, a stereo file wi
 
 ## Transcription
 
-If the `transcription` option is set, the recording will be transcribed using the default values for `language`, EN-US, and the webhook will be sent to your `eventUrl`.
+If the `transcription` option is set, the recording will be transcribed using the default value for `language`, EN-US, and the webhook will be sent to your recording `eventUrl`. If a recording `eventUrl` is not specified, the webhook will be sent to your application's `eventUrl`.
 
 ```
 [
