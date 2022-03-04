@@ -7,6 +7,8 @@ description: How to setup Asterisk with Vonage SIP
 
 Below we provide example configurations for using Vonage's SIP service with [Asterisk](http://www.asterisk.org).
 
+> Visit the [Vonage Knowledge Base](https://help.nexmo.com/hc/en-us/articles/115004859247-Which-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo) to obtain the current list of IP addresses.
+
 ## Inbound configuration
 
 ```text

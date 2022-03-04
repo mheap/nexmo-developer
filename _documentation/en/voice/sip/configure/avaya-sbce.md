@@ -9,7 +9,7 @@ description: How to set up Vonage SIP with Avaya SBCe
 
 ### June 2017
 
-> **Note**: Parts of this guide still refer to Nexmo. Vonage acquired Nexmo in June 2016.
+> **Note**: Parts of this guide still refer to Nexmo. Vonage acquired Nexmo in June 2016. Visit the [Vonage Knowledge Base](https://help.nexmo.com/hc/en-us/articles/115004859247-Which-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo) to obtain the current list of IP addresses.
 
 ## Contents
 

@@ -7,6 +7,8 @@ description: How to setup Vonage SIP with FreeSWITCH
 
 Below we provide example configurations for using Vonage's SIP service with [FreeSWITCH](http://www.freeswitch.org).
 
+> Visit the [Vonage Knowledge Base](https://help.nexmo.com/hc/en-us/articles/115004859247-Which-IP-addresses-should-I-whitelist-in-order-to-receive-voice-traffic-from-Nexmo) to obtain the current list of IP addresses.
+
 ## Inbound configuration
 
 Modify `autoload_configs/acl.conf.xml` and allow traffic from Vonage's IP addresses:
