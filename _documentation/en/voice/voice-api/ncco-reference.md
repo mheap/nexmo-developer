@@ -77,34 +77,12 @@ Option | Description | Required
 Option | Description | Required
  -- | -- | --
 | `language` | The language ([BCP-47](https://tools.ietf.org/html/bcp47) format) for the recording you're transcribing. Default: `en-US`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No |
-`eventUrl` | The URL to the webhook endpoint that is called asynchronously when a transcription is finished | No
+`eventUrl` | The URL to the webhook endpoint that is called asynchronously when a transcription is finished. | No
 `eventMethod` | The HTTP method Vonage uses to make the request to <i>eventUrl</i>. The default value is `POST`. | No
 
-<a name="recording_return_parameters"></a>
-The following example shows the return parameters sent to `eventUrl`:
+### Record Return Parameters
 
-```json
-{
-  "start_time": "2020-01-01T12:00:00Z",
-  "recording_url": "https://api.nexmo.com/v1/files/aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-  "size": 12345,
-  "recording_uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-  "end_time": "2020-01-01T12:01:00Z",
-  "conversation_uuid": "bbbbbbbb-cccc-dddd-eeee-0123456789ab",
-  "timestamp": "2020-01-01T14:00:00.000Z"
-}
-```
-
-Possible return parameters are:
-
- Name | Description
- -- | --
- `recording_uuid` | The unique ID for the Call. <br>**Note**: `recording_uuid` is not the same as the file uuid in *recording_url*.
- `recording_url` | The  URL to the file containing the Call recording.
- `start_time`  | The time the recording started in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. For example `2020-01-01T12:00:00Z`.
- `end_time`  | The time the recording finished in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. For example `2020-01-01T12:00:00Z`.
- `size` | The size of the recording at *recording_url* in bytes. For example: `603423`
- `conversation_uuid` | The unique ID for this Call.
+See the [Webhook Reference](/voice/voice-api/webhook-reference#record) for record or transcription parameters which are returned to the `eventUrl`.
 
 ## Conversation
 

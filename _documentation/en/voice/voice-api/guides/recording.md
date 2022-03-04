@@ -107,7 +107,6 @@ If the `transcription` option is set, the recording will be transcribed using th
 
 Using the transcription settings you can specify a custom `eventUrl` and `language` for your transcriptions. You can find more information on the [NCCO Reference](/voice/voice-api ncco-reference#transcription-settings).
 
-
 ```
 [
     {
