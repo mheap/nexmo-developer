@@ -1,5 +1,44 @@
 [
   {
+    "title": "Create an Emergency Broadcast System With Vonage, Node, and MongoDB",
+    "description": "Learn how to build an emergency broadcast system to alert your friends and family via SMS in an emergency.",
+    "thumbnail": "/content/blog/create-an-emergency-broadcast-system-with-vonage-node-and-mongodb/emergency-broadcast-system.png",
+    "author": {
+      "bio": "Cory Althoff is a developer advocate at Vonage and the author of two books: The \"Self-Taught Programmer\" and \"The Self-Taught Computer Scientist\". Book Authority named \"The Self-Taught Programmer\" one of the greatest programming books of all time, and The Next Web listed it as one of the ten books that will help you become a better software engineer.  Cory lives in the Bay Area with his wife and daughter.",
+      "hidden": false,
+      "image_url": "/content/images/cory.png",
+      "name": "Cory Althoff",
+      "linkedin_url": "https://www.linkedin.com/in/calthoff",
+      "twitter": "coryalthoff",
+      "spotlight": false,
+      "title": "Regional Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "cory-althoff"
+    },
+    "published": true,
+    "published_at": "2022-02-10 12:08:01 UTC",
+    "updated_at": "2022-02-01 00:31:09 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "messages-api",
+      "node",
+      "sms"
+    ],
+    "spotlight": false,
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/02/10/create-an-emergency-broadcast-system-with-vonage-node-and-mongodb",
+    "filename": "create-an-emergency-broadcast-system-with-vonage-node-and-mongodb"
+  },
+  {
     "title": "Startup Spotlight Series: Let's Meet Plaved Survey",
     "description": "Meet Spain-based startup Plaved Survey as a part of Vonage Startup Spotlight series.",
     "thumbnail": "/content/blog/startup-spotlight-series-lets-meet-plaved-survey/plaved-survey.png",
@@ -5648,6 +5687,34 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
+    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
+    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
+    "thumbnail": "/content/blog/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
+    "author": {
+      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
+      "image_url": "/content/images/yuvalgolan.png",
+      "name": "Yuval Golan",
+      "title": "Vonage VP of Quality Assurance",
+      "team": true,
+      "short_name": "yuvalgolan"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "high-availability"
+    ],
+    "locale": "en",
+    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
+    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
+  },
+  {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
     "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
     "thumbnail": "/content/blog/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
@@ -5675,34 +5742,6 @@
     "locale": "en",
     "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
     "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
-  },
-  {
-    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
-    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
-    "thumbnail": "/content/blog/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
-    "author": {
-      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
-      "image_url": "/content/images/yuvalgolan.png",
-      "name": "Yuval Golan",
-      "title": "Vonage VP of Quality Assurance",
-      "team": true,
-      "short_name": "yuvalgolan"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "high-availability"
-    ],
-    "locale": "en",
-    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
-    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
     "title": "Setting up CI/CD with Github Actions",
@@ -8377,35 +8416,6 @@
     "locale": "en",
     "link": "blog/20/09/09/build-a-whatsapp-currency-conversion-bot-with-node-js",
     "filename": "build-a-whatsapp-currency-conversion-bot-with-node-js"
-  },
-  {
-    "title": "Add Video Capabilities to Zendesk With Vonage Video API",
-    "description": "Add video, screen sharing, and recording functionality to Zendesk by using Vonage Video API so that you can offer a richer customer experience.",
-    "thumbnail": "/content/blog/add-video-capabilities-to-zendesk-with-vonage-video-api/Blog_Zendesk_VideoAPI_1200x600.png",
-    "author": {
-      "name": "Javier Molina Sanz",
-      "image_url": "https://secure.gravatar.com/avatar/742eb3b506dd56477e0c1b554e891ae2?s=384&d=mm&r=g",
-      "bio": "Javier studied Industrial Engineering back in Madrid where he's from. He is now one of our Solution Engineers, so if you get into trouble using our APIs he may be the one that gives you a hand. Out of work he loves playing football and travelling as much as he can.",
-      "website_url": "",
-      "team": true,
-      "short_name": "javier-molina-sanz"
-    },
-    "published": true,
-    "published_at": "2020-09-08 13:27:09 UTC",
-    "updated_at": "2021-05-11 16:00:33 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "video-api",
-      "zendesk"
-    ],
-    "locale": "en",
-    "link": "blog/20/09/08/add-video-capabilities-to-zendesk-with-vonage-video-api",
-    "filename": "add-video-capabilities-to-zendesk-with-vonage-video-api"
   },
   {
     "title": "Vonage Video API Version 2.18: What’s New and How You Can Use It",
@@ -16558,6 +16568,36 @@
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
   },
   {
+    "title": "使用 Google Cloud Functions 从 Python 发送短信",
+    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
+    "thumbnail": "/content/blog/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
+    "author": {
+      "spotlight": true,
+      "name": "Tom Morris",
+      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
+      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
+      "website_url": "",
+      "short_name": "tom"
+    },
+    "published": true,
+    "published_at": "2019-03-21 20:21:36 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "python",
+      "serverless",
+      "sms-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
+    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
+  },
+  {
     "title": "Sending SMS from Python with Google Cloud Functions",
     "description": "This tutorial shows how to deploy a function on Google Cloud Platform using Python 3.7 and the Vonage SMS API to send a text message to a user.",
     "thumbnail": "/content/blog/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
@@ -16586,36 +16626,6 @@
     "spotlight": true,
     "locale": "en",
     "link": "blog/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
-    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
-  },
-  {
-    "title": "使用 Google Cloud Functions 从 Python 发送短信",
-    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
-    "thumbnail": "/content/blog/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
-    "author": {
-      "spotlight": true,
-      "name": "Tom Morris",
-      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
-      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
-      "website_url": "",
-      "short_name": "tom"
-    },
-    "published": true,
-    "published_at": "2019-03-21 20:21:36 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "python",
-      "serverless",
-      "sms-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
     "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
   },
   {
