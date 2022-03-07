@@ -54,6 +54,8 @@ Use the `record` action to record a Call or part of a Call:
 
 The record action is asynchronous. Recording starts when the record action is executed in the NCCO and finishes when the synchronous condition in the action is met. That is, `endOnSilence`, `timeOut` or `endOnKey`. If you do not set a synchronous condition, the Voice API immediately executes the next NCCO without recording.
 
+You can transcribe a recording using the `transcription` option [[Developer Preview](/product-lifecycle/dev-preview)]. Once the recording's transcription is complete, a callback will be sent to an `eventUrl`. Using the transcription settings you can specify a custom `eventUrl` and `language` for your transcriptions.
+
 For information about the workflow to follow, see [Recording](/voice/voice-api/guides/recording).
 
 You can use the following options to control a `record` action:
@@ -69,32 +71,18 @@ Option | Description | Required
 `beepStart` | Set to `true` to play a beep when a recording starts. | No
 `eventUrl` | The URL to the webhook endpoint that is called asynchronously when a recording is finished. If the message recording is hosted by Vonage, this webhook contains the [URL you need to download the recording and other meta data](#recording_return_parameters). | No
 `eventMethod` | The HTTP method used to make the request to `eventUrl`. The default value is `POST`. | No
+`transcription` [Developer Preview] | Set to an empty object, `{}`, to use the default values or customize with [Transcription Settings](/voice/voice-api/ncco-reference#transcription-settings)  | No
 
-<a name="recording_return_parameters"></a>
-The following example shows the return parameters sent to `eventUrl`:
+### Transcription Settings
+Option | Description | Required
+ -- | -- | --
+| `language` | The language ([BCP-47](https://tools.ietf.org/html/bcp47) format) for the recording you're transcribing. Currently only `en-US` is supported during the developer preview. | No |
+`eventUrl` | The URL to the webhook endpoint that is called asynchronously when a transcription is finished. | No
+`eventMethod` | The HTTP method Vonage uses to make the request to <i>eventUrl</i>. The default value is `POST`. | No
 
-```json
-{
-  "start_time": "2020-01-01T12:00:00Z",
-  "recording_url": "https://api.nexmo.com/v1/files/aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-  "size": 12345,
-  "recording_uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-  "end_time": "2020-01-01T12:01:00Z",
-  "conversation_uuid": "bbbbbbbb-cccc-dddd-eeee-0123456789ab",
-  "timestamp": "2020-01-01T14:00:00.000Z"
-}
-```
+### Record Return Parameters
 
-Possible return parameters are:
-
- Name | Description
- -- | --
- `recording_uuid` | The unique ID for the Call. <br>**Note**: `recording_uuid` is not the same as the file uuid in *recording_url*.
- `recording_url` | The  URL to the file containing the Call recording.
- `start_time`  | The time the recording started in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. For example `2020-01-01T12:00:00Z`.
- `end_time`  | The time the recording finished in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. For example `2020-01-01T12:00:00Z`.
- `size` | The size of the recording at *recording_url* in bytes. For example: `603423`
- `conversation_uuid` | The unique ID for this Call.
+See the [Webhook Reference](/voice/voice-api/webhook-reference#record) for record or transcription parameters which are returned to the `eventUrl`.
 
 ## Conversation
 

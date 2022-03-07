@@ -307,6 +307,16 @@ Field | Example | Description
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
 `timestamp` | `2020-01-01T12:00:00.000Z` | Timestamp (ISO 8601 format)
 
+#### Transcription
+
+Field | Example | Description
+ -- | -- | --
+`conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
+`recording_uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this recording
+`status` | `transcribed` | Transcription status
+`transcription_url` | `https://api.nexmo.com/v1/files/bbbbbbbb-aaaa-cccc-dddd-0123456789ab` | The URL to the file containing the recording's transcription
+
+
 [Back to event webhooks list](#event-webhook)
 
 ### Input 

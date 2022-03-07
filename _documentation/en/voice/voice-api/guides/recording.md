@@ -20,7 +20,9 @@ Vonage also offers a [split recording](#split-recording) feature where the audio
 
 To record a conversation you can use the `record` action in an NCCO. The recording will behave differently depending on how you configure the action. For more information on how to configure a recording, see the [record NCCO reference](/voice/voice-api/ncco-reference#record)
 
-Once the `record` action ends, Vonage will send a webhook to the `event_url` that you specified when configuring the `record` action. This webhook contains a URL where the recording file can be downloaded from. You will need to authenticate with a JWT signed by the same application key that created the recording in order to download the recording file.
+Once the `record` action ends, Vonage will send a webhook to the `eventUrl` that you specified when configuring the `record` action. This webhook contains a URL where the recording file can be downloaded from. You will need to authenticate with a JWT signed by the same application key that created the recording in order to download the recording file.
+
+[Call transcription](/voice/voice-api/guides/recording#transcription) is available in [Developer Preview](/product-lifecycle/dev-preview). Vonage will send a webhook to an `eventUrl` once the transcription is complete. This webhook contains a URL where the transcription can be accessed. Similarly to the recording you will need to authenticate.
 
 > NOTE: After your recording is complete, it is stored by Vonage for 30 days before being automatically deleted
 
@@ -89,3 +91,90 @@ If you added another `connect` action to this NCCO, the first two participants w
 
 All formats are mono by default. If split recording is enabled, a stereo file with each channel using the previously mentioned bit-depth and sampling rates is created.
 
+## Transcription [Developer Preview]
+
+If the `transcription` option is set, the recording will be transcribed using the default value for `language`, en-US: 
+
+```
+[
+    {
+        "action": "record",
+        "eventUrl":["https://example.com/recording"],
+        "transcription": {}
+    }
+]
+```
+
+Using the transcription settings you can specify a custom `eventUrl` and `language` for your transcriptions. You can find more information on the [NCCO Reference](/voice/voice-api/ncco-reference#transcription-settings).
+
+```
+[
+    {
+        "action": "record",
+        "eventUrl":["https://example.com/recording"],
+        "transcription":
+        {
+            "eventMethod": "POST",
+            "eventUrl":["https://example.com/transcription"],
+            "language": "en-US"
+        }
+    }
+]
+```
+
+Once the transcription is complete a callback will be sent to your recording `eventUrl`. If a recording `eventUrl` is not specified, the webhook will be sent to your application's `eventUrl`:
+
+```json
+{
+  "conversation_uuid": "CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+  "recording_uuid": "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+  "status": "transcribed",
+  "transcription_url": "https://api.nexmo.com/v1/files/bbbbbbbb-aaaa-cccc-dddd-0123456789ab",
+  "type": "record"
+}
+```
+
+Using the `transcription_url` you can make a request to retrieve the transcription. You will need to authenticate with a JWT signed by the same application key that created the recording. The response from the `transcription_url` will contain the sentences and a word by word breakdown with their respective confidence scores:
+
+```json
+{
+  "ver": "1.0.19",
+  "request_id": "6226182254ce513117079b58",
+  "channels": [
+    {
+      "transcript": [
+        {
+          "sentence": "Transcription example test.",
+          "timestamp": 9630,
+          "duration": 2642,
+          "action_items": [],
+          "questions": [],
+          "answers": [],
+          "raw_sentence": "transcription example test",
+          "words": [
+            {
+              "word": "transcription",
+              "start_time": 9630,
+              "end_time": 10887,
+              "confidence": 1
+            },
+            {
+              "word": "example",
+              "start_time": 10952,
+              "end_time": 11726,
+              "confidence": 0.990055
+            },
+            {
+              "word": "test",
+              "start_time": 11728,
+              "end_time": 12272,
+              "confidence": 0.486845
+            }
+          ]
+        }
+      ],
+      "duration": 16.2
+    }
+  ]
+}
+```
