@@ -134,5 +134,47 @@ Once the transcription is complete a callback will be sent to your recording `ev
 }
 ```
 
-Using the `transcription_url` you can make a request to retrieve the transcription. You will need to authenticate with a JWT signed by the same application key that created the recording:
+Using the `transcription_url` you can make a request to retrieve the transcription. You will need to authenticate with a JWT signed by the same application key that created the recording. The response from the `transcription_url` will contain the sentences and a word by word breakdown with their respective confidence scores:
 
+```json
+{
+  "ver": "1.0.19",
+  "request_id": "6226182254ce513117079b58",
+  "channels": [
+    {
+      "transcript": [
+        {
+          "sentence": "Transcription example test.",
+          "timestamp": 9630,
+          "duration": 2642,
+          "action_items": [],
+          "questions": [],
+          "answers": [],
+          "raw_sentence": "transcription example test",
+          "words": [
+            {
+              "word": "transcription",
+              "start_time": 9630,
+              "end_time": 10887,
+              "confidence": 1
+            },
+            {
+              "word": "example",
+              "start_time": 10952,
+              "end_time": 11726,
+              "confidence": 0.990055
+            },
+            {
+              "word": "test",
+              "start_time": 11728,
+              "end_time": 12272,
+              "confidence": 0.486845
+            }
+          ]
+        }
+      ],
+      "duration": 16.2
+    }
+  ]
+}
+```
