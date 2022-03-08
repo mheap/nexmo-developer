@@ -74,7 +74,7 @@ Your brand information is displayed in the Brand list on the Brands and campaign
 
 1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
 2. Select the **Brand** for which you wish to apply for vetting.
-3. Select the **Exernal vetting** tab.
+3. Select the **External vetting** tab.
 4. Click the **Apply for vetting** button.
     The **External brand vetting** dialog box opens.
 5. Select the appropriate options in the drop-down menus.
