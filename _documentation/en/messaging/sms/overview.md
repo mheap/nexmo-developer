@@ -51,26 +51,41 @@ If you have decided moving to 10 DLC is right for your campaigns, you must:
 
     1. [Register your brand](#register-a-brand)
 
-    2. [Register a campaign] (#register-a-campaign)
+    2. [Apply for brand vetting](#apply-for-brand-vetting) unless your entity is listed on the Russel 3000 index
+    
+    3. [Register a campaign] (#register-a-campaign)
 
-    3. Link a number (coming soon)
+    4. [Link a number to a campaign](#link-a-number-to-a-campaign)
 
-#### Register a brand
+## Register a brand
 
-1. Navigate to [Vonage API dashboard > SMS > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
+1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
 2. Click **Register a new brand**.
 3. Fill in all required fields on the **Register a new brand** form.
 4. Click **Review details**. A confirmation dialog box opens.
 5. Review your brand details.
 6. Click **Register and pay**.
 
-    > **Note:** You will not be able to change your brand details after registering.
-    Your brand information is displayed in the Brand list on the Brands and campaigns page where you can monitor the status of its registration and view more details.
+> **Note:** You will not be able to change your brand details after registering.
 
-#### Register a campaign
+Your brand information is displayed in the Brand list on the Brands and campaigns page where you can monitor the status of its registration and view more details.
 
-1. Navigate to [Vonage API dashboard > SMS > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
-2. Click **Register a new campaign**
+## Apply for brand vetting
+
+1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
+2. Select the **Brand** for which you wish to apply for vetting.
+3. Select the **Exernal vetting** tab.
+4. Click the **Apply for vetting** button.
+    The **External brand vetting** dialog box opens.
+5. Select the appropriate options in the drop-down menus.
+6. Click the **Apply for external vetting** button.
+    An **External brand vetting** confirmation message is displayed.
+7. Click the **Close** button.
+
+## Register a campaign
+
+1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
+2. Click **Register a new campaign**.
     The **Create a new campaign** page is displayed.
 3. Under **Step 2 Use case**, select the check box associated with the use case that best describes this campaign. The use case describes the specific purpose of the campaign; for instance, marketing or account notifications you wish to send to customers.
 4. Click **Done**.
@@ -88,6 +103,19 @@ If you have decided moving to 10 DLC is right for your campaigns, you must:
     A confirmation dialog box opens summarizing your campaign details. Any charges to your account are indicated above the campaign details. You will not be able to change the campaign details after registering.
 13. Click **Register and pay**.
     The campaign is displayed in the **Campaigns** list on the **Brands and campaigns** page.
+
+## Link a number to a campaign
+
+1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
+2. Select an existing brand.
+3. Select the Campaigns tab.
+4. Select an existing campaign in the list.
+5. Select the Numbers tab.
+6. Search one of your existing numbers or buy a new number.
+7. Click the Link button corresponding to the number you wish to link to the campaign.
+    A Link number to campaign dialog box opens on which you can select a check box to make your number HIPPA compliant. Note that if you want your number to be HIPPA compliant, you must first reach out to your Account Manager.
+8. Click the Link button.
+    After you request to link a number to a campaign, the process will take a few minutes to complete. During this time, you will see a Pending status in the State column on the number you are linking.
 
 ### Send an SMS
 
