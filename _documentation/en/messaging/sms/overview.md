@@ -108,14 +108,14 @@ Your brand information is displayed in the Brand list on the Brands and campaign
 
 1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
 2. Select an existing brand.
-3. Select the Campaigns tab.
+3. Select the **Campaigns** tab.
 4. Select an existing campaign in the list.
-5. Select the Numbers tab.
+5. Select the **Numbers** tab.
 6. Search one of your existing numbers or buy a new number.
-7. Click the Link button corresponding to the number you wish to link to the campaign.
-    A Link number to campaign dialog box opens on which you can select a check box to make your number HIPPA compliant. Note that if you want your number to be HIPPA compliant, you must first reach out to your Account Manager.
-8. Click the Link button.
-    After you request to link a number to a campaign, the process will take a few minutes to complete. During this time, you will see a Pending status in the State column on the number you are linking.
+7. Click the **Link** button corresponding to the number you wish to link to the campaign.
+    A **Link number to campaign** dialog box opens on which you can select a check box to make your number HIPPA compliant. Note that if you want your number to be HIPPA compliant, you must first reach out to your Account Manager.
+8. Click the **Link** button.
+    After you request to link a number to a campaign, the process will take a few minutes to complete. During this time, you will see a **Pending** status in the **State** column on the number you are linking.
 
 ### Send an SMS
 
