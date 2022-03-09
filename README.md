@@ -108,7 +108,7 @@ The project can be run on your laptop, either directly or using Docker. These in
 10. Start the local server:
 
     ```bash
-    OAS_PATH=“pwd/_open_api/api_specs/definitions” bundle exec nexmo-developer --docs=`pwd` --rake-ci`
+    OAS_PATH=“pwd/_open_api/api_specs/definitions” bundle exec nexmo-developer --docs=`pwd` --rake-ci
     ```
 
     You should now be able to see the site on http://localhost:3000/
