@@ -70,6 +70,54 @@ page:
       - type: html
         html:
           content: "<p>If what we are building sounds interesting to you please see our open positions and get in touch with us at <a href='mailto:devrel@vonage.com'>devrel@vonage.com</a>.</p>"
+
+      - type: html
+        html:
+          content: "
+                    <style>
+                      #hiring-locations::after{
+                        top: 4px !important;
+                      }
+                    </style>
+                    <br><br>
+                    <div class='Vlt-accordion'>
+                      <button id='hiring-locations' class='Vlt-accordion__trigger' style>Places We Can Hire</button>
+                      <div class='Vlt-accordion__content'>
+                        <div class='Vlt-grid'>
+                          <div class='Vlt-col--1of2 Vlt-list Vlt-list--simple'>
+                            <li> Australia </li>
+                            <li> Belgium</li>
+                            <li> Brazil</li>
+                            <li> Canada</li>
+                            <li> China</li>
+                            <li> France</li>
+                            <li> Germany</li>
+                            <li> Hong Kong</li>
+                            <li> India</li>
+                            <li> Indonesia</li>
+                            <li> Israel</li>
+                            <li> Japan</li>
+                          </div>
+                          <div class='Vlt-col--1of2 Vlt-list Vlt-list--simple'>
+                            <li> Korea
+                            <li> Luxembourg
+                            <li> Malaysia
+                            <li> Mexico
+                            <li> Netherlands
+                            <li> Philippines (not finished yet)
+                            <li> Poland
+                            <li> Singapore
+                            <li> Spain
+                            <li> Sweden
+                            <li> UK
+                            <li> UAE
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br><br>
+                    "
+
       - type: career
       - type: html
         html:
