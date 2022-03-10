@@ -312,6 +312,7 @@ Field | Example | Description
 Field | Example | Description
  -- | -- | --
 `conversation_uuid` | `CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | The unique identifier for this conversation
+`type` | `record` | The NCCO action of type record
 `recording_uuid` | `aaaaaaaa-bbbb-cccc-dddd-0123456789ab` | A unique identifier for this recording
 `status` | `transcribed` | Transcription status
 `transcription_url` | `https://api.nexmo.com/v1/files/bbbbbbbb-aaaa-cccc-dddd-0123456789ab` | The URL to the file containing the recording's transcription
