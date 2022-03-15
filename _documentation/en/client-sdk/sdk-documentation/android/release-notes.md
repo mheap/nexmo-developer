@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.2 - Mar 9, 2022
+
+### Enhancements
+
+- WebRTC dependency upgraded to version `84.0.22`.
+
 ## 4.0.1 - Jan 21, 2022
 
 ### Fixed
