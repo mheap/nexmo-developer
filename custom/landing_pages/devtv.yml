@@ -7,11 +7,24 @@ page:
       - type: html
         html:
           content: |
+            <div class="Vlt-callout Vlt-callout--banner Vlt-callout--critical">
+              <i></i>
+              <div class="Vlt-callout__content">
+                <p>The devtv streaming calendar is currently on hiatus. Find current video content on our <a class="Vlt-white" href="https://www.youtube.com/c/VonageDev"><b><u>Youtube Channel</u></b></a>.</p>
+              </div>
+
+            </div>
+  - row:
+    - column:
+      - type: html
+        html:
+          content: |
+            <br><br>
             <div class="Vlt-grid Vlt-grid--stack-flush">
               <div class="Vlt-col Vlt-col--1of2 Vlt-center"><h1 id="vonage-devs-tv">Vonage Dev TV</h1></div>
               <div class="Vlt-col Vlt-col--1of2 Vlt-center"><a id="watch-now-btn" class="Vlt-btn Vlt-btn--primary Vlt-btn--app Vlt-btn--large" href="https://twitch.tv/vonagedevs" target="_blank" > < Watch now! > </a></div>
             </div>
-            <h2 class="Vlt-center margin-bottom-0 margin-top-16">October</h2>
+            <h2 class="Vlt-center margin-bottom-0 margin-top-16">Month</h2>
             <div class="Vlt-tabs container padding-top-0 margin-top-16">
               <div class="Vlt-table--data  Vlt-tabs__header">
                 <div class="Vlt-tabs__link Vlt-tabs__link_active no-border padding-top-0 padding-bottom-0"></div>
@@ -68,9 +81,9 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="15">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="3a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="3a" role="tab">
                         <b>15</b>
-                        <p class="show">Now We're Talking</p>
+                        <p class="show"></p>
                       </div>
                     </span>
                   </div>
@@ -152,9 +165,9 @@ page:
                   </div>
                   <div class="Vlt-table__cell Vlt-grid padding-left-0 padding-right-0" id="29">
                     <span class="Vlt-col padding-0">
-                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border" id="29a" role="tab">
+                      <div class="calendar-item Vlt-tabs__link height-auto no-bottom-border Vlt-tabs__link_disabled" id="29a" role="tab">
                         <b>29</b>
-                        <p class="show">Now We're Talking</p>
+                        <p class="show"></p>
                       </div>
                     </span>
                   </div>
@@ -303,6 +316,7 @@ page:
 
               </div>
             </div>
+
   - row:
     - column:
       - type: text
