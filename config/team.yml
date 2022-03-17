@@ -10,7 +10,6 @@ current:
   - name: 'Garann Means'
     role: "Developer Advocate"
     email: 'garann.means@vonage.com'
-    twitter: 'garannm'
   - name: 'Paul Ardeleanu'
     email: 'paul.ardeleanu@vonage.com'
     role: 'Developer Relations Manager'
@@ -62,7 +61,6 @@ current:
   - name: "Daniela Facchinetti"
     email: "daniela.facchinetti@vonage.com"
     role: "Developer Relations Coordinator"
-    twitter: 'Danyf__'
   - name: "Matt Hunt"
     email: "matt.hunt@vonage.com"
     role: ".Net Developer Advocate"
@@ -77,6 +75,14 @@ current:
     email: "Lucinda.Bone@vonage.com"
     role: "Community Manager, EMEA"
     twitter: 'lucinda_bone'
+  - name: "Zachary Powell"
+    email: "Zachary.Powell@vonage.com"
+    role: "Sr Android Developer Advocate"
+  - name: "Max Kahan"
+    email: "Max.Kahan@vonage.com"
+    role: "Python Developer Advocate"
+
+
 
 
 
