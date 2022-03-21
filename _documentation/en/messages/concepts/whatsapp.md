@@ -18,11 +18,29 @@ If you already have a WhatsApp Business Number and would like to use that number
 
 > **NOTE:** Once a WhatsApp number is integrated with the API it cannot be used in the mobile app.
 
-## Important WhatsApp rules
+## Rules for Messaging Customers
 
-If your customer initiates messaging with you, WhatsApp will not charge you for any MTMs (Template Messages) that you send back to the customer, for up to 24 hours following the last message that your customer sent you. This 24 hour period is known as the Customer Care Window. Any additional message you send to that customer beyond the Customer Care Window must be an MTM, for which you will be charged. The Vonage API Usage fee for every outbound message applies regardless of the customer care window. There are no charges for inbound messages. Further pricing information is available on the [WhatsApp Product](https://www.nexmo.com/products/messages/whatsapp) Page.
+WhatsApp has a concept of a 24 hour customer care window, during which a business can freely message an end user. The 24 hour window can be initiated in two ways:
 
-> **IMPORTANT**: The WhatsApp Business Solution may not be used to send any messages to or receive messages from the following countries or regions: Crimea, Cuba, Iran, North Korea, and Syria.
+- An end user sends a message to the business
+- A business sends a templated message to the end user. The 24 hour window starts as soon as the end user replies.
+
+Templates must be approved by WhatsApp before they can be used to send messages to an end user. When the 24 hour window expires, a new 24 hour customer care window must be initiated again.
+It is important to be aware that 24 hour customer care windows are not the same as the 24 hour billable conversation window.
+
+## WhatsApp Conversation-Based Pricing
+
+Vonage now offers a Conversation-Based Pricing model for WhatsApp messaging. This is in line with the pricing model introduced by WhatsApp at the start of February 2022.
+
+- **What is a conversation?** A conversation is any number of messages sent within a 'session', which is defined as a 24 hour period starting from the time the first message is sent **by the business**.
+- **Who initiates a conversation?** A conversation can be *initiated* either by a *customer* (user-initiated) or *business* (business-initiated), but in either case the 'session' begins with the first message sent **by the business**..
+- **How does Vonage price conversations?** The Vonage pricing for WhatsApp messaging is made up of two components, both of which are priced *per conversation*:
+  - A Vonage platform fee
+  - A WhatsApp fee
+
+For more information on Vonage WhatsApp pricing, see the [Messages API pricing](https://www.vonage.com/communications-apis/messages/pricing/) page. Further information on the Conversation-Based Pricing model can be found in the [WhatsApp developer documentation](https://developers.facebook.com/docs/whatsapp/pricing)
+
+> **IMPORTANT**: Existing customers will by default remain on their current pricing model by default at the current per message pricing, with the option to move to the new conversation based pricing model.
 
 ## WhatsApp message types
 
