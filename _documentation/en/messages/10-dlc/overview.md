@@ -48,7 +48,7 @@ With all these advantages, it is no wonder so many companies are excited about 1
 
 Now that you know about all of the advantages of 10DLC, you may be wondering how you can register. 
 
-Registering a 10DLC number with Vonage to send MMS messages is straighforward.
+Registering a 10DLC number with Vonage to send MMS messages is straightforward.
 
 ## 10DLC Campaigns
 
