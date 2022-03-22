@@ -35,7 +35,7 @@ When vetting is recommended when:
 
 Companies registered outside of the United States should apply for vetting as many countries do not offer the technology allowing for automatic verification by The Campaign Registry (TCR).
 
-The following countries are part of TCR's "optimised approval list." This means that companies originating from those countries can benefit from automated VAT identification. For any other country, TCR recommends using the primary corporation registration number or tax ID number for the counry, and vetting will likely be required.
+The following countries are part of TCR's "optimized approval list." This means that companies originating from those countries can benefit from automated VAT identification. For any other country, TCR recommends using the primary corporation registration number or tax ID number for the country, and vetting will likely be required.
 
 | Country      | Country Code |
 | ----------- | ----------- |
@@ -95,7 +95,7 @@ If you wish to apply for brand vetting with T-Mobile, please [submit a support r
 
 ## Request brand vetting from the Vonage API Developer Dashboard
 
->> Note: You may also make a request for brand vetting programatically via the [Vonage 10 DLC API](/api/10dlc).
+>> Note: You may also make a request for brand vetting programmatically via the [Vonage 10 DLC API](/api/10dlc).
 
 1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
 2. Select the **Brand** for which you wish to apply for vetting.

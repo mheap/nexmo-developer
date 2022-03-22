@@ -32,7 +32,7 @@ Under the new A2P 10 DLC regulation, anyone using an A2P (Application to Person)
 3. [Register a campaign](concepts/campaign-overview.md) for your brand.
 4. [Link numbers to the relevant campaigns](concepts/linking-numbers.md).
 
-You can either [use the Vonage API Developer Dashboard](_documentation/en/messages/10-dlc/10-dlc-registration-dashboard.md) or use the [Vonage 10 DLC API](/api/10dlc) to programatically register your Brand, request brand vetting, register a campaign, and link numbers to a campaign.
+You can either [use the Vonage API Developer Dashboard](_documentation/en/messages/10-dlc/10-dlc-registration-dashboard.md) or use the [Vonage 10 DLC API](/api/10dlc) to programmatically register your Brand, request brand vetting, register a campaign, and link numbers to a campaign.
 
 ## Advantages of 10DLC
 

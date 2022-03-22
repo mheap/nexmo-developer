@@ -32,7 +32,7 @@ In this section, you will learn about:
 There are two types of campaigns:
 
 * **Standard campaigns:** Basic use cases that usually do not require additional review. 
-* **Special campaigns:** Use cases that require additional brand vetting or pre/post Mobile Network Operator (MNO) approval. Some use cases require pre-approval from Vonage (i.e. Social Media). Requirements for special campaigns differ from use case to use case and registration may require more time. 
+* **Special campaigns:** Use cases that require additional brand vetting or pre/post Mobile Network Operator (MNO) approval. Some use cases require preapproval from Vonage (i.e. Social Media). Requirements for special campaigns differ from use case to use case and registration may require more time. 
 
 ### Standard campaigns
 
@@ -59,11 +59,11 @@ Throughput is considered at campaign level.
 
 | Name      | Description | Examples      | Requirements |
 | ----------- | ----------- | ----------- | ----------- |
-| Charity      | Communications from a registered charity aimed at providing help and raising money for those in need. Includes: 5013C Charity. Does not include religious organisations. **Non-profit only.**       | Red Cross, WWF, Greenpeace      | TBD       |
-| Emergency      | Notification services designed to support public safety / health during natural disasters, armed conflicts, pandemics and other national or regional emergencies.       | Firebrigade, Weather alerts, Terror attacks      | TBD       |
-| K-12 Education      | Campaigns created for messaging platforms that support schools from grades K-12 and distant learning centres.       | K-12 schools only      | TBD       |
+| Charity      | Communications from a registered charity aimed at providing help and raising money for those in need. Includes: 5013C Charity. Does not include religious organizations. **Non-profit only.**       | Red Cross, WWF, Greenpeace      | TBD       |
+| Emergency      | Notification services designed to support public safety / health during natural disasters, armed conflicts, pandemics and other national or regional emergencies.       | Fire brigade, Weather alerts, Terror attacks      | TBD       |
+| K-12 Education      | Campaigns created for messaging platforms that support schools from grades K-12 and distant learning centers.       | K-12 schools only      | TBD       |
 | Sweepstakes      | All sweepstakes messaging.       | Contests, Lotteries	      | TBD       |
-| Political      | Part of organised effort to influence decision making of specific groups. All campaigns to be verified. Only federal campaigns. **Non-Profit only.**       | Democratic party, Republican party      | TBD       |
+| Political      | Part of organized effort to influence decision making of specific groups. All campaigns to be verified. Only federal campaigns. **Non-Profit only.**       | Democratic party, Republican party      | TBD       |
 | Social      | Social is restricted for Social influencers.       | Youtuber influencer notifications, Celebrity alerts      | Subscriber Opt-in, Subscriber Opt-out, Subscriber help, Requires double opt-in       |
 | Sole Proprietor      | **Limited to entities without EIN / Tax ID.**       | Developer testing account, Single individual      | 1 Campaign & maximum of 5 numbers, No vetting        |
 
@@ -75,16 +75,14 @@ Throughput is considered on a per number basis.
 | ----------- | ----------- | ----------- | ----------- |
 | Agents and Franchises      | Agents, franchises, local branches. | HSBC's branches, McDonalds' Franchises, Vonage's offices employees      | TBD |
 | Carrier Exemptions      | Exemption by Carrier, can only be approved through manual review and or vetting process. | TBD      | TBD |
-| Conversational (Proxy)      | Peer-to-peer app-based group messaging with proxy/pooled numbers. Supporting personalised services and non-exposure of personal numbers for enterprise or A2P communications. | Uber app, Deliveroo app      | TBD |
+| Conversational (Proxy)      | Peer-to-peer app-based group messaging with proxy/pooled numbers. Supporting personalized services and non-exposure of personal numbers for enterprise or A2P communications. | Uber app, Deliveroo app      | TBD |
 
 ## Vetting and approval requirements
-
-TBD
 
 |   Use Case    | Entity Type |   AT&T Supported    | T-Mobile Supported | External Vetting Required AT&T      | External Vetting Required T-Mobile | Vetting Partner      | Approval Required AT&T | Approval Required T-Mobile |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Agents and Franchises |  | Yes | Yes | No | No |  | Post Campaign Registration | No |
-| Carrier Exemptions |  | Yes | No | No | TBD |  | Post Campaign Registratio | TBD |
+| Carrier Exemptions |  | Yes | No | No | TBD |  | Post Campaign Registration | TBD |
 | Charity | Non-profit only | Yes | Yes | No | No |  | No | No |
 | Conversational Messaging |  | Yes | Yes | No | No |  | Post Campaign Registration | No |
 | Emergency |  | Yes | Yes | No | No |  | Post Campaign Registration | No |

@@ -19,7 +19,7 @@ A brand is the legal entity of the business. For example:
 In this section, you will learn about:
 
 * [Brand registering requirements](#requirements)
-* [Reigstering a single brand versus multiple brands](#registering-a-single-brand-vs-registering-multiple-brands)
+* [Registering a single brand versus multiple brands](#registering-a-single-brand-vs-registering-multiple-brands)
 * [Registering a brand from the Vonage API Developer Dashboard](#register-a-brand-from-the-vonage-api-developer-dashboard)
 * [Defining the business type](#defining-the-business-type)
 * [Reseller businesses](#reseller-businesses)
@@ -50,7 +50,7 @@ In summary:
 
 ## Register a brand from the Vonage API Developer Dashboard
 
->> Note: You may also register your brand programatically via the [Vonage 10 DLC API](/api/10dlc).
+>> Note: You may also register your brand programmatically via the [Vonage 10 DLC API](/api/10dlc).
 
 1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
 2. Click **Register a new brand**.

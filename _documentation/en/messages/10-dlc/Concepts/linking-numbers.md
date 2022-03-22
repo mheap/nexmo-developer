@@ -11,7 +11,7 @@ The final step in your 10 DLC registration process is linking your numbers to yo
 
 In this section, you will learn about:
 
-* [Linking a numnber to a campaign](#linking-a-number-to-a-campaign-from-the-vonage-api-developer-dashboard)
+* [Linking a number to a campaign](#linking-a-number-to-a-campaign-from-the-vonage-api-developer-dashboard)
 * [Number pooling](#number-pooling)
 * [Rejected numbers](#rejected-numbers)
 
