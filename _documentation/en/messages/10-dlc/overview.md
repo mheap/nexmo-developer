@@ -48,17 +48,15 @@ With all these advantages, it is no wonder so many companies are excited about 1
 
 Now that you know about all of the advantages of 10DLC, you may be wondering how you can register. 
 
-Registering a 10DLC number with Vonage to send MMS messages is easy!
-
-To register, [follow the steps outlined in this article.](https://help.nexmo.com/hc/en-us/articles/360053422591) 
+Registering a 10DLC number with Vonage to send MMS messages is straighforward.
 
 ## 10DLC Campaigns
 
 Some mobile providers, like AT&T and Verizon, require you to [register with The Campaign Registry](https://www.campaignregistry.com/) to use 10DLC to send MMS messages. 
 
-The Campaign Registry calls itself a “reputation authority for business messaging on 10DLC.” 
+The Campaign Registry calls itself a “reputation authority for business messaging on 10DLC.”
 
-The Campaign Registry allows you to easily register your brand so companies can run their campaigns with the confidence of knowing “they are using an officially sanctioned product for their messaging termination.” 
+The Campaign Registry allows you to register your brand so companies can run their campaigns with the confidence of knowing “they are using an officially sanctioned product for their messaging termination.”
 
 ## What Do I Do if I Have More Than 50 Numbers?
 

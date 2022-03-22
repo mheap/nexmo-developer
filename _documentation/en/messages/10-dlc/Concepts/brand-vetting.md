@@ -7,7 +7,7 @@ navigation_weight: 2
 
 # 10 DLC Brand Vetting Overview
 
-Vetting is a background check processed by an independent company. When you create a brand through the Vonage API Dashboard, your entity will be assigned a limitation of throughput per second / minute / day for the number of messages you can send to your customers. Some companies are required to apply for vetting; others that require a higher limit than what is assigned by simple verification will also need to go through the vetting process.
+Vetting is a background check processed by an independent company. When you create a brand through the Vonage API Dashboard, your entity will be assigned a limitation of throughput per second / minute / day for the number of messages you can send to your customers. Some companies are required to apply for vetting; others that require a higher limit than what is assigned by basic verification will also need to go through the vetting process.
 
 In this section, you will learn about:
 

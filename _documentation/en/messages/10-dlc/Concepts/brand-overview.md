@@ -11,7 +11,7 @@ Users relying on Vonage APIs to send SMS and MMS traffic from a +1 Country Code 
 
 A brand is the legal entity of the business. For example:
 
-* “ABC Sodas” would submit just one brand, “ABC Sodas,” and this would be sufficient for all their other consumer brands such as “Cherry Soda” and “Root Beer Soda.”
+* “ABC Sodas” would submit only one brand, “ABC Sodas,” and this would be sufficient for all their other consumer brands such as “Cherry Soda” and “Root Beer Soda.”
 * Vonage Business Cloud would submit one brand as it is a SaaS solution, through which other businesses communicate.
 
 >> Note: See the Vonage Knowledge Base for more information on [brand creation guidelines](https://help.nexmo.com/hc/en-us/articles/4407712172692-10DLC-Guidelines-for-brand-creation).
@@ -40,7 +40,7 @@ The following is a list of general requirements:
 
 A large SaaS platform with a few large customers might consider separately registering those large customers as their own brands. The majority of smaller customers can be registered under one brand. This means that if there are any spam or reputation issues, they can be isolated to those individual brands.
 
-If you are an SMS aggregator with no brand value added on top and simply pass through the message, you would need to apply as a reseller and each of the businesses you serve would need to apply as their own brand.
+If you are an SMS aggregator with no brand value added on top and pass through the message, you would need to apply as a reseller and each of the businesses you serve would need to apply as their own brand.
 
 In summary:
 
@@ -118,7 +118,7 @@ A single account, multiple brands model includes the following attributes:
 
 This model is more like a Partner model where a parent business account directly manages each of their own brand customers. Their customers are managed through separate sub-accounts since numbers, billing, and configuration is set up according to each customer's needs.
 
-You can share brands across multiple accounts. Just let us know which account you want to share the brand with and we can set that up for you. This is useful for example if you create the brand under your parent account and want to share it with sub-accounts as well.
+You can share brands across multiple accounts. Identify which account with which you want to share the brand and Vonage can set that up for you. This is useful for example if you create the brand under your parent account and want to share it with sub-accounts as well.
 
 A parent and sub-accounts model includes multiple sub-accounts one per customer or child business
 
