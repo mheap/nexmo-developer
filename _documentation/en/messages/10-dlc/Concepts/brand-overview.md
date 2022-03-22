@@ -14,7 +14,7 @@ A brand is the legal entity of the business. For example:
 * “ABC Sodas” would submit only one brand, “ABC Sodas,” and this would be sufficient for all their other consumer brands such as “Cherry Soda” and “Root Beer Soda.”
 * Vonage Business Cloud would submit one brand as it is a SaaS solution, through which other businesses communicate.
 
->> Note: See the Vonage Knowledge Base for more information on [brand creation guidelines](https://help.nexmo.com/hc/en-us/articles/4407712172692-10DLC-Guidelines-for-brand-creation).
+> Note: See the Vonage Knowledge Base for more information on [brand creation guidelines](https://help.nexmo.com/hc/en-us/articles/4407712172692-10DLC-Guidelines-for-brand-creation).
 
 In this section, you will learn about:
 
@@ -50,7 +50,7 @@ In summary:
 
 ## Register a brand from the Vonage API Developer Dashboard
 
->> Note: You may also register your brand programmatically via the [Vonage 10 DLC API](/api/10dlc).
+> Note: You may also register your brand programmatically via the [Vonage 10 DLC API](/api/10dlc).
 
 1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
 2. Click **Register a new brand**.

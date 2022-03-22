@@ -18,7 +18,6 @@ In this section, you will learn about:
 * [T-Mobile Special Business Review](#t-mobile-special-business-review)
 * [How to request brand vetting from the Vonage API Developer Dashboard](#request-brand-vetting-from-the-vonage-api-developer-dashboard)
 
-
 ## Required versus recommended vetting
 
 Vetting is required when:
@@ -77,7 +76,7 @@ Applying for external vetting is a review of your application by an external com
 
 **Vetting cost: $40 per vetting**
 
->> Note: Vonage currently offers the option for our customers to apply for vetting if they judge it relevant to their situation. We reserve the right to update that process in the future.
+> Note: Vonage currently offers the option for our customers to apply for vetting if they judge it relevant to their situation. We reserve the right to update that process in the future.
 
 ## Porting vetting
 
@@ -95,7 +94,7 @@ If you wish to apply for brand vetting with T-Mobile, please [submit a support r
 
 ## Request brand vetting from the Vonage API Developer Dashboard
 
->> Note: You may also make a request for brand vetting programmatically via the [Vonage 10 DLC API](/api/10dlc).
+> Note: You may also make a request for brand vetting programmatically via the [Vonage 10 DLC API](/api/10dlc).
 
 1. Navigate to [Vonage API dashboard > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
 2. Select the **Brand** for which you wish to apply for vetting.

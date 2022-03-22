@@ -12,7 +12,7 @@ navigation_weight: 1
 Customers using the Vonage SMS and Messages APIs to send traffic from a +1 Country Code 10 Digit Long Code into US networks will need to register a brand and campaign in order to get approval for sending messages.
 The 10 DLC API provides you with the ability to programmatically manage your brand and campaigns so you can comply with U.S. carrier standards and send A2P messages to your customers.
 
->> Note: US numbers can no longer be shared across brands which include both geographic numbers and US shared short codes.
+> Note: US numbers can no longer be shared across brands which include both geographic numbers and US shared short codes.
 Vonage customers using US shared short codes: T-Mobile and AT&T’s new code of conduct prohibits the use of shared originators, therefore, shared short codes will no longer be an acceptable format for A2P messaging.
 
 For more information about preparation including timelines, pricing, and migration options, see this [knowledge base article](https://help.nexmo.com/hc/en-us/articles/360050905592-10DLC-Preparation).
