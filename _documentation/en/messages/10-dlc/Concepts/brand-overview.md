@@ -11,7 +11,7 @@ Users relying on Vonage APIs to send SMS and MMS traffic from a +1 Country Code 
 
 A brand is the legal entity of the business. For example:
 
-* “ABC Sodas” would submit only one brand, “ABC Sodas,” and this would be sufficient for all their other consumer brands such as “Cherry Soda” and “Root Beer Soda.”
+* "ABC Sodas" would submit only one brand, "ABC Sodas," and this would be sufficient for all their other consumer brands such as "Cherry Soda" and "Root Beer Soda."
 * Vonage Business Cloud would submit one brand as it is a SaaS solution, through which other businesses communicate.
 
 > Note: See the Vonage Knowledge Base for more information on [brand creation guidelines](https://help.nexmo.com/hc/en-us/articles/4407712172692-10DLC-Guidelines-for-brand-creation).

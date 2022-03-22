@@ -99,7 +99,7 @@ Each campaign registered for 10DLC requires a full Brand and Campaign use case a
 |   Name    | Description |
 | ----------- | ----------- |
 |   Subscriber Opt-in    | Record that the subscriber has opted into the receiving the messages. |
-|   Subscriber Opt-out    | The subscriber has the ability to opt-out of receiving messages through keywords e.g., “STOP“, “QUIT“, etc. |
+|   Subscriber Opt-out    | The subscriber has the ability to opt-out of receiving messages through keywords e.g., "STOP", "QUIT", etc. |
 |   Subscriber Help    | There is a 'help' mechanism through MO help key words such as 'HELP', 'INFO'. |
 |   Age Gated    | Message content is age gated. |
 |   Direct Lending    | Messages contain direct lending or loan arrangement content. |
