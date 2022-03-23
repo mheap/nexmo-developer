@@ -52,6 +52,7 @@ en:
     secret-management: Secret Management
     external-accounts: External Accounts API
     whatsapp-provisioning: WhatsApp Provisioning API
+    10-dlc: 10 DLC Support
     vonage-business-cloud: Vonage Business Cloud
     smart-numbers: Smart Numbers
     integration-suite: Vonage Integration Suite

@@ -1,7 +1,7 @@
 ---
-title: 10 DLC guidelines for US customers
-navigation_weight: 6
-description: Understanding 10 DLC guidelines for US based SMS.
+title: 10 DLC registration on the Vonage API Developer Dashboard
+navigation_weight: 2
+description: Registering a brand, requesting brand vetting, registering a campaign and linking numbers to a campaign on the Vonage API Developer Dashboard.
 ---
 
 # Important 10 DLC guidelines for US customers
