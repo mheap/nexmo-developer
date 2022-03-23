@@ -1,5 +1,140 @@
 [
   {
+    "title": "Zachary Powell Joins the Developer Relations Team",
+    "description": "My name is Zachary Powell and i'm excited to announce that I have joined Vonage as the new Sr Android Developer Advocate.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/zachary-powell-joins-the-developer-relations-team/zachary-powell.png",
+    "author": null,
+    "published": true,
+    "published_at": "2022-03-23 10:38:13 UTC",
+    "updated_at": "2022-03-21 10:40:56 UTC",
+    "category": {
+      "name": "Team",
+      "plural": "Team Posts",
+      "slug": "team",
+      "color": "#06ba77"
+    },
+    "tags": [
+      "career",
+      "android"
+    ],
+    "spotlight": false,
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/03/23/zachary-powell-joins-the-developer-relations-team",
+    "filename": "zachary-powell-joins-the-developer-relations-team"
+  },
+  {
+    "title": "Working on a Multi-language Team",
+    "description": "Working on a multi-language team can be both challenging and rewarding. Here are a few things I've learned.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/working-on-a-multi-language-team/multi-language-team-1-.png",
+    "author": {
+      "bio": "Karl is a Developer Advocate for Vonage, focused on maintaining our Ruby server SDKs and improving the developer experience for our community. He loves learning, making stuff, sharing knowledge, and anything generally web-tech related.",
+      "hidden": false,
+      "image_url": "/content/images/karl-b-w-crop.png",
+      "name": "Karl Lingiah",
+      "twitter": "KarlLingiah",
+      "spotlight": false,
+      "title": "Ruby Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "karl-lingiah"
+    },
+    "published": true,
+    "published_at": "2022-03-21 09:36:20 UTC",
+    "updated_at": "2022-03-17 15:58:23 UTC",
+    "category": {
+      "name": "#devlife",
+      "plural": "#devlife Posts",
+      "slug": "devlife",
+      "color": "#e84545"
+    },
+    "tags": [
+      "devlife"
+    ],
+    "spotlight": false,
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/03/21/working-on-a-multi-language-team",
+    "filename": "working-on-a-multi-language-team"
+  },
+  {
+    "title": "Build a Message Scheduler with Node and Vonage",
+    "description": "Learn how to create a message scheduler with Node and Vonage",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/build-a-message-scheduler-with-node-and-vonage/message-scheduler.png",
+    "author": {
+      "bio": "Cory Althoff is a developer advocate at Vonage and the author of two books: The \"Self-Taught Programmer\" and \"The Self-Taught Computer Scientist\". Book Authority named \"The Self-Taught Programmer\" one of the greatest programming books of all time, and The Next Web listed it as one of the ten books that will help you become a better software engineer.  Cory lives in the Bay Area with his wife and daughter.",
+      "hidden": false,
+      "image_url": "/content/images/cory.png",
+      "name": "Cory Althoff",
+      "linkedin_url": "https://www.linkedin.com/in/calthoff",
+      "twitter": "coryalthoff",
+      "spotlight": false,
+      "title": "Regional Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "cory-althoff"
+    },
+    "published": true,
+    "published_at": "2022-03-18 11:32:27 UTC",
+    "updated_at": "2022-03-15 23:57:46 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "messaging-api",
+      "node",
+      "javascript"
+    ],
+    "spotlight": false,
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/03/18/build-a-message-scheduler-with-node-and-vonage",
+    "filename": "build-a-message-scheduler-with-node-and-vonage"
+  },
+  {
+    "title": "Lessons Learned After Two Years of Virtual Tech Conferences",
+    "description": "Since the start of worldwide lockdowns in March 2020, we've been forced to create and implement best practices for online technical conferences on our feet. Two years later, what worked, what new ideas have we come up with, and what does the future of a tech conference look like?",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/lessons-learned-after-two-years-of-virtual-tech-conferences/two-years-of-video-chat.png",
+    "author": {
+      "team": true,
+      "bio": "I'm a JavaScript developer and a Developer Educator at Vonage. Over the years I’ve been really excited about templates, Node.js, progressive web apps, and offline-first strategies, but what I’ve always really loved is a useful, well-documented API. My goal is to make your experience using our APIs the very best I can help it be.",
+      "image_url": "/content/images/img_0842.jpg",
+      "name": "Garann Means",
+      "twitter": "garannm",
+      "github_url": "github.com/garann",
+      "spotlight": false,
+      "title": "Developer Educator",
+      "email": "garann.means@vonage.com",
+      "short_name": "garann-means"
+    },
+    "published": true,
+    "published_at": "2022-03-14 10:37:54 UTC",
+    "updated_at": "2022-03-09 16:17:58 UTC",
+    "category": {
+      "name": "#devlife",
+      "plural": "#devlife Posts",
+      "slug": "devlife",
+      "color": "#e84545"
+    },
+    "tags": [
+      "conferences"
+    ],
+    "spotlight": false,
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/03/14/lessons-learned-after-two-years-of-virtual-tech-conferences",
+    "filename": "lessons-learned-after-two-years-of-virtual-tech-conferences"
+  },
+  {
     "title": "Moderate Audio in an App With the Vonage Video API and AWS Transcribe",
     "description": "Build an audio-moderated video application with the Vonage Video API and AWS Transcribe",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/moderate-audio-in-an-app-with-the-vonage-video-api-and-aws-transcribe/aws-audio-moderation_videoapi.png",
@@ -6027,6 +6162,35 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
+    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
+    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
+    "author": {
+      "team": true,
+      "name": "Avital Tzubeli",
+      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
+      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
+      "website_url": "",
+      "short_name": "avital-tzubelivonage-com"
+    },
+    "published": false,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "angular",
+      "rxjs"
+    ],
+    "locale": "en",
+    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
+    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
+  },
+  {
     "title": "Setting up CI/CD with Github Actions",
     "description": "This article walks you through the process of using github actions to build CI/CD flows.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
@@ -6085,35 +6249,6 @@
     "locale": "en",
     "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
     "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
-  },
-  {
-    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
-    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
-    "author": {
-      "team": true,
-      "name": "Avital Tzubeli",
-      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
-      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
-      "website_url": "",
-      "short_name": "avital-tzubelivonage-com"
-    },
-    "published": false,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "angular",
-      "rxjs"
-    ],
-    "locale": "en",
-    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
-    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -16908,36 +17043,6 @@
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
   },
   {
-    "title": "使用 Google Cloud Functions 从 Python 发送短信",
-    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
-    "author": {
-      "spotlight": true,
-      "name": "Tom Morris",
-      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
-      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
-      "website_url": "",
-      "short_name": "tom"
-    },
-    "published": true,
-    "published_at": "2019-03-21 20:21:36 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "python",
-      "serverless",
-      "sms-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
-    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
-  },
-  {
     "title": "Sending SMS from Python with Google Cloud Functions",
     "description": "This tutorial shows how to deploy a function on Google Cloud Platform using Python 3.7 and the Vonage SMS API to send a text message to a user.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
@@ -16966,6 +17071,36 @@
     "spotlight": true,
     "locale": "en",
     "link": "blog/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
+    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
+  },
+  {
+    "title": "使用 Google Cloud Functions 从 Python 发送短信",
+    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
+    "author": {
+      "spotlight": true,
+      "name": "Tom Morris",
+      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
+      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
+      "website_url": "",
+      "short_name": "tom"
+    },
+    "published": true,
+    "published_at": "2019-03-21 20:21:36 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "python",
+      "serverless",
+      "sms-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
     "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
   },
   {
