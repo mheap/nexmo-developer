@@ -2,7 +2,7 @@
 title: 10 DLC Campaigns Overview
 meta_title: 10 DLC campaigns overview 
 description: Provides and in-depth explanation of the definition of campaigns, campaign registration requirements, campaign types, campaign vetting requirements, and subscriber information and message content. 
-navigation_weight: 3
+navigation_weight: 5
 ---
 
 # 10 DLC Campaigns Overview

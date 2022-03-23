@@ -27,10 +27,10 @@ Businesses can register for a 10DLC number to send SMS messages, MMS messages, o
 
 Under the new A2P 10 DLC regulation, anyone using an A2P (Application to Person) mechanism to send messages (SMS or MMS) is required to go through a registration process via the campaign registry (TCR). The registration process comprises of 4 phases:
 
-1. [Register a brand](concepts/brand-overview.md) for your business.
-2. [Request brand vetting](concepts/brand-vetting.md) to be assigned a trust score.
-3. [Register a campaign](concepts/campaign-overview.md) for your brand.
-4. [Link numbers to the relevant campaigns](concepts/linking-numbers.md).
+1. [Register a brand](brand-overview) for your business.
+2. [Request brand vetting](brand-vetting.md) to be assigned a trust score.
+3. [Register a campaign](campaign-overview.md) for your brand.
+4. [Link numbers to the relevant campaigns](linking-numbers.md).
 
 You can either [use the Vonage API Developer Dashboard](_documentation/en/messages/10-dlc/10-dlc-registration-dashboard.md) or use the [Vonage 10 DLC API](/api/10dlc) to programmatically register your Brand, request brand vetting, register a campaign, and link numbers to a campaign.
 
@@ -44,7 +44,7 @@ You can either [use the Vonage API Developer Dashboard](_documentation/en/messag
 
 ## What Do I Do if I Have More Than 50 Numbers?
 
-Customers often ask us what to do if they have more than 50 numbers because, with 10DLC, you can link up to 50 numbers to a single campaign. If you have more than 50 numbers, you should first evaluate whether or not you have a true business need to support more than 50 numbers. If so, you must submit a special business review application with T-Mobile. See [Linking numbers to 10 DLC campaigns](concepts/linking-numbers.md) to learn more about number pooling.
+Customers often ask us what to do if they have more than 50 numbers because, with 10DLC, you can link up to 50 numbers to a single campaign. If you have more than 50 numbers, you should first evaluate whether or not you have a true business need to support more than 50 numbers. If so, you must submit a special business review application with T-Mobile. See [Linking numbers to 10 DLC campaigns](linking-numbers.md) to learn more about number pooling.
 
 ## References
 

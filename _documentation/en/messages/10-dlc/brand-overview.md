@@ -2,7 +2,7 @@
 title: 10 DLC Brand Overview
 meta_title: 10 DLC brand overview 
 description: Provides and in-depth explanation of the definition of a brand, brand registration requirements, defining your business, and data requirements for registering a brand for 10 DLC. 
-navigation_weight: 1
+navigation_weight: 3
 ---
 
 # 10 DLC Brand Overview

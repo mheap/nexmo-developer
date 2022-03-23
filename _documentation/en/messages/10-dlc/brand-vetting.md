@@ -2,7 +2,7 @@
 title: 10 DLC Brand Vetting Overview
 meta_title: 10 DLC brand vetting overview 
 description: Provides and in-depth explanation of the definition of brand vetting, when brand vetting is recommended and/or required, vetting for additional throughput, and associated costs. 
-navigation_weight: 2
+navigation_weight: 4
 ---
 
 # 10 DLC Brand Vetting Overview

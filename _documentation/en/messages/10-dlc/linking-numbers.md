@@ -2,7 +2,7 @@
 title: Linking Numbers to 10 DLC Campaigns
 meta_title: Linking numbers to 10 DLC campaigns  
 description: Provides an in-depth explanation of linking numbers to campaigns including number linking requirements, number pooling, rejected numbers, and how to link numbers to a campaign from the Vonage API Developer Dashboard. 
-navigation_weight: 4
+navigation_weight: 6
 ---
 
 # Linking numbers to 10 DLC campaigns
