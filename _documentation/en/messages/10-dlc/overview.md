@@ -19,11 +19,11 @@ For more information about preparation including timelines, pricing, and migrati
 
 ## What is 10DLC?
 
-You already learned that 10-Digit Long Code is the new standard for Application-to-Person (A2P) messaging in the United States. But what does that mean? If you are a business that communicates with customers in the United States via phone calls or text messages: 10DLC provides a way to send messages using ten-digit numbers.
+You already learned that 10-Digit Long Code is the new standard for Application-to-Person (A2P) messaging in the United States. But what does that mean? If you are a business that communicates with customers in the United States via phone calls or text messages: 10DLC provides a way to send messages using +1 ten-digit geographic numbers.
 
-Mobile carriers like Verizon created 10DLC to ensure phone calls and messages to customers originate from trusted sources. 
+Mobile carriers like Verizon created 10DLC to ensure messages to customers originate from trusted sources. 
 
-Businesses can register for a 10DLC number to send SMS messages, MMS messages, or make phone calls from a ten-digit number.  
+Businesses can register for a 10DLC number to send SMS messages, MMS messages, or make phone calls from a ten-digit geographic number.  
 
 Under the new A2P 10 DLC regulation, anyone using an A2P (Application to Person) mechanism to send messages (SMS or MMS) is required to go through a registration process via the campaign registry (TCR). The registration process comprises of 4 phases:
 
@@ -38,29 +38,13 @@ You can either [use the Vonage API Developer Dashboard](_documentation/en/messag
 
 10DLC has many advantages. Here are a few of them: 
 
-1. Flexibility: You can text with your business number or a local number to help you communicate with a personal feel.
-2. Send more messages: companies registering 10DLC campaigns can send up to 30 messages per second.
-3. Better deliverability: 10DLC numbers are registered with the carriers, making your messages more likely to reach their recipient.
-
-With all these advantages, it is no wonder so many companies are excited about 10DLC!
-
-## How to Link Your Number Without Any Hiccups
-
-Now that you know about all of the advantages of 10DLC, you may be wondering how you can register. 
-
-Registering a 10DLC number with Vonage to send MMS messages is straightforward.
-
-## 10DLC Campaigns
-
-Some mobile providers, like AT&T and Verizon, require you to [register with The Campaign Registry](https://www.campaignregistry.com/) to use 10DLC to send MMS messages. 
-
-The Campaign Registry calls itself a "reputation authority for business messaging on 10DLC."
-
-The Campaign Registry allows you to register your brand so companies can run their campaigns with the confidence of knowing "they are using an officially sanctioned product for their messaging termination."
+1. **Flexibility:** You can text with your business number or a local number to help you communicate with a personal feel.
+2. **Send more messages:** companies registering 10DLC campaigns can send up to 75 messages per second.
+3. **Better deliverability:** 10DLC numbers are registered with the carriers, making your messages more likely to reach their recipient.
 
 ## What Do I Do if I Have More Than 50 Numbers?
 
-Customers often ask us what to do if they have more than 50 numbers because, with 10DLC, you can link up to 50 numbers to a single campaign. If you have more than 50 numbers, you will need to create a new campaign. 
+Customers often ask us what to do if they have more than 50 numbers because, with 10DLC, you can link up to 50 numbers to a single campaign. If you have more than 50 numbers, you should first evaluate whether or not you have a true business need to support more than 50 numbers. If so, you must submit a special business review application with T-Mobile. See [Linking numbers to 10 DLC campaigns](concepts/linking-numbers.md) to learn more about number pooling.
 
 ## References
 
