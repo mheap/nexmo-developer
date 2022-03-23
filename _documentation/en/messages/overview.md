@@ -9,7 +9,7 @@ navigation_weight: 1
 
 The Messages API allows you to send and in some cases receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp. Further channels may be supported in the future.
 
->> Note: Major US carriers have announced their requirements for a new standard for application-to-person (A2P) messaging in the USA, which applies to all messaging over 10-digit geographic phone numbers, also known as 10 DLC. If you are or are planning to send SMS/MMS traffic from a +1 Country Code 10 Digit Long Code into US networks, you will need to register a brand and campaign in order to get approval for sending messages. See the [10 DLC documentation](10-dlc/overview.md) for details.
+> Note: Major US carriers have announced their requirements for a new standard for application-to-person (A2P) messaging in the USA, which applies to all messaging over 10-digit geographic phone numbers, also known as 10 DLC. If you are or are planning to send SMS/MMS traffic from a +1 Country Code 10 Digit Long Code into US networks, you will need to register a brand and campaign in order to get approval for sending messages. See the [10 DLC documentation](10-dlc/overview.md) for details.
 
 The following diagram illustrates how the Vonage Messages API enables you to send messages via multiple channels from a single endpoint:
 
