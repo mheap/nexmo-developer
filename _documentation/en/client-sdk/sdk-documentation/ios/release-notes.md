@@ -6,6 +6,17 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.2.0  - 2022-03-24
+
+### Added
+
+- Support for `call:transfer` within `NXMCall`
+- `[NXMCallDelegate call:didTransfer:event:]` to receive new call transfer event when call transferred to a new conversation.
+
+### Enhancements
+
+- WebRTC dependency upgraded to version `84.0.22`.
+
 ## 4.1.0  - 2022-02-25
 
 ### Added
