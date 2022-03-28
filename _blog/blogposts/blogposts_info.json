@@ -1,5 +1,40 @@
 [
   {
+    "title": "10 Learnings to Help You Along Your DevRel Career Path",
+    "description": "On March 9th, as part of our celebrations for International Women’s Day, our Developer Relations team at Vonage hosted an online event on DevRel career paths.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/10-learnings-to-help-you-along-your-devrel-career-path/iwd_career-path-1-.jpg",
+    "author": {
+      "team": true,
+      "name": "Myrsini Koukiasa",
+      "image_url": "https://secure.gravatar.com/avatar/39f6fc009167ebe8ec75fe87e947e6cf?s=384&d=mm&r=g",
+      "bio": "Myrsini is a Senior Community Programs Manager at Vonage. She helps the Developer Relations team support, engage and connect with developer communities where they are.",
+      "website_url": "",
+      "linkedin_url": "https://www.linkedin.com/in/myrsinikoukiasa/",
+      "twitter": "Myrsiningos",
+      "short_name": "myrsini"
+    },
+    "published": true,
+    "published_at": "2022-03-25 10:13:12 UTC",
+    "updated_at": "2022-03-24 09:57:38 UTC",
+    "category": {
+      "name": "Event",
+      "plural": "Events",
+      "slug": "event",
+      "color": "#e6ae00"
+    },
+    "tags": [
+      "diversity",
+      "inclusion",
+      "international-womens-day"
+    ],
+    "spotlight": false,
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/03/25/10-learnings-to-help-you-along-your-devrel-career-path",
+    "filename": "10-learnings-to-help-you-along-your-devrel-career-path"
+  },
+  {
     "title": "Zachary Powell Joins the Developer Relations Team",
     "description": "My name is Zachary Powell and i'm excited to announce that I have joined Vonage as the new Sr Android Developer Advocate.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/zachary-powell-joins-the-developer-relations-team/zachary-powell.png",
@@ -1190,7 +1225,7 @@
     "filename": "enable-live-captions-in-vonage-video-using-symbl-ai"
   },
   {
-    "title": "Create a personal Twitch with Vonage Video API and Web Components",
+    "title": "Create a Personal Twitch with Vonage Video API and Web Components",
     "description": "By integrating the Client SDK UI Web Components into the Vonage Video API Broadcast Sample App, the user can live stream themselves along with guests to an audience and interact via text chat.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/create-a-personal-twitch-with-vonage-video-api-and-web-components/personal-twitch.png",
     "author": {
@@ -1206,7 +1241,7 @@
     },
     "published": true,
     "published_at": "2021-12-15 10:24:41 UTC",
-    "updated_at": "2021-12-13 11:41:12 UTC",
+    "updated_at": "2022-03-24 10:33:37 UTC",
     "category": {
       "name": "Inspiration",
       "plural": "Ideas & Inspiration",
@@ -6162,18 +6197,18 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
-    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
-    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
+    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
+    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
     "author": {
+      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
+      "image_url": "/content/images/yuvalgolan.png",
+      "name": "Yuval Golan",
+      "title": "Vonage VP of Quality Assurance",
       "team": true,
-      "name": "Avital Tzubeli",
-      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
-      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
-      "website_url": "",
-      "short_name": "avital-tzubelivonage-com"
+      "short_name": "yuvalgolan"
     },
-    "published": false,
+    "published": true,
     "published_at": "2021-02-17 13:34:35 UTC",
     "updated_at": "2021-02-17 13:34:35 UTC",
     "category": {
@@ -6183,12 +6218,11 @@
       "color": "#669fc4"
     },
     "tags": [
-      "angular",
-      "rxjs"
+      "high-availability"
     ],
     "locale": "en",
-    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
-    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
+    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
+    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
     "title": "Setting up CI/CD with Github Actions",
@@ -6223,18 +6257,18 @@
     "filename": "setting-up-ci-cd-with-github-actions"
   },
   {
-    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
-    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
+    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
+    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
     "author": {
-      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
-      "image_url": "/content/images/yuvalgolan.png",
-      "name": "Yuval Golan",
-      "title": "Vonage VP of Quality Assurance",
       "team": true,
-      "short_name": "yuvalgolan"
+      "name": "Avital Tzubeli",
+      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
+      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
+      "website_url": "",
+      "short_name": "avital-tzubelivonage-com"
     },
-    "published": true,
+    "published": false,
     "published_at": "2021-02-17 13:34:35 UTC",
     "updated_at": "2021-02-17 13:34:35 UTC",
     "category": {
@@ -6244,11 +6278,12 @@
       "color": "#669fc4"
     },
     "tags": [
-      "high-availability"
+      "angular",
+      "rxjs"
     ],
     "locale": "en",
-    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
-    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
+    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
+    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -17043,6 +17078,36 @@
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
   },
   {
+    "title": "使用 Google Cloud Functions 从 Python 发送短信",
+    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
+    "author": {
+      "spotlight": true,
+      "name": "Tom Morris",
+      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
+      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
+      "website_url": "",
+      "short_name": "tom"
+    },
+    "published": true,
+    "published_at": "2019-03-21 20:21:36 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "python",
+      "serverless",
+      "sms-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
+    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
+  },
+  {
     "title": "Sending SMS from Python with Google Cloud Functions",
     "description": "This tutorial shows how to deploy a function on Google Cloud Platform using Python 3.7 and the Vonage SMS API to send a text message to a user.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
@@ -17071,36 +17136,6 @@
     "spotlight": true,
     "locale": "en",
     "link": "blog/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
-    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
-  },
-  {
-    "title": "使用 Google Cloud Functions 从 Python 发送短信",
-    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
-    "author": {
-      "spotlight": true,
-      "name": "Tom Morris",
-      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
-      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
-      "website_url": "",
-      "short_name": "tom"
-    },
-    "published": true,
-    "published_at": "2019-03-21 20:21:36 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "python",
-      "serverless",
-      "sms-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
     "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
   },
   {
