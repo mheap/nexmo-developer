@@ -49,7 +49,7 @@ RSpec.feature 'Community', type: :feature do
       expect(page).to have_content('Drop us an email at community[at]vonage.com')
       expect(page).to have_link('community[at]vonage.com', href: 'mailto:community@vonage.com')
       expect(page).to have_content('Your data will be treated in accordance with our')
-      expect(page).to have_link('Privacy Policy', href: 'https://www.nexmo.com/privacy-policy')
+      expect(page).to have_link('Privacy Policy', href: 'https://www.vonage.com/privacy-policy')
       expect(page).to have_content(', which sets out the rights you have in respect of your data')
 
       expect(page).to have_css('h2', text: '@VonageDev on Twitter')
