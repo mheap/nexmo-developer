@@ -71,12 +71,12 @@ To use the In-App Voice features, add audio permissions using the following proc
 
 #### Runtime Permissions
 
-1. For devices running Android version 6.0 Marshmallow (API level 23) or higher, you should request the `RECORD_AUDIO` permission at runtime:
+- For devices running Android version 6.0 Marshmallow (API level 23) or higher, you should request the `RECORD_AUDIO` permission at runtime:
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/request-23-permissions'
 ``` 
 
-2. For devices running Android version 12 (API level 31) or higher, you should also request the `READ_PHONE_STATE` permission at runtime:
+- For devices running Android version 12 (API level 31) or higher, you should also request the `READ_PHONE_STATE` permission at runtime:
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/request-31-permissions'
 ``` 

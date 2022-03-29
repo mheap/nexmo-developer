@@ -5,7 +5,6 @@ language: java
 
 ```java
 // this is the current activity
-if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, 123);
-}
+String[] callsPermissions = new String[]{Manifest.permission.RECORD_AUDIO, Manifest.permission.READ_PHONE_STATE};
+ActivityCompat.requestPermissions(this, callsPermissions, 123);
 ```
