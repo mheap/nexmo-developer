@@ -38,47 +38,49 @@ It is possible to configure the following three URLs:
 
 This is the Conversation API URL. This is the URL used when the Client SDK calls the API.
 
-The default value is `https://api.nexmo.com/`.
+The default value is `https://api.nexmo.com`.
 
 Data Center | URL
 ---|---
-`WDC` | `https://api-us-1.nexmo.com/`
-`DAL` | `https://api-us-2.nexmo.com/`
-`LON` | `https://api-eu-1.nexmo.com/`
-`AMS` | `https://api-eu-2.nexmo.com/`
-`SNG` | `https://api-sg-1.nexmo.com/`
+`WDC` | `https://api-us-1.nexmo.com`
+`DAL` | `https://api-us-2.nexmo.com`
+`LON` | `https://api-eu-1.nexmo.com`
+`AMS` | `https://api-eu-2.nexmo.com`
+`SNG` | `https://api-sg-1.nexmo.com`
 
 ### `url`
 
 This is the websocket URL: the URL that receives realtime events.
 
-The default value is `wss://ws.nexmo.com/`.
+The default value is `wss://ws.nexmo.com`.
 
 Data Center | URL
 ---|---
-`WDC` | `wss://ws-us-1.nexmo.com/`
-`DAL` | `wss://ws-us-2.nexmo.com/`
-`LON` | `wss://ws-eu-1.nexmo.com/`
-`AMS` | `wss://ws-eu-2.nexmo.com/`
-`SNG` | `wss://ws-sg-1.nexmo.com/`
+`WDC` | `wss://ws-us-1.nexmo.com`
+`DAL` | `wss://ws-us-2.nexmo.com`
+`LON` | `wss://ws-eu-1.nexmo.com`
+`AMS` | `wss://ws-eu-2.nexmo.com`
+`SNG` | `wss://ws-sg-1.nexmo.com`
 
 ### `ips_url`
 
 This is the IPS URL for image upload. This is the internal service used to store images being sent via in-app messages.
 
-The default value is `https://api.nexmo.com/v1/image/`.
+The default value is `https://api.nexmo.com/v1/image`.
 
 Data Center | URL
 ---|---
-`WDC` | `https://api-us-1.nexmo.com/v1/image/`
-`DAL` | `https://api-us-2.nexmo.com/v1/image/`
-`LON` | `https://api-eu-1.nexmo.com/v1/image/`
-`AMS` | `https://api-eu-2.nexmo.com/v1/image/`
-`SNG` | `https://api-sg-1.nexmo.com/v1/image/`
+`WDC` | `https://api-us-1.nexmo.com/v1/image`
+`DAL` | `https://api-us-2.nexmo.com/v1/image`
+`LON` | `https://api-eu-1.nexmo.com/v1/image`
+`AMS` | `https://api-eu-2.nexmo.com/v1/image`
+`SNG` | `https://api-sg-1.nexmo.com/v1/image`
 
 ## Configuration
 
 You can specify your preferred URLs when you create the Client SDK `NexmoClient` object:
+
+> **Note**: The iOS SDK expects a trailing `/` as shown in the code snippets below.
 
 ```tabbed_content
 source: '/_examples/client-sdk/dc-config'
