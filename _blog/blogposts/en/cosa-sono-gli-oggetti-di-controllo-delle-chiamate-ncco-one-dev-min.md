@@ -1,4 +1,3 @@
-
 ---
 title: Cosa Sono Gli Oggetti di Controllo delle Chiamate (NCCO) | One Dev Min
 description: Benvenuti a One Dev Minute! L'obiettivo di questa serie di video è
