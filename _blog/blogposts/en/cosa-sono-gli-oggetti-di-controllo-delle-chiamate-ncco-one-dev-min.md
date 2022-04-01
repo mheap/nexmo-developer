@@ -1,7 +1,7 @@
 
 ---
-title: Cosa sono gli oggetti di controllo delle chiamate (NCCO) | One Dev Min
-description: Benvenuti a One Dev Minute ! L'obiettivo di questa serie di video è
+title: Cosa Sono Gli Oggetti di Controllo delle Chiamate (NCCO) | One Dev Min
+description: Benvenuti a One Dev Minute! L'obiettivo di questa serie di video è
   condividere informazioni in un formato velocemente consumabile.
 thumbnail: /content/blog/cosa-sono-gli-oggetti-di-controllo-delle-chiamate-ncco-one-dev-min/ncco.png
 author: amanda-cavallaro
@@ -20,7 +20,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-Benvenuti a [One Dev Minute](https://www.youtube.com/playlist?list=PLWYngsniPr_mwb65DDl3Kr6xeh6l7_pVY) ! L'obiettivo di questa serie di video è condividere informazioni in un formato velocemente consumabile. Puoi seguirla sul [canale YouTube di Vonage Dev](https://www.youtube.com/vonagedev).
+Benvenuti a [One Dev Minute](https://www.youtube.com/playlist?list=PLWYngsniPr_mwb65DDl3Kr6xeh6l7_pVY)! L'obiettivo di questa serie di video è condividere informazioni in un formato velocemente consumabile. Puoi seguirla sul [canale YouTube di Vonage Dev](https://www.youtube.com/vonagedev).
 
 In questo video, Amanda Cavallaro, la nostra Developer Advocate, vi parlerà dei Call Control Objects, che sono un insieme di azioni che istruiscono la piattaforma di Vonage su come controllare una chiamata alla tua applicazione Vonage. Ad esempio, puoi connettere una chiamata, inviare un messaggio sintetizzato, audio in streaming o registrare una chiamata.
 

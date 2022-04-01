@@ -130,8 +130,8 @@
     "filename": "zachary-powell-joins-the-developer-relations-team"
   },
   {
-    "title": "Cosa sono gli oggetti di controllo delle chiamate (NCCO) | One Dev Min",
-    "description": "Benvenuti a One Dev Minute ! L'obiettivo di questa serie di video è condividere informazioni in un formato velocemente consumabile.",
+    "title": "Cosa Sono Gli Oggetti di Controllo delle Chiamate (NCCO) | One Dev Min",
+    "description": "Benvenuti a One Dev Minute! L'obiettivo di questa serie di video è condividere informazioni in un formato velocemente consumabile.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/cosa-sono-gli-oggetti-di-controllo-delle-chiamate-ncco-one-dev-min/ncco.png",
     "author": {
       "twitch_url": "https://www.twitch.tv/amdcavallaro",
@@ -169,8 +169,8 @@
     "spotlight": false,
     "outdated": false,
     "replacement_url": "",
-    "locale": "it",
-    "link": "blog/it/22/03/21/cosa-sono-gli-oggetti-di-controllo-delle-chiamate-ncco-one-dev-min",
+    "locale": "en",
+    "link": "blog/22/03/21/cosa-sono-gli-oggetti-di-controllo-delle-chiamate-ncco-one-dev-min",
     "filename": "cosa-sono-gli-oggetti-di-controllo-delle-chiamate-ncco-one-dev-min"
   },
   {
@@ -17192,6 +17192,36 @@
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
   },
   {
+    "title": "使用 Google Cloud Functions 从 Python 发送短信",
+    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
+    "author": {
+      "spotlight": true,
+      "name": "Tom Morris",
+      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
+      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
+      "website_url": "",
+      "short_name": "tom"
+    },
+    "published": true,
+    "published_at": "2019-03-21 20:21:36 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "python",
+      "serverless",
+      "sms-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
+    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
+  },
+  {
     "title": "Sending SMS from Python with Google Cloud Functions",
     "description": "This tutorial shows how to deploy a function on Google Cloud Platform using Python 3.7 and the Vonage SMS API to send a text message to a user.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
@@ -17220,36 +17250,6 @@
     "spotlight": true,
     "locale": "en",
     "link": "blog/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
-    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
-  },
-  {
-    "title": "使用 Google Cloud Functions 从 Python 发送短信",
-    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
-    "author": {
-      "spotlight": true,
-      "name": "Tom Morris",
-      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
-      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
-      "website_url": "",
-      "short_name": "tom"
-    },
-    "published": true,
-    "published_at": "2019-03-21 20:21:36 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "python",
-      "serverless",
-      "sms-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
     "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
   },
   {
