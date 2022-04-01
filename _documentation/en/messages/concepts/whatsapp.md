@@ -64,7 +64,7 @@ For a number to be hosted on WhatsApp servers, customers must create a WhatsApp 
 
 **Transferring existing numbers**
 
-Although it isn't currently possible to transfer already provisioned numbers between the two hosting solutions, we will soon provide a service to move numbers hosted on Vonage servers (using WhatsApp's On-premises solution) to WhatsApp’s Cloud hosting and vice versa.
+Although it isn't currently possible to transfer already provisioned numbers between the two hosting solutions, we will soon provide a service to move numbers hosted on Vonage servers (using WhatsApp's On-premises solution) to WhatsApp’s Cloud hosting, and vice versa.
 
 ## WhatsApp message types
 
