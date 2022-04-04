@@ -6,6 +6,13 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.3 - Apr 4, 2022
+
+### Fixed
+
+- Added check to ensure user logged in during setup of prewarm outbound call.
+- Changed timestamp default to UTC without time zone.
+
 ## 4.0.2 - Mar 9, 2022
 
 ### Enhancements
