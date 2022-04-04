@@ -19,9 +19,9 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-### March 2022 Update: Tripling interactive participants to 15,000, introducing Experience Composer and LL-HLS.
+*March 2022 Update: Tripling interactive participants to 15,000, introducing Experience Composer and LL-HLS.*
 
-### Vonage multiparty video reaches ~~5,000~~ – now 15,000 – live interactive participants, improving interactive broadcast quality, layouts and recording
+Vonage multiparty video reaches ~~5,000~~ – now 15,000 – live interactive participants, improving interactive broadcast quality, layouts and recording
 
 We continue to work hard on improving interactive broadcasts with even more participant streams (now with up to 15,000 REAL TIME participants!), a brand new Experience Composer, low-latency live streaming, full HD broadcasts, as well as improvements to on-screen layouts and overall video quality of interactive broadcasts and recordings.
 
