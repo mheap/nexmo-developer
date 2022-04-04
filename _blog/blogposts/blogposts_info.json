@@ -1,5 +1,43 @@
 [
   {
+    "title": "Startup Spotlight Series: Let's meet Gigli",
+    "description": "Meet Ontario-based startup Gigli as a part of Vonage Startup Spotlight series.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/startup-spotlight-series-lets-meet-gigli/vonage-startup_gigli.png",
+    "author": {
+      "bio": "Filippos is running our Startup program at Vonage. He is passionate about all things innovation, startups and positive social impact.",
+      "hidden": false,
+      "image_url": "/content/images/t02nnhd8s-u01bfpcfu6m-60e718bd0e6e-512.png",
+      "name": "Filippos Kyprianou",
+      "linkedin_url": "https://www.linkedin.com/in/filipposkyprianou/",
+      "twitter": "FilipposKyp",
+      "spotlight": false,
+      "title": "Vonage for Startups",
+      "email": "Filippos.Kyprianou@vonage.com",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "filippos-kyprianou"
+    },
+    "published": true,
+    "published_at": "2022-04-04 15:32:10 UTC",
+    "updated_at": "2022-04-04 15:32:10 UTC",
+    "category": {
+      "name": "Startup",
+      "plural": "Startups",
+      "slug": "startup",
+      "color": "#fa7454"
+    },
+    "tags": [
+      "startups"
+    ],
+    "spotlight": false,
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/04/04/startup-spotlight-series-lets-meet-gigli",
+    "filename": "startup-spotlight-series-lets-meet-gigli"
+  },
+  {
     "title": "Introducing the Meetings API",
     "description": "The quickest path to a video meeting that Vonage has to offer",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-the-meetings-api/intro-to-meetings-api.png",
