@@ -57,21 +57,28 @@ To use the In-App Voice features, add audio permissions using the following proc
 ![](/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
 
 
-    ```xml
-    <manifest ...>
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-        <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-        <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    </manifest>
-    ```
+```xml
+<manifest ...>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+</manifest>
+```
 
-2. For devices running Android version M (API level 23) or higher, you should request for the `RECORD_AUDIO` permission at runtime:
+#### Runtime Permissions
 
- ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/request-permissions'
+- For devices running Android version 6.0 Marshmallow (API level 23) or higher, you should request the `RECORD_AUDIO` permission at runtime:
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/request-23-permissions'
+``` 
+
+- For devices running Android version 12 (API level 31) or higher, you should also request the `READ_PHONE_STATE` permission at runtime:
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/add-sdk/android/request-31-permissions'
 ``` 
 
 Read more about requesting runtime permissions on Android [here](https://developer.android.com/training/permissions/requesting). 
