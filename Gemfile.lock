@@ -225,7 +225,7 @@ GEM
       activesupport (>= 4)
       railties (>= 4)
       request_store (~> 1.0)
-    loofah (2.15.0)
+    loofah (2.16.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -242,7 +242,7 @@ GEM
     mini_mime (1.1.2)
     mini_portile2 (2.5.3)
     minitest (5.15.0)
-    msgpack (1.4.5)
+    msgpack (1.5.0)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
@@ -291,9 +291,9 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     oj (3.13.11)
     orm_adapter (0.5.0)
-    pg (1.3.4)
+    pg (1.3.5)
     public_suffix (4.0.6)
-    puma (5.6.2)
+    puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
@@ -413,7 +413,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    station (0.1.7)
+    station (0.2.0)
       activeadmin (~> 2.7)
       activesupport (~> 6.0)
       algoliasearch (= 1.27.5)
@@ -503,7 +503,7 @@ DEPENDENCIES
   factory_bot
   rack-test
   rspec
-  station (= 0.1.7)
+  station (= 0.2.0)
 
 BUNDLED WITH
    2.2.31
