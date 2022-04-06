@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.2.1  - 2022-04-06
+
+### Fixed
+
+- `[NXMClient uploadAttachmentWithType:name:data:completionHandler:]` method to upload attachments returns with image data
+
 ## 4.2.0  - 2022-03-24
 
 ### Added
