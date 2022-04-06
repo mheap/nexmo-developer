@@ -3,7 +3,7 @@ title: Sina Madani Joins the Developer Relations Team
 description: Sina Madani is thrilled to join Vonage as a Java Developer Advocate!
 thumbnail: /content/blog/sina-madani-joins-the-developer-relations-team/sina-madani.png
 author: sina-madani
-published: false
+published: true
 published_at: 2022-04-06T15:32:10.371Z
 updated_at: 2022-04-06T15:32:10.371Z
 category: team
