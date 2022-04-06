@@ -21,6 +21,9 @@ private NexmoMessageEventListener messageListener = new NexmoMessageEventListene
 
         //Download the image using one of open-source libraries: Coil, Picasso, Glide, etc.
     }
+	
+	@Override
+	public void onMessageEvent(@NonNull NexmoMessageEvent messageEvent) {}
 
     @Override
     public void onEventDeleted(@NonNull NexmoDeletedEvent deletedEvent) {}

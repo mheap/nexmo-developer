@@ -9,7 +9,7 @@ conversation.sendAttachment(imageFile, object : NexmoRequestListener<Void> {
         Log.d("TAG", "Image sent")
     }
 
-    override fun onError(apiError: NexmoApiError) {
+    override fun onError(apiError: CoreConversationApiError) {
         Log.d("TAG", "Error: Image not sent ${apiError.message}")
     }
 })

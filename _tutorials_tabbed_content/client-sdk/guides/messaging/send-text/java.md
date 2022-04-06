@@ -9,7 +9,7 @@ conversation.sendText(message, new NexmoRequestListener<Void>() {
         Log.d("TAG", "Message sent");
     }
 
-    public void onError(@NotNull NexmoApiError apiError) {
+    public void onError(@NotNull CoreConversationApiError apiError) {
         Log.d("TAG", "Error: Message not sent " + apiError.getMessage());
     }
 });

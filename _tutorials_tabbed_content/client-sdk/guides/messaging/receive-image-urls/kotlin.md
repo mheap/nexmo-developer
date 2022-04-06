@@ -21,6 +21,8 @@ private val messageListener = object : NexmoMessageEventListener {
     }
 
     override fun onTextEvent(textEvent: NexmoTextEvent) {}
+	
+	override fun onMessageEvent(messageEvent: NexmoMessageEvent) {}
 
     override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {}
 

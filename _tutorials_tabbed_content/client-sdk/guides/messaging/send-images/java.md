@@ -9,7 +9,7 @@ conversation.sendAttachment(imageFile, new NexmoRequestListener<Void>() {
         Log.d("TAG", "Image sent");
     }
 
-    public void onError(@NotNull NexmoApiError apiError) {
+    public void onError(@NotNull CoreConversationApiError apiError) {
         Log.d("TAG", "Error: Image not sent " + apiError.getMessage());
     }
 });
