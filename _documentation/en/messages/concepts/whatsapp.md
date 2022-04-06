@@ -42,6 +42,30 @@ For more information on Vonage WhatsApp pricing, see the [Messages API pricing](
 
 > **IMPORTANT**: Existing customers will by default remain on their current pricing model by default at the current per message pricing, with the option to move to the new conversation based pricing model.
 
+## WhatsApp Number Hosting
+
+We have two ways of managing WhatsApp numbers. We can either host your number on our servers using **WhatsApp’s On-premises** solution, or handle it directly in **WhatsApp’s Cloud** solution.
+
+In the majority of cases, you will receive the same service, as Vonage takes care of the delivery of messages to and from your business. There are, however, some slight differences to be aware of.
+
+| | WhatsApp Hosting | Vonage Hosting |
+|---|---|---|
+| Message Throughput | Auto-scales to around 80 messages per second | Around 20 messages per second by default, and this can be scaled on request |
+| Encryption | Messages are sent securely to WhatsApp’s service where they are decrypted before being passed through the WhatsApp networks securely using the Signal protocol to end users | Messages are end-to-end encrypted between Vonage and end users using the signal protocol |
+| Feature differences | WhatsApp’s hosting does not currently support stickers or product messages. (These are expected to be available by the second half of 2022) | Stickers or product messages are supported |
+
+**Which Option Should You Choose?**
+
+Unless you specifically need the stickers and product messages features, for new customers setting up their WhatsApp account directly through the [Vonage dashboard](https://dashboard.nexmo.com/), we recommend using WhatsApp’s hosting as we can get your number ready instantly.
+
+**How to enable WhatsApp’s number hosting**
+
+For a number to be hosted on WhatsApp servers, customers must create a WhatsApp Business Account using [Vonage Dashboard External Accounts](https://dashboard.nexmo.com/messages/social-channels). When your WhatsApp number is provisioned there will be an option to use WhatsApp hosting.
+
+**Transferring existing numbers**
+
+Although it isn't currently possible to transfer already provisioned numbers between the two hosting solutions, we will soon provide a service to move numbers hosted on Vonage servers (using WhatsApp's On-premises solution) to WhatsApp’s Cloud hosting, and vice versa.
+
 ## WhatsApp message types
 
 There are a number of different WhatsApp message types:

@@ -81,8 +81,9 @@ current:
   - name: "Max Kahan"
     email: "Max.Kahan@vonage.com"
     role: "Python Developer Advocate"
-
-
-
+  - name: "Sina Madani"
+    email: "Sina.Madani@vonage.com"
+    role: "Java Developer Advocate"
+    twitter: "madani_sina"
 
 
