@@ -242,7 +242,7 @@ GEM
     mini_mime (1.1.2)
     mini_portile2 (2.5.3)
     minitest (5.15.0)
-    msgpack (1.5.0)
+    msgpack (1.5.1)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
@@ -413,7 +413,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    station (0.2.0)
+    station (0.2.1)
       activeadmin (~> 2.7)
       activesupport (~> 6.0)
       algoliasearch (= 1.27.5)
@@ -503,7 +503,7 @@ DEPENDENCIES
   factory_bot
   rack-test
   rspec
-  station (= 0.2.0)
+  station (= 0.2.1)
 
 BUNDLED WITH
    2.2.31
