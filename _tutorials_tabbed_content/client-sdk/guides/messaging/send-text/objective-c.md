@@ -5,7 +5,8 @@ menu_weight: 2
 ---
 
 ```objective_c
-[conversation sendText:message completionHandler:^(NSError * _Nullable error) {
+NXMessage *message = [[NXMMessage alloc] initWithText:@""];
+[conversation sendMessage:message completionHandler:^(NSError * _Nullable error) {
     ...
 }];
 ```

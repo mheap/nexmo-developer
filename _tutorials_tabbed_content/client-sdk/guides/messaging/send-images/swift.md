@@ -8,14 +8,18 @@ menu_weight: 1
 let image = UIImage(named: "file.png")
 guard let imageData = image?.pngData() else { return }
 
-conversation.sendAttachment(with: NXMAttachmentType.image,
-                            name: "File name",
-                            data: imageData,
-                            completionHandler: { (error) in
+client.uploadAttachment(with: .image, name: "File name", data: imageData) { error, data in
     if let error = error {
-        NSLog("Error sending image: \(error.localizedDescription)")
+        print("Error sending image: \(error.localizedDescription)")
         return
     }
-    NSLog("Image sent")
-})
+    
+    if let imageObject = data?["original"] as? [String: Any],
+        let imageUrl = imageObject["url"] as? String {
+        let imageMessage = NXMMessage(imageUrl: imageUrl)
+        conversation.sendMessage(imageMessage, completionHandler: { [weak self] (error) in
+            ...
+        })
+    }
+}
 ```

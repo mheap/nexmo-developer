@@ -4,7 +4,7 @@ language: objective_c
 menu_weight: 2
 ---
 
-Have a `ViewController`, or similar, conform to `NXMConversationDelegate` and implement `conversation:didReceiveTextEvent:`:
+Have a `ViewController`, or similar, conform to `NXMConversationDelegate` and implement `conversation:didReceiveMessageEvent:`:
 
 > Note: The first method below is required when implementing `NXMConversationDelegate`:
 
@@ -12,7 +12,7 @@ Have a `ViewController`, or similar, conform to `NXMConversationDelegate` and im
 - (void)conversation:(NXMConversation *)conversation didReceive:(NSError *)error {
     NSLog(@"Conversation error: %@", error.localizedDescription);
 }
-- (void)conversation:(NXMConversation *)conversation didReceiveTextEvent:(NXMTextEvent *)event {
-    NSLog(@"Received text event: %@", event.text);
+- (void)conversation:(NXMConversation *)conversation didReceiveMessageEvent:(NXMMessageEvent *)event {
+    NSLog(@"Received message event: %@", event.text);
 }
 ```

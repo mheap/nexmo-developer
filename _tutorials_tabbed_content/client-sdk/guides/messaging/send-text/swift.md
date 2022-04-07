@@ -5,7 +5,8 @@ menu_weight: 1
 ---
 
 ```swift
-conversation.sendText(message, completionHandler: { [weak self] (error) in
+let message = NXMMessage(text: "")
+conversation.sendMessage(message, completionHandler: { [weak self] (error) in
    ...
 })
 ```
