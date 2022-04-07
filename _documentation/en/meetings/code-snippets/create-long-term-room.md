@@ -40,24 +40,25 @@ Field | Required? | Description |
 
 ## Request
 
-You can use the example code below to create a long term room which expires on October 21st 2022 and will be automatically recorded:
+You can use the example code below to create a long term room which expires on October 21st 2022 and will be automatically recorded. This room will also receive an "Orange" theme, which you can learn more about [here](/_documentation/en/meetings/code-snippets/theme-management.md).
 
 ``` curl
 curl -X POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
 -H 'Authorization: Bearer XXXXX' \
 -H 'Content-Type: application/json' \
 -d '{
-   "display_name":"New Meeting Room",
-   "type":"long_term",
-   "expires_at":"2022-10-21T18:45:50.901Z", 
-   "recording_options": {
-       "auto_record": true}
+    "display_name":"New Meeting Room",
+    "type":"long_term",
+    "expires_at":"2022-10-21T18:45:50.901Z", 
+    "recording_options": {
+        "auto_record": true}, 
+    "theme_id": "e8b1d80b-8f78-4578-94f2-328596e01387"
 }'
 ```
 
 ## Response
 
-You will receive a request similar to the following:
+You will receive a response similar to the following:
 
 ``` json
 {
@@ -78,9 +79,13 @@ You will receive a request similar to the following:
             "href": "https://meetings.vonage.com/117744699"
         }
     },
-    "created_at": "2021-10-19T18:22:24.965Z",
-    "is_available": true
+    "created_at": "2022-10-19T18:22:24.965Z",
+    "is_available": true,
+    "expire_after_use": false,
+    "theme_id": "e8b1d80b-8f78-4578-94f2-328596e01387",
+    "initial_join_options": {
+        "microphone_state": "default"
 }
 ```
 
-> Your Long Term Room has been created. Note the ``ID`` if you are going to further configure this room.
+> Your Long Term Room has been created. It expires on October 19th, 2022, has a theme called "Orange", and will begin recording automatically. Note the ``ID`` if you are going to further configure this room.

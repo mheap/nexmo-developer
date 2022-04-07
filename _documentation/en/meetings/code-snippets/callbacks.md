@@ -55,3 +55,15 @@ Name | Description |
     "is_host": true
 }
 ```
+
+```json
+{
+    "event": "session:participant:joined",
+    "participant_id": "b424e1c4-e988-4ce2-8ab9-e3efea7de542",
+    "session_id": "2_MX40NjMzOTg5Mn5-MTYzNTg2ODQwODY4NH41cXIzMDdSa1BZa05BUDFpYnhxcTV4MCt-fg",
+    "room_id": "b307d837-c0ce-4619-8c5c-70e418ef9693",
+    "name": "New Joiner",
+    "type": "Guest",
+    "is_host": true
+}
+```
