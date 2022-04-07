@@ -6,22 +6,17 @@ language: kotlin
 ```kotlin
 private val messageListener = object : NexmoMessageEventListener {
     override fun onTypingEvent(typingEvent: NexmoTypingEvent) {}
+	
+	override fun onMessageEvent(messageEvent: NexmoMessageEvent) {
+    	val userName = messageEvent.embeddedInfo.user.name
+		val imageURL = messageEvent.message.imageUrl
+		Log.d("TAG", "Message received. User $userName : $imageURL")
+	}
 
-    override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {
-        val userName = attachmentEvent.getEmbeddedInfo.user.name
-
-        Log.d("TAG", "Image event received. User $userName")
-
-        // Event contains URL's for multiple sizes of images
-        attachmentEvent.original.url
-        attachmentEvent.medium.url
-        attachmentEvent.thumbnail.url
-
-        //Download the image using one of open-source libraries: Coil, Picasso, Glide, etc.
-    }
+    override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {}
 
     override fun onTextEvent(textEvent: NexmoTextEvent) {}
-
+	
     override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {}
 
     override fun onEventDeleted(deletedEvent: NexmoDeletedEvent) {}

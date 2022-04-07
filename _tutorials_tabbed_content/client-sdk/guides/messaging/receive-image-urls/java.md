@@ -7,20 +7,17 @@ language: java
 private NexmoMessageEventListener messageListener = new NexmoMessageEventListener() {
     @Override
     public void onTextEvent(@NonNull NexmoTextEvent textEvent) {}
+	
+	@Override
+	public void onMessageEvent(@NonNull NexmoMessageEvent messageEvent) {
+		String userName = messageEvent.getEmbeddedInfo().getUser().getName();
+		String imageURL = messageEvent.getMessage().getImageUrl();
+
+	    Log.d("TAG", "Message received. User " + userName + " : " + imageURL);
+    }
 
     @Override
-    public void onAttachmentEvent(@NonNull NexmoAttachmentEvent attachmentEvent) {
-        String userName = attachmentEvent.getEmbeddedInfo().getUser().getName();
-
-        Log.d("TAG", "Image event received. User " +  userName);
-
-        // Event contains URL's for multiple sizes of images
-        attachmentEvent.getOriginal().getUrl();
-        attachmentEvent.getMedium().getUrl();
-        attachmentEvent.getThumbnail().getUrl();
-
-        //Download the image using one of open-source libraries: Coil, Picasso, Glide, etc.
-    }
+    public void onAttachmentEvent(@NonNull NexmoAttachmentEvent attachmentEvent) {}
 
     @Override
     public void onEventDeleted(@NonNull NexmoDeletedEvent deletedEvent) {}

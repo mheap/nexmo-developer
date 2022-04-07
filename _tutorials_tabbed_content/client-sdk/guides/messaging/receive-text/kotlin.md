@@ -9,12 +9,12 @@ private val messageListener = object : NexmoMessageEventListener {
 
     override fun onAttachmentEvent(attachmentEvent: NexmoAttachmentEvent) {}
 
-    override fun onTextEvent(textEvent: NexmoTextEvent) {
-        val userName = textEvent.getEmbeddedInfo.user.name
-        val text = textEvent.text
+	override fun onMessageEvent(messageEvent: NexmoMessageEvent) {
+    	val userName = messageEvent.embeddedInfo.user.name
+    	val text = messageEvent.message.text
 
-        Log.d("TAG", "Message received. User $userName : $text")
-    }
+		Log.d("TAG", "Message received. User $userName : $text")
+	}
 
     override fun onSeenReceipt(seenEvent: NexmoSeenEvent) {}
 

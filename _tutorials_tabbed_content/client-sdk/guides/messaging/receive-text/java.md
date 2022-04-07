@@ -6,12 +6,12 @@ language: java
 ```java
 NexmoMessageEventListener messageListener = new NexmoMessageEventListener() {
 
-    @Override
-    public void onTextEvent(@NonNull NexmoTextEvent textEvent) {
-        String userName = textEvent.getEmbeddedInfo().getUser().getName();
-        String text = textEvent.getText();
+	@Override
+    public void onMessageEvent(@NonNull NexmoMessageEvent messageEvent) {
+		String userName = messageEvent.getEmbeddedInfo().getUser().getName();
+		String text = messageEvent.getMessage().getText();
 
-        Log.d("TAG", "Message received. User " + userName + " : " + text);
+		Log.d("TAG", "Message received. User " + userName + " : " + text);
     }
 
     @Override
