@@ -19,17 +19,19 @@ outdated: false
 replacement_url: ""
 ---
 Hi, I'm Sina and I'm delighted to have joined the Vonage Developer Relations team!
-I will be focused on maintaing the Java SDKs and engaging with the Java developer community.
+I will be focused on maintaining the Java SDKs and engaging with the Java developer community.
 
 I've always been interested in computers from a young age, but it wasn't until
 I discovered Java during my undergraduate degree (studying Economics at Lancaster University)
 that I realised programming and a career in technology is my calling.
+
 As a mostly self-taught engineer, I became intrigued by conference talks
 about software on YouTube and started working on side projects. This then lead to me
 pursuing an MSc in Software Engineering at the University of York, where after a successful
 dissertation project, I ended up doing a PhD in the same area (Model-Driven Engineering) with my supervisor.
 During this time, I contributed extensively to the open-source [Eclipse Epsilon](https://eclipse.org/epsilon) project in
 all aspects: bug fixes, new features, improving code quality, documentation, release engineering, installation etc.
+
 I travelled to various international conferences over the years to present my research, which was essentially about
 adding parallel and distributed execution support to a bespoke interpreted language to improve performance
 whilst transparently supporting all its features.
