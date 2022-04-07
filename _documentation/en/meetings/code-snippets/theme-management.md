@@ -84,9 +84,7 @@ Note that only required parameters were set on the room. All null values can be 
 
 ## Add a Theme to a Room 
 
-A theme can be applied to a **Long Term room** upon room creation or update. 
-
-To apply the theme at room update, you'll need the `theme_ID` and `room_ID`: 
+A theme can be applied to a **Long Term room** upon room creation or update. To apply the theme at room update, you'll need the `theme_ID` and `room_ID`: 
 
 ```
 curl --location --request PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/{ROOM_ID}' \
@@ -99,7 +97,7 @@ curl --location --request PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/{
 }   
 ```
 
-Check out [creating a room with a theme]() to see how it looks in creation. 
+Check out [creating a long term room](/_documentation/en/meetings/code-snippets/create-long-term-room.md) to see how it looks in creation. 
 
 ## Set Theme as Default
 
@@ -125,4 +123,42 @@ curl --location --request PATCH 'https://api-eu.vonage.com/beta/meetings/applica
     "application_id":"3db604ce-b4c0-48f4-8b82-4a03ac9f6bk7",
     "account_id":"69b2a6d2",
     "default_theme_id":"e8b1d80b-8f78-4578-94f2-328596e01387"}
+```
+
+## Delete a Theme 
+
+To delete a theme, use a DELETE and the theme ID. However, a theme that is currently in use by any room cannot be deleted, and will result in an error that says: 
+`"Theme XXX is used by n rooms"`. 
+In order to delete a theme that is in use, you must remove it from each room that is using it by finding all rooms using that theme and removing the theme. 
+
+## Get All Rooms with Given Theme
+
+Sometimes you might want to know which rooms are using a particular theme. For example, before deleting a theme, it must be removed from all rooms which are using it. To retrieve a list of these rooms, you need the theme ID. 
+
+### Request 
+
+```
+curl --location --request GET 'https://api-eu.vonage.com/beta/meetings/themes/{THEME_ID}/rooms' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer XXXXX' \
+--data-raw ''
+```
+
+This will return a list of all rooms using this theme. 
+
+## Remove Theme From Room 
+
+In order to remove a theme from a room, update the room using a PATCH and the room ID, and pass `null` as the theme ID in `update_details`. Please note that only long_term rooms can be updated. 
+
+### Request 
+
+```
+curl --location --request PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/{ROOM_ID}' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer XXXXX' \
+--data-raw '{
+    "update_details": {
+        "theme_id": null
+        }   
+}'
 ```
