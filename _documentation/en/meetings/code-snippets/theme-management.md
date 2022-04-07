@@ -36,7 +36,7 @@ Field | Required? | Description |
 ``them_name`` | Yes | The name of the theme (must be unique). 
 ``brand_text`` | Yes | The text that will appear on the meeting homepage.
 ``main_color``| Yes | The main color that will be used for the meeting room.
-``short_company_url`` | No | The url that will represent the company's meeting room homepage (must be unique).
+``short_company_url`` | No | The URL that will represent the company's meeting room homepage (must be unique).
 ``brand_image_colored`` | No | The brand image to be used in the welcome page and on a dark background
 ``brand_image_white`` | No | The brand image to be used in on a white background
 ``branded_favicon`` | No | The favicon that will appear in the browser tab 
@@ -148,7 +148,7 @@ This will return a list of all rooms using this theme.
 
 ## Remove Theme From Room 
 
-In order to remove a theme from a room, update the room using a PATCH and the room ID, and pass `null` as the theme ID in `update_details`. Please note that only long_term rooms can be updated. 
+In order to remove a theme from a room, update the room using a PATCH and the room ID, and pass `null` as the theme ID in `update_details`. Please note that only long term rooms can be updated. 
 
 ### Request 
 
