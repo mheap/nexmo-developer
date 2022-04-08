@@ -1,12 +1,36 @@
 ---
-version: '4.3.1'
-release: '14 Set 2022'
+version: '1.1.2'
+release: '25 Feb 2022'
 ---
 # Vonage CLI
 
 You use the Vonage Command Line Interface (CLI) to manage your Vonage account and use Vonage API products from the command line.
-## Subtitle
 
-``` ruby
-ciao = Array.new()
-```
+## 1.1.2
+### 25 Feb 2022
+
+- fix: Args not found bug
+- fix(jwt): default A to full permissions
+- fix(sms): -h was throwing an error
+
+Full Changelog: https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.2
+
+## 1.1.1
+### 22 Feb 2022
+
+- chore(utils): Fix build issue with OutputArgs by @kellyjandrews in #47
+- fix(conversations): Correct conversations output and add tests by @kellyjandrews in #46
+- fix(applications): Add req'd inputs and fix usage by @kellyjandrews in #48
+- feat(sms): Add SMS plugin by @kellyjandrews in #49
+
+Full Changelog: https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.1
+
+## 1.1.0
+### 12 Jan 2022
+
+This update includes a new command, `numbers:update`.
+
+Currently allows updates of the inbound SMS url.
+Use `vonage numbers:update -h` for details on usage.
+
+This also includes new testing harness and various bug fixes.
