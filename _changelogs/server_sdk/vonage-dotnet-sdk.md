@@ -1,12 +1,26 @@
 ---
-version: '4.3.1'
-release: '14 Set 2022'
+version: '5.9.5'
+release: '19 Jan 2022'
 ---
-# Vonage dotnet Complete Package
+# Vonage NET complete package
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis impedit voluptates maiores. Sequi consequatur facere error atque, est doloremque neque? Dolores porro quis, tempora sed omnis ipsum molestias amet officia!
-## Subtitle
+---
 
-``` ruby
-ciao = Array.new()
-```
+## 5.9.5
+### 19 Jan 2022
+
+- NCCO Input "Type" property added to align with documentation
+
+---
+
+## 5.9.3
+### 23 Nov 2021
+
+- Fixing an issue caused by the usage of a non thread safe Dictionary.
+
+---
+
+## 5.9.2
+### 4 Nov 2021
+
+- Fixing issue with Advance Number Insights throwing an exception when status = `not_roaming`

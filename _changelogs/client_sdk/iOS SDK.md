@@ -1,11 +1,37 @@
 ---
-version: '4.3.1'
-release: '14 Set 2022'
+version: '4.2.1'
+release: '6 Apr 2022'
 ---
 # iOS SDK
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis impedit voluptates maiores. Sequi consequatur facere error atque, est doloremque neque? Dolores porro quis, tempora sed omnis ipsum molestias amet officia!
-## Subtitle
 
-``` ruby
-ciao = Array.new()
-```
+---
+
+## 4.2.1
+### 6 Apr 2022
+
+*Fixed*
+
+- `[NXMClient uploadAttachmentWithType:name:data:completionHandler:]` method to upload attachments returns with image data
+
+---
+
+## 4.2.0
+### 24 Mar 2022
+
+*Added*
+
+- Support for `call:transfer` within NXMCall
+- `[NXMCallDelegate call:didTransfer:event:]` to receive new call transfer event when call transferred to a new conversation.
+
+*Enhancements*
+
+- WebRTC dependency upgraded to version 84.0.22.
+
+---
+
+## 4.1.0
+### 25 Feb 2022
+
+*Added*
+
+- [NXMClient getDeviceId] to retrieve device identifier.
