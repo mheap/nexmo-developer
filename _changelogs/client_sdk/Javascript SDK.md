@@ -4,12 +4,16 @@ release: '14 Feb 2022'
 ---
 # Javascript SDK
 
+---
+
 ## 8.4.1
 ### 14 Feb 2022
 
 *Fix*
 
 - Fix events ordering when gap in inbound events
+
+---
 
 ## 8.4.0
 ### 21 Jan 2022
@@ -25,6 +29,8 @@ rtc.connectivityReport().then((report) => {
   console.log(error);
 });
 ```
+
+---
 
 ## 8.3.1
 ### 9 Dec 2021

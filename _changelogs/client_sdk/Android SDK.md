@@ -4,6 +4,8 @@ release: '4 Apr 2022'
 ---
 # Android SDK
 
+---
+
 ## 4.0.3
 ### 4 Apr 2022
 
@@ -12,12 +14,16 @@ release: '4 Apr 2022'
 - Added check to ensure user logged in during setup of prewarm outbound call.
 - Changed timestamp default to UTC without time zone.
 
+---
+
 ## 4.0.2
 ### 9 Mar 2022
 
 *Enhancements*
 
 - WebRTC dependency upgraded to version 84.0.22.
+
+---
 
 ## 4.0.1
 ### 21 Jan 2022

@@ -4,10 +4,14 @@ release: '11 Feb 2022'
 ---
 # Vonage PHP Complete Package
 
+---
+
 ## 3.0.2
 ### 11 Feb 2022
 
 - This release adds PSR/log support for v3 and higher, in line with both Symfony and Laravel codebases for compatibility.
+
+---
 
 ## 3.0.1
 ### 3 Feb 2022
@@ -15,6 +19,8 @@ release: '11 Feb 2022'
 This minor release is a composer dependency change to allow either v1.0 or 2.0 of psr/container.
 
 This is to allow upstream packages (such as nexmo-laravel) to resolve successfully.
+
+---
 
 ## 3.0.0
 ### 26 Jan 2022

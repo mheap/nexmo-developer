@@ -6,6 +6,8 @@ release: '25 Feb 2022'
 
 You use the Vonage Command Line Interface (CLI) to manage your Vonage account and use Vonage API products from the command line.
 
+---
+
 ## 1.1.2
 ### 25 Feb 2022
 
@@ -14,6 +16,8 @@ You use the Vonage Command Line Interface (CLI) to manage your Vonage account an
 - fix(sms): -h was throwing an error
 
 Full Changelog: https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.2
+
+---
 
 ## 1.1.1
 ### 22 Feb 2022
@@ -24,6 +28,8 @@ Full Changelog: https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.2
 - feat(sms): Add SMS plugin by @kellyjandrews in #49
 
 Full Changelog: https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.1
+
+---
 
 ## 1.1.0
 ### 12 Jan 2022

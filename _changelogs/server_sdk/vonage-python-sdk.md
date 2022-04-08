@@ -4,6 +4,8 @@ release: '5 Jan 2021'
 ---
 # Vonage Python Complete Package
 
+---
+
 ## 2.5.5
 ### 5 Jan 2021
 
@@ -11,10 +13,14 @@ Patched issues with PyJWT >1.8 (TypeError: can't concat str to bytes)
 
 This patch ensures all versions of PyJWT are supported.
 
+---
+
 ## 2.5.3
 ### 14 Sept 2020
 
 - Minor patches to reflect Vonage namespace changes
+
+---
 
 ## 2.5.2
 ### 27 Aug 2020
