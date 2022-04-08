@@ -157,9 +157,7 @@ val token : String = Jwt.builder()
     .applicationId("aaaaaaaa-bbbb-cccc-dddd-0123456789ab")
     .privateKeyPath("/path/to/private.key")
     .issuedAt(ZonedDateTime.now())
-    .id("705b6f50-8c21-11e8-9bcb-595326422d60")
     .subject("alice")
-    .expiresAt(ZonedDateTime.now().plusMinutes(20))
     .addClaim("acl", mapOf(
         "paths" to mapOf(
             "/*/users/**" to mapOf<String, Any>(),
