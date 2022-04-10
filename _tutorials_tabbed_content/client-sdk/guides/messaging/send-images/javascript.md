@@ -5,7 +5,7 @@ menu_weight: 1
 ---
 
 ```javascript
-// Scenario #1: Send an image for a URL
+// Scenario #1: Send an image from a URL
 conversation.sendMessage({
     "message_type": "image",
     "image": {
