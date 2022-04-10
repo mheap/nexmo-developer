@@ -5,7 +5,7 @@ menu_weight: 1
 ---
 
 ```javascript
-conversation.on('text', (sender, event) => {
+conversation.on('message', (sender, event) => {
     console.log('*** Message received', sender, event) 
 });
 ```
