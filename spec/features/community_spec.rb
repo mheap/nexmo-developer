@@ -38,6 +38,17 @@ RSpec.feature 'Community', type: :feature do
         expect(page).to have_content(euruko.description)
       end
 
+      expect(page).to have_css('h2', text: 'Community Resources')
+
+      expect(page).to have_css('h3', text: 'Developer Blog')
+      expect(page).to have_css('h3', text: 'Developer Videos')
+
+      expect(page).to have_content('Join the Vonage Developer Community Slack')
+      expect(page).to have_link('Vonage Developer Community Slack', href: '/community/slack')
+
+      expect(page).to have_css('h3', text: 'Stackoverflow')
+      expect(page).to have_css('h3', text: 'GitHub')
+      expect(page).to have_css('h3', text: 'Developer Spotlight')
 
       expect(page).to have_css('h2', text: 'Get in touch')
       expect(page).to have_content('Do you have a question or want us to support your tech community event?')
