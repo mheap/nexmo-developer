@@ -3,5 +3,8 @@
   "name": "Max Kahan",
   "image_url": "https://github.com/maxkahan.png",
   "bio": "Max is a Python Developer Advocate and Software Engineer who's passionate about technology. Interested in developer experience, machine learning, artificial intelligence, cloud development, enterprise messaging and swing dance! His training is in Physics, but now he uses his problem-solving skills daily in the technology industry.",
-  "title": "Python Developer Advocate"
+  "title": "Python Developer Advocate",
+  "linkedin_url": "https://www.linkedin.com/in/maxkahan/",
+  "twitter": "max_does_tech",
+  "github_url": "https://github.com/maxkahan"
 }
