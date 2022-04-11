@@ -4,8 +4,15 @@ page:
       - type: header
         header:
           title:
-            text: Vonage ❤️ Community
+            text: Vonage Developer Community
             align: center
+  - row:
+    - column:
+      - type: text
+        text:
+          content: |
+            <p class="Vlt-center">Have questions, a big idea, or something to share? Our community is designed to help you thrive.</p>
+            <br><br>
   - row:
     - column:
       - type: section_header
