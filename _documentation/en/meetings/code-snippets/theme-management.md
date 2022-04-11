@@ -40,7 +40,7 @@ Field | Required? | Description |
 ``main_color``| Yes | The main color that will be used for the meeting room.
 ``short_company_url`` | No | The URL that will represent the company's meeting room homepage (must be unique).
 ``brand_image_colored`` | No | The brand image to be used in the welcome page and on a dark background
-``brand_image_white`` | No | The brand image to be used in on a white background
+``brand_image_white`` | No | The brand image to be used in on a light background
 ``branded_favicon`` | No | The favicon that will appear in the browser tab 
 ``brand_image_white_url`` | No | 
 ``brand_image_colored_url`` | No | 
@@ -210,7 +210,7 @@ This will be done in three steps.
 
 **GET: `https://api-eu.vonage.com/beta/meetings/themes/logos-upload-urls`**
 
-Use a GET on this API to retrieve the credentials needed for upload. The response will contain objects for each favicon, white logo, and colored logo. The `Policy` will be your JWT. Grab the values for the image type you wish to upload. 
+Use a GET on this API to retrieve the credentials needed for upload. The response will contain objects for each favicon, light logo, and colored logo. The `Policy` will be your JWT. Grab the values for the image type you wish to upload. 
 
 #### Response 
 
