@@ -19,6 +19,75 @@ page:
       - type: events
   - row:
     - column:
+      - type: text
+        text:
+          content: |
+            <div class="Vlt-grid">
+              <div class="Vlt-col Vlt-bg-grey-lighter" style="padding: 32px;">
+                <h2 style="margin-bottom: 0;" class="Vlt-center Vlt-black">Community Resources</h2>
+              </div>
+            </div>
+  - row:
+    - column:
+      - type: text
+        text:
+          content: |
+            <div class="Vlt-grid ">
+              <div class="Vlt-col Vlt-col--1of2 Vlt-margin--A-top4">
+              <a target="_blank" href="https://developer.vonage.com/blog">
+                  <div class="Vlt-card Vlt-card--clickable">
+                    <h3 class="Vlt-center Vlt-black">Developer Blog</h3>
+                    <p class="Vlt-center"> <svg class="Vlt-icon--largest"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-books-full"></use></svg></p>
+                  </div>
+              </a>
+              </div>
+              <div class="Vlt-col Vlt-col--1of2 Vlt-margin--A-top4">
+              <a target="_blank" href="https://www.youtube.com/c/VonageDev">
+                <div class="Vlt-card Vlt-card--clickable">
+                  <h3 class="Vlt-center Vlt-black">Developer Videos</h3>
+                  <p class="Vlt-center"> <svg class="Vlt-icon--largest"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-youtube"></use></svg></p>
+                </div>
+              </a>
+              </div>
+            </div>
+  - row:
+    - column:
+      - type: line_divider
+      - type: join_slack
+      - type: line_divider
+  - row:
+      - column:
+        - type: text
+          text:
+            content: |
+              <div class="Vlt-grid ">
+                <div class="Vlt-col Vlt-col--1of3 Vlt-margin--A-top4">
+                  <a target="_blank" href="https://stackoverflow.com/questions/tagged/vonage?tab=Newest">
+                    <div class="Vlt-card Vlt-card--clickable">
+                      <h3 class="Vlt-center Vlt-black">Stackoverflow</h3>
+                      <p class="Vlt-center"> <svg class="Vlt-icon--largest"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-stackoverflow"></use></svg></p>
+                    </div>
+                  </a>
+                </div>
+                <div class="Vlt-col Vlt-col--1of3 Vlt-margin--A-top4">
+                  <a target="_blank" href="https://github.com/Vonage-Community">
+                    <div class="Vlt-card Vlt-card--clickable">
+                      <h3 class="Vlt-center Vlt-black">GitHub</h3>
+                      <p class="Vlt-center"> <svg class="Vlt-icon--largest"><use xlink:href="/symbol/volta-brand-icons.svg#Brand-icon-github"></use></svg></p>
+                    </div>
+                  </a>
+                </div>
+                <div class="Vlt-col Vlt-col--1of3 Vlt-margin--A-top4">
+                  <a target="_blank" href="https://learn.vonage.com/spotlight/">
+                    <div class="Vlt-card Vlt-card--clickable">
+                      <h3 class="Vlt-center Vlt-black">Developer Spotlight</h3>
+                      <p class="Vlt-center"> <svg class="Vlt-icon--largest"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-light-bulb-full"></use></svg></p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+  - row:
+    - column:
       - type: line_divider
   - row:
     - column:
@@ -33,9 +102,5 @@ page:
       - type: html
         html:
           content: <a class="twitter-timeline" data-width="100%" data-height="300" data-dnt="true" href="https://twitter.com/VonageDev?ref_src=twsrc%5Etfw">Tweets by VonageDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  - row:
-    - column:
-      - type: line_divider
-      - type: join_slack
-      - type: line_divider
+
 
