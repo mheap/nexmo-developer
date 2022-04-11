@@ -38,11 +38,6 @@ RSpec.feature 'Community', type: :feature do
         expect(page).to have_content(euruko.description)
       end
 
-      expect(page).to have_css('h2', text: 'Video Resources')
-
-      expect(page).to have_css('h4', text: video_session.title)
-      expect(page).to have_xpath('.//iframe[@src="https://www.youtube.com/embed/i7EZDYYfFmc?showinfo=0"]')
-      expect(page).to have_css('p', text: video_session.description)
 
       expect(page).to have_css('h2', text: 'Get in touch')
       expect(page).to have_content('Do you have a question or want us to support your tech community event?')
