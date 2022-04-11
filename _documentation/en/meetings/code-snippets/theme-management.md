@@ -162,7 +162,7 @@ To delete a theme, use a DELETE and the theme ID. However, a theme that is set t
 
 In order to delete a theme that is in use, you must remove it from each room that is using it by finding all rooms using that theme and removing the theme. 
 
-Alternatively, if you wish to override and delete the theme without, add a query parameter of `force=true`. The defualt theme will now be applied to all the rooms that were using this theme. 
+Alternatively, if you wish to override and delete the theme without, add a query parameter of `force=true`. The default theme will now be applied to all the rooms that were using this theme. 
 
 
 ## Get All Rooms With Given Theme
@@ -233,13 +233,13 @@ Use a GET on this API to retrieve the credentials needed for upload. The respons
 
 ### 2. Upload File to AWS 
 
-**POST: ```https://s3.amazonaws.com/roomservice-whitelabel-logos-prod`**
+**POST: `https://s3.amazonaws.com/roomservice-whitelabel-logos-prod`**
 
 Copy all values from the response above for the image type you with to upload, and paste them in the body of this request. Add the file location as well.
 
 #### Request 
 
-```curl
+```
 curl --location --request POST 'https://s3.amazonaws.com/roomservice-whitelabel-logos-prod' \
 --header 'Content-Type: application/json' \
 --form 'Content-Type="image/png"' \
