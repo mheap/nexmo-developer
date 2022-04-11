@@ -19,7 +19,7 @@ RSpec.feature 'Community', type: :feature do
     visit '/community'
 
     within('.Nxd-landing-page') do
-      expect(page).to have_css('h1#vonage-community', text: 'Vonage ❤️ Community')
+      expect(page).to have_css('h1#vonage-developer-community', text: 'Vonage Developer Community')
 
       expect(page).to have_css('h2', text: 'You can find us at these upcoming events')
 
