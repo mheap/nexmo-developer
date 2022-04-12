@@ -1,5 +1,41 @@
 [
   {
+    "title": "Max Kahan Joins the Vonage Developer Relations Team",
+    "description": "Max Kahan has joined the Vonage Developer Relations team as a Python Developer Advocate.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/max-kahan.png",
+    "author": {
+      "team": true,
+      "name": "Max Kahan",
+      "image_url": "https://github.com/maxkahan.png",
+      "bio": "Max is a Python Developer Advocate and Software Engineer who's passionate about technology. Interested in developer experience, machine learning, artificial intelligence, cloud development, enterprise messaging and swing dance! His training is in Physics, but now he uses his problem-solving skills daily in the technology industry.",
+      "title": "Python Developer Advocate",
+      "linkedin_url": "https://www.linkedin.com/in/maxkahan/",
+      "twitter": "max_does_tech",
+      "github_url": "https://github.com/maxkahan",
+      "short_name": "max-kahan"
+    },
+    "published": true,
+    "published_at": "2022-04-12 11:32:27 UTC",
+    "updated_at": "2022-04-12 11:32:27 UTC",
+    "category": {
+      "name": "Team",
+      "plural": "Team Posts",
+      "slug": "team",
+      "color": "#06ba77"
+    },
+    "tags": [
+      "careers",
+      "new-joiner",
+      "introduction"
+    ],
+    "spotlight": false,
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/04/12/max-kahan-joins-the-developer-relations-team",
+    "filename": "max-kahan-joins-the-developer-relations-team"
+  },
+  {
     "title": "Pushing On: A Retrospective of Q1 2022 at Vonage",
     "description": "Read what we've been up to in the first quarter of the year. Spoiler: it's a lot!",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/pushing-on-a-retrospective-of-q1-2022-at-vonage/quaterly-releases_q1.png",
@@ -6540,35 +6576,6 @@
     "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
-    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
-    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
-    "author": {
-      "team": true,
-      "name": "Avital Tzubeli",
-      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
-      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
-      "website_url": "",
-      "short_name": "avital-tzubelivonage-com"
-    },
-    "published": false,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "angular",
-      "rxjs"
-    ],
-    "locale": "en",
-    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
-    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
-  },
-  {
     "title": "Setting up CI/CD with Github Actions",
     "description": "This article walks you through the process of using github actions to build CI/CD flows.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
@@ -6599,6 +6606,35 @@
     "locale": "en",
     "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
     "filename": "setting-up-ci-cd-with-github-actions"
+  },
+  {
+    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
+    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
+    "author": {
+      "team": true,
+      "name": "Avital Tzubeli",
+      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
+      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
+      "website_url": "",
+      "short_name": "avital-tzubelivonage-com"
+    },
+    "published": false,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "angular",
+      "rxjs"
+    ],
+    "locale": "en",
+    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
+    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -21215,7 +21251,7 @@
       "short_name": "chrisguzman"
     },
     "published": true,
-    "published_at": "2017-12-21 17:23:30 +0000",
+    "published_at": "2017-12-21 18:23:30 +0100",
     "updated_at": "2021-05-20 08:29:04 UTC",
     "category": {
       "name": "Tutorial",
@@ -24167,7 +24203,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-08-14 16:45:51 +0100",
+    "published_at": "2015-08-14 17:45:51 +0200",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -24240,7 +24276,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-29 18:55:05 +0100",
+    "published_at": "2015-04-29 19:55:05 +0200",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -24294,7 +24330,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-10 18:24:18 +0100",
+    "published_at": "2015-04-10 19:24:18 +0200",
     "category": {
       "name": "Event",
       "plural": "Events",
@@ -24421,7 +24457,7 @@
       "short_name": "jackshirazi"
     },
     "published": true,
-    "published_at": "2014-11-18 13:02:36 +0000",
+    "published_at": "2014-11-18 14:02:36 +0100",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",

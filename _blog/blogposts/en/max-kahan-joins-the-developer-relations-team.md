@@ -4,8 +4,8 @@ description: Max Kahan has joined the Vonage Developer Relations team as a Pytho
 thumbnail: /content/blog/max-kahan.png
 author: max-kahan
 published: true
-published_at:2022-04-12T11:32:27.535Z
-updated_at:2022-04-12T11:32:27.535Z
+published_at: 2022-04-12T11:32:27.535Z
+updated_at: 2022-04-12T11:32:27.535Z
 category: team
 tags:
   - careers
@@ -40,4 +40,3 @@ The main focus for me will be the Python SDKs that let you use sms, voice, video
 ## Signing Off
 
 Well, that’s the “about me” stuff over with. If you want to connect, reach out to me on Twitter at [@max_does_tech](https://twitter.com/max_does_tech). I look forward to speaking with you soon!
-
