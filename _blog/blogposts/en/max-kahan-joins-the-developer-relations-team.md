@@ -1,14 +1,16 @@
 ---
 title: Max Kahan Joins the Vonage Developer Relations Team
 description: Max Kahan has joined the Vonage Developer Relations team as a Python Developer Advocate.
-thumbnail:
+thumbnail: /content/blog/max-kahan.png
 author: max-kahan
 published: true
-published_at:
-updated_at:
+published_at:2022-04-12T11:32:27.535Z
+updated_at:2022-04-12T11:32:27.535Z
 category: team
 tags:
   - careers
+  - new-joiner
+  - introduction
 comments: true
 spotlight: false
 redirect: ""
