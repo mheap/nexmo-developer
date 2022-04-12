@@ -10,7 +10,7 @@ navigation_weight: 3
 
 ### Overview
 
-The Vonage Client SDKs use [JWTs](https://jwt.io/) for authentication when a user logs in. These JWTs are generated using the application ID and private key that is provided [when a new application is created.](/tutorials/client-sdk-generate-test-credentials#create-a-nexmo-application)
+The Vonage Client SDKs use [JWTs](https://jwt.io/) for authentication when a user logs in. These JWTs are generated using the application ID and private key that is provided [when a new application is created](/tutorials/client-sdk-generate-test-credentials#create-a-nexmo-application).
 
 ### Claims
 
@@ -18,14 +18,14 @@ Using that `private.key` and the application ID, we can mint a new JWT. In order
 
 |Claim | Description |
 | --------- | ----------- |
-| `sub`| The "subject". The subject, in this case, will be the name of the user created and associated with your Vonage Application |
-| `acl`| Access control list. The Client SDK uses this as a permission system for users. Read more about it in the [ACL overview](#acls) |
+| `sub`| The "subject". The subject, in this case, will be the name of the user created and associated with your Vonage Application. |
+| `acl`| Access control list. The Client SDK uses this as a permission system for users. Read more about it in the [ACL overview](#acls). |
 | `application_id`| This is the ID of the Vonage Application you created. |
 | `iat`| "Issued at time" This is the time the JWT was issued, in unix epoch time. |
 | `jti`| "JWT ID". This is a unique identifier for this JWT. |
 | `exp`| "Expiration time" This is the time in the future that the JWT will expire, in unix epoch time.  |
 
-> *The `exp` claim is optional.* If the claim is not provided, then the JWT will expire by default in 15 minutes. The max expiration time for a JWT is 24 hours. JWTs should be typically short living, as it is trivial to create a new JWT and some JWTs can have multiple far-reaching permissions.
+> *The `exp` claim is optional.* If the claim is not provided, then the JWT will expire by default in 15 minutes. The max expiration time for a JWT is 24 hours. JWTs should typically be short-lived, as it is trivial to create a new JWT and some JWTs can have multiple far-reaching permissions.
 
 ### Sample JWT Payload
 
@@ -90,7 +90,7 @@ vonage jwt --private_key=./private.key --subject=alice --acl='{"paths":{"/*/user
 
 ### Node
 
-The beta version of the [Vonage Node Server SDK](https://github.com/Nexmo/nexmo-node/tree/beta#jwt) can also create a JWT [including the appropriate claims](https://github.com/Nexmo/nexmo-node/tree/beta#jwt)
+The beta version of the [Vonage Node Server SDK](https://github.com/Nexmo/nexmo-node/tree/beta#jwt) can also create a JWT [including the appropriate claims](https://github.com/Nexmo/nexmo-node/tree/beta#jwt).
 
 ```js
 const aclPaths = {
@@ -148,6 +148,34 @@ $token = $client->generateJwt($claims);
 $tokenString = (string) $token;
 ```
 
+### Java / Kotlin
+
+The [Nexmo JWT JDK library](https://github.com/Nexmo/nexmo-jwt-jdk) can be used to generate a signed JWT with claims.
+
+```kotlin
+val token : String = Jwt.builder()
+    .applicationId("aaaaaaaa-bbbb-cccc-dddd-0123456789ab")
+    .privateKeyPath("/path/to/private.key")
+    .issuedAt(ZonedDateTime.now())
+    .subject("alice")
+    .addClaim("acl", mapOf(
+        "paths" to mapOf(
+            "/*/users/**" to mapOf<String, Any>(),
+            "/*/conversations/**" to mapOf(),
+            "/*/sessions/**" to mapOf(),
+            "/*/devices/**" to mapOf(),
+            "/*/image/**" to mapOf(),
+            "/*/media/**" to mapOf(),
+            "/*/applications/**" to mapOf(),
+            "/*/push/**" to mapOf(),
+            "/*/knocking/**" to mapOf(),
+            "/*/legs/**" to mapOf()
+        )
+    ))
+    .build()
+    .generate()
+```
+
 ### Other languages
 
-Creating a JWT with the appropriate claims for authenticating a Vonage user is not currently provided in any of the other Vonage Client Libraries. Instead, you are encourage you to use your Server SDK of choice to create a new JWT with the [Sample JWT Payload](#sample-jwt-payload). [JWT.io](https://jwt.io/#libraries-io) has a selection of libraries for generating JWTs in multiple languages.
+Creating a JWT with the appropriate claims for authenticating a Vonage user is not currently provided in any of the other Vonage Client Libraries. Instead, you are encouraged to use your Server SDK of choice to create a new JWT with the [Sample JWT Payload](#sample-jwt-payload). [JWT.io](https://jwt.io/#libraries-io) has a selection of libraries for generating JWTs in multiple languages.
