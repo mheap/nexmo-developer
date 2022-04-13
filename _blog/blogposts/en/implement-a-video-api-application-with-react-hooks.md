@@ -18,16 +18,16 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-If you have been a ReactJS developer for a couple of years, you probably had to refactor your code to use React Hooks. React Hooks has been introduced since the 16.8 version (February 2019, [documentation](https://reactjs.org/docs/hooks-intro.html)) and lets you use state and other React features without writing a class. 
+If you have been a ReactJS developer for a couple of years, you probably had to refactor your code to use React Hooks. React Hooks has been introduced since the 16.8 version (February 2019, [documentation](https://reactjs.org/docs/hooks-intro.html)) and lets you use state and other React features without writing a class.
 
-This blog post will explain how to integrate Vonage Video API JS into your React application using Hooks. 
+This blog post will explain how to integrate Vonage Video API JS into your React application using Hooks.
 
 ## Prerequisites
 
-1. A Vonage Video API account. If you don't have one already, you can create an account in the Video Dashboard (https://tokbox.com/account/#/)
+1. A Vonage Video API account. If you don't have one already, you can create an account in the [Video Dashboard](https://tokbox.com/account/#/)
 2. ReactJS version >= 16.8
 
-The entry point of the project is the src/index.js file. The index file imports the App file which contains the Routes and Component definition.
+The entry point of the project is the `src/index.js` file. The index file imports the App file which contains the Routes and Component definition.
 
 ### Pages
 
@@ -206,4 +206,4 @@ The main functions are:
 
 In this blog post, I explained how to integrate React Hooks with Vonage Video API. The repository is publicly available at [Video API Hooks](​​https://github.com/Vonage-Community/video-express-react-app). You can use it as a reference for integrating or refactoring your application using React Hooks.
 
-Also, Vonage has recently released a new product called Vonage Video Express to create a multiparty video conference web application. We have written a [blog post](https://developer.vonage.com/blog/2021/09/27/create-a-multiparty-video-app-with-the-new-video-express/) about it. 
+Also, Vonage has recently released a new product called Vonage Video Express to create a multiparty video conference web application. We have written a [blog post](https://developer.vonage.com/blog/2021/09/27/create-a-multiparty-video-app-with-the-new-video-express/) about it.
