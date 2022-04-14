@@ -1,5 +1,41 @@
 [
   {
+    "title": "Voice Transcription with Symbl.ai and the Vonage Video API",
+    "description": "Today, we will be building live closed captioning into our SimplyDoc Telehealth Starter Kit using Symbl.ai’s streaming and insights API. Our video and audio will be powered by Vonage’s Video API",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/voice-transcription-with-symbl-ai-and-the-vonage-video-api/symbl-ai_videoapi.png",
+    "author": {
+      "team": false,
+      "alumni": false,
+      "spotlight": false,
+      "noteworthy": false,
+      "hidden": false,
+      "name": "Hamza Nasir",
+      "bio": "Hamza is a Software Engineer based in Chicago. He works with Webrtc.ventures, a leading company in providing WebRTC solutions. He also works as a Full Stack Developer at Vonage helping out with the Video Platform to better serve its customer’s needs. As a proud introvert, he likes to spend his free time playing with his cats.",
+      "image_url": "/content/images/hamza-nasir.jpeg",
+      "short_name": "hamza-nasir"
+    },
+    "published": true,
+    "published_at": "2022-04-19 12:01:01 UTC",
+    "updated_at": "2022-04-19 12:01:01 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "video-api",
+      "javascript",
+      "symbl.ai"
+    ],
+    "spotlight": false,
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/04/19/voice-transcription-with-symbl-ai-and-the-vonage-video-api",
+    "filename": "voice-transcription-with-symbl-ai-and-the-vonage-video-api"
+  },
+  {
     "title": "Implement a Video API Application With React Hooks",
     "description": "How to use React Hooks to implement the Vonage Video API into your application.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/implement-a-video-api-application-with-react-hooks/videoapi_reacthook.png",
@@ -6581,20 +6617,16 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
-    "title": "Setting up CI/CD with Github Actions",
-    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
+    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
+    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
     "author": {
-      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
-      "image_url": "/content/images/yonatankra.png",
-      "name": "Yonatan Kra",
-      "website_url": "https://yonatankra.com",
-      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
-      "twitter": "YonatanKra",
-      "github_url": "https://github.com/YonatanKra",
-      "title": "Vonage Software Architect",
+      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
+      "image_url": "/content/images/yuvalgolan.png",
+      "name": "Yuval Golan",
+      "title": "Vonage VP of Quality Assurance",
       "team": true,
-      "short_name": "yonatankra"
+      "short_name": "yuvalgolan"
     },
     "published": true,
     "published_at": "2021-02-17 13:34:35 UTC",
@@ -6606,11 +6638,11 @@
       "color": "#669fc4"
     },
     "tags": [
-      "github"
+      "high-availability"
     ],
     "locale": "en",
-    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
-    "filename": "setting-up-ci-cd-with-github-actions"
+    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
+    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
@@ -6642,16 +6674,20 @@
     "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
-    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
-    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
+    "title": "Setting up CI/CD with Github Actions",
+    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
     "author": {
-      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
-      "image_url": "/content/images/yuvalgolan.png",
-      "name": "Yuval Golan",
-      "title": "Vonage VP of Quality Assurance",
+      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
+      "image_url": "/content/images/yonatankra.png",
+      "name": "Yonatan Kra",
+      "website_url": "https://yonatankra.com",
+      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
+      "twitter": "YonatanKra",
+      "github_url": "https://github.com/YonatanKra",
+      "title": "Vonage Software Architect",
       "team": true,
-      "short_name": "yuvalgolan"
+      "short_name": "yonatankra"
     },
     "published": true,
     "published_at": "2021-02-17 13:34:35 UTC",
@@ -6663,11 +6699,11 @@
       "color": "#669fc4"
     },
     "tags": [
-      "high-availability"
+      "github"
     ],
     "locale": "en",
-    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
-    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
+    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
+    "filename": "setting-up-ci-cd-with-github-actions"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -12714,6 +12750,36 @@
     "filename": "usando-jwt-para-autenticação-em-uma-aplicação-golang"
   },
   {
+    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
+    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
+    "author": {
+      "name": "Victor Steven",
+      "image_url": "/content/images/0.png",
+      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
+      "website_url": "",
+      "spotlight": true,
+      "short_name": "victor-steven"
+    },
+    "published": true,
+    "published_at": "2020-03-13 13:00:25 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "go",
+      "jwt",
+      "messages-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
+    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
+  },
+  {
     "title": "Using JWT for Authentication in a Golang Application",
     "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
@@ -12742,36 +12808,6 @@
     ],
     "locale": "en",
     "link": "blog/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
-    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
-  },
-  {
-    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
-    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
-    "author": {
-      "name": "Victor Steven",
-      "image_url": "/content/images/0.png",
-      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
-      "website_url": "",
-      "spotlight": true,
-      "short_name": "victor-steven"
-    },
-    "published": true,
-    "published_at": "2020-03-13 13:00:25 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "go",
-      "jwt",
-      "messages-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
     "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
   },
   {
