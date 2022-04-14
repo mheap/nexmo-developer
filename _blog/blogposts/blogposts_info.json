@@ -15,8 +15,8 @@
       "short_name": "hamza-nasir"
     },
     "published": true,
-    "published_at": "2022-04-19 12:01:01 UTC",
-    "updated_at": "2022-04-19 12:01:01 UTC",
+    "published_at": "2022-04-14 12:01:01 UTC",
+    "updated_at": "2022-04-14 12:01:01 UTC",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",
@@ -32,7 +32,7 @@
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
-    "link": "blog/22/04/19/voice-transcription-with-symbl-ai-and-the-vonage-video-api",
+    "link": "blog/22/04/14/voice-transcription-with-symbl-ai-and-the-vonage-video-api",
     "filename": "voice-transcription-with-symbl-ai-and-the-vonage-video-api"
   },
   {
