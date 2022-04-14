@@ -6,8 +6,8 @@ description: Today, we will be building live closed captioning into our
 thumbnail: /content/blog/voice-transcription-with-symbl-ai-and-the-vonage-video-api/symbl-ai_videoapi.png
 author: hamza-nasir
 published: true
-published_at: 2022-04-19T12:01:01.447Z
-updated_at: 2022-04-19T12:01:01.464Z
+published_at: 2022-04-14T12:01:01.447Z
+updated_at: 2022-04-14T12:01:01.464Z
 category: tutorial
 tags:
   - video-api
