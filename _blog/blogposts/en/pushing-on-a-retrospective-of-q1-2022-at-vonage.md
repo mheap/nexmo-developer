@@ -56,19 +56,22 @@ We're excited about the work the engineering and product teams are doing to evol
 
 If you're looking to use the Video capabilities of Vonage for meetings and want a solution to fast-track your MVP: we've got you covered! The Developer Relations team had the new Meetings API demoed to us, and we got excited. Before we get ahead of ourselves though, allow us to present a more formal [introduction to the API in this article from Avital Tzubeli](https://developer.vonage.com/blog/22/03/29/introducing-the-meetings-api).
 
-### Interactive Broadcast Beta Announced
+### Experience Composer Beta Announced
 
 Our Developer Advocate Garann Means [wrote an article on lessons learned after two years of Virtual Conferences](https://learn.vonage.com/blog/2022/03/14/lessons-learned-after-two-years-of-virtual-tech-conferences/), and how we approached Developer Relations during the time of COVID has certainly been a hot topic.
 
-So, given our experiences with conference online platforms and the successes or failures of how they are implemented, what apt timing for the announcement that, as a developer, you can implement your own solution! The Vonage Video API now has a big feature update that introduces true Interactive Broadcast experiences for end-users.
+So, given our experiences with conference online platforms and the successes or failures of how they are implemented, what apt timing for the announcement that, as a developer, you can implement your own solution! The Vonage Video API now has a big feature update that introduces true immersive experiences for end-users. The new feature called Experience Composer (Beta) goes beyond the old stream composition technique and lets developers capture entire 
 
 ​​![](https://lh6.googleusercontent.com/XaFP6tqooZNPd7SSo5VRYdVbigZROqjFeRyEfMabD2E3TiCISA4_Vmzdh1x4h6YXCAUYZTUn2iswcOxv-VDGSwcRPf-SdBsISUZ1lwwiBEK_apIfmau0LtLt1bbqDBOSgMqNBRFV)
 
-Among the features we've released include:
+### Interactive Broadcast triples capacity and slashes latency
 
-* using our new Experience Composer (Beta) to broadcast full HD streams to up to 15,000 active participants in a new, highly customisable platform
-* protocol choices between WebRTC or HTTP Live Streaming (HLS) for lower latency interactions between your hosts and your participants
-* Stream with additional costs to all major social media platforms such as Twitch and Facebook Live
+However, Vonage is not new to broadcasting. Our Video API Interactive Broadcast has been powering large-scale WebRTC and HLS sessions since 2016. 
+These large-scale interactive experiences are now boosted with:
+
+* Triple capacity for the real-time WebRTC sessions to support up to 15,000 active participants
+* HLS latency reduced from 15+ sec to 4-6 sec for live streaming participant
+* Stream with no additional costs to all major social media platforms such as Twitch and Facebook Live
 
 You can read more in-depth about the new features in [this post, from Senior Product Manager Jon Montana](https://learn.vonage.com/blog/2021/05/11/video-api-better-interactive-broadcasts-and-recordings/#).
 
