@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.4 - Apr 14, 2022
+
+### Fixed
+
+- Changed timestamp default from local timezone to UTC
+
 ## 4.0.3 - Apr 4, 2022
 
 ### Fixed
