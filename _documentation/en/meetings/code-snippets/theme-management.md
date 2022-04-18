@@ -39,9 +39,9 @@ Field | Required? | Description |
 ``main_color``| Yes | The main color that will be used for the meeting room.
 ``theme_name`` | No | The name of the theme (must be unique). If null, a UUID will automatically be generated. 
 ``short_company_url`` | No | The URL that will represent every meeting room with this theme (must be unique). 
-``brand_image_colored_url`` | No | The url of the image to be used on a colored background
-``brand_image_white_url`` | No | The url of the image to be used on a light background
-``branded_favicon_url`` | No | The url of the favicon that will appear in the browser tab
+``brand_image_colored_url`` | No | The URL of the image to be used on a colored background
+``brand_image_white_url`` | No | The URL of the image to be used on a light background
+``branded_favicon_url`` | No | The URL of the favicon that will appear in the browser tab
 
 ### Request 
 
@@ -92,11 +92,11 @@ To change theme values, you'll need the theme ID. Add all changes to an object c
 Field | Required? | Description |
 -- | -- | -- | --| -- |
 ``brand_image_colored`` | No | The brand image to be used in the welcome page and on a dark background, which will replace the brand text. 
-``brand_image_colored_url`` | No | The url of the image to be used on a colored background
+``brand_image_colored_url`` | No | The URL of the image to be used on a colored background
 ``brand_image_white`` | No | The brand image to be used on a light background, which will replace the brand text. 
-``brand_image_white_url`` | No | The url of the image to be used on a light background
+``brand_image_white_url`` | No | The URL of the image to be used on a light background
 ``branded_favicon`` | No | The favicon that will appear in the browser tab 
-``branded_favicon_url`` | No | The url of the favicon that will appear in the browser tab
+``branded_favicon_url`` | No | The URL of the favicon that will appear in the browser tab
 
 ### Request 
 
