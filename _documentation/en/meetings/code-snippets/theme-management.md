@@ -215,7 +215,7 @@ curl --location --request PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/{
 
 ## Uploading Icons and Logos 
 
-The type of logo should be uploaded based on the background color. Colored logos should be used for a light background, while a white logo should be used on a darker background. 
+The type of logo should be uploaded based on the background color. Colored logos should be used for a light background, while a lighter logo should be used on a dark background. 
 
 In order to add icons and logos to a theme, they first need to be uploaded to the Meetings API AWS bucket, and then paired with the respective theme. 
 This will be done in three steps. 
