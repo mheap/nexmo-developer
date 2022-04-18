@@ -6,7 +6,7 @@ description: Managing Rooms with the Meetings API
 
 # Whitelabeling: Theme Management for Meeting Rooms 
 
-Use the themes API to create themes with different colors, logos, or texts. Themes can be applied to one room, a few rooms, or all the meeting rooms in the account. 
+Use the themes API to create themes with different colors, logos, or texts. Themes can be applied to one room, a few rooms, or all the meeting rooms in the application. 
 
 
 ## Prerequisites
@@ -35,16 +35,13 @@ The following fields can be assigned values in the POST request:
 
 Field | Required? | Description |
 -- | -- | -- | --| -- |
-``theme_name`` | Yes | The name of the theme (must be unique). 
-``brand_text`` | Yes | The text that will appear on the meeting homepage.
+``brand_text`` | Yes | The text that will appear on the meeting homepage, in the case that there is no brand image.  
 ``main_color``| Yes | The main color that will be used for the meeting room.
-``short_company_url`` | No | The URL that will represent the company's meeting room homepage (must be unique).
-``brand_image_colored`` | No | The brand image to be used in the welcome page and on a dark background
-``brand_image_white`` | No | The brand image to be used in on a light background
-``branded_favicon`` | No | The favicon that will appear in the browser tab 
-``brand_image_white_url`` | No | 
-``brand_image_colored_url`` | No | 
-``branded_favicon_url`` | No | 
+``theme_name`` | No | The name of the theme (must be unique). If null, a UUID will automatically be generated. 
+``short_company_url`` | No | The URL that will represent every meeting room with this theme (must be unique). 
+``brand_image_colored_url`` | No | The url of the image to be used on a colored background
+``brand_image_white_url`` | No | The url of the image to be used on a light background
+``branded_favicon_url`` | No | The url of the favicon that will appear in the browser tab
 
 ### Request 
 
@@ -82,13 +79,24 @@ curl --location --request POST 'https://api-eu.vonage.com/beta/meetings/themes' 
 }
 ```
 
-Note that only required parameters were set on the room. All null values can be changed on a theme update. 
+Note that the theme images (which are null in the response), can only be changed on (theme update)[#update-theme].
 
 ## Update Theme 
 
 **POST: `https://api-eu.vonage.com/beta/meetings/themes/{THEME_ID}`**
 
-To change theme values, such as colors, text, or short URL, you'll need the theme ID. Add all changes to an object called `update_details`. 
+To change theme values, you'll need the theme ID. Add all changes to an object called `update_details`. 
+
+**Values that can be updated are:** 
+
+Field | Required? | Description |
+-- | -- | -- | --| -- |
+``brand_image_colored`` | No | The brand image to be used in the welcome page and on a dark background, which will replace the brand text. 
+``brand_image_colored_url`` | No | The url of the image to be used on a colored background
+``brand_image_white`` | No | The brand image to be used on a light background, which will replace the brand text. 
+``brand_image_white_url`` | No | The url of the image to be used on a light background
+``branded_favicon`` | No | The favicon that will appear in the browser tab 
+``branded_favicon_url`` | No | The url of the favicon that will appear in the browser tab
 
 ### Request 
 
@@ -129,7 +137,7 @@ Check out [creating a long term room](/_documentation/en/meetings/code-snippets/
 
 **PATCH: `https://api-eu.vonage.com/beta/meetings/applications`**
 
-A theme can be set as the default theme for the account, meaning that every room created will automatically use the default theme. To do this, first create a theme, and then add it as the `default_theme_id` in an object called `update_details`. 
+A theme can be set as the default theme for the application, meaning that every room created will automatically use the default theme. To do this, first create a theme, and then add it as the `default_theme_id` in an object called `update_details`. 
 
 ### Request 
 
@@ -162,12 +170,16 @@ To delete a theme, use a DELETE and the theme ID. However, a theme that is set t
 
 In order to delete a theme that is in use, you must remove it from each room that is using it by finding all rooms using that theme and removing the theme. 
 
-Alternatively, if you wish to override and delete the theme without, add a query parameter of `force=true`. The default theme will now be applied to all the rooms that were using this theme. 
+Alternatively, if you wish to override and delete the theme without manually removing it, add a query parameter of `force=true`. The default theme will now be applied to all the rooms that were using this theme. 
+
+```
+curl --location --request DELETE 'https://api-eu.vonage.com/beta/meetings/themese/{THEME_ID}?force=true' \
+```
 
 
 ## Get All Rooms With Given Theme
 
-**GET: `https://api-eu.vonage.com/beta/meetings/themes/{THEME_ID}`**
+**GET: `https://api-eu.vonage.com/beta/meetings/themes/{THEME_ID}/rooms`**
 
 Sometimes you might want to know which rooms are using a particular theme. For example, before deleting a theme, it must be removed from all rooms which are using it. To retrieve a list of these rooms, you need the theme ID. 
 
@@ -186,7 +198,7 @@ This will return a list of all rooms using this theme.
 
 **PATCH: `https://api-eu.vonage.com/beta/meetings/rooms/{ROOM_ID}`**
 
-In order to remove a or replace a theme for a room, update the room by using a PATCH and the room ID. Create an `update_details` object, and pass either `null` or the new theme ID on `theme_id`. Please note that only long term rooms can be updated. 
+In order to remove or replace a theme for a room, update the room by using a PATCH and the room ID. Create an `update_details` object, and pass either `null` or the new theme ID on `theme_id`. Please note that only long term rooms can be updated. 
 
 ### Request 
 
@@ -202,6 +214,8 @@ curl --location --request PATCH 'https://api-eu.vonage.com/beta/meetings/rooms/{
 ```
 
 ## Uploading Icons and Logos 
+
+The type of logo should be uploaded based on the background color. Colored logos should be used for a light background, while a white logo should be used on a darker background. 
 
 In order to add icons and logos to a theme, they first need to be uploaded to the Meetings API AWS bucket, and then paired with the respective theme. 
 This will be done in three steps. 
