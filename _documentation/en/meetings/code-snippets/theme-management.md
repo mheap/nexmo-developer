@@ -79,24 +79,15 @@ curl --location --request POST 'https://api-eu.vonage.com/beta/meetings/themes' 
 }
 ```
 
-Note that the theme images (which are null in the response), can only be changed on (theme update)[#update-theme].
+Note that the theme images (which are null in the response), can only be added with the (image management process)[#Uploading-Icons-and-Logos]. 
 
 ## Update Theme 
 
 **POST: `https://api-eu.vonage.com/beta/meetings/themes/{THEME_ID}`**
 
-To change theme values, you'll need the theme ID. Add all changes to an object called `update_details`. 
+Theme properties that can be updated are the same as those that can be set upon (create)[#create-a-theme]. All images must be added via the (image management process)[#Uploading-Icons-and-Logos].
 
-**Values that can be updated are:** 
-
-Field | Required? | Description |
--- | -- | -- | --| -- |
-``brand_image_colored`` | No | The brand image to be used in the welcome page and on a dark background, which will replace the brand text. 
-``brand_image_colored_url`` | No | The URL of the image to be used on a colored background
-``brand_image_white`` | No | The brand image to be used on a light background, which will replace the brand text. 
-``brand_image_white_url`` | No | The URL of the image to be used on a light background
-``branded_favicon`` | No | The favicon that will appear in the browser tab 
-``branded_favicon_url`` | No | The URL of the favicon that will appear in the browser tab
+To update properties, you'll need the theme ID and an object called `update_details`. 
 
 ### Request 
 
@@ -223,7 +214,7 @@ The type of images should be uploaded based on the background color. Colored ima
 - Dimensions: 1-300 px 
 
 **Favicon requirements:**
-- Format: PNG 
+- Format: PNG or ICO
 - Dimension: 16/16 or 32/32
 - Background must be transparent
 
