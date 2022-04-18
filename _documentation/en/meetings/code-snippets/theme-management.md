@@ -220,7 +220,7 @@ The type of images should be uploaded based on the background color. Colored ima
 **Logo requirements:**
 - Format: PNG
 - Maximum size: 1MB
-- Dimensions: 1-300px 
+- Dimensions: 1-300 px 
 
 **Favicon requirements:**
 - Format: PNG 
