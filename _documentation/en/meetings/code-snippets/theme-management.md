@@ -214,7 +214,7 @@ The type of images should be uploaded based on the background color. Colored ima
 **Favicon requirements:**
 - Format: PNG
 - Maximum size: 1MB
-- Dimension: 16x16 - 32x32 and must be square
+- Dimension: 16 x 16 - 32 x 32 and must be square
 - Background must be transparent
 
 In order to add icons and logos to a theme, they first need to be uploaded to the Meetings API AWS bucket, and then paired with the respective theme. 
