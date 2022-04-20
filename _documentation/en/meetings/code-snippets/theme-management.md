@@ -39,9 +39,6 @@ Field | Required? | Description |
 ``main_color``| Yes | The main color that will be used for the meeting room.
 ``theme_name`` | No | The name of the theme (must be unique). If null, a UUID will automatically be generated. 
 ``short_company_url`` | No | The URL that will represent every meeting room with this theme (must be unique). 
-``brand_image_colored_url`` | No | The URL of the image to be used on a colored background
-``brand_image_white_url`` | No | The URL of the image to be used on a light background
-``branded_favicon_url`` | No | The URL of the favicon that will appear in the browser tab
 
 ### Request 
 
@@ -79,11 +76,11 @@ curl --location --request POST 'https://api-eu.vonage.com/beta/meetings/themes' 
 }
 ```
 
-Note that the theme images (which are null in the response), can only be added with the (image management process)[#Uploading-Icons-and-Logos]. 
+Note that the null values represent the theme images, which can only be added with the (image management process)[#Uploading-Icons-and-Logos], and the URLs that will be generated once those images are uploaded. 
 
 ## Update Theme 
 
-**POST: `https://api-eu.vonage.com/beta/meetings/themes/{THEME_ID}`**
+**PATCH: `https://api-eu.vonage.com/beta/meetings/themes/{THEME_ID}`**
 
 Theme properties that can be updated are the same as those that can be set upon (create)[#create-a-theme]. All images must be added via the (image management process)[#Uploading-Icons-and-Logos].
 
@@ -211,11 +208,13 @@ The type of images should be uploaded based on the background color. Colored ima
 **Logo requirements:**
 - Format: PNG
 - Maximum size: 1MB
-- Dimensions: 1-300 px 
+- Dimensions: 1 px - 300 px 
+- Background must be transparent
 
 **Favicon requirements:**
-- Format: PNG or ICO
-- Dimension: 16/16 or 32/32
+- Format: PNG
+- Maximum size: 1MB
+- Dimension: 16x16 - 32x32 and must be square
 - Background must be transparent
 
 In order to add icons and logos to a theme, they first need to be uploaded to the Meetings API AWS bucket, and then paired with the respective theme. 
@@ -275,7 +274,7 @@ This will return a 204 if successful. If you get an error like _"Check your key 
 
 ### 3. Add Keys to Theme
 
-**PUT: `https://api-eu.vonage.com/beta/meetings/themes{THEME_ID}/finalizeLogos`**
+**PUT: `https://api-eu.vonage.com/beta/meetings/themes/{THEME_ID}/finalizeLogos`**
 
 Use the theme ID of the theme you wish to update, along with the `key` used in the previous step, to link the logo with the theme that you wish to update. You can even make multiple upload calls, and then pass multiple keys to the theme update. 
 
@@ -292,3 +291,8 @@ curl --location --request PUT 'https://api-eu.vonage.com/beta/meetings/themes/{T
 }'
 ```
 
+Once the images are associated with a theme, you'll be able to see their details reflected in the response of a theme GET. The `brand_image_colored`, `brand_image_white` and `branded_favicon` values will contain the AWS Bucket Key, and their respective URLs will point to the image itself. 
+
+## Reference
+
+* [Meetings API Reference](/api/meetings)
