@@ -6,6 +6,60 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.6.0 - April 21, 2022
+
+### New
+
+- Added an optional object argument to the `connectivityReport()`, with optional field `dcListCallback` which accepts a callback function to update data center list
+
+```javascript
+rtc.connectivityReport({
+  dcListCallback: (dcList) => {...dcList, additionalDc}
+}).then((report) => {
+  console.log(report);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
+## 8.5.0
+
+### New
+
+- Expose `seen()` and `delivered()` functions for message events
+
+```javascript
+messageEvent.seen().then(() => {
+  console.log(`Seen message with id ${messageEvent.id}`);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
+- Support new message status events
+  - `message:seen`
+  - `message:delivered`
+  - `message:submitted`
+  - `message:rejected`
+  - `message:undeliverable`
+
+```javascript
+conversation.on("message:delivered", (member, event) => {
+  console.log(`Message with id ${event.id} delivered to ${member.name}`);
+});
+```
+
+- Added new state objects for message events supporting the new statuses
+  - `seen_by`
+  - `delivered_to`
+  - `submitted_to`
+  - `rejected_by`
+  - `undeliverable_to`
+
+### Changes
+
+- Update `connectivityReport()` to use proper endpoints per region
+
 ## Version 8.4.1 - February 14, 2022
 
 ### Fix
