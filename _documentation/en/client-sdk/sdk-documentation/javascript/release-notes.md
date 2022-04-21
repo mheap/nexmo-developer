@@ -22,7 +22,7 @@ rtc.connectivityReport({
 });
 ```
 
-## 8.5.0
+## Version 8.5.0 - April 20, 2022
 
 ### New
 
