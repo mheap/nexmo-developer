@@ -6,6 +6,22 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.6.0 - April 21, 2022
+
+### New
+
+- Added an optional object argument to the `connectivityReport()`, with optional field `dcListCallback` which accepts a callback function to update data center list
+
+```javascript
+rtc.connectivityReport({
+  dcListCallback: (dcList) => {...dcList, additionalDc}
+}).then((report) => {
+  console.log(report);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
 ## Version 8.5.0 - April 20, 2022
 
 ### New
