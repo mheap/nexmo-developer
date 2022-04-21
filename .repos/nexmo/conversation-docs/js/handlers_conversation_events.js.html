@@ -34,7 +34,7 @@
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
+					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:message:rejected">Conversation#message:rejected</a></li><li><a href="Conversation.html#event:message:submitted">Conversation#message:submitted</a></li><li><a href="Conversation.html#event:message:undeliverable">Conversation#message:undeliverable</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
 				</ul>
 			</li>
 			
@@ -105,6 +105,11 @@ class ConversationEventHandler {
             'audio:mute:on': this._processMuteForMedia,
             'audio:mute:off': this._processMuteForMedia,
             'message': this._processMessage,
+            'message:delivered': this._processDelivered,
+            'message:seen': this._processSeen,
+            'message:submitted': this._processSubmitted,
+            'message:rejected': this._processRejected,
+            'message:undeliverable': this._processUndeliverable
         };
     }
     /**
@@ -144,8 +149,8 @@ class ConversationEventHandler {
     }
     /**
       * Delete the requested event
-      * empty the payload of the event (text or image)
-      * use that event as constructed to update the local events' map
+      * empty the payload of the event (text, image or message)
+      * use that event as constructed to update the local events map
       * @param {object} event
       * @returns the deleted events
       * @private
@@ -240,7 +245,7 @@ class ConversationEventHandler {
     }
     /**
       * Mark the requested event as seen
-      * use that event as constructed to update the local Events' map
+      * use that event as constructed to update the local Events map
         * @param {object} event
       * @private
     */
@@ -273,13 +278,76 @@ class ConversationEventHandler {
         return textEvent;
     }
     /**
-      * Create the MessageEvent object
+      * Create the MessageEvent object and trigger .delivered()
         * @param {object} event
       * @private
     */
     _processMessage(event) {
+        var _a, _b;
         const messageEvent = new message_event_1.default(this.conversation, event);
+        // Automatically send a delivery
+        // avoid sending delivered to our own events
+        if (((_b = (_a = this.conversation) === null || _a === void 0 ? void 0 : _a.me) === null || _b === void 0 ? void 0 : _b.id) !== messageEvent.from) {
+            messageEvent.delivered();
+        }
         return messageEvent;
+    }
+    /**
+      * Mark the requested event as submitted
+      * use that event as constructed to update the local Events map
+        * @param {object} event
+      * @private
+    */
+    _processSubmitted(event) {
+        let event_to_mark = this.conversation.events.get(event.body.event_id);
+        if (event_to_mark) {
+            event_to_mark.state = event_to_mark.state || {};
+            event_to_mark.state.submitted_to = event_to_mark.state.submitted_to || {};
+            event_to_mark.state.submitted_to[event.from] = event.timestamp;
+            return event_to_mark;
+        }
+        else {
+            this.log.warn('NXMEvent not found');
+            return null;
+        }
+    }
+    /**
+      * Mark the requested event as rejected
+      * use that event as constructed to update the local Events map
+        * @param {object} event
+      * @private
+    */
+    _processRejected(event) {
+        let event_to_mark = this.conversation.events.get(event.body.event_id);
+        if (event_to_mark) {
+            event_to_mark.state = event_to_mark.state || {};
+            event_to_mark.state.rejected_by = event_to_mark.state.rejected_by || {};
+            event_to_mark.state.rejected_by[event.from] = event.timestamp;
+            return event_to_mark;
+        }
+        else {
+            this.log.warn('NXMEvent not found');
+            return null;
+        }
+    }
+    /**
+      * Mark the requested event as undeliverable
+      * use that event as constructed to update the local Events map
+        * @param {object} event
+      * @private
+    */
+    _processUndeliverable(event) {
+        let event_to_mark = this.conversation.events.get(event.body.event_id);
+        if (event_to_mark) {
+            event_to_mark.state = event_to_mark.state || {};
+            event_to_mark.state.undeliverable_to = event_to_mark.state.undeliverable_to || {};
+            event_to_mark.state.undeliverable_to[event.from] = event.timestamp;
+            return event_to_mark;
+        }
+        else {
+            this.log.warn('NXMEvent not found');
+            return null;
+        }
     }
 }
 exports.default = ConversationEventHandler;
@@ -312,7 +380,7 @@ module.exports = ConversationEventHandler;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Mon Feb 14th 2022 using the <a
+	on Wed Apr 20th 2022 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
