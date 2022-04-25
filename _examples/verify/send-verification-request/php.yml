@@ -6,6 +6,6 @@ client:
 code:
     source: .repos/vonage/vonage-php-code-snippets/verify/request.php
     from_line: 9
-    to_line: 12
+    to_line: 19
 file_name: request.php
 run_command: 'php request.php'
