@@ -60,7 +60,7 @@ If you're looking to use the Video capabilities of Vonage for meetings and want 
 
 Our Developer Advocate Garann Means [wrote an article on lessons learned after two years of Virtual Conferences](https://learn.vonage.com/blog/2022/03/14/lessons-learned-after-two-years-of-virtual-tech-conferences/), and how we approached Developer Relations during the time of COVID has certainly been a hot topic.
 
-So, given our experiences with conference online platforms and the successes or failures of how they are implemented, what apt timing for the announcement that, as a developer, you can implement your own solution! The Vonage Video API now has a big feature update that introduces true immersive experiences for end-users. The new feature called Experience Composer (Beta) goes beyond the old stream composition technique and lets developers capture entire 
+So, given our experiences with conference online platforms and the successes or failures of how they are implemented, what apt timing for the announcement that, as a developer, you can implement your own solution! The Vonage Video API now has a big feature update that introduces true immersive experiences for end-users The new feature called Experience Composer (Beta) goes beyond the old stream composition technique and lets developers capture entire applications UI for broadcasts and records. Below is just a sneak peak of what the Experience can do. We will be sharing more details here in the coming weeks. 
 
 ​​![](https://lh6.googleusercontent.com/XaFP6tqooZNPd7SSo5VRYdVbigZROqjFeRyEfMabD2E3TiCISA4_Vmzdh1x4h6YXCAUYZTUn2iswcOxv-VDGSwcRPf-SdBsISUZ1lwwiBEK_apIfmau0LtLt1bbqDBOSgMqNBRFV)
 
