@@ -44,6 +44,7 @@ Original Carrier (network code, name, country, network type) | ❌ | ✅ | ✅
 Porting Information | ❌ | ✅ | ✅
 Validity* | ❌ | ❌ | ✅
 Reachability* | ❌ | ❌ | ✅
+Real-Time Data | ❌ | ❌ | ✅
 Roaming status* | ❌ | ❌ | ✅
 Roaming carrier & country* | ❌ | ❌ | ✅
 CNAM (add-on) | ❌ | ✅ | ✅
