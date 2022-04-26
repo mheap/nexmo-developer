@@ -2,7 +2,7 @@
 title: Video Express Is Here and Why It Is Awesome!
 description: The Vonage Video Express is here! Here are some advantages, code
   samples, demo application and other reasons to give it a try.
-thumbnail: /content/blog/video-express-is-here-and-why-it’s-awesome/video-express_1200x600.png
+thumbnail: /content/blog/video-express-is-here-and-why-it's-awesome/video-express_1200x600.png
 author: dwanehemmings
 published: true
 published_at: 2021-09-23T13:38:38.639Z
@@ -49,7 +49,7 @@ See the comparison below of the starter code needed to create a video chat.
 
 ```javascript
 const session = OT.initSession(this.apiKey, this.roomId); // Init session
-session.on('sessionConnected', ...); // Handle session connected events 
+session.on('sessionConnected', ...); // Handle session connected events
 session.on('sessionDisconnected', ...); // Handle session end
 session.on('streamCreated', ...); // Subscribe to newly published streams
 session.on('streamDestroyed', ...); // Clean up on stream end
@@ -123,14 +123,14 @@ await previewPublisher.previewMedia({
 The final feature of Video Express that I want to point out is how screen sharing is handled.
 
 ```javascript
-const startScreensharing = () => {    
+const startScreensharing = () => {
   room.startScreensharing("myScreenshare");
 }
-  
+
 const stopScreensharing = () => {
   room.stopScreensharing();
 }
-  
+
 screenshareStartBtn.addEventListener("click", startScreensharing, false);
 
 screenshareStopBtn.addEventListener("click", stopScreensharing, false);
