@@ -43,7 +43,9 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
   * **Session**: defined as all events that occur during this time, from when the first participant joins, until the last to leave.
   * **Guest URL**: meeting room URL used by guests.
   * **Host URL**: meeting room URL with meeting administration capabilities used by the host.
+  * **Theme**: the set of colors, logos and styles to apply to given rooms in the account. 
 * **Features**:
+  * **Whitelabel**: ability to create rooms with specific branding or color schemes. 
   * **Chat**: space for sending written messages that are visible to all attendees in the room.
   * **Recording**: you can start a recording manually during a meeting, or set the meeting to record automatically when sending a request.
   * **Room Management**: you can delete, update or retrieve information about rooms.
@@ -68,6 +70,7 @@ There are two room types:
 
 * [Create an Instant Room](code-snippets/create-instant-room)
 * [Create a Long Term Room](code-snippets/create-long-term-room)
+* [Theme Management](code-snippets/theme-management)
 * [Meeting Room Management](code-snippets/room-management)
 * [Callbacks](code-snippets/callbacks)
 
