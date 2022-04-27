@@ -16,3 +16,5 @@ services:
       - db
     environment:
       - POSTGRES_HOST=db
+      - CHANGELOGS_PATH=/docs/_changelogs
+      - BLOG_PATH=/docs/_blog
