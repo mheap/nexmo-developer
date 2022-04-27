@@ -86,5 +86,7 @@ current:
     email: "Sina.Madani@vonage.com"
     role: "Java Developer Advocate"
     twitter: "madani_sina"
-
+  - name: "Edmond Mensah"
+    email: "edmond.mensah@vonage.com"
+    role: "Technical Writer"
 
