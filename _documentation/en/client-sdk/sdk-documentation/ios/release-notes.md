@@ -6,6 +6,16 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.3.0  - 2022-04-28
+
+### Added
+
+- `pushNotificationTTL` property added to `NXMClientConfig` to set TTL for push notifications.
+- `[NXMConversation sendMarkDeliveredMessage:message completionHandler:handler]` method added to send delivery receipts.
+- `[NXMConversation sendMarkSeenMessage]` now supports seen status for all messages.
+- `NXMMessageStatusTypeSubmitted`, `NXMMessageStatusTypeRejected`, `NXMMessageStatusTypeUndeliverable` states added to `NXMMessageStatusEvent`
+
+
 ## 4.2.1  - 2022-04-06
 
 ### Fixed
