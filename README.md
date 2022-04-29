@@ -111,7 +111,7 @@ The project can be run on your laptop, either directly or using Docker. These in
     OAS_PATH=“pwd/_open_api/api_specs/definitions” bundle exec nexmo-developer --docs=`pwd` --rake-ci
     ```
 
-    You should now be able to see the site on http://localhost:3000/
+    You should now be able to see the site on http://localhost:3000
 
 ### Setting up with Docker
 
@@ -240,16 +240,17 @@ Git docs for submodules: <https://git-scm.com/book/en/v2/Git-Tools-Submodules>
 A flow chart on surviving submodules from @lornajane: <https://lornajane.net/posts/2016/surviving-git-submodules>
 
 ## Troubleshooting
-
-#### I'm having issues with my Docker container
-
-The image may have changed, try rebuilding it with the following command:
+<details>
+<summary><b>My local setup stopped working after performing a <code>git pull</code>.</b></summary>
+The Docker image may have changed, try rebuilding it with the following command:
 
 ```bash
 $ docker-compose up --build
 ```
+</details>
 
-#### I get an exception `PG::ConnectionBad - could not connect to server: Connection refused` when I try to run the app.
+<details>
+<summary><b>I get an exception <code>PG::ConnectionBad - could not connect to server: Connection refused</code> when I try to run the app.</b></summary>
 
 This error indicates that PostgreSQL is not running. If you installed PostgreSQL using `brew` you can get information about how to start it by running:
 
@@ -258,6 +259,38 @@ $ brew info postgresql
 ```
 
 Once PostgreSQL is running you'll need to create and migrate the database. See [Setup](#running-locally) for instructions.
+</details>
+<details>
+<summary>
+<b>File changes are not showing</b>
+</summary>
+In situations where changes you made in a file do not show up in your browser redo your Docker setup using the following steps:
+
+- **Delete docker images:** Run these commands from your local repo folder checked with the branch you wish to work on. This will delete your old Docker containers and images:
+
+```
+docker rm -vf $(docker ps -a -q) THEN
+docker rmi -f $(docker images -a -q)
+```
+
+- **Build:** In your local repo folder run `docker-compose up`. Wait until it completes without error.
+
+- **Migration:** In a separate terminal, same folder, run `docker-compose run web bundle exec rake db:migrate`. Wait until it completes without error.
+
+- **Test:** In your browser open http://localhost:3000 and navigate to test for your changes in your local copy of your documentation.
+
+</details>
+
+<details>
+<summary>
+<b>Clicking a link in the navbar leads to a broken page</b>
+</summary>
+
+ Whenever new sections similar to `_blog` , `_changelogs` are added they may not be registered which leads to a broken page when selected from the navbar.
+ 
+ Check to see if the directory path is set in the `environment:` section of the  `docker-compose.yml` file. You can look up the right pathname to use from the `.env.example` file.
+ 
+</details>
 
 ## Upgrading Volta
 
