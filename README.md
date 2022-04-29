@@ -283,12 +283,15 @@ Checkout a new branch, naming it appropriately:
 ```bash
 git checkout -b your-branch-name
 ```
+There are three types of content you can add or update, these are seperated into different folders as well
 
-Locate the file containing the content you wish to update in `_documentation/en` and open it in your preferred editor. The URL on the documentation site translates to the file path in `_documentation/en`.
+- **Documentation**: You can find documentation content in the `_documentation/en` directory.
+- **Blog content**: The blog content can be found in the `_blog/blogposts/en` directory. There is also `_blog/authors/en` that contain the bios of authors of the blog.
+- **Changelog**:
 
-Make and save the necessary updates in the file.
+The names of the files you create form part of the URLs used on ADP.
 
-Add your changes:
+Once you are done with making the necessary updates in the file you can go ahead and add your changes:
 
 ```bash
 git add -p
