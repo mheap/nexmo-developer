@@ -54,9 +54,13 @@ In the majority of cases, you will receive the same service, as Vonage takes car
 | Encryption | Messages are sent securely to WhatsApp’s service where they are decrypted before being passed through the WhatsApp networks securely using the Signal protocol to end users | Messages are end-to-end encrypted between Vonage and end users using the signal protocol |
 | Feature differences | WhatsApp’s hosting does not currently support stickers or product messages. (These are expected to be available by the second half of 2022) | Stickers or product messages are supported |
 
+> **NOTE:** WhatsApp numbers provisioned on WhatsApp Cloud Hosting are currently unable to send messages to the following destinations:
+>
+> - Turkey
+
 **Which Option Should You Choose?**
 
-Unless you specifically need the stickers and product messages features, for new customers setting up their WhatsApp account directly through the [Vonage dashboard](https://dashboard.nexmo.com/), we recommend using WhatsApp’s hosting as we can get your number ready instantly.
+Unless you specifically need the stickers and product messages features or need to send messages to the destinations listed in the above note, for new customers setting up their WhatsApp account directly through the [Vonage dashboard](https://dashboard.nexmo.com/) we recommend using WhatsApp’s hosting as we can get your number ready instantly.
 
 **How to enable WhatsApp’s number hosting**
 
@@ -65,6 +69,7 @@ For a number to be hosted on WhatsApp servers, customers must create a WhatsApp 
 **Transferring existing numbers**
 
 Although it isn't currently possible to transfer already provisioned numbers between the two hosting solutions, we will soon provide a service to move numbers hosted on Vonage servers (using WhatsApp's On-premises solution) to WhatsApp’s Cloud hosting, and vice versa.
+
 
 ## WhatsApp message types
 
