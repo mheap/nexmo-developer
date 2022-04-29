@@ -286,8 +286,8 @@ git checkout -b your-branch-name
 There are three types of content you can add or update, these are seperated into different folders as well
 
 - **Documentation**: You can find documentation content in the `_documentation/en` directory.
-- **Blog content**: The blog content can be found in the `_blog/blogposts/en` directory. There is also `_blog/authors/en` that contain the bios of authors of the blog.
-- **Changelog**:
+- **Blog content**: The blog content can be found in the `_blog/blogposts/en` directory. There is also `_blog/authors/en`, which contains the bios of the authors of the blog.
+- **Changelog**: The update history of all tools and SDKs are tracked in the `_changelog/` directory. Folders in this directory act as subsections and files that represent the changelog for each tool.
 
 The names of the files you create form part of the URLs used on ADP.
 
