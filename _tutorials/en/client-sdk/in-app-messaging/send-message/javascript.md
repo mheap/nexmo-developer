@@ -11,8 +11,12 @@ You can do this by adding a handler for the message box's Submit button at the e
 
 ```javascript
 // Listen for clicks on the submit button and send the existing text value
-sendButton.addEventListener('click', async () => {
-  await conversation.sendText(messageTextarea.value);
-  messageTextarea.value = '';
+sendButton.addEventListener('click', () => {
+  conversation.sendMessage({ "message_type": "text", "text": messageTextarea.value }).then((event) => {
+      console.log("message was sent", event);
+      messageTextarea.value = '';
+  }).catch((error)=>{
+      console.error("error sending the message ", error);
+  });
 });
 ```

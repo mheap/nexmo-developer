@@ -83,7 +83,7 @@ Now that you have implemented a way to show messages on the page, add the follow
 document.getElementById("sessionName").textContent = conversation.me.user.name + "'s messages"
 
 // Load events that happened before the page loaded
-let initialEvents = await conversation.getEvents({ event_type: "text", page_size: 10, order:"desc" });
+let initialEvents = await conversation.getEvents({ event_type: "message", page_size: 10, order:"desc" });
 listMessages(initialEvents);
 
 ```
@@ -91,8 +91,8 @@ listMessages(initialEvents);
 Finally, you need to set up an event listener for any new incoming messages. You can do this by listening to the `conversation.on('text')` event. This will also update the messages count. Add the following to the bottom of the `run` function:
 
 ```javascript
-  // Any time there's a new text event, add it as a message
-  conversation.on("text", (sender, event) => {
+  // Any time there's a new message event, add it as a message
+  conversation.on("message", (sender, event) => {
     const formattedMessage = formatMessage(sender, event, conversation.me);
     messageFeed.innerHTML = messageFeed.innerHTML +  formattedMessage;
     messagesCountSpan.textContent = messagesCount;
