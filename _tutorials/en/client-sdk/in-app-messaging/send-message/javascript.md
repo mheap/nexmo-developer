@@ -5,7 +5,7 @@ description: In this step you enable your user to send a message
 
 # Send a Message
 
-To send a message to other participants in the Conversation, you need to call the `conversation.sendText()` method.
+To send a message to other participants in the Conversation, you need to call the `conversation.sendMessage()` method.
 
 You can do this by adding a handler for the message box's Submit button at the end of the `run` function:
 
