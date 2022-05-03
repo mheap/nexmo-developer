@@ -2,7 +2,7 @@
 version: '8.4.1'
 release: '14 Feb 2022'
 ---
-# Javascript SDK
+# [Javascript SDK](https://developer.nexmo.com/client-sdk/sdk-documentation/javascript)
 
 ---
 

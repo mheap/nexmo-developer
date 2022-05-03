@@ -2,7 +2,7 @@
 version: '3.0.2'
 release: '11 Feb 2022'
 ---
-# Vonage PHP Complete Package
+# [Vonage PHP SDK](https://github.com/Vonage/vonage-php-sdk-core)
 
 ---
 
@@ -37,6 +37,6 @@ As always, I will be on hand for support where implementations need workarounds 
 
 - Supported PHP versions are now 7.4, 8.0.X and 8.1.X
 psr/container now supported for v2
-- #307 Removed array access for the majority of entities
-- #305 Further removals of old code including Call and User clients, plus tests for them that are marked deprecated
-- #303 Now supports PSR logger v2
+- [#307](https://github.com/Vonage/vonage-php-sdk-core/pull/307) Removed array access for the majority of entities
+- [#305](https://github.com/Vonage/vonage-php-sdk-core/pull/305) Further removals of old code including Call and User clients, plus tests for them that are marked deprecated
+- [#303](https://github.com/Vonage/vonage-php-sdk-core/pull/303) Now supports PSR logger v2

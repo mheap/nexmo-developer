@@ -2,14 +2,14 @@
 version: '2.10.11'
 release: '10 Mar 2022'
 ---
-# Vonage Node Complete Package
+# [Vonage NodeJS SDK](https://github.com/Vonage/vonage-node-sdk)
 
 ---
 
 ## 2.10.11
 ### 10 Mar 2022
 
-- callback argument missing (#597)
+- callback argument missing [#597](https://github.com/Vonage/vonage-node-sdk/pull/597)
 - Repair signatures, fix up tests, remove legacy querystring
 
 ---
