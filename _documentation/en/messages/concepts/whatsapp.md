@@ -12,6 +12,10 @@ The advantage of WhatsApp is that the identifier of users on the platform is the
 
 > **NOTE:** WhatsApp is in Limited Availability and Vonage cannot guarantee you will receive a WhatsApp account.
 
+## Setting up a WhatsApp Business Account
+
+You can sign up for a WhatsApp Business Account via the [Vonage API Dashboard](https://dashboard.nexmo.com/). Navigate to the [Social channels](https://dashboard.nexmo.com/messages/social-channels) page of the Dashboard and select the option to set up a **WhatsApp Business Account**.
+
 ## Using existing WhatsApp Business Number
 
 If you already have a WhatsApp Business Number and would like to use that number with the Vonage Messages API, the [WhatsApp Product](https://www.nexmo.com/products/messages/whatsapp) page has more details about how to get started using WhatsApp with Vonage.
@@ -38,9 +42,11 @@ Vonage now offers a Conversation-Based Pricing model for WhatsApp messaging. Thi
   - A Vonage platform fee
   - A WhatsApp fee
 
+> **IMPORTANT**: Existing customers will by default remain on their current pricing model by default at the current per message pricing, with the option to move to the new conversation based pricing model.
+
 For more information on Vonage WhatsApp pricing, see the [Messages API pricing](https://www.vonage.com/communications-apis/messages/pricing/) page. Further information on the Conversation-Based Pricing model can be found in the [WhatsApp developer documentation](https://developers.facebook.com/docs/whatsapp/pricing)
 
-> **IMPORTANT**: Existing customers will by default remain on their current pricing model by default at the current per message pricing, with the option to move to the new conversation based pricing model.
+> **NOTE:** Since WhatsApp pricing is *per conversation* rather than *per message*, it is not possible to provide an accurate price per message. Therefore, the value given for the `price` property in the `usage` object contained in the body of a [Message Status callback](/api/messages-olympus#message-status) will be the *default price per conversation* rather than the actual price for *each message*.
 
 ## WhatsApp Number Hosting
 
