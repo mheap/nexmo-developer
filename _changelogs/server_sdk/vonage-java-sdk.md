@@ -2,7 +2,7 @@
 version: '6.4.0'
 release: '28 May 2021'
 ---
-# Vonage Java Complete Package
+# [Vonage Java SDK](https://github.com/Vonage/vonage-java-sdk)
 
 ---
 
