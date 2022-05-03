@@ -2,9 +2,9 @@
 version: '1.1.2'
 release: '25 Feb 2022'
 ---
-# Vonage CLI
+# [Vonage CLI]((https://github.com/Vonage/vonage-cli))
 
-You use the Vonage Command Line Interface (CLI) to manage your Vonage account and use Vonage API products from the command line.
+The [Vonage Command Line Interface (CLI)](https://github.com/Vonage/vonage-cli) lets you manage your account and access Vonage APIs from the command line.
 
 ---
 
@@ -15,7 +15,7 @@ You use the Vonage Command Line Interface (CLI) to manage your Vonage account an
 - fix(jwt): default A to full permissions
 - fix(sms): -h was throwing an error
 
-Full Changelog: https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.2
+[View full changelog](https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.2)
 
 ---
 
@@ -27,7 +27,7 @@ Full Changelog: https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.2
 - fix(applications): Add req'd inputs and fix usage by @kellyjandrews in #48
 - feat(sms): Add SMS plugin by @kellyjandrews in #49
 
-Full Changelog: https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.1
+[View full changelog](https://github.com/Vonage/vonage-cli/commits/@vonage/cli@1.1.1)
 
 ---
 
