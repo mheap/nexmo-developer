@@ -3,7 +3,7 @@ title: O Que São os Objetos de Controle de Chamadas (NCCOs)? | One Dev Minute
 description: Aprenda sobre os objetos de controle de chamadas, que são um
   conjunto de ações que instruem o Vonage a controlar a chamada para seu
   aplicativo Vonage
-thumbnail: /content/blog/o-que-são-os-objetos-de-controle-de-chamadas-nccos-one-dev-minute/title.png
+thumbnail: /content/blog/o-que-sao-os-objetos-de-controle-de-chamadas-nccos-one-dev-minute/title.png
 author: amanda-cavallaro
 published: true
 published_at: 2022-05-04T09:01:49.102Z
