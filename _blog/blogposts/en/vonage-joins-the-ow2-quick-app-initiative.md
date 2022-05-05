@@ -6,7 +6,7 @@ thumbnail: /content/blog/vonage-joins-the-ow2-quick-app-initiative/vonage_quicka
 author: zachary-powell-1
 published: true
 published_at: 2022-05-05T08:57:11.484Z
-updated_at: 2022-05-04T09:48:30.043Z
+updated_at: 2022-05-05T09:48:30.043Z
 category: announcement
 tags:
   - quickapps
