@@ -92,7 +92,7 @@ navigation_overrides:
         signed-webhooks:
           label: 'Beta'
         payments:
-          label: 'Dev Preview'        
+          label: 'Dev Preview'
     sip:
       concepts:
         programmable-sip:
@@ -119,9 +119,9 @@ navigation_overrides:
     setup:
       navigation_weight: 2
     configuration:
-      navigation_weight: 3  
+      navigation_weight: 3
     in-app-voice:
-      navigation_weight: 4 
+      navigation_weight: 4
     in-app-messaging:
       navigation_weight: 5
       label: 'Beta'
@@ -142,7 +142,6 @@ navigation_overrides:
   messages:
     svg: 'chat'
     svgColor: 'purple'
-    label: 'Beta'
     code-snippets:
       collapsible: false
   meetings:
