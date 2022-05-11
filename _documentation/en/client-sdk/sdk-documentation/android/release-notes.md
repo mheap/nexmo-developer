@@ -12,7 +12,7 @@ navigation_weight: 0
 
 - Support for `call:transfer` within `NexmoCall`
 - Added `NexmoLegTransferEvent` containing details of previous and current conversation when a call is transferred
-- Added CallEventListener to receive `NexmoLegTransferEvent` with new membership when a call is transferred to a new conversation.
+- Added `CallEventListener` to receive `NexmoLegTransferEvent` with new members when a call is transferred to a new conversation.
 
 ```java
    NexmoCallEventListener callEventListener = new NexmoCallEventListener() {
