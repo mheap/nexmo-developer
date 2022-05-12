@@ -52,7 +52,7 @@ Vonage provides the Auto-redact service that automatically redacts PII from our 
 
 Please find a relevant pricing for the auto-redact service here: [Vonage Prices](https://www.vonage.com/communications-apis/pricing/).
 
-To request activation of the Auto-redact service for your account, please visit [this page](https://info.nexmo.com/RedactAPI.html).
+To request activation of the Auto-redact service for your account, please visit [this page](https://api.support.vonage.com/hc/en-us).
 
 ### Redact API
 
@@ -64,7 +64,7 @@ It is not possible to make the redaction API request immediately after receiving
 
 The scope of redaction of the Redact API depends on what Vonage communication APIs you were using. The detailed description is provided below.
 
-To request access to the Redact API, please visit [this page](https://info.nexmo.com/RedactAPI.html).
+To request access to the Redact API, please visit [this page](https://api.support.vonage.com/hc/en-us).
 
 To learn more about the Redact API please refer to the [Redact API Reference](/api/redact).
 
