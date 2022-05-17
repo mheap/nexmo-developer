@@ -1,5 +1,50 @@
 [
   {
+    "title": "Receive SMS Messages With Node.js and Express | One Dev Minute",
+    "description": "In this quick walkthrough, you'll learn how to receive SMS messages with the Vonage Messages API, Express and Node.js.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/receive-sms-messages-with-node-js-and-express-one-dev-minute/receive.png",
+    "author": {
+      "twitch_url": "https://www.twitch.tv/amdcavallaro",
+      "hidden": false,
+      "image_url": "/content/images/amanda-avatar-picture.jpeg",
+      "name": "Amanda Cavallaro",
+      "website_url": "https://www.amandacavallaro.com",
+      "linkedin_url": "https://uk.linkedin.com/in/amandacavallaro",
+      "youtube_url": "https://www.youtube.com/c/AmandaCavallaro",
+      "twitter": "amdcavallaro",
+      "github_url": "https://www.github.com/amdcavallaro",
+      "spotlight": false,
+      "title": "Developer Advocate",
+      "stackoverflow_url": "https://stackoverflow.com/users/5113155/amanda-cavallaro",
+      "email": "amanda.cavallaro@vonage.com",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "amanda-cavallaro"
+    },
+    "published": true,
+    "published_at": "2022-05-17 13:22:33 UTC",
+    "updated_at": "2022-05-17 13:22:35 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "javascript",
+      "node",
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/05/17/receive-sms-messages-with-node-js-and-express-one-dev-minute",
+    "filename": "receive-sms-messages-with-node-js-and-express-one-dev-minute"
+  },
+  {
     "title": "Startup Spotlight Series: Let's meet UrbanAir",
     "description": "Meet Bucharest-based startup UrbanAir as a part of Vonage Startup Spotlight series.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/startup-spotlight-series-lets-meet-urbanair/startups_urbanair.png",
@@ -32,6 +77,7 @@
       "numbers-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -65,6 +111,7 @@
       "quickapps"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -109,6 +156,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -144,6 +192,7 @@
       "blog-posts"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -188,6 +237,7 @@
       "firebase"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -224,6 +274,7 @@
       "symbl.ai"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -257,6 +308,7 @@
       "react"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -293,6 +345,7 @@
       "introduction"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -335,6 +388,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -368,6 +422,7 @@
       "introduction"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -406,6 +461,7 @@
       "startups"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -437,6 +493,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -476,6 +533,7 @@
       "verify-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -511,6 +569,7 @@
       "international-womens-day"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -545,6 +604,7 @@
       "android"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -589,6 +649,7 @@
       "italian"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -625,6 +686,7 @@
       "devlife"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -664,6 +726,7 @@
       "javascript"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -699,6 +762,7 @@
       "conferences"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -731,6 +795,7 @@
       "AWS"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -771,6 +836,7 @@
       "php"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -812,6 +878,7 @@
       "laravel"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -856,6 +923,7 @@
       "portuguese"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -892,6 +960,7 @@
       "diversity"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -936,6 +1005,7 @@
       "portuguese"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -975,6 +1045,7 @@
       "sms-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1013,6 +1084,7 @@
       "sms-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1056,6 +1128,7 @@
       "portuguese"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1088,6 +1161,7 @@
       "javascript"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1127,6 +1201,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1166,6 +1241,7 @@
       "sms"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1206,6 +1282,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1243,6 +1320,7 @@
       "messages-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1280,6 +1358,7 @@
       "ruby"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1320,6 +1399,7 @@
       "php"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1353,6 +1433,7 @@
       "hackathon"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1388,6 +1469,7 @@
       "conversation-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1423,6 +1505,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1461,6 +1544,7 @@
       "CRM"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1498,6 +1582,7 @@
       "sms"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1536,6 +1621,7 @@
       "vonage-ai-studio"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1574,6 +1660,7 @@
       "A2P"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1616,6 +1703,7 @@
       "laravel"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1653,6 +1741,7 @@
       "whatsapp"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1697,6 +1786,7 @@
       "javascript"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1731,6 +1821,7 @@
       "payments"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1771,6 +1862,7 @@
       "verify-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1809,6 +1901,7 @@
       "devrel"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1842,6 +1935,7 @@
       "symblai"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1878,6 +1972,7 @@
       "twitch"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1915,6 +2010,7 @@
       "node"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1954,6 +2050,7 @@
       "flask"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -1987,6 +2084,7 @@
       "react"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2031,6 +2129,7 @@
       "javascript"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2067,6 +2166,7 @@
       "vonage-ai"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2108,6 +2208,7 @@
       "testing"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2145,6 +2246,7 @@
       "coupons"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2180,6 +2282,7 @@
       "messages-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2218,6 +2321,7 @@
       "messages-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2257,6 +2361,7 @@
       "python"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2295,6 +2400,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2330,6 +2436,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2366,6 +2473,7 @@
       "messages-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2407,6 +2515,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2443,6 +2552,7 @@
       "accessibility"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2476,6 +2586,7 @@
       "javascript"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2517,6 +2628,7 @@
       "minimal-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2554,6 +2666,7 @@
       "devrel"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2589,6 +2702,7 @@
       "ios"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2620,6 +2734,7 @@
       "devlife"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2660,6 +2775,7 @@
       "verify-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2698,6 +2814,7 @@
       "recruitment"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2737,6 +2854,7 @@
       "sms-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2777,6 +2895,7 @@
       "dotnet"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2817,6 +2936,7 @@
       "verify-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2861,6 +2981,7 @@
       "nodejs"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2897,6 +3018,7 @@
       "css"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2933,6 +3055,7 @@
       "client-sdk"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -2977,6 +3100,7 @@
       "dialogflow"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3017,6 +3141,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3057,6 +3182,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3095,6 +3221,7 @@
       "fastapi"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3137,6 +3264,7 @@
       "bots"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3175,6 +3303,7 @@
       "introduction"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3213,6 +3342,7 @@
       "environment variables"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3246,6 +3376,7 @@
       "hackathon"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3285,6 +3416,7 @@
       "messages-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3324,6 +3456,7 @@
       "opensource"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3357,6 +3490,7 @@
       "react"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3393,6 +3527,7 @@
       "video-express"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3430,6 +3565,7 @@
       "Careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3461,6 +3597,7 @@
       "cli"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3498,6 +3635,7 @@
       "python"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3542,6 +3680,7 @@
       "nodejs"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3566,6 +3705,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3602,6 +3742,7 @@
       "django"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3638,6 +3779,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3673,6 +3815,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3710,6 +3853,7 @@
       "javascript"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3754,6 +3898,7 @@
       "browser"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3794,6 +3939,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3827,6 +3973,7 @@
       "Lerna"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3865,6 +4012,7 @@
       "sms-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3898,6 +4046,7 @@
       "dotnet"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3935,6 +4084,7 @@
       "playground"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -3974,6 +4124,7 @@
       "fastapi"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4013,6 +4164,7 @@
       "verify-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4051,6 +4203,7 @@
       "aspnet"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4086,6 +4239,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4125,6 +4279,7 @@
       "sms-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4161,6 +4316,7 @@
       "cloud-functions"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4198,6 +4354,7 @@
       "mysql"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4234,6 +4391,7 @@
       "gretty"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4267,6 +4425,7 @@
       "precall"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4306,6 +4465,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4342,6 +4502,7 @@
       "release"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4377,6 +4538,7 @@
       "conversation-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4411,6 +4573,7 @@
       "mobile"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4450,6 +4613,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4483,6 +4647,7 @@
       "purefunction"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4518,6 +4683,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4561,6 +4727,7 @@
       "devrel"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4600,6 +4767,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4637,6 +4805,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4674,6 +4843,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4706,6 +4876,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4745,6 +4916,7 @@
       "sms-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4777,6 +4949,7 @@
       "JetPack"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4816,6 +4989,7 @@
       "partners"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4854,6 +5028,7 @@
       "google-apps-script"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4894,6 +5069,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4929,6 +5105,7 @@
       "sql"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4964,6 +5141,7 @@
       "python"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -4997,6 +5175,7 @@
       "moderation"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5032,6 +5211,7 @@
       "swift"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5066,6 +5246,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5101,6 +5282,7 @@
       "ビデオapi"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5143,6 +5325,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5177,6 +5360,7 @@
       "conversation-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5216,6 +5400,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5252,6 +5437,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5290,6 +5476,7 @@
       "startups"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5327,6 +5514,7 @@
       "node"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5364,6 +5552,7 @@
       "multiparty"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5402,6 +5591,7 @@
       "startups"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5437,6 +5627,7 @@
       "angular"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5470,6 +5661,7 @@
       "python"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5510,6 +5702,7 @@
       "websockets"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5547,6 +5740,7 @@
       "nextjs"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5583,6 +5777,7 @@
       "UI"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5618,6 +5813,7 @@
       "cross-platform"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5656,6 +5852,7 @@
       "startups"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5691,6 +5888,7 @@
       "cross-platform"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5731,6 +5929,7 @@
       "client-sdk"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5769,6 +5968,7 @@
       "aws"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5806,6 +6006,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5843,6 +6044,7 @@
       "number-insight"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5877,6 +6079,7 @@
       "conversation-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5911,6 +6114,7 @@
       "ios"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5949,6 +6153,7 @@
       "vscode"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -5982,6 +6187,7 @@
       "python"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6017,6 +6223,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6055,6 +6262,7 @@
       "graphql"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6092,6 +6300,7 @@
       "node"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6130,6 +6339,7 @@
       "python"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6167,6 +6377,7 @@
       "errors"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6200,6 +6411,7 @@
       "react"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6233,6 +6445,7 @@
       "sdk"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6267,6 +6480,7 @@
       "conversation-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6305,6 +6519,7 @@
       "react-native"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6338,6 +6553,7 @@
       "verify-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6375,6 +6591,7 @@
       "APIs"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6410,6 +6627,7 @@
       "javascript"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6446,6 +6664,7 @@
       "aws"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6484,6 +6703,7 @@
       "sms-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6521,6 +6741,7 @@
       "international-womens-day"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6558,6 +6779,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6596,6 +6818,7 @@
       "startups"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6631,6 +6854,7 @@
       "conversation-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6666,6 +6890,7 @@
       "vapor"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6702,6 +6927,7 @@
       "sms-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6740,6 +6966,7 @@
       "startups"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6777,6 +7004,7 @@
       "devrel"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6814,11 +7042,42 @@
       ""
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
     "link": "blog/21/02/18/technical-guide-for-us-short-code-api-deprecation-1",
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
+  },
+  {
+    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
+    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
+    "author": {
+      "team": true,
+      "name": "Avital Tzubeli",
+      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
+      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
+      "website_url": "",
+      "short_name": "avital-tzubelivonage-com"
+    },
+    "published": false,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "angular",
+      "rxjs"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
+    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
     "title": "Setting up CI/CD with Github Actions",
@@ -6848,6 +7107,7 @@
     "tags": [
       "github"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
     "filename": "setting-up-ci-cd-with-github-actions"
@@ -6876,38 +7136,10 @@
     "tags": [
       "high-availability"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
     "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
-  },
-  {
-    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
-    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
-    "author": {
-      "team": true,
-      "name": "Avital Tzubeli",
-      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
-      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
-      "website_url": "",
-      "short_name": "avital-tzubelivonage-com"
-    },
-    "published": false,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "angular",
-      "rxjs"
-    ],
-    "locale": "en",
-    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
-    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -6936,6 +7168,7 @@
       "ruby-sdk"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -6972,6 +7205,7 @@
       "WebComponent"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7009,6 +7243,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7048,6 +7283,7 @@
       "javascript"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7085,6 +7321,7 @@
       "whatsapp"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7119,6 +7356,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7154,6 +7392,7 @@
       "swift"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7189,6 +7428,7 @@
       "opensource"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7224,6 +7464,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7258,6 +7499,7 @@
       "ktor"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7295,6 +7537,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7329,6 +7572,7 @@
       "number-insight-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7364,6 +7608,7 @@
       "vapor"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7399,6 +7644,7 @@
       ""
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7434,6 +7680,7 @@
       "opensource"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7468,6 +7715,7 @@
       "sms-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7501,6 +7749,7 @@
       "ruby-sdk"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7538,6 +7787,7 @@
       "svelte"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7574,6 +7824,7 @@
       "graphql"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7617,6 +7868,7 @@
       "spotlight"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7651,6 +7903,7 @@
       "drupal"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7683,6 +7936,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7720,6 +7974,7 @@
       "sms-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7757,6 +8012,7 @@
       "go"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7794,6 +8050,7 @@
       "node"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7826,6 +8083,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7868,6 +8126,7 @@
       "jamstack"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7905,6 +8164,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7940,6 +8200,7 @@
       "verify-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -7973,6 +8234,7 @@
       "voyagers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8015,6 +8277,7 @@
       "nuxt"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8048,6 +8311,7 @@
       "asr"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8085,6 +8349,7 @@
       "flask"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8123,6 +8388,7 @@
       "deliverability"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8160,6 +8426,7 @@
       "greenhouse"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8193,6 +8460,7 @@
       "voyagers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8229,6 +8497,7 @@
       "mfa"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8267,6 +8536,7 @@
       "video-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8302,6 +8572,7 @@
       "aws"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8335,6 +8606,7 @@
       "event-sourcing"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8368,6 +8640,7 @@
       "voyagers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8406,6 +8679,7 @@
       "careers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8441,6 +8715,7 @@
       "hacktoberfest"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8474,6 +8749,7 @@
       "Android"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8511,6 +8787,7 @@
       "go"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8544,6 +8821,7 @@
       "vonage-voyagers"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8573,6 +8851,7 @@
       "slug": "inspiration",
       "color": "#3298c4"
     },
+    "canonical": "",
     "updated_at": "2020-11-02 12:04:24 UTC",
     "tags": [
       "vue",
@@ -8613,6 +8892,7 @@
       "low-code",
       "outsystems"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/29/join-the-outsystems-vonage-linkit-2020-developer-challenge",
     "filename": "join-the-outsystems-vonage-linkit-2020-developer-challenge"
@@ -8647,6 +8927,7 @@
       "hacktoberfest",
       "bots"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/28/12-bots-to-better-your-open-source-project",
     "filename": "12-bots-to-better-your-open-source-project"
@@ -8678,6 +8959,7 @@
       "blazor",
       "azure"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/27/translate-a-phone-call-with-blazor-signalr-and-azure-dr",
     "filename": "translate-a-phone-call-with-blazor-signalr-and-azure-dr"
@@ -8710,6 +8992,7 @@
       "php",
       "whatsapp"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/26/send-whatsapp-messages-with-laravel-dr",
     "filename": "send-whatsapp-messages-with-laravel-dr"
@@ -8741,6 +9024,7 @@
       "messages-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/22/respect-api-rate-limits-with-a-backoff-dr",
     "filename": "respect-api-rate-limits-with-a-backoff-dr"
@@ -8770,6 +9054,7 @@
       "facial-id",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/21/build-a-secure-facial-id-application-using-the-vonage-video-api",
     "filename": "build-a-secure-facial-id-application-using-the-vonage-video-api"
@@ -8800,6 +9085,7 @@
       "フェイシャル-id"
     ],
     "spotlight": false,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -8832,6 +9118,7 @@
       "dot-net",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/20/how-to-handle-handset-input-dtmf-from-a-phone-call-in-asp-net-core",
     "filename": "how-to-handle-handset-input-dtmf-from-a-phone-call-in-asp-net-core"
@@ -8865,6 +9152,7 @@
       "postman",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/19/variables-and-chaining-requests-in-postman",
     "filename": "variables-and-chaining-requests-in-postman"
@@ -8899,6 +9187,7 @@
       "open-source",
       "social-impact"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/16/33-high-impact-open-source-projects-seeking-contributors",
     "filename": "33-high-impact-open-source-projects-seeking-contributors"
@@ -8933,6 +9222,7 @@
       "messages-api",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/15/introducing-google-verified-sms-with-vonage",
     "filename": "introducing-google-verified-sms-with-vonage"
@@ -8967,6 +9257,7 @@
       "python",
       "reports-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/14/introducing-the-vonage-reports-api",
     "filename": "introducing-the-vonage-reports-api"
@@ -8998,6 +9289,7 @@
       "hacktoberfest",
       "opensource"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/13/surviving-hacktoberfest-a-guide-for-maintainers",
     "filename": "surviving-hacktoberfest-a-guide-for-maintainers"
@@ -9028,6 +9320,7 @@
       "video-api",
       "video-conferencing"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/12/build-a-video-conference-app-with-react-native-and-vonage-video-api",
     "filename": "build-a-video-conference-app-with-react-native-and-vonage-video-api"
@@ -9066,6 +9359,7 @@
       "hacktoberfest",
       "opensource"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/09/other-ways-to-contribute-to-opensource-this-hacktoberfest",
     "filename": "other-ways-to-contribute-to-opensource-this-hacktoberfest"
@@ -9100,6 +9394,7 @@
       "github",
       "hacktoberfest"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/08/hacktoberfest-using-github-desktop",
     "filename": "hacktoberfest-using-github-desktop"
@@ -9133,6 +9428,7 @@
       "voice-api",
       "web-components"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/07/using-web-components-in-a-react-application-dr",
     "filename": "using-web-components-in-a-react-application-dr"
@@ -9164,6 +9460,7 @@
       "github",
       "hacktoberfest"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/06/opening-multiple-pull-requests-dr",
     "filename": "opening-multiple-pull-requests-dr"
@@ -9192,6 +9489,7 @@
     "tags": [
       "machine-learning"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/05/introduction-to-gpt-3",
     "filename": "introduction-to-gpt-3"
@@ -9225,6 +9523,7 @@
       "git",
       "opensource"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/02/version-control-guis",
     "filename": "version-control-guis"
@@ -9260,6 +9559,7 @@
       "git",
       "hacktoberfest"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/10/01/how-to-create-a-pull-request-with-github-desktop",
     "filename": "how-to-create-a-pull-request-with-github-desktop"
@@ -9290,6 +9590,7 @@
     "tags": [
       "go"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/30/go-explore-the-vonage-apis-with-vonage-go-sdk",
     "filename": "go-explore-the-vonage-apis-with-vonage-go-sdk"
@@ -9325,6 +9626,7 @@
       "github",
       "hacktoberfest"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/29/an-introduction-to-git-dr",
     "filename": "an-introduction-to-git-dr"
@@ -9358,6 +9660,7 @@
       "hacktoberfest",
       "opensource"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/28/vonage-joins-hacktoberfest-2020",
     "filename": "vonage-joins-hacktoberfest-2020"
@@ -9388,6 +9691,7 @@
       "messages-api",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/24/handling-unsupported-inbound-messages-with-the-messages-api-dr",
     "filename": "handling-unsupported-inbound-messages-with-the-messages-api-dr"
@@ -9421,6 +9725,7 @@
       "http",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/23/5-ways-to-make-http-requests-in-node-js-2020-edition",
     "filename": "5-ways-to-make-http-requests-in-node-js-2020-edition"
@@ -9455,6 +9760,7 @@
     "tags": [
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/22/dynamic-layouts-in-hls-rmtp-broadcasts-with-the-video-api-dr",
     "filename": "dynamic-layouts-in-hls-rmtp-broadcasts-with-the-video-api-dr"
@@ -9485,6 +9791,7 @@
       "python"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/17/use-python-and-the-number-insights-api-to-analyze-leads-dr",
     "filename": "use-python-and-the-number-insights-api-to-analyze-leads-dr"
@@ -9517,6 +9824,7 @@
       "open-api",
       "postman"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/16/announcing-the-vonage-apis-postman-collection",
     "filename": "announcing-the-vonage-apis-postman-collection"
@@ -9547,6 +9855,7 @@
       "chatbots"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/09/build-a-whatsapp-currency-conversion-bot-with-node-js",
     "filename": "build-a-whatsapp-currency-conversion-bot-with-node-js"
@@ -9576,6 +9885,7 @@
     "tags": [
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/03/opentok-version-2-18-whats-new-and-how-you-can-use-it",
     "filename": "opentok-version-2-18-whats-new-and-how-you-can-use-it"
@@ -9606,6 +9916,7 @@
       "open-api",
       "station"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/02/arriving-at-station-the-evolution-of-our-api-documentation-platform",
     "filename": "arriving-at-station-the-evolution-of-our-api-documentation-platform"
@@ -9636,6 +9947,7 @@
       "video-api",
       "augmented-reality"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/09/01/create-custom-ar-filters-with-vonage-video-api-and-deepar",
     "filename": "create-custom-ar-filters-with-vonage-video-api-and-deepar"
@@ -9669,6 +9981,7 @@
       "low-code",
       "no-code"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/27/build-a-clock-in-service-with-the-shortcuts-ios-app",
     "filename": "build-a-clock-in-service-with-the-shortcuts-ios-app"
@@ -9700,6 +10013,7 @@
       "jwt",
       "json"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/26/how-to-debug-json-web-tokens-jwts",
     "filename": "how-to-debug-json-web-tokens-jwts"
@@ -9734,6 +10048,7 @@
       "html",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/25/add-overlay-to-video-with-the-vonage-video-api",
     "filename": "add-overlay-to-video-with-the-vonage-video-api"
@@ -9765,6 +10080,7 @@
       "dotnet",
       "webassembly"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/20/build-an-sms-dashboard-with-blazor-webassembly",
     "filename": "build-an-sms-dashboard-with-blazor-webassembly"
@@ -9796,6 +10112,7 @@
       "ionic"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/19/how-to-send-an-sms-with-ionic-dr",
     "filename": "how-to-send-an-sms-with-ionic-dr"
@@ -9827,6 +10144,7 @@
       "java",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/18/how-to-add-two-factor-authentication-using-java-and-spark",
     "filename": "how-to-add-two-factor-authentication-using-java-and-spark"
@@ -9858,6 +10176,7 @@
     "tags": [
       "javascript"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/13/creating-a-web-component-with-open-wc",
     "filename": "creating-a-web-component-with-open-wc"
@@ -9888,6 +10207,7 @@
     "tags": [
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/12/build-a-simple-customer-support-channel-with-whatsapp",
     "filename": "build-a-simple-customer-support-channel-with-whatsapp"
@@ -9927,6 +10247,7 @@
       "node",
       "http"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/11/5-ways-to-build-a-node-js-api",
     "filename": "5-ways-to-build-a-node-js-api"
@@ -9958,6 +10279,7 @@
       "voice-api",
       "voicemail"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/10/how-to-build-a-voicemail-app-with-asp-net-core-dr",
     "filename": "how-to-build-a-voicemail-app-with-asp-net-core-dr"
@@ -9988,6 +10310,7 @@
       "aspnet",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/07/how-to-play-audio-into-a-call-with-asp-net-core-mvc-dr",
     "filename": "how-to-play-audio-into-a-call-with-asp-net-core-mvc-dr"
@@ -10019,6 +10342,7 @@
       "sms"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/06/track-device-data-in-real-time-with-vonage-messages-api-and-ubidots-dr",
     "filename": "track-device-data-in-real-time-with-vonage-messages-api-and-ubidots-dr"
@@ -10053,6 +10377,7 @@
       "node",
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/05/send-raspberry-pi-ip-address-on-boot-in-node-with-messages",
     "filename": "send-raspberry-pi-ip-address-on-boot-in-node-with-messages"
@@ -10084,6 +10409,7 @@
       "voice-api",
       "ruby"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/04/record-a-call-in-ruby-with-vonage-voice-api-websockets",
     "filename": "record-a-call-in-ruby-with-vonage-voice-api-websockets"
@@ -10115,6 +10441,7 @@
       "sdk",
       "release"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/08/03/announcing-the-php-server-sdk-version-2-2-0-release",
     "filename": "announcing-the-php-server-sdk-version-2-2-0-release"
@@ -10146,6 +10473,7 @@
       "dialogflow"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/30/add-dialogflow-and-the-vonage-messages-api-to-your-flask-app-dr",
     "filename": "add-dialogflow-and-the-vonage-messages-api-to-your-flask-app-dr"
@@ -10176,6 +10504,7 @@
     "tags": [
       "best-practice"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/29/using-private-keys-in-environment-variables",
     "filename": "using-private-keys-in-environment-variables"
@@ -10206,6 +10535,7 @@
       "asp.net",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/28/how-to-receive-sms-delivery-receipts-with-asp-net-core-mvc-dr",
     "filename": "how-to-receive-sms-delivery-receipts-with-asp-net-core-mvc-dr"
@@ -10237,6 +10567,7 @@
       "ruby",
       "sdk"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/27/nexmo-ruby-v7-2-0-release",
     "filename": "nexmo-ruby-v7-2-0-release"
@@ -10267,6 +10598,7 @@
       "new-joiner",
       "introduction"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/24/avital-tzubeli-joins-the-vonage-developer-relations-team",
     "filename": "avital-tzubeli-joins-the-vonage-developer-relations-team"
@@ -10301,6 +10633,7 @@
     "tags": [
       "video-api"
     ],
+    "canonical": "",
     "outdated": true,
     "locale": "en",
     "link": "blog/20/07/23/best-practices-for-multi-party-video-conferencing-with-the-vonage-video-api-dr",
@@ -10333,6 +10666,7 @@
       "devrel",
       "developer-experience"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/22/taking-time-for-yourself-code-wise",
     "filename": "taking-time-for-yourself-code-wise"
@@ -10367,6 +10701,7 @@
       "nodejs",
       "conference-call"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/21/create-a-code-of-conduct-incident-line-with-node-js",
     "filename": "create-a-code-of-conduct-incident-line-with-node-js"
@@ -10397,6 +10732,7 @@
       "messages-api",
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/20/how-to-receive-an-sms-message-with-asp-net-core-mvc-and-signalr",
     "filename": "how-to-receive-an-sms-message-with-asp-net-core-mvc-and-signalr"
@@ -10431,6 +10767,7 @@
       "2fa",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/17/how-to-add-two-factor-authentication-with-node-js-and-express",
     "filename": "how-to-add-two-factor-authentication-with-node-js-and-express"
@@ -10461,6 +10798,7 @@
     "tags": [
       "voyagers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/15/introducing-the-vonage-voyagers-developer-champions-program",
     "filename": "introducing-the-vonage-voyagers-developer-champions-program"
@@ -10492,6 +10830,7 @@
       "signalr",
       "sms"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/14/how-to-receive-an-sms-with-blazor-and-signalr",
     "filename": "how-to-receive-an-sms-with-blazor-and-signalr"
@@ -10525,6 +10864,7 @@
       "low-code",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/13/zapier-weather-voice-notifications-dr",
     "filename": "zapier-weather-voice-notifications-dr"
@@ -10555,6 +10895,7 @@
       "php",
       "verify"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/10/aws-cognito-verify-with-php",
     "filename": "aws-cognito-verify-with-php"
@@ -10586,6 +10927,7 @@
       "sms-api",
       "mvc"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/09/how-to-send-an-sms-with-asp-net-core-mvc",
     "filename": "how-to-send-an-sms-with-asp-net-core-mvc"
@@ -10616,6 +10958,7 @@
       "dotnet",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/08/how-to-send-an-sms-with-blazor",
     "filename": "how-to-send-an-sms-with-blazor"
@@ -10646,6 +10989,7 @@
       "messages-api",
       "nodejs"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/06/validating-inbound-messages-from-the-vonage-messages-api-dr",
     "filename": "validating-inbound-messages-from-the-vonage-messages-api-dr"
@@ -10678,6 +11022,7 @@
       "new-joiner",
       "introduction"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/03/abdul-joins-the-vonage-developer-relations-team",
     "filename": "abdul-joins-the-vonage-developer-relations-team"
@@ -10708,6 +11053,7 @@
       "new-joiner",
       "introduction"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/03/clarisse-ng-joins-the-vonage-developer-relations-team",
     "filename": "clarisse-ng-joins-the-vonage-developer-relations-team"
@@ -10737,6 +11083,7 @@
       "php",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/02/multi-channel-tone-analysis-in-php-with-amazon-comprehend",
     "filename": "multi-channel-tone-analysis-in-php-with-amazon-comprehend"
@@ -10767,6 +11114,7 @@
       "xstate",
       "state-machines"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/07/01/learn-and-apply-xstate-with-vonage-video",
     "filename": "learn-and-apply-xstate-with-vonage-video"
@@ -10802,6 +11150,7 @@
       "graphql",
       "insights-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/30/integrate-advanced-insights-to-monitor-video-quality",
     "filename": "integrate-advanced-insights-to-monitor-video-quality"
@@ -10836,39 +11185,10 @@
       "javascript",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/24/use-a-green-screen-in-javascript-with-vonage-video",
     "filename": "use-a-green-screen-in-javascript-with-vonage-video"
-  },
-  {
-    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
-    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
-    "author": {
-      "team": false,
-      "spotlight": false,
-      "name": "Lorna Mitchell",
-      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
-      "twitter": "lornajane",
-      "image_url": "/content/images/lornajane.jpg",
-      "alumni": true,
-      "short_name": "lornajane"
-    },
-    "published": true,
-    "published_at": "2020-06-23 07:53:47 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "security",
-      "verify-api"
-    ],
-    "locale": "it",
-    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
-    "filename": "add-strong-psd2-authentication-to-your-application"
   },
   {
     "title": "Add Strong PSD2 Authentication to Your Application",
@@ -10903,6 +11223,36 @@
     "filename": "add-strong-psd2-authentication-to-your-application"
   },
   {
+    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
+    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
+    "author": {
+      "team": false,
+      "spotlight": false,
+      "name": "Lorna Mitchell",
+      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
+      "twitter": "lornajane",
+      "image_url": "/content/images/lornajane.jpg",
+      "alumni": true,
+      "short_name": "lornajane"
+    },
+    "published": true,
+    "published_at": "2020-06-23 07:53:47 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "security",
+      "verify-api"
+    ],
+    "locale": "it",
+    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
+    "filename": "add-strong-psd2-authentication-to-your-application"
+  },
+  {
     "title": "Announcing .NET SDK Version 5.0.0",
     "description": "Version 5.0.0 of our .NET SDK is the biggest release yet, with some significant integration improvements. Take a look at what's new!",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-net-sdk-version-5-0-0/Blog_SDK-Updates_1200x600.png",
@@ -10929,6 +11279,7 @@
       "sdk",
       "sdk-announcements"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/22/announcing-net-sdk-version-5-0-0",
     "filename": "announcing-net-sdk-version-5-0-0"
@@ -10959,6 +11310,7 @@
       "php",
       "transcription"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/19/voice-transcription-pipeline-in-php-with-vonage-dr",
     "filename": "voice-transcription-pipeline-in-php-with-vonage-dr"
@@ -10993,6 +11345,7 @@
       "netlify",
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/17/build-a-serverless-eurovision-voting-system-with-node-js-and-vonage",
     "filename": "build-a-serverless-eurovision-voting-system-with-node-js-and-vonage"
@@ -11022,6 +11375,7 @@
       "aws",
       "php"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/15/automated-message-migration-from-aws-sqs-to-dynamodb",
     "filename": "automated-message-migration-from-aws-sqs-to-dynamodb"
@@ -11051,6 +11405,7 @@
       "node",
       "cli"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/12/comparing-cli-building-libraries",
     "filename": "comparing-cli-building-libraries"
@@ -11081,6 +11436,7 @@
       "sms-api",
       "aws"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/10/using-amazon-sqs-for-queuing-messages-using-aws-lambda-and-python",
     "filename": "using-amazon-sqs-for-queuing-messages-using-aws-lambda-and-python"
@@ -11111,6 +11467,7 @@
       "deno",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/09/build-a-speech-translation-app-on-deno-with-azure-and-vonage",
     "filename": "build-a-speech-translation-app-on-deno-with-azure-and-vonage"
@@ -11146,6 +11503,7 @@
       "verify-api",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/08/befriending-service-with-symfony-and-vonage",
     "filename": "befriending-service-with-symfony-and-vonage"
@@ -11175,6 +11533,7 @@
       "cli",
       "nodejs"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/05/building-your-next-cli-dr",
     "filename": "building-your-next-cli-dr"
@@ -11206,6 +11565,7 @@
       "google-classroom"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/04/build-an-sms-reminder-tool-for-teachers-using-google-classroom-dr",
     "filename": "build-an-sms-reminder-tool-for-teachers-using-google-classroom-dr"
@@ -11237,6 +11597,7 @@
       "open-api",
       "documentation"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/03/openapi-makes-easier-integrations",
     "filename": "openapi-makes-easier-integrations"
@@ -11267,6 +11628,7 @@
       "voice-api",
       "nodejs"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/02/introducing-voice-api-speech-recognition",
     "filename": "introducing-voice-api-speech-recognition"
@@ -11297,6 +11659,7 @@
       "node",
       "messenger"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/06/01/using-dialogflow-with-firebase-and-the-vonage-messages-sandbox-dr",
     "filename": "using-dialogflow-with-firebase-and-the-vonage-messages-sandbox-dr"
@@ -11327,6 +11690,7 @@
       "python",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/28/using-a-message-queue-with-sms-for-throughput-limitations",
     "filename": "using-a-message-queue-with-sms-for-throughput-limitations"
@@ -11361,6 +11725,7 @@
       "messages-api",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/27/messaging-everywhere-with-node-dr",
     "filename": "messaging-everywhere-with-node-dr"
@@ -11392,6 +11757,7 @@
       "verify-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/26/add-sms-verification-in-a-react-native-app-using-node-js-and-express-dr",
     "filename": "add-sms-verification-in-a-react-native-app-using-node-js-and-express-dr"
@@ -11426,6 +11792,7 @@
       "serverless",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/22/build-a-basic-video-call-platform-with-netlify-functions",
     "filename": "build-a-basic-video-call-platform-with-netlify-functions"
@@ -11456,6 +11823,7 @@
       "video-api",
       "aws"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/21/creating-a-video-session-in-aws-lambda-with-python",
     "filename": "creating-a-video-session-in-aws-lambda-with-python"
@@ -11488,6 +11856,7 @@
       "web-components",
       "javascript"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2020/05/20/web-components-tools-a-comparison",
     "locale": "en",
     "link": "blog/20/05/20/web-components-tools-a-comparison",
     "filename": "web-components-tools-a-comparison"
@@ -11523,6 +11892,7 @@
       "node",
       "raspberry-pi"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/19/home-surveillance-system-with-node-and-a-raspberry-pi",
     "filename": "home-surveillance-system-with-node-and-a-raspberry-pi"
@@ -11554,6 +11924,7 @@
       "go",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/18/download-vonage-voice-api-recordings-with-golang",
     "filename": "download-vonage-voice-api-recordings-with-golang"
@@ -11583,6 +11954,7 @@
     "tags": [
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/15/opentok-version-2-17-whats-new-and-how-you-can-use-it-dr",
     "filename": "opentok-version-2-17-whats-new-and-how-you-can-use-it-dr"
@@ -11612,6 +11984,7 @@
       "javascript",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/14/broadcast-video-chat-with-javascript-and-vonage-dr",
     "filename": "broadcast-video-chat-with-javascript-and-vonage-dr"
@@ -11643,6 +12016,7 @@
       "ruby",
       "ruby-on-rails"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/13/create-a-party-with-ruby-on-rails-and-the-vonage-video-api-part-2-building-the-frontend-dr",
     "filename": "create-a-party-with-ruby-on-rails-and-the-vonage-video-api-part-2-building-the-frontend-dr"
@@ -11674,6 +12048,7 @@
       "ruby",
       "ruby-on-rails"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/12/create-a-party-with-ruby-on-rails-and-the-vonage-video-api-part-1-building-the-backend-dr",
     "filename": "create-a-party-with-ruby-on-rails-and-the-vonage-video-api-part-1-building-the-backend-dr"
@@ -11708,6 +12083,7 @@
       "messages-api",
       "facebook"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/11/how-to-send-a-facebook-messenger-message-with-node-js",
     "filename": "how-to-send-a-facebook-messenger-message-with-node-js"
@@ -11739,6 +12115,7 @@
       "angular",
       "aspnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/08/create-a-basic-video-chat-app-with-asp-net-and-angular-dr",
     "filename": "create-a-basic-video-chat-app-with-asp-net-and-angular-dr"
@@ -11772,6 +12149,7 @@
       "messages-api",
       "nodejs"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/07/automated-orders-with-whatsapp-and-node-dr",
     "filename": "automated-orders-with-whatsapp-and-node-dr"
@@ -11802,6 +12180,7 @@
       "verify-api",
       "aws"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/06/number-verification-in-python-with-aws-lambda-and-vonage",
     "filename": "number-verification-in-python-with-aws-lambda-and-vonage"
@@ -11836,6 +12215,7 @@
       "voice-api",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/05/7-app-ideas-to-build-at-work-and-7-to-build-at-home-dr",
     "filename": "7-app-ideas-to-build-at-work-and-7-to-build-at-home-dr"
@@ -11866,6 +12246,7 @@
       "video-api",
       ""
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/04/stream-video-chat-with-texting-using-vonage-video-api-dr",
     "filename": "stream-video-chat-with-texting-using-vonage-video-api-dr"
@@ -11896,6 +12277,7 @@
       "javascript",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/05/01/build-a-google-authenticator-from-a-landline-with-vonage",
     "filename": "build-a-google-authenticator-from-a-landline-with-vonage"
@@ -11917,6 +12299,7 @@
     "tags": [
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/30/protect-your-kids-online-with-vonage-voice-api-and-android-10-dr",
     "filename": "protect-your-kids-online-with-vonage-voice-api-and-android-10-dr"
@@ -11946,6 +12329,7 @@
       "nodejs",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/29/share-your-screen-with-the-vonage-video-api-dr",
     "filename": "share-your-screen-with-the-vonage-video-api-dr"
@@ -11975,6 +12359,7 @@
       "video-api",
       "nodejs"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/28/stream-a-video-chat-with-vonage-video-api-dr",
     "filename": "stream-a-video-chat-with-vonage-video-api-dr"
@@ -12005,6 +12390,7 @@
       "machine-learning",
       "conversation-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/27/building-a-user-churn-prediction-model-with-scikit-learn-and-vonage-dr",
     "filename": "building-a-user-churn-prediction-model-with-scikit-learn-and-vonage-dr"
@@ -12036,6 +12422,7 @@
       "blockchain"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/24/connect-to-the-ethereum-blockchain-with-node-js-and-vonage-dr",
     "filename": "connect-to-the-ethereum-blockchain-with-node-js-and-vonage-dr"
@@ -12069,6 +12456,7 @@
       "node",
       "number-management-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/23/manage-a-pool-of-phone-numbers-with-node-js",
     "filename": "manage-a-pool-of-phone-numbers-with-node-js"
@@ -12103,6 +12491,7 @@
       "viber",
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/22/send-a-viber-message-with-node-dr",
     "filename": "send-a-viber-message-with-node-dr"
@@ -12132,6 +12521,7 @@
       "node",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/21/video-with-text-chat",
     "filename": "video-with-text-chat"
@@ -12167,6 +12557,7 @@
       "php",
       "symfony"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/20/verify-user-registrations-with-symfony-dr",
     "filename": "verify-user-registrations-with-symfony-dr"
@@ -12196,6 +12587,7 @@
       "ios",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/17/make-calls-with-a-custom-call-button-in-your-ios-app-dr",
     "filename": "make-calls-with-a-custom-call-button-in-your-ios-app-dr"
@@ -12234,6 +12626,7 @@
       "conversation-api",
       "vue"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/16/building-a-slack-clone-using-vue-js-part-1-dr",
     "filename": "building-a-slack-clone-using-vue-js-part-1-dr"
@@ -12267,6 +12660,7 @@
       "python",
       "open-cv"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/15/real-time-human-detection-with-opencv-and-vonage-sms-api-dr",
     "filename": "real-time-human-detection-with-opencv-and-vonage-sms-api-dr"
@@ -12301,6 +12695,7 @@
       "node",
       "whatsapp"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/15/send-a-whatsapp-message-with-node-dr",
     "filename": "send-a-whatsapp-message-with-node-dr"
@@ -12332,6 +12727,7 @@
       "c-sharp",
       "azure"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/09/sms-language-understanding-with-luis-and-net-dr",
     "filename": "sms-language-understanding-with-luis-and-net-dr"
@@ -12364,6 +12760,7 @@
       "no-code",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/09/text-when-you-get-home-safely-with-zapier-dr",
     "filename": "text-when-you-get-home-safely-with-zapier-dr"
@@ -12394,6 +12791,7 @@
       "video-api",
       "vue"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/09/build-a-secure-video-appointments-application-using-vonage-api-dr",
     "filename": "build-a-secure-video-appointments-application-using-vonage-api-dr"
@@ -12426,6 +12824,7 @@
     "tags": [
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/08/introducing-the-messages-api-sandbox",
     "filename": "introducing-the-messages-api-sandbox"
@@ -12459,6 +12858,7 @@
       "nuxt",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/08/build-a-video-conversation-platform-for-online-gatherings-with-nuxt-js-dr",
     "filename": "build-a-video-conversation-platform-for-online-gatherings-with-nuxt-js-dr"
@@ -12489,6 +12889,7 @@
     "tags": [
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/08/supporting-communities-to-go-online",
     "filename": "supporting-communities-to-go-online"
@@ -12517,6 +12918,7 @@
     "tags": [
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/07/getting-started-with-advanced-insights",
     "filename": "getting-started-with-advanced-insights"
@@ -12546,6 +12948,7 @@
     "tags": [
       "ruby"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/06/nexmo-ruby-v7-0-0-release-dr",
     "filename": "nexmo-ruby-v7-0-0-release-dr"
@@ -12580,6 +12983,7 @@
       "zapier",
       "stripe"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/03/how-to-send-sms-confirmations-for-new-stripe-charges-with-zapier",
     "filename": "how-to-send-sms-confirmations-for-new-stripe-charges-with-zapier"
@@ -12610,6 +13014,7 @@
       "lambda",
       "php"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/02/deploying-an-aws-lambda-function-for-nexmo-voice-callbacks-with-php-dr",
     "filename": "deploying-an-aws-lambda-function-for-nexmo-voice-callbacks-with-php-dr"
@@ -12640,6 +13045,7 @@
       "node",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/04/01/adding-2fa-to-a-react-app-using-firebase-function",
     "filename": "adding-2fa-to-a-react-app-using-firebase-function"
@@ -12669,6 +13075,7 @@
       "node",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/30/basic-video-chat",
     "filename": "basic-video-chat"
@@ -12700,6 +13107,7 @@
       "ruby-on-rails",
       "ruby"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/27/is-it-the-weekend-yet-build-a-web-scraping-app-with-sms-to-find-out-dr",
     "filename": "is-it-the-weekend-yet-build-a-web-scraping-app-with-sms-to-find-out-dr"
@@ -12730,6 +13138,7 @@
       "aws",
       "lambda"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/25/how-permissions-work-in-aws-lambda-dr",
     "filename": "how-permissions-work-in-aws-lambda-dr"
@@ -12762,6 +13171,7 @@
       "javascript",
       "web-components"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/24/getting-started-with-web-components-dr",
     "filename": "getting-started-with-web-components-dr"
@@ -12795,6 +13205,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/24/greg-holmes-joins-the-vonage-developer-education-team",
     "filename": "greg-holmes-joins-the-vonage-developer-education-team"
@@ -12825,6 +13236,7 @@
       "ruby",
       "sdk"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/23/lessons-learned-along-the-way-with-static-type-checking-in-ruby-dr",
     "filename": "lessons-learned-along-the-way-with-static-type-checking-in-ruby-dr"
@@ -12855,6 +13267,7 @@
       "aws",
       "serverless"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/20/serverless-python-with-aws-lambda-dr",
     "filename": "serverless-python-with-aws-lambda-dr"
@@ -12886,6 +13299,7 @@
       "dotnet",
       "opencv"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/18/real-time-face-detection-in-net-with-opentok-and-opencv-dr",
     "filename": "real-time-face-detection-in-net-with-opentok-and-opencv-dr"
@@ -12916,6 +13330,7 @@
       "php",
       "bref"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/16/aws-lambda-with-php-using-bref-and-serverless-framework-dr",
     "filename": "aws-lambda-with-php-using-bref-and-serverless-framework-dr"
@@ -12947,41 +13362,12 @@
       "messages-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
     "link": "blog/20/03/13/usando-jwt-para-autenticação-em-uma-aplicação-golang",
     "filename": "usando-jwt-para-autenticação-em-uma-aplicação-golang"
-  },
-  {
-    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
-    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
-    "author": {
-      "name": "Victor Steven",
-      "image_url": "/content/images/0.png",
-      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
-      "website_url": "",
-      "spotlight": true,
-      "short_name": "victor-steven"
-    },
-    "published": true,
-    "published_at": "2020-03-13 13:00:25 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "go",
-      "jwt",
-      "messages-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
-    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
   },
   {
     "title": "Using JWT for Authentication in a Golang Application",
@@ -13012,6 +13398,36 @@
     ],
     "locale": "en",
     "link": "blog/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
+    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
+  },
+  {
+    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
+    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
+    "author": {
+      "name": "Victor Steven",
+      "image_url": "/content/images/0.png",
+      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
+      "website_url": "",
+      "spotlight": true,
+      "short_name": "victor-steven"
+    },
+    "published": true,
+    "published_at": "2020-03-13 13:00:25 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "go",
+      "jwt",
+      "messages-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
     "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
   },
   {
@@ -13046,6 +13462,7 @@
       "node",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/12/using-apollo-to-query-graphql-from-node-js-dr",
     "filename": "using-apollo-to-query-graphql-from-node-js-dr"
@@ -13074,6 +13491,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2020/03/11/igor-wojda-joins-the-vonage-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/20/03/11/igor-wojda-joins-the-vonage-developer-relations-team-dr",
     "filename": "igor-wojda-joins-the-vonage-developer-relations-team-dr"
@@ -13104,6 +13522,7 @@
       "sms-api",
       "websockets"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/11/real-time-sms-demo-with-react-node-and-google-translate-dr",
     "filename": "real-time-sms-demo-with-react-node-and-google-translate-dr"
@@ -13141,6 +13560,7 @@
     "tags": [
       "iwd"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/10/in-celebration-of-international-womens-day-2020",
     "filename": "in-celebration-of-international-womens-day-2020"
@@ -13170,6 +13590,7 @@
     "tags": [
       "community"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/09/the-specifications-that-define-us-dr",
     "filename": "the-specifications-that-define-us-dr"
@@ -13203,6 +13624,7 @@
       "sms-api",
       "google"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/06/sms-notifications-google-sheets-nodered-dr",
     "filename": "sms-notifications-google-sheets-nodered-dr"
@@ -13237,6 +13659,7 @@
       "messages-api",
       "airtable"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/05/save-received-sms-messages-with-airtable-and-node-js-dr",
     "filename": "save-received-sms-messages-with-airtable-and-node-js-dr"
@@ -13270,6 +13693,7 @@
       "zapier",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/04/how-to-send-sms-reminders-of-google-calendar-events-with-zapier-dr",
     "filename": "how-to-send-sms-reminders-of-google-calendar-events-with-zapier-dr"
@@ -13299,6 +13723,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2020/03/03/running-off-sites-remote-teams-dr",
     "locale": "en",
     "link": "blog/20/03/03/running-off-sites-remote-teams-dr",
     "filename": "running-off-sites-remote-teams-dr"
@@ -13329,6 +13754,7 @@
       "voice-api",
       "nuxt"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/03/02/how-make-receive-phone-calls-with-nuxt-js-dr",
     "filename": "how-make-receive-phone-calls-with-nuxt-js-dr"
@@ -13363,6 +13789,7 @@
       "preact",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/28/create-preact-netlify-cms-opentok-health-app-dr",
     "filename": "create-preact-netlify-cms-opentok-health-app-dr"
@@ -13391,6 +13818,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2020/02/26/nexmo-ruby-new-release-host-overriding-dr",
     "locale": "en",
     "link": "blog/20/02/26/nexmo-ruby-new-release-host-overriding-dr",
     "filename": "nexmo-ruby-new-release-host-overriding-dr"
@@ -13414,6 +13842,7 @@
       "messages-api",
       "firebase"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/24/nightscout-notification-nexmo-dr",
     "filename": "nightscout-notification-nexmo-dr"
@@ -13442,6 +13871,7 @@
     "tags": [
       "dotnet"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2020/02/24/announcing-nexmos-net-server-sdk-version-4-3-1-release-dr",
     "locale": "en",
     "link": "blog/20/02/24/announcing-nexmos-net-server-sdk-version-4-3-1-release-dr",
     "filename": "announcing-nexmos-net-server-sdk-version-4-3-1-release-dr"
@@ -13469,6 +13899,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2020/02/21/benjamin-aronov-joins-the-nexmo-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/20/02/21/benjamin-aronov-joins-the-nexmo-developer-relations-team-dr",
     "filename": "benjamin-aronov-joins-the-nexmo-developer-relations-team-dr"
@@ -13499,6 +13930,7 @@
       "react",
       "vue"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/20/migrating-react-components-to-vue-js-dr",
     "filename": "migrating-react-components-to-vue-js-dr"
@@ -13526,6 +13958,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2020/02/19/how-send-receive-sms-messages-with-nuxt-js-dr",
     "locale": "en",
     "link": "blog/20/02/19/how-send-receive-sms-messages-with-nuxt-js-dr",
     "filename": "how-send-receive-sms-messages-with-nuxt-js-dr"
@@ -13556,6 +13989,7 @@
       "php",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/14/aws-transcribe-with-nexmo-voice-using-php-dr",
     "filename": "aws-transcribe-with-nexmo-voice-using-php-dr"
@@ -13586,6 +14020,7 @@
       "elixir",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/12/how-to-send-sms-messages-with-elixir-dr",
     "filename": "how-to-send-sms-messages-with-elixir-dr"
@@ -13614,6 +14049,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/11/nick-iati-joins-the-nexmo-developer-relations-team-dr",
     "filename": "nick-iati-joins-the-nexmo-developer-relations-team-dr"
@@ -13644,6 +14080,7 @@
       "dotnet",
       "logging"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/10/adaptive-library-logging-with-microsoft-extensions-logging-dr",
     "filename": "adaptive-library-logging-with-microsoft-extensions-logging-dr"
@@ -13675,6 +14112,7 @@
       "sms-api",
       "docker"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/07/dockerize-python-queue-manager-project-for-easy-deployment-dr",
     "filename": "dockerize-python-queue-manager-project-for-easy-deployment-dr"
@@ -13707,6 +14145,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/06/kevin-joins-the-nexmo-developer-relations-team",
     "filename": "kevin-joins-the-nexmo-developer-relations-team"
@@ -13736,6 +14175,7 @@
       "client-sdk",
       "conversations"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/05/introducing-custom-channel-in-conversations-dr",
     "filename": "introducing-custom-channel-in-conversations-dr"
@@ -13774,6 +14214,7 @@
       "node",
       "conversation-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/02/03/chat-pagination-with-infinite-scrolling-dr",
     "filename": "chat-pagination-with-infinite-scrolling-dr"
@@ -13804,6 +14245,7 @@
       "azure",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/29/how-send-receive-sms-messages-with-node-js-azure-functions-dr",
     "filename": "how-send-receive-sms-messages-with-node-js-azure-functions-dr"
@@ -13840,6 +14282,7 @@
       "video-api",
       "azure"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/27/sentiment-analysis-with-opentok-and-azure-face-api-dr",
     "filename": "sentiment-analysis-with-opentok-and-azure-face-api-dr"
@@ -13870,6 +14313,7 @@
       "firebase",
       "SMS"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/24/send-and-receive-sms-messages-with-firebase-functions-dr",
     "filename": "send-and-receive-sms-messages-with-firebase-functions-dr"
@@ -13898,6 +14342,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2020/01/22/nexmo-at-birmingham-on-rails-dr",
     "locale": "en",
     "link": "blog/20/01/22/nexmo-at-birmingham-on-rails-dr",
     "filename": "nexmo-at-birmingham-on-rails-dr"
@@ -13928,6 +14373,7 @@
       "sdk",
       "javascript"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/17/nexmo-node-server-sdk-support-host-overriding-dr",
     "filename": "nexmo-node-server-sdk-support-host-overriding-dr"
@@ -13958,6 +14404,7 @@
     "tags": [
       "github"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/17/using-github-repository-guidelines-to-enhance-developer-experience-dr",
     "filename": "using-github-repository-guidelines-to-enhance-developer-experience-dr"
@@ -13990,6 +14437,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/16/nahrin-jalal-joins-the-nexmo-developer-education-team-dr",
     "filename": "nahrin-jalal-joins-the-nexmo-developer-education-team-dr"
@@ -14021,6 +14469,7 @@
       "sdk",
       ""
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/15/announcing-nexmos-net-server-sdk-version-4-3-0-release-dr",
     "filename": "announcing-nexmos-net-server-sdk-version-4-3-0-release-dr"
@@ -14048,6 +14497,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/14/daniela-joins-the-nexmo-developer-relations-team-dr",
     "filename": "daniela-joins-the-nexmo-developer-relations-team-dr"
@@ -14078,6 +14528,7 @@
       "sms-api",
       "ibm-cloud"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/13/sentiment-analysis-using-ibm-watson-tone-analyzer-in-php-dr",
     "filename": "sentiment-analysis-using-ibm-watson-tone-analyzer-in-php-dr"
@@ -14109,6 +14560,7 @@
       "wordpress"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/11/shipping-notifications-on-wordpress-woocommerce-with-nexmo-sms-dr",
     "filename": "shipping-notifications-on-wordpress-woocommerce-with-nexmo-sms-dr"
@@ -14141,6 +14593,7 @@
       "node-red",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/08/interactive-voice-response-node-red-dr",
     "filename": "interactive-voice-response-node-red-dr"
@@ -14172,6 +14625,7 @@
       "flask",
       "python"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/03/use-python-and-flask-to-manage-queues-via-sms-dr",
     "filename": "use-python-and-flask-to-manage-queues-via-sms-dr"
@@ -14203,6 +14657,7 @@
       "slack"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/20/01/01/forward-nexmo-sms-to-slack-using-express-and-node-dr",
     "filename": "forward-nexmo-sms-to-slack-using-express-and-node-dr"
@@ -14234,6 +14689,7 @@
       "azure",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/12/30/building-a-real-time-net-transcription-service-dr",
     "filename": "building-a-real-time-net-transcription-service-dr"
@@ -14265,6 +14721,7 @@
       "azure",
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/12/19/santas-nexmo-helper-c-advent-series-dr",
     "filename": "santas-nexmo-helper-c-advent-series-dr"
@@ -14304,6 +14761,7 @@
       "conversation-api",
       "javascript"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/12/18/create-a-simple-messaging-ui-with-bootstrap-dr",
     "filename": "create-a-simple-messaging-ui-with-bootstrap-dr"
@@ -14332,6 +14790,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/12/13/zach-walchuk-joins-the-nexmo-developer-education-team-dr",
     "locale": "en",
     "link": "blog/19/12/13/zach-walchuk-joins-the-nexmo-developer-education-team-dr",
     "filename": "zach-walchuk-joins-the-nexmo-developer-education-team-dr"
@@ -14362,6 +14821,7 @@
       "sms-api",
       "azure"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/12/10/text-translation-api-comparison-dr",
     "filename": "text-translation-api-comparison-dr"
@@ -14392,6 +14852,7 @@
     "tags": [
       "api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/12/06/what-makes-an-api-product-successful-dr",
     "filename": "what-makes-an-api-product-successful-dr"
@@ -14422,6 +14883,7 @@
       "sms-api",
       "ruby"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/12/04/introducing-nexmo-rack-middleware-dr",
     "filename": "introducing-nexmo-rack-middleware-dr"
@@ -14456,6 +14918,7 @@
       "cloudinary",
       "conversation-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/29/screenshot-and-save-a-chatlog-with-conversation-api-and-cloudinary-dr",
     "filename": "screenshot-and-save-a-chatlog-with-conversation-api-and-cloudinary-dr"
@@ -14493,6 +14956,7 @@
     "tags": [
       "devrel"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/27/the-ultimate-devrel-guide-to-travel-dr",
     "filename": "the-ultimate-devrel-guide-to-travel-dr"
@@ -14522,6 +14986,7 @@
       "azure",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/25/translating-sms-messages-with-azure-translator-text-dr",
     "filename": "translating-sms-messages-with-azure-translator-text-dr"
@@ -14553,6 +15018,7 @@
       "messages-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/25/send-messages-with-nexmo-through-golang-and-aws-lambda-dr",
     "filename": "send-messages-with-nexmo-through-golang-and-aws-lambda-dr"
@@ -14590,6 +15056,7 @@
     "tags": [
       "javascript"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/20/register-to-chat-with-typeform-dr",
     "filename": "register-to-chat-with-typeform-dr"
@@ -14619,6 +15086,7 @@
     "tags": [
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/19/net-sdk-update-dr",
     "filename": "net-sdk-update-dr"
@@ -14649,6 +15117,7 @@
       "voice-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/14/creating-a-phone-status-checker-with-nexmo-and-php-dr",
     "filename": "creating-a-phone-status-checker-with-nexmo-and-php-dr"
@@ -14681,6 +15150,7 @@
       "node-red",
       "low-code"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/14/build-voicemail-node-red-voice-api-dr",
     "filename": "build-voicemail-node-red-voice-api-dr"
@@ -14710,6 +15180,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/13/steve-lorello-joins-the-developer-relations-team-dr",
     "filename": "steve-lorello-joins-the-developer-relations-team-dr"
@@ -14739,6 +15210,7 @@
       "sms-api",
       "ibm-watson"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/12/translate-sms-messages-with-ibm-watson-dr",
     "filename": "translate-sms-messages-with-ibm-watson-dr"
@@ -14768,6 +15240,7 @@
       "sms-api",
       "aws"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/04/translating-sms-messages-with-aws-translate-dr",
     "filename": "translating-sms-messages-with-aws-translate-dr"
@@ -14790,6 +15263,7 @@
       "conversation-api",
       "javascript"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/11/01/integrating-the-conversation-api-with-wechat-dr",
     "filename": "integrating-the-conversation-api-with-wechat-dr"
@@ -14820,6 +15294,7 @@
       "dotnet",
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/31/how-to-add-machine-learning-to-facebook-messenger-dr",
     "filename": "how-to-add-machine-learning-to-facebook-messenger-dr"
@@ -14853,6 +15328,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/10/28/michael-joins-the-nexmo-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/19/10/28/michael-joins-the-nexmo-developer-relations-team-dr",
     "filename": "michael-joins-the-nexmo-developer-relations-team-dr"
@@ -14883,6 +15359,7 @@
     "tags": [
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/25/introducing-the-ncco-examples-collection-dr",
     "filename": "introducing-the-ncco-examples-collection-dr"
@@ -14912,6 +15389,7 @@
       "sms-api",
       "google-cloud"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/24/extending-nexmo-google-cloud-translation-api-dr",
     "filename": "extending-nexmo-google-cloud-translation-api-dr"
@@ -14940,6 +15418,7 @@
     "tags": [
       "conversation-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/18/how-to-build-an-on-page-live-chat-dr",
     "filename": "how-to-build-an-on-page-live-chat-dr"
@@ -14968,6 +15447,7 @@
     "tags": [
       "sentiment-analysis"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/17/sentiment-api-analysis-comparison-dr",
     "filename": "sentiment-api-analysis-comparison-dr"
@@ -14999,6 +15479,7 @@
     "tags": [
       "node-red"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/17/forward-call-via-voice-proxy-node-red-dr",
     "filename": "forward-call-via-voice-proxy-node-red-dr"
@@ -15038,6 +15519,7 @@
       "node",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/11/adding-voice-functionality-to-an-existing-chat-application-dr",
     "filename": "adding-voice-functionality-to-an-existing-chat-application-dr"
@@ -15068,6 +15550,7 @@
       "wordpress"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/09/adding-2-factor-authentication-to-wordpress-with-nexmo-verify-api-dr",
     "filename": "adding-2-factor-authentication-to-wordpress-with-nexmo-verify-api-dr"
@@ -15100,6 +15583,7 @@
       "voice-api",
       "node-red"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/07/conference-call-node-red-dr",
     "filename": "conference-call-node-red-dr"
@@ -15134,6 +15618,7 @@
       "conversation-api",
       "react"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/04/how-to-add-video-to-react-chat-app-with-nexmo-dr",
     "filename": "how-to-add-video-to-react-chat-app-with-nexmo-dr"
@@ -15164,6 +15649,7 @@
     "tags": [
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/10/02/flexible-workflows-for-verify-api-dr",
     "filename": "flexible-workflows-for-verify-api-dr"
@@ -15198,6 +15684,7 @@
       "conference",
       "community"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/30/nexmo-attends-grace-hopper-conference-2019-dr",
     "filename": "nexmo-attends-grace-hopper-conference-2019-dr"
@@ -15228,6 +15715,7 @@
       "messages-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/30/sending-gitlab-ci-pipeline-notifications-with-nexmo-messages-dr",
     "filename": "sending-gitlab-ci-pipeline-notifications-with-nexmo-messages-dr"
@@ -15258,6 +15746,7 @@
       "voice-api",
       "azure"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/27/how-to-use-azure-functions-with-python-dr",
     "filename": "how-to-use-azure-functions-with-python-dr"
@@ -15290,6 +15779,7 @@
       "verify-api",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/25/verify-phone-numbers-with-node-red-dr",
     "filename": "verify-phone-numbers-with-node-red-dr"
@@ -15324,6 +15814,7 @@
       "react",
       "conversation-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/24/how-to-build-a-dashboard-of-live-conversations-with-flask-and-react-dr",
     "filename": "how-to-build-a-dashboard-of-live-conversations-with-flask-and-react-dr"
@@ -15352,6 +15843,7 @@
     "tags": [
       "client-sdk"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/19/nexmo-client-sdks-move-to-beta-dr",
     "filename": "nexmo-client-sdks-move-to-beta-dr"
@@ -15387,6 +15879,7 @@
       "dispatch-api",
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/18/build-a-family-stand-up-app-with-nexmo-messages-and-dispatch-api-dr",
     "filename": "build-a-family-stand-up-app-with-nexmo-messages-and-dispatch-api-dr"
@@ -15447,6 +15940,7 @@
     "tags": [
       "open-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/13/evaluate-apis-quickly-and-easily-with-openapi-dr",
     "filename": "evaluate-apis-quickly-and-easily-with-openapi-dr"
@@ -15479,6 +15973,7 @@
     "tags": [
       "vonage-campus"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/11/announcing-the-vonage-campus-developer-track-dr",
     "filename": "announcing-the-vonage-campus-developer-track-dr"
@@ -15507,6 +16002,7 @@
     "tags": [
       "streaming-transcription"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/10/extending-nexmo-streaming-transcription-dr",
     "filename": "extending-nexmo-streaming-transcription-dr"
@@ -15536,6 +16032,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/10/bethany-loft-joins-the-nexmo-developer-relations-team-dr",
     "filename": "bethany-loft-joins-the-nexmo-developer-relations-team-dr"
@@ -15569,6 +16066,7 @@
     "tags": [
       "spotlight"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/09/04/vonage-launches-spotlight-for-donations-program-dr",
     "filename": "vonage-launches-spotlight-for-donations-program-dr"
@@ -15603,6 +16101,7 @@
       "conversation-api",
       "react"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/30/chat-app-with-react-and-nexmo-dr",
     "filename": "chat-app-with-react-and-nexmo-dr"
@@ -15636,6 +16135,7 @@
       "go",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/28/how-to-send-sms-with-go-dr",
     "filename": "how-to-send-sms-with-go-dr"
@@ -15666,6 +16166,7 @@
       "voice-api",
       "aws"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/26/transcribe-a-conference-call-using-amazon-transcribe-dr",
     "filename": "transcribe-a-conference-call-using-amazon-transcribe-dr"
@@ -15695,6 +16196,7 @@
       "java",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/23/create-a-conference-call-with-java-dr",
     "filename": "create-a-conference-call-with-java-dr"
@@ -15726,6 +16228,7 @@
       "pagerduty"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/21/incident-reporting-with-pagerduty-and-nexmo-dr",
     "filename": "incident-reporting-with-pagerduty-and-nexmo-dr"
@@ -15755,6 +16258,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/15/laura-joins-nexmos-developer-relations-team-dr",
     "filename": "laura-joins-nexmos-developer-relations-team-dr"
@@ -15789,6 +16293,7 @@
       "sms-api",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/15/how-to-create-an-interactive-scavenger-hunt-with-nexmos-sms-and-voice-api-dr",
     "filename": "how-to-create-an-interactive-scavenger-hunt-with-nexmos-sms-and-voice-api-dr"
@@ -15818,6 +16323,7 @@
       "video-api",
       "linux-sdk"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/14/opentok-linux",
     "filename": "opentok-linux"
@@ -15847,6 +16353,7 @@
       "video-api",
       "unity"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/12/video-gaming-unity-opentok",
     "filename": "video-gaming-unity-opentok"
@@ -15876,6 +16383,7 @@
       "python",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/09/forward-telephone-call-voice-proxy-python-starlette-dr",
     "filename": "forward-telephone-call-voice-proxy-python-starlette-dr"
@@ -15906,6 +16414,7 @@
       "messages-api",
       "marketo"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/07/nexmo-messages-api-integration-with-marketo-dr",
     "filename": "nexmo-messages-api-integration-with-marketo-dr"
@@ -15939,6 +16448,7 @@
       "javascript",
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/05/voice-chat-with-vue-and-express-dr",
     "filename": "voice-chat-with-vue-and-express-dr"
@@ -15969,6 +16479,7 @@
       "java",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/08/02/play-an-audio-file-into-a-voice-call-with-java-and-spark-dr",
     "filename": "play-an-audio-file-into-a-voice-call-with-java-and-spark-dr"
@@ -15998,6 +16509,7 @@
       "javascript",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/31/checking-the-tube-status-with-nexmo-and-tfl-apis-dr",
     "filename": "checking-the-tube-status-with-nexmo-and-tfl-apis-dr"
@@ -16028,6 +16540,7 @@
       "java",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/26/receiving-sms-delivery-receipts-with-java-and-spark-dr",
     "filename": "receiving-sms-delivery-receipts-with-java-and-spark-dr"
@@ -16058,6 +16571,7 @@
       "node",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/18/dial-ynab-dr",
     "filename": "dial-ynab-dr"
@@ -16093,6 +16607,7 @@
       "video-api",
       "javascript"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/16/opentok-react-components-dr",
     "filename": "opentok-react-components-dr"
@@ -16125,6 +16640,7 @@
       "node-red",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/15/stream-audio-node-red-dr",
     "filename": "stream-audio-node-red-dr"
@@ -16154,6 +16670,7 @@
       "asp.net",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/08/how-to-build-a-voicemail-with-asp-net-core-and-nancyfx-dr",
     "filename": "how-to-build-a-voicemail-with-asp-net-core-and-nancyfx-dr"
@@ -16187,6 +16704,7 @@
       "javascript",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/05/javascript-hotline-with-opentok-and-nodejs-dr",
     "filename": "javascript-hotline-with-opentok-and-nodejs-dr"
@@ -16217,6 +16735,7 @@
       "ruby-on-rails",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/04/build-an-ivr-with-ruby-on-rails-dr",
     "filename": "build-an-ivr-with-ruby-on-rails-dr"
@@ -16249,6 +16768,7 @@
       "ngrok",
       "node-red"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/03/ngrok-in-node-red-dr",
     "filename": "ngrok-in-node-red-dr"
@@ -16278,6 +16798,7 @@
     "tags": [
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/02/opentok-v2-16-new-release",
     "filename": "opentok-v2-16-new-release"
@@ -16307,6 +16828,7 @@
       "java",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/02/ivr-java-spark-framework-dr",
     "filename": "ivr-java-spark-framework-dr"
@@ -16342,6 +16864,7 @@
       "messages-api",
       "twitter"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/07/01/discover-your-twitters-positivity-score-with-react-dr",
     "filename": "discover-your-twitters-positivity-score-with-react-dr"
@@ -16372,6 +16895,7 @@
     "tags": [
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/28/using-message-signatures-to-ensure-secure-incoming-webhooks-dr",
     "filename": "using-message-signatures-to-ensure-secure-incoming-webhooks-dr"
@@ -16402,6 +16926,7 @@
       "koa.js",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/27/building-a-check-in-app-with-nexmos-verify-api-dr",
     "filename": "building-a-check-in-app-with-nexmos-verify-api-dr"
@@ -16431,6 +16956,7 @@
       "python",
       "number-insight-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/26/validate-telephone-number-python-dr",
     "filename": "validate-telephone-number-python-dr"
@@ -16460,6 +16986,7 @@
       "csharp",
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/25/nexmo-dotnet-4-release-dr",
     "filename": "nexmo-dotnet-4-release-dr"
@@ -16488,6 +17015,7 @@
     "tags": [
       "conversation-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/24/build-an-omnichannel-contact-center-dr",
     "filename": "build-an-omnichannel-contact-center-dr"
@@ -16515,6 +17043,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/06/24/adam-culp-joins-the-nexmo-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/19/06/24/adam-culp-joins-the-nexmo-developer-relations-team-dr",
     "filename": "adam-culp-joins-the-nexmo-developer-relations-team-dr"
@@ -16544,6 +17073,7 @@
       "javascript"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/20/creating-a-complex-ivr-system-with-ease-with-xstate-dr",
     "filename": "creating-a-complex-ivr-system-with-ease-with-xstate-dr"
@@ -16578,6 +17108,7 @@
       "sms-api",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/18/trusted-group-auth-with-sms-and-express-dr",
     "filename": "trusted-group-auth-with-sms-and-express-dr"
@@ -16608,6 +17139,7 @@
       "ruby-on-rails",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/17/build-a-voicemail-with-ruby-on-rails-dr",
     "filename": "build-a-voicemail-with-ruby-on-rails-dr"
@@ -16641,6 +17173,7 @@
       "node",
       "node-red"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/14/make-text-to-speech-phone-calls-node-red-dr",
     "filename": "make-text-to-speech-phone-calls-node-red-dr"
@@ -16670,6 +17203,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/13/fabian-joins-the-nexmo-developer-experience-team-dr",
     "filename": "fabian-joins-the-nexmo-developer-experience-team-dr"
@@ -16700,6 +17234,7 @@
       "voice-api",
       "ruby"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/13/play-the-game-of-telephone-with-the-nexmo-voice-api-ruby-on-rails-and-google-cloud-platform-dr",
     "filename": "play-the-game-of-telephone-with-the-nexmo-voice-api-ruby-on-rails-and-google-cloud-platform-dr"
@@ -16734,6 +17269,7 @@
       "voice-api",
       "ruby"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/11/how-to-build-a-magic-8-ball-voice-app-with-ruby-dr",
     "filename": "how-to-build-a-magic-8-ball-voice-app-with-ruby-dr"
@@ -16764,6 +17300,7 @@
       "python",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/06/03/receiving-sms-delivery-receipts-with-python-dr",
     "filename": "receiving-sms-delivery-receipts-with-python-dr"
@@ -16794,6 +17331,7 @@
       "python",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/05/31/receive-an-sms-with-python-dr",
     "filename": "receive-an-sms-with-python-dr"
@@ -16825,6 +17363,7 @@
       "voice-api",
       "flask"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/05/29/build-a-conference-call-with-python-dr",
     "filename": "build-a-conference-call-with-python-dr"
@@ -16857,6 +17396,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/05/20/lauren-lee-joins-the-nexmo-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/19/05/20/lauren-lee-joins-the-nexmo-developer-relations-team-dr",
     "filename": "lauren-lee-joins-the-nexmo-developer-relations-team-dr"
@@ -16887,6 +17427,7 @@
       "voice-api",
       "csharp"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/05/16/build-a-conference-call-with-nexmo-voice-api-and-csharp-dr",
     "filename": "build-a-conference-call-with-nexmo-voice-api-and-csharp-dr"
@@ -16917,6 +17458,7 @@
       "voice-api",
       "php"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/05/15/forward-a-call-via-voice-proxy-with-php-dr",
     "filename": "forward-a-call-via-voice-proxy-with-php-dr"
@@ -16948,6 +17490,7 @@
       "ruby-on-rails",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/05/10/build-a-conference-call-with-the-nexmo-voice-api-and-ruby-on-rails-dr",
     "filename": "build-a-conference-call-with-the-nexmo-voice-api-and-ruby-on-rails-dr"
@@ -16981,6 +17524,7 @@
       "javascript",
       "text-to-speech"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/05/09/receive-phone-calls-node-red-dr",
     "filename": "receive-phone-calls-node-red-dr"
@@ -17012,6 +17556,7 @@
       "php",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/05/08/build-a-conference-call-with-php-dr",
     "filename": "build-a-conference-call-with-php-dr"
@@ -17042,6 +17587,7 @@
       "ruby",
       "conference"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/30/announcing-the-nexmo-rails-gem-dr",
     "filename": "announcing-the-nexmo-rails-gem-dr"
@@ -17075,6 +17621,7 @@
       "javascript",
       "node-red"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/24/receive-sms-messages-node-red-dr",
     "filename": "receive-sms-messages-node-red-dr"
@@ -17106,6 +17653,7 @@
       "javascript",
       "SIP"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/23/connecting-webrtc-and-pstn-with-opentok-and-nexmo-dr",
     "filename": "connecting-webrtc-and-pstn-with-opentok-and-nexmo-dr"
@@ -17136,6 +17684,7 @@
       "ASP.NET",
       "voice-proxy"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/18/forward-a-call-via-voice-proxy-with-asp-net-core-dr",
     "filename": "forward-a-call-via-voice-proxy-with-asp-net-core-dr"
@@ -17164,6 +17713,7 @@
     "tags": [
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/17/integrating-multichannel-messaging-into-salesforce-with-nexmo-messages-api",
     "filename": "integrating-multichannel-messaging-into-salesforce-with-nexmo-messages-api"
@@ -17195,6 +17745,7 @@
     "tags": [
       "node-red"
     ],
+    "canonical": "",
     "outdated": true,
     "locale": "en",
     "link": "blog/19/04/17/send-sms-messages-node-red-dr",
@@ -17226,6 +17777,7 @@
       "voice-api",
       "ruby"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/16/forward-a-call-via-voice-proxy-with-ruby-on-rails-dr",
     "filename": "forward-a-call-via-voice-proxy-with-ruby-on-rails-dr"
@@ -17256,6 +17808,7 @@
       "verify-api",
       "2fa"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/15/how-to-add-two-factor-authentication-with-node-js-dr",
     "filename": "how-to-add-two-factor-authentication-with-node-js-dr"
@@ -17286,6 +17839,7 @@
       "php",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/12/play-audio-voice-call-php-dr",
     "filename": "play-audio-voice-call-php-dr"
@@ -17317,6 +17871,7 @@
       "stripe"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/11/stripe-sms-laravel-dotun",
     "filename": "stripe-sms-laravel-dotun"
@@ -17347,6 +17902,7 @@
       "java",
       "security"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/10/forward-phone-call-voice-proxy-java-dr",
     "filename": "forward-phone-call-voice-proxy-java-dr"
@@ -17377,6 +17933,7 @@
       "javascript",
       "PBX"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/08/build-interactive-voice-response-node-express-javascript-dr",
     "filename": "build-interactive-voice-response-node-express-javascript-dr"
@@ -17407,6 +17964,7 @@
       "python",
       "flask"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/05/how-to-build-a-voicemail-with-python-flask-dr",
     "filename": "how-to-build-a-voicemail-with-python-flask-dr"
@@ -17437,6 +17995,7 @@
       "sentiment-analysis",
       "ibm-watson"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/04/adding-sentiment-analysis-to-sms-ibm-watson-dr",
     "filename": "adding-sentiment-analysis-to-sms-ibm-watson-dr"
@@ -17468,6 +18027,7 @@
       "voice-api",
       "audio"
     ],
+    "canonical": "",
     "outdated": true,
     "locale": "en",
     "link": "blog/19/04/03/how-to-play-an-audio-stream-into-a-call-with-python-dr",
@@ -17508,6 +18068,7 @@
       "video-api",
       "trackingjs"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/03/snapchat-filters-opentok-tracking-js-dr",
     "filename": "snapchat-filters-opentok-tracking-js-dr"
@@ -17542,6 +18103,7 @@
       "javascript",
       "web-sockets"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/02/voicemail-with-express-and-socketio-dr",
     "filename": "voicemail-with-express-and-socketio-dr"
@@ -17572,6 +18134,7 @@
       "cobol",
       "text"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/04/01/send-text-message-cobol-dr",
     "filename": "send-text-message-cobol-dr"
@@ -17603,6 +18166,7 @@
       "insight-api",
       "php"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/03/29/how-to-use-number-insight-with-php-dr",
     "filename": "how-to-use-number-insight-with-php-dr"
@@ -17634,6 +18198,7 @@
       "python",
       "inbound-calls"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/03/28/handling-inbound-calls-with-python-dr",
     "filename": "handling-inbound-calls-with-python-dr"
@@ -17667,6 +18232,7 @@
       "messaging-api",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/03/26/how-to-send-mms-with-node-js-dr",
     "filename": "how-to-send-mms-with-node-js-dr"
@@ -17697,6 +18263,7 @@
       "number-insight-api",
       "ruby"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/03/25/getting-started-with-the-nexmo-number-insight-api-and-rails-dr",
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
@@ -17788,6 +18355,7 @@
       "java",
       "text-to-speech"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/03/21/make-text-to-speech-phone-call-java-dr",
     "filename": "make-text-to-speech-phone-call-java-dr"
@@ -17818,6 +18386,7 @@
       "video-api",
       "machine-learning"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/03/20/building-a-machine-learning-model-for-answering-machine-detection-dr",
     "filename": "building-a-machine-learning-model-for-answering-machine-detection-dr"
@@ -17845,6 +18414,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/03/19/nexmo-goes-to-devrelcon-tokyo-2019-dr",
     "locale": "en",
     "link": "blog/19/03/19/nexmo-goes-to-devrelcon-tokyo-2019-dr",
     "filename": "nexmo-goes-to-devrelcon-tokyo-2019-dr"
@@ -17878,6 +18448,7 @@
       "azure",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/03/18/speech-to-text-with-nexmo-and-azure-speech-dr",
     "filename": "speech-to-text-with-nexmo-and-azure-speech-dr"
@@ -17911,6 +18482,7 @@
       "java",
       "react"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/03/15/full-stack-nexmo-with-express-react-dr",
     "filename": "full-stack-nexmo-with-express-react-dr"
@@ -17940,6 +18512,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/03/07/nexmo-hackathon-at-php-uk-2019-dr",
     "locale": "en",
     "link": "blog/19/03/08/nexmo-hackathon-at-php-uk-2019-dr",
     "filename": "nexmo-hackathon-at-php-uk-2019-dr"
@@ -17968,6 +18541,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/02/27/rails-holiday-vapi-checker-dr",
     "locale": "en",
     "link": "blog/19/02/27/rails-holiday-vapi-checker-dr",
     "filename": "rails-holiday-vapi-checker-dr"
@@ -17996,6 +18570,7 @@
     "tags": [
       "ibm-watson"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/25/build-watson-enhanced-voice-agents-on-ibm-cloud-with-nexmo",
     "filename": "build-watson-enhanced-voice-agents-on-ibm-cloud-with-nexmo"
@@ -18026,6 +18601,7 @@
       "javascript",
       "node-red"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/21/nexmo-node-red-package-dr",
     "filename": "nexmo-node-red-package-dr"
@@ -18054,6 +18630,7 @@
     "tags": [
       "number-insight-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/21/getting-started-with-nexmos-number-insight-apis-on-koa-js-dr",
     "filename": "getting-started-with-nexmos-number-insight-apis-on-koa-js-dr"
@@ -18083,6 +18660,7 @@
       "java",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/19/record-a-phone-message-with-java-dr",
     "filename": "record-a-phone-message-with-java-dr"
@@ -18111,6 +18689,7 @@
     "tags": [
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/08/send-sms-github-actions-dr",
     "filename": "send-sms-github-actions-dr"
@@ -18140,6 +18719,7 @@
       "dispatch-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/07/build-an-otp-service-dr",
     "filename": "build-an-otp-service-dr"
@@ -18168,6 +18748,7 @@
     "tags": [
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/07/receive-call-swift-dr",
     "filename": "receive-call-swift-dr"
@@ -18200,6 +18781,7 @@
     "tags": [
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/05/forward-call-with-koa-js-dr",
     "filename": "forward-call-with-koa-js-dr"
@@ -18227,6 +18809,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/02/04/yuriy-dybskiy-joins-nexmo-dev-rel-dr",
     "locale": "en",
     "link": "blog/19/02/04/yuriy-dybskiy-joins-nexmo-dev-rel-dr",
     "filename": "yuriy-dybskiy-joins-nexmo-dev-rel-dr"
@@ -18263,6 +18846,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/02/03/luke-oliff-joins-the-nexmo-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/19/02/03/luke-oliff-joins-the-nexmo-developer-relations-team-dr",
     "filename": "luke-oliff-joins-the-nexmo-developer-relations-team-dr"
@@ -18291,6 +18875,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/02/nexmo-finally-welcomes-kelly-j-andrews-to-the-developer-relations-team-dr",
     "filename": "nexmo-finally-welcomes-kelly-j-andrews-to-the-developer-relations-team-dr"
@@ -18321,6 +18906,7 @@
       "video-api",
       "slack"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/01/how-launch-video-meetings-slack-with-tokbox-app",
     "filename": "how-launch-video-meetings-slack-with-tokbox-app"
@@ -18349,6 +18935,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/02/01/paul-ardeleanu-joins-the-nexmo-developer-relations-team-dr",
     "filename": "paul-ardeleanu-joins-the-nexmo-developer-relations-team-dr"
@@ -18379,6 +18966,7 @@
       "javascript",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/01/30/stream-audio-into-a-phone-call-with-node-js",
     "filename": "stream-audio-into-a-phone-call-with-node-js"
@@ -18409,6 +18997,7 @@
       "ruby",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/01/24/play-streaming-audio-to-a-call-with-ruby-dr",
     "filename": "play-streaming-audio-to-a-call-with-ruby-dr"
@@ -18438,6 +19027,7 @@
       "javascript"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/01/23/how-to-send-sms-from-a-spreadsheet-dr",
     "filename": "how-to-send-sms-from-a-spreadsheet-dr"
@@ -18467,6 +19057,7 @@
       "javascript",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/01/15/sms-in-the-browser-an-adventure-in-websockets-and-the-nexmo-messages-api-dr",
     "filename": "sms-in-the-browser-an-adventure-in-websockets-and-the-nexmo-messages-api-dr"
@@ -18495,6 +19086,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2019/01/15/welcome-ben-greenberg-to-the-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/19/01/15/welcome-ben-greenberg-to-the-developer-relations-team-dr",
     "filename": "welcome-ben-greenberg-to-the-developer-relations-team-dr"
@@ -18527,6 +19119,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/01/11/garann-means-is-joining-the-developer-relations-team-dr",
     "filename": "garann-means-is-joining-the-developer-relations-team-dr"
@@ -18556,6 +19149,7 @@
       "dotnet",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/01/10/how-to-handle-user-input-with-asp-net-core-dr",
     "filename": "how-to-handle-user-input-with-asp-net-core-dr"
@@ -18586,6 +19180,7 @@
       "javascript",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/19/01/09/video-chat-javascript-opentok-nexmo-dr",
     "filename": "video-chat-javascript-opentok-nexmo-dr"
@@ -18616,6 +19211,7 @@
       "javascript",
       "video-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/20/custom-video-streams-opentok-api-dr",
     "filename": "custom-video-streams-opentok-api-dr"
@@ -18645,6 +19241,7 @@
       "javascript",
       "dispatch-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/19/santa-delivery-notifications-via-facebook-messenger-dr",
     "filename": "santa-delivery-notifications-via-facebook-messenger-dr"
@@ -18679,6 +19276,7 @@
       "messages-api",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/18/break-awkward-silences-with-terrible-festive-jokes-via-sms-dr",
     "filename": "break-awkward-silences-with-terrible-festive-jokes-via-sms-dr"
@@ -18708,6 +19306,7 @@
       "python",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/17/sending-sms-templates-python-dr",
     "filename": "sending-sms-templates-python-dr"
@@ -18738,6 +19337,7 @@
     "tags": [
       "onehack"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/15/onehack-devrel-internal-hackathon-dr",
     "filename": "onehack-devrel-internal-hackathon-dr"
@@ -18768,6 +19368,7 @@
       "php",
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/14/build-turkey-timer-laravel-facebook-messenger-dr",
     "filename": "build-turkey-timer-laravel-facebook-messenger-dr"
@@ -18797,6 +19398,7 @@
     "tags": [
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/13/call-whisper-with-selective-audio-controls-dr",
     "filename": "call-whisper-with-selective-audio-controls-dr"
@@ -18827,6 +19429,7 @@
       "messages-api",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/13/sms-bot-glitch-hapi-js-nexmo-messages-api-dr",
     "filename": "sms-bot-glitch-hapi-js-nexmo-messages-api-dr"
@@ -18861,6 +19464,7 @@
       "number-insight-api",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/12/real-time-number-insight-dashboard-dr",
     "filename": "real-time-number-insight-dashboard-dr"
@@ -18890,6 +19494,7 @@
       "python",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/12/whamageddon-streaming-last-christmas-into-a-phone-call-dr",
     "filename": "whamageddon-streaming-last-christmas-into-a-phone-call-dr"
@@ -18920,6 +19525,7 @@
     "tags": [
       "number-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/10/local-calls-nexmo-virtual-numbers-call-forwarding-dr",
     "filename": "local-calls-nexmo-virtual-numbers-call-forwarding-dr"
@@ -18950,6 +19556,7 @@
       "number-insight-api",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/07/track-santa-sms-java-dr",
     "filename": "track-santa-sms-java-dr"
@@ -18978,6 +19585,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/12/06/nexmo-welcomes-mark-lewin-to-the-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/18/12/06/nexmo-welcomes-mark-lewin-to-the-developer-relations-team-dr",
     "filename": "nexmo-welcomes-mark-lewin-to-the-developer-relations-team-dr"
@@ -19008,6 +19616,7 @@
     "tags": [
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/05/christmas-poetry-reading-using-text-to-speech-dr",
     "filename": "christmas-poetry-reading-using-text-to-speech-dr"
@@ -19036,6 +19645,7 @@
     "tags": [
       "python"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/04/dog-breed-detector-using-machine-learning-dr",
     "filename": "dog-breed-detector-using-machine-learning-dr"
@@ -19066,6 +19676,7 @@
       "python",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/03/dial-a-christmas-carol-with-nexmo-and-python-dr",
     "filename": "dial-a-christmas-carol-with-nexmo-and-python-dr"
@@ -19096,6 +19707,7 @@
       "javascript",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/12/03/multitrack-call-transcription-split-recording-voice-dr",
     "filename": "multitrack-call-transcription-split-recording-voice-dr"
@@ -19128,6 +19740,7 @@
       "health",
       "wellness"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/29/7-wellness-tips-for-hackathons",
     "filename": "7-wellness-tips-for-hackathons"
@@ -19156,6 +19769,7 @@
     "tags": [
       "devrel-awards"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/28/all-your-devrel-award-belong-to-us-dr",
     "filename": "all-your-devrel-award-belong-to-us-dr"
@@ -19185,6 +19799,7 @@
     "tags": [
       "python"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/27/serverless-paging-amazon-transcribe-dr",
     "filename": "serverless-paging-amazon-transcribe-dr"
@@ -19213,6 +19828,7 @@
     "tags": [
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/21/how-to-receive-a-phone-call-with-nexmo-voice-api-asp-core-core-and-nancyfx-dr",
     "filename": "how-to-receive-a-phone-call-with-nexmo-voice-api-asp-core-core-and-nancyfx-dr"
@@ -19242,6 +19858,7 @@
       "python",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/20/build-a-family-hotline-dr",
     "filename": "build-a-family-hotline-dr"
@@ -19270,6 +19887,7 @@
     "tags": [
       "java"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/16/java-client-version-4-dr",
     "filename": "java-client-version-4-dr"
@@ -19300,6 +19918,7 @@
       "voice-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/15/pycascades-code-of-conduct-hotline-nexmo-voice-api-dr",
     "filename": "pycascades-code-of-conduct-hotline-nexmo-voice-api-dr"
@@ -19332,6 +19951,7 @@
       "sms-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/13/queue-notifications-nexmo-laravel-horizon-dr",
     "filename": "queue-notifications-nexmo-laravel-horizon-dr"
@@ -19361,6 +19981,7 @@
     "tags": [
       "ai"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/12/developers-primer-ai-terminology-dr",
     "filename": "developers-primer-ai-terminology-dr"
@@ -19389,6 +20010,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/11/07/manik-joins-nexmo-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/18/11/07/manik-joins-nexmo-developer-relations-team-dr",
     "filename": "manik-joins-nexmo-developer-relations-team-dr"
@@ -19421,6 +20043,7 @@
       "curl",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/06/curl-https-nexmo-sms-api-behind-the-scenes-dr",
     "filename": "curl-https-nexmo-sms-api-behind-the-scenes-dr"
@@ -19449,6 +20072,7 @@
     "tags": [
       "open-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/11/05/openapi-led-development-at-nexmo",
     "filename": "openapi-led-development-at-nexmo"
@@ -19478,6 +20102,7 @@
       "messages-api",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/30/send-sms-typeform-submitted-using-node-hapi-messages-api-dr",
     "filename": "send-sms-typeform-submitted-using-node-hapi-messages-api-dr"
@@ -19509,6 +20134,7 @@
       "php",
       "messages-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/23/send-sms-from-php-with-failover-dr",
     "filename": "send-sms-from-php-with-failover-dr"
@@ -19539,6 +20165,7 @@
       "websockets",
       "tomcat"
     ],
+    "canonical": "",
     "outdated": false,
     "locale": "en",
     "link": "blog/18/10/22/create-websocket-server-java-api-dr",
@@ -19574,6 +20201,7 @@
       "javascript",
       "messaging-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/16/build-a-facebook-messenger-bot-with-messages-api-and-dialogflow-dr",
     "filename": "build-a-facebook-messenger-bot-with-messages-api-and-dialogflow-dr"
@@ -19603,6 +20231,7 @@
       "java",
       "spark"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/15/create-websocket-server-spark-framework-dr",
     "filename": "create-websocket-server-spark-framework-dr"
@@ -19632,6 +20261,7 @@
       "developer-spotlight"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/11/nexmo-developer-spotlight",
     "filename": "nexmo-developer-spotlight"
@@ -19666,6 +20296,7 @@
       "mms",
       "sms"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/10/10/nexmo-messages-dispatch-apis-dr",
     "locale": "en",
     "link": "blog/18/10/10/nexmo-messages-dispatch-apis-dr",
     "filename": "nexmo-messages-dispatch-apis-dr"
@@ -19696,6 +20327,7 @@
       "python",
       "audit-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/09/get-nexmo-audit-events-with-python-dr",
     "filename": "get-nexmo-audit-events-with-python-dr"
@@ -19717,6 +20349,7 @@
     "tags": [
       "hacktoberfest"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/09/join-nextoberfest-tis-the-season-to-be-hacking-dr",
     "filename": "join-nextoberfest-tis-the-season-to-be-hacking-dr"
@@ -19747,6 +20380,7 @@
       "websockets",
       "springboot"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/08/create-websocket-server-spring-boot-dr",
     "filename": "create-websocket-server-spring-boot-dr"
@@ -19775,6 +20409,7 @@
     "tags": [
       "secret-management-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/05/secret-managing-api-security-credentials-nexmo-easy",
     "filename": "secret-managing-api-security-credentials-nexmo-easy"
@@ -19803,6 +20438,7 @@
     "tags": [
       "tensorflow"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/10/02/image-classifier-in-tensorflow-dr",
     "filename": "image-classifier-in-tensorflow-dr"
@@ -19830,6 +20466,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/09/27/hui-jing-joins-the-nexmo-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/18/09/27/hui-jing-joins-the-nexmo-developer-relations-team-dr",
     "filename": "hui-jing-joins-the-nexmo-developer-relations-team-dr"
@@ -19858,6 +20495,7 @@
     "tags": [
       "announcement"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/09/26/nexmo-brings-whatsapp-business-solution-mulesoft",
     "filename": "nexmo-brings-whatsapp-business-solution-mulesoft"
@@ -19887,6 +20525,7 @@
       "android",
       "firebase"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/09/25/a-strawberry-or-not-classify-an-image-with-mlkit-for-android-dr",
     "filename": "a-strawberry-or-not-classify-an-image-with-mlkit-for-android-dr"
@@ -19918,6 +20557,7 @@
       "php",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/09/18/anything-to-sms-ifttt-nexmo-dr",
     "filename": "anything-to-sms-ifttt-nexmo-dr"
@@ -19951,6 +20591,7 @@
       "nuxt",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/09/11/add-2fa-to-nuxt-with-nexmo-verify-dr",
     "filename": "add-2fa-to-nuxt-with-nexmo-verify-dr"
@@ -19974,6 +20615,7 @@
       "developer",
       "event"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/09/11/how-we-powered-emf-camp-dr",
     "filename": "how-we-powered-emf-camp-dr"
@@ -20003,6 +20645,7 @@
       "number-insight-api",
       "java"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/09/04/creating-a-caller-id-with-java-dr",
     "filename": "creating-a-caller-id-with-java-dr"
@@ -20033,6 +20676,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/08/27/welcoming-myrsini-to-the-nexmo-developer-relations-team-dr",
     "filename": "welcoming-myrsini-to-the-nexmo-developer-relations-team-dr"
@@ -20063,6 +20707,7 @@
       "node",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/08/21/phone-call-web-browser-nexmo-in-app-voice-vue-js-dr",
     "filename": "phone-call-web-browser-nexmo-in-app-voice-vue-js-dr"
@@ -20092,6 +20737,7 @@
       "java",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/08/15/handle-keypad-input-dtmf-with-java-dr",
     "filename": "handle-keypad-input-dtmf-with-java-dr"
@@ -20125,6 +20771,7 @@
       "php",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/08/14/record-a-phone-message-with-php-dr",
     "filename": "record-a-phone-message-with-php-dr"
@@ -20155,6 +20802,7 @@
     "tags": [
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/08/14/serverless-sms-nexmo-ibm-dr",
     "filename": "serverless-sms-nexmo-ibm-dr"
@@ -20188,6 +20836,7 @@
       "php",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/08/10/handle-user-input-with-php-dr",
     "filename": "handle-user-input-with-php-dr"
@@ -20215,6 +20864,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/08/09/receive-a-phone-call-with-java-dr",
     "locale": "en",
     "link": "blog/18/08/09/receive-a-phone-call-with-java-dr",
     "filename": "receive-a-phone-call-with-java-dr"
@@ -20245,6 +20895,7 @@
       "security",
       "tls"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/08/09/additional-grace-period-legacy-tls-protocols",
     "filename": "additional-grace-period-legacy-tls-protocols"
@@ -20275,6 +20926,7 @@
       "angular",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/08/07/sms-notifications-browser-with-angular-node-ably-dr",
     "filename": "sms-notifications-browser-with-angular-node-ably-dr"
@@ -20302,6 +20954,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/07/25/nexmo-protects-customers-permanently-disabling-legacy-tls-protocols",
     "locale": "en",
     "link": "blog/18/07/25/nexmo-protects-customers-permanently-disabling-legacy-tls-protocols",
     "filename": "nexmo-protects-customers-permanently-disabling-legacy-tls-protocols"
@@ -20329,6 +20982,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/07/24/nexmo-introduces-in-app-video-developer-preview",
     "locale": "en",
     "link": "blog/18/07/24/nexmo-introduces-in-app-video-developer-preview",
     "filename": "nexmo-introduces-in-app-video-developer-preview"
@@ -20357,6 +21011,7 @@
     "tags": [
       "swift"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/07/18/nexmo-in-app-messaging-uitableview-swift-dr",
     "filename": "nexmo-in-app-messaging-uitableview-swift-dr"
@@ -20388,6 +21043,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/07/16/julia-joins-the-nexmo-developer-relations-team-dr",
     "filename": "julia-joins-the-nexmo-developer-relations-team-dr"
@@ -20415,6 +21071,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/07/12/swipedon-developer-story",
     "locale": "en",
     "link": "blog/18/07/12/swipedon-developer-story",
     "filename": "swipedon-developer-story"
@@ -20444,6 +21101,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/07/12/lorna-joins-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/18/07/12/lorna-joins-developer-relations-team-dr",
     "filename": "lorna-joins-developer-relations-team-dr"
@@ -20473,6 +21131,7 @@
       "2fa",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/07/11/add-two-factor-authentication-to-a-microsoft-bot-with-nexmos-verify-api-dr",
     "filename": "add-two-factor-authentication-to-a-microsoft-bot-with-nexmos-verify-api-dr"
@@ -20501,6 +21160,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/07/11/tony-bedford-nexmo-developer-relations-dr",
     "locale": "en",
     "link": "blog/18/07/11/tony-bedford-nexmo-developer-relations-dr",
     "filename": "tony-bedford-nexmo-developer-relations-dr"
@@ -20530,6 +21190,7 @@
       "python",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/07/10/voice-classification-nlp-google-cloud-dr",
     "filename": "voice-classification-nlp-google-cloud-dr"
@@ -20561,6 +21222,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/07/03/martyn-davies-joins-nexmo-dr",
     "locale": "en",
     "link": "blog/18/07/03/martyn-davies-joins-nexmo-dr",
     "filename": "martyn-davies-joins-nexmo-dr"
@@ -20590,6 +21252,7 @@
       "android",
       "firebase"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/07/03/make-and-receive-phone-calls-in-android-apps-with-nexmo-in-app-voice-and-firebase-dr",
     "filename": "make-and-receive-phone-calls-in-android-apps-with-nexmo-in-app-voice-and-firebase-dr"
@@ -20620,6 +21283,7 @@
       "php",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/06/28/receive-an-inbound-voice-call-with-php-dr",
     "filename": "receive-an-inbound-voice-call-with-php-dr"
@@ -20650,6 +21314,7 @@
       "voice-api",
       "twitter"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/06/26/twitter-interactive-voice-response-dr",
     "filename": "twitter-interactive-voice-response-dr"
@@ -20680,6 +21345,7 @@
       "sms-api",
       "php"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/06/25/receiving-sms-delivery-receipts-with-php-dr",
     "filename": "receiving-sms-delivery-receipts-with-php-dr"
@@ -20709,6 +21375,7 @@
       "ai",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/06/20/nexmo-integrations-ai-vendors-real-time-intelligence",
     "filename": "nexmo-integrations-ai-vendors-real-time-intelligence"
@@ -20738,6 +21405,7 @@
       "python",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/06/19/next-web-voice-journal-python-vue-javascript-dr",
     "filename": "next-web-voice-journal-python-vue-javascript-dr"
@@ -20768,6 +21436,7 @@
       "php",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/06/19/receiving-an-sms-with-php-dr",
     "filename": "receiving-an-sms-with-php-dr"
@@ -20795,6 +21464,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/06/13/nexmo-protects-customers-by-ending-support-for-legacy-tls-protocols",
     "locale": "en",
     "link": "blog/18/06/13/nexmo-protects-customers-by-ending-support-for-legacy-tls-protocols",
     "filename": "nexmo-protects-customers-by-ending-support-for-legacy-tls-protocols"
@@ -20824,6 +21494,7 @@
       "number-insight",
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/05/25/how-to-get-advanced-number-insights-within-an-asp-net-app-dr",
     "filename": "how-to-get-advanced-number-insights-within-an-asp-net-app-dr"
@@ -20853,6 +21524,7 @@
       "number-insight",
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/05/24/how-to-get-standard-number-insights-within-an-asp-net-app-dr",
     "filename": "how-to-get-standard-number-insights-within-an-asp-net-app-dr"
@@ -20882,6 +21554,7 @@
       "Number-insights",
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/05/22/how-to-get-basic-number-insights-within-an-asp-net-app-dr",
     "filename": "how-to-get-basic-number-insights-within-an-asp-net-app-dr"
@@ -20911,6 +21584,7 @@
       "number-insight",
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/05/22/getting-started-with-nexmo-number-insight-apis-and-asp-net-dr",
     "filename": "getting-started-with-nexmo-number-insight-apis-and-asp-net-dr"
@@ -20940,6 +21614,7 @@
       "node",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/05/22/voice-proxy-node-javascript-express-dr",
     "filename": "voice-proxy-node-javascript-express-dr"
@@ -20970,6 +21645,7 @@
       "voice-api",
       "stitch"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/05/14/connect-phone-call-to-stitch-in-app-voice-dr",
     "filename": "connect-phone-call-to-stitch-in-app-voice-dr"
@@ -21000,6 +21676,7 @@
       "ios",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/05/10/add-two-factor-authentication-to-swift-ios-apps-dr",
     "filename": "add-two-factor-authentication-to-swift-ios-apps-dr"
@@ -21030,6 +21707,7 @@
       "android",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/05/10/add-two-factor-authentication-to-android-apps-with-nexmos-verify-api-dr",
     "filename": "add-two-factor-authentication-to-android-apps-with-nexmos-verify-api-dr"
@@ -21060,6 +21738,7 @@
       "javascript",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/05/10/nexmo-verify-api-implementation-guide-dr",
     "filename": "nexmo-verify-api-implementation-guide-dr"
@@ -21087,6 +21766,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/05/02/steve-is-joining-the-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/18/05/02/steve-is-joining-the-developer-relations-team-dr",
     "filename": "steve-is-joining-the-developer-relations-team-dr"
@@ -21117,6 +21797,7 @@
       "transcription",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/04/17/dual-channel-transcription-split-recording-dr",
     "filename": "dual-channel-transcription-split-recording-dr"
@@ -21144,6 +21825,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/04/16/day-three-nexmo-rwdevcon-2018-dr",
     "locale": "en",
     "link": "blog/18/04/16/day-three-nexmo-rwdevcon-2018-dr",
     "filename": "day-three-nexmo-rwdevcon-2018-dr"
@@ -21171,6 +21853,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/04/11/day-two-recap-nexmo-rwdevcon-2018",
     "locale": "en",
     "link": "blog/18/04/11/day-two-recap-nexmo-rwdevcon-2018",
     "filename": "day-two-recap-nexmo-rwdevcon-2018"
@@ -21198,6 +21881,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/04/06/day-one-nexmo-rwdevcon-2018-dr",
     "locale": "en",
     "link": "blog/18/04/06/day-one-nexmo-rwdevcon-2018-dr",
     "filename": "day-one-nexmo-rwdevcon-2018-dr"
@@ -21228,6 +21912,7 @@
       "typescript",
       "conversation-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/03/29/build-chat-app-angular-material-stitch-javascript-dr",
     "filename": "build-chat-app-angular-material-stitch-javascript-dr"
@@ -21256,6 +21941,7 @@
     "tags": [
       "android"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/03/28/build-a-chat-app-with-lifecycle-aware-components-for-android-dr",
     "filename": "build-a-chat-app-with-lifecycle-aware-components-for-android-dr"
@@ -21284,6 +21970,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/03/16/nexmo-at-midwest-php-2018-dr",
     "locale": "en",
     "link": "blog/18/03/16/nexmo-at-midwest-php-2018-dr",
     "filename": "nexmo-at-midwest-php-2018-dr"
@@ -21312,6 +21999,7 @@
       "python",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/03/14/speech-voice-translation-microsoft-dr",
     "filename": "speech-voice-translation-microsoft-dr"
@@ -21341,6 +22029,7 @@
       "javascript",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/03/02/getting-bad-date-fitbit-nexmo-dr",
     "filename": "getting-bad-date-fitbit-nexmo-dr"
@@ -21368,6 +22057,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/02/28/nexmo-dotnet-client-library-new-release-dr",
     "locale": "en",
     "link": "blog/18/02/28/nexmo-dotnet-client-library-new-release-dr",
     "filename": "nexmo-dotnet-client-library-new-release-dr"
@@ -21396,6 +22086,7 @@
     "tags": [
       "ios"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/02/27/conversational-ui-nexmo-in-app-messaging-safe-layout-ios-11-dr",
     "filename": "conversational-ui-nexmo-in-app-messaging-safe-layout-ios-11-dr"
@@ -21426,6 +22117,7 @@
       "voice-api",
       "aws"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/18/02/16/text-speech-prompt-calls-using-python-aws-lambda-dr",
     "filename": "text-speech-prompt-calls-using-python-aws-lambda-dr"
@@ -21453,6 +22145,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/02/02/devrel-week-lisbon-dr",
     "locale": "en",
     "link": "blog/18/02/02/devrel-week-lisbon-dr",
     "filename": "devrel-week-lisbon-dr"
@@ -21480,6 +22173,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/01/11/princeton-coders-lyft-nexmo-apis",
     "locale": "en",
     "link": "blog/18/01/11/princeton-coders-lyft-nexmo-apis",
     "filename": "princeton-coders-lyft-nexmo-apis"
@@ -21507,6 +22201,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2018/01/04/nexmo-ssml-support-natural-text-speech",
     "locale": "en",
     "link": "blog/18/01/04/nexmo-ssml-support-natural-text-speech",
     "filename": "nexmo-ssml-support-natural-text-speech"
@@ -21524,7 +22219,7 @@
       "short_name": "chrisguzman"
     },
     "published": true,
-    "published_at": "2017-12-21 18:23:30 +0100",
+    "published_at": "2017-12-21 09:23:30 -0800",
     "updated_at": "2021-05-20 08:29:04 UTC",
     "category": {
       "name": "Tutorial",
@@ -21536,6 +22231,7 @@
       "ruby",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/12/21/handle-inbound-phone-calls-ruby-rails-dr",
     "filename": "handle-inbound-phone-calls-ruby-rails-dr"
@@ -21565,6 +22261,7 @@
       "ruby",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/12/19/receive-voice-call-events-call-progress-ruby-rails-dr",
     "filename": "receive-voice-call-events-call-progress-ruby-rails-dr"
@@ -21595,6 +22292,7 @@
       "ai",
       "bots"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/12/01/future-bots-voice-primary-computer-interface",
     "filename": "future-bots-voice-primary-computer-interface"
@@ -21624,6 +22322,7 @@
       "voice-api",
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/11/29/how-to-play-audio-to-a-caller-in-asp-net-core-dr",
     "filename": "how-to-play-audio-to-a-caller-in-asp-net-core-dr"
@@ -21654,6 +22353,7 @@
       "bots",
       "ai"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/11/16/bots-ai-personal-assistants-voice-assistants",
     "filename": "bots-ai-personal-assistants-voice-assistants"
@@ -21684,6 +22384,7 @@
       "bots",
       "ai"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/11/09/will-bots-give-rise-voice-seo-bidding-spoken-queries",
     "filename": "will-bots-give-rise-voice-seo-bidding-spoken-queries"
@@ -21711,6 +22412,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/11/08/nexmo-at-the-swift-summit-dr",
     "locale": "en",
     "link": "blog/17/11/08/nexmo-at-the-swift-summit-dr",
     "filename": "nexmo-at-the-swift-summit-dr"
@@ -21742,6 +22444,7 @@
       "bots",
       "ai"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/11/02/bots-ai-mastering-invocation-names-alexa-skills",
     "filename": "bots-ai-mastering-invocation-names-alexa-skills"
@@ -21771,6 +22474,7 @@
       "ruby",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/11/02/outbound-text-to-speech-voice-call-ruby-on-rails-dr",
     "filename": "outbound-text-to-speech-voice-call-ruby-on-rails-dr"
@@ -21800,6 +22504,7 @@
     "tags": [
       "chatbots"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/10/25/developer-tooling-ai-bots",
     "filename": "developer-tooling-ai-bots"
@@ -21829,6 +22534,7 @@
       "rails",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/10/23/receive-sms-messages-ruby-on-rails-dr",
     "filename": "receive-sms-messages-ruby-on-rails-dr"
@@ -21859,6 +22565,7 @@
       "php",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/10/20/text-to-speech-voice-calls-with-php-dr",
     "filename": "text-to-speech-voice-calls-with-php-dr"
@@ -21888,6 +22595,7 @@
       "ruby",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/10/19/receive-sms-delivery-receipt-ruby-on-rails-dr",
     "filename": "receive-sms-delivery-receipt-ruby-on-rails-dr"
@@ -21918,6 +22626,7 @@
       "ruby",
       "ruby-on-rails"
     ],
+    "canonical": "",
     "outdated": true,
     "locale": "en",
     "link": "blog/17/10/16/send-sms-ruby-on-rails-dr",
@@ -21949,6 +22658,7 @@
       "chatbots",
       "voicebots"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/10/13/cross-platform-bot-development",
     "filename": "cross-platform-bot-development"
@@ -21976,6 +22686,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/10/12/techcrunch-disrupt-hackathon-focus-rescue",
     "locale": "en",
     "link": "blog/17/10/12/techcrunch-disrupt-hackathon-focus-rescue",
     "filename": "techcrunch-disrupt-hackathon-focus-rescue"
@@ -22006,6 +22717,7 @@
       "ai",
       "chatbots"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/10/05/ai-bot-platform",
     "filename": "ai-bot-platform"
@@ -22036,6 +22748,7 @@
       "voice-api",
       "sanic"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/10/05/fast-voice-broadcast-python-dr",
     "filename": "fast-voice-broadcast-python-dr"
@@ -22067,6 +22780,7 @@
       "python",
       "websockets"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/10/03/real-time-call-transcription-ibm-watson-python-dr",
     "filename": "real-time-call-transcription-ibm-watson-python-dr"
@@ -22096,6 +22810,7 @@
       "bots",
       "ai"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/09/28/bots-ai-user-privacy-environments-bots-listening",
     "filename": "bots-ai-user-privacy-environments-bots-listening"
@@ -22127,6 +22842,7 @@
       "chat-bots",
       "bots"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/09/21/voice-text-ai-bot-interface",
     "filename": "voice-text-ai-bot-interface"
@@ -22158,6 +22874,7 @@
       "sms-api",
       "slimphp"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/09/20/sending-sms-messages-with-php-dr",
     "filename": "sending-sms-messages-with-php-dr"
@@ -22188,6 +22905,7 @@
       "ai",
       "chatbots"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/09/14/ai-bot-messaging-push-notifications-sms-dr",
     "filename": "ai-bot-messaging-push-notifications-sms-dr"
@@ -22215,6 +22933,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/09/14/hello-nexmodev-dr",
     "locale": "en",
     "link": "blog/17/09/14/hello-nexmodev-dr",
     "filename": "hello-nexmodev-dr"
@@ -22245,6 +22964,7 @@
       "chatbots",
       "voice-api"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/09/07/ai-bot-use-cases-dr",
     "locale": "en",
     "link": "blog/17/09/07/ai-bot-use-cases-dr",
     "filename": "ai-bot-use-cases-dr"
@@ -22272,6 +22992,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/09/05/nexmo-at-android-summit-dr",
     "locale": "en",
     "link": "blog/17/09/05/nexmo-at-android-summit-dr",
     "filename": "nexmo-at-android-summit-dr"
@@ -22303,6 +23024,7 @@
       "bots",
       "ai"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/08/31/bots-ai-launching-bot-getting-discovered-dr",
     "filename": "bots-ai-launching-bot-getting-discovered-dr"
@@ -22332,6 +23054,7 @@
     "tags": [
       "php"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/08/29/announcing-v1-0-0-nexmo-php-client-dr",
     "filename": "announcing-v1-0-0-nexmo-php-client-dr"
@@ -22363,6 +23086,7 @@
       "chatbots",
       "ai"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/08/24/bots-chatbots-ai-tech-maturity-dr",
     "filename": "bots-chatbots-ai-tech-maturity-dr"
@@ -22389,6 +23113,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/08/15/laracon-2017-nyc-conference-report-dr",
     "locale": "en",
     "link": "blog/17/08/15/laracon-2017-nyc-conference-report-dr",
     "filename": "laracon-2017-nyc-conference-report-dr"
@@ -22419,6 +23144,7 @@
       "python",
       "django"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/08/14/text-to-speech-phone-call-with-django-dr",
     "filename": "text-to-speech-phone-call-with-django-dr"
@@ -22448,6 +23174,7 @@
       "voice-api",
       "python"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/08/03/inbound-voice-call-campaign-tracking-dr",
     "filename": "inbound-voice-call-campaign-tracking-dr"
@@ -22478,6 +23205,7 @@
       "voice-api",
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/07/28/nexmo-voice-api-asp-net-configure-dr",
     "filename": "nexmo-voice-api-asp-net-configure-dr"
@@ -22507,6 +23235,7 @@
       "voice-api",
       "dotnet"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/07/28/text-to-speech-phone-call-dr",
     "filename": "text-to-speech-phone-call-dr"
@@ -22538,6 +23267,7 @@
       "laravel",
       "php"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/07/26/2fa-logins-laravel-nexmo-dr",
     "filename": "2fa-logins-laravel-nexmo-dr"
@@ -22558,6 +23288,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/07/25/introducing-nexmo-developer-dr",
     "locale": "en",
     "link": "blog/17/07/25/introducing-nexmo-developer-dr",
     "filename": "introducing-nexmo-developer-dr"
@@ -22587,6 +23318,7 @@
       "asp.net",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/07/21/get-sms-delivery-receipt-asp-net-mvc-dr",
     "filename": "get-sms-delivery-receipt-asp-net-mvc-dr"
@@ -22619,6 +23351,7 @@
       "python",
       "2fa"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/07/13/2-factor-authentication-sms-voice-django-dr",
     "filename": "2-factor-authentication-sms-voice-django-dr"
@@ -22647,6 +23380,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/07/07/michael-is-joining-the-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/17/07/07/michael-is-joining-the-developer-relations-team-dr",
     "filename": "michael-is-joining-the-developer-relations-team-dr"
@@ -22674,6 +23408,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/07/06/amanda-joins-nexmos-devrel-team-dr",
     "locale": "en",
     "link": "blog/17/07/06/amanda-joins-nexmos-devrel-team-dr",
     "filename": "amanda-joins-nexmos-devrel-team-dr"
@@ -22702,6 +23437,7 @@
     "tags": [
       "ngrok"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/07/04/local-development-nexmo-ngrok-tunnel-dr",
     "filename": "local-development-nexmo-ngrok-tunnel-dr"
@@ -22732,6 +23468,7 @@
       "sms-api",
       "flask"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/06/22/send-sms-messages-python-flask-dr",
     "filename": "send-sms-messages-python-flask-dr"
@@ -22761,6 +23498,7 @@
       "voice-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "replacement_url": "",
     "locale": "en",
     "link": "blog/17/06/14/using-aws-iot-button-with-nexmo-phone-call-dr",
@@ -22789,6 +23527,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/06/08/nexmo-latest-devrel-aaron-bassett-dr",
     "locale": "en",
     "link": "blog/17/06/08/nexmo-latest-devrel-aaron-bassett-dr",
     "filename": "nexmo-latest-devrel-aaron-bassett-dr"
@@ -22816,6 +23555,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/06/07/welcoming-bibi-nexmo-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/17/06/07/welcoming-bibi-nexmo-developer-relations-team-dr",
     "filename": "welcoming-bibi-nexmo-developer-relations-team-dr"
@@ -22843,6 +23583,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/06/05/minting-new-javascript-developer-advocate-alex-lakatos-dr",
     "locale": "en",
     "link": "blog/17/06/05/minting-new-javascript-developer-advocate-alex-lakatos-dr",
     "filename": "minting-new-javascript-developer-advocate-alex-lakatos-dr"
@@ -22872,6 +23613,7 @@
       "java",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/05/31/receive-sms-messages-java-dr",
     "filename": "receive-sms-messages-java-dr"
@@ -22899,6 +23641,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/05/16/ibm-bluemix-nexmo-api-platform-available",
     "locale": "en",
     "link": "blog/17/05/16/ibm-bluemix-nexmo-api-platform-available",
     "filename": "ibm-bluemix-nexmo-api-platform-available"
@@ -22927,6 +23670,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/05/11/nexmo-aws-lex-connector-in-public-beta-dr",
     "locale": "en",
     "link": "blog/17/05/11/nexmo-aws-lex-connector-in-public-beta-dr",
     "filename": "nexmo-aws-lex-connector-in-public-beta-dr"
@@ -22957,6 +23701,7 @@
       "sms-api",
       "gradle"
     ],
+    "canonical": "",
     "outdated": false,
     "locale": "en",
     "link": "blog/17/05/03/send-sms-messages-with-java-dr",
@@ -22988,6 +23733,7 @@
       "2fa",
       "verify-api"
     ],
+    "canonical": "",
     "outdated": true,
     "locale": "en",
     "link": "blog/17/04/11/implement-two-factor-authentication-2fa-web-apps-node-js-dr",
@@ -23016,6 +23762,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/04/03/nexmo-ride-hailing-chatbot",
     "locale": "en",
     "link": "blog/17/04/03/nexmo-ride-hailing-chatbot",
     "filename": "nexmo-ride-hailing-chatbot"
@@ -23044,6 +23791,7 @@
       "dotnet",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/03/31/recieve-sms-messages-with-asp-net-mvc-framework-dr",
     "filename": "recieve-sms-messages-with-asp-net-mvc-framework-dr"
@@ -23071,6 +23819,7 @@
     "tags": [
       "java"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/03/23/big-changes-for-nexmos-java-client-library-dr",
     "locale": "en",
     "link": "blog/17/03/23/big-changes-for-nexmos-java-client-library-dr",
     "filename": "big-changes-for-nexmos-java-client-library-dr"
@@ -23099,6 +23848,7 @@
       "dotnet",
       "sms-api"
     ],
+    "canonical": "",
     "outdated": true,
     "replacement_url": "https://www.nexmo.com/blog/2020/07/09/how-to-send-an-sms-with-asp-net-core-mvc",
     "locale": "en",
@@ -23130,6 +23880,7 @@
       "nodejs",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/03/21/make-private-phone-call-node-js-dr",
     "filename": "make-private-phone-call-node-js-dr"
@@ -23158,6 +23909,7 @@
     "tags": [
       "devrel"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/03/14/one-year-developer-relations-nexmo-dr",
     "filename": "one-year-developer-relations-nexmo-dr"
@@ -23187,6 +23939,7 @@
       "sms-api",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/03/03/sms-voice-programmable-communications-dr",
     "filename": "sms-voice-programmable-communications-dr"
@@ -23216,6 +23969,7 @@
       "node",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/02/28/sending-receiving-sms-node-js",
     "filename": "sending-receiving-sms-node-js"
@@ -23245,6 +23999,7 @@
     "tags": [
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/02/23/eliminate-failed-calls-with-dynamic-connection-capabilities",
     "filename": "eliminate-failed-calls-with-dynamic-connection-capabilities"
@@ -23272,6 +24027,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2017/02/15/webinar-getting-started-nexmo-voice-websockets-dr",
     "locale": "en",
     "link": "blog/17/02/15/webinar-getting-started-nexmo-voice-websockets-dr",
     "filename": "webinar-getting-started-nexmo-voice-websockets-dr"
@@ -23301,6 +24057,7 @@
       "java",
       "voice-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/02/06/full-voice-api-support-coming-nexmo-java-client-v2-0-dr",
     "filename": "full-voice-api-support-coming-nexmo-java-client-v2-0-dr"
@@ -23330,6 +24087,7 @@
       "voice-api",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/02/06/how-to-record-audio-from-phone-call-node-js-dr",
     "filename": "how-to-record-audio-from-phone-call-node-js-dr"
@@ -23359,6 +24117,7 @@
       "firebase",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/01/30/add-two-factor-authentication-2fa-android-app-nexmo-firebase-dr",
     "filename": "add-two-factor-authentication-2fa-android-app-nexmo-firebase-dr"
@@ -23388,6 +24147,7 @@
       "voice-api",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/01/26/handle-inbound-text-speech-phone-call-node-js-dr",
     "filename": "handle-inbound-text-speech-phone-call-node-js-dr"
@@ -23417,6 +24177,7 @@
       "swift",
       "verify-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/01/18/adding-phone-sms-tts-biometric-verification-ios-application-dr",
     "filename": "adding-phone-sms-tts-biometric-verification-ios-application-dr"
@@ -23447,6 +24208,7 @@
       "voice-api",
       "text-to-speech"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/01/12/make-outbound-text-speech-phone-call-node-js-dr",
     "filename": "make-outbound-text-speech-phone-call-node-js-dr"
@@ -23477,6 +24239,7 @@
       "ibm",
       "websockets"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/17/01/04/extending-ibm-watson-project-intu-to-the-phone-network-with-the-nexmo-voice-api-dr",
     "filename": "extending-ibm-watson-project-intu-to-the-phone-network-with-the-nexmo-voice-api-dr"
@@ -23508,6 +24271,7 @@
       "websocket",
       "browser"
     ],
+    "canonical": "",
     "outdated": true,
     "locale": "en",
     "link": "blog/16/12/19/streaming-calls-to-a-browser-with-voice-websockets-dr",
@@ -23536,6 +24300,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/12/05/welcome-newest-developer-advocate-nexmo-devrel-team-chris-guzman-dr",
     "locale": "en",
     "link": "blog/16/12/05/welcome-newest-developer-advocate-nexmo-devrel-team-chris-guzman-dr",
     "filename": "welcome-newest-developer-advocate-nexmo-devrel-team-chris-guzman-dr"
@@ -23563,6 +24328,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/11/30/nexmo-voice-api-demo-telephony-ai-platforms-websockets",
     "locale": "en",
     "link": "blog/16/11/30/nexmo-voice-api-demo-telephony-ai-platforms-websockets",
     "filename": "nexmo-voice-api-demo-telephony-ai-platforms-websockets"
@@ -23592,6 +24358,7 @@
       "sms-api",
       "nodejs"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/16/11/23/getting-a-sms-delivery-receipt-from-a-mobile-carrier-with-node-js-dr",
     "filename": "getting-a-sms-delivery-receipt-from-a-mobile-carrier-with-node-js-dr"
@@ -23620,6 +24387,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/11/22/olia-joining-the-developer-relations-team-dr",
     "locale": "en",
     "link": "blog/16/11/22/olia-joining-the-developer-relations-team-dr",
     "filename": "olia-joining-the-developer-relations-team-dr"
@@ -23647,6 +24415,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/11/16/live-streaming-phpworld-dr",
     "locale": "en",
     "link": "blog/16/11/16/live-streaming-phpworld-dr",
     "filename": "live-streaming-phpworld-dr"
@@ -23674,6 +24443,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/11/08/nexmo-elephpants-at-zendcon",
     "locale": "en",
     "link": "blog/16/11/08/nexmo-elephpants-at-zendcon",
     "filename": "nexmo-elephpants-at-zendcon"
@@ -23704,6 +24474,7 @@
       "nodejs",
       "sms-api"
     ],
+    "canonical": "",
     "outdated": false,
     "replacement_url": "",
     "locale": "en",
@@ -23736,6 +24507,7 @@
       "express",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/16/10/19/how-to-send-sms-messages-with-node-js-and-express-dr",
     "filename": "how-to-send-sms-messages-with-node-js-and-express-dr"
@@ -23763,6 +24535,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/10/18/welcoming-mark-smith-nexmo-developer-relations-team",
     "locale": "en",
     "link": "blog/16/10/18/welcoming-mark-smith-nexmo-developer-relations-team",
     "filename": "welcoming-mark-smith-nexmo-developer-relations-team"
@@ -23794,6 +24567,7 @@
       "sms-api",
       "node"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/16/09/29/building-interactive-delivery-notifications-system-using-expressjs-dr",
     "filename": "building-interactive-delivery-notifications-system-using-expressjs-dr"
@@ -23821,6 +24595,7 @@
     "tags": [
       "careers"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/08/31/tomomi-joining-developer-relations-team",
     "locale": "en",
     "link": "blog/16/08/31/tomomi-joining-developer-relations-team",
     "filename": "tomomi-joining-developer-relations-team"
@@ -23850,6 +24625,7 @@
       "2fa",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/16/08/10/securing-asp-net-app-2fa-using-nexmo-sms-sendgrid-email-dr",
     "filename": "securing-asp-net-app-2fa-using-nexmo-sms-sendgrid-email-dr"
@@ -23878,6 +24654,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/08/03/nexmo-tilda-emf-camp-badge",
     "locale": "en",
     "link": "blog/16/08/03/nexmo-tilda-emf-camp-badge",
     "filename": "nexmo-tilda-emf-camp-badge"
@@ -23905,6 +24682,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/07/29/nexmo-laracon-laravel-5-3-dr",
     "locale": "en",
     "link": "blog/16/07/29/nexmo-laracon-laravel-5-3-dr",
     "filename": "nexmo-laracon-laravel-5-3-dr"
@@ -23935,6 +24713,7 @@
       "sms-api"
     ],
     "spotlight": true,
+    "canonical": "",
     "locale": "en",
     "link": "blog/16/07/14/building-customer-service-chat-rails-5-action-cable-sms-dr",
     "filename": "building-customer-service-chat-rails-5-action-cable-sms-dr"
@@ -23961,6 +24740,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/07/12/nexmo-to-present-keynote-developer-workshop-panel-at-all-about-the-api",
     "locale": "en",
     "link": "blog/16/07/12/nexmo-to-present-keynote-developer-workshop-panel-at-all-about-the-api",
     "filename": "nexmo-to-present-keynote-developer-workshop-panel-at-all-about-the-api"
@@ -23989,6 +24769,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/07/01/win-tickets-electromagnetic-field-2016",
     "locale": "en",
     "link": "blog/16/07/01/win-tickets-electromagnetic-field-2016",
     "filename": "win-tickets-electromagnetic-field-2016"
@@ -24016,6 +24797,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/06/29/introducing-the-nexmo-command-line-interface-cli",
     "locale": "en",
     "link": "blog/16/06/29/introducing-the-nexmo-command-line-interface-cli",
     "filename": "introducing-the-nexmo-command-line-interface-cli"
@@ -24043,6 +24825,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/06/28/let-users-login-phone-number-using-nexmos-verify-php-dr",
     "locale": "en",
     "link": "blog/16/06/28/let-users-login-phone-number-using-nexmos-verify-php-dr",
     "filename": "let-users-login-phone-number-using-nexmos-verify-php-dr"
@@ -24070,6 +24853,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/06/23/talking-real-time-web-apps-net-at-ndc-oslo",
     "locale": "en",
     "link": "blog/16/06/23/talking-real-time-web-apps-net-at-ndc-oslo",
     "filename": "talking-real-time-web-apps-net-at-ndc-oslo"
@@ -24100,6 +24884,7 @@
       "phone-numbers",
       "numbers-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/16/06/22/phone-numbers-fact-or-fiction",
     "filename": "phone-numbers-fact-or-fiction"
@@ -24130,6 +24915,7 @@
       "voice-api"
     ],
     "spotlight": false,
+    "canonical": "",
     "locale": "en",
     "link": "blog/16/06/21/building-voice-alerts-broadcast-system-using-ruby-nexmo-text-speech-api-dr",
     "filename": "building-voice-alerts-broadcast-system-using-ruby-nexmo-text-speech-api-dr"
@@ -24157,6 +24943,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/06/07/two-factor-authentication-2fa-ruby-rails-devise-nexmo-verify-dr",
     "locale": "en",
     "link": "blog/16/06/07/two-factor-authentication-2fa-ruby-rails-devise-nexmo-verify-dr",
     "filename": "two-factor-authentication-2fa-ruby-rails-devise-nexmo-verify-dr"
@@ -24184,6 +24971,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/06/02/claim-nexmo-credit-help-disrupt-travel-industry-skyscanner",
     "locale": "en",
     "link": "blog/16/06/02/claim-nexmo-credit-help-disrupt-travel-industry-skyscanner",
     "filename": "claim-nexmo-credit-help-disrupt-travel-industry-skyscanner"
@@ -24213,6 +25001,7 @@
       "php",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/16/06/02/building-text-message-group-chat-nexmo-sms-api-php-dr",
     "filename": "building-text-message-group-chat-nexmo-sms-api-php-dr"
@@ -24244,6 +25033,7 @@
       "python",
       "sms-api"
     ],
+    "canonical": "",
     "locale": "en",
     "link": "blog/16/05/31/building-sms-google-sheets-application-aws-lambda-dr",
     "filename": "building-sms-google-sheets-application-aws-lambda-dr"
@@ -24271,6 +25061,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/05/30/developer-new-nexmo-python-library-released-pycon",
     "locale": "en",
     "link": "blog/16/05/30/developer-new-nexmo-python-library-released-pycon",
     "filename": "developer-new-nexmo-python-library-released-pycon"
@@ -24298,6 +25089,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/05/25/official-php-client-lib",
     "locale": "en",
     "link": "blog/16/05/25/official-php-client-lib",
     "filename": "official-php-client-lib"
@@ -24325,6 +25117,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/05/23/phptek-2016-livestream",
     "locale": "en",
     "link": "blog/16/05/23/phptek-2016-livestream",
     "filename": "phptek-2016-livestream"
@@ -24352,6 +25145,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/05/19/real-time-web-apps-net-options",
     "locale": "en",
     "link": "blog/16/05/19/real-time-web-apps-net-options",
     "filename": "real-time-web-apps-net-options"
@@ -24379,6 +25173,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/05/04/ruby-gem",
     "locale": "en",
     "link": "blog/16/05/04/ruby-gem",
     "filename": "ruby-gem"
@@ -24406,6 +25201,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/05/03/developer-relations-at-nexmo",
     "locale": "en",
     "link": "blog/16/05/03/developer-relations-at-nexmo",
     "filename": "developer-relations-at-nexmo"
@@ -24432,6 +25228,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2016/03/25/build-rest-implementation-scales-better-smpp",
     "locale": "en",
     "link": "blog/16/03/25/build-rest-implementation-scales-better-smpp",
     "filename": "build-rest-implementation-scales-better-smpp"
@@ -24459,6 +25256,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/09/01/building-a-phone-powered-photo-booth-with-nexmos-voice-and-sms-apis",
     "locale": "en",
     "link": "blog/15/09/01/building-a-phone-powered-photo-booth-with-nexmos-voice-and-sms-apis",
     "filename": "building-a-phone-powered-photo-booth-with-nexmos-voice-and-sms-apis"
@@ -24476,7 +25274,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-08-14 17:45:51 +0200",
+    "published_at": "2015-08-14 08:45:51 -0700",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -24486,6 +25284,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/08/14/developer-challenge-winner-uses-nexmo-number-insight-apis",
     "locale": "en",
     "link": "blog/15/08/14/developer-challenge-winner-uses-nexmo-number-insight-apis",
     "filename": "developer-challenge-winner-uses-nexmo-number-insight-apis"
@@ -24512,6 +25311,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/08/06/nexmo-women-who-code-host-meetup-for-females-in-tech",
     "locale": "en",
     "link": "blog/15/08/06/nexmo-women-who-code-host-meetup-for-females-in-tech",
     "filename": "nexmo-women-who-code-host-meetup-for-females-in-tech"
@@ -24532,6 +25332,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/05/12/nexmo-disrupting-nyc",
     "locale": "en",
     "link": "blog/15/05/12/nexmo-disrupting-nyc",
     "filename": "nexmo-disrupting-nyc"
@@ -24549,7 +25350,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-29 19:55:05 +0200",
+    "published_at": "2015-04-29 10:55:05 -0700",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -24559,6 +25360,7 @@
     "tags": [
       "contest"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/04/29/announcing-the-nexmo-numbers-cms-edition-contest-winner",
     "locale": "en",
     "link": "blog/15/04/29/announcing-the-nexmo-numbers-cms-edition-contest-winner",
     "filename": "announcing-the-nexmo-numbers-cms-edition-contest-winner"
@@ -24586,6 +25388,7 @@
     "tags": [
       "contest"
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/04/17/announcing-the-nexmo-numbers-crm-edition-contest-winner",
     "locale": "en",
     "link": "blog/15/04/17/announcing-the-nexmo-numbers-crm-edition-contest-winner",
     "filename": "announcing-the-nexmo-numbers-crm-edition-contest-winner"
@@ -24603,7 +25406,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-10 19:24:18 +0200",
+    "published_at": "2015-04-10 10:24:18 -0700",
     "category": {
       "name": "Event",
       "plural": "Events",
@@ -24613,6 +25416,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/04/10/nexmo-at-the-capital-one-hackathon",
     "locale": "en",
     "link": "blog/15/04/10/nexmo-at-the-capital-one-hackathon",
     "filename": "nexmo-at-the-capital-one-hackathon"
@@ -24639,6 +25443,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/03/11/gdc-2015-user-acquisition-analytics-and-a-whole-lot-of-bacon",
     "locale": "en",
     "link": "blog/15/03/11/gdc-2015-user-acquisition-analytics-and-a-whole-lot-of-bacon",
     "filename": "gdc-2015-user-acquisition-analytics-and-a-whole-lot-of-bacon"
@@ -24667,6 +25472,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/03/05/how-to-build-sms-2fa-that-wont-scare-away-your-users",
     "locale": "en",
     "link": "blog/15/03/06/how-to-build-sms-2fa-that-wont-scare-away-your-users",
     "filename": "how-to-build-sms-2fa-that-wont-scare-away-your-users"
@@ -24687,6 +25493,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/02/26/memories-of-confoo",
     "locale": "en",
     "link": "blog/15/02/26/memories-of-confoo",
     "filename": "memories-of-confoo"
@@ -24714,6 +25521,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2015/02/21/what-is-voicexml",
     "locale": "en",
     "link": "blog/15/02/21/what-is-voicexml",
     "filename": "what-is-voicexml"
@@ -24730,7 +25538,7 @@
       "short_name": "jackshirazi"
     },
     "published": true,
-    "published_at": "2014-11-18 14:02:36 +0100",
+    "published_at": "2014-11-18 05:02:36 -0800",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",
@@ -24740,6 +25548,7 @@
     "tags": [
 
     ],
+    "canonical": "https://www.nexmo.com/legacy-blog/2014/11/18/whats-different-now",
     "locale": "en",
     "link": "blog/14/11/18/whats-different-now",
     "filename": "whats-different-now"
