@@ -1,6 +1,6 @@
 ---
 title: Receive SMS Messages With Node.js and Express | One Dev Minute
-description: " In this quick walkthrough, you'll learn how to receive SMS
+description: "In this quick walkthrough, you'll learn how to receive SMS
   messages with the Vonage Messages API, Express and Node.js."
 thumbnail: /content/blog/receive-sms-messages-with-node-js-and-express-one-dev-minute/receive.png
 author: amanda-cavallaro
