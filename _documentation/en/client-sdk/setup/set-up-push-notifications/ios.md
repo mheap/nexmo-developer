@@ -147,6 +147,16 @@ source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/un-delega
 
 The `userInfo` contains information about the incoming message that you can use to [create a notification](https://developer.apple.com/documentation/usernotifications/unusernotificationcenter/1649508-add) with `UNUserNotificationCenter`. You can view a sample of the JSON contained in the [user info](/client-sdk/in-app-voice/guides/push-notification-payload.md#regular-push-payload-example).
 
+## Configure Push Notification TTL
+
+You can configure the time-to-live (TTL) for push notifications, this will stop stale push notifications being delivered to a device after they are no longer relevant. The default value is 120 seconds. To set the TTL, configure the `NXMClient`:
+
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/ttl'
+```
+
+> Changes to the `NXMClient` configuration must be done before the first call to `NXMClient.shared`.
+
 ## Conclusion
 
 In this guide you have seen how to set up push notifications. You can find the VoIP push sample project on [GitHub](https://github.com/nexmo-community/swift-phone-to-app-callkit) and learn more about CallKit on [developer.apple.com](https://developer.apple.com/documentation/callkit). More information on UserNotifications is also available on [developer.apple.com](https://developer.apple.com/documentation/usernotifications)
