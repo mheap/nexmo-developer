@@ -143,6 +143,16 @@ source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/f
 
 > **NOTE:** In order to process the push notification and apply any methods on the `NexmoCall` object (for example, answer, hangup, and so on), the `NexmoClient` has to be initialized and the user has to be [logged in](/client-sdk/getting-started/add-sdk-to-your-app/android).
 
+## Configure Push Notification TTL
+
+You can configure the time-to-live (TTL) for push notifications, this will stop stale push notifications being delivered to a device after they are no longer relevant. The default value is 120 seconds. To set the TTL, configure the `NexmoClient`:
+
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/ttl'
+```
+
+> Changes to the `NexmoClient` configuration must be done before the first call to `NexmoClient().get()`.
+
 ## Putting it all together
 
 Now you can test your push notification setup by calling your app's user. The incoming call will trigger `onIncomingCall` callback as shown above. If you have registered an incoming call listener with `NexmoClient.addIncomingCallListener` elsewhere in your Android app, this listener will take precedence over `onIncomingCall`on the `NexmoPushEventListener`. 
