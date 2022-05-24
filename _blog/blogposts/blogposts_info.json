@@ -1,5 +1,41 @@
 [
   {
+    "title": "Build a Breakout Room Application in JavaScript with Vonage Video API",
+    "description": "This tutorial explains how to use the separate sessions to build the Breakout Room feature into our Demo Application, which ",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/build-a-breakout-room-application-in-javascript-with-vonage-video-api/breakoutroom.jpg",
+    "author": {
+      "team": true,
+      "alumni": false,
+      "spotlight": false,
+      "noteworthy": false,
+      "hidden": false,
+      "name": "Iu Jie Lim ",
+      "image_url": "/content/images/iu_jie_lim.png",
+      "bio": "Iu Jie is a Software Engineer who is constantly seeking innovative ways to solve a problem.\nShe is passionate about new technology, especially relating to cloud and AI.\nOut of work, she likes to spend her time hunting for tasty food with family.",
+      "short_name": "iu_jie_lim"
+    },
+    "published": true,
+    "published_at": "2022-05-24 11:04:44 UTC",
+    "updated_at": "2022-05-24 12:51:48 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "video-api",
+      "javascript"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/05/24/build-a-breakout-room-application-in-javascript-with-vonage-video-api",
+    "filename": "build-a-breakout-room-application-in-javascript-with-vonage-video-api"
+  },
+  {
     "title": "Getting started with Flutter 3 and Vonage APIs",
     "description": "Flutter 3 has now been released! Lets take a look at how we can use the Vonage APIs within a flutter application.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/getting-started-with-flutter-3-and-vonage-apis/flutter-3.png",
@@ -7086,39 +7122,6 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
-    "title": "Setting up CI/CD with Github Actions",
-    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
-    "author": {
-      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
-      "image_url": "/content/images/yonatankra.png",
-      "name": "Yonatan Kra",
-      "website_url": "https://yonatankra.com",
-      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
-      "twitter": "YonatanKra",
-      "github_url": "https://github.com/YonatanKra",
-      "title": "Vonage Software Architect",
-      "team": true,
-      "short_name": "yonatankra"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "github"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
-    "filename": "setting-up-ci-cd-with-github-actions"
-  },
-  {
     "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
     "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
@@ -7176,6 +7179,39 @@
     "locale": "en",
     "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
     "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
+  },
+  {
+    "title": "Setting up CI/CD with Github Actions",
+    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
+    "author": {
+      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
+      "image_url": "/content/images/yonatankra.png",
+      "name": "Yonatan Kra",
+      "website_url": "https://yonatankra.com",
+      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
+      "twitter": "YonatanKra",
+      "github_url": "https://github.com/YonatanKra",
+      "title": "Vonage Software Architect",
+      "team": true,
+      "short_name": "yonatankra"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "github"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
+    "filename": "setting-up-ci-cd-with-github-actions"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -22255,7 +22291,7 @@
       "short_name": "chrisguzman"
     },
     "published": true,
-    "published_at": "2017-12-21 09:23:30 -0800",
+    "published_at": "2017-12-21 18:23:30 +0100",
     "updated_at": "2021-05-20 08:29:04 UTC",
     "category": {
       "name": "Tutorial",
@@ -25310,7 +25346,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-08-14 08:45:51 -0700",
+    "published_at": "2015-08-14 17:45:51 +0200",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -25386,7 +25422,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-29 10:55:05 -0700",
+    "published_at": "2015-04-29 19:55:05 +0200",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -25442,7 +25478,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-10 10:24:18 -0700",
+    "published_at": "2015-04-10 19:24:18 +0200",
     "category": {
       "name": "Event",
       "plural": "Events",
@@ -25574,7 +25610,7 @@
       "short_name": "jackshirazi"
     },
     "published": true,
-    "published_at": "2014-11-18 05:02:36 -0800",
+    "published_at": "2014-11-18 14:02:36 +0100",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",
