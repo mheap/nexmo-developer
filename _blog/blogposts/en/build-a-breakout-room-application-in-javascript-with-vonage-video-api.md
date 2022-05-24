@@ -18,11 +18,11 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-*This article was written in collaboration with [Yinping Ge]*(https://developer.vonage.com/blog/authors/yinping-ge)
+*This article was written in collaboration with* [Yinping Ge](https://developer.vonage.com/blog/authors/yinping-ge)
 
 Breakout Room is a common feature required by many customers, especially those in education. It often allows "splitting the main meeting room into separate ones", "splitting participants into these breakout rooms", and "participants to send messages to the host no matter which room they are in", etc.
 
-With Vonage [Video API](https://www.vonage.com/communications-apis/video/), there is more than one way to implement such a Breakout Room feature for your application. 
+With Vonage [Video API](https://www.vonage.com/communications-apis/video/), there is more than one way to implement such a Breakout Room feature for your application.
 
 One way is to create a big [Video Session](https://tokbox.com/developer/guides/basics/#sessions) with logic controlling which streams to subscribe to for each user. Another one is "implement breakout rooms as separate sessions", then "connect participants to these different sessions created for each breakout room".
 
@@ -45,13 +45,13 @@ ReactJS version >= 16.8
 Node.js version >= 16.13
 PostgreSQL 14 as the Database, you can choose any storage you prefer
 
-You should be able to see all the dependencies in the [GitHub repo](https://github.com/nexmo-se/video-breakout-room) and we’d suggest you always use the latest version of Vonage SDK. The versions listed here were the ones used when we were working on this demo app. 
+You should be able to see all the dependencies in the [GitHub repo](https://github.com/nexmo-se/video-breakout-room) and we’d suggest you always use the latest version of Vonage SDK. The versions listed here were the ones used when we were working on this demo app.
 
 ## Application’s Server and Database Design
 
-The application server creates rooms, creates sessions, generates tokens, maintains the rooms and participants, and sends signaling messages to rooms. 
+The application server creates rooms, creates sessions, generates tokens, maintains the rooms and participants, and sends signaling messages to rooms.
 
-The application server acts as a "relay" by utilizing the [Signaling-REST API](https://tokbox.com/developer/guides/signaling/rest/) for passing messages between different rooms/sessions for scenarios like one participant needs to raise-hand to the host who’s in a different room (i.e. connected to another session), and for the main feature: breakout rooms management. We will explain in detail later how we use the signaling messages in managing breakout rooms. 
+The application server acts as a "relay" by utilizing the [Signaling-REST API](https://tokbox.com/developer/guides/signaling/rest/) for passing messages between different rooms/sessions for scenarios like one participant needs to raise-hand to the host who’s in a different room (i.e. connected to another session), and for the main feature: breakout rooms management. We will explain in detail later how we use the signaling messages in managing breakout rooms.
 
 When running the application server, the room table will be created if non-exist. I understand that the room table might be a bit more complex in real life. Here we just list the basic data we need. The script to create the room table is as below:
 
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS rooms(
 )
 ```
 
-The `session_id` stores the id of a session associated with the room. The `max_participants` defines the maximum number of participants the room allows. The `main_room_id` differentiates whether this is a breakout room that belongs to the main room or just a main room that can have breakout rooms: when it is set to `NULL`, it is a main room; otherwise, it is a breakout room and its value should be set to the room id of its main room. 
+The `session_id` stores the id of a session associated with the room. The `max_participants` defines the maximum number of participants the room allows. The `main_room_id` differentiates whether this is a breakout room that belongs to the main room or just a main room that can have breakout rooms: when it is set to `NULL`, it is a main room; otherwise, it is a breakout room and its value should be set to the room id of its main room.
 
 Initially, on the log-in page, all users choose to join one room, aka the main room. Upon receiving the front-end request, the application server calls Video API to create a session for this main room and adds a record to the room table with `session_id` set to the id of the session created and `main_room_id` set to `NULL`. Then it returns the `session_id` to all logged-in users for them to connect to the session.
 
@@ -73,11 +73,11 @@ When the meeting is on-going and a host user decides to create breakout rooms, a
 
 ## Use Signaling API to Implement Breakout Room Management
 
-The Room object holds the references to the session, message(breakoutRoomSignal) and participants and provides the entries for creating breakout rooms and managing participants. 
+The Room object holds the references to the session, message(breakoutRoomSignal) and participants and provides the entries for creating breakout rooms and managing participants.
 
 The application uses [Signaling-REST API](https://tokbox.com/developer/guides/signaling/rest/) to send messages to clients connected to all sessions related to a main-room/breakout-room, informing of room changes, timer and raise-hand requests, etc.
 
-For example, signaling message with below type and data is to inform application users of new breakout rooms being created and they can choose one to join: 
+For example, signaling message with below type and data is to inform application users of new breakout rooms being created and they can choose one to join:
 
 ```json
 {
@@ -164,7 +164,7 @@ async function handleChangeRoom(publisher, roomName) {
 
 ## Re-Use the Publisher Object When Switching Back and Forth Among Rooms
 
-When a participant leaves the main room and joins a breakout room (or otherwise),  **it is recommended to re-use the Publisher object** to save resources. 
+When a participant leaves the main room and joins a breakout room (or otherwise),  **it is recommended to re-use the Publisher object** to save resources.
 
 For each `type": "signal:breakout-room` message that can lead a client to leave a room and join another room, eg. `roomCreated (automatic)`, what the application does is to disconnect from a session and then connect to another session. Within the process, the stream published to the previous session will be destroyed and the event [streamDestroyed](https://tokbox.com/developer/sdks/js/reference/StreamEvent.html) will be dispatched to the publisher client. In order to retain the Publisher object for reuse, the method preventDefault of the streamDestroyed event should be called.
 
@@ -183,7 +183,7 @@ function handleStreamDestroyed(e) {
 }
 ```
 
-The demo application re-uses this Publisher object to publish to the session associated with the breakout room. 
+The demo application re-uses this Publisher object to publish to the session associated with the breakout room.
 
 ```javascript
 async function publish(
