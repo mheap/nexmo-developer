@@ -18,6 +18,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
+
 *This article was written in collaboration with* [Yinping Ge](https://developer.vonage.com/blog/authors/yinping-ge)
 
 Breakout Room is a common feature required by many customers, especially those in education. It often allows "splitting the main meeting room into separate ones", "splitting participants into these breakout rooms", and "participants to send messages to the host no matter which room they are in", etc.
