@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.7.2 - May 27, 2022
+
+### Fix
+
+- Removed unused npm dependencies.
+
 ## Version 8.6.0 - April 21, 2022
 
 ### New
