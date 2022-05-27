@@ -1,13 +1,13 @@
 ---
-title: Seen Receipt
+title: Delivered and Seen Receipts
 navigation_weight: 5
 ---
 
-# Seen Receipt
+# Delivered and Seen Receipts
 
 ## Overview
 
-This guide covers seen receipts within a conversation.
+This guide covers delivered and seen receipts within a conversation.
 
 Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app) and you are able to [create a conversation](/client-sdk/in-app-messaging/guides/simple-conversation).
 
@@ -17,19 +17,38 @@ source: _partials/client-sdk/messaging/chat-app-tutorial-note.md
 
 This guide will make use of the following concepts:
 
-- **Conversation Events** - `text:seen` events that fire on a Conversation, after you are a Member
+**Conversation Events:**
 
-## Set Text status to seen
+* `message:delivered` events that fire on a Conversation, after you are a Member
+* `message:seen` events that fire on a Conversation, after you are a Member
 
-There is the `seen()` method on a `TextEvent` that will set its status to seen. The following code snippet will set a text's status to seen once a text event happens in the conversation.
+## Set Message Status to Delivered
+
+There is a method that will set a `Message` status to delivered. The following code snippet will set a messages's status to delivered once a message event happens in the conversation.
+
+```tabbed_content
+source: _tutorials_tabbed_content/client-sdk/guides/messaging/delivered-set-status
+```
+
+## Message Delivered Receipt
+
+Given a conversation you are already a member of, `message:delivered` events will be received when `Message` events are set to delivered in the context of the current conversation:
+
+```tabbed_content
+source: _tutorials_tabbed_content/client-sdk/guides/messaging/delivered-receipt
+```
+
+## Set Message Status to Seen
+
+There is a method that will set a `Message` status to seen. The following code snippet will set a messages's status to seen once a message event happens in the conversation.
 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/seen-set-status
 ```
 
-## Text Seen Receipt
+## Message Seen Receipt
 
-Given a conversation you are already a member of, `text:seen` events will be received when members have seen previously received `text` events in the context of the current conversation:
+Given a conversation you are already a member of, `message:seen` events will be received when `Message` events are set to seen in the context of the current conversation:
 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/seen-receipt
