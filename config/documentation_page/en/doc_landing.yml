@@ -39,7 +39,7 @@ top-section:
       product_name_link: "/client-sdk/in-app-voice/overview"
       product_description: "Build live voice communications into your application"
       getting_started_link: "/client-sdk/in-app-voice/overview#setup"
-      api_reference_link: none
+      api_reference_link: ""
       tutorials_link: none
       icon: "Vlt-icon-condition"
 
@@ -47,7 +47,7 @@ top-section:
       product_name_link: "/voice/sip/overview"
       product_description: "Connect voice calls to existing endpoints via the phone network an in-app voice."
       getting_started_link: "/voice/sip/overview"
-      api_reference_link: none
+      api_reference_link: ""
       tutorials_link: none
       icon: "Vlt-icon-plug"
 
@@ -61,7 +61,7 @@ top-section:
       icon: "Vlt-icon-shield"
 
     - product_name: "Number Insight"
-      product_name_link: "/verify/overview"
+      product_name_link: "/number-insight/overview"
       product_description: "Get information about phone numbers."
       getting_started_link: "/number-insight/code-snippets/before-you-begin"
       api_reference_link: "/api/number-insight"
@@ -81,7 +81,7 @@ bottom-section:
         product_name_link: /redact/overview
         product_description: Delete data from the Vonage platform.
       - product_name: Reports API
-        product_name_link:
+        product_name_link: /reports/overview
         product_description: Find historical records and messages by originating or destination phone number, dates, and more.
       icon: "Vlt-icon-gear"
 
