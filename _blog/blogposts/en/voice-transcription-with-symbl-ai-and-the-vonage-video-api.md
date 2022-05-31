@@ -16,7 +16,7 @@ tags:
 comments: true
 spotlight: false
 redirect: ""
-canonical: ""
+canonical: "https://webrtc.ventures/2021/10/voice-transcription-with-symbl-ai-and-the-vonage-video-api/"
 outdated: false
 replacement_url: ""
 ---
