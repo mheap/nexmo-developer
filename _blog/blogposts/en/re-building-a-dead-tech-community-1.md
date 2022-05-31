@@ -1,7 +1,7 @@
 ---
 title: Re-Building a “Dead” Tech Community
 description: Tips and lessons about rebuilding a dormant tech community. In this example, a Ruby on Rails meetup group
-thumbnail: /content/blog/re-building-a-“dead”-tech-community/rebuilding-community.png
+thumbnail: /content/blog/re-building-a-dead-tech-community/rebuilding-community.png
 author: benjamin-aronov
 published: true
 published_at: 2022-05-31T10:32:43.327Z
