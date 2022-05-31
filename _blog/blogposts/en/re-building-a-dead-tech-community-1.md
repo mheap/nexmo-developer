@@ -1,7 +1,7 @@
 ---
 title: Re-Building a “Dead” Tech Community
 description: Tips and lessons about rebuilding a dormant tech community. In this example, a Ruby on Rails meetup group
-thumbnail: /content/blog/re-building-a-dead-tech-community/rebuilding-community.png
+thumbnail: /content/blog/re-building-a-dead-tech-community-1/rebuilding-community.png
 author: benjamin-aronov
 published: true
 published_at: 2022-05-31T10:32:43.327Z
@@ -18,9 +18,9 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-In 2018 [I wrote a blog post](https://medium.com/le-wagon/yes-we-still-teach-ruby-19d3d9b163e) about learning and teaching Ruby long after the (local) tech world considered it a dead language. For all my love for Ruby and Rails, one thing that was sorely missing was an active, local community in Tel Aviv. 
+In 2018 [I wrote a blog post](https://medium.com/le-wagon/yes-we-still-teach-ruby-19d3d9b163e) about learning and teaching Ruby long after the (local) tech world considered it a dead language. For all my love for Ruby and Rails, one thing that was sorely missing was an active, local community in Tel Aviv.
 
-Fast forward to 2022, and a few weeks ago I attended the first in-person [Israel.rb](https://www.facebook.com/groups/272757750683415) meetup. There were 2 amazing talks, food and drinks at a gorgeous office, Ruby job openings, and 30+ very much alive Rubyists. 
+Fast forward to 2022, and a few weeks ago I attended the first in-person [Israel.rb](https://www.facebook.com/groups/272757750683415) meetup. There were 2 amazing talks, food and drinks at a gorgeous office, Ruby job openings, and 30+ very much alive Rubyists.
 
 So what happened in-between? I helped build the community (with two amazing co-organizers!) that I so desperately wanted. So let’s celebrate this milestone with some thoughts, observations, and hopefully lessons for someone, somewhere.
 
@@ -32,7 +32,7 @@ So what happened in-between? I helped build the community (with two amazing co-o
 
 Back in 2018, I finished the Le Wagon Bootcamp. I had signed up only a couple of weeks before moving to Tel Aviv, knowing that my basic level of programming was not enough for the competitive Israeli industry. I had a feeling, *“it’s not what you know, it’s who you know”.* I thought Le Wagon would give me that network.
 
-Unfortunately, I didn’t realize Le Wagon had only opened a branch in Tel Aviv 3 months prior to my arrival. Fortunately, at the Demo Day graduation ceremony Le Wagon TLV’s GM offered me a job. The mission? Build a community to ensure student success. This required both an internal and external push. 
+Unfortunately, I didn’t realize Le Wagon had only opened a branch in Tel Aviv 3 months prior to my arrival. Fortunately, at the Demo Day graduation ceremony Le Wagon TLV’s GM offered me a job. The mission? Build a community to ensure student success. This required both an internal and external push.
 
 Internally, improving student happiness was pretty straightforward: listen, brainstorm, fix, repeat. Externally, I was at the whim of the Tel Aviv tech ecosystem. How was I, a guy who just arrived in Israel a few months prior and didn’t know anyone, a guy who had almost no professional coding experience, going to build a network? I hit the pavement.
 
@@ -47,7 +47,7 @@ But time and time again, there was one big problem. We couldn’t connect in any
 
 When I reached out to the organizers to offer a location, to handle promotion, to basically do everything possible if they could bring some Ruby speakers….no answer.
 
-A few months later I was ecstatic when Ruby Underground announced a meetup. I made sure to clear my calendar and attend. The talks were super interesting, the two alumni I dragged along met with WeWork HR looking to hire, and I even got a few minutes to talk to the meetup organizer. It all seemed to be falling into place. That is until I followed up with the organizer. Again, radio silence. In hindsight, this was 2019 at WeWork as the company was in a period of flux with an upcoming and then canceled IPO. 
+A few months later I was ecstatic when Ruby Underground announced a meetup. I made sure to clear my calendar and attend. The talks were super interesting, the two alumni I dragged along met with WeWork HR looking to hire, and I even got a few minutes to talk to the meetup organizer. It all seemed to be falling into place. That is until I followed up with the organizer. Again, radio silence. In hindsight, this was 2019 at WeWork as the company was in a period of flux with an upcoming and then canceled IPO.
 
 > *It became clear that Ruby was no longer a priority for even top Ruby organizers in Tel Aviv.*
 
@@ -87,9 +87,9 @@ Me: Makes Ok-ish Graphics, Social Media Spammer, Knows Ruby Juniors
 
 #### **The Metrics**
 
-Ok, so that’s how we got started. So, what’s actually happened? 
+Ok, so that’s how we got started. So, what’s actually happened?
 
-**3 Online Meetups:** 
+**3 Online Meetups:**
 
 * July 15, 2020
 
@@ -152,7 +152,7 @@ While looking for people you’ll also be killing two birds with one stone; find
 
 ![Maya Shavin with Front End tips for Ruby Devs](/content/blog/re-building-a-“dead”-tech-community/maya-s.jpeg "Maya Shavin with Front End tips for Ruby Devs")
 
-If you can’t find any past local speakers, look for new ones! Search for combinations of your tech and location. Look on Twitter. Is anyone talking about the “dead tech” in your local language? Look on LinkedIn. Who’s working in the “dead tech”? 
+If you can’t find any past local speakers, look for new ones! Search for combinations of your tech and location. Look on Twitter. Is anyone talking about the “dead tech” in your local language? Look on LinkedIn. Who’s working in the “dead tech”?
 
 One more secret to finding great content in a post-2020 world is that remote life is no longer stigmatized. Israel.rb was able to really take advantage of this, bringing in world-class Rubyists that would have never been able to make it to Tel Aviv from around the world for a meetup. Now with in-person events opening up, you can get the best of both worlds. Meet with your local group in person and bring in a top expert for a live watch party!
 
@@ -168,7 +168,7 @@ One area that we struggled with was consistency. We had our second meetup one mo
 
 **Tools**
 
-Along with consistent planning, you'll need to agree with your co-organizers from the beginning on consistent tooling. Each organizer in our A-team had a different preferred method for communication. We also had different preferred methods for engaging the community, and it caused a lot of problems. 
+Along with consistent planning, you'll need to agree with your co-organizers from the beginning on consistent tooling. Each organizer in our A-team had a different preferred method for communication. We also had different preferred methods for engaging the community, and it caused a lot of problems.
 
 At first, we opened a Slack workspace, thinking this would be the home of our new community. But quickly realized that it didn’t fit our community. Slack is too cumbersome and if our maximum potential community is in the dozens, how many will actually remember to open it often enough? In the end, it became our place to organize meetups, with more friction than function.
 
@@ -186,12 +186,12 @@ Photo by [Andy Hermawan](https://unsplash.com/@kolamdigital?utm_source=medium&ut
 
 #### After the launch
 
-So remember how I said you should be all planned and prepared before? Yeah, we didn’t do so much of that. 
+So remember how I said you should be all planned and prepared before? Yeah, we didn’t do so much of that.
 
 So this advice can be seen as “After Launch” but it’s also what I’m using as a blueprint for Israel.rb version 2.0.
 
 1. Schedule regular check-ins with the organizers. Once a month, every other month, etc. Make sure everyone is clear on the state of the group and what needs to be happening for the next event. Always good to try to include more people in this process after meetups. Each new member helps rejuvenate the motivation.
-2. Understand your main stakeholders. Since launching Israel.rb, the biggest new, unexpected community member type are small to medium companies that are looking for new employees. We created a simple [Job Board](https://airtable.com/shr2EZCTlzE73skSH/tblxs9zBQANucf8y2) but are thinking about how to better incorporate them into our community. 
+2. Understand your main stakeholders. Since launching Israel.rb, the biggest new, unexpected community member type are small to medium companies that are looking for new employees. We created a simple [Job Board](https://airtable.com/shr2EZCTlzE73skSH/tblxs9zBQANucf8y2) but are thinking about how to better incorporate them into our community.
 3. Create a landing page. As we found, jumping from tool to tool, the “frontpage” of our community was inconsistent, and hard to find valuable information. Having a single source of truth landing page that then points to all your different initiatives will help attract new members. You can use the Israel.rb [landing page mockup](<https://www.figma.com/proto/w8dEFZC7dieuFb8OL4qD6p/Untitled?page-id=0%3A1&node-id=3%3A2&viewport=619%2C233%2C0.25&scaling=scale-down>) for inspiration.
 
    Have some clear community initiatives that they can find on the landing page, these are ours:
