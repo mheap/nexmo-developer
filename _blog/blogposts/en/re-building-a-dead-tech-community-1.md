@@ -36,9 +36,6 @@ Unfortunately, I didn’t realize Le Wagon had only opened a branch in Tel Aviv 
 
 Internally, improving student happiness was pretty straightforward: listen, brainstorm, fix, repeat. Externally, I was at the whim of the Tel Aviv tech ecosystem. How was I, a guy who just arrived in Israel a few months prior and didn’t know anyone, a guy who had almost no professional coding experience, going to build a network? I hit the pavement.
 
-\
-*A 2019 excursion into the TLV tech community*
-
 ![A 2019 excursion into the Tel Aviv tech community with former students and colleagues.](https://cdn-images-1.medium.com/max/1200/0*Qrjg0iYmVJzf46Px "A 2019 excursion into the TLV tech community")
 
 For the next year and a half, I was attending 1–3 meetups or tech events a week. I was cold calling organizers, speakers, startups, programmers, product managers, designers, VCs, and basically anyone that I thought could provide even a bit of value for our community. It yielded many amazing results. Sometimes students were attending events with me. But most of the time we were hosting meetups ourselves with a wide diversity of profiles and topics. We had some events that were literally overflowing, with 130+ attendees squeezing in the door.
@@ -61,8 +58,6 @@ To be specific, I attended the first DEV IRL meetup in Tel Aviv. It was organize
 
 After spending all of 5 minutes on Vonage’s rooftop, I was sold! I was the one now getting in contact with HR. Within 6 months both Avital and I would join Ben at Vonage, and Israel.rb would be set in motion.
 
-*The Four Speakers at DEV IRL: [Jonathan](https://twitter.com/johnnymakestuff), [Ben](https://twitter.com/rabbigreenberg?lang=en), [Avital](https://twitter.com/avitaltzubeli), and [Clara](https://twitter.com/Clara_Morgen)*
-
 ![The Four Speakers at DEV IRL: Jonathan, Ben, Avital, and Clara.](https://cdn-images-1.medium.com/max/1200/0*tazK_h18hRXy88x0.jpg "The Four Speakers at DEV IRL: Jonathan, Ben, Avital, and Clara.")
 
 I started my new position at Vonage in February 2020. Yes, *that* February 2020. The one with the beginning of a global pandemic. Great timing!
@@ -73,9 +68,7 @@ It didn’t take much convincing. Ben was in!
 
 Ben had a great insight; “let’s bring in a third organizer so the group wasn’t 100% Vonage”. And so Ariel Caplan, Ruby Backend extraordinaire completed our trifecta. At the time Ariel was at Cloudinary and had already spoken at both RubyConf and RailsConf multiple times. Oh, and that one last Ruby Underground I attended? Ariel was a speaker so I knew he was equally brilliant and intelligible for all levels.
 
-*Ariel, Ruby speaker extraordinaire*
-
-![Ariel Caplan, Ruby speaker extraordinaire](/content/blog/re-building-a-“dead”-tech-community/ariel-c.jpeg "Ariel Caplan, Ruby speaker extraordinaire")
+![Ariel Caplan, Ruby speaker extraordinaire](/content/blog/re-building-a-dead-tech-community-1/ariel-c.jpeg "Ariel Caplan, Ruby speaker extraordinaire")
 
 So the A-Team was:
 
@@ -107,9 +100,7 @@ Ok, so that’s how we got started. So, what’s actually happened?
   * Speakers: Dan Moore (FusionAuth)
   * Sponsors: Vonage, Cloudinary
 
-*Allison McMillian at our very first meetup!*
-
-![Allison McMillian at our very first meetup!](/content/blog/re-building-a-“dead”-tech-community/allison-mcm.jpeg "Allison McMillian at our very first meetup!")
+![Allison McMillian at our very first meetup!](/content/blog/re-building-a-dead-tech-community-1/allison-mcm.jpeg "Allison McMillian at our very first meetup!")
 
 **1 Hybrid Mini-Conference:**
 
@@ -148,9 +139,7 @@ Beyond online, you can see if there are any local bootcamps or courses still tea
 
 While looking for people you’ll also be killing two birds with one stone; finding people will lead you to your sources of content. As you research those former speakers at meetups and conferences, google their name and look for their Dev.to/Medium pages, are they still actively writing content? Have they given talks recently? The best and easiest thing for a content creator is if they can repurpose content for multiple events. “Oh, you gave that talk at RailsConf? Can you do it again for your local fans?”. Think about recording the talks. Recorded talks which can then be shared on YouTube make events more attractive for speakers.
 
-*Maya Shavin with Front End tips for Ruby Devs*
-
-![Maya Shavin with Front End tips for Ruby Devs](/content/blog/re-building-a-“dead”-tech-community/maya-s.jpeg "Maya Shavin with Front End tips for Ruby Devs")
+![Maya Shavin with Front End tips for Ruby Devs](/content/blog/re-building-a-dead-tech-community-1/maya-s.jpeg "Maya Shavin with Front End tips for Ruby Devs")
 
 If you can’t find any past local speakers, look for new ones! Search for combinations of your tech and location. Look on Twitter. Is anyone talking about the “dead tech” in your local language? Look on LinkedIn. Who’s working in the “dead tech”?
 
