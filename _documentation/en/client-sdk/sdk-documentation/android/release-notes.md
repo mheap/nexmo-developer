@@ -6,6 +6,13 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.1.1 - May 25, 2022
+
+### Fixed 
+
+- Fix `NexmoMessage` serialisation
+- Fix error handling within `NexmoClient.getConversation()` when not a member.
+
 ## 4.1.0 - May 11, 2022
 
 ### Added
