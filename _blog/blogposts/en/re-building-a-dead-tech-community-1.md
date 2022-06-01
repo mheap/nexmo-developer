@@ -190,7 +190,7 @@ So this advice can be seen as “After Launch” but it’s also what I’m usin
      **job board**: this may be the single most valuable initiative you engage in, helping folks in their career.
    * **state of your tech in your location:** create a list of companies that are using your technology in your area. Identifiable logos will provide a lot of social proof that this is still a cool area to be in.
 
-![Ben Greenberg being warm and welcoming at the last meetup.](/content/blog/re-building-a-“dead”-tech-community/ben-greenberg-tailorbrands-1.png "Ben Greenberg being warm and welcoming at the last meetup.")
+![Ben Greenberg being warm and welcoming at the last meetup.](/content/blog/re-building-a-dead-tech-community/ben-greenberg-tailorbrands-1.png "Ben Greenberg being warm and welcoming at the last meetup.")
 
 ### Do it!
 
