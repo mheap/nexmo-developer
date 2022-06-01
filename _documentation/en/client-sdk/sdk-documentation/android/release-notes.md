@@ -10,7 +10,7 @@ navigation_weight: 0
 
 ### Fixed 
 
-- Fix `NexmoMessage` serialisation
+- Fix `NexmoMessage` serialization
 - Fix error handling within `NexmoClient.getConversation()` when not a member.
 
 ## 4.1.0 - May 11, 2022
