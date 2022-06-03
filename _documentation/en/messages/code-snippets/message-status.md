@@ -7,7 +7,7 @@ navigation_weight: 6
 
 In this code snippet you learn how to receive message status updates using the message status webhook.
 
-> **NOTE:** Messages API does not support inbound SMS message and SMS delivery receipt callbacks via the application-specific webhooks. In order to receive callbacks for SMS message and SMS delivery receipts you need to set the [account-level webhooks for SMS](https://dashboard.nexmo.com/settings).
+> **NOTE:** By authenticating using [basic auth](https://developer.vonage.com/concepts/guides/authentication#basic-authentication), the message status callback is sent to your [account-level webhooks](https://dashboard.nexmo.com/settings).  [JWT-based auth](https://developer.vonage.com/concepts/guides/authentication#json-web-tokens), on the other hand, sends the callback to your [application-level webhooks](https://dashboard.nexmo.com/applications).
 
 > **NOTE:** Messages API supports [signed webhooks](/concepts/guides/webhooks#decoding-signed-webhooks) so you can verify a request is coming from Vonage and its payload has not been tampered with during transit.
 

@@ -26,11 +26,11 @@ Webhook | URL
 Status URL | `https://www.example.com/webhooks/message-status`
 Inbound URL | `https://www.example.com/webhooks/inbound-message`
 
-> **NOTE:** The default method of `POST` should be used for both of the webhook URLs.
 
-### Inbound SMS webhooks
+> **NOTE:** By authenticating using the [JWT-based auth](https://developer.vonage.com/concepts/guides/authentication#json-web-tokens), both the inbound SMS and message status callbacks are sent to your [application-level webhooks](https://dashboard.nexmo.com/applications) as described above.
+However, if you authenticate using [basic auth](https://developer.vonage.com/concepts/guides/authentication#basic-authentication), both callbacks are sent to your [account-level webhooks](https://dashboard.nexmo.com/settings) and you will need to configure those instead.
 
-Messages API does not support inbound SMS message and SMS delivery receipt callbacks via the application-specific webhooks described in the previous section. In order to receive callbacks for SMS message and SMS delivery receipts you need to set the [account-level webhooks for SMS](https://dashboard.nexmo.com/settings).
+> **NOTE:** The callbacks are sent over `POST` HTTP requests.  
 
 ### Testing locally via Ngrok
 

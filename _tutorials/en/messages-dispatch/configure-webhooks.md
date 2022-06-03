@@ -33,7 +33,7 @@ The values you enter for webhook URLs depends on where your webhook server is lo
 
 ### Inbound SMS webhooks
 
-Messages API does not support inbound SMS message and SMS delivery receipt callbacks via the application-specific webhooks described in the previous section. In order to receive callbacks for SMS message and SMS delivery receipts you need to set the [account-level webhooks for SMS](https://dashboard.nexmo.com/settings).
+> **NOTE:** By authenticating using [basic auth](https://developer.vonage.com/concepts/guides/authentication#basic-authentication), both the inbound SMS and delivery receipt callbacks are sent to your [account-level webhooks](https://dashboard.nexmo.com/settings).  [JWT-based auth](https://developer.vonage.com/concepts/guides/authentication#json-web-tokens), on the other hand, sends both callbacks to your [application-level webhooks](https://dashboard.nexmo.com/applications).
 
 ### Webhook queue
 
