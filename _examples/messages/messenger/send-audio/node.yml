@@ -1,7 +1,11 @@
 ---
 dependencies:
-    - "@vonage/server-sdk@beta"
-code:
+    - "@vonage/server-sdk"
+client:
     source: .repos/vonage/vonage-node-code-snippets/messages/messenger/send-audio.js
     from_line: 14
-    to_line: 46
+    to_line: 27
+code:
+    source: .repos/vonage/vonage-node-code-snippets/messages/messenger/send-audio.js
+    from_line: 29
+    to_line: 38
