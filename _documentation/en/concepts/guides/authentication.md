@@ -150,6 +150,7 @@ An example of generating a JWT for a Client SDK application is as follows:
 ``` shell
 vonage jwt --key_file=./private.key --subject=MY_USER_NAME --acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' --app_id=MY_APP_ID
 ```
+**NB:** The private key in question is generated and stored in the current directory where you created your app using the CLI. It will have the same name as your application. You can also find it in the generated `vonage_app.json` file.
 
 More examples of generating JWTs with ACLs can be found in the [Vonage documentation](/conversation/guides/jwt-acl).
 
