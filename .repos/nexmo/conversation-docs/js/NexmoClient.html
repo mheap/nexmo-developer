@@ -1648,7 +1648,7 @@
 		<ul class="dummy">
 			<li>
 				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-846">line 846</a>
+				 <a href="sdk.js.html#sunlight-1-line-880">line 880</a>
 			</li>
 		</ul>
 	</dd>
@@ -1672,6 +1672,396 @@
         <h3 class="subsection-title">Methods</h3>
 
         <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="checkMediaConnectivity"><span class="type-signature">&lt;async> </span>checkMediaConnectivity(ip, port)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Return the connection health of a single media server including possible connectionTime in ms.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ip</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>ip address of the Media Server</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>port</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>port number of the Media Server</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="sdk.js.html">sdk.js</a>,
+				 <a href="sdk.js.html#sunlight-1-line-869">line 869</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;MediaConnectionReport></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">Return the connection health of a single media server</p>
+    
+    <pre class="sunlight-highlight-javascript"> rtc.checkMediaConnectivity(&#x27;ip-address&#x27;,&#x27;1&#x27;).then((response) =&gt; {
+   console.log(&#x60;IP Address of media server: ${response.ip}&#x60;);
+   console.log(&#x60;Able to connect: ${response.canConnect}&#x60;);
+   console.log(&#x60;ConnectionTime in ms: ${resonse.connectionTime}&#x60;);
+ }).catch((error) =&gt; {
+   console.log(error);
+ });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="checkMediaServers"><span class="type-signature">&lt;async> </span>checkMediaServers(nexmo_api_url, datacenter)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Return a list with the connection health of the media servers for a specific datacenter.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>nexmo_api_url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>url of the nexmo api to be called</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>datacenter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>datacenter of interest</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="sdk.js.html">sdk.js</a>,
+				 <a href="sdk.js.html#sunlight-1-line-851">line 851</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;Array.&lt;MediaConnectionReport>></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">Return a list with the connection health of the media servers</p>
+    
+    <pre class="sunlight-highlight-javascript"> rtc.checkMediaServers(&#x27;nexmo-api-url&#x27;,&#x27;dc&#x27;).then((responseArray) =&gt; {
+   console.log(responseArray);
+ }).catch((error) =&gt; {
+   console.log(error);
+ });</pre>
+
+
+    
+</dd>
+
+        
             
 <hr>
 <dt>
@@ -2900,7 +3290,7 @@
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Thu Apr 21st 2022 using the <a
+	on Fri May 27th 2022 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
