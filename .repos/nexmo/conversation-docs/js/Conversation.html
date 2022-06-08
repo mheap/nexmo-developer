@@ -7290,184 +7290,6 @@ A Member has muted their audio</p>
             
 <hr>
 <dt>
-    <h4 class="name" id="event:message:seen">message:seen</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Conversation listening for Members seen messages.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    <dl>
-
-<table class="props table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>member</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Member.html">Member</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the member that message was seen by</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>message</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="MessageEvent.html">MessageEvent</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the message that was seen</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-</dl>
-
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="sdk.js.html">sdk.js</a>,
-				 <a href="sdk.js.html#sunlight-1-line-530">line 530</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h5>Example</h5>
-        
-        <p class="code-caption">listen for seen message events</p>
-    
-    <pre class="sunlight-highlight-javascript">conversation.on(&quot;message:seen&quot;, (member, message) =&gt; {
- console.log(message);
- if (conversation.me.id !== member.memberId) {
-   console.log(member);
- };
-});</pre>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="event:message:undeliverable">message:undeliverable</h4>
     
     
@@ -7810,6 +7632,184 @@ A Member has muted their audio</p>
         <p class="code-caption">listen for delivered message events</p>
     
     <pre class="sunlight-highlight-javascript">conversation.on(&quot;message:delivered&quot;, (member, message) =&gt; {
+ console.log(message);
+ if (conversation.me.id !== member.memberId) {
+   console.log(member);
+ };
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:message:seen">message:seen</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Conversation listening for Members seen messages.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>member</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Member.html">Member</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the member that message was seen by</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="MessageEvent.html">MessageEvent</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the message that was seen</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="sdk.js.html">sdk.js</a>,
+				 <a href="sdk.js.html#sunlight-1-line-530">line 530</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">listen for seen message events</p>
+    
+    <pre class="sunlight-highlight-javascript">conversation.on(&quot;message:seen&quot;, (member, message) =&gt; {
  console.log(message);
  if (conversation.me.id !== member.memberId) {
    console.log(member);
@@ -8381,7 +8381,7 @@ A Member has muted their audio</p>
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Wed May 11th 2022 using the <a
+	on Fri May 27th 2022 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
