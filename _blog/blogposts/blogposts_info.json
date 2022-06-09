@@ -1,5 +1,38 @@
 [
   {
+    "title": "Chris Tankersley Re-Joins the Developer Relations Team!",
+    "description": "Chris Tankersley has returned to the Developer Relations team at Vonage to work on integrations.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/chris-tankersley-re-joins-the-developer-relations-team/chris-tankersley.jpg",
+    "author": {
+      "team": true,
+      "name": "Chris Tankersley",
+      "image_url": "https://secure.gravatar.com/avatar/7af53bf95c651de93ac76d5a3e742e2e?s=384&d=mm&r=g",
+      "bio": "Chris is the Senior PHP Developer Advocate and Server SDK Initiative Lead.  He has been programming for more than 15 years across various languages and types of projects from client work all the way up to big-data, large scale systems. He lives in Ohio, spending his time with his family and playing video and TTRPG games.",
+      "website_url": "",
+      "alumni": false,
+      "short_name": "christankersley"
+    },
+    "published": true,
+    "published_at": "2022-06-06 13:16:01 UTC",
+    "updated_at": "2022-06-06 13:16:01 UTC",
+    "category": {
+      "name": "Team",
+      "plural": "Team Posts",
+      "slug": "team",
+      "color": "#06ba77"
+    },
+    "tags": [
+      "careers"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/06/06/chris-tankersley-re-joins-the-developer-relations-team",
+    "filename": "chris-tankersley-re-joins-the-developer-relations-team"
+  },
+  {
     "title": "Vonage Spring Hack 2022: Our Internal Hackathon",
     "description": "Learn everything about the Vonage Spring Hack, the biannual internal hackathon organised by the Vonage Developer Relations Team ",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-spring-hack-2022-our-internal-hackathon/spring-hack.png",
