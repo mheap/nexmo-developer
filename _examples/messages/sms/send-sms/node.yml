@@ -4,4 +4,4 @@ dependencies:
 code:
     source: .repos/vonage/vonage-node-code-snippets/messages/send-sms.js
     from_line: 11
-    to_line: 36
+    to_line: 30
