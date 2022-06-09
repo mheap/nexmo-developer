@@ -1,7 +1,0 @@
----
-dependencies:
-    - "@vonage/server-sdk@beta"
-code:
-    source: .repos/vonage/vonage-node-code-snippets/messages/messenger/send-template.js
-    from_line: 16
-    to_line: 111

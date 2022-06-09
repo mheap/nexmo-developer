@@ -1,7 +1,11 @@
 ---
 dependencies:
-    - "@vonage/server-sdk@beta"
-code:
+    - "@vonage/server-sdk"
+client:
     source: .repos/vonage/vonage-node-code-snippets/messages/whatsapp/send-quick-reply-button.js
     from_line: 15
-    to_line: 105
+    to_line: 28
+code:
+    source: .repos/vonage/vonage-node-code-snippets/messages/whatsapp/send-quick-reply-button.js
+    from_line: 30
+    to_line: 99

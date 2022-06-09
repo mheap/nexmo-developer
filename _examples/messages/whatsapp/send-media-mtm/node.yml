@@ -1,7 +1,11 @@
 ---
 dependencies:
-    - "@vonage/server-sdk@beta"
-code:
+    - "@vonage/server-sdk"
+client:
     source: .repos/vonage/vonage-node-code-snippets/messages/whatsapp/send-media-template.js
     from_line: 15
-    to_line: 88
+    to_line: 28
+code:
+    source: .repos/vonage/vonage-node-code-snippets/messages/whatsapp/send-media-template.js
+    from_line: 30
+    to_line: 82
