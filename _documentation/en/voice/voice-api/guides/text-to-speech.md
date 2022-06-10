@@ -70,7 +70,7 @@ Some voice styles come with a premium alternative, which through the use of AI, 
 ]
 ```
 
-> Premium Voices are chargeable. See the [pricing page for more information](https://www.vonage.com/communications-apis/in-app-voice/pricing/).
+> Premium Voices are chargeable. See the [pricing page for more information](https://www.vonage.com/communications-apis/voice/pricing).
 
 
 ### Supported Languages
