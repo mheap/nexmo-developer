@@ -54,7 +54,7 @@ NCCO example with specific voice language and style:
 ]
 ```
 
-### Premium Voices [Beta]
+### Premium Voices
 
 Some voice styles come with a premium alternative, which through the use of AI, have a more natural sound. To use a premium voice style, add the `premium` option in your NCCO:
 
@@ -70,7 +70,7 @@ Some voice styles come with a premium alternative, which through the use of AI, 
 ]
 ```
 
-> Premium Voices are currently in available without any extra charge during the [beta](/product-lifecycle/beta) period, but this will change once the beta period ends.
+> Premium Voices are chargeable. See the [pricing page for more information](https://www.vonage.com/communications-apis/in-app-voice/pricing/).
 
 
 ### Supported Languages
