@@ -14,10 +14,13 @@ For a step-by-step guide to this topic, you can read our tutorial [Sending Faceb
 Ensure the following variables are set to your required values using any convenient method:
 
 ```snippet_variables
+- VONAGE_APPLICATION_ID
+- VONAGE_APPLICATION_PRIVATE_KEY_PATH
 - BASE_URL.MESSAGES
 - MESSAGES_API_URL
 - FB_SENDER_ID.MESSAGES
 - FB_RECIPIENT_ID
+- VONAGE_FB_SENDER_ID
 - AUDIO_URL.MESSENGER.MESSAGES
 ```
 
