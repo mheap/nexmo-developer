@@ -28,7 +28,6 @@ Find the description for all variables used in each code snippet below:
 - VONAGE_APPLICATION_ID
 - VONAGE_APPLICATION_PRIVATE_KEY_PATH
 - VONAGE_FROM_NUMBER
-- TO_NUMBER
 - FROM_NUMBER.SMS
 - TO_NUMBER.SMS
 ```
