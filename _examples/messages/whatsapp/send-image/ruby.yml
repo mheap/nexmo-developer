@@ -1,0 +1,8 @@
+---
+title: Ruby
+language: ruby
+code:
+    source: .repos/vonage/vonage-ruby-code-snippets/messages/whatsapp/send-image.rb
+    from_line: 9
+    to_line: 26
+file_name: send-image.rb
