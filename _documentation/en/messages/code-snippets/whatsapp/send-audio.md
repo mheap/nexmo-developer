@@ -14,6 +14,8 @@ In this code snippet you learn how to send a WhatsApp audio message using the Me
 Ensure the following variables are set to your required values using any convenient method:
 
 ```snippet_variables
+- VONAGE_APPLICATION_ID
+- VONAGE_APPLICATION_PRIVATE_KEY_PATH
 - BASE_URL.MESSAGES
 - MESSAGES_API_URL
 - WHATSAPP_NUMBER
