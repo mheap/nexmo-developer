@@ -1,0 +1,8 @@
+---
+title: Ruby
+language: ruby
+code:
+    source: .repos/vonage/vonage-ruby-code-snippets/messages/whatsapp/send-audio.rb
+    from_line: 9
+    to_line: 25
+file_name: send-audio.rb
