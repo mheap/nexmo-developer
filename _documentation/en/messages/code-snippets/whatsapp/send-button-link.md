@@ -17,6 +17,7 @@ Ensure the following variables are set to your required values using any conveni
 - BASE_URL.MESSAGES
 - MESSAGES_API_URL
 - WHATSAPP_NUMBER
+- VONAGE_WHATSAPP_NUMBER
 - TO_NUMBER.MESSAGES
 - WHATSAPP_TEMPLATE_NAMESPACE
 - WHATSAPP_TEMPLATE_NAME

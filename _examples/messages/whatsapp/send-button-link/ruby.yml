@@ -1,0 +1,8 @@
+---
+title: Ruby
+language: ruby
+code:
+    source: .repos/vonage/vonage-ruby-code-snippets/messages/whatsapp/send-button-link.rb
+    from_line: 12
+    to_line: 81
+file_name: send-button-link.rb
