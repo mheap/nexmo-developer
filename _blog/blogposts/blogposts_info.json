@@ -1,10 +1,52 @@
 [
   {
+    "title": "WordPress 2FA by Vonage is here!",
+    "description": "Want Two-Factor Authentication on your WordPress site? We've got you covered!",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/wordpress-2fa-by-vonage-is-here/wordpress_2fa-vonage.jpg",
+    "author": {
+      "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
+      "hidden": false,
+      "image_url": "/content/images/dsc_0288.jpeg",
+      "name": "James Seconde",
+      "website_url": "https://devtheatre.net",
+      "linkedin_url": "https://www.linkedin.com/in/secondej/",
+      "twitter": "@SecondeJ",
+      "github_url": "https://github.com/SecondeJK",
+      "spotlight": false,
+      "title": "Developer Advocate",
+      "email": "jim.seconde@vonage.com",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "james-seconde"
+    },
+    "published": true,
+    "published_at": "2022-06-14 09:23:37 UTC",
+    "updated_at": "2022-06-14 09:23:38 UTC",
+    "category": {
+      "name": "Release",
+      "plural": "Releases",
+      "slug": "release",
+      "color": "#b779ff"
+    },
+    "tags": [
+      "php",
+      "wordpress"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/06/14/wordpress-2fa-by-vonage-is-here",
+    "filename": "wordpress-2fa-by-vonage-is-here"
+  },
+  {
     "title": "Chris Tankersley Re-Joins the Developer Relations Team!",
     "description": "Chris Tankersley has returned to the Developer Relations team at Vonage to work on integrations.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/chris-tankersley-re-joins-the-developer-relations-team/chris-tankersley.jpg",
     "author": {
-      "team": true,
+      "team": false,
       "name": "Chris Tankersley",
       "image_url": "https://secure.gravatar.com/avatar/7af53bf95c651de93ac76d5a3e742e2e?s=384&d=mm&r=g",
       "bio": "Chris is the Senior PHP Developer Advocate and Server SDK Initiative Lead.  He has been programming for more than 15 years across various languages and types of projects from client work all the way up to big-data, large scale systems. He lives in Ohio, spending his time with his family and playing video and TTRPG games.",
@@ -12,7 +54,7 @@
       "alumni": false,
       "short_name": "christankersley"
     },
-    "published": true,
+    "published": false,
     "published_at": "2022-06-06 13:16:01 UTC",
     "updated_at": "2022-06-06 13:16:01 UTC",
     "category": {
@@ -22,7 +64,7 @@
       "color": "#06ba77"
     },
     "tags": [
-      "careers"
+      "#careers"
     ],
     "spotlight": false,
     "canonical": "",
@@ -7249,36 +7291,6 @@
     "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
-    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
-    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
-    "author": {
-      "team": true,
-      "name": "Avital Tzubeli",
-      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
-      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
-      "website_url": "",
-      "short_name": "avital-tzubelivonage-com"
-    },
-    "published": false,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "angular",
-      "rxjs"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
-    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
-  },
-  {
     "title": "Setting up CI/CD with Github Actions",
     "description": "This article walks you through the process of using github actions to build CI/CD flows.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
@@ -7310,6 +7322,36 @@
     "locale": "en",
     "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
     "filename": "setting-up-ci-cd-with-github-actions"
+  },
+  {
+    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
+    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
+    "author": {
+      "team": true,
+      "name": "Avital Tzubeli",
+      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
+      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
+      "website_url": "",
+      "short_name": "avital-tzubelivonage-com"
+    },
+    "published": false,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "angular",
+      "rxjs"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
+    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -8055,7 +8097,7 @@
       "image_url": "https://secure.gravatar.com/avatar/7af53bf95c651de93ac76d5a3e742e2e?s=384&d=mm&r=g",
       "bio": "Chris is the Senior PHP Developer Advocate and Server SDK Initiative Lead.  He has been programming for more than 15 years across various languages and types of projects from client work all the way up to big-data, large scale systems. He lives in Ohio, spending his time with his family and playing video and TTRPG games.",
       "website_url": "",
-      "alumni": true,
+      "alumni": false,
       "short_name": "christankersley"
     },
     "published": true,
@@ -10594,7 +10636,7 @@
       "image_url": "https://secure.gravatar.com/avatar/7af53bf95c651de93ac76d5a3e742e2e?s=384&d=mm&r=g",
       "bio": "Chris is the Senior PHP Developer Advocate and Server SDK Initiative Lead.  He has been programming for more than 15 years across various languages and types of projects from client work all the way up to big-data, large scale systems. He lives in Ohio, spending his time with his family and playing video and TTRPG games.",
       "website_url": "",
-      "alumni": true,
+      "alumni": false,
       "short_name": "christankersley"
     },
     "published": true,
@@ -10819,7 +10861,7 @@
       "image_url": "https://secure.gravatar.com/avatar/7af53bf95c651de93ac76d5a3e742e2e?s=384&d=mm&r=g",
       "bio": "Chris is the Senior PHP Developer Advocate and Server SDK Initiative Lead.  He has been programming for more than 15 years across various languages and types of projects from client work all the way up to big-data, large scale systems. He lives in Ohio, spending his time with his family and playing video and TTRPG games.",
       "website_url": "",
-      "alumni": true,
+      "alumni": false,
       "short_name": "christankersley"
     },
     "published": true,
@@ -11361,36 +11403,6 @@
     "filename": "use-a-green-screen-in-javascript-with-vonage-video"
   },
   {
-    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
-    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
-    "author": {
-      "team": false,
-      "spotlight": false,
-      "name": "Lorna Mitchell",
-      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
-      "twitter": "lornajane",
-      "image_url": "/content/images/lornajane.jpg",
-      "alumni": true,
-      "short_name": "lornajane"
-    },
-    "published": true,
-    "published_at": "2020-06-23 07:53:47 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "security",
-      "verify-api"
-    ],
-    "locale": "it",
-    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
-    "filename": "add-strong-psd2-authentication-to-your-application"
-  },
-  {
     "title": "Add Strong PSD2 Authentication to Your Application",
     "description": "Find out how you can bring your payment authorisations up to PSD2 standards using the Vonage Verify API to confirm user identity",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
@@ -11420,6 +11432,36 @@
     ],
     "locale": "en",
     "link": "blog/20/06/23/add-strong-psd2-authentication-to-your-application",
+    "filename": "add-strong-psd2-authentication-to-your-application"
+  },
+  {
+    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
+    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
+    "author": {
+      "team": false,
+      "spotlight": false,
+      "name": "Lorna Mitchell",
+      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
+      "twitter": "lornajane",
+      "image_url": "/content/images/lornajane.jpg",
+      "alumni": true,
+      "short_name": "lornajane"
+    },
+    "published": true,
+    "published_at": "2020-06-23 07:53:47 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "security",
+      "verify-api"
+    ],
+    "locale": "it",
+    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
     "filename": "add-strong-psd2-authentication-to-your-application"
   },
   {
@@ -13540,6 +13582,36 @@
     "filename": "usando-jwt-para-autenticação-em-uma-aplicação-golang"
   },
   {
+    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
+    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
+    "author": {
+      "name": "Victor Steven",
+      "image_url": "/content/images/0.png",
+      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
+      "website_url": "",
+      "spotlight": true,
+      "short_name": "victor-steven"
+    },
+    "published": true,
+    "published_at": "2020-03-13 13:00:25 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "go",
+      "jwt",
+      "messages-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
+    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
+  },
+  {
     "title": "Using JWT for Authentication in a Golang Application",
     "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
@@ -13568,36 +13640,6 @@
     ],
     "locale": "en",
     "link": "blog/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
-    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
-  },
-  {
-    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
-    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
-    "author": {
-      "name": "Victor Steven",
-      "image_url": "/content/images/0.png",
-      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
-      "website_url": "",
-      "spotlight": true,
-      "short_name": "victor-steven"
-    },
-    "published": true,
-    "published_at": "2020-03-13 13:00:25 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "go",
-      "jwt",
-      "messages-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
     "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
   },
   {
@@ -13745,7 +13787,7 @@
       "image_url": "https://secure.gravatar.com/avatar/7af53bf95c651de93ac76d5a3e742e2e?s=384&d=mm&r=g",
       "bio": "Chris is the Senior PHP Developer Advocate and Server SDK Initiative Lead.  He has been programming for more than 15 years across various languages and types of projects from client work all the way up to big-data, large scale systems. He lives in Ohio, spending his time with his family and playing video and TTRPG games.",
       "website_url": "",
-      "alumni": true,
+      "alumni": false,
       "short_name": "christankersley"
     },
     "published": true,
@@ -22389,7 +22431,7 @@
       "short_name": "chrisguzman"
     },
     "published": true,
-    "published_at": "2017-12-21 18:23:30 +0100",
+    "published_at": "2017-12-21 17:23:30 +0000",
     "updated_at": "2021-05-20 08:29:04 UTC",
     "category": {
       "name": "Tutorial",
@@ -25444,7 +25486,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-08-14 17:45:51 +0200",
+    "published_at": "2015-08-14 16:45:51 +0100",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -25520,7 +25562,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-29 19:55:05 +0200",
+    "published_at": "2015-04-29 18:55:05 +0100",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -25576,7 +25618,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-10 19:24:18 +0200",
+    "published_at": "2015-04-10 18:24:18 +0100",
     "category": {
       "name": "Event",
       "plural": "Events",
@@ -25708,7 +25750,7 @@
       "short_name": "jackshirazi"
     },
     "published": true,
-    "published_at": "2014-11-18 14:02:36 +0100",
+    "published_at": "2014-11-18 13:02:36 +0000",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",
