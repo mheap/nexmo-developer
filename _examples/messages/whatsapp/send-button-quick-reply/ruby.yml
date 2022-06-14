@@ -1,0 +1,8 @@
+---
+title: Ruby
+language: ruby
+code:
+    source: .repos/vonage/vonage-ruby-code-snippets/messages/whatsapp/send-button-quick-reply.rb
+    from_line: 11
+    to_line: 85
+file_name: send-button-quick-reply.rb
