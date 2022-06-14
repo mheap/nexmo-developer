@@ -19,8 +19,8 @@ Find the description for all variables used in each code snippet below:
 - BASE_URL.MESSAGES
 - MESSAGES_API_URL
 - FB_SENDER_ID.MESSAGES
-- FB_RECIPIENT_ID
 - VONAGE_FB_SENDER_ID
+- FB_RECIPIENT_ID
 - AUDIO_URL.MESSENGER.MESSAGES
 ```
 
