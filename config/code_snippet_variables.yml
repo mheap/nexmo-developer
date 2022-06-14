@@ -69,7 +69,7 @@ TO_NUMBER_1.DISPATCH: The phone number you are sending the SMS to.
 TO_NUMBER_2.DISPATCH: The phone number of the second phone. In this example, the workflow will failover to this number if the first message is not read in 60 seconds.
 FB_SENDER_ID: Your Page ID. The `FB_SENDER_ID` is the same as the `to.id` value you received in the inbound messenger event on your Inbound Message Webhook URL.
 VIBER_SERVICE_MESSAGE_ID: Your Viber Service Message ID. For sandbox testing this is 16273. #&VIBER_SERVICE_MESSAGE_ID
-VONAGE_VIBER_SERVICE_MESSAGE_ID: Your Viber Service Message ID. For sandbox testing this is 16273. #*VIBER_SERVICE_MESSAGE_ID
+VONAGE_VIBER_SERVICE_MESSAGE_ID: Refer to `VIBER_SERVICE_MESSAGE_ID` above. #*VIBER_SERVICE_MESSAGE_ID
 WHATSAPP_NUMBER: The WhatsApp number that has been allocated to you by Vonage. For sandbox testing the number is 14157386102. #&WHATSAPP_NUMBER
 VONAGE_WHATSAPP_NUMBER: Refer to `WHATSAPP_NUMBER` above. #*WHATSAPP_NUMBER
 
