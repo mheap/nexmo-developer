@@ -6,6 +6,32 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.7.3 - June 14, 2022
+
+### Changes
+
+- Added token authentication to `connectivityReport()`
+
+```javascript
+rtc.connectivityReport(token, {
+  dcListCallback: (dcList) => {...dcList, additionalDc}
+}).then((report) => {
+  console.log(report);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
+- Added token authentication to `checkMediaServers()`
+
+```javascript
+rtc.checkMediaServers('token', 'nexmo-api-url','dc').then((responseArray) => {
+ console.log(responseArray);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
 ## Version 8.7.2 - May 27, 2022
 
 ### Fix
