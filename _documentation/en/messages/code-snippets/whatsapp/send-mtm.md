@@ -12,7 +12,7 @@ In this code snippet you learn how to send a WhatsApp Message Template Message (
 
 ## Example
 
-Ensure the following variables are set to your required values using any convenient method:
+Find the description for all variables used in each code snippet below:
 
 ```snippet_variables
 - VONAGE_APPLICATION_ID
