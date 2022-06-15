@@ -1,7 +1,11 @@
 ---
 dependencies:
-    - "@vonage/server-sdk@beta"
-code:
+    - "@vonage/server-sdk"
+client:
     source: .repos/vonage/vonage-node-code-snippets/messages/messenger/send-text.js
     from_line: 13
-    to_line: 44
+    to_line: 26
+code:
+    source: .repos/vonage/vonage-node-code-snippets/messages/messenger/send-text.js
+    from_line: 28
+    to_line: 41

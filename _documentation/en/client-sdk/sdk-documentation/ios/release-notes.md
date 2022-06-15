@@ -6,6 +6,13 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.3.1  - 2022-05-09
+
+### Fix
+
+- Fix `[NXMConversation sendMessage:message completionHandler:handler]` for `NXMMessageTypeImage`, `NXMMessageTypeAudio`, `NXMMessageTypeVideo` and `NXMMessageTypeFile` message types.
+
+
 ## 4.3.0  - 2022-04-28
 
 ### Added

@@ -29,7 +29,7 @@ source: _tutorials_tabbed_content/client-sdk/guides/messaging/send-images
 
 ## Receive an Image URL
 
-A `image` conversation event will be received when a member sends an image to a conversation:
+A `message` conversation event will be received when a member sends an image to a conversation:
 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-image-urls

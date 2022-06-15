@@ -14,13 +14,15 @@ For a step-by-step guide to this topic, you can read our tutorial [Sending Viber
 
 ## Example
 
-Ensure the following variables are set to your required values using any convenient method:
+Find the description for all variables used in each code snippet below:
 
 ```snippet_variables
+- VONAGE_APPLICATION_PRIVATE_KEY_PATH
 - BASE_URL.MESSAGES
 - MESSAGES_API_URL
 - VONAGE_APPLICATION_ID
 - VIBER_SERVICE_MESSAGE_ID
+- VONAGE_VIBER_SERVICE_MESSAGE_ID
 - TO_NUMBER.MESSAGES
 - IMAGE_URL
 ```
