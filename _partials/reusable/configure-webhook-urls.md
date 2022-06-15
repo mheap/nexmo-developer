@@ -27,8 +27,7 @@ Status URL | `https://www.example.com/webhooks/message-status`
 Inbound URL | `https://www.example.com/webhooks/inbound-message`
 
 
-> **NOTE:** By authenticating using the [JWT-based auth](https://developer.vonage.com/concepts/guides/authentication#json-web-tokens), both the inbound SMS and message status callbacks are sent to your [application-level webhooks](https://dashboard.nexmo.com/applications) as described above.
-However, if you authenticate using [basic auth](https://developer.vonage.com/concepts/guides/authentication#basic-authentication), both callbacks are sent to your [account-level webhooks](https://dashboard.nexmo.com/settings) and you will need to configure those instead.
+> **NOTE:** We recommend using [JWT-based auth](https://developer.vonage.com/concepts/guides/authentication#json-web-tokens) as this allows you to configure your inbound and delivery receipt webhook URLs at the [application-level](https://dashboard.nexmo.com/applications). Otherwise, all callbacks from your different applications will be sent to your [account-level webhook URLs](https://dashboard.nexmo.com/settings).
 
 > **NOTE:** The callbacks are sent over `POST` HTTP requests.  
 
