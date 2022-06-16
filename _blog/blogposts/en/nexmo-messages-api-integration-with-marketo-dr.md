@@ -197,8 +197,6 @@ Or, send a message after a scheduled time to ask for feedback to the customer.
 
 If you want a complete guide on how to to integrate Marketo Webhook, I made a video tutorial:
 
-<iframe width="420" height="315"\
-src="https://www.youtube.com/watch?v=atkqAS9xhLM">\
-</iframe>
+<youtube id="atkqAS9xhLM"></youtube>
 
 I hope you find this article useful. If you have comments, suggestions, and ideas, please leave them below in the comments section.
