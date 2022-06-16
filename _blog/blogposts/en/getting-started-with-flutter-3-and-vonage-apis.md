@@ -21,7 +21,7 @@ replacement_url: ""
 ---
 With the release of Flutter 3.0 (which includes a range of [stability and performance improvements](https://medium.com/flutter/whats-new-in-flutter-3-8c74a5bc32d0)) now is a great time to take a look at how you can use communication APIs to improve your user experience and enhance your cross-platform applications.
 
-Thanks to Flutter's ability to use native platform SDKs we can seamlessly use the Vonage Android and iOS SDKs within our Flutter applications. Let's take a look at how we can create a simple Flutter application that's able to make a voice phone call to a physical phone. By the end of this guide, you will have a good understanding of how to use the Vonage SDK to make a voice call and how you can use native Android and iOS SDKs in your Flutter application.
+Thanks to Flutter's ability to use native platform SDKs we can seamlessly use the Vonage Android and iOS SDKs within our Flutter applications. Let's take a look at how we can create a simple Flutter application that's able to make a voice phone call to a physical phone. By the end of this guide, you will have a good understanding of how to use the Vonage’s native core SDKs to make a voice call and how you can use native Android and iOS SDKs in your Flutter application.
 
 For this guide, we will create a basic app from scratch but you could just as quickly build the below into your application.
 
