@@ -26,6 +26,14 @@ top-section:
       tutorials_link: ""
       icon: "Vlt-icon-condition"
 
+    - product_name: "Dispatch API"
+      product_name_link: "/dispatch/overview"
+      product_description: "Send messages to users using a multiple channel strategy."
+      getting_started_link: "/dispatch/code-snippets/before-you-begin"
+      api_reference_link: "/api/dispatch"
+      tutorials_link: ""
+      icon: "Vlt-icon-flow"
+
   - Voice:
     - product_name: "Voice API"
       product_name_link: "/voice/voice-api/overview"
