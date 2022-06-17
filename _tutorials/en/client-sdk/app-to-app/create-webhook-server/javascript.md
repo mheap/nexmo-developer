@@ -5,7 +5,7 @@ description: In this step you learn how to create a suitable webhook server that
 
 # Create a webhook server
 
-When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to the [PSTN phone number](/concepts/guides/glossary#virtual-number). You do this by extracting the destination number from the `to` query parameter and returning it in your response.
+When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to another [User](/conversation/concepts/user). You do this by extracting the destination user from the `to` query parameter and returning it in your response.
 
 ## New project
 
@@ -99,7 +99,7 @@ const localtunnel = require('localtunnel');
 })();
 ```
 
-> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice, containing letters, numbers, underscores or dashes.
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice, containing lowercase letters, numbers, underscores or dashes.
 
 There are 2 parts in the server code above:
 
@@ -107,11 +107,11 @@ There are 2 parts in the server code above:
 
 The first part creates an `Express` server and makes it available locally on port `3000`. The server exposes 2 paths:
 
-1. `/voice/answer` is the `answer_url` we mentioned above. It sends back a `JSON` response containing the destination number for the call. 
+1. `/voice/answer` is the `answer_url` we mentioned above. It sends back a `JSON` response containing the user that will be receiving the call. 
    
-    Notice, that the `number` is extracted from the `req.query.to` parameter that Vonage is sending as part of the request. The dynamically built NCCO then forwards the call to the destination phone using a `connect` action.
+    Notice, that the `username` is extracted from the `req.query.to` parameter that Vonage is sending as part of the request. The dynamically built NCCO then forwards the in-app call to the receiving user using a `connect` action.
 
-2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the call - we call this the `event_url`.
+2. The second one, `/voice/event`, you will set as destination for Vonage to notify you of everything happening during the in-app call - we call this the `event_url`.
 
 
 ### The `localtunnel`  integration
