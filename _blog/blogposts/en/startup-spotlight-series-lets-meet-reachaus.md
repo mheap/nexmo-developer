@@ -22,7 +22,7 @@ The first few decades of the internet have seen massive disruption and innovatio
 
 According to the Bureau of Economic Analysis, services make up almost 70% of consumer spending, while only 7% of service purchases and transactions are online. Therefore the untapped potential for service products is enormous. Y Combinator predicts that the next wave of disruption will be in the $9.7 trillion US consumer service economy.
 
-The German startup Reachaus has started bringing the service industry online and has ambitious plans to expand the platform's reach across Europe, making them the number one services platform. This week we caught up with their CTO & Co-Founder, Akshay Batra, to learn more about their story. Enjoy!
+The German startup Reachaus has started bringing the service industry online and has ambitious plans to expand the platform's reach across Europe, making them the number one services platform. This week we caught up with their CEO & Co-Founder, Baljit Kaur Batra, to learn more about their story. Enjoy!
 
 ## The startup at a glance
 
