@@ -1,0 +1,101 @@
+title: 'Documentation'
+subtitle: 'Welcome to Vonage API Developer Portal. Here you can find all the technical documentation for the APIs available as part of the Vonage Communication APIs Platform. Be sure to checkout our <a href="/getting-started/overview">steps to get started with Vonage APIs</a> section!'
+top-section:
+  - Messaging:
+    - product_name: "SMS API"
+      product_name_link: "/messaging/sms/overview"
+      product_description: "Programmatically send and receive SMS messages."
+      getting_started_link: "/messaging/sms/code-snippets/before-you-begin"
+      api_reference_link: "/api/sms"
+      tutorials_link: ""
+      icon: "Vlt-icon-sms"
+
+    - product_name: "Messages API"
+      product_name_link: "/messages/overview"
+      product_description: "Multi-channel messaging that integrates with <a href='/messages/concepts/whatsapp'>WhatsApp</a>, <a href='/messages/concepts/facebook'>Facebook</a>, <a href='/messages/concepts/viber'>Viber</a>"
+      getting_started_link: "/messages/code-snippets/before-you-begin"
+      api_reference_link: "/api/messages-olympus"
+      tutorials_link: ""
+      icon: "Vlt-icon-message"
+
+    - product_name: "In-app messaging"
+      product_name_link: "/client-sdk/in-app-messaging/overview"
+      product_description: "Build chat messaging into your application."
+      getting_started_link: "/client-sdk/in-app-messaging/overview#getting-started"
+      api_reference_link: ""
+      tutorials_link: ""
+      icon: "Vlt-icon-condition"
+
+  - Voice:
+    - product_name: "Voice API"
+      product_name_link: "/voice/voice-api/overview"
+      product_description: "Create calls, control calls in-progress, get information about previous calls, and more."
+      getting_started_link: "/voice/voice-api/code-snippets/before-you-begin"
+      api_reference_link: "/api/voice"
+      tutorials_link: none
+      icon: "Vlt-icon-call"
+
+    - product_name: "SIP"
+      product_name_link: "/voice/sip/overview"
+      product_description: "Connect voice calls to existing endpoints via the phone network an in-app voice."
+      getting_started_link: "/voice/sip/overview"
+      api_reference_link: "/api/psip"
+      tutorials_link: none
+      icon: "Vlt-icon-plug"
+  
+    - product_name: "In-app voice"
+      product_name_link: "/client-sdk/in-app-voice/overview"
+      product_description: "Build live voice communications into your application"
+      getting_started_link: "/client-sdk/in-app-voice/overview#setup"
+      api_reference_link: ""
+      tutorials_link: none
+      icon: "Vlt-icon-condition"
+
+  - Authentication & Identity:
+    - product_name: "Verify API"
+      product_name_link: "/verify/overview"
+      product_description: "Enable your applications with two-factor authentication."
+      getting_started_link: "/verify/code-snippets/before-you-begin"
+      api_reference_link: "/api/verify"
+      tutorials_link: none
+      icon: "Vlt-icon-shield"
+
+    - product_name: "Number Insight"
+      product_name_link: "/number-insight/overview"
+      product_description: "Get information about phone numbers."
+      getting_started_link: "/number-insight/code-snippets/before-you-begin"
+      api_reference_link: "/api/number-insight"
+      tutorials_link: none
+      icon: "Vlt-icon-telephone"
+
+bottom-section:
+  - Other APIs:
+    - Account management:
+      - product_name: Application API
+        product_name_link: /application/overview
+        product_description: Create a record for your application and configure authentication, callbacks, and settings.
+      - product_name: Numbers API
+        product_name_link: /numbers/overview
+        product_description: Provision virtual numbers around the globe to send or receive text messages and phone calls.
+      - product_name: Redact API
+        product_name_link: /redact/overview
+        product_description: Delete data from the Vonage platform.
+      - product_name: Reports API
+        product_name_link: /reports/overview
+        product_description: Find historical records and messages by originating or destination phone number, dates, and more.
+      icon: "Vlt-icon-gear"
+
+    - Product Enablement:
+      - product_name: Account & Subaccounts APIs
+        product_name_link: /account/overview
+        product_description: Create a record for your application and configure authentication, callbacks, and settings.
+      - product_name: Audit API
+        product_name_link: /audit/overview
+        product_description: Provision virtual phone numbers around the globe to send or receive text messages and phone calls.
+      - product_name: Conversation API
+        product_name_link: /conversation/overview
+        product_description: Stitch conversations from multiple communications channels into a single thread.
+      - product_name: Client SDK
+        product_name_link: /client-sdk/overview
+        product_description: Use Conversation API & Client SDK to build applications with two-way voice and messaging communication.
+      icon: "Vlt-icon-rocket"

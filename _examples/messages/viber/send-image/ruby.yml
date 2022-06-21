@@ -1,0 +1,8 @@
+---
+title: Ruby
+language: ruby
+code:
+    source: .repos/vonage/vonage-ruby-code-snippets/messages/viber/send-image.rb
+    from_line: 9
+    to_line: 25
+file_name: send-image.rb

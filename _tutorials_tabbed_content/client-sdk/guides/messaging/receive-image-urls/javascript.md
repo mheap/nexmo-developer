@@ -5,7 +5,10 @@ menu_weight: 1
 ---
 
 ```javascript
-conversation.on('image', (sender, event) => {
-  console.log('*** Image received', sender, event);
+conversation.on('message', (sender, event) => {
+  if (event.body.message_type === 'image'){
+    console.log('*** Image sender: ', sender);
+    console.log('*** Image event: ', event);
+  }
 });
 ```

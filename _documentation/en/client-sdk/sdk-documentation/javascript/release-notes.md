@@ -6,6 +6,65 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 8.7.3 - June 14, 2022
+
+### Changes
+
+- Added token authentication to `connectivityReport()`
+
+```javascript
+rtc.connectivityReport(token, {
+  dcListCallback: (dcList) => {...dcList, additionalDc}
+}).then((report) => {
+  console.log(report);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
+- Added token authentication to `checkMediaServers()`
+
+```javascript
+rtc.checkMediaServers('token', 'nexmo-api-url','dc').then((responseArray) => {
+ console.log(responseArray);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
+## Version 8.7.2 - May 27, 2022
+
+### Fix
+
+- Removed unused npm dependencies.
+
+## Version 8.7.1 - May 11, 2022
+
+### New
+
+- Added new `checkMediaServers()` method to return a list with the connection health of the media servers for a specific datacenter.
+
+```javascript
+rtc.checkMediaServers('nexmo-api-url','dc').then((responseArray) => {
+	console.log(responseArray);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
+- Added new `checkMediaConnectivity()` method to return the connection health of a single media server.
+
+```javascript
+rtc.checkMediaConnectivity('ip-address','1').then((response) => {
+  console.log(response);
+}).catch((error) => {
+	console.log(error);
+});
+```
+### Changes
+
+- Update `connectivityReport()` to return connection time in ms for connection to https, wss, and media servers
+
 ## Version 8.6.0 - April 21, 2022
 
 ### New

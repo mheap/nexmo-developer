@@ -35,6 +35,6 @@ A key point of Vonage's immediate Advanced Auto-redact is that the message body 
 
 ## How to set up Auto-redact for your Vonage account
 
-If you wish to activate the Advanced Auto-redact service for your account, please complete the form on [this page](https://info.nexmo.com/RedactAPI.html).
+If you wish to activate the Advanced Auto-redact service for your account, please complete the form on [this page](https://api.support.vonage.com/hc/en-us).
 
 You can find pricing relevant to the Advanced Auto-redact service on the [Vonage pricing](https://www.vonage.com/communications-apis/pricing/) page.

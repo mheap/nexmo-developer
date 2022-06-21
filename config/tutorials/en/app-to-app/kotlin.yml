@@ -15,7 +15,11 @@ introduction:
 
     * An Android application that will make the voice call and listen for incomming calls using the Client SDK.
     * A publicly accessible URL that serves instructions on how to handle the call. To accomplish this, you will create a webhook server using <a href="https://nodejs.org/en/" target="_blank">Node.js</a>, <a href="https://expressjs.com/" target="_blank">Express</a> and <a href="https://github.com/localtunnel/localtunnel" target="_blank">localtunnel</a>.
-
+    
+    ## Video tutorial
+    If you prefer to follow along by video, you can find this tutorial on <a href="https://www.youtube.com/watch?v=LijociXcwAw" target="_blank">YouTube</a>:
+    <center style="aspect-ratio: 16 / 9;"><iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/LijociXcwAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+    	
     ### Completed project
     If you would like to follow along without building the app yourself, the completed project is available on [Github](https://github.com/nexmo-community/client-sdk-tutorials) -  please see the [app-to-app-kotlin](https://github.com/nexmo-community/client-sdk-tutorials/tree/main/app-to-app-kotlin) folder.
 

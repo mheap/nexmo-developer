@@ -1,0 +1,8 @@
+---
+title: Ruby
+language: ruby
+code:
+    source: .repos/vonage/vonage-ruby-code-snippets/messages/whatsapp/send-mtm.rb
+    from_line: 11
+    to_line: 44
+file_name: send-mtm.rb

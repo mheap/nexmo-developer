@@ -6,6 +6,51 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.1.1 - May 25, 2022
+
+### Fixed 
+
+- Fix `NexmoMessage` serialization
+- Fix error handling within `NexmoClient.getConversation()` when not a member.
+
+## 4.1.0 - May 11, 2022
+
+### Added
+
+- Support for `call:transfer` within `NexmoCall`
+- Added `NexmoLegTransferEvent` containing details of previous and current conversation when a call is transferred
+- Added `CallEventListener` to receive `NexmoLegTransferEvent` with new members when a call is transferred to a new conversation.
+
+```java
+   NexmoCallEventListener callEventListener = new NexmoCallEventListener() {
+        @Override
+        public void onLegTransfer(NexmoLegTransferEvent event, NexmoMember member) {
+            Log.d(TAG, "Call Transferred");
+        }
+   };
+```
+
+- Expose `pushNotificationTTL` at the `NexmoClient.Builder()` level to set registered device Push TTL
+- New public events `NexmoSubmittedEvent`, `NexmoRejectedEvent` and `NexmoUndeliverableEvent` for messages states.
+- New Message state listeners added to `NexmoMessageEventListener` interface.
+
+```java
+   NexmoCallEventListener messageEventListener = new NexmoMessageEventListener() {
+        @Override
+        public void onSubmittedReceipt(@NonNull NexmoSubmittedEvent event) {
+            Log.d("onSubmittedReceipt", "Got [" + event + "] from:" + event.getFromMember());
+        }
+        @Override
+        public void onRejectedReceipt(@NonNull NexmoRejectedEvent event) {
+            Log.d("onSubmittedReceipt", "Got [" + event + "] from:" + event.getFromMember());
+        }
+        @Override
+        public void onUndeliverableReceipt(@NonNull NexmoUndeliverableEvent event) {
+            Log.d("onSubmittedReceipt", "Got [" + event + "] from:" + event.getFromMember());
+        }
+   };
+```
+
 ## 4.0.4 - Apr 14, 2022
 
 ### Fixed

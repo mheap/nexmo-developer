@@ -1,92 +1,92 @@
 current:
-  - name: 'Kelly Andrews'
-    email: 'kelly.andrews@vonage.com'
-    role: "JavaScript Developer Advocate"
-    twitter: 'kellyjandrews'
   - name: 'Myrsini Koukiasa'
     email: 'myrsini.koukiasa@vonage.com'
     twitter: 'myrsiningos'
     role: 'Senior Community Manager'
-  - name: 'Garann Means'
-    role: "Developer Advocate"
-    email: 'garann.means@vonage.com'
+    short-name: 'myrsini'
   - name: 'Paul Ardeleanu'
     email: 'paul.ardeleanu@vonage.com'
     role: 'Developer Relations Manager'
     twitter: 'pardel'
+    short-name: 'paul-ardeleanu'
   - name: 'Dwane Hemmings'
     email: 'dwane.hemmings@vonage.com'
     role: "JavaScript Developer Advocate"
     twitter: 'lifelongdev'
+    short-name: 'dwanehemmings'
   - name: 'Benjamin Aronov'
     email: 'benjamin.aronov@vonage.com'
     role: 'Online Community Manager'
     twitter: "AronovBenjamin"
-  - name: "Mofi Rahman"
-    email: "mofi.rahman@vonage.com"
-    role: "Video Developer Advocate"
-    twitter: "moficodes"
+    short-name: 'benjamin-aronov'
   - name: "Abdul Ajetunmobi"
     email: "abdul.ajetunmobi@vonage.com"
     role: "iOS Developer Advocate"
     twitter: "abdulajet"
+    short-name: 'abdul-ajetunmobi'
   - name: "Clarisse Ng"
     email: "clarisse.ng@vonage.com"
     role: "Community Manager, APAC"
     twitter: 'ImClarisseng'
+    short-name: 'clarisse-ng'
   - name: "Filippos Kyprianou"
     email: "filippos.kyprianou@vonage.com"
     role: "Startup Community Manager"
     twitter: "FilipposKyp"
-  - name: "Cory Althoff"
-    email: "cory.althoff@vonage.com"
-    role: "Developer Advocate"
-    twitter: "coryalthoff"
+    short-name: 'filippos-kyprianou'
   - name: "James Seconde"
     email: "jim.seconde@vonage.com"
     role: "PHP Developer Advocate"
     twitter: "secondej"
+    short-name: 'james-seconde'
   - name: "Karl Lingiah"
     email: "karl.lingiah@vonage.com"
     role: "Ruby Developer Advocate"
     twitter: "KarlLingiah"
+    short-name: 'karl-lingiah'
   - name: "Richard Süselbeck"
     email: "richard.sueselbeck@vonage.com"
     role: "Head of Developer Relations"
     twitter: "sueselbeck"
+    short-name: 'richard-süselbeck'
   - name: "Amanda Cavallaro"
     email: "Amanda.Cavallaro@vonage.com"
     role: "Developer Advocate"
     twitter: "amdcavallaro"
+    short-name: 'amanda-cavallaro'
   - name: "Daniela Facchinetti"
     email: "daniela.facchinetti@vonage.com"
     role: "Developer Relations Coordinator"
-  - name: "Matt Hunt"
-    email: "matt.hunt@vonage.com"
-    role: ".Net Developer Advocate"
-    twitter: "doesdotnet"
+    short-name: 'daniela-facchinetti'
   - name: "Nick Iati"
     email: "nick.iati@vonage.com"
     role: "Product Manager, Documentation"
-  - name: "Marco Ranieri"
-    email: "Marco.Ranieri@vonage.com"
-    role: "DocOps - Ruby Technical Lead"
+    short-name: 'nick-iati'
   - name: "Lucinda Bone"
     email: "Lucinda.Bone@vonage.com"
     role: "Community Manager, EMEA"
     twitter: 'lucinda_bone'
+    short-name: 'lucinda-bone'
   - name: "Zachary Powell"
     email: "Zachary.Powell@vonage.com"
     role: "Sr Android Developer Advocate"
+    short-name: 'zachary-powell-1'
   - name: "Max Kahan"
     email: "Max.Kahan@vonage.com"
     role: "Python Developer Advocate"
     twitter: "max_does_tech"
+    short-name: 'max-kahan'
   - name: "Sina Madani"
     email: "Sina.Madani@vonage.com"
     role: "Java Developer Advocate"
     twitter: "madani_sina"
-  - name: "Edmond Mensah"
-    email: "edmond.mensah@vonage.com"
-    role: "Technical Writer"
-
+    short-name: 'sina-madani'
+  - name: 'Chris Tankersley'
+    email: 'chris.tankersley@vonage.com'
+    twitter: 'dragonmantank'
+    role: 'Senior Developer Advocate'
+    short-name: 'christankersley'
+  - name: 'Marco Ranieri'
+    email: 'marco.ranieri@vonage.com'
+    role: 'DocOps - Ruby Technical Lead'
+    short-name: 'marco-ranieri'
