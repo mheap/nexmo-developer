@@ -25,26 +25,26 @@ code_snippets:
 footer:
   links:
     status:
-      path: 'https://www.nexmostatus.com/'
+      path: 'https://www.https://api.vonagestatus.com/'
       text: 'API Status'
     navigation:
       documentation:
-        - documentation: 'https://developer.nexmo.com/documentation'
+        - documentation: 'https://developer.vonage.com/documentation'
         - vonage-business-cloud: 'https://developer.uc.vonage.com/'
         - vonage-contact-center: 'https://developer.newvoicemedia.com/'
       technical-references:
-        - documentation: 'https://developer.nexmo.com/documentation'
-        - use-cases: 'https://developer.nexmo.com/use-cases'
-        - sdk-&-tools: 'https://developer.nexmo.com/tools'
-        - integrations: 'https://developer.nexmo.com/extend'
+        - documentation: 'https://developer.vonage.com/documentation'
+        - use-cases: 'https://developer.vonage.com/use-cases'
+        - sdk-&-tools: 'https://developer.vonage.com/tools'
+        - integrations: 'https://developer.vonage.com/extend'
       community:
-        - community-hub: 'https://developer.nexmo.com/community'
-        - startups-program: 'https://developer.nexmo.com/startups'
-        - team: 'https://developer.nexmo.com/team'
-        - careers: 'https://developer.nexmo.com/careers'
+        - community-hub: 'https://developer.vonage.com/community'
+        - startups-program: 'https://developer.vonage.com/startups'
+        - team: 'https://developer.vonage.com/team'
+        - careers: 'https://developer.vonage.com/careers'
     support:
-      knowledgebase: 'https://help.nexmo.com/'
-      known-issues: 'https://help.nexmo.com/hc/en-us/sections/115004147507'
+      knowledgebase: 'https://api.support.vonage.com/'
+      known-issues: 'https://api.support.vonage.com/hc/en-us/sections/115004147507'
       changelog: '/changelogs'
     social:
       linkedin: 'https://www.linkedin.com/company/vonage/'
