@@ -40,7 +40,7 @@ footer:
       community:
         - community-hub: 'https://developer.nexmo.com/community'
         - startups-program: 'https://developer.nexmo.com/startups'
-        - voyagers-program: 'https://developer.nexmo.com/voyagers'
+        - team: 'https://developer.nexmo.com/team'
         - careers: 'https://developer.nexmo.com/careers'
     support:
       knowledgebase: 'https://help.nexmo.com/'
