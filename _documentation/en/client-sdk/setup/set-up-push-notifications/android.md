@@ -97,6 +97,40 @@ Let's start with configuring your Android project with the required dependencies
 
 [Add the Client SDK](/client-sdk/setup/add-sdk-to-your-app/android) to your project.
 
+### Add Firebase Configuration to your App
+
+Before we set up the push notification-specific configuration there are a few general steps you need to take to set up Firebase within your app. 
+
+> **NOTE** that you can skip this step if your application is already using other Firebase products.
+
+From your Firebase project click on the "add Android app" option:
+
+![Add App getting started screen with options for ios, android, web, unity and flutter](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-add-app.png)
+
+Fill in the displayed form to register your application with the Firebase project
+
+![Form to register your application with your Firebase project, package name is required.](/screenshots/setup/client-sdk/set-up-push-notifications/firebase-add-app-detail.png)
+
+You will then be presented with a "Download google-services.json" button, click this and download the file.
+
+Now switch over to the Project view in Android Studio to see your project root directory.
+
+Move the google-services.json file you just downloaded into your Android app module root directory.
+
+![Android studio with project view selected and the google-service.json added in the app module directory](/screenshots/setup/client-sdk/set-up-push-notifications/android_studio_project_panel.png)
+
+Finally, you need to add the Google services plugin, which will load the google-services.json file. Modify your project-level `build.gradle` file to include this:
+
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/google-services-project'
+```
+
+And in your App-level `build.gradle` implement the base Firebase BoM
+
+```tabbed_content
+source: '_tutorials_tabbed_content/client-sdk/setup/push-notifications/android/google-services-app'
+```
+
 ### Add Firebase Cloud Messaging dependency
 
 In your IDE, in your app level `build.gradle` file (usually `app/build.gradle`), add the `firebase-messaging` dependency:
@@ -124,7 +158,8 @@ Make sure your service is declared in your `AndroidManifest.xml` (typically `app
 ![Arrow showing the location of the manifest file](/screenshots/tutorials/client-sdk/android-shared/android-manifest-file.png)
 
 ```xml
-<service android:name=".MyFirebaseMessagingService">
+<service android:name=".MyFirebaseMessagingService"
+		 android:exported="false">
     <intent-filter>
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
