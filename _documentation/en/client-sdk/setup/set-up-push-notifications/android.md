@@ -115,7 +115,7 @@ You will then be presented with a "Download google-services.json" button, click 
 
 Now switch over to the Project view in Android Studio to see your project root directory.
 
-Move the google-services.json file you just downloaded into your Android app module root directory.
+Move the google-services.json file you downloaded into your Android app module root directory.
 
 ![Android studio with project view selected and the google-service.json added in the app module directory](/screenshots/setup/client-sdk/set-up-push-notifications/android_studio_project_panel.png)
 
