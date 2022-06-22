@@ -25,7 +25,7 @@ code_snippets:
 footer:
   links:
     status:
-      path: 'https://www.https://api.vonagestatus.com/'
+      path: 'https://api.vonagestatus.com/'
       text: 'API Status'
     navigation:
       documentation:
