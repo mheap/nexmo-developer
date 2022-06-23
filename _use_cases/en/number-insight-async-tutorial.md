@@ -20,7 +20,7 @@ In this tutorial, you create a RESTful web service in Node.js and Express that a
 To achieve this, you perform the following steps:
 
 1. [Create the project](#create-the-project) - create a Node.js/Express application.
-2. [Install the `nexmo` package](#install-the-nexmo-package) - add Vonage capabilities to your project.
+2. [Install the `vonage` package](#install-the-vonage-package) - add Vonage capabilities to your project.
 3. [Expose your application to the Internet](#expose-your-application-to-the-internet) - use `ngrok` to enable Vonage to access your application via a webhook.
 4. [Create the basic application](#create-the-basic-application) - build the basic functionality.
 5. [Create the asynchronous request](#create-the-asynchronous-request) - call the Number Insight Advanced API.
