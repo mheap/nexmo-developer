@@ -29,19 +29,19 @@ footer:
       text: 'API Status'
     navigation:
       documentation:
-        - documentation: 'https://developer.vonage.com/documentation'
+        - documentation: '/documentation'
         - vonage-business-cloud: 'https://developer.uc.vonage.com/'
         - vonage-contact-center: 'https://developer.newvoicemedia.com/'
       technical-references:
-        - documentation: 'https://developer.vonage.com/documentation'
-        - use-cases: 'https://developer.vonage.com/use-cases'
-        - sdk-&-tools: 'https://developer.vonage.com/tools'
-        - integrations: 'https://developer.vonage.com/extend'
+        - documentation: '/documentation'
+        - use-cases: '/use-cases'
+        - sdk-&-tools: '/tools'
+        - integrations: '/extend'
       community:
-        - community-hub: 'https://developer.vonage.com/community'
-        - startups-program: 'https://developer.vonage.com/startups'
-        - team: 'https://developer.vonage.com/team'
-        - careers: 'https://developer.vonage.com/careers'
+        - community-hub: '/community'
+        - startups-program: '/startups'
+        - team: '/team'
+        - careers: '/careers'
     support:
       knowledgebase: 'https://api.support.vonage.com/'
       known-issues: 'https://api.support.vonage.com/hc/en-us/sections/115004147507'
@@ -49,6 +49,6 @@ footer:
     social:
       linkedin: 'https://www.linkedin.com/company/vonage/'
       twitter: 'https://twitter.com/vonagedev'
-      slack: 'https://developer.vonage.com/slack'
+      slack: '/slack'
       github: 'https://github.com/vonage'
       stackoverflow: 'http://stackoverflow.com/questions/tagged/vonage'
