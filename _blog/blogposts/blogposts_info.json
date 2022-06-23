@@ -1,5 +1,45 @@
 [
   {
+    "title": "Startup Spotlight Series: Let's meet Sellerz.io",
+    "description": "Meet SaaS startup Sellerz.io as a part of Vonage Startup Spotlight series.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/startup-spotlight-series-lets-meet-sellerz-io/startups_sellerz.png",
+    "author": {
+      "bio": "Filippos is running our Startup program at Vonage. He is passionate about all things innovation, startups and positive social impact.",
+      "hidden": false,
+      "image_url": "/content/images/t02nnhd8s-u01bfpcfu6m-60e718bd0e6e-512.png",
+      "name": "Filippos Kyprianou",
+      "linkedin_url": "https://www.linkedin.com/in/filipposkyprianou/",
+      "twitter": "FilipposKyp",
+      "spotlight": false,
+      "title": "Vonage for Startups",
+      "email": "Filippos.Kyprianou@vonage.com",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "filippos-kyprianou"
+    },
+    "published": true,
+    "published_at": "2022-06-23 14:27:30 UTC",
+    "updated_at": "2022-06-23 14:05:05 UTC",
+    "category": {
+      "name": "Startup",
+      "plural": "Startups",
+      "slug": "startup",
+      "color": "#fa7454"
+    },
+    "tags": [
+      "startups",
+      "video-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/06/23/startup-spotlight-series-lets-meet-sellerz-io",
+    "filename": "startup-spotlight-series-lets-meet-sellerz-io"
+  },
+  {
     "title": "Send SMS Messages with Node.js | One Dev Minute",
     "description": "In this quick walkthrough, you'll learn how to send SMS messages with the Vonage Messages API and Node.js.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/send-sms-messages-with-node-js-one-dev-minute/send-sms.png",
