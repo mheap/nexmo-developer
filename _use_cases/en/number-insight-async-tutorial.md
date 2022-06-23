@@ -20,7 +20,7 @@ In this tutorial, you create a RESTful web service in Node.js and Express that a
 To achieve this, you perform the following steps:
 
 1. [Create the project](#create-the-project) - create a Node.js/Express application.
-2. [Install the `nexmo` package](#install-the-nexmo-package) - add Vonage capabilities to your project.
+2. [Install the `vonage` package](#install-the-vonage-package) - add Vonage capabilities to your project.
 3. [Expose your application to the Internet](#expose-your-application-to-the-internet) - use `ngrok` to enable Vonage to access your application via a webhook.
 4. [Create the basic application](#create-the-basic-application) - build the basic functionality.
 5. [Create the asynchronous request](#create-the-asynchronous-request) - call the Number Insight Advanced API.
@@ -51,12 +51,12 @@ Then, install the [express](https://expressjs.com) web application framework and
 $ npm install express body-parser  --save
 ```
 
-## Install the `nexmo` package
+## Install the `vonage` package
 
 Execute the following `npm` command in the terminal window to install the Vonage Node Server SDK:
 
 ```sh
-$ npm install nexmo --save
+$ npm install @vonage/server-sdk
 ```
 
 ## Expose your application to the Internet
@@ -118,11 +118,11 @@ If everything is working correctly, `Getting information for 123456` displays in
 
 Now that your application can receive a phone number, you need to create the asynchronous request to the Number Insight Async API.
 
-First, write the code that creates an instance of `Nexmo` with your account details:
+First, write the code that creates an instance of `Vonage` with your account details:
 
 ```javascript
-const Nexmo = require('nexmo');
-const nexmo = new Nexmo({
+const Vonage = require('@vonage/server-sdk');
+const vonage = new Vonage({
     apiKey: VONAGE_API_KEY,
     apiSecret: VONAGE_API_SECRET
 });
