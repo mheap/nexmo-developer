@@ -51,12 +51,12 @@ Then, install the [express](https://expressjs.com) web application framework and
 $ npm install express body-parser  --save
 ```
 
-## Install the `nexmo` package
+## Install the `vonage` package
 
 Execute the following `npm` command in the terminal window to install the Vonage Node Server SDK:
 
 ```sh
-$ npm install nexmo --save
+$ npm install @vonage/server-sdk
 ```
 
 ## Expose your application to the Internet
@@ -118,11 +118,11 @@ If everything is working correctly, `Getting information for 123456` displays in
 
 Now that your application can receive a phone number, you need to create the asynchronous request to the Number Insight Async API.
 
-First, write the code that creates an instance of `Nexmo` with your account details:
+First, write the code that creates an instance of `Vonage` with your account details:
 
 ```javascript
-const Nexmo = require('nexmo');
-const nexmo = new Nexmo({
+const Vonage = require('@vonage/server-sdk');
+const vonage = new Vonage({
     apiKey: VONAGE_API_KEY,
     apiSecret: VONAGE_API_SECRET
 });
