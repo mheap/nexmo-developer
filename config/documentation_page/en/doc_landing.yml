@@ -99,7 +99,7 @@ bottom-section:
         product_description: Create a record for your application and configure authentication, callbacks, and settings.
       - product_name: Audit API
         product_name_link: /audit/overview
-        product_description: Provision virtual phone numbers around the globe to send or receive text messages and phone calls.
+        product_description: Get information about your Vonage account activity.
       - product_name: Conversation API
         product_name_link: /conversation/overview
         product_description: Stitch conversations from multiple communications channels into a single thread.
