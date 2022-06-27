@@ -17,7 +17,7 @@
     <a title="NXMMessage Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NexmoClient 4.1.0 Docs</a> (100% documented)</p>
+        <p><a href="../index.html">NexmoClient 4.3.1 Docs</a> (98% documented)</p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -88,6 +88,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NXMLegStatusEvent.html">NXMLegStatusEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NXMLegTransferEvent.html">NXMLegTransferEvent</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NXMLogger.html">NXMLogger</a>
@@ -175,6 +178,9 @@
                 <a href="../Enums/NXMConnectionStatusReason.html">NXMConnectionStatusReason</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NXMDeliveredEventType.html">NXMDeliveredEventType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NXMErrorCode.html">NXMErrorCode</a>
               </li>
               <li class="nav-group-task">
@@ -218,6 +224,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NXMPushTemplate.html">NXMPushTemplate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NXMSeenEventType.html">NXMSeenEventType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NXMSipStatus.html">NXMSipStatus</a>
@@ -467,6 +476,57 @@
                               <td>
                                 <div>
                                   <p>The message image url string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NXMMessage(im)initWithAudioUrl:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithAudioUrl:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NXMMessage(im)initWithAudioUrl:">-initWithAudioUrl:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a message of NXMMessageTypeAudio type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithAudioUrl</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">audioUrl</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">audioUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>audioUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message audio url string.</p>
                                 </div>
                               </td>
                             </tr>
@@ -866,8 +926,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external noopener">Vonage</a>. All rights reserved. (Last updated: 2022-02-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://developer.nexmo.com" target="_blank" rel="external noopener">Vonage</a>. All rights reserved. (Last updated: 2022-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>

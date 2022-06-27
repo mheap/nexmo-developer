@@ -34,7 +34,7 @@
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:message:rejected">Conversation#message:rejected</a></li><li><a href="Conversation.html#event:message:submitted">Conversation#message:submitted</a></li><li><a href="Conversation.html#event:message:undeliverable">Conversation#message:undeliverable</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
+					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:message:delivered">Conversation#message:delivered</a></li><li><a href="Conversation.html#event:message:rejected">Conversation#message:rejected</a></li><li><a href="Conversation.html#event:message:seen">Conversation#message:seen</a></li><li><a href="Conversation.html#event:message:submitted">Conversation#message:submitted</a></li><li><a href="Conversation.html#event:message:undeliverable">Conversation#message:undeliverable</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
 				</ul>
 			</li>
 			
@@ -575,7 +575,7 @@ class NexmoClient {
        */
     /**
        * Conversation listening for Members delivered messages.
-       * @event Conversation#message:undeliverable
+       * @event Conversation#message:delivered
        *
        * @property {Member} member - the member that message was delivered to
        * @property {MessageEvent} message - the message that was delivered
@@ -589,7 +589,7 @@ class NexmoClient {
        */
     /**
        * Conversation listening for Members seen messages.
-       * @event Conversation#message:undeliverable
+       * @event Conversation#message:seen
        *
        * @property {Member} member - the member that message was seen by
        * @property {MessageEvent} message - the message that was seen
@@ -840,10 +840,13 @@ class NexmoClient {
     }
     /**
        * Get a connectivity report for all Vonage DCs and Media Servers.
+     * @param {string} token - the JSON Web Token (JWT)
+     * @param {object} options - configure the connectivityReport
+     * @param {Function} options.dcListCallback - a callback function to edit the list of datacenters before connectivity checks
        * @returns  {Promise&lt;Report>}
        * @example &lt;caption>Get a connectivity report&lt;/caption>
      *
-       *  rtc.connectivityReport({
+       *  rtc.connectivityReport(token, {
      *    dcListCallback: (dcList) => {...dcList, additionalDc}
      *  }).then((report) => {
        *    console.log(report);
@@ -851,7 +854,7 @@ class NexmoClient {
        *    console.log(error);
        *  });
       */
-    async connectivityReport(options) {
+    async connectivityReport(token, options) {
         var _a;
         const ip = !rtc_helper_1.default.isNode() ? await public_ip_1.default.v4() : undefined;
         const report = {
@@ -861,7 +864,8 @@ class NexmoClient {
         try {
             const { response } = await utils_1.default.networkRequest({
                 type: 'GET',
-                url: `${this.config.nexmo_api_url}/v0.3/discovery/api`
+                url: `${this.config.nexmo_api_url}/v0.3/discovery/api`,
+                token
             });
             let dcList = response;
             if ((_a = options) === null || _a === void 0 ? void 0 : _a.dcListCallback) {
@@ -874,7 +878,7 @@ class NexmoClient {
                 try {
                     const httpRes = await utils_1.default._checkHttpConnectivity(apiUrl);
                     const wsRes = await utils_1.default._checkWsConnectivity(wsUrl, this.config.path, this.config.socket_io);
-                    const mediaConnectionReport = await utils_1.default._checkMediaServers(endpoint, dc);
+                    const mediaConnectionReport = await utils_1.default._checkMediaServers(token, endpoint, dc);
                     const rep = {
                         name: dc,
                         signalConnectionReport: {
@@ -898,6 +902,7 @@ class NexmoClient {
     /**
       * Return a list with the connection health of the media servers for a specific datacenter.
       * @returns  {Promise&lt;MediaConnectionReport[]>}
+    * @param {string} token - the JSON Web Token (JWT)
     * @param {string} nexmo_api_url - url of the nexmo api to be called
     * @param {string} datacenter - datacenter of interest
       * @example &lt;caption>Return a list with the connection health of the media servers&lt;/caption>
@@ -908,8 +913,8 @@ class NexmoClient {
       *    console.log(error);
       *  });
      */
-    async checkMediaServers(nexmo_api_url, datacenter) {
-        return await utils_1.default._checkMediaServers(nexmo_api_url, datacenter);
+    async checkMediaServers(token, nexmo_api_url, datacenter) {
+        return await utils_1.default._checkMediaServers(token, nexmo_api_url, datacenter);
     }
     /**
       * Return the connection health of a single media server including possible connectionTime in ms.
@@ -971,7 +976,7 @@ module.exports = NexmoClient;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Fri May 27th 2022 using the <a
+	on Wed Jun 15th 2022 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
