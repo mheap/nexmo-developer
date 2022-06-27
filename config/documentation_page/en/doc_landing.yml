@@ -28,7 +28,7 @@ top-section:
 
     - product_name: "Dispatch API"
       product_name_link: "/dispatch/overview"
-      product_description: "Send messages to users using a multiple channel strategy."
+      product_description: "Ensure message delivery by specifying failover workflows with other messaging channels."
       getting_started_link: "/dispatch/code-snippets/before-you-begin"
       api_reference_link: "/api/dispatch"
       tutorials_link: ""
