@@ -26,6 +26,14 @@ top-section:
       tutorials_link: ""
       icon: "Vlt-icon-condition"
 
+    - product_name: "Dispatch API"
+      product_name_link: "/dispatch/overview"
+      product_description: "Ensure message delivery by specifying failover workflows with other messaging channels."
+      getting_started_link: "/dispatch/code-snippets/before-you-begin"
+      api_reference_link: "/api/dispatch"
+      tutorials_link: ""
+      icon: "Vlt-icon-flow"
+
   - Voice:
     - product_name: "Voice API"
       product_name_link: "/voice/voice-api/overview"
@@ -91,7 +99,7 @@ bottom-section:
         product_description: Create a record for your application and configure authentication, callbacks, and settings.
       - product_name: Audit API
         product_name_link: /audit/overview
-        product_description: Provision virtual phone numbers around the globe to send or receive text messages and phone calls.
+        product_description: Get information about your Vonage account activity.
       - product_name: Conversation API
         product_name_link: /conversation/overview
         product_description: Stitch conversations from multiple communications channels into a single thread.
