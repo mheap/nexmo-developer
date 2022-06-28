@@ -4,7 +4,7 @@ products: voice/voice-api
 description: "Phone numbers are everywhere in advertising: on billboards, in TV ads, on websites, in newspapers. Often these numbers all redirect to the same call center, where an agent needs to inquire why the person is calling, and where they saw the advert. Call Whispers make this so much simpler."
 languages:
     - Node
-navigation_weight: 8
+navigation_weight: 3
 ---
 
 # Add a Call whisper to an inbound call

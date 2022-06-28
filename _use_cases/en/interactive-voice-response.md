@@ -4,7 +4,7 @@ products: voice/voice-api
 description: Build an automated phone system for users to input information with the keypad and hear a spoken response
 languages:
     - PHP
-navigation_weight: 3    
+navigation_weight: 5    
 ---
 
 # Interactive Voice Response
