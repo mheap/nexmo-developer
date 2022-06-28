@@ -4,7 +4,7 @@ products: voice/voice-api
 description: "This tutorial shows you how to use Automatic Speech Recognition to create a voice bot/interactive voice assistant application."
 languages:
     - Node
-navigation_weight: 4    
+navigation_weight: 8    
 ---
 
 # Voice Bot / Interactive Voice Assistant
