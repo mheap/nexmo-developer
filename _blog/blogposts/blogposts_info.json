@@ -1,5 +1,38 @@
 [
   {
+    "title": "Track Users Connections Using Video API and Session Monitoring",
+    "description": "Session Monitoring offers reliable and secure connection monitoring in Vonage Video API. Developers can monitor server-side activity and verify each connection.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/track-users-connections-using-video-api-and-session-monitoring/session-monitoring.png",
+    "author": {
+      "team": true,
+      "name": "Enrico Portolan",
+      "image_url": "/content/images/76af9719-f638-409c-90e4-262caa8a1eab.jpg",
+      "bio": "Enrico is passionate about cloud, startups and new technologies. Co-Founder of a WebRTC Startup in Italy. \nNow he works as a Solutions Engineer at Vonage, helping the sales team with his technical expertise.\n\nOut of work, he likes to travel and taste as many weird foods as possible.",
+      "website_url": "",
+      "short_name": "enrico-portolan"
+    },
+    "published": true,
+    "published_at": "2022-06-28 09:14:01 UTC",
+    "updated_at": "2022-06-28 09:14:03 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "video-api",
+      "javascript"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/06/28/track-users-connections-using-video-api-and-session-monitoring",
+    "filename": "track-users-connections-using-video-api-and-session-monitoring"
+  },
+  {
     "title": "Startup Spotlight Series: Let's meet Sellerz.io",
     "description": "Meet SaaS startup Sellerz.io as a part of Vonage Startup Spotlight series.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/startup-spotlight-series-lets-meet-sellerz-io/startups_sellerz.png",
@@ -131,7 +164,7 @@
     "author": {
       "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
       "hidden": false,
-      "image_url": "/content/images/dsc_0288.jpeg",
+      "image_url": "/content/images/jim_new.jpg",
       "name": "James Seconde",
       "website_url": "https://devtheatre.net",
       "linkedin_url": "https://www.linkedin.com/in/secondej/",
@@ -696,7 +729,7 @@
     "author": {
       "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
       "hidden": false,
-      "image_url": "/content/images/dsc_0288.jpeg",
+      "image_url": "/content/images/jim_new.jpg",
       "name": "James Seconde",
       "website_url": "https://devtheatre.net",
       "linkedin_url": "https://www.linkedin.com/in/secondej/",
@@ -1146,7 +1179,7 @@
     "author": {
       "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
       "hidden": false,
-      "image_url": "/content/images/dsc_0288.jpeg",
+      "image_url": "/content/images/jim_new.jpg",
       "name": "James Seconde",
       "website_url": "https://devtheatre.net",
       "linkedin_url": "https://www.linkedin.com/in/secondej/",
@@ -1187,7 +1220,7 @@
     "author": {
       "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
       "hidden": false,
-      "image_url": "/content/images/dsc_0288.jpeg",
+      "image_url": "/content/images/jim_new.jpg",
       "name": "James Seconde",
       "website_url": "https://devtheatre.net",
       "linkedin_url": "https://www.linkedin.com/in/secondej/",
@@ -1709,7 +1742,7 @@
     "author": {
       "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
       "hidden": false,
-      "image_url": "/content/images/dsc_0288.jpeg",
+      "image_url": "/content/images/jim_new.jpg",
       "name": "James Seconde",
       "website_url": "https://devtheatre.net",
       "linkedin_url": "https://www.linkedin.com/in/secondej/",
@@ -2011,7 +2044,7 @@
     "author": {
       "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
       "hidden": false,
-      "image_url": "/content/images/dsc_0288.jpeg",
+      "image_url": "/content/images/jim_new.jpg",
       "name": "James Seconde",
       "website_url": "https://devtheatre.net",
       "linkedin_url": "https://www.linkedin.com/in/secondej/",
@@ -2517,7 +2550,7 @@
     "author": {
       "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
       "hidden": false,
-      "image_url": "/content/images/dsc_0288.jpeg",
+      "image_url": "/content/images/jim_new.jpg",
       "name": "James Seconde",
       "website_url": "https://devtheatre.net",
       "linkedin_url": "https://www.linkedin.com/in/secondej/",
@@ -2824,7 +2857,7 @@
     "author": {
       "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
       "hidden": false,
-      "image_url": "/content/images/dsc_0288.jpeg",
+      "image_url": "/content/images/jim_new.jpg",
       "name": "James Seconde",
       "website_url": "https://devtheatre.net",
       "linkedin_url": "https://www.linkedin.com/in/secondej/",
@@ -3451,7 +3484,7 @@
     "author": {
       "bio": "A trained actor with a dissertation on standup comedy, I came into PHP development via. the meetup scene. You can find me speaking and writing on tech, or playing/buying odd records from my vinyl collection.",
       "hidden": false,
-      "image_url": "/content/images/dsc_0288.jpeg",
+      "image_url": "/content/images/jim_new.jpg",
       "name": "James Seconde",
       "website_url": "https://devtheatre.net",
       "linkedin_url": "https://www.linkedin.com/in/secondej/",
@@ -7387,36 +7420,6 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
-    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
-    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
-    "author": {
-      "team": true,
-      "name": "Avital Tzubeli",
-      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
-      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
-      "website_url": "",
-      "short_name": "avital-tzubelivonage-com"
-    },
-    "published": false,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "angular",
-      "rxjs"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
-    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
-  },
-  {
     "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
     "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
@@ -7477,6 +7480,36 @@
     "locale": "en",
     "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
     "filename": "setting-up-ci-cd-with-github-actions"
+  },
+  {
+    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
+    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
+    "author": {
+      "team": true,
+      "name": "Avital Tzubeli",
+      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
+      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
+      "website_url": "",
+      "short_name": "avital-tzubelivonage-com"
+    },
+    "published": false,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "angular",
+      "rxjs"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
+    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -11528,36 +11561,6 @@
     "filename": "use-a-green-screen-in-javascript-with-vonage-video"
   },
   {
-    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
-    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
-    "author": {
-      "team": false,
-      "spotlight": false,
-      "name": "Lorna Mitchell",
-      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
-      "twitter": "lornajane",
-      "image_url": "/content/images/lornajane.jpg",
-      "alumni": true,
-      "short_name": "lornajane"
-    },
-    "published": true,
-    "published_at": "2020-06-23 07:53:47 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "security",
-      "verify-api"
-    ],
-    "locale": "it",
-    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
-    "filename": "add-strong-psd2-authentication-to-your-application"
-  },
-  {
     "title": "Add Strong PSD2 Authentication to Your Application",
     "description": "Find out how you can bring your payment authorisations up to PSD2 standards using the Vonage Verify API to confirm user identity",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
@@ -11587,6 +11590,36 @@
     ],
     "locale": "en",
     "link": "blog/20/06/23/add-strong-psd2-authentication-to-your-application",
+    "filename": "add-strong-psd2-authentication-to-your-application"
+  },
+  {
+    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
+    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
+    "author": {
+      "team": false,
+      "spotlight": false,
+      "name": "Lorna Mitchell",
+      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
+      "twitter": "lornajane",
+      "image_url": "/content/images/lornajane.jpg",
+      "alumni": true,
+      "short_name": "lornajane"
+    },
+    "published": true,
+    "published_at": "2020-06-23 07:53:47 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "security",
+      "verify-api"
+    ],
+    "locale": "it",
+    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
     "filename": "add-strong-psd2-authentication-to-your-application"
   },
   {
@@ -13707,36 +13740,6 @@
     "filename": "usando-jwt-para-autenticação-em-uma-aplicação-golang"
   },
   {
-    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
-    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
-    "author": {
-      "name": "Victor Steven",
-      "image_url": "/content/images/0.png",
-      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
-      "website_url": "",
-      "spotlight": true,
-      "short_name": "victor-steven"
-    },
-    "published": true,
-    "published_at": "2020-03-13 13:00:25 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "go",
-      "jwt",
-      "messages-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
-    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
-  },
-  {
     "title": "Using JWT for Authentication in a Golang Application",
     "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
@@ -13765,6 +13768,36 @@
     ],
     "locale": "en",
     "link": "blog/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
+    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
+  },
+  {
+    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
+    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
+    "author": {
+      "name": "Victor Steven",
+      "image_url": "/content/images/0.png",
+      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
+      "website_url": "",
+      "spotlight": true,
+      "short_name": "victor-steven"
+    },
+    "published": true,
+    "published_at": "2020-03-13 13:00:25 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "go",
+      "jwt",
+      "messages-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
     "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
   },
   {
