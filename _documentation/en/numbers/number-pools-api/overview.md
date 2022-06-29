@@ -43,4 +43,4 @@ In order to avoid carriers from blocking traffic, ensure all US numbers in a num
 
 * Additional information on [10DLC considerations for U.S. customers](https://developer.vonage.com/messaging/sms/overview#important-10-dlc-guidelines-for-us-customers)
 * [Number Pools API reference](/api/number-pools)
-* Vonage Knowledge Base [article on Number Pools](https://nexmo.zendesk.com/knowledge/articles/4411966959380/en-us?brand_id=3270356)
+* Vonage Knowledge Base [article on Number Pools](https://api.support.vonage.com/hc/en-us/articles/4411966959380)
