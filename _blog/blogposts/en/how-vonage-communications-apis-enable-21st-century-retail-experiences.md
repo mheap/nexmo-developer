@@ -5,7 +5,7 @@ description: Show Rooming is a growing concern for brick-and-mortar retailers.
   experience.
 thumbnail: /content/blog/how-vonage-communications-apis-enable-21st-century-retail-experiences/21st-century-retail.png
 author: bernard-slede
-published: true
+published: false
 published_at: 2022-06-30T10:17:39.617Z
 updated_at: 2022-06-30T10:17:41.114Z
 category: inspiration
