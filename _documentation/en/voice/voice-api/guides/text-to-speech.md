@@ -70,7 +70,7 @@ Some voice styles come with a premium alternative, which through the use of AI, 
 ]
 ```
 
-> Premium Voices are chargeable. See the [pricing page for more information](https://www.vonage.com/communications-apis/voice/pricing).
+> Premium Voices are chargeable at a rate of €0.0027 per 100 characters.
 
 
 ### Supported Languages
