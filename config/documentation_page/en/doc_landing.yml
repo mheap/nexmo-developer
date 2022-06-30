@@ -59,6 +59,15 @@ top-section:
       tutorials_link: none
       icon: "Vlt-icon-condition"
 
+  - Video:
+    - product_name: "Meetings API"
+      product_name_link: "/meetings/overview"
+      product_description: "Create your own white-labeled video meetings with a single API call."
+      getting_started_link: "/meetings/code-snippets/before-you-begin"
+      api_reference_link: "/api/meetings"
+      tutorials_link: none
+      icon: "video-conference"
+
   - Authentication & Identity:
     - product_name: "Verify API"
       product_name_link: "/verify/overview"
