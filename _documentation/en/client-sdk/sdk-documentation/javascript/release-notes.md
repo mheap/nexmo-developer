@@ -6,6 +6,34 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 9.0.0 - June 30, 2022
+
+### Breaking changes
+
+- Rename `login()` function to `createSession()`
+
+```javascript
+rtc.createSession(token).then((application) => {
+  console.log(application);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
+- Rename `logout()` function to `deleteSession()`
+
+```javascript
+rtc.deleteSession().then((response) => {
+  console.log(response);
+}).catch((error) => {
+  console.log(error);
+});
+```
+
+### Changes
+
+- Move websocket connection creation to the `createSession()` function
+
 ## Version 8.7.3 - June 14, 2022
 
 ### Changes
