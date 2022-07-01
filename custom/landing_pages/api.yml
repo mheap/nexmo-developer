@@ -16,9 +16,6 @@ page:
                   - title: 'Messages API'
                     path: 'api/messages-olympus'
                     description: 'For SMS, MMS, Facebook, WhatsApp, Viber and much more: Messages API allows easy integration with multiple messaging platforms through a single integration. This API is currently in Beta, so expect some changes before it is production-ready.'
-                    badge:
-                      name: Beta
-                      color: green
                   - title: 'Dispatch API'
                     path: 'api/dispatch'
                     description: 'Use the Dispatch API for a multichannel messaging solution with failover.'
@@ -31,13 +28,10 @@ page:
                   - title: 'External Accounts API'
                     path: 'api/external-accounts'
                     description: 'Use this to manage accounts for the Messages and Dispatch APIs across all the various channels that we support.'
-                    badge:
-                      name: Beta
-                      color: green
                   - title: 'WhatsApp Provisioning API'
                     path: 'api/whatsapp-provisioning'
-                    description: 'Use this to manage allocate WhatsApp Numbers to your Vonage API account'     
-                    badge:               
+                    description: 'Use this to manage allocate WhatsApp Numbers to your Vonage API account'
+                    badge:
                       name: Beta
                       color: green
                   - title: 'Conversation API'
@@ -56,7 +50,7 @@ page:
                     path: 'api/sms/us-short-codes/2fa'
                     description: 'For verifying users with US Short Codes'
               - title: 'Core Services'
-                icon: 
+                icon:
                   color: purple
                   name: 'Vlt-icon-code'
                 apis:
