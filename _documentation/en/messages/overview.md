@@ -58,7 +58,7 @@ Channel | Inbound Text | Inbound Image | Inbound Audio | Inbound Video | Inbound
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
 MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
-Viber Service Messages | ✅ | n/a | n/a | n/a | n/a | n/a
+Viber Service Messages | ✅ | ✅ | n/a | n/a | n/a | n/a
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
