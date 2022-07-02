@@ -59,7 +59,7 @@ Channel | Outbound Text | Outbound Image | Outbound Audio | Outbound Video | Out
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
 MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
-Viber Service Messages | ✅ | ✅ | n/a | n/a | n/a | ✅
+Viber Business Messages | ✅ | ✅ | n/a | n/a | n/a | ✅
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
@@ -67,7 +67,7 @@ Channel | Inbound Text | Inbound Image | Inbound Audio | Inbound Video | Inbound
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
 MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
-Viber Service Messages | ✅ | n/a | n/a | n/a | n/a | n/a
+Viber Business Messages | ✅ | n/a | n/a | n/a | n/a | n/a
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
@@ -77,7 +77,7 @@ Channel | Outbound Button | Outbound Location | Outbound Contact
 :--- | :---: | :---: | :---:
 SMS | n/a | n/a | n/a
 MMS | n/a | n/a | n/a
-Viber Service Messages | ✅ | n/a | n/a
+Viber Business Messages | ✅ | n/a | n/a
 Facebook Messenger | ✅ | n/a | n/a
 WhatsApp | ✅ | ✅ | ✅
 
@@ -101,7 +101,7 @@ As well as all of the existing features from v0.1, there are some additional fea
 
 ## External Accounts API
 
-The [External Accounts API](/api/external-accounts) is used to manage your accounts for Viber Service Messages, Facebook Messenger and WhatsApp when using those channels with the Messages and Dispatch APIs.
+The [External Accounts API](/api/external-accounts) is used to manage your accounts for Viber Business Messages, Facebook Messenger and WhatsApp when using those channels with the Messages and Dispatch APIs.
 
 ## Getting started
 

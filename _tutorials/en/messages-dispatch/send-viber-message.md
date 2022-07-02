@@ -1,14 +1,14 @@
 ---
-title: Send a Viber message 
-description: In this step you learn how to send a Viber message 
+title: Send a Viber message
+description: In this step you learn how to send a Viber message
 ---
 
-# Send a Viber Service message
+# Send a Viber Business Message
 
 Key | Description
 -- | --
 `VONAGE_APPLICATION_ID` | The ID of the Vonage Application that you created.
-`VIBER_SERVICE_MESSAGE_ID` | Your Viber Service Message ID.
+`VIBER_SERVICE_MESSAGE_ID` | Your Viber Business Message ID.
 `TO_NUMBER` | The phone number you are sending the message to.
 
 > **NOTE:** Don't use a leading `+` or `00` when entering a phone number, start with the country code, for example 447700900000.
