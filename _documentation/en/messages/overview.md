@@ -17,7 +17,6 @@ The following diagram illustrates how the Vonage Messages API enables you to sen
 
 ## Contents
 
-* [Beta](#beta)
 * [Versions](#versions)
 * [Supported features](#supported-features)
 * [External Accounts API](#external-accounts-api)
@@ -28,20 +27,12 @@ The following diagram illustrates how the Vonage Messages API enables you to sen
 * [Use Cases](#use-cases)
 * [Reference](#reference)
 
-## Beta
-
-This API is currently in Beta.
-
-Vonage always welcomes your feedback. Your suggestions help us improve the product. If you do need help, please email [support@vonage.com](mailto:support@vonage.com) and include the Messages API in the subject line. Please note that during the Beta period, support times are limited to Monday to Friday.
-
-During Beta Vonage will expand the capabilities of the API.
-
 ## Versions
 
 There are currently two versions of the API, v0.1 and v1. Each version has its own API endpoint:
 
-- **v0.1**: `https://api.nexmo.com/v0.1/messages`
 - **v1**: `https://api.nexmo.com/v1/messages`
+- **v0.1**: `https://api.nexmo.com/v0.1/messages`
 
 One of the primary differences between the two versions is that v1 provides a much simpler and flatter structure for the JSON structure used in the request and response data. Check the relevant [API specification](/api/messages-olympus) for details of the required structure.
 
@@ -49,7 +40,7 @@ One of the primary differences between the two versions is that v1 provides a mu
 
 As well as the difference in JSON structure, v1 supports some [additional features](#additional-v1-features).
 
-If you are currently using v0.1 of the API, and are intending to move to v1, check our [Migration Guide](/messages/concepts/migration-guide).
+We recommend using v1 of the API. If you are using v0.1 of the API, and are intending to move to v1, check our [Migration Guide](/messages/concepts/migration-guide).
 
 ## Supported features
 
@@ -67,7 +58,7 @@ Channel | Inbound Text | Inbound Image | Inbound Audio | Inbound Video | Inbound
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
 MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
-Viber Service Messages | ✅ | n/a | n/a | n/a | n/a | n/a
+Viber Service Messages | ✅ | ✅ | n/a | n/a | n/a | n/a
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
