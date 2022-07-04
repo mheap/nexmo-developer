@@ -52,7 +52,7 @@ Channel | Outbound Text | Outbound Image | Outbound Audio | Outbound Video | Out
 -- | -- | -- | -- | -- | -- | --
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
 MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
-Viber Service Messages | ✅ | ✅ | n/a | n/a | n/a | ✅
+Viber Business Messages | ✅ | ✅ | n/a | n/a | n/a | ✅
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
@@ -62,7 +62,7 @@ MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
-**Key:** 
+**Key:**
 
 * ✅ = Supported.
 * ❌ = Supported by the channel, but not by Nexmo.
@@ -71,7 +71,7 @@ WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 External Accounts API
 ---------------------
 
-The [External Accounts API](/api/external-accounts) is used to manage your accounts for Viber Service Messages, Facebook Messenger and WhatsApp when using those channels with the Messages and Dispatch APIs.
+The [External Accounts API](/api/external-accounts) is used to manage your accounts for Viber Business Messages, Facebook Messenger and WhatsApp when using those channels with the Messages and Dispatch APIs.
 
 Getting started
 ---------------
@@ -119,4 +119,3 @@ Reference
 
 * [Messages API Reference](/api/messages-olympus)
 * [External Accounts API Reference](/api/external-accounts)
-

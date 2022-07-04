@@ -40,14 +40,14 @@ Vonage always welcomes your feedback. Your suggestions help us improve the produ
 
 In this release you can:
 
-* **Send** SMS, Facebook Messenger, WhatsApp, and Viber Service Messages with Dispatch built on-top of the [Messages API](/messages/overview).
+* **Send** SMS, Facebook Messenger, WhatsApp, and Viber Business Messages with Dispatch built on-top of the [Messages API](/messages/overview).
 * **Failover** to the next message if the condition status is not met within the time period or if the message immediately fails.
 
-The condition status is the status that the message returns. With Facebook Messenger and Viber Service Messages, you can use `delivered` and `read` statuses as the condition status. With SMS you can only use `delivered`.
+The condition status is the status that the message returns. With Facebook Messenger and Viber Business Messages, you can use `delivered` and `read` statuses as the condition status. With SMS you can only use `delivered`.
 
 ## External Accounts API
 
-The [External Accounts API](/api/external-accounts) is used to manage your accounts for Viber Service Messages, Facebook Messenger and WhatsApp when using those channels with the Messages and Dispatch APIs.
+The [External Accounts API](/api/external-accounts) is used to manage your accounts for Viber Business Messages, Facebook Messenger and WhatsApp when using those channels with the Messages and Dispatch APIs.
 
 ## Getting started
 
