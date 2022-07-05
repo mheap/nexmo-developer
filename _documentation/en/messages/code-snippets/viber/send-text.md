@@ -23,6 +23,7 @@ Ensure the following variables are set to your required values using any conveni
 - VONAGE_APPLICATION_PRIVATE_KEY_PATH
 - VIBER_SERVICE_MESSAGE_ID
 - VONAGE_VIBER_SERVICE_MESSAGE_ID
+- VONAGE_NUMBER.MESSAGES
 - TO_NUMBER.MESSAGES
 ```
 
