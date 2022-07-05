@@ -95,7 +95,7 @@ Because this app won't manage conversations or invitations, you can also delete 
 ```javascript
   login() {
     let nexmo = new nexmoClient();
-    nexmo.login(this.state.token).then(app => {
+    nexmo.createSession(this.state.token).then(app => {
       this.setState({
         app: app
       });

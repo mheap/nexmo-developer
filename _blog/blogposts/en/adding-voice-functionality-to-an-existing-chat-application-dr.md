@@ -332,7 +332,7 @@ class ChatApp {
 
   joinConversation(userToken) {
     new NexmoClient({ debug: false })
-      .login(userToken)
+      .createSession(userToken)
       .then(app =&gt; {
         console.log('*** Logged into app', app)
         return app.getConversation(CONVERSATION_ID)

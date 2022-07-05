@@ -24,7 +24,7 @@ Create an HTML file called `client_js.html` in your project directory. Add the f
   <script>
 
     new NexmoClient({ debug: true })
-    .login("PASTE ALICE JWT HERE")
+    .createSession("PASTE ALICE JWT HERE")
     .then(app => {
 
         const answerBtn = document.getElementById("answer");

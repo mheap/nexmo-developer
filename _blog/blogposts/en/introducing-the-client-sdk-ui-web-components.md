@@ -63,7 +63,7 @@ Replace the current code for the `client_js.html` file with this:
     const statusElement = document.getElementById("status");
 
     new NexmoClient({ debug: true })
-      .login(USER_JWT)
+      .createSession(USER_JWT)
       .then(app => {
         keypadRef.addEventListener("digits-sent", event => {
           console.log(event.detail.digits);

@@ -26,7 +26,7 @@ Create an HTML file called `client_alice.html` in your project directory and add
       const btnCall = document.getElementById("btn-call");
       const btnHangUp = document.getElementById("btn-hangup");
       new NexmoClient({ debug: true })
-        .login(aliceJWT)
+        .createSession(aliceJWT)
         .then(app => {
           btnCall.addEventListener("click", () => {
             console.log("Calling Bob...");
@@ -49,7 +49,7 @@ This is your client application that uses the Client SDK to make an in-app voice
 
 There are several key components to this code:
 
-1. Code that logs the user (Alice) into the Client SDK (a JWT is used for authentication) using `.login(aliceJWT)`.
+1. Code that logs the user (Alice) into the Client SDK (a JWT is used for authentication) using `.createSession(aliceJWT)`.
 2. The function to make the call is `callServer(username, type)`, where `type` in this case is "app", and the destination is the specified user (Bob).
 > **NOTE**: Another way to make Voice Calls is with `inAppCall(username)` which uses peer-peer call functionality. [More info on `inAppCall()`](/sdk/stitch/javascript/Application.html#inAppCall__anchor)
 3. When a call is made, a button handler is loaded. When the `Hang Up` button is clicked `call.hangUp()` terminates the call.
