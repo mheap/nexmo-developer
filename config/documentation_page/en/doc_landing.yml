@@ -66,7 +66,7 @@ top-section:
       getting_started_link: "/meetings/code-snippets/before-you-begin"
       api_reference_link: "/api/meetings"
       tutorials_link: none
-      icon: "video-conference"
+      icon: "Vlt-icon-video-conference"
 
   - Authentication & Identity:
     - product_name: "Verify API"
