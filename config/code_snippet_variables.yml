@@ -87,6 +87,7 @@ IMAGE_URL.MESSENGER.MESSAGES: The link to the image file to send. Messenger supp
 VIDEO_URL.MESSENGER.MESSAGES: The link to the video to send. Messenger supports MP4 (`.mp4`) file format only.
 FROM_NUMBER.MMS.MESSAGES:  The phone number you are sending the MMS from. (US Short Code, 10DLC number, or SMS Enabled Toll Free Number) #&FROM_NUMBER.MMS.MESSAGES
 VONAGE_FROM_NUMBER: Refer to `FROM_NUMBER` above #*FROM_NUMBER.MMS.MESSAGES
+VONAGE_NUMBER.MMS.MESSAGES: Refer to `FROM_NUMBER` above #*FROM_NUMBER.MMS.MESSAGES
 IMAGE_URL.MMS.MESSAGES: The URL of the media you want to send. Accepted file formats are `.jpg`, `.jpeg`, `.png`, and `.gif`.
 WHATSAPP_TEMPLATE_NAMESPACE: The namespace ID found in your WhatsApp Business Account. Only templates created in your own namespace will work. Using an template with a namespace outside of your own results in an error code 1022 being returned. For sandbox testing the supported namespace is `9b6b4fcb_da19_4a26_8fe8_78074a91b584`.
 WHATSAPP_TEMPLATE_NAME: The name of the template created in your WhatsApp Business Account. For sandbox testing the `verify` template is currently available. Refer to [this table](/messages/concepts/messages-api-sandbox#whatsapp-templates-for-use-with-the-messages-api-sandbox) for new templates as they become available.
