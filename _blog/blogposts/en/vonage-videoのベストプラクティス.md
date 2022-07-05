@@ -10,6 +10,7 @@ category: inspiration
 tags:
   - video-api
   - ビデオapi
+  - japanese
 comments: true
 spotlight: false
 redirect: ""
