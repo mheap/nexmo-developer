@@ -38,7 +38,7 @@ Rushil: I’m currently based in the California Bay Area (although I have moved 
 
 Zoe: I am located in Blue Ridge, GA but I live in Tampa, FL. I enjoy cooking, traveling, and any outdoor activities.
 
-Tell us about what you will be working on during your internship at Vonage
+## Tell us about what you will be working on during your internship at Vonage
 
 Elena: I will be working with the APD team to focus on objectives like technical writing, technical skills, project management, and the product development/knowledge within Vonage.
 
