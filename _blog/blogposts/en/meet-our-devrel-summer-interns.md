@@ -66,6 +66,6 @@ Rushil: In my free time, I love playing basketball, hiking, and writing poetry.
 
 Zoe: I love photography, creating digital art, and playing video games. 
 
-Wishing everyone an amazing intern experience - we can’t wait to see what you build in the next 10 weeks! 
+<p>&nbsp;</p>
 
-If you are interested in joining our team, you can see all of our open roles [here](https://developer.vonage.com/team).
+Wishing everyone an amazing intern experience - we can’t wait to see what you build in the next 10 weeks! If you are interested in joining our team, you can see all of our open roles [here](https://developer.vonage.com/team).
