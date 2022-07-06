@@ -45,7 +45,7 @@ top-section:
 
     - product_name: "SIP"
       product_name_link: "/voice/sip/overview"
-      product_description: "Connect voice calls to existing endpoints via the phone network an in-app voice."
+      product_description: "Connect voice calls to existing endpoints via the phone network and in-app voice."
       getting_started_link: "/voice/sip/overview"
       api_reference_link: "/api/psip"
       tutorials_link: none
