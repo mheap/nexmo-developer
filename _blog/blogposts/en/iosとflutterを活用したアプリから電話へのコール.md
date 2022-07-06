@@ -10,7 +10,7 @@ category: tutorial
 tags:
   - conversation-api
   - flutter
-  - ios
+  - japanese
 comments: true
 spotlight: false
 redirect: ""
