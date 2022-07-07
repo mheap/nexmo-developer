@@ -7,5 +7,5 @@ code:
     source: .repos/vonage/vonage-python-code-snippets/messages/messenger/send_text.py
     from_line: 16
     to_line: 29
-file_name: app.py
-run_command: 'python3 app.py'
+file_name: send_text.py
+run_command: 'python3 send_text.py'
