@@ -2,7 +2,7 @@
 title: 新しいVonage Video Expressでマルチパーティビデオを作成
 description: このガイドに従って、Vonage Video API セッションを 1 対 1
   からマルチパーティビデオに移行する際のプラットフォームの制限とベストプラクティスを学んでください。
-thumbnail: /content/blog/新しいvonage-video-expressでマルチパーティビデオを作成/react-native_video-express_1200x600.png
+thumbnail: /content/blog/create-a-multiparty-video-app-with-the-new-video-express/react-native_video-express_1200x600.png
 author: enrico-portolan
 published: true
 published_at: 2021-09-27T12:34:21.375Z
@@ -95,7 +95,7 @@ const createCall = useCallback(
 `Room`オブジェクトが初期化されたら、`startRoomListeners` 関数を呼び出して、Roomオブジェクトのイベントリスナーを開始します。次に、オプションの`publisherSettings`とともに`room.join()`メソッドを呼び出し、セッションに参加させます。イベントリスナーは、新しい参加者の参加、新しい画面共有ストリームの作成、あるいはユーザーによる通話の再接続などのイベントを通知するために必要となります。
 
 ```js
- 
+
 const startRoomListeners = () => {
     if (roomRef.current) {
       roomRef.current.on('connected', () => {
@@ -194,7 +194,7 @@ const [deviceInfo, setDeviceInfo] = useState({
 ```
 
 ### UsePreviewPublisher
-  
+
 Video Expressは、通話前のユーザーエクスペリエンスも支援しており、具体的には[PreviewPublisher](https://tokbox.com/developer/video-express/reference/preview-publisher.html) クラスを実装しています。`PreviewPublisher`クラスの目的は、開発者がメディアを容易にプレビューし、`Room`オブジェクトを作成しなくてもデバイス（オーディオ/ビデオ）が正常に動作することを確認できるようにすることです。
 
 ユーザーが正しいデバイスを選択し（複数ある場合）、マイクが音声を拾い、カメラが正常に動作することを確認するためのプレビューを作成します。[GitHub](https://github.com/nexmo-se/video-express-react-app/blob/main/src/hooks/usePreviewPublisher.js)で全般的な実装内容を確認してください。

@@ -3950,7 +3950,7 @@
   {
     "title": "新しいVonage Video Expressでマルチパーティビデオを作成",
     "description": "このガイドに従って、Vonage Video API セッションを 1 対 1 からマルチパーティビデオに移行する際のプラットフォームの制限とベストプラクティスを学んでください。",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/新しいvonage-video-expressでマルチパーティビデオを作成/react-native_video-express_1200x600.png",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/create-a-multiparty-video-app-with-the-new-video-express/react-native_video-express_1200x600.png",
     "author": {
       "team": true,
       "name": "Enrico Portolan",
