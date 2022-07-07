@@ -20,6 +20,7 @@ Find the description for all variables used in each code snippet below:
 - MESSAGES_API_URL
 - WHATSAPP_NUMBER
 - VONAGE_WHATSAPP_NUMBER
+- VONAGE_NUMBER.WHATSAPP
 - TO_NUMBER.MESSAGES
 - AUDIO_URL
 ```
