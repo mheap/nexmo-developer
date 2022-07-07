@@ -10,7 +10,7 @@ comments: true
 category: tutorial
 tags:
   - go
-  - jwt
+  - chinese
   - messages-api
 spotlight: true
 ---

@@ -9,7 +9,9 @@
     "RACK_ENV": { "required": true },
     "RAILS_ENV": { "required": true },
     "OAS_PATH": "/app/_open_api/api_specs/definitions",
-    "DOCS_BASE_PATH": "."
+    "DOCS_BASE_PATH": ".",
+    "BLOG_PATH": "/app/_blog",
+    "CHANGELOGS_PATH": "/app/_blog"
   },
   "stack": "heroku-18",
   "formation": {

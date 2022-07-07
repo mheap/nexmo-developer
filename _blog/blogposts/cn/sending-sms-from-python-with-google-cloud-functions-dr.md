@@ -11,7 +11,7 @@ comments: true
 category: tutorial
 tags:
   - python
-  - serverless
+  - chinese
   - sms-api
 spotlight: true
 ---

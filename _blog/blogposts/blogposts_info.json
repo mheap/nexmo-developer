@@ -1,5 +1,81 @@
 [
   {
+    "title": "Meet Our DevRel Summer Interns!",
+    "description": "We are excited to introduce our DevRel Summer Interns: Elena, Rushil and Zoe. Find out more about them! ",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/meet-our-devrel-summer-interns/welcome_interns.png",
+    "author": {
+      "bio": "Richard Süselbeck is Head of Developer Relations at Vonage. He likes dinosaurs.",
+      "hidden": false,
+      "image_url": "/content/images/headshot_square_600.jpg",
+      "name": "Richard Süselbeck",
+      "linkedin_url": "https://www.linkedin.com/in/sueselbeck/",
+      "twitter": "@sueselbeck",
+      "spotlight": false,
+      "title": "Director of Developer Relations",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "richard-süselbeck"
+    },
+    "published": true,
+    "published_at": "2022-07-06 08:38:02 UTC",
+    "updated_at": "2022-07-06 08:38:02 UTC",
+    "category": {
+      "name": "Team",
+      "plural": "Team Posts",
+      "slug": "team",
+      "color": "#06ba77"
+    },
+    "tags": [
+      "interns",
+      "careers"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/06/meet-our-devrel-summer-interns",
+    "filename": "meet-our-devrel-summer-interns"
+  },
+  {
+    "title": "The Vonage Messages API is Now in Our Server SDKs",
+    "description": "Announcing that the Vonage Messages API has been added to Server SDKs for Ruby, Node, Python, PHP, Java, and .net",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/the-vonage-messages-api-is-now-in-our-server-sdks/sdk_updates.png",
+    "author": {
+      "bio": "Karl is a Developer Advocate for Vonage, focused on maintaining our Ruby server SDKs and improving the developer experience for our community. He loves learning, making stuff, sharing knowledge, and anything generally web-tech related.",
+      "hidden": false,
+      "image_url": "/content/images/karl-b-w-crop.png",
+      "name": "Karl Lingiah",
+      "twitter": "KarlLingiah",
+      "spotlight": false,
+      "title": "Ruby Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "karl-lingiah"
+    },
+    "published": true,
+    "published_at": "2022-07-05 09:51:10 UTC",
+    "updated_at": "2022-07-05 09:51:12 UTC",
+    "category": {
+      "name": "Announcement",
+      "plural": "Announcements",
+      "slug": "announcement",
+      "color": "#4cc3d2"
+    },
+    "tags": [
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/05/the-vonage-messages-api-is-now-in-our-server-sdks",
+    "filename": "the-vonage-messages-api-is-now-in-our-server-sdks"
+  },
+  {
     "title": " How Vonage Communications APIs Enable 21st Century Retail Experiences",
     "description": "Show Rooming is a growing concern for brick-and-mortar retailers. See how Vonage APIs can work together to provide a smooth in-person experience.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-vonage-communications-apis-enable-21st-century-retail-experiences/21st-century-retail.png",
@@ -5682,7 +5758,8 @@
     },
     "tags": [
       "video-api",
-      "ビデオapi"
+      "ビデオapi",
+      "japanese"
     ],
     "spotlight": false,
     "canonical": "",
@@ -6514,7 +6591,7 @@
     "tags": [
       "conversation-api",
       "flutter",
-      "ios"
+      "japanese"
     ],
     "spotlight": false,
     "canonical": "",
@@ -7453,36 +7530,6 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
-    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
-    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
-    "author": {
-      "team": true,
-      "name": "Avital Tzubeli",
-      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
-      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
-      "website_url": "",
-      "short_name": "avital-tzubelivonage-com"
-    },
-    "published": false,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "angular",
-      "rxjs"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
-    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
-  },
-  {
     "title": "Setting up CI/CD with Github Actions",
     "description": "This article walks you through the process of using github actions to build CI/CD flows.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
@@ -7514,6 +7561,36 @@
     "locale": "en",
     "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
     "filename": "setting-up-ci-cd-with-github-actions"
+  },
+  {
+    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
+    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
+    "author": {
+      "team": true,
+      "name": "Avital Tzubeli",
+      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
+      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
+      "website_url": "",
+      "short_name": "avital-tzubelivonage-com"
+    },
+    "published": false,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "angular",
+      "rxjs"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
+    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
     "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
@@ -9485,7 +9562,8 @@
     },
     "tags": [
       "video-api",
-      "フェイシャル-id"
+      "フェイシャル-id",
+      "japanese"
     ],
     "spotlight": false,
     "canonical": "",
@@ -11594,36 +11672,6 @@
     "filename": "use-a-green-screen-in-javascript-with-vonage-video"
   },
   {
-    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
-    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
-    "author": {
-      "team": false,
-      "spotlight": false,
-      "name": "Lorna Mitchell",
-      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
-      "twitter": "lornajane",
-      "image_url": "/content/images/lornajane.jpg",
-      "alumni": true,
-      "short_name": "lornajane"
-    },
-    "published": true,
-    "published_at": "2020-06-23 07:53:47 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "security",
-      "verify-api"
-    ],
-    "locale": "it",
-    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
-    "filename": "add-strong-psd2-authentication-to-your-application"
-  },
-  {
     "title": "Add Strong PSD2 Authentication to Your Application",
     "description": "Find out how you can bring your payment authorisations up to PSD2 standards using the Vonage Verify API to confirm user identity",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
@@ -11653,6 +11701,36 @@
     ],
     "locale": "en",
     "link": "blog/20/06/23/add-strong-psd2-authentication-to-your-application",
+    "filename": "add-strong-psd2-authentication-to-your-application"
+  },
+  {
+    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
+    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
+    "author": {
+      "team": false,
+      "spotlight": false,
+      "name": "Lorna Mitchell",
+      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
+      "twitter": "lornajane",
+      "image_url": "/content/images/lornajane.jpg",
+      "alumni": true,
+      "short_name": "lornajane"
+    },
+    "published": true,
+    "published_at": "2020-06-23 07:53:47 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "security",
+      "verify-api"
+    ],
+    "locale": "it",
+    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
     "filename": "add-strong-psd2-authentication-to-your-application"
   },
   {
@@ -13761,7 +13839,7 @@
     },
     "tags": [
       "go",
-      "jwt",
+      "portuguese",
       "messages-api"
     ],
     "spotlight": true,
@@ -13825,7 +13903,7 @@
     },
     "tags": [
       "go",
-      "jwt",
+      "chinese",
       "messages-api"
     ],
     "spotlight": true,
@@ -18724,7 +18802,7 @@
     },
     "tags": [
       "python",
-      "serverless",
+      "chinese",
       "sms-api"
     ],
     "spotlight": true,
