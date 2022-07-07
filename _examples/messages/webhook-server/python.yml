@@ -1,9 +1,11 @@
 ---
 title: Python
 language: python
+dependencies:
+    - flask
 code:
     source: .repos/vonage/vonage-python-code-snippets/messages/webhook-server.py
-    from_line: 1
+    from_line: 8
     to_line: 20
-file_name: app.py
-run_command: 'python3 app.py'
+file_name: webhook-server.py
+run_command: 'python3 webhook-server.py'

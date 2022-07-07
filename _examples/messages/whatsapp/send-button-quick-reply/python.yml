@@ -1,0 +1,11 @@
+---
+title: Python
+language: python
+dependencies:
+    - vonage
+code:
+    source: .repos/vonage/vonage-python-code-snippets/messages/whatsapp/send_button_quick_reply.py
+    from_line: 17
+    to_line: 63
+file_name: send_button_quick.py
+run_command: 'python3 send_button_quick.py'

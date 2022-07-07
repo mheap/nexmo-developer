@@ -95,6 +95,12 @@ Once you have verified the authenticity of the request, you may optionally verif
 
 The code example below shows how to verify a webhook signature. It is recommended you use HTTPS protocol as it ensures that the request and response are encrypted on both the client and server ends.
 
+```snippet_variables
+- NEXMO_API_KEY
+- NEXMO_SIG_SECRET
+
+```
+
 ```code_snippets
 source: '_examples/messages/signed-webhooks'
 ```
