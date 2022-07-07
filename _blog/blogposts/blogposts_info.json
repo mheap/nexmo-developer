@@ -1,5 +1,43 @@
 [
   {
+    "title": "How Vonage Communications APIs Enable 21st Century Retail Experiences",
+    "description": "Show Rooming is a growing concern for brick-and-mortar retailers. See how Vonage APIs can work together to provide a smooth in-person experience.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-vonage-communications-apis-enable-21st-century-retail-experiences/21st-century-retail.png",
+    "author": {
+      "team": true,
+      "alumni": false,
+      "spotlight": false,
+      "noteworthy": false,
+      "hidden": false,
+      "name": "Bernard Slede",
+      "image_url": "/content/images/bernard-slede.jpg",
+      "title": "Director of Strategic Partnership",
+      "bio": "Bernard Slede is Director of Strategic Partnerships at Vonage, based in San Francisco. He has been passionate about spreading innovation his entire career. He has worked in innovation roles at global technology leaders Intel, HP, and Dolby and has also been very active in the technology ecosystem as an entrepreneur, a corporate VC, a startup advisor, and a board member. He serves on the Board of Pacific Service Credit Union.",
+      "short_name": "bernard-slede"
+    },
+    "published": true,
+    "published_at": "2022-07-07 09:20:41 UTC",
+    "updated_at": "2022-07-07 09:20:42 UTC",
+    "category": {
+      "name": "Inspiration",
+      "plural": "Ideas & Inspiration",
+      "slug": "inspiration",
+      "color": "#3298c4"
+    },
+    "tags": [
+      "node",
+      "verify-api",
+      "voice-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/07/how-vonage-communications-apis-enable-21st-century-retail-experiences",
+    "filename": "how-vonage-communications-apis-enable-21st-century-retail-experiences"
+  },
+  {
     "title": "Meet Our DevRel Summer Interns!",
     "description": "We are excited to introduce our DevRel Summer Interns: Elena, Rushil and Zoe. Find out more about them! ",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/meet-our-devrel-summer-interns/welcome_interns.png",
@@ -74,39 +112,6 @@
     "locale": "en",
     "link": "blog/22/07/05/the-vonage-messages-api-is-now-in-our-server-sdks",
     "filename": "the-vonage-messages-api-is-now-in-our-server-sdks"
-  },
-  {
-    "title": " How Vonage Communications APIs Enable 21st Century Retail Experiences",
-    "description": "Show Rooming is a growing concern for brick-and-mortar retailers. See how Vonage APIs can work together to provide a smooth in-person experience.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-vonage-communications-apis-enable-21st-century-retail-experiences/21st-century-retail.png",
-    "author": {
-      "team": true,
-      "name": "Bernard Slede",
-      "image_url": "https://github.com/bernard.png",
-      "title": "Director of Strategic Partnership",
-      "short_name": "bernard-slede"
-    },
-    "published": false,
-    "published_at": "2022-06-30 10:17:39 UTC",
-    "updated_at": "2022-06-30 10:17:41 UTC",
-    "category": {
-      "name": "Inspiration",
-      "plural": "Ideas & Inspiration",
-      "slug": "inspiration",
-      "color": "#3298c4"
-    },
-    "tags": [
-      "node",
-      "verify-api",
-      "voice-api"
-    ],
-    "spotlight": false,
-    "canonical": "",
-    "outdated": false,
-    "replacement_url": "",
-    "locale": "en",
-    "link": "blog/22/06/30/how-vonage-communications-apis-enable-21st-century-retail-experiences",
-    "filename": "how-vonage-communications-apis-enable-21st-century-retail-experiences"
   },
   {
     "title": "Track Users Connections Using Video API and Session Monitoring",
@@ -3943,6 +3948,40 @@
     "filename": "hacktoberfest-dos-and-donts"
   },
   {
+    "title": "新しいVonage Video Expressでマルチパーティビデオを作成",
+    "description": "このガイドに従って、Vonage Video API セッションを 1 対 1 からマルチパーティビデオに移行する際のプラットフォームの制限とベストプラクティスを学んでください。",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/新しいvonage-video-expressでマルチパーティビデオを作成/react-native_video-express_1200x600.png",
+    "author": {
+      "team": true,
+      "name": "Enrico Portolan",
+      "image_url": "/content/images/76af9719-f638-409c-90e4-262caa8a1eab.jpg",
+      "bio": "Enrico is passionate about cloud, startups and new technologies. Co-Founder of a WebRTC Startup in Italy. \nNow he works as a Solutions Engineer at Vonage, helping the sales team with his technical expertise.\n\nOut of work, he likes to travel and taste as many weird foods as possible.",
+      "website_url": "",
+      "short_name": "enrico-portolan"
+    },
+    "published": true,
+    "published_at": "2021-09-27 12:34:21 UTC",
+    "updated_at": "2022-03-01 09:10:50 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "video-express",
+      "video-api",
+      "japanese"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/21/09/27/新しいvonage-video-expressでマルチパーティビデオを作成",
+    "filename": "新しいvonage-video-expressでマルチパーティビデオを作成"
+  },
+  {
     "title": "Create a Multiparty Video App With the New Vonage Video Express",
     "description": "This blog post will help you develop a Multiparty Video Application   based on ReactJS and the new Vonage Video Express.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/create-a-multiparty-video-app-with-the-new-vonage-video-express/react-native_video-express_1200x600.png",
@@ -7530,39 +7569,6 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
-    "title": "Setting up CI/CD with Github Actions",
-    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
-    "author": {
-      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
-      "image_url": "/content/images/yonatankra.png",
-      "name": "Yonatan Kra",
-      "website_url": "https://yonatankra.com",
-      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
-      "twitter": "YonatanKra",
-      "github_url": "https://github.com/YonatanKra",
-      "title": "Vonage Software Architect",
-      "team": true,
-      "short_name": "yonatankra"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "github"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
-    "filename": "setting-up-ci-cd-with-github-actions"
-  },
-  {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
     "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
@@ -7620,6 +7626,39 @@
     "locale": "en",
     "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
     "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
+  },
+  {
+    "title": "Setting up CI/CD with Github Actions",
+    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
+    "author": {
+      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
+      "image_url": "/content/images/yonatankra.png",
+      "name": "Yonatan Kra",
+      "website_url": "https://yonatankra.com",
+      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
+      "twitter": "YonatanKra",
+      "github_url": "https://github.com/YonatanKra",
+      "title": "Vonage Software Architect",
+      "team": true,
+      "short_name": "yonatankra"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "github"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
+    "filename": "setting-up-ci-cd-with-github-actions"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
