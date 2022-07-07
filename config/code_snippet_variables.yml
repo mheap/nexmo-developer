@@ -73,6 +73,7 @@ VONAGE_VIBER_SERVICE_MESSAGE_ID: Refer to `VIBER_SERVICE_MESSAGE_ID` above. #*VI
 VONAGE_NUMBER.MESSAGES: Refer to `VIBER_SERVICE_MESSAGE_ID` above. #*VIBER_SERVICE_MESSAGE_ID
 WHATSAPP_NUMBER: The WhatsApp number that has been allocated to you by Vonage. For sandbox testing the number is 14157386102. #&WHATSAPP_NUMBER
 VONAGE_WHATSAPP_NUMBER: Refer to `WHATSAPP_NUMBER` above. #*WHATSAPP_NUMBER
+VONAGE_NUMBER.WHATSAPP: Refer to `WHATSAPP_NUMBER` above. #*WHATSAPP_NUMBER
 
 # Messages API
 FROM_NUMBER.MESSAGES: Replace with number you are sending from. E.g. `447700900002`
