@@ -25,7 +25,7 @@ To keep things short, let's assume you _have_ followed the [React and Express tu
 
 As in the full-stack example code, the [example code](https://glitch.com/edit/#!/nexmo-react-chat-app) for this tutorial will satisfy the latter requirement by using Glitch. 
 
-If you use the Nexmo Application you created for your full-stack app, you can generate one or two Conversation IDs and copy those to a text file for use in the next step. If you prefer to create a new application for this project, you can [create the conversations from the command line](https://developer.nexmo.com/client-sdk/in-app-messaging/guides/simple-conversation#1-2-create-a-conversation).
+If you use the Nexmo Application you created for your full-stack app, you can generate one or two Conversation IDs and copy those to a text file for use in the next step. If you prefer to create a new application for this project, you can [create the conversations from the command line](https://developer.vonage.com/client-sdk/in-app-messaging/guides/simple-conversation#1-2-create-a-conversation).
 
 <sign-up></sign-up>
 
