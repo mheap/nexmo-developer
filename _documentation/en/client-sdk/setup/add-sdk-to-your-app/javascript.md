@@ -48,7 +48,7 @@ No arguments are necessary to instantiate a new `NexmoClient`, but you will need
 
 ```javascript
 let nexmo = new NexmoClient()
-  .login(jwt)
+  .createSession(jwt)
   .then(app => console.log('Logged in to app', app))
   .catch(err => console.log(err));
 ```

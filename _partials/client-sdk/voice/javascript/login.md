@@ -13,7 +13,7 @@ We'll update the empty `<script>` tag that's at the bottom of your `<body>` tag 
   let notification = document.getElementById("notification");
 
   new NexmoClient()
-      .login(USER_JWT)
+      .createSession(USER_JWT)
       .then(application => {
           notification.textContent = `You've logged in with the user ${application.me.name}`
       })

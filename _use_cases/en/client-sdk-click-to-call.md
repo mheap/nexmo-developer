@@ -56,7 +56,7 @@ You'll need a Vonage virtual number for your customer to call. You can purchase 
 
 ```
 vonage numbers:search US
-vonage numbers:buy US --number=15555555555
+vonage numbers:buy 15555555555 US
 ```
 
 Replace `US` with your own [country code](https://www.iban.com/country-codes).
@@ -66,12 +66,12 @@ Replace `US` with your own [country code](https://www.iban.com/country-codes).
 
 Let's not get confused between the application itself that contains the logic and the Vonage Application.
 
-A Vonage Application is a container for security and configuration information. When you create a Vonage application, you specify some [webhook](https://developer.nexmo.com/concepts/guides/webhooks) endpoints; these are the URLs that your code exposes which must be publicly accessible. When a caller calls your Vonage number, Vonage makes an HTTP request to the `answer_url` endpoint you specify and follows the instructions it finds there. If you provide an `event_url` endpoint, Vonage will update your application about call events which can help you troubleshoot any problems.
+A Vonage Application is a container for security and configuration information. When you create a Vonage application, you specify some [webhook](https://developer.vonage.com/concepts/guides/webhooks) endpoints; these are the URLs that your code exposes which must be publicly accessible. When a caller calls your Vonage number, Vonage makes an HTTP request to the `answer_url` endpoint you specify and follows the instructions it finds there. If you provide an `event_url` endpoint, Vonage will update your application about call events which can help you troubleshoot any problems.
 
 To create the Vonage Application, use the Vonage CLI to run the command below, replacing `YOUR_SERVER_HOSTNAME` in both URLs with your own server's host name:
 
 ```bash
-vonage apps:create ClickToCall --vonage_answer_url=https://YOUR_SERVER_HOSTNAME/webhooks/answer --vonage_event_url=https://YOUR_SERVER_NAME/webhooks/event
+vonage apps:create "ClickToCall" --vonage_answer_url=https://YOUR_SERVER_HOSTNAME/webhooks/answer --vonage_event_url=https://YOUR_SERVER_NAME/webhooks/event
 ```
 
 This command returns a unique Application ID. Copy it somewhere, you will need it later!
@@ -79,7 +79,7 @@ This command returns a unique Application ID. Copy it somewhere, you will need i
 The parameters are:
 
 * `ClickToCall` - the name of your Vonage Application
-* `-vonage_answer_url=https://example.com/webhooks/answer` - when you receive an inbound call to your Vonage number, Vonage makes a `GET` request and retrieves the [NCCO](/voice/voice-api/ncco-reference) that tells Vonage's APIs what to do with the call
+* `--vonage_answer_url=https://example.com/webhooks/answer` - when you receive an inbound call to your Vonage number, Vonage makes a `GET` request and retrieves the [NCCO](/voice/voice-api/ncco-reference) that tells Vonage's APIs what to do with the call
 * `--vonage_event_url=https://example.com/webhooks/event` - When the call status changes, Vonage sends status updates to this webhook endpoint
 
 ## Link your Vonage number
@@ -128,7 +128,7 @@ Run the following command to install the required dependencies:
 npm install
 ```
 
-Ensure that your application is accessible to Vonage's APIs from the public Internet. [You can use ngrok for this](https://www.nexmo.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr):
+Ensure that your application is accessible to Vonage's APIs from the public Internet. [You can use ngrok for this](https://developer.vonage.com/blog/2017/07/04/local-development-nexmo-ngrok-tunnel-dr):
 
 ```sh
 ngrok http 3000
@@ -235,7 +235,7 @@ The first thing the client code does is fetch the correct JWT for the user from 
 
   // Create a new NexmoClient instance and authenticate with the JWT
   let client = new NexmoClient();
-  application = await client.login(jwt);
+  application = await client.createSession(jwt);
   notifications.innerHTML = `You are logged in as ${application.me.name}`;
 ```
 
