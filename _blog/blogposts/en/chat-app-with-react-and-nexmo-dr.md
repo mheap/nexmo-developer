@@ -107,7 +107,7 @@ Because this app won't manage conversations or invitations, you can also delete 
 
 You can leave all the `User` component code alone. It will continue to do the same thing, creating a new user or offering a list of existing users. Once the user is logged in, they can continue on to chat.
 
-The `Chatroom` component will contain two states: choosing a chat room and the chat room itself. Behind the scenes, a chat room is just a [Nexmo Conversation](https://developer.nexmo.com/conversation/overview), so some of this component code will look similar to what's in the `Conversation` component. You can stub out the functions and conditionals needed for both states to get started:
+The `Chatroom` component will contain two states: choosing a chat room and the chat room itself. Behind the scenes, a chat room is just a [Nexmo Conversation](https://developer.vonage.com/conversation/overview), so some of this component code will look similar to what's in the `Conversation` component. You can stub out the functions and conditionals needed for both states to get started:
 
 ```react
 import React from 'react';
