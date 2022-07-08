@@ -14,6 +14,8 @@ Replace the following variables in the example code:
 
 ```snippet_variables
 - UUID.VOICE
+- TO_NUMBER.VOICE
+- FROM_NUMBER.VOICE
 ```
 
 ```code_snippets
