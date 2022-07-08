@@ -1,5 +1,5 @@
 ---
-title: Signing messages
+title: Signing Messages
 description: Add an extra layer of security by sending and receiving signed requests.
 navigation_weight: 4
 ---

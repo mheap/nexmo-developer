@@ -21,7 +21,7 @@ However, there are some fundamental concepts that you need to understand and too
 - [Using a Server SDK](#using-a-server-sdk)
 - [Working with Webhooks](#working-with-webhooks)
 - [Number Format](#number-format)
-- [Guides](#guides)
+- [Concepts](#concepts)
 - [What to do next](#what-to-do-next)
 
 ## Signing up for an account
@@ -100,7 +100,7 @@ If you are unsure how to format the number, the [Number Insight API](/number-ins
 
 See also [Number format](/voice/voice-api/guides/numbers) in the Voice API documentation.
 
-## Guides
+## Concepts
 
 There are a number of shared concepts between the Vonage APIs: the use of JSON Web Tokens (JWTs), signed requests, and webhooks. The guides below explain in detail how to use these elements.
 
