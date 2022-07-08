@@ -1149,7 +1149,7 @@ export default {
           const { token } = response.data
 
           new Client()
-            .login(token)
+            .createSession(token)
             .then(app => {
               this.app = app
 

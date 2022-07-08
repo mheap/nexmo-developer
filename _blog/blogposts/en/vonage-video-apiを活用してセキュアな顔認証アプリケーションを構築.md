@@ -11,6 +11,7 @@ category: tutorial
 tags:
   - video-api
   - フェイシャル-id
+  - japanese
 comments: true
 spotlight: false
 redirect: ""

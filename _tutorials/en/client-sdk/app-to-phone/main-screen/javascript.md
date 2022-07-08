@@ -33,7 +33,7 @@ Create an HTML file called `client_js.html` in your project directory. Add the f
     const hangupButton = document.getElementById("hangup");
     const statusElement = document.getElementById("status");
     new NexmoClient({ debug: true })
-      .login(USER_JWT)
+      .createSession(USER_JWT)
       .then(app => {
         callButton.addEventListener("click", event => {
           event.preventDefault();

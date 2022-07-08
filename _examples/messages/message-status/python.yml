@@ -5,7 +5,7 @@ dependencies:
     - flask
 code:
     source: .repos/vonage/vonage-python-code-snippets/messages/message-status.py
-    from_line: 1
-    to_line: 14
-file_name: app.py
-run_command: 'python3 app.py'
+    from_line: 6
+    to_line: 16
+file_name: message-status.py
+run_command: 'python3 message-status.py'

@@ -1,0 +1,11 @@
+---
+title: Python
+language: python
+dependencies:
+    - vonage
+code:
+    source: .repos/vonage/vonage-python-code-snippets/messages/whatsapp/send_video.py
+    from_line: 16
+    to_line: 32
+file_name: send_video.py
+run_command: 'python3 send_video.py'

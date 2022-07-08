@@ -13,7 +13,7 @@ Here's an example application that registers a listener for `my_custom_event`, t
 <script>
   (async function() {
     let nexmo = new NexmoClient();
-    let app = await nexmo.login(YOUR_JWT);
+    let app = await nexmo.createSession(YOUR_JWT);
     let c = await app.getConversation(YOUR_CONVERSATION_ID);
 
     c.on('my_custom_event', (from, event) => {

@@ -10,7 +10,7 @@ updated_at: 2021-08-20T12:05:38.402Z
 category: tutorial
 tags:
   - go
-  - jwt
+  - portuguese
   - messages-api
 comments: true
 spotlight: true

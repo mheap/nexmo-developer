@@ -6,7 +6,7 @@ menu_weight: 1
 
 ```javascript
 new NexmoClient()
-    .login(USER_JWT)
+    .createSession(USER_JWT)
     .then(application => {
         ...
         application.inAppCall(userName);

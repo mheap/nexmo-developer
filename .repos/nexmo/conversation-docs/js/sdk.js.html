@@ -34,7 +34,7 @@
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:message:rejected">Conversation#message:rejected</a></li><li><a href="Conversation.html#event:message:submitted">Conversation#message:submitted</a></li><li><a href="Conversation.html#event:message:undeliverable">Conversation#message:undeliverable</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
+					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:message:delivered">Conversation#message:delivered</a></li><li><a href="Conversation.html#event:message:rejected">Conversation#message:rejected</a></li><li><a href="Conversation.html#event:message:seen">Conversation#message:seen</a></li><li><a href="Conversation.html#event:message:submitted">Conversation#message:submitted</a></li><li><a href="Conversation.html#event:message:undeliverable">Conversation#message:undeliverable</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
 				</ul>
 			</li>
 			
@@ -118,7 +118,7 @@ loglevel_plugin_prefix_1.default.apply(loglevel_1.default, {
  * @param {Boolean} params.socket_io.reconnection=true socket.io reconnection attribute
  * @param {number} params.socket_io.reconnectionAttempts=5 socket.io reconnectionAttempts attribute
  * @param {string[]} params.socket_io.transports='websocket' socket.io transports protocols
- * @param {string} params.sync='none' {'none' || 'lite' || 'full'} after a successful login, synchronise conversations, include events or nothing
+ * @param {string} params.sync='none' {'none' || 'lite' || 'full'} after a successful session creation, synchronise conversations, include events or nothing
  * @param {string} params.environment='production' development / production environment
  * @param {object[]} params.iceServers configure iceServers for RTCPeerConnection
  * @param {string} params.iceServers.urls='stun:stun.l.google.com:19302' urls for iceServers
@@ -158,6 +158,7 @@ class NexmoClient {
             nexmo_api_url: '@@nexmo_api_url',
             path: '/rtc',
             repository: '@@repository',
+            SDK_version: '@@SDK_version',
             socket_io: {
                 reconnection: true,
                 reconnectionAttempts: 5,
@@ -168,7 +169,6 @@ class NexmoClient {
                 autoConnect: true,
                 transports: ['websocket']
             },
-            SDK_version: '@@SDK_version',
             sync: 'none',
             url: '@@ws_url',
             iceServers: [{
@@ -194,6 +194,12 @@ class NexmoClient {
             },
             enableEventsQueue: true,
             token: null
+        };
+        this.config.socket_io.query = {
+            token: "",
+            SDK_version: this.config.SDK_version,
+            OS_family: 'js',
+            OS_revision: (typeof navigator !== 'undefined') ? navigator.userAgent : (typeof window !== 'undefined') ? window.navigator.userAgent : 'Generic JS navigator'
         };
         this.sessionReady = false;
         this.session_id = null;
@@ -223,12 +229,11 @@ class NexmoClient {
         if (this.config.log_reporter.enabled) {
             const bugsnagConfig = {
                 apiKey: this.config.log_reporter.bugsnag_key || utils_1.default._getBugsnagKey(),
-                appVersion: this.config.SDK_version,
+                appVersion: this.config.socket_io.query.SDK_version,
                 releaseStage: this.config.environment
             };
             global.NXMbugsnagClient = js_1.default(bugsnagConfig);
         }
-        this._createAndSetConnection();
         WildEmitter.mixin(NexmoClient);
     }
     /**
@@ -242,7 +247,6 @@ class NexmoClient {
         let socket_io_config = Object.assign({ path: this.config.path }, this.config.socket_io);
         connection = socket_io_client_1.default.connect(this.config.url, socket_io_config);
         this.connection = connection;
-        this.connection.io.opts.query = {};
         /**
          * Client listening for ready event.
          *
@@ -283,7 +287,7 @@ class NexmoClient {
         connection.on('disconnect', (reason) => {
             this.emit('disconnect', (reason === "io client disconnect")
                 ? NexmoClient.DISCONNECT_REASON.ClientDisconnected
-                : (reason === "io server disconnect") ? NexmoClient.DISCONNECT_REASON.TokenExpired
+                : (reason === "io server disconnect" &amp;&amp; this.session_id) ? NexmoClient.DISCONNECT_REASON.TokenExpired
                     : NexmoClient.DISCONNECT_REASON.ConnectionError);
             this.log.info('websocket disconnected');
         });
@@ -339,7 +343,12 @@ class NexmoClient {
             // Set the type of the response
             response.type = packet.data[0];
             this.log.debug('&lt;--', response.type, response);
-            if (response.rid in this.requests) {
+            if (this.requests['session:login']) {
+                const callback = this.requests['session:login'].callback;
+                delete this.requests['session:login'];
+                callback(response);
+            }
+            else if (response.rid in this.requests) {
                 const callback = this.requests[response.rid].callback;
                 delete this.requests[response.rid];
                 delete response.delay;
@@ -462,7 +471,7 @@ class NexmoClient {
      * @property {Member} member - the Member that has left
      * @example &lt;caption>get the callStatus of the member that changed call status&lt;/caption>
      * conversation.on("member:call:status", (member) => {
-   *  console.log(member.callStatus);
+     *  console.log(member.callStatus);
      * });
      */
     /**
@@ -532,75 +541,75 @@ class NexmoClient {
      * });
      */
     /**
-       * Conversation listening for Members submitted messages.
-       * @event Conversation#message:submitted
-       *
-       * @property {Member} member - the member that message was submitted to
-       * @property {MessageEvent} message - the message that was submitted
-       * @example &lt;caption>listen for submitted message events&lt;/caption>
-       * conversation.on("message:submitted", (member, message) => {
-       *  console.log(message);
-       *  if (conversation.me.id !== member.memberId) {
-       *    console.log(member);
-       *  };
-       * });
-       */
+     * Conversation listening for Members submitted messages.
+     * @event Conversation#message:submitted
+     *
+     * @property {Member} member - the member that message was submitted to
+     * @property {MessageEvent} message - the message that was submitted
+     * @example &lt;caption>listen for submitted message events&lt;/caption>
+     * conversation.on("message:submitted", (member, message) => {
+     *  console.log(message);
+     *  if (conversation.me.id !== member.memberId) {
+     *    console.log(member);
+     *  };
+     * });
+     */
     /**
-       * Conversation listening for Members rejected messages.
-       * @event Conversation#message:rejected
-       *
-       * @property {Member} member - the member that message was rejected by
-       * @property {MessageEvent} message - the message that was rejected
-       * @example &lt;caption>listen for rejected message events&lt;/caption>
-       * conversation.on("message:rejected", (member, message) => {
-       *  console.log(message);
-       *  if (conversation.me.id !== member.memberId) {
-       *    console.log(member);
-       *  };
-       * });
-       */
+     * Conversation listening for Members rejected messages.
+     * @event Conversation#message:rejected
+     *
+     * @property {Member} member - the member that message was rejected by
+     * @property {MessageEvent} message - the message that was rejected
+     * @example &lt;caption>listen for rejected message events&lt;/caption>
+     * conversation.on("message:rejected", (member, message) => {
+     *  console.log(message);
+     *  if (conversation.me.id !== member.memberId) {
+     *    console.log(member);
+     *  };
+     * });
+     */
     /**
-       * Conversation listening for Members undeliverable messages.
-       * @event Conversation#message:undeliverable
-       *
-       * @property {Member} member - the member that message was undeliverable to
-       * @property {MessageEvent} message - the message that was undeliverable
-       * @example &lt;caption>listen for undeliverable message events&lt;/caption>
-       * conversation.on("message:undeliverable", (member, message) => {
-       *  console.log(message);
-       *  if (conversation.me.id !== member.memberId) {
-       *    console.log(member);
-       *  };
-       * });
-       */
+     * Conversation listening for Members undeliverable messages.
+     * @event Conversation#message:undeliverable
+     *
+     * @property {Member} member - the member that message was undeliverable to
+     * @property {MessageEvent} message - the message that was undeliverable
+     * @example &lt;caption>listen for undeliverable message events&lt;/caption>
+     * conversation.on("message:undeliverable", (member, message) => {
+     *  console.log(message);
+     *  if (conversation.me.id !== member.memberId) {
+     *    console.log(member);
+     *  };
+     * });
+     */
     /**
-       * Conversation listening for Members delivered messages.
-       * @event Conversation#message:undeliverable
-       *
-       * @property {Member} member - the member that message was delivered to
-       * @property {MessageEvent} message - the message that was delivered
-       * @example &lt;caption>listen for delivered message events&lt;/caption>
-       * conversation.on("message:delivered", (member, message) => {
-       *  console.log(message);
-       *  if (conversation.me.id !== member.memberId) {
-       *    console.log(member);
-       *  };
-       * });
-       */
+     * Conversation listening for Members delivered messages.
+     * @event Conversation#message:delivered
+     *
+     * @property {Member} member - the member that message was delivered to
+     * @property {MessageEvent} message - the message that was delivered
+     * @example &lt;caption>listen for delivered message events&lt;/caption>
+     * conversation.on("message:delivered", (member, message) => {
+     *  console.log(message);
+     *  if (conversation.me.id !== member.memberId) {
+     *    console.log(member);
+     *  };
+     * });
+     */
     /**
-       * Conversation listening for Members seen messages.
-       * @event Conversation#message:undeliverable
-       *
-       * @property {Member} member - the member that message was seen by
-       * @property {MessageEvent} message - the message that was seen
-       * @example &lt;caption>listen for seen message events&lt;/caption>
-       * conversation.on("message:seen", (member, message) => {
-       *  console.log(message);
-       *  if (conversation.me.id !== member.memberId) {
-       *    console.log(member);
-       *  };
-       * });
-       */
+     * Conversation listening for Members seen messages.
+     * @event Conversation#message:seen
+     *
+     * @property {Member} member - the member that message was seen by
+     * @property {MessageEvent} message - the message that was seen
+     * @example &lt;caption>listen for seen message events&lt;/caption>
+     * conversation.on("message:seen", (member, message) => {
+     *  console.log(message);
+     *  if (conversation.me.id !== member.memberId) {
+     *    console.log(member);
+     *  };
+     * });
+     */
     /**
      * Conversation listening for Members media changes (audio,text)
      *
@@ -687,96 +696,89 @@ class NexmoClient {
         }
     }
     /**
-     * Log in to the cloud.
-     * @param {string} token - the login JSON Web Token (JWT)
+     * Create a new Session.
+     * @param {string} token - the user JSON Web Token (JWT)
      * @returns  {Promise&lt;Application>} - the application logged in to
-     * @example &lt;caption>Log in to the Client and return the Application&lt;/caption>
-     *  rtc.login(token).then((application) => {
+     * @example &lt;caption>Create a session and return the Application&lt;/caption>
+     *  rtc.createSession(token).then((application) => {
      *    console.log(application);
      *  }).catch((error) => {
      *    console.log(error);
      *  });
     */
-    login(token) {
-        // Create connection if needed
-        if (typeof this.connection === 'undefined') {
-            this._createAndSetConnection();
-        }
+    createSession(token) {
+        this.config.socket_io.query.token = token;
+        this._createAndSetConnection();
         // return a promise for the application
         return new Promise((resolve, reject) => {
             this.log.info(`Client-SDK Version: ${this.config.SDK_version}`);
             this.config.token = null;
-            this.sendRequest({
+            this.requests['session:login'] = {
                 type: 'session:login',
-                body: {
-                    token,
-                    SDK_version: this.config.SDK_version,
-                    OS_family: 'js',
-                    OS_revision: (typeof navigator !== 'undefined') ? navigator.userAgent : (typeof window !== 'undefined') ? window.navigator.userAgent : 'Generic JS navigator'
-                }
-            }, async (response) => {
-                if (response.type === 'session:success') {
-                    this.session_id = response.body.id;
-                    this.apiKey = response.body.api_key;
-                    // Store token in config
-                    this.config.token = token;
-                    // adds the session id as a query parameter in order to
-                    // connect to the same session in case of a reconnection
-                    this.connection.io.opts.query = {
-                        session_id: this.session_id,
-                        token: this.config.token
-                    };
-                    if (!this.application || (this.application.me &amp;&amp; this.application.me.id !== response.body.user_id)) {
-                        this.application = new application_1.default(this, {});
-                    }
-                    if (!this.application.me) {
-                        this.application.me = new user_1.default(this.application, {
-                            id: response.body.user_id,
-                            name: response.body.name
-                        });
-                    }
-                    if (!this.errorsEmitter) {
-                        this.errorsEmitter = new errors_emitter_1.default(this.application);
-                    }
-                    // Set Bugsnag user to application.me.id
-                    if (this.config.log_reporter.enabled) {
-                        global.NXMbugsnagClient.user = {
-                            id: this.application.me.id,
-                            name: this.application.me.name,
-                            session_id: response.body.id
+                callback: async (response) => {
+                    if (response.type === 'session:success') {
+                        this.session_id = response.body.id;
+                        this.apiKey = response.body.api_key;
+                        // Store token in config
+                        this.config.token = token;
+                        // adds the session id as a query parameter in order to
+                        // connect to the same session in case of a reconnection
+                        this.connection.io.opts.query = {
+                            session_id: this.session_id,
+                            token: this.config.token
                         };
-                    }
-                    if (this.config.sync !== 'none') {
-                        // Retrieve the existing conversation data for this user
-                        try {
-                            await this.application.getConversations();
-                            resolve(this.application);
+                        if (!this.application || (this.application.me &amp;&amp; this.application.me.id !== response.body.user_id)) {
+                            this.application = new application_1.default(this, {});
                         }
-                        catch (error) {
-                            reject(error);
+                        if (!this.application.me) {
+                            this.application.me = new user_1.default(this.application, {
+                                id: response.body.user_id,
+                                name: response.body.name
+                            });
+                        }
+                        if (!this.errorsEmitter) {
+                            this.errorsEmitter = new errors_emitter_1.default(this.application);
+                        }
+                        // Set Bugsnag user to application.me.id
+                        if (this.config.log_reporter.enabled) {
+                            global.NXMbugsnagClient.user = {
+                                id: this.application.me.id,
+                                name: this.application.me.name,
+                                session_id: response.body.id
+                            };
+                        }
+                        if (this.config.sync !== 'none') {
+                            // Retrieve the existing conversation data for this user
+                            try {
+                                await this.application.getConversations();
+                                resolve(this.application);
+                            }
+                            catch (error) {
+                                reject(error);
+                            }
+                        }
+                        else {
+                            resolve(this.application);
                         }
                     }
                     else {
-                        resolve(this.application);
+                        reject(new nexmoClientError_1.NexmoApiError(response));
                     }
                 }
-                else {
-                    reject(new nexmoClientError_1.NexmoApiError(response));
-                }
-            });
+            };
         });
     }
     /**
-     * Log out from the cloud.
+     * Delete existing Session.
      * @returns  {Promise&lt;CAPIResponse>} - response with rid and type
-     * @example &lt;caption>Log out of the Client&lt;/caption>
-     *  rtc.logout().then((response) => {
+     * @example &lt;caption>Delete existing session&lt;/caption>
+     *  rtc.deleteSession().then((response) => {
      *    console.log(response);
      *  }).catch((error) => {
      *    console.log(error);
      *  });
     */
-    logout() {
+    deleteSession() {
         return new Promise(async (resolve, reject) => {
             const logoutRequest = () => {
                 return this.sendRequest({
@@ -797,7 +799,7 @@ class NexmoClient {
                     }
                 });
             };
-            // prepare for logout
+            // prepare for deleteSession
             if (this.application) {
                 let disablePromises = [];
                 if (this.application.conversations.size) {
@@ -809,7 +811,7 @@ class NexmoClient {
                     await Promise.all(disablePromises);
                 }
                 catch (error) {
-                    this.log.error("logout: ", error);
+                    this.log.error("deleteSession: ", error);
                 }
                 return logoutRequest();
             }
@@ -840,18 +842,21 @@ class NexmoClient {
     }
     /**
        * Get a connectivity report for all Vonage DCs and Media Servers.
+     * @param {string} token - the JSON Web Token (JWT)
+     * @param {object} options - configure the connectivityReport
+     * @param {Function} options.dcListCallback - a callback function to edit the list of datacenters before connectivity checks
        * @returns  {Promise&lt;Report>}
        * @example &lt;caption>Get a connectivity report&lt;/caption>
      *
-       *  rtc.connectivityReport({
+       *  rtc.connectivityReport(token, {
      *    dcListCallback: (dcList) => {...dcList, additionalDc}
      *  }).then((report) => {
-       *    console.log(report);
-       *  }).catch((error) => {
-       *    console.log(error);
-       *  });
-      */
-    async connectivityReport(options) {
+     *    console.log(report);
+     *  }).catch((error) => {
+     *    console.log(error);
+     *  });
+    */
+    async connectivityReport(token, options) {
         var _a;
         const ip = !rtc_helper_1.default.isNode() ? await public_ip_1.default.v4() : undefined;
         const report = {
@@ -861,7 +866,8 @@ class NexmoClient {
         try {
             const { response } = await utils_1.default.networkRequest({
                 type: 'GET',
-                url: `${this.config.nexmo_api_url}/v0.3/discovery/api`
+                url: `${this.config.nexmo_api_url}/v0.3/discovery/api`,
+                token
             });
             let dcList = response;
             if ((_a = options) === null || _a === void 0 ? void 0 : _a.dcListCallback) {
@@ -874,7 +880,7 @@ class NexmoClient {
                 try {
                     const httpRes = await utils_1.default._checkHttpConnectivity(apiUrl);
                     const wsRes = await utils_1.default._checkWsConnectivity(wsUrl, this.config.path, this.config.socket_io);
-                    const mediaConnectionReport = await utils_1.default._checkMediaServers(endpoint, dc);
+                    const mediaConnectionReport = await utils_1.default._checkMediaServers(token, endpoint, dc);
                     const rep = {
                         name: dc,
                         signalConnectionReport: {
@@ -898,6 +904,7 @@ class NexmoClient {
     /**
       * Return a list with the connection health of the media servers for a specific datacenter.
       * @returns  {Promise&lt;MediaConnectionReport[]>}
+    * @param {string} token - the JSON Web Token (JWT)
     * @param {string} nexmo_api_url - url of the nexmo api to be called
     * @param {string} datacenter - datacenter of interest
       * @example &lt;caption>Return a list with the connection health of the media servers&lt;/caption>
@@ -908,24 +915,24 @@ class NexmoClient {
       *    console.log(error);
       *  });
      */
-    async checkMediaServers(nexmo_api_url, datacenter) {
-        return await utils_1.default._checkMediaServers(nexmo_api_url, datacenter);
+    async checkMediaServers(token, nexmo_api_url, datacenter) {
+        return await utils_1.default._checkMediaServers(token, nexmo_api_url, datacenter);
     }
     /**
-      * Return the connection health of a single media server including possible connectionTime in ms.
-      * @returns  {Promise&lt;MediaConnectionReport>}
+    * Return the connection health of a single media server including possible connectionTime in ms.
+    * @returns  {Promise&lt;MediaConnectionReport>}
     * @param {string} ip - ip address of the Media Server
     * @param {string} port - port number of the Media Server
-      * @example &lt;caption>Return the connection health of a single media server&lt;/caption>
+    * @example &lt;caption>Return the connection health of a single media server&lt;/caption>
     *
-      *  rtc.checkMediaConnectivity('ip-address','1').then((response) => {
-      *    console.log(`IP Address of media server: ${response.ip}`);
+    *  rtc.checkMediaConnectivity('ip-address','1').then((response) => {
+    *    console.log(`IP Address of media server: ${response.ip}`);
     *    console.log(`Able to connect: ${response.canConnect}`);
     *    console.log(`ConnectionTime in ms: ${resonse.connectionTime}`);
-      *  }).catch((error) => {
-      *    console.log(error);
-      *  });
-     */
+    *  }).catch((error) => {
+    *    console.log(error);
+    *  });
+   */
     async checkMediaConnectivity(ip, port) {
         return await utils_1.default._checkMediaConnectivity(ip, port);
     }
@@ -971,7 +978,7 @@ module.exports = NexmoClient;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Fri May 27th 2022 using the <a
+	on Thu Jun 30th 2022 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>

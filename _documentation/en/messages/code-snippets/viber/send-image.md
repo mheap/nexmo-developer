@@ -10,7 +10,7 @@ In this code snippet you will see how to send a Viber image message using the Me
 
 > **NOTE:** It is important that you read [this information about Viber accounts and messaging](/messages/concepts/viber) before trying this code snippet.
 
-For a step-by-step guide to this topic, you can read our tutorial [Sending Viber Service messages with the Messages API](/tutorials/sending-viber-service-messages-with-messages-api).
+For a step-by-step guide to this topic, you can read our tutorial [Sending Viber Business Messages with the Messages API](/tutorials/sending-viber-service-messages-with-messages-api).
 
 ## Example
 
@@ -23,6 +23,7 @@ Find the description for all variables used in each code snippet below:
 - VONAGE_APPLICATION_ID
 - VIBER_SERVICE_MESSAGE_ID
 - VONAGE_VIBER_SERVICE_MESSAGE_ID
+- VONAGE_NUMBER.MESSAGES
 - TO_NUMBER.MESSAGES
 - IMAGE_URL
 ```

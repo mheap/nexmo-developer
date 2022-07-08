@@ -1,6 +1,6 @@
 # Contribution guide examples
 NEXMO_API_KEY: Your Nexmo API key (see it on [your dashboard](http://dashboard.nexmo.com/))
-
+NEXMO_SIG_SECRET: The secret used to sign the request corresponds to the signature secret associated with the `api_key` included in the JWT claims. You can identify your signature secret on the [Dashboard](https://dashboard.nexmo.com/settings)
 # Generic
 VONAGE_API_KEY: Your Vonage API key (see it on [your dashboard](http://dashboard.nexmo.com/)).
 VONAGE_API_SECRET: Your Vonage API secret (also available on [your dashboard](http://dashboard.nexmo.com/)).
@@ -68,10 +68,12 @@ TO_NUMBER.DISPATCH: Replace with the number you are sending to. E.g. `4477009000
 TO_NUMBER_1.DISPATCH: The phone number you are sending the SMS to.
 TO_NUMBER_2.DISPATCH: The phone number of the second phone. In this example, the workflow will failover to this number if the first message is not read in 60 seconds.
 FB_SENDER_ID: Your Page ID. The `FB_SENDER_ID` is the same as the `to.id` value you received in the inbound messenger event on your Inbound Message Webhook URL.
-VIBER_SERVICE_MESSAGE_ID: Your Viber Service Message ID. For sandbox testing this is 16273. #&VIBER_SERVICE_MESSAGE_ID
+VIBER_SERVICE_MESSAGE_ID: Your Viber Business Message ID. For sandbox testing this is 16273. #&VIBER_SERVICE_MESSAGE_ID
 VONAGE_VIBER_SERVICE_MESSAGE_ID: Refer to `VIBER_SERVICE_MESSAGE_ID` above. #*VIBER_SERVICE_MESSAGE_ID
+VONAGE_NUMBER.MESSAGES: Refer to `VIBER_SERVICE_MESSAGE_ID` above. #*VIBER_SERVICE_MESSAGE_ID
 WHATSAPP_NUMBER: The WhatsApp number that has been allocated to you by Vonage. For sandbox testing the number is 14157386102. #&WHATSAPP_NUMBER
 VONAGE_WHATSAPP_NUMBER: Refer to `WHATSAPP_NUMBER` above. #*WHATSAPP_NUMBER
+VONAGE_NUMBER.WHATSAPP: Refer to `WHATSAPP_NUMBER` above. #*WHATSAPP_NUMBER
 
 # Messages API
 FROM_NUMBER.MESSAGES: Replace with number you are sending from. E.g. `447700900002`
@@ -86,6 +88,7 @@ IMAGE_URL.MESSENGER.MESSAGES: The link to the image file to send. Messenger supp
 VIDEO_URL.MESSENGER.MESSAGES: The link to the video to send. Messenger supports MP4 (`.mp4`) file format only.
 FROM_NUMBER.MMS.MESSAGES:  The phone number you are sending the MMS from. (US Short Code, 10DLC number, or SMS Enabled Toll Free Number) #&FROM_NUMBER.MMS.MESSAGES
 VONAGE_FROM_NUMBER: Refer to `FROM_NUMBER` above #*FROM_NUMBER.MMS.MESSAGES
+VONAGE_NUMBER.MMS.MESSAGES: Refer to `FROM_NUMBER` above #*FROM_NUMBER.MMS.MESSAGES
 IMAGE_URL.MMS.MESSAGES: The URL of the media you want to send. Accepted file formats are `.jpg`, `.jpeg`, `.png`, and `.gif`.
 WHATSAPP_TEMPLATE_NAMESPACE: The namespace ID found in your WhatsApp Business Account. Only templates created in your own namespace will work. Using an template with a namespace outside of your own results in an error code 1022 being returned. For sandbox testing the supported namespace is `9b6b4fcb_da19_4a26_8fe8_78074a91b584`.
 WHATSAPP_TEMPLATE_NAME: The name of the template created in your WhatsApp Business Account. For sandbox testing the `verify` template is currently available. Refer to [this table](/messages/concepts/messages-api-sandbox#whatsapp-templates-for-use-with-the-messages-api-sandbox) for new templates as they become available.

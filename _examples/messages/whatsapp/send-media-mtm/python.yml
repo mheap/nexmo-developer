@@ -1,0 +1,11 @@
+---
+title: Python
+language: python
+dependencies:
+    - vonage
+code:
+    source: .repos/vonage/vonage-python-code-snippets/messages/whatsapp/send_media_template.py
+    from_line: 17
+    to_line: 65
+file_name: send_media_template.py
+run_command: 'python3 send_media_template.py'

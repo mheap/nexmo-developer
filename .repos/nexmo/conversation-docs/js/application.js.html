@@ -34,7 +34,7 @@
 			<li class="dropdown">
 				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:message:rejected">Conversation#message:rejected</a></li><li><a href="Conversation.html#event:message:submitted">Conversation#message:submitted</a></li><li><a href="Conversation.html#event:message:undeliverable">Conversation#message:undeliverable</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
+					<li><a href="Application.html#event:call:status:changed">Application#call:status:changed</a></li><li><a href="Application.html#event:NXM-errors">Application#event:NXM-errors</a></li><li><a href="Application.html#event:member:call">Application#member:call</a></li><li><a href="Application.html#event:member:invited">Application#member:invited</a></li><li><a href="Application.html#event:member:joined">Application#member:joined</a></li><li><a href="Application.html#event:sync:progress">Application#sync:progress</a></li><li><a href="Conversation.html#event:audio:mute:off">Conversation#audio:mute:off</a></li><li><a href="Conversation.html#event:audio:mute:on">Conversation#audio:mute:on</a></li><li><a href="Conversation.html#event:event:delete">Conversation#event:delete</a></li><li><a href="Conversation.html#event:image">Conversation#event:image</a></li><li><a href="Conversation.html#event:text">Conversation#event:text</a></li><li><a href="Conversation.html#event:image:seen">Conversation#image:seen</a></li><li><a href="Conversation.html#event:member:call:status">Conversation#member:call:status</a></li><li><a href="Conversation.html#event:member:invited">Conversation#member:invited</a></li><li><a href="Conversation.html#event:member:joined">Conversation#member:joined</a></li><li><a href="Conversation.html#event:member:left">Conversation#member:left</a></li><li><a href="Conversation.html#event:member:media">Conversation#member:media</a></li><li><a href="Conversation.html#event:message:delivered">Conversation#message:delivered</a></li><li><a href="Conversation.html#event:message:rejected">Conversation#message:rejected</a></li><li><a href="Conversation.html#event:message:seen">Conversation#message:seen</a></li><li><a href="Conversation.html#event:message:submitted">Conversation#message:submitted</a></li><li><a href="Conversation.html#event:message:undeliverable">Conversation#message:undeliverable</a></li><li><a href="Conversation.html#event:text:seen">Conversation#text:seen</a></li><li><a href="Conversation.html#event:text:typing:off">Conversation#text:typing:off</a></li><li><a href="Conversation.html#event:text:typing:on">Conversation#text:typing:on</a></li><li><a href="Member.html#event:media:stream:on">Member#media:stream:on</a></li><li><a href="NexmoClient.html#event:connecting">NexmoClient#event:connecting</a></li><li><a href="NexmoClient.html#event:disconnect">NexmoClient#event:disconnect</a></li><li><a href="NexmoClient.html#event:error">NexmoClient#event:error</a></li><li><a href="NexmoClient.html#event:ready">NexmoClient#event:ready</a></li><li><a href="NexmoClient.html#event:reconnect">NexmoClient#event:reconnect</a></li><li><a href="NexmoClient.html#event:reconnecting">NexmoClient#event:reconnecting</a></li>
 				</ul>
 			</li>
 			
@@ -96,7 +96,7 @@ let applicationEventsHandler = null;
  * @param {NexmoClient} SDK session Object
  * @param {object} params
  * @example &lt;caption>Accessing the list of conversations&lt;/caption>
- *  rtc.login(token).then((application) => {
+ *  rtc.createSession(token).then((application) => {
  *    console.log(application.conversations);
  *    console.log(application.me.name, application.me.id);
  *  }).catch((error) => {
@@ -250,13 +250,13 @@ class Application {
      * Update user's token that was generated when they were first authenticated.
      * @param {string} token - the new token
      * @returns {Promise}
-     * @example &lt;caption>listen for expired-token error events and then update the token on Application level&lt;/caption>
-     * application.on('system:error:expired-token', 'NXM-errors', (error) => {
-     * 	console.log('token expired');
-     * 	application.updateToken(token);
-     * });
-    */
-    updateToken(token) {
+   * @example &lt;caption>listen for expired-token error events and then update the token on Application level&lt;/caption>
+   * application.on('system:error:expired-token', 'NXM-errors', (error) => {
+   * 	console.log('token expired');
+   * 	application.updateToken(token);
+   * });
+  */
+    async updateToken(token) {
         // SDK can be disconnected because of expired token
         // this lets us update token for next reconnection attempt
         if (this.session.connection &amp;&amp; this.session.connection.disconnected) {
@@ -264,25 +264,21 @@ class Application {
             this.session.connection.io.opts.query.token = token;
             return Promise.resolve();
         }
-        return new Promise((resolve, reject) => {
-            this.session.sendRequest({
-                type: 'session:update-token',
-                body: {
-                    token
-                }
-            }, (response) => {
-                if (response.type === 'session:update-token:success') {
-                    if (this.me) {
-                        this.session.config.token = token;
-                        this.session.connection.io.opts.query.token = token;
-                    }
-                    resolve();
-                }
-                else {
-                    reject(new nexmoClientError_1.NexmoApiError(response));
-                }
-            });
-        });
+        const reqObj = {
+            url: `${this.session.config.nexmo_api_url}/v0.2/sessions/${this.session.session_id}`,
+            type: 'PUT',
+            token
+        };
+        try {
+            await utils_1.default.networkRequest(reqObj);
+            if (this.me) {
+                this.session.config.token = token;
+                this.session.connection.io.opts.query.token = token;
+            }
+        }
+        catch (error) {
+            throw (new nexmoClientError_1.NexmoApiError(error));
+        }
     }
     /**
      * Update the event to map local generated events
@@ -744,7 +740,7 @@ module.exports = Application;
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a>
-	on Fri May 27th 2022 using the <a
+	on Thu Jun 30th 2022 using the <a
 	href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
 </footer>
