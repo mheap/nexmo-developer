@@ -1,5 +1,5 @@
 ---
-title: Experience Spatial Audio with Vonage Video
+title: Experience Spatial Audio with Vonage Video API
 description: This tutorial will teach you to enable spatial audio (3D Audio)
   with the Vonage Video API using Javascript in the browser.
 thumbnail: /content/blog/experience-spatial-audio-with-vonage-video/spatial-audio_video-api-1.png
