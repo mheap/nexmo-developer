@@ -1,5 +1,39 @@
 [
   {
+    "title": "Why Experience Composer API Is Great",
+    "description": "Learn how the Experience Composer API can enhance video calls by capturing the look and feel of your web application using the Vonage Video API.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/why-experience-composer-api-is-great/experience-composer-api.png",
+    "author": {
+      "name": "Javier Molina Sanz",
+      "image_url": "https://secure.gravatar.com/avatar/742eb3b506dd56477e0c1b554e891ae2?s=384&d=mm&r=g",
+      "bio": "Javier studied Industrial Engineering back in Madrid where he's from. He is now one of our Solution Engineers, so if you get into trouble using our APIs he may be the one that gives you a hand. Out of work he loves playing football and travelling as much as he can.",
+      "website_url": "",
+      "team": true,
+      "short_name": "javier-molina-sanz"
+    },
+    "published": true,
+    "published_at": "2022-07-12 19:11:11 UTC",
+    "updated_at": "2022-07-12 19:11:11 UTC",
+    "category": {
+      "name": "Announcement",
+      "plural": "Announcements",
+      "slug": "announcement",
+      "color": "#4cc3d2"
+    },
+    "tags": [
+      "video-api",
+      "experience-composer",
+      "node"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/12/why-experience-composer-api-is-great",
+    "filename": "why-experience-composer-api-is-great"
+  },
+  {
     "title": "How Vonage Communications APIs Enable 21st Century Retail Experiences",
     "description": "Show Rooming is a growing concern for brick-and-mortar retailers. See how Vonage APIs can work together to provide a smooth in-person experience.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-vonage-communications-apis-enable-21st-century-retail-experiences/21st-century-retail.png",
@@ -7569,6 +7603,39 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
+    "title": "Setting up CI/CD with Github Actions",
+    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
+    "author": {
+      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
+      "image_url": "/content/images/yonatankra.png",
+      "name": "Yonatan Kra",
+      "website_url": "https://yonatankra.com",
+      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
+      "twitter": "YonatanKra",
+      "github_url": "https://github.com/YonatanKra",
+      "title": "Vonage Software Architect",
+      "team": true,
+      "short_name": "yonatankra"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "github"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
+    "filename": "setting-up-ci-cd-with-github-actions"
+  },
+  {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
     "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
@@ -7626,39 +7693,6 @@
     "locale": "en",
     "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
     "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
-  },
-  {
-    "title": "Setting up CI/CD with Github Actions",
-    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
-    "author": {
-      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
-      "image_url": "/content/images/yonatankra.png",
-      "name": "Yonatan Kra",
-      "website_url": "https://yonatankra.com",
-      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
-      "twitter": "YonatanKra",
-      "github_url": "https://github.com/YonatanKra",
-      "title": "Vonage Software Architect",
-      "team": true,
-      "short_name": "yonatankra"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "github"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
-    "filename": "setting-up-ci-cd-with-github-actions"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
