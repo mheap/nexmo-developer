@@ -85,7 +85,7 @@ These endpoints are called Webhooks. [Find out more about webhooks](/getting-sta
 
 Making these webhooks publicly-accessible during development can be tricky, so we recommend a tool called [Ngrok](https://ngrok.com/).
 
-Visit our guide on [testing with Ngrok](https://developer.vonage.com/tools/ngrok) to learn how to use it.
+Visit our guide on [testing with Ngrok](/getting-started/tools/ngrok) to learn how to use it.
 
 ## Number Format
 
@@ -116,7 +116,7 @@ There are a number of shared concepts between the Vonage APIs: the use of JSON W
 
 This guide introduced you to some of the fundamental concepts and tools that you should know about when working with our APIs.
 
-> Learn more in our [Tools](https://developer.vonage.com/tools) section.
+> Learn more in our [SDKs and Tools](https://developer.vonage.com/tools) section.
 
 Once you understand these fundamental concepts and have installed the tools you intend to use, you are ready to start building! View the documentation for your chosen API to get started, or try out some of the following starter tasks:
 
