@@ -1,7 +1,7 @@
 ---
 title: OpenAPI
 description: What OpenAPI is and how to use it in your development process
-navigation_weight: 5
+navigation_weight: 3
 ---
 
 # OpenAPI
