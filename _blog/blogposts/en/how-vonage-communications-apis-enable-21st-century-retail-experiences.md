@@ -250,13 +250,13 @@ async function getJwt() {
 }
 ```
 
-Once we have connected to the Vonage API with `nexmo.login(jwt)`, we can attach a listener that will call our agent when the user clicks the appropriate button. We will also go ahead and wire up the "Hang Up" button so the user can end the call from their end.
+Once we have connected to the Vonage API with `nexmo.createSession(jwt)`, we can attach a listener that will call our agent when the user clicks the appropriate button. We will also go ahead and wire up the "Hang Up" button so the user can end the call from their end.
 
 ```javascript
 async function bootstrap() {
     let jwt = await getJwt();
     nexmo = new window.NexmoClient()
-    app = await nexmo.login(jwt)
+    app = await nexmo.createSession(jwt)
     document.getElementById('username').innerHTML = app.me.name
 
     document.getElementById("call_agent").addEventListener('click', (event) => {
