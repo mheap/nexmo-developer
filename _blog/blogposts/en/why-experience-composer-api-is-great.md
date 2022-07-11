@@ -268,6 +268,7 @@ The following video shows you the host view and the guest view.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AwtdlsxtHbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 ## Recording and Broadcasting
 
 This application does not implement archiving/recording. However, you can do so by setting the `streamMode` to "manual" mode when you [start the archiving](https://tokbox.com/developer/rest/#start_archive) and then adding the streams you want to be included in the [recording](https://tokbox.com/developer/rest/#selecting-archive-streams). 
