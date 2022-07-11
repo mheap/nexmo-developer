@@ -3,7 +3,7 @@ title: Why Experience Composer API Is Great
 description: Learn how the Experience Composer API can enhance video calls by
   capturing the look and feel of your web application using the Vonage Video
   API.
-thumbnail: /content/blog/cory-althoff-joins-the-vonage-developer-relations-team/experience-composer-api.png
+thumbnail: /content/blog/why-experience-composer-api-is-great/experience-composer-api.png
 author: javier-molina-sanz
 published: true
 published_at: 2022-07-12T19:11:11.196Z
