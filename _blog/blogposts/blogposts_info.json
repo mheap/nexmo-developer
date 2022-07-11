@@ -2892,7 +2892,7 @@
     "filename": "auto-layout-for-vonage-video-application"
   },
   {
-    "title": "Experience Spatial Audio with Vonage Video",
+    "title": "Experience Spatial Audio with Vonage Video API",
     "description": "This tutorial will teach you to enable spatial audio (3D Audio) with the Vonage Video API using Javascript in the browser.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/experience-spatial-audio-with-vonage-video/spatial-audio_video-api-1.png",
     "author": {
@@ -3460,7 +3460,7 @@
       "color": "#d6219c"
     },
     "tags": [
-      "video-api",
+      "voice-api",
       "javascript",
       "nodejs"
     ],
