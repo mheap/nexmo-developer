@@ -79,7 +79,7 @@ top-section:
   - Low / No Code Solutions:
     - product_name: "Vonage Business Cloud"
       product_name_link: "/vonage-business-cloud/Overview"
-      product_description: "Programatically access data and manage features on your Vonage Business Communications (VBC) account."
+      product_description: "Programatically access data and manage features on your VBC account."
       getting_started_link: "/vonage-business-cloud/Overview"
       tutorials_link: none
       icon: "Vlt-icon-cloud"
