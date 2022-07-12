@@ -348,7 +348,7 @@
 "/concepts/guides/openapi": "/getting-started/concepts/openapi"
 "/concepts/guides/signing-messages": "/getting-started/concepts/signing-messages"
 "/concepts/guides/webhooks": "/getting-started/concepts/webhooks"
-"/concepts/overview": "/getting-started/overview#concepts"
+"/concepts/overview": "/getting-started/overview"
 "/tools/ngrok": "/getting-started/tools/ngrok"
 "/tools/jwt-generator": "/getting-started/tools/jwt-generator"
 "/tools/postman": "/getting-started/tools/postman"
