@@ -1,7 +1,7 @@
 ---
 title: Glossary
 description: Glossary of terms based on the Nexicon
-navigation_weight: 6
+navigation_weight: 2
 ---
 
 # Glossary

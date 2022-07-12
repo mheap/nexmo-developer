@@ -20,6 +20,8 @@ However, there are some fundamental concepts that you need to understand and too
 - [Experimenting with our APIs](#experimenting-with-our-apis)
 - [Using a Server SDK](#using-a-server-sdk)
 - [Working with Webhooks](#working-with-webhooks)
+- [Number Format](#number-format)
+- [Concepts](#concepts)
 - [What to do next](#what-to-do-next)
 
 ## Signing up for an account
@@ -32,7 +34,7 @@ Once you have an account, you can log into the [Developer Dashboard](/account/gu
 
 * **View your API key and secret**. You will need these to authenticate your requests to our APIs
 * **Manage your account balance**. Access to our APIs is charged on a  per-request basis. We’ll give you some free credit when you first open your account and you can [top up](/numbers/guides/payments) when you run low.
-* **Rent virtual numbers**. You can use [virtual numbers](/concepts/guides/glossary#virtual-number) provided by Vonage to send and receive calls and messages. See [rent a virtual number](/numbers/guides/number-management#rent-a-virtual-number).
+* **Rent virtual numbers**. You can use [virtual numbers](/getting-started/concepts/glossary#virtual-number) provided by Vonage to send and receive calls and messages. See [rent a virtual number](/numbers/guides/number-management#rent-a-virtual-number).
 * **Manage applications**. Some of our APIs (such as Voice and Messages) require you to create an [Application](/application/overview), which acts as a container for security and configuration information. You can create and manage these applications in the Developer Dashboard.
 * **Manage your account**. You can perform [other administration tasks](/account/guides/dashboard-management) here.
 
@@ -44,7 +46,7 @@ The Vonage CLI is written with `oclif` and can be installed using the Node Packa
 
 ## Authentication
 
-When using the Vonage APIs your requests need to be [authenticated](/concepts/guides/authentication). Typically this is done using [Basic Authentication](/concepts/guides/authentication#basic-authentication) or [JWTs](/concepts/guides/authentication#json-web-tokens). You can generate a suitable JWT using the Vonage CLI, or our [online tool](/jwt).
+When using the Vonage APIs your requests need to be [authenticated](/getting-started/concepts/authentication). Typically this is done using [Basic Authentication](/getting-started/concepts/authentication#basic-authentication) or [JWTs](/getting-started/concepts/authentication#json-web-tokens). You can generate a suitable JWT using the Vonage CLI, or our [online tool](/jwt).
 
 ## Experimenting with our APIs
 
@@ -54,11 +56,11 @@ If you are familiar with the command-line tool [Curl](https://curl.haxx.se/), yo
 
 ### Postman
 
-Various GUI tools exist that are easier to use than Curl. A popular one is [Postman](https://www.postman.com/). Read our guide on [using Postman to work with our APIs](/tools/postman). Vonage also provides a set of [Postman collections](/concepts/guides/openapi#postman-collections), which provides a way to start using the APIs immediately.
+Various GUI tools exist that are easier to use than Curl. A popular one is [Postman](https://www.postman.com/). Read our guide on [using Postman to work with our APIs](/getting-started/tools/postman). Vonage also provides a set of [Postman collections](/getting-started/concepts/openapi#postman-collections), which provides a way to start using the APIs immediately.
 
 ### OpenAPI
 
-Each of our APIs has its own [OpenAPI specification](/api). You can read more about OpenAPI in our [documentation](/concepts/guides/openapi). Our specifications conform to OpenAPI specification version 3, also known as OAS3.
+Each of our APIs has its own [OpenAPI specification](/api). You can read more about OpenAPI in our [documentation](/getting-started/concepts/openapi). Our specifications conform to OpenAPI specification version 3, also known as OAS3.
 
 ## Using a Server SDK
 
@@ -79,17 +81,42 @@ Once you have learned how to make requests to our APIs to place calls, send mess
 
 When our APIs want to notify your app about something - whether that is an inbound call or message or a status update - they require your app to expose a URL endpoint that our platform can make a request to. These must be accessible over the public Internet.
 
-These endpoints are called Webhooks. [Find out more about webhooks](/concepts/guides/webhooks). Once you have created your web hook, you must tell our API platform to use it. The process for doing this depends on which API you are using and full instructions can be found in the documentation for that API.
+These endpoints are called Webhooks. [Find out more about webhooks](/getting-started/concepts/webhooks). Once you have created your web hook, you must tell our API platform to use it. The process for doing this depends on which API you are using and full instructions can be found in the documentation for that API.
 
 Making these webhooks publicly-accessible during development can be tricky, so we recommend a tool called [Ngrok](https://ngrok.com/).
 
-Visit our guide on [testing with Ngrok](https://developer.vonage.com/tools/ngrok) to learn how to use it.
+Visit our guide on [testing with Ngrok](/getting-started/tools/ngrok) to learn how to use it.
+
+## Number Format
+
+Within the Vonage APIs, all phone numbers are in [E.164 format](https://en.wikipedia.org/wiki/E.164). This means that numbers:
+
+* Omit both a leading `+` and the international access code such as `00` or `001`. 
+* Contain no special characters, such as space, `()` or `-`
+
+For example, a US number would have the format `14155550101`. A UK number would have the format `447700900123`.
+
+If you are unsure how to format the number, the [Number Insight API](/number-insight/overview) can be used to find correct information about a number.
+
+See also [Number format](/voice/voice-api/guides/numbers) in the Voice API documentation.
+
+## Concepts
+
+There are a number of shared concepts between the Vonage APIs: the use of JSON Web Tokens (JWTs), signed requests, and webhooks. The guides below explain in detail how to use these elements.
+
+* [Applications](/getting-started/concepts/applications) - Security and configuration information you need to connect to Vonage endpoints.
+* [Authentication](/getting-started/concepts/authentication) – API keys and JSON Web Tokens (JWTs).
+* [Signing messages](/getting-started/concepts/signing-messages) – how to cryptographically sign messages and verify message signatures.
+* [Webhooks](/getting-started/concepts/webhooks) – Vonage's API can send data back to your web server via a webhook.
+* [OpenAPI](/getting-started/concepts/openapi) – All Vonage APIs have OpenAPI descriptions that you can take advantage of in your own development process.
+* [Glossary](/getting-started/concepts/glossary) – A glossary of common terms used throughout the Vonage platform.
+
 
 ## What to do next
 
 This guide introduced you to some of the fundamental concepts and tools that you should know about when working with our APIs.
 
-> Learn more in our [Concepts](/concepts/overview) and [Tools](https://developer.vonage.com/tools) sections.
+> Learn more in our [SDKs and Tools](https://developer.vonage.com/tools) section.
 
 Once you understand these fundamental concepts and have installed the tools you intend to use, you are ready to start building! View the documentation for your chosen API to get started, or try out some of the following starter tasks:
 
