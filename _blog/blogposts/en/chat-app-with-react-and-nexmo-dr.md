@@ -17,7 +17,7 @@ comments: true
 redirect: ""
 canonical: ""
 ---
-One of the simplest ways to communicate online is also among the simplest to add to your website, using [React](https://reactjs.org/) and [Nexmo's client-side JavaScript tooling](https://developer.nexmo.com/client-sdk/overview). A chat application can provide customer service, facilitate collaboration on a project, or let you catch up with friends. And good news: if you've followed our previous [full-stack React and Express tutorial](https://www.nexmo.com/blog/2019/03/15/full-stack-nexmo-with-express-react-dr), you already have most of the pieces you need to build one.
+One of the simplest ways to communicate online is also among the simplest to add to your website, using [React](https://reactjs.org/) and [Nexmo's client-side JavaScript tooling](https://developer.vonage.com/client-sdk/overview). A chat application can provide customer service, facilitate collaboration on a project, or let you catch up with friends. And good news: if you've followed our previous [full-stack React and Express tutorial](https://www.nexmo.com/blog/2019/03/15/full-stack-nexmo-with-express-react-dr), you already have most of the pieces you need to build one.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ To keep things short, let's assume you _have_ followed the [React and Express tu
 
 As in the full-stack example code, the [example code](https://glitch.com/edit/#!/nexmo-react-chat-app) for this tutorial will satisfy the latter requirement by using Glitch. 
 
-If you use the Nexmo Application you created for your full-stack app, you can generate one or two Conversation IDs and copy those to a text file for use in the next step. If you prefer to create a new application for this project, you can [create the conversations from the command line](https://developer.nexmo.com/client-sdk/in-app-messaging/guides/simple-conversation#1-2-create-a-conversation).
+If you use the Nexmo Application you created for your full-stack app, you can generate one or two Conversation IDs and copy those to a text file for use in the next step. If you prefer to create a new application for this project, you can [create the conversations from the command line](https://developer.vonage.com/client-sdk/in-app-messaging/guides/simple-conversation#1-2-create-a-conversation).
 
 <sign-up></sign-up>
 
@@ -95,7 +95,7 @@ Because this app won't manage conversations or invitations, you can also delete 
 ```javascript
   login() {
     let nexmo = new nexmoClient();
-    nexmo.login(this.state.token).then(app => {
+    nexmo.createSession(this.state.token).then(app => {
       this.setState({
         app: app
       });
@@ -107,7 +107,7 @@ Because this app won't manage conversations or invitations, you can also delete 
 
 You can leave all the `User` component code alone. It will continue to do the same thing, creating a new user or offering a list of existing users. Once the user is logged in, they can continue on to chat.
 
-The `Chatroom` component will contain two states: choosing a chat room and the chat room itself. Behind the scenes, a chat room is just a [Nexmo Conversation](https://developer.nexmo.com/conversation/overview), so some of this component code will look similar to what's in the `Conversation` component. You can stub out the functions and conditionals needed for both states to get started:
+The `Chatroom` component will contain two states: choosing a chat room and the chat room itself. Behind the scenes, a chat room is just a [Nexmo Conversation](https://developer.vonage.com/conversation/overview), so some of this component code will look similar to what's in the `Conversation` component. You can stub out the functions and conditionals needed for both states to get started:
 
 ```react
 import React from 'react';

@@ -94,7 +94,7 @@ listConversations(userToken) {
       debug: false,
       screenShareExtensionId: YOUR_EXTENSION_ID
     })
-    .login(userToken)
+    .createSession(userToken)
     ...
 }
 ```

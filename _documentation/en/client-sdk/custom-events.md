@@ -6,7 +6,7 @@ description: This topic provides an overview of the custom events use via the Vo
 
 # Custom Events
 
-Custom events allow you to add custom metadata to conversations by recording data alongside your text or audio events. You can add events [using the REST API](/conversation/code-snippets/event/create-custom-event) or using the JavaScript SDK.
+Custom events allow you to add custom metadata to conversations by recording data alongside your text or audio events. You can add events [using the REST API](/conversation/code-snippets/event/create-custom-event) or any of the Client SDKs.
 
 ## Creating a custom event
 

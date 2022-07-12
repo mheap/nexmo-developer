@@ -25,7 +25,7 @@ Add the following code, but make sure you paste the Bob JWT you generated for th
       const bobJWT ="PASTE BOB JWT HERE";
 
       new NexmoClient({ debug: true })
-        .login(bobJWT)
+        .createSession(bobJWT)
         .then(app => {
           let btn = document.getElementById("button");
           let notification = document.getElementById("notification");
@@ -51,6 +51,6 @@ This is your client application that uses the Client SDK to receive a voice call
 There are several key components to this code:
 
 1. A UI that allows you to see if there is an inbound call and click `Answer` to answer it.
-2. Code that logs the user (Bob) into the Client SDK (a JWT is used for authentication), `.login(bobJWT)`.
+2. Code that logs the user (Bob) into the Client SDK (a JWT is used for authentication), `.createSession(bobJWT)`.
 3. The event handler to answer the call when the answer button is clicked.
 4. An event handler and UI to display when the call status changes through the `call:status:changed` event.

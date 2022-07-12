@@ -212,7 +212,7 @@ Now that your server is sending a token to the React app, you can return to `App
 ```javascript
 login() {
   let nexmo = new nexmoClient();
-  nexmo.login(this.state.token).then(app => {
+  nexmo.createSession(this.state.token).then(app => {
     this.setState({
       app: app
     });

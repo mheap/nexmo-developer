@@ -10,7 +10,7 @@ Now that you have a valid user token, it's time to initialize a new `NexmoClient
 ```javascript
 async function run(userToken) {
   let client = new NexmoClient({ debug: true });
-  let app = await client.login(userToken);
+  let app = await client.createSession(userToken);
   conversation = await app.getConversation(CONVERSATION_ID);
 }
 ```

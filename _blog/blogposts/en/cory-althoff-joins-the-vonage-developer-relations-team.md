@@ -26,7 +26,7 @@ Eventually, I decided to write a book about my experience learning to program pr
 
 Creating a self-taught programmer community made me realize how much I enjoy building community among developers and helping developers learn new things. I love how rewarding it is to teach, especially when you teach something like programming that can positively impact someone's life.  I'm incredibly excited to continue my journey educating developers in my new role at Vonage. 
 
-When I'm not working, you can find me with my wife entertaining my eight-month-old daughter Luca in the Bay Area. Before the pandemic, I played basketball a few times a week. I even won a Zog Sports rec-league championship, which was the highlight of my athletic career. I've been trying to get into golf but haven't had much luck so far because I'm terrible at it. 
+When I'm not working, you can find me with my wife entertaining my eight-month-old daughter. Before the pandemic, I played basketball a few times a week. I even won a Zog Sports rec-league championship, which was the highlight of my athletic career. I've been trying to get into golf but haven't had much luck so far because I'm terrible at it. 
 
 I can't wait to continue my journey helping educate developers in my new role. I love public speaking, programming, writing, and creating videos, and I still can't believe I found a job that lets me do all these things at once! I am excited to be a member of this team, and I look forward to helping spread the word about Vonage's APIs and supporting our incredible community of developers!
 

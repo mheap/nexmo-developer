@@ -1,6 +1,6 @@
 ```javascript
 new NexmoClient()
-    .login(USER_JWT)
+    .createSession(USER_JWT)
     .then(application => {
         ...
         application.on("member:call", (member, call) => {

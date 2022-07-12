@@ -1,0 +1,11 @@
+---
+title: Python
+language: python
+dependencies:
+    - vonage
+code:
+    source: .repos/vonage/vonage-python-code-snippets/messages/whatsapp/send_file.py
+    from_line: 16
+    to_line: 32
+file_name: send_file.py
+run_command: 'python3 send_file.py'

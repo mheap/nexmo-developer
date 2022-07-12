@@ -233,7 +233,7 @@ The client app itself has functions for obtaining a JWT and then logging the use
   const login = async () => {
     try{
       const userJWT = await getJWT();
-      const app =  await new NexmoClient({ debug: false }).login(userJWT);
+      const app =  await new NexmoClient({ debug: false }).createSession(userJWT);
       setNexmoApp(app);
       await getConversations();
       setStage('listings');
