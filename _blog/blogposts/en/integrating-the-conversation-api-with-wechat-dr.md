@@ -114,7 +114,7 @@ Please take a look at the following snippet that shows how to dispatch a WeChat 
 ```javascript
 const dispatchWeChatEvent = (wechat, direction = 'inbound') => {
   var options = {
-    uri: `https://api.nexmo.com/beta/conversations/${conversationId}/events`,
+    uri: `https://api.nexmo.com/v0.1/conversations/${conversationId}/events`,
     method: 'POST',
     headers: {
       Authorization: 'Bearer ' + jwt,
