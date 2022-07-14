@@ -60,7 +60,7 @@ Information about your request is then sent to your webhook endpoint.
 
 ## Decoding signed webhooks
 
-Signed webhooks are supported by Messages, Dispatch and Voice APIs and are enabled by default. They provide a method for your application to verify a request is coming from Vonage and its payload has not been tampered with during transit. When receiving a request, the incoming webhook will include a JWT token in the authorization header which is signed with your signature secret.
+Webhook signing is enabled by **default** for the Messages, Dispatch, and Voice APIs. They provide a method for your application to verify a request is coming from Vonage and its payload has not been tampered with during transit. When receiving a request, the incoming webhook will include a JWT token in the authorization header which is signed with your signature secret.
 
 > **NOTE**: For previously created Voice applications, Signed Webhooks is off by default. To turn it on manually, go to the application settings in the Dashboard, click "Show advanced features" link in the Voice capability section and then turn on the **Use signed webhooks** check:
 > 
