@@ -3,7 +3,17 @@
     "title": "Auto Zoom and Center Published Video Calls with Vonage Video API",
     "description": "Learn how to automatically focus faces in video calls using the Vonage Video API and machine learning libraries.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/auto-zoom-and-center-published-video-calls-with-vonage-video-api/auto-zoom-center.png",
-    "author": null,
+    "author": {
+      "team": true,
+      "alumni": false,
+      "spotlight": false,
+      "noteworthy": false,
+      "hidden": false,
+      "name": "Iu Jie Lim ",
+      "image_url": "/content/images/iu-jie-lim.png",
+      "bio": "Iu Jie is a Software Engineer who is constantly seeking innovative ways to solve a problem.\nShe is passionate about new technology, especially relating to cloud and AI.\nOut of work, she likes to spend her time hunting for tasty food with family.",
+      "short_name": "iu-jie-lim"
+    },
     "published": true,
     "published_at": "2022-07-14 11:56:48 UTC",
     "updated_at": "2022-07-14 11:56:50 UTC",
@@ -483,9 +493,9 @@
       "noteworthy": false,
       "hidden": false,
       "name": "Iu Jie Lim ",
-      "image_url": "/content/images/iu_jie_lim.png",
+      "image_url": "/content/images/iu-jie-lim.png",
       "bio": "Iu Jie is a Software Engineer who is constantly seeking innovative ways to solve a problem.\nShe is passionate about new technology, especially relating to cloud and AI.\nOut of work, she likes to spend her time hunting for tasty food with family.",
-      "short_name": "iu_jie_lim"
+      "short_name": "iu-jie-lim"
     },
     "published": true,
     "published_at": "2022-05-24 11:04:44 UTC",
