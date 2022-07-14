@@ -3,7 +3,7 @@ title: Build a Breakout Room Application in JavaScript with Vonage Video API
 description: "This tutorial explains how to use the separate sessions to build
   the Breakout Room feature into our Demo Application, which "
 thumbnail: /content/blog/build-a-breakout-room-application-in-javascript-with-vonage-video-api/breakoutroom.jpg
-author: iu_jie_lim
+author: iu-jie-lim
 published: true
 published_at: 2022-05-24T11:04:44.847Z
 updated_at: 2022-05-24T12:51:48.481Z
