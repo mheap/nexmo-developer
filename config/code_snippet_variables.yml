@@ -138,10 +138,11 @@ CODE.VERIFY: The code the user supplies as having been sent to them
 
 # Voice
 TO_NUMBER.VOICE: The number you are calling. E.g. `447700900001`
+FROM_NUMBER.VOICE: The phone number you are calling from.
 SECOND_NUMBER.VOICE: The number you are forwarding to. E.g. `447700900002`
 YOUR_SECOND_NUMBER.VOICE: The number you are connecting to. E.g. `447700900002`
-UUID.VOICE: The UUID of the [call leg](/conversation/concepts/leg#leg)
-CONF_NAME.VOICE: The named identifier for your conference
+UUID.VOICE: The UUID of the [call leg](/conversation/concepts/leg#leg).
+CONF_NAME.VOICE: The named identifier for your conference.
 RECORDING_URL.VOICE: The URL of the recording to download. You typically get this from the JSON response received on the `/webhooks/recordings` endpoint when the `record` action is used.
 ANSWER_URL: The answer URL. For example `https://raw.githubusercontent.com/nexmo-community/ncco-examples/gh-pages/text-to-speech.json`.
 URL.AUDIO.VOICE: The URL of the audio file that will be streamed into an array. The URL must be in an array.
