@@ -7,7 +7,7 @@ services:
       - POSTGRES_USER=nexmo_developer
       - POSTGRES_DB=nexmo_developer_production
   web:
-    image: nexmodev/station:v0.4.7
+    image: nexmodev/station:v0.4.8
     volumes:
       - .:/docs
     ports:
