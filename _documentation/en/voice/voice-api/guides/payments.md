@@ -21,108 +21,22 @@ There are various scenarios when you may want to charge the user during the phon
 
 To start, you should have your Stripe account ready. If you don't have an account yet, [sign up here](https://dashboard.stripe.com/register).
 
-> In [Developer Preview](/product-lifecycle/dev-preview), Vonage will set up your payment gateway connector for you. [Contact us](mailto:pay.voice@vonage.com) to get it configured. Once this is done, continue with the following steps.
+To enable payments with Stripe using Vonage, please login to the Vonage Customer Dashboard and proceed to the [Integrations section](https://dashboard.nexmo.com/integrations).
 
-To process payments with Voice API, activate direct card information processing on your Stripe account. To do that, go to [Stripe Dashboard Integration Settings](https://dashboard.stripe.com/settings/integration) and turn the **Handle card information directly** switch on. In the dialog appearing, check all the boxes and select "I collect payment information securely through a PCI compliant third party vendor":
+Insert picture here
 
-![Stripe Integration Settings](/images/voice-api/payments_integration.png)
+In the integrations section select *stripe connect*
+
+A popup should show asking you to provide a name for this integration. After defining the name press Connect with StripeConnect button.
+
+After being redirected to Stripe's page, please go through all the necessary activation steps. Once finished return back to Vonage.
+
 
 ### Voice Application Configuration
 
-Your application should have Payments over the Phone capability enabled. 
+Having completed the Payment Gateway integration, it is now necessary to enable a Vonage Application to use this integration.
 
-#### Get Application
-
-Retrieve your application data with a [Get an application](/api/application.v2#getApplication) HTTP request using [Postman](/tools/postman) or another HTTP client of your choice:
-
-```http
-GET https://api.nexmo.com/v2/applications/YOUR_APPLICATION_ID
-```
-
-Copy the response body:
-
-```json
-{
-    "id": "YOUR_APPLICATION_ID",
-    "name": "My app",
-    "keys": {
-        "public_key": "YOUR_PUBLIC_KEY"
-    },
-    "capabilities": {
-        "voice": {
-            "webhooks": {
-                "event_url": {
-                    "address": "https://example.com",
-                    "http_method": "POST"
-                },
-                "fallback_answer_url": {
-                    "address": "",
-                    "http_method": "GET"
-                },
-                "answer_url": {
-                    "address": "https://example.com",
-                    "http_method": "GET"
-                }
-            }
-        }
-    },
-    "_links": {
-        "self": {
-            "href": "/v2/applications/YOUR_APPLICATION_ID"
-        }
-    }
-}
-```
-
-> Unlike Voice API, the Applications API uses [header-based API Key and Secret Authentication] (https://developer.nexmo.com/concepts/guides/authentication#header-based-api-key-and-secret-authentication), which means you should use a [Base64](https://tools.ietf.org/html/rfc4648#section-4) encoded API key and secret joined by a colon in the `Authorization` header of the HTTP request.
-
-#### Update Application
-
-Update your application with a [Update an application](https://developer.nexmo.com/api/application.v2#updateApplication) HTTP request:
-
-```http
-PUT https://api.nexmo.com/v2/applications/YOUR_APPLICATION_ID
-```
-
-Use the response JSON from the previous step as the request body with the addition of the `payment_enabled` parameter:
-
-```json
-{
-    "id": "YOUR_APPLICATION_ID",
-    "name": "My app",
-    "keys": {
-        "public_key": "YOUR_PUBLIC_KEY"
-    },
-    "capabilities": {
-        "voice": {
-            "webhooks": {
-                "event_url": {
-                    "address": "https://example.com",
-                    "http_method": "POST"
-                },
-                "fallback_answer_url": {
-                    "address": "",
-                    "http_method": "GET"
-                },
-                "answer_url": {
-                    "address": "https://example.com",
-                    "http_method": "GET"
-                }
-            },
-            "payment_enabled": true
-        }
-    },
-    "_links": {
-        "self": {
-            "href": "/v2/applications/YOUR_APPLICATION_ID"
-        }
-    }
-}
-```
-
-You can make a `GET` request from step one again to ensure the parameter is applied (it should be returned in the response).
-
-> Developer Preview limitation: if you change any parameter of your application via [Dashboard](https://dashboard.nexmo.com), the `payment_enabled` parameter will be dropped, and the feature will be inactivated, so you have to go through the activation steps again to turn it back on.
+If you don't have an Application
 
 ## Pay Action
 
