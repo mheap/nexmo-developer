@@ -4,125 +4,48 @@ description: Take payments during phone calls in a PCI compliant secure way
 navigation_weight: 11
 ---
 
-# Payments over the Phone [Developer Preview]
+# Payments over the Phone
 
 There are various scenarios when you may want to charge the user during the phone call, for example, automated order processing, subscription renewal, debt collection. To do that securely with credit cards, the application which deals with sensitive card data (numbers, expiration dates, security codes) must follow PCI compliance rules. Vonage Voice API provides you with the option to seamlessly embed secure payment processing into the call flow using the [NCCO](/voice/voice-api/guides/ncco) syntax.
 
-> Payments over the Phone are currently offered as [Developer Preview](/product-lifecycle/dev-preview). The feature can be used in your projects for supported scenarios (see below). The following limitations apply:
-<ul style='list-style:disc;margin-left:16px;margin-top:16px;'><li style='margin-bottom:16px;'>payment gateway configuration is being done by request,</li>
-<li style='margin-bottom:16px;'>The `pay` action supported for inbound calls only</li>
-<li style='margin-bottom:16px;'>Only Mastercard and Visa cards supported</li>
-<li style='margin-bottom:16px;'>[Stripe](https://www.stripe.com) is the only supported payment gateway</li>
-<li style='margin-bottom:16px;'>The feature is supported free of extra charge during Developer Preview.</li></ul>
 
 ## Preliminary Configuration
 
 ### Payment Gateway Configuration
 
-To start, you should have your Stripe account ready. If you don't have an account yet, [sign up here](https://dashboard.stripe.com/register).
+To enable payments with Stripe using Vonage, please login to the Vonage Customer Dashboard and proceed to the [Integrations section](https://dashboard.nexmo.com/integrations).
 
-> In [Developer Preview](/product-lifecycle/dev-preview), Vonage will set up your payment gateway connector for you. [Contact us](mailto:pay.voice@vonage.com) to get it configured. Once this is done, continue with the following steps.
+> This feature is not enabled by default - please contact customer support via [api.support.vonage.com](https://api.support.vonage.com/hc/en-us/requests/new).
 
-To process payments with Voice API, activate direct card information processing on your Stripe account. To do that, go to [Stripe Dashboard Integration Settings](https://dashboard.stripe.com/settings/integration) and turn the **Handle card information directly** switch on. In the dialog appearing, check all the boxes and select "I collect payment information securely through a PCI compliant third party vendor":
+![Dashboard Integrations](/images/voice-api/dashboard-integrations.png)
 
-![Stripe Integration Settings](/images/voice-api/payments_integration.png)
+In the integrations section select *Stripe Connect*.
+
+A popup should show asking you to provide a name for this integration. After entering the name press "Connect with Stripe Connect" button.
+
+![Stripe Integration Setup](/images/voice-api/dashboard-integrations-stripe-setup.png)
+
+After being redirected to Stripe's page, please go through all the necessary activation steps.
+
+![Stripe Integration - Welcome screen](/images/voice-api/dashboard-integrations-stripe-welcome.png)
+
+Once finished return back to Vonage.
 
 ### Voice Application Configuration
 
-Your application should have Payments over the Phone capability enabled. 
+Having completed the Payment Gateway integration, it is now necessary to enable a Vonage Application to use this integration.
 
-#### Get Application
+If you don't have an Application, create one via the [Dashboard](https://dashboard.nexmo.com/applications/new) or one of our tools (curl, CLI, Server SDKs).
 
-Retrieve your application data with a [Get an application](/api/application.v2#getApplication) HTTP request using [Postman](/tools/postman) or another HTTP client of your choice:
+When creating an application via the Dashboard, or edit if you already have an application you want to work with, please enable Voice capabilities:
 
-```http
-GET https://api.nexmo.com/v2/applications/YOUR_APPLICATION_ID
-```
+![Dashboard > New Application > Capabilities](/images/voice-api/dashboard-application-capabilities-voice.png)
 
-Copy the response body:
+Next, click on 'Show Advanced Features', enable 'Payments over Phone' and select a Stripe account:
 
-```json
-{
-    "id": "YOUR_APPLICATION_ID",
-    "name": "My app",
-    "keys": {
-        "public_key": "YOUR_PUBLIC_KEY"
-    },
-    "capabilities": {
-        "voice": {
-            "webhooks": {
-                "event_url": {
-                    "address": "https://example.com",
-                    "http_method": "POST"
-                },
-                "fallback_answer_url": {
-                    "address": "",
-                    "http_method": "GET"
-                },
-                "answer_url": {
-                    "address": "https://example.com",
-                    "http_method": "GET"
-                }
-            }
-        }
-    },
-    "_links": {
-        "self": {
-            "href": "/v2/applications/YOUR_APPLICATION_ID"
-        }
-    }
-}
-```
+![Dashboard > New Application > Capabilities](/images/voice-api/dashboard-application-capabilities-voice-payments.png)
 
-> Unlike Voice API, the Applications API uses [header-based API Key and Secret Authentication] (https://developer.nexmo.com/concepts/guides/authentication#header-based-api-key-and-secret-authentication), which means you should use a [Base64](https://tools.ietf.org/html/rfc4648#section-4) encoded API key and secret joined by a colon in the `Authorization` header of the HTTP request.
-
-#### Update Application
-
-Update your application with a [Update an application](https://developer.nexmo.com/api/application.v2#updateApplication) HTTP request:
-
-```http
-PUT https://api.nexmo.com/v2/applications/YOUR_APPLICATION_ID
-```
-
-Use the response JSON from the previous step as the request body with the addition of the `payment_enabled` parameter:
-
-```json
-{
-    "id": "YOUR_APPLICATION_ID",
-    "name": "My app",
-    "keys": {
-        "public_key": "YOUR_PUBLIC_KEY"
-    },
-    "capabilities": {
-        "voice": {
-            "webhooks": {
-                "event_url": {
-                    "address": "https://example.com",
-                    "http_method": "POST"
-                },
-                "fallback_answer_url": {
-                    "address": "",
-                    "http_method": "GET"
-                },
-                "answer_url": {
-                    "address": "https://example.com",
-                    "http_method": "GET"
-                }
-            },
-            "payment_enabled": true
-        }
-    },
-    "_links": {
-        "self": {
-            "href": "/v2/applications/YOUR_APPLICATION_ID"
-        }
-    }
-}
-```
-
-You can make a `GET` request from step one again to ensure the parameter is applied (it should be returned in the response).
-
-> Developer Preview limitation: if you change any parameter of your application via [Dashboard](https://dashboard.nexmo.com), the `payment_enabled` parameter will be dropped, and the feature will be inactivated, so you have to go through the activation steps again to turn it back on.
+> Switch to Live mode when you have finished the testing and are ready to accept real card payments.
 
 ## Pay Action
 
@@ -136,6 +59,10 @@ To start the secure payment IVR, use the `pay` [NCCO action](/voice/voice-api/gu
   }
 ]
 ```
+
+> The `pay` action supported for inbound calls only. 
+
+> Only Mastercard and Visa cards supported.
 
 This will trigger the IVR flow with the following prompts:
 - *Please enter your long card number*
@@ -158,7 +85,7 @@ In case the user enters the card data correctly, they will be charged $9.99, and
 
 and you will see the transaction in your [Stripe dashboard](https://dashboard.stripe.com/).
 
-> In Developer Preview, `pay` action is only applicable for inbound calls and the first [leg of the conversation](/voice/voice-api/guides/legs-conversations) (the inbound one).
+> `pay` action is only applicable for inbound calls and the first [leg of the conversation](/voice/voice-api/guides/legs-conversations) (the inbound one).
 
 If the user doesn't enter the card number, expiration date, or security code within 10 seconds, the prompt will be played one more time giving the user another try. If the user enters any of the card information incorrectly or doesn't enter anything after the second prompt, the following callback is sent to the application:
 
@@ -266,7 +193,7 @@ You can select any of the supported Text to Speech voices and languages by addin
 ]
 ```
 
-> In Developer Preview, default prompts are in English, to use any language except for English, you should provide custom prompts (see below).
+> Default prompts are in English, to use any language except for English, you should provide custom prompts (see below).
 
 ### Custom Prompts
 You can change the default IVR prompts to custom ones, including the prompts playing in case of timeout. To do that, provide `prompts` structure in the `pay` action as follows:
@@ -326,4 +253,3 @@ You can change the default IVR prompts to custom ones, including the prompts pla
 * [Webhook Reference](/voice/voice-api/webhook-reference#payment),
 * [Contact Center Intelligence](/voice/voice-api/guides/cci) Guide.
 
-> We appreciate your feedback! Do you need more currencies, payment gateways, outbound calls or any other `pay` action improvements? Please drop us a note at [pay.voice@vonage.com](mailto:pay.voice@vonage.com)!
