@@ -24,7 +24,7 @@ Action | Description | Synchronous
 [stream](#stream) | Send audio files to a Conversation. | Yes, unless *bargeIn=true*
 [input](#input) | Collect digits or capture speech input from the person you are calling. | Yes
 [notify](#notify) | Send a request to your application to track progress through an NCCO | Yes
-[pay](#pay) [Developer Preview] | Ask the user for card details and process payment. See the [Guide](/voice/voice-api/guides/payments) for more details | Yes
+[pay](#pay) | Ask the user for card details and process payment. See the [Guide](/voice/voice-api/guides/payments) for more details | Yes
 
 > **Note**: [Connect an inbound call](/voice/voice-api/code-snippets/connect-an-inbound-call) provides an example of how to serve your NCCOs to Vonage after a Call or Conference is initiated.
 
