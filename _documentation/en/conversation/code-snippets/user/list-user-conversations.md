@@ -40,7 +40,7 @@ In this case the User is associated with a single Conversation:
     "state": "JOINED",
     "member_id": "MEM-62667429-e0fa-4adb-87a9-b4768fd46fce",
     "sequence_number": 8,
-    "href": "https://api.nexmo.com/beta/users/USR-ebf6ca49-4941-4762-b7a6-c30cb0c06179/conversations/CON-0b72410c-e090-45b2-86b7-65ff0c986c02",
+    "href": "https://api.nexmo.com/v0.1/users/USR-ebf6ca49-4941-4762-b7a6-c30cb0c06179/conversations/CON-0b72410c-e090-45b2-86b7-65ff0c986c02",
     "id": "CON-0b72410c-e090-45b2-86b7-65ff0c986c02"
   }
 ]

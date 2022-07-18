@@ -234,7 +234,7 @@ This API call will give you a response similar to the following:
     ],
     "_links": {
         "self": {
-            "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06"
+            "href": "https://api.nexmo.com/v0.1/conversations/CON-bc643220-2542-499a-892e-c982c4150c06"
         }
     }
 }

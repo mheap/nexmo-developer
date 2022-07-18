@@ -110,7 +110,7 @@ The Call consists of two legs: inbound and outbound, and two Members, all contai
     ],
     "_links": {
         "self": {
-            "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06"
+            "href": "https://api.nexmo.com/v0.1/conversations/CON-bc643220-2542-499a-892e-c982c4150c06"
         }
     }
 }
@@ -176,7 +176,7 @@ If, while the call is in session, you get Events for the Conversation using the 
         },
         "state": "",
         "timestamp": "2018-10-25T09:26:19.207Z",
-        "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/1"
+        "href": "https://api.nexmo.com/v0.2/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/1"
     },
     {
         "id": 2,
@@ -207,7 +207,7 @@ If, while the call is in session, you get Events for the Conversation using the 
         },
         "state": "",
         "timestamp": "2018-10-25T09:26:24.384Z",
-        "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/2"
+        "href": "https://api.nexmo.com/v0.2/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/2"
     },
     {
         "id": 3,
@@ -239,7 +239,7 @@ If, while the call is in session, you get Events for the Conversation using the 
         },
         "state": "",
         "timestamp": "2018-10-25T09:26:30.277Z",
-        "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/3"
+        "href": "https://api.nexmo.com/v0.2/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/3"
     },
     {
         "id": 4,
@@ -277,7 +277,7 @@ If, while the call is in session, you get Events for the Conversation using the 
         },
         "state": "",
         "timestamp": "2018-10-25T09:26:30.273Z",
-        "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/4"
+        "href": "https://api.nexmo.com/v0.2/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/4"
     },
     {
         "id": 5,
@@ -317,7 +317,7 @@ If, while the call is in session, you get Events for the Conversation using the 
         },
         "state": "",
         "timestamp": "2018-10-25T09:26:30.274Z",
-        "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/5"
+        "href": "https://api.nexmo.com/v0.2/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/5"
     },
     {
         "id": 6,
@@ -344,7 +344,7 @@ If, while the call is in session, you get Events for the Conversation using the 
         },
         "state": "",
         "timestamp": "2018-10-25T09:26:30.340Z",
-        "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/6"
+        "href": "https://api.nexmo.com/v0.2/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/6"
     },
     {
         "id": 7,
@@ -376,7 +376,7 @@ If, while the call is in session, you get Events for the Conversation using the 
         },
         "state": "",
         "timestamp": "2018-10-25T09:26:30.337Z",
-        "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/7"
+        "href": "https://api.nexmo.com/v0.2/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/7"
     },
     {
         "id": 8,
@@ -411,7 +411,7 @@ If, while the call is in session, you get Events for the Conversation using the 
         },
         "state": "",
         "timestamp": "2018-10-25T09:26:30.337Z",
-        "href": "https://api.nexmo.com/beta/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/8"
+        "href": "https://api.nexmo.com/v0.2/conversations/CON-bc643220-2542-499a-892e-c982c4150c06/events/8"
     }
 ]
 ```

@@ -19,7 +19,7 @@ Notice that the set of Conversations and Users is unique to the Application, so 
 A Conversation API call such as List Conversations would have a URL such as:
 
 ```
-https://api.nexmo.com/beta/conversations
+https://api.nexmo.com/v0.2/conversations
 ```
 
 So which Conversations would be retrieved?
