@@ -6,7 +6,7 @@ oas_url: https://www.github.com/nexmo/api-specification/blob/master/definitions
 header:
   links:
     sign-up:
-      path: https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav
+      path: https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav
       text:
         - try-it
         - get_an_api_key
