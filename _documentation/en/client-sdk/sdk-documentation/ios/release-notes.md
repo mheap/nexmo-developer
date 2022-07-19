@@ -6,6 +6,13 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.3.2  - 2022-07-01
+
+### Fix
+
+- Fix transition from mute to unmute on media object
+- Fix event parsing for `NXMCustomEvent.customType`
+
 ## 4.3.1  - 2022-05-09
 
 ### Fix
