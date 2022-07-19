@@ -5,7 +5,7 @@ description: In this step you learn how to create a suitable webhook server that
 
 # Create a webhook server
 
-When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to the [user's](/conversation/concepts/user) app. You do this by extracting the destination user from the `to` query parameter and returning it in your response.
+When an inbound call is received, Vonage makes a request to a publicly accessible URL of your choice - we call this the `answer_url`. You need to create a webhook server that is capable of receiving this request and returning an [NCCO](/voice/voice-api/ncco-reference) containing a `connect` action that will forward the call to the [user's](/conversation/concepts/user) app. For this tutorial, the destination user is hardcoded to be Alice.
 
 ## New project
 
@@ -86,7 +86,7 @@ const localtunnel = require('localtunnel');
 })();
 ```
 
-> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (letters and numbers, not underscores or dashes).
+> **NOTE:** Please remember to replace `SUBDOMAIN` with a random string of your choice between 4 and 20 alphanumeric characters (lowercase letters and numbers, not underscores or dashes).
 
 
 There are 2 parts in the server code above:
