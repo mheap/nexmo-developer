@@ -12,7 +12,7 @@ header:
         - get_an_api_key
         - start_building
     sign-in:
-      path: https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav
+      path: https://ui.idp.vonage.com/ui/auth/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav
       text: sign-in
 code_snippets:
   - title: 'Send an SMS'
