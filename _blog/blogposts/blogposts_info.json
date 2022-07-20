@@ -1,11 +1,46 @@
 [
   {
+    "title": "Q2 2022: Vonage Developer News Recap",
+    "description": "Read what we've been up to in the second quarter of 2022. SDKs updates, developer events, integration and more!",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/q2-2022-vonage-developer-news-recap/quaterly-releases_q2.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-07-20 08:37:43 UTC",
+    "updated_at": "2022-07-20 08:21:57 UTC",
+    "category": {
+      "name": "Announcement",
+      "plural": "Announcements",
+      "slug": "announcement",
+      "color": "#4cc3d2"
+    },
+    "tags": [
+      "releases",
+      "messages-api",
+      "video-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/20/q2-2022-vonage-developer-news-recap",
+    "filename": "q2-2022-vonage-developer-news-recap"
+  },
+  {
     "title": "Michael Crump Joins the Vonage Developer Relations Team",
     "description": "Meet Michael Crump, the new Senior Developer Advocate at Vonage!",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/michael-crump-joins-the-vonage-developer-relations-team/michael-crump-welcome.png",
     "author": {
       "hidden": false,
       "image_url": "/content/images/michael-crump.jpg",
+      "bio": "Michael Crump works at Vonage on the Developer Relations team and is a coder, YouTuber, and frequent speaker of various .NET and cloud/communication development topics. He’s passionate about helping developers understand the benefits of each in a no-nonsense way.",
       "name": "Michael Crump",
       "twitter": "mbcrump",
       "spotlight": false,
@@ -7678,6 +7713,35 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
+    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
+    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
+    "author": {
+      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
+      "image_url": "/content/images/yuvalgolan.png",
+      "name": "Yuval Golan",
+      "title": "Vonage VP of Quality Assurance",
+      "team": true,
+      "short_name": "yuvalgolan"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "high-availability"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
+    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
+  },
+  {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
     "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
@@ -7706,35 +7770,6 @@
     "locale": "en",
     "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
     "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
-  },
-  {
-    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
-    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
-    "author": {
-      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
-      "image_url": "/content/images/yuvalgolan.png",
-      "name": "Yuval Golan",
-      "title": "Vonage VP of Quality Assurance",
-      "team": true,
-      "short_name": "yuvalgolan"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "high-availability"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
-    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
     "title": "Setting up CI/CD with Github Actions",
