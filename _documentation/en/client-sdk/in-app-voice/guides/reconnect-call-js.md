@@ -39,6 +39,6 @@ frameless: false
 ### Reconnect a Conversation's media
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/guides/reconnect-call/javascript/media'
+source: '_tutorials_tabbed_content/client-sdk/guides/reconnect-call/javascript/conversation'
 frameless: false
 ```
