@@ -30,7 +30,7 @@ There is an optional `mediaParams` parameter that can be added to modify the Med
 ### Reconnect a Call
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/guides/reconnect-call/javascript'
+source: '_tutorials_tabbed_content/client-sdk/guides/reconnect-call/javascript/call'
 frameless: false
 ```
 
@@ -39,6 +39,6 @@ frameless: false
 ### Reconnect a Conversation's media
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/guides/reconnect-call/reconnect'
+source: '_tutorials_tabbed_content/client-sdk/guides/reconnect-call/javascript/media'
 frameless: false
 ```
