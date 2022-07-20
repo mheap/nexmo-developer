@@ -2,7 +2,7 @@
 title: "Q2 2022: Vonage Developer News Recap"
 description: Read what we've been up to in the second quarter of 2022. SDKs
   updates, developer events, integration and more!
-thumbnail: /content/blog/q2-2022-vonage-developer-news-recap/quaterly-releases_q2-.png
+thumbnail: /content/blog/q2-2022-vonage-developer-news-recap/quaterly-releases_q2.png
 author: benjamin-aronov
 published: true
 published_at: 2022-07-20T08:37:43.303Z
