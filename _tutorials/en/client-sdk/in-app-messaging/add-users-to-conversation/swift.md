@@ -8,6 +8,8 @@ description: Add your two new users as Conversation members
 You must now add your [Users](/conversation/concepts/user) as [Members](/conversation/concepts/member) of the [Conversation](/conversation/concepts/conversation) using Vonage CLI. 
 To add Alice to the conversation, replace `CONVERSATION_ID` in the command below with your conversation ID generated previously (`CON-...`) and `ALICE_USER_ID` with the ID generated (`USR-...`) when you created the Alice user in the previous step:
 
+> To use Vonage CLI Conversation commands you need the Conversations plugin to be installed. If you have not done so already, it can be installed by running the following command: `vonage plugins:install @vonage/cli-plugin-conversations`
+
 ```sh
 vonage apps:conversations:members:add CONVERSATION_ID ALICE_USER_ID
 ```
