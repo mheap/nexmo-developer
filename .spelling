@@ -718,3 +718,7 @@ datacenter
 wss
 popup
 api.support.vonage.com
+20-second
+localStorage
+sessionStorage
+MediaStream
