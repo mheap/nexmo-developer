@@ -20,7 +20,7 @@ The following is for the situations where a browser window/tab is accidentally c
 
 There are a few things that need to be in place for the reconnection to happen successfully.
 
-1. The application must create a new JWT for the reconnecting user with their unique username in order to instantiate the Application Object which has the `reconnectCall` and `getConversation` methods.
+1. The application must create a new JWT for the reconnecting user with their unique username in order to instantiate the [Application Object](https://developer.vonage.com/sdk/stitch/javascript/Application.html) which has the `reconnectCall` and `getConversation` methods.
 2. The Conversation Id and RTC (or Leg) Id will also be needed to reconnect the user.
 
 This means that these values (username, Conversation Id, and RTC Id ) will need to be stored in the browser so they can be recovered when the application reloads. Both [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) and [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) can be used to store the data. The one you choose will depend on your use case.
