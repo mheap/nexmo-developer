@@ -1,5 +1,17 @@
 # Vonage API Developer Portal
 
+Note to Michael to get this working:
+
+```bash
+git submodule init
+git submodule update
+docker-compose up
+docker-compose exec web db:migrate
+open localhost:3000
+```
+
+---
+
 [![Build Status](https://api.travis-ci.org/Nexmo/nexmo-developer.svg?branch=main)](https://travis-ci.org/Nexmo/nexmo-developer/)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
 
@@ -64,7 +76,7 @@ The project can be run on your laptop, either directly or using Docker. These in
     ```
 
     If you have not already, update git config with your name and email address.
-    
+
     ```
     git config --global user.name "NAME"
     git config --global user.email "user.name@vonage.com"
@@ -240,6 +252,7 @@ Git docs for submodules: <https://git-scm.com/book/en/v2/Git-Tools-Submodules>
 A flow chart on surviving submodules from @lornajane: <https://lornajane.net/posts/2016/surviving-git-submodules>
 
 ## Troubleshooting
+
 <details>
 <summary><b>My local setup stopped working after performing a <code>git pull</code>.</b></summary>
 The Docker image may have changed, try rebuilding it with the following command:
@@ -247,6 +260,7 @@ The Docker image may have changed, try rebuilding it with the following command:
 ```bash
 $ docker-compose up --build
 ```
+
 </details>
 
 <details>
@@ -259,6 +273,7 @@ $ brew info postgresql
 ```
 
 Once PostgreSQL is running you'll need to create and migrate the database. See [Setup](#running-locally) for instructions.
+
 </details>
 <details>
 <summary>
@@ -266,18 +281,18 @@ Once PostgreSQL is running you'll need to create and migrate the database. See [
 </summary>
 In situations where changes you made in a file do not show up in your browser redo your Docker setup using the following steps:
 
-- **Delete docker images:** Run these commands from your local repo folder checked with the branch you wish to work on. This will delete your old Docker containers and images:
+-   **Delete docker images:** Run these commands from your local repo folder checked with the branch you wish to work on. This will delete your old Docker containers and images:
 
 ```
 docker rm -vf $(docker ps -a -q) THEN
 docker rmi -f $(docker images -a -q)
 ```
 
-- **Build:** In your local repo folder run `docker-compose up`. Wait until it completes without error.
+-   **Build:** In your local repo folder run `docker-compose up`. Wait until it completes without error.
 
-- **Migration:** In a separate terminal, same folder, run `docker-compose run web bundle exec rake db:migrate`. Wait until it completes without error.
+-   **Migration:** In a separate terminal, same folder, run `docker-compose run web bundle exec rake db:migrate`. Wait until it completes without error.
 
-- **Test:** In your browser open http://localhost:3000 and navigate to test for your changes in your local copy of your documentation.
+-   **Test:** In your browser open http://localhost:3000 and navigate to test for your changes in your local copy of your documentation.
 
 </details>
 
@@ -286,10 +301,10 @@ docker rmi -f $(docker images -a -q)
 <b>Clicking a link in the navbar leads to a broken page</b>
 </summary>
 
- Whenever new sections similar to `_blog` , `_changelogs` are added they may not be registered which leads to a broken page when selected from the navbar.
- 
- Check to see if the directory path is set in the `environment:` section of the  `docker-compose.yml` file. You can look up the right pathname to use from the `.env.example` file.
- 
+Whenever new sections similar to `_blog` , `_changelogs` are added they may not be registered which leads to a broken page when selected from the navbar.
+
+Check to see if the directory path is set in the `environment:` section of the `docker-compose.yml` file. You can look up the right pathname to use from the `.env.example` file.
+
 </details>
 
 ## Upgrading Volta
@@ -316,11 +331,12 @@ Checkout a new branch, naming it appropriately:
 ```bash
 git checkout -b your-branch-name
 ```
+
 There are three types of content you can add or update, these are seperated into different folders as well
 
-- **Documentation**: You can find documentation content in the `_documentation/en` directory.
-- **Blog content**: The blog content can be found in the `_blog/blogposts/en` directory. There is also `_blog/authors/en`, which contains the bios of the authors of the blog.
-- **Changelog**: The update history of all tools and SDKs are tracked in the `_changelog/` directory. Folders in this directory act as subsections and files that represent the changelog for each tool.
+-   **Documentation**: You can find documentation content in the `_documentation/en` directory.
+-   **Blog content**: The blog content can be found in the `_blog/blogposts/en` directory. There is also `_blog/authors/en`, which contains the bios of the authors of the blog.
+-   **Changelog**: The update history of all tools and SDKs are tracked in the `_changelog/` directory. Folders in this directory act as subsections and files that represent the changelog for each tool.
 
 The names of the files you create form part of the URLs used on ADP.
 
